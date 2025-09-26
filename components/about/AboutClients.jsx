@@ -7,14 +7,21 @@ function AboutClients() {
 	const [clients, setClients] = useState(clientsData);
 	return (
 		<div className="mt-10 sm:mt-20">
-			<p className="font-general-medium text-2xl sm:text-3xl  text-center text-primary-dark dark:text-primary-light">
-				{clientsHeading}
-			</p>
-			<div className="grid grid-cols-2 sm:grid-cols-4 mt-10 sm:mt-14 gap-2">
+			<div className="text-center mb-12">
+				<h2 className="font-general-semibold text-3xl sm:text-4xl text-primary-dark dark:text-primary-light mb-4">
+					{clientsHeading}
+				</h2>
+				<p className="font-general-regular text-lg text-ternary-dark dark:text-ternary-light">
+					Professional experience across diverse industries and technologies
+				</p>
+			</div>
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 				{clients.map((client) => (
 					<AboutClientSingle
 						title={client.title}
-						image={client.img}
+						role={client.role}
+						period={client.period}
+						description={client.description}
 						key={client.id}
 					/>
 				))}

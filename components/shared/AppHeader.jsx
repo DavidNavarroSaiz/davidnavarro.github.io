@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiSun, FiMoon, FiX, FiMenu } from 'react-icons/fi';
 import HireMeModal from '../HireMeModal';
-import logoLight from '../../public/images/logo-light.svg';
-import logoDark from '../../public/images/logo-dark.svg';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 function AppHeader() {
@@ -48,23 +45,27 @@ function AppHeader() {
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
 						<Link href="/">
-							{activeTheme === 'dark' ? (
-								<Image
-									src={logoDark}
-									className="w-36 cursor-pointer"
-									alt="Dark Logo"
-									width={150}
-									height={120}
-								/>
-							) : (
-								<Image
-									src={logoLight}
-									className="w-36 cursor-pointer"
-									alt="Dark Logo"
-									width={150}
-									height={120}
-								/>
-							)}
+							<div className="cursor-pointer flex items-center space-x-3 sm:space-x-4">
+								<div className="flex-shrink-0">
+									<img 
+										src="/images/DN-Logo.svg" 
+										alt="David Navarro Logo" 
+										className="h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 object-contain"
+									/>
+								</div>
+								<div className="flex flex-col justify-center min-w-0">
+									<div className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary-dark dark:text-primary-light leading-tight">
+										<span className="text-indigo-600 dark:text-indigo-400">DAVID</span>
+										<span className="text-gray-600 dark:text-gray-300 ml-1">N</span>
+									</div>
+									<div className="text-xs sm:text-xs lg:text-sm text-ternary-dark dark:text-ternary-light font-medium tracking-wide leading-tight hidden sm:block">
+										Machine Learning Engineer | Computer Vision | AI & Automation Specialist
+									</div>
+									<div className="text-xs text-ternary-dark dark:text-ternary-light font-medium tracking-wide leading-tight block sm:hidden">
+										ML Engineer | Computer Vision | AI Specialist
+									</div>
+								</div>
+							</div>
 						</Link>
 					</div>
 
