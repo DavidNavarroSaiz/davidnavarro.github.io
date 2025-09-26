@@ -3,10 +3,13 @@ import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
 
 const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
+	'Machine Learning',
+	'MLOps',
+	'Computer Vision',
+	'LLMs and RAG',
+	'AI Automation',
+	'Data Science',
+	'Other AI/ML Project',
 ];
 
 function HireMeModal({ onClose, onRequest }) {
@@ -26,7 +29,7 @@ function HireMeModal({ onClose, onRequest }) {
 					<div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
 						<div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
 							<h5 className=" text-primary-dark dark:text-primary-light text-xl">
-								What project are you looking for?
+								What AI/ML project can I help you with?
 							</h5>
 							<button
 								onClick={onClose}
@@ -92,7 +95,7 @@ function HireMeModal({ onClose, onRequest }) {
 										cols="14"
 										rows="6"
 										aria-label="Details"
-										placeholder="Project description"
+										placeholder="Describe your AI/ML project requirements, goals, and timeline..."
 									></textarea>
 								</div>
 
