@@ -12,7 +12,7 @@ export const projectsData = [
 		id: 1,
 		title: 'PM AI Agent',
 		url: 'pm-ai-agent',
-		category: 'AI/ML Application',
+		category: 'LLMs and RAG',
 		img: '/images/pm-1.png',
 		ProjectHeader: {
 			title: 'PM AI Agent',
@@ -110,7 +110,7 @@ export const projectsData = [
 		id: 2,
 		title: 'Candidate Recommendation System',
 		url: 'candidate-recommendation-system',
-		category: 'AI/ML Application',
+		category: 'LLMs and RAG',
 		img: '/images/rg-1.png',
 		ProjectHeader: {
 			title: 'Candidate Recommendation System',
@@ -311,7 +311,7 @@ export const projectsData = [
 		id: 4,
 		title: 'AbogacIA - AI Legal Platform',
 		url: 'abogacia-ai-legal-platform',
-		category: 'AI/ML Application',
+		category: 'LLMs and RAG',
 		img: '/images/abo-1.png',
 		ProjectHeader: {
 			title: 'AbogacIA - AI Legal Platform',
@@ -416,7 +416,7 @@ export const projectsData = [
 		id: 5,
 		title: 'Automatic Lead Management',
 		url: 'automatic-lead-management',
-		category: 'AI/ML Application',
+		category: 'AI Automation',
 		img: '/images/lead-3.png',
 		ProjectHeader: {
 			title: 'Automatic Lead Management',
@@ -514,7 +514,7 @@ export const projectsData = [
 			id: 6,
 			title: 'AI-Generated Monthly Reports',
 			url: 'ai-generated-monthly-reports',
-			category: 'Automation',
+			category: 'AI Automation',
 			img: '/images/make-2.png',
 			ProjectHeader: {
 				title: 'AI-Generated Monthly Reports',
@@ -614,7 +614,7 @@ export const projectsData = [
 			id: 7,
 			title: 'n8n Lead Generation System',
 			url: 'n8n-lead-generation-system',
-			category: 'Automation',
+			category: 'AI Automation',
 			img: '/images/make-1.png',
 			ProjectHeader: {
 				title: 'n8n Lead Generation System',
@@ -714,7 +714,7 @@ export const projectsData = [
 			id: 8,
 			title: 'Healthcare Resource Recommender System',
 			url: 'healthcare-resource-recommender-system',
-			category: 'AI/ML Application',
+			category: 'LLMs and RAG',
 			img: '/images/ai-1.png',
 			ProjectHeader: {
 				title: 'Healthcare Resource Recommender System',
@@ -744,7 +744,7 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Company',
-					details: 'El Sol',
+					details: 'Healthcare Technology Platform',
 				},
 				{
 					id: uuidv4(),
@@ -764,7 +764,7 @@ export const projectsData = [
 			],
 			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
-				'Developed and deployed a production recommender system chatbot for a comprehensive healthcare resource platform for Community Health Workers. Built intelligent resource discovery system using RAG pipelines that enables 160+ users to find resources 50% faster. Implemented advanced document processing platform handling ~100 documents/month with automated LLM-based analysis and insight generation.',
+				'Built Healthcare Resource HUB, a permissions-aware resource platform with tiered access controls for Community Health Workers. Implemented comprehensive ingestion service (FastAPI, Redis, RabbitMQ) for diverse content including videos, decks, images, PDFs, spreadsheets, audio, games, and external links. Applied LLMs to extract summaries, keywords, and entities, storing embeddings in PGVector for intelligent retrieval. Delivered production recommender-chatbot with advanced RAG tactics achieving 50% faster resource discovery and 160+ active users.',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
@@ -789,22 +789,22 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'Multi-Resource Ingestion System: Built comprehensive ingestion pipeline using FastAPI, Redis, and RabbitMQ that processes diverse resources including videos, presentations, images, PDFs, Excel files, audio, games, and external resources with user permission-based access control.',
+						'Permissions-Aware Platform: Built tiered-access system where CHWs and staff can upload/consume resources based on user roles and plans, ensuring appropriate content access and security controls for different organizational levels.',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'Advanced RAG Implementation: Implemented sophisticated RAG strategies including reranking, query rewriting, sub-query splitting, multiple filters, and document research tasks to provide accurate resource recommendations and Q&A capabilities.',
+						'Advanced RAG Implementation: Applied sophisticated RAG tactics including query rewriting, sub-queries, filters, document research tasks, and reranking to deliver 50% faster resource discovery compared to manual filters and search, serving 160+ active users.',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'Intelligent Resource Discovery: Created AI Agent that performs semantic searches in vector database to recommend relevant resources based on user queries, enabling users to find specific content like diabetes prevention images or educational materials without manual category browsing.',
+						'Document Processing Pipeline: Delivered automated pipeline handling ~100 documents/month with LLM-based analysis and insight generation, enabling continuous content updates and intelligent resource recommendations for new and updated materials.',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'Infrastructure as Code: Implemented Azure Bicep for three isolated environments (dev/QA/prod) with App Service, Azure Container Registry, Key Vault, Azure OpenAI, and Redis, accelerating release cycles by 40% through standardized deployment processes.',
+						'Infrastructure & CI/CD: Implemented Azure Bicep for three isolated environments (dev/QA/prod) with comprehensive Azure Pipelines including tests, evaluations, linting, and quality gates, accelerating release cycles by 40% through automated deployment processes.',
 				},
 			],
 			SocialSharingHeading: 'Share This',
@@ -814,7 +814,7 @@ export const projectsData = [
 		id: 9,
 		title: 'Community Health Workers Platform',
 		url: 'community-health-workers-platform',
-		category: 'AI/ML Application',
+		category: 'LLMs and RAG',
 		img: '/images/ai-1.png',
 		ProjectHeader: {
 			title: 'Community Health Workers Platform',
@@ -844,7 +844,7 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Company',
-					details: 'El Sol',
+					details: 'Healthcare Technology Platform',
 				},
 				{
 					id: uuidv4(),
@@ -864,7 +864,7 @@ export const projectsData = [
 			],
 			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
-				'Developed comprehensive community health management platform enabling promoters to create dynamic forms and conduct automated home visitations. Built real-time speech recognition system using Azure Language Services that automatically fills forms based on conversations during home visits, then generates detailed reports and personalized health care plans using LLM analysis.',
+				'Led speech-to-forms assistant for community projects and home visits with dynamic forms and Azure Cognitive Services (Speech) for real-time conversation transcription. Built LLM-powered system that extracts structured fields, generates visit reports, and produces personalized care plans. Orchestrated via FastAPI with secure access to user/context data, significantly reducing manual data entry and drafting time.',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
@@ -889,22 +889,22 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'Dynamic Form Creation: Built platform allowing community health promoters to create and customize dynamic forms for home visitations, enabling flexible data collection based on specific community needs and health assessment requirements.',
+						'Speech-to-Forms Automation: Built real-time assistant using Azure Cognitive Services (Speech) to transcribe conversations during home visits, with LLMs extracting structured fields to automatically populate dynamic forms, eliminating manual data entry.',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'Real-Time Speech Analysis: Implemented Azure Language Services integration for real-time speech recognition during home visits, automatically extracting relevant information from conversations and populating forms without manual data entry.',
+						'Intelligent Report Generation: Developed LLM-powered system that analyzes conversation data and stored patient information to automatically generate comprehensive visit reports and personalized care plans for each individual, significantly reducing drafting time.',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'LLM-Powered Report Generation: Developed intelligent system that analyzes conversation data, stored patient information, and form responses to automatically generate comprehensive visit reports and personalized health care plans for each individual.',
+						'Secure Data Orchestration: Implemented FastAPI backend with secure access to user and context data from the application, ensuring data privacy while enabling intelligent form enrichment and report generation.',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'Infrastructure & CI/CD: Implemented Azure Bicep for multi-environment deployment with App Service, Container Registry, Key Vault, and Azure OpenAI, plus comprehensive CI/CD pipelines with testing, linting, and automated deployment reducing deployment time significantly.',
+						'Infrastructure & CI/CD: Implemented Azure Bicep for multi-environment deployment with comprehensive Azure Pipelines including tests, evaluations, linting, and quality gates, accelerating release cycles by 40% through automated deployment processes.',
 				},
 			],
 			SocialSharingHeading: 'Share This',

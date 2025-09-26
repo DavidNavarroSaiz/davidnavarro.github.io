@@ -1,12 +1,7 @@
 const selectOptions = [
-	'Machine Learning',
 	'Computer Vision',
-	'LLMs & RAG',
+	'LLMs and RAG',
 	'AI Automation',
-	'MLOps',
-	'Data Science',
-	'Deep Learning',
-	'Natural Language Processing',
 ];
 
 function ProjectsFilter({ setSelectProject }) {

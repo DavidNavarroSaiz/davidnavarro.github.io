@@ -8,22 +8,20 @@ function ProjectsGrid() {
 	const [searchProject, setSearchProject] = useState();
 	const [selectProject, setSelectProject] = useState();
 
-	// @todo - To be fixed
-	// const searchProjectsByTitle = projectsData.filter((item) => {
-	// 	const result = item.title
-	// 		.toLowerCase()
-	// 		.includes(searchProject.toLowerCase())
-	// 		? item
-	// 		: searchProject == ''
-	// 		? item
-	// 		: '';
-	// 	return result;
-	// });
+	const searchProjectsByTitle = projectsData.filter((item) => {
+		if (!searchProject || searchProject === '') {
+			return item;
+		}
+		return item.title
+			.toLowerCase()
+			.includes(searchProject.toLowerCase());
+	});
 
 	const selectProjectsByCategory = projectsData.filter((item) => {
-		let category =
-			item.category.charAt(0).toUpperCase() + item.category.slice(1);
-		return category.includes(selectProject);
+		if (!selectProject || selectProject === '') {
+			return item;
+		}
+		return item.category === selectProject;
 	});
 
 	return (
@@ -103,13 +101,25 @@ function ProjectsGrid() {
 			</div>
 
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
-				{selectProject
-					? selectProjectsByCategory.map((project, index) => {
-							return <ProjectSingle key={index} {...project} />;
-					  })
-					: projectsData.map((project, index) => (
-							<ProjectSingle key={index} {...project} />
-					  ))}
+				{(() => {
+					let filteredProjects = projectsData;
+					
+					// Apply search filter
+					if (searchProject && searchProject.trim() !== '') {
+						filteredProjects = searchProjectsByTitle;
+					}
+					
+					// Apply category filter
+					if (selectProject && selectProject !== 'All') {
+						filteredProjects = filteredProjects.filter((item) => {
+							return item.category === selectProject;
+						});
+					}
+					
+					return filteredProjects.map((project, index) => (
+						<ProjectSingle key={index} {...project} />
+					));
+				})()}
 			</div>
 		</section>
 	);
