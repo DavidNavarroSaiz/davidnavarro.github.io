@@ -26,53 +26,55 @@ function HireMeModal({ onClose, onRequest }) {
 			{/* Modal Content */}
 			<main className="flex flex-col items-center justify-center h-full w-full">
 				<div className="modal-wrapper flex items-center z-30">
-					<div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
-						<div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
-							<h5 className=" text-primary-dark dark:text-primary-light text-xl">
+					<div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-gray-900 border border-gray-700 max-h-screen shadow-2xl flex-row rounded-xl relative">
+						<div className="modal-header flex justify-between gap-10 p-6 border-b border-gray-700">
+							<h5 className="text-white text-xl font-semibold">
 								What AI/ML project can I help you with?
 							</h5>
 							<button
 								onClick={onClose}
-								className="px-4 font-bold text-primary-dark dark:text-primary-light"
+								className="px-4 font-bold text-gray-400 hover:text-white transition-colors duration-300"
 							>
 								<FiX className="text-3xl" />
 							</button>
 						</div>
-						<div className="modal-body p-5 w-full h-full">
+						<div className="modal-body p-6 w-full h-full">
 							<form
 								onSubmit={(e) => {
 									e.preventDefault();
 								}}
 								className="max-w-xl m-4 text-left"
 							>
-								<div className="">
+								<div className="mb-6">
+									<label className="block text-white mb-2 font-medium">Name</label>
 									<input
-										className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+										className="w-full px-4 py-3 border border-gray-600 rounded-lg text-md bg-gray-800 text-white focus:border-dev-blue focus:ring-1 focus:ring-dev-blue transition-colors duration-300"
 										id="name"
 										name="name"
 										type="text"
 										required
-										placeholder="Name"
+										placeholder="Your Name"
 										aria-label="Name"
 									/>
 								</div>
-								<div className="mt-6">
+								<div className="mb-6">
+									<label className="block text-white mb-2 font-medium">Email</label>
 									<input
-										className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+										className="w-full px-4 py-3 border border-gray-600 rounded-lg text-md bg-gray-800 text-white focus:border-dev-blue focus:ring-1 focus:ring-dev-blue transition-colors duration-300"
 										id="email"
 										name="email"
-										type="text"
+										type="email"
 										required
-										placeholder="Email"
+										placeholder="your.email@example.com"
 										aria-label="Email"
 									/>
 								</div>
-								<div className="mt-6">
+								<div className="mb-6">
+									<label className="block text-white mb-2 font-medium">Project Type</label>
 									<select
-										className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+										className="w-full px-4 py-3 border border-gray-600 rounded-lg text-md bg-gray-800 text-white focus:border-dev-blue focus:ring-1 focus:ring-dev-blue transition-colors duration-300"
 										id="subject"
 										name="subject"
-										type="text"
 										required
 										aria-label="Project Category"
 									>
@@ -87,9 +89,10 @@ function HireMeModal({ onClose, onRequest }) {
 									</select>
 								</div>
 
-								<div className="mt-6">
+								<div className="mb-6">
+									<label className="block text-white mb-2 font-medium">Project Details</label>
 									<textarea
-										className="w-full px-5 py-2 border dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
+										className="w-full px-4 py-3 border border-gray-600 rounded-lg text-md bg-gray-800 text-white focus:border-dev-blue focus:ring-1 focus:ring-dev-blue transition-colors duration-300"
 										id="message"
 										name="message"
 										cols="14"
@@ -99,39 +102,25 @@ function HireMeModal({ onClose, onRequest }) {
 									></textarea>
 								</div>
 
-								<div className="mt-6 pb-4 sm:pb-1">
-									<span
+								<div className="flex gap-4 pt-4">
+									<button
 										onClick={onRequest}
 										type="submit"
-										className="px-4
-											sm:px-6
-											py-2
-											sm:py-2.5
-											text-white
-											bg-indigo-500
-											hover:bg-indigo-600
-											rounded-md
-											focus:ring-1 focus:ring-indigo-900 duration-500"
+										className="flex-1 px-6 py-3 text-black font-medium bg-dev-blue hover:bg-dev-blue-dark rounded-lg focus:ring-1 focus:ring-dev-blue duration-500 glow-blue transition-colors"
 										aria-label="Submit Request"
 									>
-										<Button title="Send Request" />
-									</span>
+										Send Request
+									</button>
+									<button
+										onClick={onClose}
+										type="button"
+										className="px-6 py-3 bg-gray-700 text-white hover:bg-gray-600 rounded-lg focus:ring-1 focus:ring-gray-500 duration-500 transition-colors"
+										aria-label="Close Modal"
+									>
+										Cancel
+									</button>
 								</div>
 							</form>
-						</div>
-						<div className="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right">
-							<span
-								onClick={onClose}
-								type="button"
-								className="px-4
-									sm:px-6
-									py-2 bg-gray-600 text-primary-light hover:bg-ternary-dark dark:bg-gray-200 dark:text-secondary-dark dark:hover:bg-primary-light
-									rounded-md
-									focus:ring-1 focus:ring-indigo-900 duration-500"
-								aria-label="Close Modal"
-							>
-								<Button title="Close" />
-							</span>
 						</div>
 					</div>
 				</div>

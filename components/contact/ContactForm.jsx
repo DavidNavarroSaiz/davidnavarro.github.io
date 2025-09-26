@@ -9,10 +9,10 @@ function ContactForm() {
 					onSubmit={(e) => {
 						e.preventDefault();
 					}}
-					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
+					className="max-w-xl m-4 p-6 sm:p-10 bg-gray-900 border border-gray-700 rounded-xl shadow-xl text-left"
 				>
-					<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
-						Contact Form
+					<p className="font-general-semibold text-white text-2xl mb-8">
+						Get in Touch
 					</p>
 
 					<FormInput
@@ -45,23 +45,24 @@ function ContactForm() {
 
 					<div className="mt-6">
 						<label
-							className="block text-lg text-primary-dark dark:text-primary-light mb-2"
+							className="block text-lg text-white mb-2 font-medium"
 							htmlFor="message"
 						>
 							Message
 						</label>
 						<textarea
-							className="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
+							className="w-full px-5 py-3 border border-gray-600 text-white bg-gray-800 rounded-lg shadow-sm text-md focus:border-dev-blue focus:ring-1 focus:ring-dev-blue transition-colors duration-300"
 							id="message"
 							name="message"
 							cols="14"
 							rows="6"
 							aria-label="Message"
+							placeholder="Tell me about your project..."
 						></textarea>
 					</div>
 
-					<div className="mt-6">
-						<span className="font-general-medium  px-7 py-4 text-white text-center font-medium tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg mt-6 duration-500">
+					<div className="mt-8">
+						<span className="font-general-medium px-8 py-4 text-black text-center font-medium tracking-wider bg-dev-blue hover:bg-dev-blue-dark focus:ring-1 focus:ring-dev-blue rounded-lg duration-500 glow-blue">
 							<Button
 								title="Send Message"
 								type="submit"

@@ -1,14 +1,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FiSun, FiMoon, FiX, FiMenu } from 'react-icons/fi';
+import { FiX, FiMenu } from 'react-icons/fi';
 import HireMeModal from '../HireMeModal';
-import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 function AppHeader() {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
-	const [activeTheme, setTheme] = useThemeSwitcher();
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -54,14 +52,14 @@ function AppHeader() {
 									/>
 								</div>
 								<div className="flex flex-col justify-center min-w-0">
-									<div className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary-dark dark:text-primary-light leading-tight">
-										<span className="text-indigo-600 dark:text-indigo-400">DAVID</span>
-										<span className="text-gray-600 dark:text-gray-300 ml-1">N</span>
+									<div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-tight">
+										<span className="text-dev-blue glow-blue">DAVID</span>
+										<span className="text-dev-cyan ml-1">N</span>
 									</div>
-									<div className="text-xs sm:text-xs lg:text-sm text-ternary-dark dark:text-ternary-light font-medium tracking-wide leading-tight hidden sm:block">
+									<div className="text-xs sm:text-xs lg:text-sm text-gray-300 font-medium tracking-wide leading-tight hidden sm:block">
 										Machine Learning Engineer | Computer Vision | AI & Automation Specialist
 									</div>
-									<div className="text-xs text-ternary-dark dark:text-ternary-light font-medium tracking-wide leading-tight block sm:hidden">
+									<div className="text-xs text-gray-300 font-medium tracking-wide leading-tight block sm:hidden">
 										ML Engineer | Computer Vision | AI Specialist
 									</div>
 								</div>
@@ -69,18 +67,6 @@ function AppHeader() {
 						</Link>
 					</div>
 
-					{/* Theme switcher small screen */}
-					<div
-						onClick={() => setTheme(activeTheme)}
-						aria-label="Theme Switcher"
-						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
-					>
-						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-						)}
-					</div>
 
 					{/* Small screen hamburger menu */}
 					<div className="sm:hidden">
@@ -113,17 +99,17 @@ function AppHeader() {
 							: 'hidden'
 					}
 				>
-					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
+					<div className="block text-left text-lg text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2">
 						<Link href="/projects" aria-label="Projects">
 							Projects
 						</Link>
 					</div>
-					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+					<div className="block text-left text-lg text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
 						<Link href="/about" aria-label="About Me">
 							About Me
 						</Link>
 					</div>
-					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+					<div className="block text-left text-lg text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
 						<Link href="/contact" aria-label="Contact">
 							Contact
 						</Link>
@@ -131,7 +117,7 @@ function AppHeader() {
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<button
 							onClick={showHireMeModal}
-							className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
+							className="font-general-medium sm:hidden block text-left text-md bg-dev-blue hover:bg-dev-blue-dark text-black shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24 glow-blue"
 							aria-label="Hire Me Button"
 						>
 							Hire Me
@@ -142,20 +128,20 @@ function AppHeader() {
 				{/* Header links large screen */}
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
 					<div
-						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg font-medium text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2"
 						aria-label="Projects"
 					>
 						<Link href="/projects">Projects</Link>
 					</div>
 					<div
-						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg font-medium text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2"
 						aria-label="About Me"
 					>
 						<Link href="/about">About Me</Link>
 					</div>
 
 					<div
-						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg font-medium text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2"
 						aria-label="Contact"
 					>
 						<Link href="/contact">Contact</Link>
@@ -167,25 +153,13 @@ function AppHeader() {
 					<div className="hidden md:flex">
 						<button
 							onClick={showHireMeModal}
-							className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
+							className="text-md font-general-medium bg-dev-blue hover:bg-dev-blue-dark text-black shadow-sm rounded-md px-5 py-2.5 duration-300 glow-blue"
 							aria-label="Hire Me Button"
 						>
 							Hire Me
 						</button>
 					</div>
 
-					{/* Theme switcher large screen */}
-					<div
-						onClick={() => setTheme(activeTheme)}
-						aria-label="Theme Switcher"
-						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
-					>
-						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-						)}
-					</div>
 				</div>
 			</div>
 			<div>

@@ -1,8 +1,12 @@
 const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
+	'Machine Learning',
+	'Computer Vision',
+	'LLMs & RAG',
+	'AI Automation',
+	'MLOps',
+	'Data Science',
+	'Deep Learning',
+	'Natural Language Processing',
 ];
 
 function ProjectsFilter({ setSelectProject }) {
@@ -14,21 +18,24 @@ function ProjectsFilter({ setSelectProject }) {
 			className="
                 px-4
                 sm:px-6
-                py-2
+                py-3
                 border
-                dark:border-secondary-dark
+                border-gray-600
                 rounded-lg
                 text-sm
                 sm:text-md
-                dark:font-medium
-                bg-secondary-light
-                dark:bg-ternary-dark
-                text-primary-dark
-                dark:text-ternary-light
+                font-medium
+                bg-gray-800
+                text-white
+                focus:border-dev-blue
+                focus:ring-1
+                focus:ring-dev-blue
+                transition-colors
+                duration-300
             "
 		>
-			<option value={setSelectProject} className="text-sm sm:text-md">
-				All Projects
+			<option value="All" className="text-sm sm:text-md">
+				All AI/ML Projects
 			</option>
 
 			{selectOptions.map((option) => (

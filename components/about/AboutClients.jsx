@@ -8,10 +8,10 @@ function AboutClients() {
 	return (
 		<div className="mt-10 sm:mt-20">
 			<div className="text-center mb-12">
-				<h2 className="font-general-semibold text-3xl sm:text-4xl text-primary-dark dark:text-primary-light mb-4">
+				<h2 className="font-general-semibold text-3xl sm:text-4xl text-white mb-4">
 					{clientsHeading}
 				</h2>
-				<p className="font-general-regular text-lg text-ternary-dark dark:text-ternary-light">
+				<p className="font-general-regular text-lg text-gray-300">
 					Professional experience across diverse industries and technologies
 				</p>
 			</div>

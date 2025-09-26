@@ -82,36 +82,36 @@ function AboutEducation() {
 	return (
 		<div className="mt-10 sm:mt-20">
 			<div className="text-center mb-12">
-				<h2 className="font-general-semibold text-3xl sm:text-4xl text-primary-dark dark:text-primary-light mb-4">
+				<h2 className="font-general-semibold text-3xl sm:text-4xl text-white mb-4">
 					Education & Training
 				</h2>
-				<p className="font-general-regular text-lg text-ternary-dark dark:text-ternary-light">
+				<p className="font-general-regular text-lg text-gray-300">
 					Continuous learning and professional development in AI, ML, and engineering
 				</p>
 			</div>
 
 			<div className="space-y-4">
 				{visibleCourses.map((course, index) => (
-					<div key={index} className="bg-secondary-light dark:bg-ternary-dark rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-indigo-500">
+					<div key={index} className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-dev-blue">
 						<div className="flex items-start space-x-4">
 							<div className={`${course.color} text-white p-3 rounded-lg flex-shrink-0`}>
 								{course.icon}
 							</div>
 							<div className="flex-1">
 								<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-									<h3 className="font-general-semibold text-xl text-primary-dark dark:text-primary-light">
+									<h3 className="font-general-semibold text-xl text-white">
 										{course.title}
 									</h3>
-									<span className="text-sm font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-900 px-3 py-1 rounded-full">
+									<span className="text-sm font-medium text-dev-blue bg-dev-blue/10 px-3 py-1 rounded-full">
 										{course.institution}
 									</span>
 								</div>
 								{course.year && (
-									<p className="font-general-medium text-lg text-ternary-dark dark:text-ternary-light mb-2">
+									<p className="font-general-medium text-lg text-gray-300 mb-2">
 										{course.year}
 									</p>
 								)}
-								<p className="font-general-regular text-ternary-dark dark:text-ternary-light leading-relaxed">
+								<p className="font-general-regular text-gray-300 leading-relaxed">
 									{course.description}
 								</p>
 							</div>
@@ -124,14 +124,14 @@ function AboutEducation() {
 			<div className="text-center mt-8">
 				<button
 					onClick={() => setShowAll(!showAll)}
-					className="bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
+					className="bg-dev-blue hover:bg-dev-blue-dark text-black font-medium py-3 px-6 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl glow-blue"
 				>
 					{showAll ? 'Show Less' : `Show More (${educationData.length - 3} more courses)`}
 				</button>
 			</div>
 
 			<div className="mt-12">
-				<div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-8 text-white">
+				<div className="bg-gradient-to-r from-dev-blue to-dev-purple rounded-xl p-8 text-white">
 					<h3 className="font-general-semibold text-2xl mb-6 text-center">🏆 Additional Achievements</h3>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 						<div className="bg-white/10 rounded-lg p-4">

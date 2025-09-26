@@ -22,7 +22,7 @@ function AppBanner() {
 						duration: 0.9,
 						delay: 0.1,
 					}}
-					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
+					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-white uppercase"
 				>
 					Hi, I'm David
 				</motion.h1>
@@ -34,7 +34,7 @@ function AppBanner() {
 						duration: 0.9,
 						delay: 0.2,
 					}}
-					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
+					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-300"
 				>
 					Machine Learning Engineer & AI Specialist
 				</motion.p>
@@ -51,7 +51,7 @@ function AppBanner() {
 					<a
 						download="CV_DavidNavarro_2025.pdf"
 						href="/files/CV_DavidNavarro_2025.pdf"
-						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
+						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-dev-blue py-2.5 sm:py-3 shadow-lg rounded-lg bg-dev-blue focus:ring-1 focus:ring-dev-blue hover:bg-dev-blue-dark text-black hover:text-black duration-500 glow-blue"
 						aria-label="Download Resume"
 					>
 						<FiArrowDownCircle className="ml-0 sm:ml-1 mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiArrowDownCircle>

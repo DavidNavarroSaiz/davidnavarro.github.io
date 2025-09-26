@@ -2,19 +2,19 @@ function AboutSkills() {
 	return (
 		<div className="mt-10 sm:mt-20">
 			<div className="text-center mb-12">
-				<h2 className="font-general-semibold text-3xl sm:text-4xl text-primary-dark dark:text-primary-light mb-4">
+				<h2 className="font-general-semibold text-3xl sm:text-4xl text-white mb-4">
 					Technical Skills
 				</h2>
-				<p className="font-general-regular text-lg text-ternary-dark dark:text-ternary-light">
+				<p className="font-general-regular text-lg text-gray-300">
 					My expertise spans across multiple domains in AI, ML, and software engineering
 				</p>
 			</div>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				<div className="bg-secondary-light dark:bg-ternary-dark rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
 					<div className="flex items-center mb-4">
 						<span className="text-2xl mr-3">💻</span>
-						<h3 className="font-general-semibold text-lg text-primary-dark dark:text-primary-light">
+						<h3 className="font-general-semibold text-lg text-white">
 							Programming Languages & Frameworks
 						</h3>
 					</div>
@@ -34,10 +34,10 @@ function AboutSkills() {
 					</div>
 				</div>
 
-				<div className="bg-secondary-light dark:bg-ternary-dark rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
 					<div className="flex items-center mb-4">
 						<span className="text-2xl mr-3">🤖</span>
-						<h3 className="font-general-semibold text-lg text-primary-dark dark:text-primary-light">
+						<h3 className="font-general-semibold text-lg text-white">
 							Machine Learning & LLM Tools
 						</h3>
 					</div>
@@ -59,10 +59,10 @@ function AboutSkills() {
 					</div>
 				</div>
 
-				<div className="bg-secondary-light dark:bg-ternary-dark rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
 					<div className="flex items-center mb-4">
 						<span className="text-2xl mr-3">🧠</span>
-						<h3 className="font-general-semibold text-lg text-primary-dark dark:text-primary-light">
+						<h3 className="font-general-semibold text-lg text-white">
 							AI Concepts & Technologies
 						</h3>
 					</div>
@@ -76,10 +76,10 @@ function AboutSkills() {
 					</div>
 				</div>
 
-				<div className="bg-secondary-light dark:bg-ternary-dark rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
 					<div className="flex items-center mb-4">
 						<span className="text-2xl mr-3">⚙️</span>
-						<h3 className="font-general-semibold text-lg text-primary-dark dark:text-primary-light">
+						<h3 className="font-general-semibold text-lg text-white">
 							DevOps & MLOps
 						</h3>
 					</div>
@@ -97,10 +97,10 @@ function AboutSkills() {
 					</div>
 				</div>
 
-				<div className="bg-secondary-light dark:bg-ternary-dark rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
 					<div className="flex items-center mb-4">
 						<span className="text-2xl mr-3">☁️</span>
-						<h3 className="font-general-semibold text-lg text-primary-dark dark:text-primary-light">
+						<h3 className="font-general-semibold text-lg text-white">
 							Cloud & Database
 						</h3>
 					</div>
@@ -120,10 +120,10 @@ function AboutSkills() {
 					</div>
 				</div>
 
-				<div className="bg-secondary-light dark:bg-ternary-dark rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
 					<div className="flex items-center mb-4">
 						<span className="text-2xl mr-3">📊</span>
-						<h3 className="font-general-semibold text-lg text-primary-dark dark:text-primary-light">
+						<h3 className="font-general-semibold text-lg text-white">
 							Data Science & Analytics
 						</h3>
 					</div>
@@ -143,20 +143,20 @@ function AboutSkills() {
 			</div>
 
 			<div className="mt-8">
-				<div className="bg-secondary-light dark:bg-ternary-dark rounded-xl p-4 shadow-lg">
+				<div className="bg-gray-900 border border-gray-700 rounded-xl p-4 shadow-lg">
 					<div className="flex items-center justify-center gap-6">
 						<div className="flex items-center gap-2">
 							<span className="text-lg">🌍</span>
-							<span className="font-general-medium text-sm text-ternary-dark dark:text-ternary-light">Languages:</span>
+							<span className="font-general-medium text-sm text-gray-300">Languages:</span>
 						</div>
 						<div className="flex items-center gap-4">
 							<div className="flex items-center gap-2">
 								<span className="text-lg">🇺🇸</span>
-								<span className="text-sm font-medium text-primary-dark dark:text-primary-light">English (Fluent)</span>
+								<span className="text-sm font-medium text-white">English (Fluent)</span>
 							</div>
 							<div className="flex items-center gap-2">
 								<span className="text-lg">🇨🇴</span>
-								<span className="text-sm font-medium text-primary-dark dark:text-primary-light">Spanish (Native)</span>
+								<span className="text-sm font-medium text-white">Spanish (Native)</span>
 							</div>
 						</div>
 					</div>

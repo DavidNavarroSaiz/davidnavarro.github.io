@@ -9,15 +9,23 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				// Light colors
-				'primary-light': '#F7F8FC',
-				'secondary-light': '#FFFFFF',
-				'ternary-light': '#f6f7f8',
+				// Light colors (for light mode - minimal usage)
+				'primary-light': '#0A0A0A',
+				'secondary-light': '#111111',
+				'ternary-light': '#1A1A1A',
 
-				// Dark colors
-				'primary-dark': '#0D2438',
-				'secondary-dark': '#102D44',
-				'ternary-dark': '#1E3851',
+				// Dark colors (main theme - black and blue)
+				'primary-dark': '#000000',
+				'secondary-dark': '#0A0A0A',
+				'ternary-dark': '#1A1A1A',
+
+				// Developer blue accents
+				'dev-blue': '#00D4FF',
+				'dev-blue-dark': '#0099CC',
+				'dev-blue-light': '#33E0FF',
+				'dev-cyan': '#00FFFF',
+				'dev-purple': '#8B5CF6',
+				'dev-green': '#10B981',
 
 				// Extended v3 color
 				gray: colors.neutral,

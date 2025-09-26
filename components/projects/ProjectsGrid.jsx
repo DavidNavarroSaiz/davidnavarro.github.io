@@ -29,7 +29,7 @@ function ProjectsGrid() {
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
-				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
+				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-white">
 					Projects portfolio
 				</p>
 			</div>
@@ -38,8 +38,7 @@ function ProjectsGrid() {
 				<h3
 					className="
                         font-general-regular 
-                        text-center text-secondary-dark
-                        dark:text-ternary-light
+                        text-center text-gray-300
                         text-md
                         sm:text-xl
                         mb-3
@@ -51,8 +50,7 @@ function ProjectsGrid() {
 					className="
                         flex
                         justify-between
-                        border-b border-primary-light
-                        dark:border-secondary-dark
+                        border-b border-gray-700
                         pb-3
                         gap-3
                         "
@@ -62,36 +60,34 @@ function ProjectsGrid() {
 							className="
                                 hidden
                                 sm:block
-                                bg-primary-light
-                                dark:bg-ternary-dark
+                                bg-gray-900
                                 p-2.5
                                 shadow-sm
                                 rounded-xl
                                 cursor-pointer
+                                border border-gray-700
                                 "
 						>
-							<FiSearch className="text-ternary-dark dark:text-ternary-light w-5 h-5"></FiSearch>
+							<FiSearch className="text-gray-300 w-5 h-5"></FiSearch>
 						</span>
 						<input
 							onChange={(e) => {
 								setSearchProject(e.target.value);
 							}}
 							className="
-                                ont-general-medium 
+                                font-general-medium 
                                 pl-3
                                 pr-1
                                 sm:px-4
                                 py-2
                                 border 
-                            border-gray-200
-                                dark:border-secondary-dark
+                                border-gray-700
                                 rounded-lg
                                 text-sm
                                 sm:text-md
-                                bg-secondary-light
-                                dark:bg-ternary-dark
-                                text-primary-dark
-                                dark:text-ternary-light
+                                bg-gray-900
+                                text-white
+                                placeholder-gray-400
                                 "
 							id="name"
 							name="name"
