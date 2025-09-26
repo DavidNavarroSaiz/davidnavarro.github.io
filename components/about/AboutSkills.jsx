@@ -18,7 +18,7 @@ function AboutSkills() {
 							Programming Languages & Frameworks
 						</h3>
 					</div>
-					<div className="flex flex-wrap gap-2">
+					<div className="flex flex-wrap gap-4">
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">Python</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">C++</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">JavaScript</span>
@@ -41,7 +41,7 @@ function AboutSkills() {
 							Machine Learning & LLM Tools
 						</h3>
 					</div>
-					<div className="flex flex-wrap gap-2">
+					<div className="flex flex-wrap gap-4">
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">PyTorch</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">TensorFlow</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">Keras</span>
@@ -66,7 +66,7 @@ function AboutSkills() {
 							AI Concepts & Technologies
 						</h3>
 					</div>
-					<div className="flex flex-wrap gap-2">
+					<div className="flex flex-wrap gap-4">
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">Generative AI</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">Conversational Agents</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">RAG</span>
@@ -83,7 +83,7 @@ function AboutSkills() {
 							DevOps & MLOps
 						</h3>
 					</div>
-					<div className="flex flex-wrap gap-2">
+					<div className="flex flex-wrap gap-4">
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">Docker</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">Git</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">GitHub</span>
@@ -104,7 +104,7 @@ function AboutSkills() {
 							Cloud & Database
 						</h3>
 					</div>
-					<div className="flex flex-wrap gap-2">
+					<div className="flex flex-wrap gap-4">
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-cyan-500 hover:scale-105 transition-transform duration-200">Microsoft Azure</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-cyan-500 hover:scale-105 transition-transform duration-200">AWS</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-cyan-500 hover:scale-105 transition-transform duration-200">PostgreSQL</span>
@@ -127,7 +127,7 @@ function AboutSkills() {
 							Data Science & Analytics
 						</h3>
 					</div>
-					<div className="flex flex-wrap gap-2">
+					<div className="flex flex-wrap gap-4">
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">Pandas</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">NumPy</span>
 						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">PyMongo</span>

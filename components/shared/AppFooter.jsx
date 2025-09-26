@@ -23,9 +23,6 @@ function AppFooter() {
 			<div className="pt-20 sm:pt-30 pb-8 mt-20 border-t-2 border-gray-700">
 				{/* Footer social links */}
 				<div className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28">
-					<p className="text-3xl sm:text-4xl text-white mb-5 font-general-semibold">
-						Follow me
-					</p>
 					<ul className="flex gap-6 sm:gap-8">
 						{socialLinks.map((link) => (
 							<a

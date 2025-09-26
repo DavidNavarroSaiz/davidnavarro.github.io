@@ -35,10 +35,11 @@ function AppHeader() {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			id="nav"
-			className="sm:container sm:mx-auto"
+			className="sticky top-0 z-50 bg-[#0B0B0C] border-b border-gray-700/30 backdrop-blur-sm"
 		>
+			<div className="sm:container sm:mx-auto">
 			{/* Header */}
-			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
+			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-3">
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
@@ -52,9 +53,8 @@ function AppHeader() {
 									/>
 								</div>
 								<div className="flex flex-col justify-center min-w-0">
-									<div className="header-logo">
-										<span className="header-logo-blue">DAVID</span>
-										<span className="header-logo-cyan">N</span>
+									<div className="header-logo-new">
+										<span className="header-logo-cyan">DAVID NAVARRO</span>
 									</div>
 									<div className="header-subtitle hidden sm:block">
 										Machine Learning Engineer | Computer Vision | AI & Automation Specialist
@@ -170,6 +170,7 @@ function AppHeader() {
 					/>
 				) : null}
 				{showModal ? showHireMeModal : null}
+			</div>
 			</div>
 		</motion.nav>
 	);
