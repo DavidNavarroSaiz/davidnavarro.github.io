@@ -15,24 +15,7 @@ function ProjectsFilter({ setSelectProject }) {
 			onChange={(e) => {
 				setSelectProject(e.target.value);
 			}}
-			className="
-                px-4
-                sm:px-6
-                py-3
-                border
-                border-gray-600
-                rounded-lg
-                text-sm
-                sm:text-md
-                font-medium
-                bg-gray-800
-                text-white
-                focus:border-dev-blue
-                focus:ring-1
-                focus:ring-dev-blue
-                transition-colors
-                duration-300
-            "
+			className="filter-select"
 		>
 			<option value="All" className="text-sm sm:text-md">
 				All AI/ML Projects

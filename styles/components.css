@@ -1,0 +1,414 @@
+/* Component-specific styles for better maintainability */
+
+/* ===== HEADER STYLES ===== */
+.header-logo {
+  @apply text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-tight;
+}
+
+.header-logo-blue {
+  @apply text-dev-blue glow-blue;
+}
+
+.header-logo-cyan {
+  @apply text-dev-cyan ml-1;
+}
+
+.header-subtitle {
+  @apply text-xs sm:text-xs lg:text-sm text-gray-300 font-medium tracking-wide leading-tight;
+}
+
+.header-subtitle-mobile {
+  @apply text-xs text-gray-300 font-medium tracking-wide leading-tight;
+}
+
+.header-link {
+  @apply block text-left text-lg text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2;
+}
+
+.header-link-desktop {
+  @apply block text-left text-lg font-medium text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2;
+}
+
+.hire-me-button {
+  @apply text-base font-general-medium bg-dev-blue hover:bg-dev-blue-dark text-black shadow-sm rounded-md px-5 py-2.5 duration-300 glow-blue;
+}
+
+.hire-me-button-mobile {
+  @apply font-general-medium sm:hidden block text-left text-base bg-dev-blue hover:bg-dev-blue-dark text-black shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24 glow-blue;
+}
+
+/* ===== CARD STYLES ===== */
+.card-container {
+  @apply bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+}
+
+.card-container-hover {
+  @apply hover:border-dev-blue/30;
+}
+
+.card-header {
+  @apply font-general-semibold text-xl text-white mb-4;
+}
+
+.card-text {
+  @apply font-general-regular text-gray-300 leading-relaxed;
+}
+
+.card-text-white {
+  @apply font-general-regular text-white leading-relaxed;
+}
+
+/* ===== FORM STYLES ===== */
+.form-container {
+  @apply max-w-xl m-4 p-6 sm:p-10 bg-gray-900 border border-gray-700 rounded-xl shadow-xl text-left;
+}
+
+.form-title {
+  @apply font-general-semibold text-white text-2xl mb-8;
+}
+
+.form-label {
+  @apply block text-lg text-white mb-2 font-medium;
+}
+
+.form-input {
+  @apply w-full px-5 py-3 border border-gray-600 text-white bg-gray-800 rounded-lg shadow-sm text-base focus:border-dev-blue focus:ring-1 focus:ring-dev-blue transition-colors duration-300;
+}
+
+.form-textarea {
+  @apply w-full px-5 py-3 border border-gray-600 text-white bg-gray-800 rounded-lg shadow-sm text-base focus:border-dev-blue focus:ring-1 focus:ring-dev-blue transition-colors duration-300;
+}
+
+.form-button-primary {
+  @apply font-general-medium px-8 py-4 text-black text-center font-medium tracking-wider bg-dev-blue hover:bg-dev-blue-dark focus:ring-1 focus:ring-dev-blue rounded-lg duration-500 glow-blue;
+}
+
+.form-button-secondary {
+  @apply px-6 py-3 bg-gray-700 text-white hover:bg-gray-600 rounded-lg focus:ring-1 focus:ring-gray-500 duration-500 transition-colors;
+}
+
+/* ===== MODAL STYLES ===== */
+.modal-container {
+  @apply max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-gray-900 border border-gray-700 max-h-screen shadow-2xl flex-row rounded-xl relative;
+}
+
+.modal-header {
+  @apply flex justify-between gap-10 p-6 border-b border-gray-700;
+}
+
+.modal-title {
+  @apply text-white text-xl font-semibold;
+}
+
+.modal-close-button {
+  @apply px-4 font-bold text-gray-400 hover:text-white transition-colors duration-300;
+}
+
+.modal-body {
+  @apply p-6 w-full h-full;
+}
+
+.modal-button-group {
+  @apply flex gap-4 pt-4;
+}
+
+.modal-button-primary {
+  @apply flex-1 px-6 py-3 text-black font-medium bg-dev-blue hover:bg-dev-blue-dark rounded-lg focus:ring-1 focus:ring-dev-blue duration-500 glow-blue transition-colors;
+}
+
+/* ===== PROJECT STYLES ===== */
+.project-header {
+  @apply bg-gray-900 border border-gray-700 rounded-xl p-8 mb-8;
+}
+
+.project-title {
+  @apply font-general-semibold text-left text-3xl sm:text-4xl font-bold text-white mt-14 sm:mt-20 mb-7;
+}
+
+.project-meta {
+  @apply flex flex-wrap gap-6;
+}
+
+.project-meta-item {
+  @apply flex items-center;
+}
+
+.project-meta-icon {
+  @apply text-xl text-dev-blue;
+}
+
+.project-meta-text {
+  @apply font-general-regular ml-2 leading-none text-gray-300;
+}
+
+.project-gallery-image {
+  @apply rounded-xl cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700;
+}
+
+.project-info-card {
+  @apply bg-gray-900 border border-gray-700 rounded-xl p-6 mb-7;
+}
+
+.project-info-title {
+  @apply font-general-semibold text-2xl font-semibold text-white mb-4;
+}
+
+.project-info-text {
+  @apply font-general-regular text-gray-300 leading-relaxed;
+}
+
+.project-tech-tag {
+  @apply px-3 py-1 rounded-full text-sm font-medium text-white bg-dev-blue/20 border border-dev-blue/30;
+}
+
+.project-details-container {
+  @apply bg-gray-900 border border-gray-700 rounded-xl p-8;
+}
+
+.project-details-title {
+  @apply text-white text-2xl font-bold mb-7;
+}
+
+.project-details-text {
+  @apply font-general-regular mb-5 text-lg text-gray-300 leading-relaxed;
+}
+
+/* ===== FILTER STYLES ===== */
+.filter-select {
+  @apply px-4 sm:px-6 py-3 border border-gray-600 rounded-lg text-sm sm:text-base font-medium bg-gray-800 text-white focus:border-dev-blue focus:ring-1 focus:ring-dev-blue transition-colors duration-300;
+}
+
+/* ===== CONTACT STYLES ===== */
+.contact-container {
+  @apply bg-gray-900 border border-gray-700 rounded-xl p-8 mt-12;
+}
+
+.contact-title {
+  @apply font-general-semibold text-2xl text-white mb-8;
+}
+
+.contact-item {
+  @apply flex items-center bg-gray-800 border border-gray-600 rounded-lg p-4 hover:border-dev-blue/50 transition-colors duration-300;
+}
+
+.contact-icon-container {
+  @apply bg-dev-blue/20 border border-dev-blue/30 p-3 rounded-lg mr-4;
+}
+
+.contact-icon {
+  @apply text-xl text-dev-blue;
+}
+
+.contact-link {
+  @apply text-lg text-white hover:text-dev-blue transition-colors duration-300 font-medium;
+}
+
+.contact-text {
+  @apply text-lg text-gray-300 font-medium;
+}
+
+.contact-info-box {
+  @apply mt-8 p-4 bg-dev-blue/10 border border-dev-blue/20 rounded-lg;
+}
+
+.contact-info-title {
+  @apply text-dev-blue text-sm font-medium mb-2;
+}
+
+.contact-info-text {
+  @apply text-gray-300 text-sm;
+}
+
+/* ===== SKILLS STYLES ===== */
+.skills-container {
+  @apply mt-10 sm:mt-20;
+}
+
+.skills-header {
+  @apply text-center mb-12;
+}
+
+.skills-title {
+  @apply font-general-semibold text-3xl sm:text-4xl text-white mb-4;
+}
+
+.skills-subtitle {
+  @apply font-general-regular text-lg text-gray-300;
+}
+
+.skills-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.skill-card {
+  @apply bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30;
+}
+
+.skill-card-header {
+  @apply flex items-center mb-4;
+}
+
+.skill-card-icon {
+  @apply text-2xl mr-3;
+}
+
+.skill-card-title {
+  @apply font-general-semibold text-lg text-white;
+}
+
+.skill-tag {
+  @apply px-3 py-1 rounded-full text-sm font-medium text-white hover:scale-105 transition-transform duration-200;
+}
+
+.skill-tag-blue {
+  @apply bg-blue-500;
+}
+
+.skill-tag-purple {
+  @apply bg-purple-500;
+}
+
+.skill-tag-green {
+  @apply bg-green-500;
+}
+
+.skill-tag-orange {
+  @apply bg-orange-500;
+}
+
+.skill-tag-cyan {
+  @apply bg-cyan-500;
+}
+
+.skill-tag-pink {
+  @apply bg-pink-500;
+}
+
+.skill-languages-container {
+  @apply mt-8;
+}
+
+.skill-languages-card {
+  @apply bg-gray-900 border border-gray-700 rounded-xl p-4 shadow-lg;
+}
+
+.skill-languages-content {
+  @apply flex items-center justify-center gap-6;
+}
+
+.skill-languages-label {
+  @apply flex items-center gap-2;
+}
+
+.skill-languages-text {
+  @apply font-general-medium text-sm text-gray-300;
+}
+
+.skill-languages-items {
+  @apply flex items-center gap-4;
+}
+
+.skill-language-item {
+  @apply flex items-center gap-2;
+}
+
+.skill-language-flag {
+  @apply text-lg;
+}
+
+.skill-language-text {
+  @apply text-sm font-medium text-white;
+}
+
+/* ===== EDUCATION STYLES ===== */
+.education-container {
+  @apply mt-10 sm:mt-20;
+}
+
+.education-header {
+  @apply text-center mb-12;
+}
+
+.education-title {
+  @apply font-general-semibold text-3xl sm:text-4xl text-white mb-4;
+}
+
+.education-subtitle {
+  @apply font-general-regular text-lg text-gray-300;
+}
+
+.education-courses {
+  @apply space-y-4;
+}
+
+.education-course {
+  @apply bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-dev-blue;
+}
+
+.education-course-header {
+  @apply flex items-start space-x-4;
+}
+
+.education-course-icon {
+  @apply text-white p-3 rounded-lg flex-shrink-0;
+}
+
+.education-course-content {
+  @apply flex-1;
+}
+
+.education-course-title-row {
+  @apply flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2;
+}
+
+.education-course-title {
+  @apply font-general-semibold text-xl text-white;
+}
+
+.education-course-institution {
+  @apply text-sm font-medium text-dev-blue bg-dev-blue/10 px-3 py-1 rounded-full;
+}
+
+.education-course-year {
+  @apply font-general-medium text-lg text-gray-300 mb-2;
+}
+
+.education-course-description {
+  @apply font-general-regular text-gray-300 leading-relaxed;
+}
+
+.education-button-container {
+  @apply text-center mt-8;
+}
+
+.education-button {
+  @apply bg-dev-blue hover:bg-dev-blue-dark text-black font-medium py-3 px-6 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl glow-blue;
+}
+
+.education-achievements {
+  @apply mt-12;
+}
+
+.education-achievements-container {
+  @apply bg-gradient-to-r from-dev-blue to-dev-purple rounded-xl p-8 text-white;
+}
+
+.education-achievements-title {
+  @apply font-general-semibold text-2xl mb-6 text-center;
+}
+
+.education-achievements-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.education-achievement-item {
+  @apply bg-white/10 rounded-lg p-4;
+}
+
+.education-achievement-title {
+  @apply font-semibold text-lg mb-2;
+}
+
+.education-achievement-text {
+  @apply text-sm;
+}

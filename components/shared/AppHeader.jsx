@@ -52,14 +52,14 @@ function AppHeader() {
 									/>
 								</div>
 								<div className="flex flex-col justify-center min-w-0">
-									<div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-tight">
-										<span className="text-dev-blue glow-blue">DAVID</span>
-										<span className="text-dev-cyan ml-1">N</span>
+									<div className="header-logo">
+										<span className="header-logo-blue">DAVID</span>
+										<span className="header-logo-cyan">N</span>
 									</div>
-									<div className="text-xs sm:text-xs lg:text-sm text-gray-300 font-medium tracking-wide leading-tight hidden sm:block">
+									<div className="header-subtitle hidden sm:block">
 										Machine Learning Engineer | Computer Vision | AI & Automation Specialist
 									</div>
-									<div className="text-xs text-gray-300 font-medium tracking-wide leading-tight block sm:hidden">
+									<div className="header-subtitle-mobile block sm:hidden">
 										ML Engineer | Computer Vision | AI Specialist
 									</div>
 								</div>
@@ -99,17 +99,17 @@ function AppHeader() {
 							: 'hidden'
 					}
 				>
-					<div className="block text-left text-lg text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2">
+					<div className="header-link">
 						<Link href="/projects" aria-label="Projects">
 							Projects
 						</Link>
 					</div>
-					<div className="block text-left text-lg text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
+					<div className="header-link border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
 						<Link href="/about" aria-label="About Me">
 							About Me
 						</Link>
 					</div>
-					<div className="block text-left text-lg text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
+					<div className="header-link border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
 						<Link href="/contact" aria-label="Contact">
 							Contact
 						</Link>
@@ -117,7 +117,7 @@ function AppHeader() {
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<button
 							onClick={showHireMeModal}
-							className="font-general-medium sm:hidden block text-left text-md bg-dev-blue hover:bg-dev-blue-dark text-black shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24 glow-blue"
+							className="hire-me-button-mobile"
 							aria-label="Hire Me Button"
 						>
 							Hire Me
@@ -128,20 +128,20 @@ function AppHeader() {
 				{/* Header links large screen */}
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
 					<div
-						className="block text-left text-lg font-medium text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2"
+						className="header-link-desktop"
 						aria-label="Projects"
 					>
 						<Link href="/projects">Projects</Link>
 					</div>
 					<div
-						className="block text-left text-lg font-medium text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2"
+						className="header-link-desktop"
 						aria-label="About Me"
 					>
 						<Link href="/about">About Me</Link>
 					</div>
 
 					<div
-						className="block text-left text-lg font-medium text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2"
+						className="header-link-desktop"
 						aria-label="Contact"
 					>
 						<Link href="/contact">Contact</Link>
@@ -153,7 +153,7 @@ function AppHeader() {
 					<div className="hidden md:flex">
 						<button
 							onClick={showHireMeModal}
-							className="text-md font-general-medium bg-dev-blue hover:bg-dev-blue-dark text-black shadow-sm rounded-md px-5 py-2.5 duration-300 glow-blue"
+							className="hire-me-button"
 							aria-label="Hire Me Button"
 						>
 							Hire Me

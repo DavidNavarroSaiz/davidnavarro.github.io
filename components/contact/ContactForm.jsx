@@ -9,9 +9,9 @@ function ContactForm() {
 					onSubmit={(e) => {
 						e.preventDefault();
 					}}
-					className="max-w-xl m-4 p-6 sm:p-10 bg-gray-900 border border-gray-700 rounded-xl shadow-xl text-left"
+					className="form-container"
 				>
-					<p className="font-general-semibold text-white text-2xl mb-8">
+					<p className="form-title">
 						Get in Touch
 					</p>
 
@@ -45,13 +45,13 @@ function ContactForm() {
 
 					<div className="mt-6">
 						<label
-							className="block text-lg text-white mb-2 font-medium"
+							className="form-label"
 							htmlFor="message"
 						>
 							Message
 						</label>
 						<textarea
-							className="w-full px-5 py-3 border border-gray-600 text-white bg-gray-800 rounded-lg shadow-sm text-md focus:border-dev-blue focus:ring-1 focus:ring-dev-blue transition-colors duration-300"
+							className="form-textarea"
 							id="message"
 							name="message"
 							cols="14"
@@ -62,7 +62,7 @@ function ContactForm() {
 					</div>
 
 					<div className="mt-8">
-						<span className="font-general-medium px-8 py-4 text-black text-center font-medium tracking-wider bg-dev-blue hover:bg-dev-blue-dark focus:ring-1 focus:ring-dev-blue rounded-lg duration-500 glow-blue">
+						<span className="form-button-primary">
 							<Button
 								title="Send Message"
 								type="submit"
