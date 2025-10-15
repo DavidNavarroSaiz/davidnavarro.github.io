@@ -163,13 +163,12 @@ function AppHeader() {
 				</div>
 			</div>
 			<div>
-				{showModal ? (
+				{showModal && (
 					<HireMeModal
 						onClose={showHireMeModal}
 						onRequest={showHireMeModal}
 					/>
-				) : null}
-				{showModal ? showHireMeModal : null}
+				)}
 			</div>
 			</div>
 		</motion.nav>

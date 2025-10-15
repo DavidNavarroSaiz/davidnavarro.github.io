@@ -715,7 +715,7 @@ export const projectsData = [
 			title: 'Healthcare Resource Recommender System',
 			url: 'healthcare-resource-recommender-system',
 			category: 'LLMs and RAG',
-			img: '/images/ai-1.png',
+			img: '/images/health_1.png',
 			ProjectHeader: {
 				title: 'Healthcare Resource Recommender System',
 				publishDate: 'June 2023',
@@ -725,17 +725,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Healthcare Resource Recommender System',
-				img: '/images/ai-1.png',
+				img: '/images/health_2.png',
 			},
 			{
 				id: uuidv4(),
 				title: 'Healthcare Resource Recommender System',
-				img: '/images/ai-1.png',
+				img: '/images/health_3.png',
 			},
 			{
 				id: uuidv4(),
 				title: 'Healthcare Resource Recommender System',
-				img: '/images/ai-1.png',
+				img: '/images/health_1.png',
 			},
 		],
 		ProjectInfo: {
@@ -815,7 +815,7 @@ export const projectsData = [
 		title: 'Community Health Workers Platform',
 		url: 'community-health-workers-platform',
 		category: 'LLMs and RAG',
-		img: '/images/ai-1.png',
+		img: '/images/speech_1.png',
 		ProjectHeader: {
 			title: 'Community Health Workers Platform',
 			publishDate: 'June 2023',
@@ -825,17 +825,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Community Health Workers Platform',
-				img: '/images/ai-1.png',
+				img: '/images/speech_2.png',
 			},
 			{
 				id: uuidv4(),
 				title: 'Community Health Workers Platform',
-				img: '/images/ai-1.png',
+				img: '/images/speech_1.png',
 			},
 			{
 				id: uuidv4(),
 				title: 'Community Health Workers Platform',
-				img: '/images/ai-1.png',
+				img: '/images/speech_3.png',
 			},
 		],
 		ProjectInfo: {
@@ -915,7 +915,7 @@ export const projectsData = [
 		title: 'Industrial Computer Vision Systems',
 		url: 'industrial-computer-vision',
 		category: 'Computer Vision',
-		img: '/images/ai-1.png',
+		img: '/images/int_4.jpg',
 		ProjectHeader: {
 			title: 'Industrial Computer Vision Systems',
 			publishDate: 'May 2019',
@@ -925,17 +925,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Industrial Computer Vision Systems',
-				img: '/images/ai-1.png',
+				img: '/images/int_2.jpg',
 			},
 			{
 				id: uuidv4(),
 				title: 'Industrial Computer Vision Systems',
-				img: '/images/ai-1.png',
+				img: '/images/int_4.jpg',
 			},
 			{
 				id: uuidv4(),
 				title: 'Industrial Computer Vision Systems',
-				img: '/images/ai-1.png',
+				img: '/images/int_1.jpg',
 			},
 		],
 		ProjectInfo: {
