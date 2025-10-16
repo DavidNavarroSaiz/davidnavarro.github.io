@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
+import { sendHireMeEmail } from '../utils/emailService';
 
 const selectOptions = [
 	'Machine Learning',
@@ -37,20 +38,12 @@ function HireMeModal({ onClose, onRequest }) {
 		setSubmitStatus(null);
 
 		try {
-			const response = await fetch('/api/send-email', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					...formData,
-					subject: `Hire Me Request: ${formData.subject}`
-				}),
+			const result = await sendHireMeEmail({
+				...formData,
+				subject: `Hire Me Request: ${formData.subject}`
 			});
 
-			const result = await response.json();
-
-			if (response.ok) {
+			if (result.success) {
 				setSubmitStatus('success');
 				setFormData({
 					name: '',
