@@ -1,5 +1,9 @@
 import Image from 'next/image';
 import { v4 as uuidv4 } from 'uuid';
+import uiProject2 from '../../public/images/ui-project-2.jpg';
+import mobileProject1 from '../../public/images/mobile-project-1.jpg';
+import webProject1 from '../../public/images/web-project-1.jpg';
+import mobileProject2 from '../../public/images/mobile-project-2.jpg';
 
 const RelatedProject = {
 	title: 'Related Projects',
@@ -7,22 +11,22 @@ const RelatedProject = {
 		{
 			id: uuidv4(),
 			title: 'Mobile UI',
-			img: '/images/ui-project-2.jpg',
+			img: uiProject2,
 		},
 		{
 			id: uuidv4(),
 			title: 'Web Application',
-			img: '/images/mobile-project-1.jpg',
+			img: mobileProject1,
 		},
 		{
 			id: uuidv4(),
 			title: 'UI Design',
-			img: '/images/web-project-1.jpg',
+			img: webProject1,
 		},
 		{
 			id: uuidv4(),
 			title: 'Kabul Mobile App UI',
-			img: '/images/mobile-project-2.jpg',
+			img: mobileProject2,
 		},
 	],
 };

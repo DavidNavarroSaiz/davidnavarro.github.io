@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiArrowDownCircle, FiArrowRight } from 'react-icons/fi';
+import profileImage from '../../public/images/profile.jpeg';
+import logo from '../../public/images/DN-Logo.svg';
 
 function AppHero() {
 	return (
@@ -24,7 +26,7 @@ function AppHero() {
 						<div className="mb-4 flex justify-center lg:justify-start">
 							<div className="relative">
 								<Image
-									src="/images/profile.jpeg"
+									src={profileImage}
 									alt="David Navarro - Machine Learning Engineer"
 									width={250}
 									height={250}
@@ -32,7 +34,7 @@ function AppHero() {
 								/>
 								<div className="hero-badge">
 									<Image 
-										src="/images/DN-Logo.svg" 
+										src={logo}
 										alt="David Navarro Logo" 
 										width={24}
 										height={24}

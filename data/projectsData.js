@@ -7,13 +7,44 @@ import {
 	FiYoutube,
 } from 'react-icons/fi';
 
+// Import all project images
+import pm1 from '../public/images/pm-1.png';
+import pm2 from '../public/images/pm-2.png';
+import pm3 from '../public/images/pm-3.png';
+import rg1 from '../public/images/rg-1.png';
+import rg2 from '../public/images/rg-2.png';
+import rg3 from '../public/images/rg-3.png';
+import cov1 from '../public/images/cov-1.jpeg';
+import cov3 from '../public/images/cov-3.png';
+import cov4 from '../public/images/cov-4.png';
+import abo1 from '../public/images/abo-1.png';
+import abo2 from '../public/images/abo-2.png';
+import abo3 from '../public/images/abo-3.png';
+import lead1 from '../public/images/lead-1.png';
+import lead2 from '../public/images/lead-2.png';
+import lead3 from '../public/images/lead-3.png';
+import make1 from '../public/images/make-1.png';
+import make2 from '../public/images/make-2.png';
+import make10 from '../public/images/make-10.png';
+import make22 from '../public/images/make-22.png';
+import ai1 from '../public/images/ai-1.png';
+import health1 from '../public/images/health_1.png';
+import health2 from '../public/images/health_2.png';
+import health3 from '../public/images/health_3.png';
+import speech1 from '../public/images/speech_1.png';
+import speech2 from '../public/images/speech_2.png';
+import speech3 from '../public/images/speech_3.png';
+import int1 from '../public/images/int_1.jpg';
+import int2 from '../public/images/int_2.jpg';
+import int4 from '../public/images/int_4.jpg';
+
 export const projectsData = [
 	{
 		id: 1,
 		title: 'PM AI Agent',
 		url: 'pm-ai-agent',
 		category: 'LLMs and RAG',
-		img: '/images/pm-1.png',
+		img: pm1,
 		ProjectHeader: {
 			title: 'PM AI Agent',
 			publishDate: 'Feb 2025',
@@ -23,17 +54,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'PM AI Agent',
-				img: '/images/pm-2.png',
+				img: pm2,
 			},
 			{
 				id: uuidv4(),
 				title: 'PM AI Agent',
-				img: '/images/pm-1.png',
+				img: pm1,
 			},
 			{
 				id: uuidv4(),
 				title: 'PM AI Agent',
-				img: '/images/pm-3.png',
+				img: pm3,
 			},
 		],
 		ProjectInfo: {
@@ -111,7 +142,7 @@ export const projectsData = [
 		title: 'Candidate Recommendation System',
 		url: 'candidate-recommendation-system',
 		category: 'LLMs and RAG',
-		img: '/images/rg-1.png',
+		img: rg1,
 		ProjectHeader: {
 			title: 'Candidate Recommendation System',
 			publishDate: 'Apr 2024',
@@ -121,17 +152,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Candidate Recommendation System',
-				img: '/images/rg-1.png',
+				img: rg1,
 			},
 			{
 				id: uuidv4(),
 				title: 'Candidate Recommendation System',
-				img: '/images/rg-2.png',
+				img: rg2,
 			},
 			{
 				id: uuidv4(),
 				title: 'Candidate Recommendation System',
-				img: '/images/rg-3.png',
+				img: rg3,
 			},
 		],
 		ProjectInfo: {
@@ -209,7 +240,7 @@ export const projectsData = [
 		title: 'COVID-Rx Diagnosis System',
 		url: 'covid-rx-diagnosis',
 		category: 'Computer Vision',
-		img: '/images/cov-3.png',
+		img: cov3,
 		ProjectHeader: {
 			title: 'COVID-Rx Diagnosis System',
 			publishDate: 'Dec 2020',
@@ -219,17 +250,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'COVID-Rx Diagnosis System',
-				img: '/images/cov-3.png',
+				img: cov3,
 			},
 			{
 				id: uuidv4(),
 				title: 'COVID-Rx Diagnosis System',
-				img: '/images/cov-4.png',
+				img: cov4,
 			},
 			{
 				id: uuidv4(),
 				title: 'COVID-Rx Diagnosis System',
-				img: '/images/cov-1.jpeg',
+				img: cov1,
 			},
 		],
 		ProjectInfo: {
@@ -312,7 +343,7 @@ export const projectsData = [
 		title: 'AbogacIA - AI Legal Platform',
 		url: 'abogacia-ai-legal-platform',
 		category: 'LLMs and RAG',
-		img: '/images/abo-1.png',
+		img: abo1,
 		ProjectHeader: {
 			title: 'AbogacIA - AI Legal Platform',
 			publishDate: '2024',
@@ -322,17 +353,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'AbogacIA - AI Legal Platform',
-				img: '/images/abo-1.png',
+				img: abo1,
 			},
 			{
 				id: uuidv4(),
 				title: 'AbogacIA - AI Legal Platform',
-				img: '/images/abo-2.png',
+				img: abo2,
 			},
 			{
 				id: uuidv4(),
 				title: 'AbogacIA - AI Legal Platform',
-				img: '/images/abo-3.png',
+				img: abo3,
 			},
 		],
 		ProjectInfo: {
@@ -417,7 +448,7 @@ export const projectsData = [
 		title: 'Automatic Lead Management',
 		url: 'automatic-lead-management',
 		category: 'AI Automation',
-		img: '/images/lead-3.png',
+		img: lead3,
 		ProjectHeader: {
 			title: 'Automatic Lead Management',
 			publishDate: '2024',
@@ -427,17 +458,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Automatic Lead Management',
-				img: '/images/lead-3.png',
+				img: lead3,
 			},
 			{
 				id: uuidv4(),
 				title: 'Automatic Lead Management',
-				img: '/images/lead-1.png',
+				img: lead1,
 			},
 			{
 				id: uuidv4(),
 				title: 'Automatic Lead Management',
-				img: '/images/lead-2.png',
+				img: lead2,
 			},
 		],
 		ProjectInfo: {
@@ -515,7 +546,7 @@ export const projectsData = [
 			title: 'AI-Generated Monthly Reports',
 			url: 'ai-generated-monthly-reports',
 			category: 'AI Automation',
-			img: '/images/make-2.png',
+			img: make2,
 			ProjectHeader: {
 				title: 'AI-Generated Monthly Reports',
 				publishDate: '2024',
@@ -525,17 +556,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'AI-Generated Monthly Reports',
-				img: '/images/make-2.png',
+				img: make2,
 			},
 			{
 				id: uuidv4(),
 				title: 'AI-Generated Monthly Reports',
-				img: '/images/make-22.png',
+				img: make22,
 			},
 			{
 				id: uuidv4(),
 				title: 'AI-Generated Monthly Reports',
-				img: '/images/ai-1.png',
+				img: ai1,
 			},
 		],
 		ProjectInfo: {
@@ -615,7 +646,7 @@ export const projectsData = [
 			title: 'n8n Lead Generation System',
 			url: 'n8n-lead-generation-system',
 			category: 'AI Automation',
-			img: '/images/make-1.png',
+			img: make1,
 			ProjectHeader: {
 				title: 'n8n Lead Generation System',
 				publishDate: '2024',
@@ -625,17 +656,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'n8n Lead Generation System',
-				img: '/images/make-1.png',
+				img: make1,
 			},
 			{
 				id: uuidv4(),
 				title: 'n8n Lead Generation System',
-				img: '/images/make-10.png',
+				img: make10,
 			},
 			{
 				id: uuidv4(),
 				title: 'n8n Lead Generation System',
-				img: '/images/ai-1.png',
+				img: ai1,
 			},
 		],
 		ProjectInfo: {
@@ -715,7 +746,7 @@ export const projectsData = [
 			title: 'Healthcare Resource Recommender System',
 			url: 'healthcare-resource-recommender-system',
 			category: 'LLMs and RAG',
-			img: '/images/health_1.png',
+			img: health1,
 			ProjectHeader: {
 				title: 'Healthcare Resource Recommender System',
 				publishDate: 'June 2023',
@@ -725,17 +756,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Healthcare Resource Recommender System',
-				img: '/images/health_2.png',
+				img: health2,
 			},
 			{
 				id: uuidv4(),
 				title: 'Healthcare Resource Recommender System',
-				img: '/images/health_3.png',
+				img: health3,
 			},
 			{
 				id: uuidv4(),
 				title: 'Healthcare Resource Recommender System',
-				img: '/images/health_1.png',
+				img: health1,
 			},
 		],
 		ProjectInfo: {
@@ -815,7 +846,7 @@ export const projectsData = [
 		title: 'Community Health Workers Platform',
 		url: 'community-health-workers-platform',
 		category: 'LLMs and RAG',
-		img: '/images/speech_1.png',
+		img: speech1,
 		ProjectHeader: {
 			title: 'Community Health Workers Platform',
 			publishDate: 'June 2023',
@@ -825,17 +856,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Community Health Workers Platform',
-				img: '/images/speech_2.png',
+				img: speech2,
 			},
 			{
 				id: uuidv4(),
 				title: 'Community Health Workers Platform',
-				img: '/images/speech_1.png',
+				img: speech1,
 			},
 			{
 				id: uuidv4(),
 				title: 'Community Health Workers Platform',
-				img: '/images/speech_3.png',
+				img: speech3,
 			},
 		],
 		ProjectInfo: {
@@ -915,7 +946,7 @@ export const projectsData = [
 		title: 'Industrial Computer Vision Systems',
 		url: 'industrial-computer-vision',
 		category: 'Computer Vision',
-		img: '/images/int_4.jpg',
+		img: int4,
 		ProjectHeader: {
 			title: 'Industrial Computer Vision Systems',
 			publishDate: 'May 2019',
@@ -925,17 +956,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Industrial Computer Vision Systems',
-				img: '/images/int_2.jpg',
+				img: int2,
 			},
 			{
 				id: uuidv4(),
 				title: 'Industrial Computer Vision Systems',
-				img: '/images/int_4.jpg',
+				img: int4,
 			},
 			{
 				id: uuidv4(),
 				title: 'Industrial Computer Vision Systems',
-				img: '/images/int_1.jpg',
+				img: int1,
 			},
 		],
 		ProjectInfo: {

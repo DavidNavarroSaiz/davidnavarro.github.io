@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiX, FiMenu } from 'react-icons/fi';
 import HireMeModal from '../HireMeModal';
+import logo from '../../public/images/DN-Logo.svg';
 
 function AppHeader() {
 	const [showMenu, setShowMenu] = useState(false);
@@ -48,7 +49,7 @@ function AppHeader() {
 							<div className="cursor-pointer flex items-center space-x-3 sm:space-x-4">
 								<div className="flex-shrink-0">
 									<Image 
-										src="/images/DN-Logo.svg" 
+										src={logo}
 										alt="David Navarro Logo" 
 										width={56}
 										height={56}

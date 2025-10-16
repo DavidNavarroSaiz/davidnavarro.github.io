@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FiArrowDownCircle } from 'react-icons/fi';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
+import developerDark from '../../public/images/developer-dark.svg';
+import developerLight from '../../public/images/developer.svg';
 
 function AppBanner() {
 	const [activeTheme] = useThemeSwitcher();
@@ -72,8 +74,8 @@ function AppBanner() {
 					height={400}
 					src={
 						activeTheme === 'dark'
-							? '/images/developer.svg'
-							: '/images/developer-dark.svg'
+							? developerLight
+							: developerDark
 					}
 					alt="Developer"
 					className="w-full h-auto"

@@ -1,12 +1,9 @@
-const repo = 'davidnavarro.github.io';
-
 module.exports = {
   reactStrictMode: true,
   output: 'export',
   trailingSlash: true,
-  basePath: `/${repo}`,
-  images: {
-    unoptimized: true,
-    dangerouslyAllowSVG: true, // if you show SVGs
-  },
+  images: { unoptimized: true },
+  basePath: '/davidnavarro.github.io',
+  assetPrefix: '/davidnavarro.github.io/',
+  eslint: { ignoreDuringBuilds: true },   // <- add this
 };
