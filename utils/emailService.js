@@ -19,10 +19,11 @@ export const sendEmail = async (formData) => {
 
     // Prepare template parameters
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
+      name: formData.name,
+      email: formData.email,
       subject: formData.subject,
       message: formData.message,
+      time: new Date().toLocaleString(),
       to_email: 'dcnavarros97@gmail.com', // Your email
     };
 
@@ -53,12 +54,11 @@ export const sendHireMeEmail = async (formData) => {
 
     // Prepare template parameters for hire me form
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      project_type: formData.projectType,
-      budget: formData.budget,
-      timeline: formData.timeline,
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
       message: formData.message,
+      time: new Date().toLocaleString(),
       to_email: 'dcnavarros97@gmail.com', // Your email
     };
 
