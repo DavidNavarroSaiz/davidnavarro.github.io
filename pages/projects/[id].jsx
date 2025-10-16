@@ -160,13 +160,26 @@ function ProjectSingle(props) {
 	);
 }
 
-export async function getServerSideProps({ query }) {
-	const { id } = query;
+export async function getStaticPaths() {
+	const paths = projectsData.map((project) => ({
+		params: { id: project.id.toString() },
+	}));
+
+	return {
+		paths,
+		fallback: false,
+	};
+}
+
+export async function getStaticProps({ params }) {
+	const { id } = params;
+	const project = projectsData.find(
+		(project) => project.id === parseInt(id)
+	);
+
 	return {
 		props: {
-			project: projectsData.filter(
-				(project) => project.id === parseInt(id)
-			)[0],
+			project,
 		},
 	};
 }
