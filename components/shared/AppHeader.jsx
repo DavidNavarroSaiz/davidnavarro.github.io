@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiX, FiMenu } from 'react-icons/fi';
 import HireMeModal from '../HireMeModal';
@@ -46,9 +47,11 @@ function AppHeader() {
 						<Link href="/">
 							<div className="cursor-pointer flex items-center space-x-3 sm:space-x-4">
 								<div className="flex-shrink-0">
-									<img 
+									<Image 
 										src="/images/DN-Logo.svg" 
 										alt="David Navarro Logo" 
+										width={56}
+										height={56}
 										className="h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 object-contain"
 									/>
 								</div>

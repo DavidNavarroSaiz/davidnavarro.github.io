@@ -31,9 +31,11 @@ function AppHero() {
 									className="hero-photo"
 								/>
 								<div className="hero-badge">
-									<img 
+									<Image 
 										src="/images/DN-Logo.svg" 
 										alt="David Navarro Logo" 
+										width={24}
+										height={24}
 										className="w-6 h-6 filter brightness-0 invert"
 									/>
 								</div>
