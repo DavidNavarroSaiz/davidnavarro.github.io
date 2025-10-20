@@ -80,8 +80,8 @@ function AboutEducation() {
 	const visibleCourses = showAll ? educationData : educationData.slice(0, 3);
 
 	return (
-		<div className="mt-0">
-			<div className="text-center mb-1">
+		<div className="py-20">
+			<div className="text-center mb-12">
 				<h2 className="font-general-semibold text-3xl sm:text-4xl text-white mb-4">
 					Education & Training
 				</h2>
@@ -130,29 +130,7 @@ function AboutEducation() {
 				</button>
 			</div>
 
-			<div className="mt-12">
-				<div className="bg-gradient-to-r from-dev-blue to-dev-purple rounded-xl p-8 text-white">
-					<h3 className="font-general-semibold text-2xl mb-6 text-center">🏆 Additional Achievements</h3>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-						<div className="bg-white/10 rounded-lg p-4">
-							<h4 className="font-semibold text-lg mb-2">🎤 Conference Speaker</h4>
-							<p className="text-sm">SICC 2019: Presented computer vision project on pupil tracking using CNNs and machine vision techniques</p>
-						</div>
-						<div className="bg-white/10 rounded-lg p-4">
-							<h4 className="font-semibold text-lg mb-2">🔬 Research Contributions</h4>
-							<p className="text-sm">National University of Colombia: Holography and image reconstruction research using CNNs</p>
-						</div>
-						<div className="bg-white/10 rounded-lg p-4">
-							<h4 className="font-semibold text-lg mb-2">👨‍🏫 Teaching Experience</h4>
-							<p className="text-sm">Co-Instructor: Computer Vision course design and teaching with INTECOL SAS</p>
-						</div>
-						<div className="bg-white/10 rounded-lg p-4">
-							<h4 className="font-semibold text-lg mb-2">💼 Personal Projects</h4>
-							<p className="text-sm">Fast Trading Algorithm: Automated trading system with Freqtrade and statistical signals</p>
-						</div>
-					</div>
-				</div>
-			</div>
+
 		</div>
 	);
 }

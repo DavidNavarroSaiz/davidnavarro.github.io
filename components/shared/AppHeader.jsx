@@ -72,52 +72,72 @@ function AppHeader() {
 			>
 			<div className="sm:container sm:mx-auto">
 			{/* Header */}
-			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-3">
-				{/* Header menu links and small screen hamburger menu */}
-				<div className="flex justify-between items-center px-4 sm:px-0">
-					<div>
-						<Link href="/">
-							<div className="cursor-pointer flex items-center space-x-3 sm:space-x-4">
-								<div className="flex-shrink-0">
-									<Image 
-										src={logo}
-										alt="David Navarro Logo" 
-										width={56}
-										height={56}
-										className="h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 object-contain"
-									/>
+			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl flex justify-between items-center py-3 px-2 sm:px-4 w-full">
+				{/* Logo section */}
+				<div className="flex-shrink-0">
+					<Link href="/">
+						<div className="cursor-pointer flex items-center space-x-1 sm:space-x-2">
+							<div className="flex-shrink-0">
+								<Image 
+									src={logo}
+									alt="David Navarro Logo" 
+									width={56}
+									height={56}
+									className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 object-contain"
+								/>
+							</div>
+							<div className="flex flex-col justify-center min-w-0">
+								<div className="header-logo-new">
+									<span className="header-logo-cyan">DAVID NAVARRO</span>
 								</div>
-								<div className="flex flex-col justify-center min-w-0">
-									<div className="header-logo-new">
-										<span className="header-logo-cyan">DAVID NAVARRO</span>
-									</div>
-									<div className="header-subtitle hidden sm:block">
-										Machine Learning Engineer | Computer Vision | AI & Automation Specialist
-									</div>
-									<div className="header-subtitle-mobile block sm:hidden">
-										ML Engineer | Computer Vision | AI Specialist
-									</div>
+								<div className="header-subtitle hidden sm:block">
+									Machine Learning Engineer | Computer Vision | AI & Automation Specialist
+								</div>
+								<div className="header-subtitle-mobile block sm:hidden">
+									ML Engineer | Computer Vision | AI Specialist
 								</div>
 							</div>
-						</Link>
-					</div>
+						</div>
+					</Link>
+				</div>
 
+				{/* Small screen hamburger menu */}
+				<div className="sm:hidden">
+					<button
+						onClick={toggleMenu}
+						type="button"
+						className="focus:outline-none p-2 rounded-lg hover:bg-gray-800/50 transition-colors duration-300"
+						aria-label="Hamburger Menu"
+					>
+						{showMenu ? (
+							<FiX className="h-6 w-6 text-white" />
+						) : (
+							<FiMenu className="h-6 w-6 text-white" />
+						)}
+					</button>
+				</div>
 
-					{/* Small screen hamburger menu */}
-					<div className="sm:hidden">
-						<button
-							onClick={toggleMenu}
-							type="button"
-							className="focus:outline-none p-2 rounded-lg hover:bg-gray-800/50 transition-colors duration-300"
-							aria-label="Hamburger Menu"
-						>
-							{showMenu ? (
-								<FiX className="h-6 w-6 text-white" />
-							) : (
-								<FiMenu className="h-6 w-6 text-white" />
-							)}
-						</button>
+				{/* Desktop navigation - All in one line */}
+				<div className="hidden sm:flex items-center space-x-2 lg:space-x-3">
+					<div className="header-link-desktop">
+						<Link href="/projects">Projects</Link>
 					</div>
+					<div className="header-link-desktop">
+						<Link href="/experience">Experience</Link>
+					</div>
+					<div className="header-link-desktop">
+						<Link href="/about">About Me</Link>
+					</div>
+					<div className="header-link-desktop">
+						<Link href="/contact">Contact</Link>
+					</div>
+					<button
+						onClick={showHireMeModal}
+						className="hire-me-button"
+						aria-label="Hire Me Button"
+					>
+						Hire Me
+					</button>
 				</div>
 
 				{/* Header links small screen */}
@@ -137,6 +157,11 @@ function AppHeader() {
 					<div className="header-link">
 						<Link href="/projects" aria-label="Projects" onClick={() => setShowMenu(false)}>
 							Projects
+						</Link>
+					</div>
+					<div className="header-link border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
+						<Link href="/experience" aria-label="Experience" onClick={() => setShowMenu(false)}>
+							Experience
 						</Link>
 					</div>
 					<div className="header-link border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
@@ -163,42 +188,6 @@ function AppHeader() {
 					</div>
 				</motion.div>
 
-				{/* Header links large screen */}
-				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-					<div
-						className="header-link-desktop"
-						aria-label="Projects"
-					>
-						<Link href="/projects">Projects</Link>
-					</div>
-					<div
-						className="header-link-desktop"
-						aria-label="About Me"
-					>
-						<Link href="/about">About Me</Link>
-					</div>
-
-					<div
-						className="header-link-desktop"
-						aria-label="Contact"
-					>
-						<Link href="/contact">Contact</Link>
-					</div>
-				</div>
-
-				{/* Header right section buttons */}
-				<div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
-					<div className="hidden md:flex">
-						<button
-							onClick={showHireMeModal}
-							className="hire-me-button"
-							aria-label="Hire Me Button"
-						>
-							Hire Me
-						</button>
-					</div>
-
-				</div>
 			</div>
 			<div>
 				{showModal && (

@@ -78,20 +78,20 @@ function RelatedProjects({ currentProjectId, currentCategory }) {
 					<button
 						onClick={scrollLeft}
 						disabled={scrollPosition <= 0}
-						className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-20 p-4 rounded-full bg-gray-800/90 hover:bg-gray-700/90 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 border border-gray-600/50 hover:border-dev-blue/50 hover:shadow-lg hover:shadow-dev-blue/20 backdrop-blur-sm"
+						className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-20 p-3 rounded-full bg-gradient-to-br from-dev-blue/80 to-cyan-500/80 hover:from-dev-blue hover:to-cyan-500 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 border-2 border-dev-blue/90 hover:border-white shadow-lg hover:shadow-xl hover:shadow-dev-blue/50 backdrop-blur-sm hover:scale-105 active:scale-95 group"
 						aria-label="Scroll left"
 					>
-						<FiChevronLeft className="w-6 h-6 text-white" />
+						<FiChevronLeft className="w-5 h-5 text-white group-hover:text-white transition-colors duration-300 drop-shadow-md" />
 					</button>
 
 					{/* Right arrow */}
 					<button
 						onClick={scrollRight}
 						disabled={scrollPosition >= (scrollContainerRef.current?.scrollWidth - scrollContainerRef.current?.clientWidth || 0)}
-						className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-20 p-4 rounded-full bg-gray-800/90 hover:bg-gray-700/90 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 border border-gray-600/50 hover:border-dev-blue/50 hover:shadow-lg hover:shadow-dev-blue/20 backdrop-blur-sm"
+						className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-20 p-3 rounded-full bg-gradient-to-br from-dev-blue/80 to-cyan-500/80 hover:from-dev-blue hover:to-cyan-500 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 border-2 border-dev-blue/90 hover:border-white shadow-lg hover:shadow-xl hover:shadow-dev-blue/50 backdrop-blur-sm hover:scale-105 active:scale-95 group"
 						aria-label="Scroll right"
 					>
-						<FiChevronRight className="w-6 h-6 text-white" />
+						<FiChevronRight className="w-5 h-5 text-white group-hover:text-white transition-colors duration-300 drop-shadow-md" />
 					</button>
 
 					<div 

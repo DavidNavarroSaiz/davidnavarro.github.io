@@ -9,7 +9,7 @@
 }
 
 .header-logo-new {
-  @apply text-xl sm:text-2xl lg:text-3xl font-bold leading-tight;
+  @apply text-lg sm:text-xl lg:text-2xl font-bold leading-tight;
 }
 
 .header-logo-blue {
@@ -21,7 +21,7 @@
 }
 
 .header-subtitle {
-  @apply text-xs sm:text-xs lg:text-sm text-gray-200 font-normal tracking-wide leading-tight;
+  @apply text-xs text-gray-200 font-normal tracking-wide leading-tight;
 }
 
 .header-subtitle-mobile {
@@ -37,7 +37,7 @@
 }
 
 .header-link-desktop {
-  @apply block text-left text-lg font-medium text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2;
+  @apply flex items-center text-base lg:text-lg font-medium text-gray-300 hover:text-dev-blue transition-colors duration-300 py-2 px-2 rounded-lg hover:bg-gray-800/30 min-h-[40px] whitespace-nowrap;
 }
 
 .header-link-desktop.active {
@@ -45,7 +45,7 @@
 }
 
 .hire-me-button {
-  @apply text-base font-general-medium bg-dev-blue hover:bg-dev-blue-dark text-black shadow-sm rounded-md px-5 py-2.5 duration-300 glow-blue;
+  @apply text-sm lg:text-base font-general-medium bg-dev-blue hover:bg-dev-blue-dark text-black shadow-sm rounded-md px-4 py-2 duration-300 glow-blue flex items-center justify-center min-h-[40px] whitespace-nowrap;
 }
 
 .hire-me-button-mobile {
