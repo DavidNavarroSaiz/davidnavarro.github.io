@@ -34,9 +34,9 @@ import health3 from '../public/images/health_3.png';
 import speech1 from '../public/images/speech_1.png';
 import speech2 from '../public/images/speech_2.png';
 import speech3 from '../public/images/speech_3.png';
-import int1 from '../public/images/int_1.jpg';
-import int2 from '../public/images/int_2.jpg';
-import int4 from '../public/images/int_4.jpg';
+import int1 from '../public/images/int_1.png';
+import int2 from '../public/images/int_2.png';
+import int4 from '../public/images/int_4.png';
 
 export const projectsData = [
 	{

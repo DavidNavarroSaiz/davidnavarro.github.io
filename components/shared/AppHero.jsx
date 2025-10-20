@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FiArrowDownCircle, FiArrowRight } from 'react-icons/fi';
 import profileImage from '../../public/images/profile.jpeg';
 import logo from '../../public/images/DN-Logo.svg';
 
 function AppHero() {
+	const router = useRouter();
+	const basePath = router.basePath || '';
+
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -74,7 +78,7 @@ function AppHero() {
 						>
 							<a
 								download="CV_DavidNavarro_2025.pdf"
-								href="/files/CV_DavidNavarro_2025.pdf"
+								href={`${basePath}/files/CV_DavidNavarro_2025.pdf`}
 								className="hero-button-primary"
 							>
 								<FiArrowDownCircle className="mr-2 h-5 w-5" />

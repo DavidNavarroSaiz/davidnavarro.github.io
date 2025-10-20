@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
+  const [isClient, setIsClient] = useState(false);
+  const [nodes, setNodes] = useState([]);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const getNodeCount = () => {
     switch (intensity) {
       case "low": return 6;
@@ -53,7 +61,11 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
     return nodes;
   };
 
-  const nodes = generateNodes();
+  useEffect(() => {
+    if (isClient) {
+      setNodes(generateNodes());
+    }
+  }, [isClient, nodeCount]);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -81,97 +93,127 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
       ))}
 
       {/* Neural connections */}
-      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-        {Array.from({ length: connectionCount }, (_, i) => {
-          // Create more interesting connections
-          const startIndex = i % nodes.length;
-          const endIndex = (i + Math.floor(Math.random() * 3) + 1) % nodes.length;
-          const startNode = nodes[startIndex];
-          const endNode = nodes[endIndex];
-          
-          // Calculate distance to avoid very short connections
-          const distance = Math.sqrt(
-            Math.pow(endNode.x - startNode.x, 2) + Math.pow(endNode.y - startNode.y, 2)
-          );
-          
-          // Only draw connection if distance is reasonable
-          if (distance < 10) return null;
-          
-          return (
-            <motion.path
-              key={i}
-              d={`M${startNode.x},${startNode.y} Q${(startNode.x + endNode.x) / 2},${(startNode.y + endNode.y) / 2 - 10} ${endNode.x},${endNode.y}`}
-              stroke="rgba(0, 212, 255, 0.3)"
-              strokeWidth="0.2"
-              fill="none"
-              strokeDasharray={startNode.isDashed ? startNode.dashPattern : "none"}
-              initial={{ pathLength: 0, opacity: 0 }}
-              animate={{ 
-                pathLength: 1, 
-                opacity: [0.2, 0.6, 0.2] 
-              }}
-              transition={{
-                duration: 2 + (i * 0.4) % 3, // Stable duration based on connection index
-                delay: (i * 0.6) % 2, // Stable delay based on connection index
-                repeat: Infinity,
-                repeatDelay: (i * 0.8) % 2, // Stable repeat delay based on connection index
-                ease: "linear",
-              }}
-            />
-          );
-        })}
-      </svg>
+      {isClient && nodes.length > 0 && (
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          {Array.from({ length: connectionCount }, (_, i) => {
+            // Create more interesting connections using seeded random
+            const seededRandom = (seed) => {
+              const x = Math.sin(seed) * 10000;
+              return x - Math.floor(x);
+            };
+            
+            const startIndex = i % nodes.length;
+            const endIndex = (i + Math.floor(seededRandom(i * 1.1) * 3) + 1) % nodes.length;
+            const startNode = nodes[startIndex];
+            const endNode = nodes[endIndex];
+            
+            // Calculate distance to avoid very short connections
+            const distance = Math.sqrt(
+              Math.pow(endNode.x - startNode.x, 2) + Math.pow(endNode.y - startNode.y, 2)
+            );
+            
+            // Only draw connection if distance is reasonable
+            if (distance < 10) return null;
+            
+            return (
+              <motion.path
+                key={i}
+                d={`M${startNode.x},${startNode.y} Q${(startNode.x + endNode.x) / 2},${(startNode.y + endNode.y) / 2 - 10} ${endNode.x},${endNode.y}`}
+                stroke="rgba(0, 212, 255, 0.3)"
+                strokeWidth="0.2"
+                fill="none"
+                strokeDasharray={startNode.isDashed ? startNode.dashPattern : "none"}
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ 
+                  pathLength: 1, 
+                  opacity: [0.2, 0.6, 0.2] 
+                }}
+                transition={{
+                  duration: 2 + (i * 0.4) % 3, // Stable duration based on connection index
+                  delay: (i * 0.6) % 2, // Stable delay based on connection index
+                  repeat: Infinity,
+                  repeatDelay: (i * 0.8) % 2, // Stable repeat delay based on connection index
+                  ease: "linear",
+                }}
+              />
+            );
+          })}
+        </svg>
+      )}
 
       {/* Data flow particles */}
-      {Array.from({ length: 3 }, (_, i) => (
-        <motion.div
-          key={`flow-${i}`}
-          className="absolute w-1 h-1 bg-dev-cyan rounded-full"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            x: [0, Math.random() * 100 - 50],
-            y: [0, Math.random() * 100 - 50],
-            opacity: [0, 1, 0],
-            scale: [0, 1, 0],
-          }}
-          transition={{
-            duration: 4 + (i * 0.5) % 4, // Stable duration based on particle index
-            delay: (i * 0.7) % 3, // Stable delay based on particle index
-            repeat: Infinity,
-            repeatDelay: (i * 0.9) % 3, // Stable repeat delay based on particle index
-            ease: "linear",
-          }}
-        />
-      ))}
+      {isClient && Array.from({ length: 3 }, (_, i) => {
+        const seededRandom = (seed) => {
+          const x = Math.sin(seed) * 10000;
+          return x - Math.floor(x);
+        };
+        
+        const randomX = seededRandom(i * 2.1) * 100;
+        const randomY = seededRandom(i * 2.3) * 100;
+        const randomMoveX = seededRandom(i * 2.5) * 100 - 50;
+        const randomMoveY = seededRandom(i * 2.7) * 100 - 50;
+        
+        return (
+          <motion.div
+            key={`flow-${i}`}
+            className="absolute w-1 h-1 bg-dev-cyan rounded-full"
+            style={{
+              left: `${randomX}%`,
+              top: `${randomY}%`,
+            }}
+            animate={{
+              x: [0, randomMoveX],
+              y: [0, randomMoveY],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],
+            }}
+            transition={{
+              duration: 4 + (i * 0.5) % 4, // Stable duration based on particle index
+              delay: (i * 0.7) % 3, // Stable delay based on particle index
+              repeat: Infinity,
+              repeatDelay: (i * 0.9) % 3, // Stable repeat delay based on particle index
+              ease: "linear",
+            }}
+          />
+        );
+      })}
 
       {/* Floating code snippets */}
-      {Array.from({ length: 4 }, (_, i) => (
-        <motion.div
-          key={`code-${i}`}
-          className="absolute text-dev-blue/30 text-xs font-mono"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            y: [0, -60],
-            opacity: [0, 0.4, 0],
-            x: [0, Math.random() * 20 - 10],
-          }}
-          transition={{
-            duration: 6 + (i * 0.6) % 4, // Stable duration based on code index
-            delay: (i * 0.8) % 4, // Stable delay based on code index
-            repeat: Infinity,
-            repeatDelay: (i * 1.1) % 4, // Stable repeat delay based on code index
-            ease: "linear",
-          }}
-        >
-          {['AI', 'ML', 'Python', 'TensorFlow', 'PyTorch', 'RAG', 'LLM', 'MLOps'][i % 8]}
-        </motion.div>
-      ))}
+      {isClient && Array.from({ length: 4 }, (_, i) => {
+        const seededRandom = (seed) => {
+          const x = Math.sin(seed) * 10000;
+          return x - Math.floor(x);
+        };
+        
+        const randomX = seededRandom(i * 3.1) * 100;
+        const randomY = seededRandom(i * 3.3) * 100;
+        const randomMoveX = seededRandom(i * 3.5) * 20 - 10;
+        
+        return (
+          <motion.div
+            key={`code-${i}`}
+            className="absolute text-dev-blue/30 text-xs font-mono"
+            style={{
+              left: `${randomX}%`,
+              top: `${randomY}%`,
+            }}
+            animate={{
+              y: [0, -60],
+              opacity: [0, 0.4, 0],
+              x: [0, randomMoveX],
+            }}
+            transition={{
+              duration: 6 + (i * 0.6) % 4, // Stable duration based on code index
+              delay: (i * 0.8) % 4, // Stable delay based on code index
+              repeat: Infinity,
+              repeatDelay: (i * 1.1) % 4, // Stable repeat delay based on code index
+              ease: "linear",
+            }}
+          >
+            {['AI', 'ML', 'Python', 'TensorFlow', 'PyTorch', 'RAG', 'LLM', 'MLOps'][i % 8]}
+          </motion.div>
+        );
+      })}
     </div>
   );
 };

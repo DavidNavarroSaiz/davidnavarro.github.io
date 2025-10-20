@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { FiArrowDownCircle } from 'react-icons/fi';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import developerDark from '../../public/images/developer-dark.svg';
@@ -7,6 +8,8 @@ import developerLight from '../../public/images/developer.svg';
 
 function AppBanner() {
 	const [activeTheme] = useThemeSwitcher();
+	const router = useRouter();
+	const basePath = router.basePath || '';
 
 	return (
 		<motion.section
@@ -52,7 +55,7 @@ function AppBanner() {
 				>
 					<a
 						download="CV_DavidNavarro_2025.pdf"
-						href="/files/CV_DavidNavarro_2025.pdf"
+						href={`${basePath}/files/CV_DavidNavarro_2025.pdf`}
 						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-dev-blue py-2.5 sm:py-3 shadow-lg rounded-lg bg-dev-blue focus:ring-1 focus:ring-dev-blue hover:bg-dev-blue-dark text-black hover:text-black duration-500 glow-blue"
 						aria-label="Download Resume"
 					>

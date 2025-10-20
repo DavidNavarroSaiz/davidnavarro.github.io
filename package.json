@@ -5,7 +5,7 @@
     "dev": "next dev",
     "dev:original": "next dev",
     "build": "next build",
-    "build:github": "cross-env DEPLOY_TARGET=github-pages next build",
+    "build:github": "cross-env GITHUB_ACTIONS=true next build",
     "start": "next start",
     "lint": "next lint",
     "export": "next export"

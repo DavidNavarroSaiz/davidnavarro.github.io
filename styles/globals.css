@@ -47,6 +47,36 @@ a {
 	box-sizing: border-box;
 }
 
+/* Hide scrollbar for related projects carousel */
+.scrollbar-hide {
+	-ms-overflow-style: none;  /* Internet Explorer 10+ */
+	scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar { 
+	display: none;  /* Safari and Chrome */
+}
+
+/* Custom scrollbar for related projects */
+.related-projects-scroll::-webkit-scrollbar {
+	height: 8px;
+}
+
+.related-projects-scroll::-webkit-scrollbar-track {
+	background: rgba(45, 55, 72, 0.3);
+	border-radius: 4px;
+}
+
+.related-projects-scroll::-webkit-scrollbar-thumb {
+	background: linear-gradient(90deg, #00D4FF, #00B4D8);
+	border-radius: 4px;
+	transition: all 0.3s ease;
+}
+
+.related-projects-scroll::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(90deg, #00B4D8, #0096C7);
+	box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
 /* Fonts */
 @font-face {
 	font-family: 'GeneralSans-Variable';
