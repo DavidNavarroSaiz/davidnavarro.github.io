@@ -5,6 +5,13 @@ export const clientsHeading = 'Companies I have worked with';
 export const clientsData = [
 	{
 		id: uuidv4(),
+		title: 'Svitla Systems',
+		role: 'Machine Learning Engineer',
+		period: 'Aug 2025 – Present',
+		description: 'Production proctoring/cheat-detection pipeline, computer vision, OpenCV/PyTorch, MLflow, DVC, multi-modal detection',
+	},
+	{
+		id: uuidv4(),
 		title: 'Kmeleon',
 		role: 'Generative AI Engineer',
 		period: 'Feb 2025 – Aug 2025',
