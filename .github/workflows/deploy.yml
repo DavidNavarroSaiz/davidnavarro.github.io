@@ -42,3 +42,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./out
         cname: davidnavarro.github.io
+        force_orphan: true
