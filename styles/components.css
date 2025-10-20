@@ -29,7 +29,7 @@
 }
 
 .header-link {
-  @apply block text-left text-lg text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2;
+  @apply block text-left text-lg text-gray-300 hover:text-dev-blue transition-colors duration-300 sm:mx-4 mb-2 sm:py-2 py-3 px-2 rounded-lg hover:bg-gray-800/50;
 }
 
 .header-link.active {
@@ -49,7 +49,7 @@
 }
 
 .hire-me-button-mobile {
-  @apply font-general-medium sm:hidden block text-left text-base bg-dev-blue hover:bg-dev-blue-dark text-black shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24 glow-blue;
+  @apply font-general-medium sm:hidden block text-left text-base bg-dev-blue hover:bg-dev-blue-dark text-black shadow-sm rounded-lg px-4 py-3 mt-2 duration-300 w-full glow-blue;
 }
 
 /* ===== CARD STYLES ===== */

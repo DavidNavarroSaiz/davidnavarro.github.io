@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -32,13 +32,44 @@ function AppHeader() {
 		}
 	}
 
+	// Close mobile menu on scroll or window resize
+	useEffect(() => {
+		const handleScroll = () => {
+			if (showMenu) {
+				setShowMenu(false);
+			}
+		};
+
+		const handleResize = () => {
+			if (window.innerWidth >= 640) { // sm breakpoint
+				setShowMenu(false);
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener('resize', handleResize);
+		};
+	}, [showMenu]);
+
 	return (
-		<motion.nav
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			id="nav"
-			className="sticky top-0 z-50 bg-[#0B0B0C] border-b border-gray-700/30 backdrop-blur-sm"
-		>
+		<>
+			{/* Mobile menu overlay */}
+			{showMenu && (
+				<div 
+					className="fixed inset-0 bg-black/50 z-40 sm:hidden"
+					onClick={() => setShowMenu(false)}
+				/>
+			)}
+			<motion.nav
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				id="nav"
+				className="sticky top-0 z-50 bg-[#0B0B0C] border-b border-gray-700/30 backdrop-blur-sm"
+			>
 			<div className="sm:container sm:mx-auto">
 			{/* Header */}
 			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-3">
@@ -77,57 +108,60 @@ function AppHeader() {
 						<button
 							onClick={toggleMenu}
 							type="button"
-							className="focus:outline-none"
+							className="focus:outline-none p-2 rounded-lg hover:bg-gray-800/50 transition-colors duration-300"
 							aria-label="Hamburger Menu"
 						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								className="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light"
-							>
-								{showMenu ? (
-									<FiX className="text-3xl" />
-								) : (
-									<FiMenu className="text-3xl" />
-								)}
-							</svg>
+							{showMenu ? (
+								<FiX className="h-6 w-6 text-white" />
+							) : (
+								<FiMenu className="h-6 w-6 text-white" />
+							)}
 						</button>
 					</div>
 				</div>
 
 				{/* Header links small screen */}
-				<div
+				<motion.div
+					initial={{ opacity: 0, y: -20 }}
+					animate={{ 
+						opacity: showMenu ? 1 : 0, 
+						y: showMenu ? 0 : -20 
+					}}
+					transition={{ duration: 0.3, ease: "easeOut" }}
 					className={
 						showMenu
-							? 'block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none'
+							? 'block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none bg-[#0B0B0C] border-t border-gray-700/30 absolute top-full left-0 right-0 z-50'
 							: 'hidden'
 					}
 				>
 					<div className="header-link">
-						<Link href="/projects" aria-label="Projects">
+						<Link href="/projects" aria-label="Projects" onClick={() => setShowMenu(false)}>
 							Projects
 						</Link>
 					</div>
 					<div className="header-link border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
-						<Link href="/about" aria-label="About Me">
+						<Link href="/about" aria-label="About Me" onClick={() => setShowMenu(false)}>
 							About Me
 						</Link>
 					</div>
 					<div className="header-link border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
-						<Link href="/contact" aria-label="Contact">
+						<Link href="/contact" aria-label="Contact" onClick={() => setShowMenu(false)}>
 							Contact
 						</Link>
 					</div>
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<button
-							onClick={showHireMeModal}
+							onClick={() => {
+								showHireMeModal();
+								setShowMenu(false);
+							}}
 							className="hire-me-button-mobile"
 							aria-label="Hire Me Button"
 						>
 							Hire Me
 						</button>
 					</div>
-				</div>
+				</motion.div>
 
 				{/* Header links large screen */}
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
@@ -176,6 +210,7 @@ function AppHeader() {
 			</div>
 			</div>
 		</motion.nav>
+		</>
 	);
 }
 
