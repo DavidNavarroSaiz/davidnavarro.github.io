@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { FiChevronUp } from 'react-icons/fi';
 
 function useScrollToTop() {
 	const [showScroll, setShowScroll] = useState(false);
+	const router = useRouter();
 
 	useEffect(() => {
 		window.addEventListener('scroll', scrollToTop);
@@ -10,6 +12,15 @@ function useScrollToTop() {
 			window.removeEventListener('scroll', scrollToTop);
 		};
 	});
+
+	// Simple scroll to top when route changes - no delay
+	useEffect(() => {
+		// Use setTimeout to ensure DOM is ready
+		const timer = setTimeout(() => {
+			window.scrollTo(0, 0);
+		}, 0);
+		return () => clearTimeout(timer);
+	}, [router.asPath]);
 
 	const scrollToTop = () => {
 		if (!showScroll && window.pageYOffset > 400) {

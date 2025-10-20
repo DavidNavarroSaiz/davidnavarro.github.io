@@ -1,12 +1,16 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { FiSearch } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import { projectsData } from '../../data/projectsData';
 import ProjectsFilter from './ProjectsFilter';
+import useScrollAnimation from '../../hooks/useScrollAnimation';
 
 function ProjectsGrid() {
 	const [searchProject, setSearchProject] = useState();
 	const [selectProject, setSelectProject] = useState();
+	// Temporarily disable scroll animation to fix navigation issue
+	const [ref, isVisible] = [null, true];
 
 	const searchProjectsByTitle = projectsData.filter((item) => {
 		if (!searchProject || searchProject === '') {
@@ -25,21 +29,21 @@ function ProjectsGrid() {
 	});
 
 	return (
-		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
+		<section className="py-0 mt-0">
 			<div className="text-center">
 				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-white">
 					Projects portfolio
 				</p>
 			</div>
 
-			<div className="mt-10 sm:mt-16">
+			<div className="mt-0">
 				<h3
 					className="
                         font-general-regular 
                         text-center text-gray-300
                         text-md
                         sm:text-xl
-                        mb-3
+                        mb-2
                         "
 				>
 					Search projects by title or filter by category
@@ -49,7 +53,7 @@ function ProjectsGrid() {
                         flex
                         justify-between
                         border-b border-gray-700
-                        pb-3
+                        pb-2
                         gap-3
                         "
 				>
@@ -100,7 +104,7 @@ function ProjectsGrid() {
 				</div>
 			</div>
 
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-0 sm:gap-5">
 				{(() => {
 					let filteredProjects = projectsData;
 					

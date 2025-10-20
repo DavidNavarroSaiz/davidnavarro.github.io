@@ -80,8 +80,8 @@ function AboutEducation() {
 	const visibleCourses = showAll ? educationData : educationData.slice(0, 3);
 
 	return (
-		<div className="mt-10 sm:mt-20">
-			<div className="text-center mb-12">
+		<div className="mt-0">
+			<div className="text-center mb-1">
 				<h2 className="font-general-semibold text-3xl sm:text-4xl text-white mb-4">
 					Education & Training
 				</h2>

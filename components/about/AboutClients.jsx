@@ -6,8 +6,8 @@ import AboutClientSingle from './AboutClientSingle';
 function AboutClients() {
 	const [clients, setClients] = useState(clientsData);
 	return (
-		<div className="mt-10 sm:mt-20">
-			<div className="text-center mb-12">
+		<div className="mt-0">
+			<div className="text-center mb-1">
 				<h2 className="font-general-semibold text-3xl sm:text-4xl text-white mb-4">
 					{clientsHeading}
 				</h2>

@@ -1,9 +1,15 @@
+const isDev = process.env.NODE_ENV === 'development';
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+
 module.exports = {
   reactStrictMode: true,
   output: 'export',
   trailingSlash: true,
-  images: { unoptimized: true },
-  basePath: '/davidnavarro.github.io',
-  assetPrefix: '/davidnavarro.github.io/',
-  eslint: { ignoreDuringBuilds: true },   // <- add this
+  images: { 
+    unoptimized: true,
+  },
+  // Only use basePath for GitHub Pages in production
+  basePath: isGitHubPages ? '/davidnavarro.github.io' : '',
+  assetPrefix: isGitHubPages ? '/davidnavarro.github.io/' : '',
+  eslint: { ignoreDuringBuilds: true },
 };

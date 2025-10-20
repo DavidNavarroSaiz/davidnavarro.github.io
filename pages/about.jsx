@@ -1,51 +1,40 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import AboutClients from '../components/about/AboutClients';
 import AboutMeBio from '../components/about/AboutMeBio';
 import AboutSkills from '../components/about/AboutSkills';
 import AboutEducation from '../components/about/AboutEducation';
 import PagesMetaHead from '../components/PagesMetaHead';
+import NeuralNetwork from '../components/shared/NeuralNetwork';
 
 function about() {
+	// Force scroll to top on page load
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
-		<div>
+		<div className="relative">
 			<PagesMetaHead title="About Me" />
 
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
-				className="container mx-auto"
-			>
+			{/* Neural network background */}
+			<NeuralNetwork intensity="low" />
+
+			<div className="container mx-auto relative z-10">
 				<AboutMeBio />
-			</motion.div>
+			</div>
 
-
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
-				className="container mx-auto"
-			>
+			<div className="container mx-auto relative z-10">
 				<AboutSkills />
-			</motion.div>
+			</div>
 
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
-				className="container mx-auto"
-			>
+			<div className="container mx-auto relative z-10">
 				<AboutEducation />
-			</motion.div>
+			</div>
 
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
-				className="container mx-auto"
-			>
+			<div className="container mx-auto relative z-10">
 				<AboutClients />
-			</motion.div>
+			</div>
 		</div>
 	);
 }

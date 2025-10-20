@@ -30,6 +30,7 @@ function AppHero() {
 									alt="David Navarro - Machine Learning Engineer"
 									width={250}
 									height={250}
+									priority
 									className="hero-photo"
 								/>
 								<div className="hero-badge">
@@ -38,6 +39,7 @@ function AppHero() {
 										alt="David Navarro Logo" 
 										width={24}
 										height={24}
+										priority
 										className="w-6 h-6 filter brightness-0 invert"
 									/>
 								</div>

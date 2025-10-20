@@ -1,10 +1,14 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
+import useScrollAnimation from '../../hooks/useScrollAnimation';
 
 function AppBio() {
+	// Temporarily disable scroll animation to fix navigation issue
+	const [ref, isVisible] = [null, true];
 
 	return (
-		<section className="py-8 bg-gray-900/50 border-t border-gray-700">
+		<section className="py-2 bg-gray-900/50 border-t border-gray-700">
 			<div className="container mx-auto px-4">
 				<div className="max-w-4xl mx-auto text-center">
 					<h2 className="text-2xl lg:text-3xl font-semibold text-white mb-6">
