@@ -37,6 +37,22 @@ import speech3 from '../public/images/speech_3.png';
 import int1 from '../public/images/int_1.png';
 import int2 from '../public/images/int_2.png';
 import int4 from '../public/images/int_4.png';
+// Realtime Voice Agent Server images (using AI-related placeholders)
+import realtime1 from '../public/images/voice-1.png';
+import realtime2 from '../public/images/voice-2.png';
+import realtime3 from '../public/images/voice-3.png';
+
+import mcp1 from '../public/images/mcp-1.png';
+import mcp2 from '../public/images/mcp-2.png';
+import mcp3 from '../public/images/mcp-3.png';
+
+import cctv1 from '../public/images/cctv-3.png';
+import cctv2 from '../public/images/cctv-2.png';
+import cctv3 from '../public/images/cctv-1.png';
+
+import marker1 from '../public/images/marker-1.png';
+import marker2 from '../public/images/marker-2.png';
+import marker3 from '../public/images/marker-3.png';
 
 export const projectsData = [
 	{
@@ -1034,6 +1050,439 @@ export const projectsData = [
 					id: uuidv4(),
 					details:
 						'Integrated CV modules with PLCs and C# HMIs to enable real-time defect rejection at production speed, complemented with a React-based console for live video overlays and dashboards.',
+				},
+			],
+			SocialSharingHeading: 'Share This',
+		},
+	},
+	{
+		id: 11,
+		title: 'RealTime Voice Agent',
+		url: 'realtime-voice-agent',
+		category: 'LLMs and RAG',
+		img: realtime1,
+		ProjectHeader: {
+			title: 'RealTime Voice Agent',
+			publishDate: 'Mar 2025',
+			tags: 'AI / Realtime Voice / FastAPI',
+		},
+		ProjectImages: [
+			{
+				id: uuidv4(),
+				title: 'Realtime Audio Streaming',
+				img: realtime1,
+			},
+			{
+				id: uuidv4(),
+				title: 'Real time Server Architecture',
+				img: realtime2,
+			},
+			{
+				id: uuidv4(),
+				title: 'WebSocket Voice Pipeline',
+				img: realtime3,
+			},
+		],
+		ProjectInfo: {
+			ClientHeading: 'About Project',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Type',
+					details: 'Realtime AI Voice Server',
+				},
+				{
+					id: uuidv4(),
+					title: 'Role',
+					details: 'Lead AI Engineer & Backend Developer',
+				},
+				{
+					id: uuidv4(),
+					title: 'Duration',
+					details: 'Jan 2025 – Ongoing',
+				},
+				{
+					id: uuidv4(),
+					title: 'Technologies',
+					details: 'FastAPI, WebSocket, Twilio, OpenAI Realtime API, Docker, Azure',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Developed a comprehensive real-time AI voice agent system with backend API, frontend application, and telephone integration. The project enables seamless voice-based interactions through WebSockets and Twilio phone integration, powered by OpenAI\'s Realtime API and AutoGen multi-agent framework. Includes a frontend application for real-time prompt modification and testing, with full deployment supporting telephone number access.',
+			Technologies: [
+				{
+					title: 'Tools & Technologies',
+					techs: [
+						'FastAPI',
+						'Uvicorn',
+						'OpenAI Realtime API',
+						'OpenAI',
+						'Azure OpenAI',
+						'Twilio',
+						'WebRTC',
+						'AutoGen',
+						'Docker',
+						'OpenAPI/Swagger',
+					],
+				},
+			],
+			ProjectDetailsHeading: 'Key Achievements',
+			ProjectDetails: [
+				{
+					id: uuidv4(),
+					details:
+						'Built a fully containerized FastAPI server with real-time voice streaming and WebSocket communication, supporting natural, low-latency conversations.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Integrated OpenAI\'s Realtime API and Twilio Media Streams to allow AI-powered phone calls with bidirectional voice processing and response generation.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Implemented an agent swarm system using AutoGen framework, enabling multi-agent collaboration and function calling for dynamic real-time responses.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Deployed secure and scalable containers with Azure Container Registry and enforced best practices in CORS, environment management, and API security.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Developed a comprehensive frontend application for real-time prompt modification and agent testing, enabling live interaction with the voice agent and dynamic prompt adjustments.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Successfully deployed the complete system with telephone number integration, allowing users to call and interact with the AI agent through a standard phone number for real-world testing and usage.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Added system health endpoints, error monitoring, and performance tracking to ensure reliable deployment in production environments.',
+				},
+			],
+			SocialSharingHeading: 'Share This',
+		},
+	},
+	{
+		id: 12,
+		title: 'MCP Azure DevOps Server',
+		url: 'mcp-azure-devops-server',
+		category: 'LLMs and RAG',
+		img: mcp1,
+		ProjectHeader: {
+			title: 'MCP Azure DevOps Server',
+			publishDate: 'Mar 2025',
+			tags: 'Model Context Protocol / Azure DevOps / FastAPI',
+		},
+		ProjectImages: [
+			{
+				id: uuidv4(),
+				title: 'MCP Azure DevOps Server',
+				img: mcp1,
+			},
+			{
+				id: uuidv4(),
+				title: 'Architecture Flow Diagram',
+				img: mcp2,
+			},
+			{
+				id: uuidv4(),
+				title: 'MCP Client Interaction',
+				img: mcp3,
+			},
+		],
+		ProjectInfo: {
+			ClientHeading: 'About Project',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Type',
+					details: 'AI Integration Server for Azure DevOps',
+				},
+				{
+					id: uuidv4(),
+					title: 'Role',
+					details: 'AI Engineer & Backend Developer',
+				},
+				{
+					id: uuidv4(),
+					title: 'Duration',
+					details: 'Feb 2025 – Ongoing',
+				},
+				{
+					id: uuidv4(),
+					title: 'Technologies',
+					details: 'Python, FastMCP, Azure DevOps API, Docker, MCP SDK',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Developed an enhanced Model Context Protocol (MCP) server based on Microsoft\'s Azure DevOps MCP repository (https://github.com/microsoft/azure-devops-mcp), customized and improved for specific requirements. This project enables AI assistants like GPT-4 and Claude to interact seamlessly with Azure DevOps services using natural language, bridging LLMs and enterprise APIs while adding custom integrations and services tailored to specific workflow needs.',
+			Technologies: [
+				{
+					title: 'Tools & Technologies',
+					techs: [
+						'FastMCP',
+						'Azure DevOps REST API',
+						'Azure DevOps Python SDK',
+						'Python 3.11',
+						'Server-Sent Events (SSE)',
+						'Docker',
+						'OpenAI / Claude Integration',
+						'pytest',
+						'uv',
+					],
+				},
+			],
+			ProjectDetailsHeading: 'Key Achievements',
+			ProjectDetails: [
+				{
+					id: uuidv4(),
+					details:
+						'Forked and enhanced Microsoft\'s Azure DevOps MCP repository with custom improvements, additional integrations, and tailored services to meet specific workflow requirements while maintaining compatibility with the original MCP protocol.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Implemented modular feature sets for work items, teams, and project management, enabling AI assistants to perform complex DevOps queries with natural language.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Integrated with the Azure DevOps Python API and secured authentication using Personal Access Tokens (PAT) with least-privilege scopes.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Developed an asynchronous MCP client using SSE (Server-Sent Events) for efficient, low-latency communication between the agent and server.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Containerized the application with Docker and provided full deployment support via Docker Compose, enabling reproducible environments and scalability.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Documented 20+ MCP tools for AI-assisted project management, including querying sprints, managing tasks, analyzing team velocity, and mapping dependencies.',
+				},
+			],
+			SocialSharingHeading: 'Share This',
+		},
+	},
+	{
+		id: 13,
+		title: 'CCTV Safety Detection',
+		url: 'cctv-safety-detection',
+		category: 'Computer Vision / Edge AI',
+		img: cctv1,
+		ProjectHeader: {
+			title: 'CCTV Safety Detection',
+			publishDate: 'Nov 2024',
+			tags: 'YOLO / PPE Detection / On-Prem GPU',
+		},
+		ProjectImages: [
+			{
+				id: uuidv4(),
+				title: 'Safety Dashboard',
+				img: cctv1,
+			},
+			{
+				id: uuidv4(),
+				title: 'YOLO Inference Pipeline',
+				img: cctv2,
+			},
+			{
+				id: uuidv4(),
+				title: 'Alarm Rules & Alerts',
+				img: cctv3,
+			},
+		],
+		ProjectInfo: {
+			ClientHeading: 'About Project',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Type',
+					details: 'Industrial Safety Monitoring System',
+				},
+				{
+					id: uuidv4(),
+					title: 'Role',
+					details: 'ML Engineer & Full-Stack Developer',
+				},
+				{
+					id: uuidv4(),
+					title: 'Duration',
+					details: 'Jul 2024 – Jan 2025',
+				},
+				{
+					id: uuidv4(),
+					title: 'Technologies',
+					details: 'YOLOv5/YOLOv8, Python, OpenCV, CUDA, FastAPI, React, WebSockets, PostgreSQL, Docker',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Deployed an on-premises, real-time computer vision system that enforces PPE compliance and operational safety rules across multiple CCTV streams. The system features configurable safety policies, live monitoring dashboards, and automated supervisor alerts, ensuring workplace safety through AI-powered surveillance and real-time violation detection.',
+			Technologies: [
+				{
+					title: 'Tools & Technologies',
+					techs: [
+						'YOLO (custom fine-tuning)',
+						'PyTorch + CUDA',
+						'OpenCV / FFmpeg',
+						'FastAPI',
+						'React Dashboard',
+						'WebSockets',
+						'PostgreSQL',
+						'Docker',
+						'GPU Edge Server',
+					],
+				},
+			],
+			ProjectDetailsHeading: 'Key Achievements',
+			ProjectDetails: [
+				{
+					id: uuidv4(),
+					details:
+						'Built a comprehensive dataset of 10,000+ CCTV images and fine-tuned YOLO models to detect persons, safety helmets, goggles, vests (with color classification), forklifts/lift cars, and ladders with high accuracy.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Deployed on a local GPU server (air-gapped for security) with <200ms per-frame latency and parallel inference across 3 cameras, ensuring real-time safety monitoring without network dependencies.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Implemented intelligent rule engine for real-world safety policies including missing PPE detection, incorrect vest color identification, person-forklift distance thresholds, forklift parking compliance, safe ladder handling, and mandatory truck safety nets during movement.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Created a comprehensive web admin UI to tune confidence/sensitivity per class, define safety zones and distance thresholds, review safety events, and visualize KPIs including compliance rates, false positives, and incidents by shift/zone.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Established real-time alerting system via email/SMS/WhatsApp to supervisors with incident snapshots and timeline links, including smart cooldowns and deduplication to reduce alert fatigue while maintaining safety oversight.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Designed a resilient streaming pipeline (RTSP ingest → batching → GPU inference → rule evaluation → alerting) with comprehensive watchdogs, auto-reconnect capabilities, and rolling logs for compliance audits and system monitoring.',
+				},
+			],
+			SocialSharingHeading: 'Share This',
+		},
+	},
+	{
+		id: 14,
+		title: 'Parallel Document Ingestion Pipeline',
+		url: 'marker-ingestion-pipeline',
+		category: 'RAG Infrastructure / Distributed Systems',
+		img: marker1,
+		ProjectHeader: {
+			title: 'Parallel Document Ingestion Pipeline',
+			publishDate: 'Oct 2024',
+			tags: 'Marker API / Celery / RabbitMQ / RAG',
+		},
+		ProjectImages: [
+			{
+				id: uuidv4(),
+				title: 'Parallel Ingestion Dashboard',
+				img: marker1,
+			},
+			{
+				id: uuidv4(),
+				title: 'Celery Task Queue Architecture',
+				img: marker2,
+			},
+			{
+				id: uuidv4(),
+				title: 'Vector Database Workflow',
+				img: marker3,
+			},
+		],
+		ProjectInfo: {
+			ClientHeading: 'About Project',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Type',
+					details: 'Scalable RAG Document Ingestion System',
+				},
+				{
+					id: uuidv4(),
+					title: 'Role',
+					details: 'AI Infrastructure Engineer',
+				},
+				{
+					id: uuidv4(),
+					title: 'Duration',
+					details: 'Aug 2024 – Dec 2024',
+				},
+				{
+					id: uuidv4(),
+					title: 'Technologies',
+					details: 'Marker API, Celery, RabbitMQ, FastAPI, Docker, Redis, pgVector, OpenAI Embeddings',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Built a high-performance, scalable document ingestion pipeline to process and vectorize large-scale unstructured data (PDFs, text, and mixed formats) using Marker API and distributed task orchestration. The system enables efficient RAG-based applications by parallelizing document processing, reducing ingestion time by 80%, and supporting thousands of documents per user without performance degradation.',
+			Technologies: [
+				{
+					title: 'Tools & Technologies',
+					techs: [
+						'Marker API',
+						'Celery Distributed Tasks',
+						'RabbitMQ Queues',
+						'FastAPI',
+						'pgVector',
+						'Redis',
+						'Docker Compose',
+						'OpenAI Embeddings',
+					],
+				},
+			],
+			ProjectDetailsHeading: 'Key Achievements',
+			ProjectDetails: [
+				{
+					id: uuidv4(),
+					details:
+						'Integrated Marker API to convert unstructured PDFs into structured JSON chunks optimized for vector database ingestion, enabling seamless processing of complex document formats.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Implemented robust asynchronous task orchestration using Celery and RabbitMQ, allowing horizontal scaling of ingestion workers and fault-tolerant document processing.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Achieved 80% reduction in ingestion time per user by parallelizing document processing across distributed task queues, significantly improving user experience and system throughput.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Designed a modular FastAPI service that automatically routes upload jobs into worker queues, monitors progress in real-time, and updates user dashboards with processing status and completion metrics.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Enabled scalable ingestion for multi-user RAG systems, supporting thousands of documents per user without performance degradation through intelligent queue management and resource allocation.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Containerized the complete stack using Docker Compose for reproducible deployment across environments with isolated worker scaling, ensuring consistent performance and easy maintenance.',
 				},
 			],
 			SocialSharingHeading: 'Share This',

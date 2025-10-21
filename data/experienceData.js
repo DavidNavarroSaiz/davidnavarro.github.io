@@ -191,7 +191,7 @@ export const experienceData = [
 ];
 
 export const experienceStats = {
-	totalYears: '7+',
+	totalYears: '6+',
 	companies: experienceData.length,
 	technologies: [...new Set(experienceData.flatMap(exp => exp.technologies))].length,
 	projects: experienceData.reduce((acc, exp) => acc + exp.achievements.length, 0),
