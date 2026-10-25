@@ -60,6 +60,8 @@ export const projectsData = [
 		title: 'PM AI Agent',
 		url: 'pm-ai-agent',
 		category: 'LLMs and RAG',
+		summary:
+			'A Microsoft Teams agent that coordinates project work through Microsoft Graph, document retrieval, and structured tool calls.',
 		img: pm1,
 		featured: {
 			rank: 1,
@@ -167,6 +169,8 @@ export const projectsData = [
 		title: 'Candidate Recommendation System',
 		url: 'candidate-recommendation-system',
 		category: 'LLMs and RAG',
+		summary:
+			'Retrieval and LLM ranking over candidate profiles, returning shortlists with explanations for recruiters.',
 		img: rg1,
 		featured: {
 			rank: 3,
@@ -274,6 +278,8 @@ export const projectsData = [
 		title: 'COVID-Rx Diagnosis System',
 		url: 'covid-rx-diagnosis',
 		category: 'Computer Vision',
+		summary:
+			'Chest X-ray diagnosis across ten CNN architectures, with heatmaps that show clinicians where the model is looking.',
 		img: cov3,
 		ProjectHeader: {
 			title: 'COVID-Rx Diagnosis System',
@@ -377,6 +383,8 @@ export const projectsData = [
 		title: 'AbogacIA - AI Legal Platform',
 		url: 'abogacia-ai-legal-platform',
 		category: 'LLMs and RAG',
+		summary:
+			'Legal research platform that finds relevant Colombian case law, recommends precedents, and helps draft documents.',
 		img: abo1,
 		ProjectHeader: {
 			title: 'AbogacIA - AI Legal Platform',
@@ -482,6 +490,8 @@ export const projectsData = [
 		title: 'Automatic Lead Management',
 		url: 'automatic-lead-management',
 		category: 'AI Automation',
+		summary:
+			'Lead capture and outreach across email and SMS, with HubSpot sync and GPT-written replies.',
 		img: lead3,
 		ProjectHeader: {
 			title: 'Automatic Lead Management',
@@ -580,6 +590,8 @@ export const projectsData = [
 			title: 'AI-Generated Monthly Reports',
 			url: 'ai-generated-monthly-reports',
 			category: 'AI Automation',
+			summary:
+				'Automated reporting pipeline that collects a month of property data and drafts client-ready documents in Google Docs.',
 			img: make2,
 			ProjectHeader: {
 				title: 'AI-Generated Monthly Reports',
@@ -680,6 +692,8 @@ export const projectsData = [
 			title: 'n8n Lead Generation System',
 			url: 'n8n-lead-generation-system',
 			category: 'AI Automation',
+			summary:
+				'Self-hosted n8n workflows that identify ideal customer profiles, enrich company data, and run personalized cold-email campaigns.',
 			img: make1,
 			ProjectHeader: {
 				title: 'n8n Lead Generation System',
@@ -780,6 +794,8 @@ export const projectsData = [
 			title: 'Healthcare Resource Recommender System',
 			url: 'healthcare-resource-recommender-system',
 			category: 'LLMs and RAG',
+			summary:
+				'Permissions-aware resource hub with RAG search, built for community health workers and their teams.',
 			img: health1,
 			ProjectHeader: {
 				title: 'Healthcare Resource Recommender System',
@@ -880,6 +896,8 @@ export const projectsData = [
 		title: 'Community Health Workers Platform',
 		url: 'community-health-workers-platform',
 		category: 'LLMs and RAG',
+		summary:
+			'Speech-to-forms assistant that transcribes home visits and drafts structured reports and care plans.',
 		img: speech1,
 		ProjectHeader: {
 			title: 'Community Health Workers Platform',
@@ -980,6 +998,8 @@ export const projectsData = [
 		title: 'Industrial Computer Vision Systems',
 		url: 'industrial-computer-vision',
 		category: 'Computer Vision',
+		summary:
+			'Production vision systems for defect detection, fill checks, anomaly detection, and PPE compliance on the factory floor.',
 		img: int4,
 		featured: {
 			rank: 4,
@@ -1091,6 +1111,8 @@ export const projectsData = [
 		title: 'RealTime Voice Agent',
 		url: 'realtime-voice-agent',
 		category: 'LLMs and RAG',
+		summary:
+			'Low-latency voice agent over WebSockets and Twilio, with real-time prompt control and multi-agent tool calling.',
 		img: realtime1,
 		ProjectHeader: {
 			title: 'RealTime Voice Agent',
@@ -1204,6 +1226,8 @@ export const projectsData = [
 		title: 'MCP Azure DevOps Server',
 		url: 'mcp-azure-devops-server',
 		category: 'LLMs and RAG',
+		summary:
+			'Model Context Protocol server that lets AI assistants query and manage Azure DevOps work items in natural language.',
 		img: mcp1,
 		ProjectHeader: {
 			title: 'MCP Azure DevOps Server',
@@ -1311,6 +1335,8 @@ export const projectsData = [
 		title: 'CCTV Safety Detection',
 		url: 'cctv-safety-detection',
 		category: 'Computer Vision / Edge AI',
+		summary:
+			'On-prem GPU pipeline that checks PPE and safety rules across live CCTV streams and alerts supervisors.',
 		img: cctv1,
 		ProjectHeader: {
 			title: 'CCTV Safety Detection',
@@ -1418,6 +1444,8 @@ export const projectsData = [
 		title: 'Parallel Document Ingestion Pipeline',
 		url: 'marker-ingestion-pipeline',
 		category: 'RAG Infrastructure / Distributed Systems',
+		summary:
+			'Distributed ingestion service that parses PDFs, generates embeddings, and tracks progress for large RAG corpora.',
 		img: marker1,
 		featured: {
 			rank: 2,

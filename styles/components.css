@@ -301,30 +301,27 @@
 }
 
 /* ===== PROJECT CARD STYLES ===== */
-.project-card {
-  @apply min-h-[450px] max-h-[550px];
+/* Line clamp utilities for controlled card summaries and related cards. */
+.line-clamp-2,
+.line-clamp-3 {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
-.project-image-container {
-  @apply flex-shrink-0;
-}
-
-.project-content {
-  @apply flex-shrink-0;
-}
-
-/* Line clamp utility for text truncation */
 .line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+}
+
+.line-clamp-3 {
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
 }
 
 /* ===== FILTER STYLES ===== */
 .filter-select {
-  @apply rounded-md border border-gray-700 bg-gray-900 px-4 py-3 text-sm font-medium text-white transition-colors duration-200 focus:border-dev-blue focus:ring-1 focus:ring-dev-blue/40 sm:px-6 sm:text-base;
+  @apply h-11 w-full appearance-none rounded-md border border-white/10 bg-gray-900/70 px-3 pr-9 text-sm text-white transition-colors duration-200 focus:border-dev-blue/60 focus:outline-none focus:ring-1 focus:ring-dev-blue/40;
 }
 
 /* ===== CONTACT STYLES ===== */
