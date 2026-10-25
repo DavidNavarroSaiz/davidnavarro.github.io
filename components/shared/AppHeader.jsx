@@ -91,10 +91,10 @@ function AppHeader() {
 									<span className="header-logo-cyan">DAVID NAVARRO</span>
 								</div>
 								<div className="header-subtitle hidden sm:block">
-									Machine Learning Engineer | Computer Vision | AI & Automation Specialist
+									Senior AI Engineer | Production AI Agents | LLM Evaluation | ML Platforms
 								</div>
 								<div className="header-subtitle-mobile block sm:hidden">
-									ML Engineer | Computer Vision | AI Specialist
+									Senior AI Engineer | AI Agents | LLM Evaluation
 								</div>
 							</div>
 						</div>

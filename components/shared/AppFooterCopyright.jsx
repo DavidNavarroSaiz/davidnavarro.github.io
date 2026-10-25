@@ -11,7 +11,7 @@ function AppFooterCopyright() {
 				</a>
 				<span className="text-gray-500 mx-2">•</span>
 				<span className="text-gray-400 text-sm">
-					Machine Learning Engineer & AI Specialist
+					Senior AI Engineer
 				</span>
 			</div>
 		</div>

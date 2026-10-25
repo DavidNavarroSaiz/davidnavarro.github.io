@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { aboutMeData } from '../../data/aboutMeData';
+import { projectsData } from '../../data/projectsData';
+import { experienceStats } from '../../data/experienceData';
 import profileImage from '../../public/images/profile.jpeg';
 
 function AboutMeBio() {
@@ -75,10 +77,10 @@ function AboutMeBio() {
 						className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4"
 					>
 						{[
-							{ label: 'Years Experience', value: '6+', icon: '⏱️' },
-							{ label: 'Technologies', value: '20+', icon: '⚡' },
-							{ label: 'Projects', value: '50+', icon: '🚀' },
-							{ label: 'Industries', value: '6+', icon: '🏢' }
+							{ label: 'Years Experience', value: '7+', icon: '⏱️' },
+							{ label: 'Technologies', value: String(experienceStats.technologies), icon: '⚡' },
+							{ label: 'Projects', value: String(projectsData.length), icon: '🚀' },
+							{ label: 'Industries', value: '5', icon: '🏢' }
 						].map((stat, index) => (
 							<div key={stat.label} className="text-center p-4 bg-gray-800/20 rounded-xl border border-gray-700/20 hover:bg-gray-800/30 transition-all duration-300">
 								<div className="text-2xl mb-1 opacity-80">{stat.icon}</div>

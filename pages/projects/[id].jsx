@@ -66,18 +66,18 @@ function ProjectSingle(props) {
 											key={info.id}
 										>
 											<span className="text-dev-blue font-medium">{info.title}: </span>
-											<a
-												href="https://stoman.me"
-												className={
-													info.title === 'Website' ||
-													info.title === 'Phone'
-														? 'hover:underline hover:text-dev-blue cursor-pointer duration-300 text-white'
-														: 'text-gray-300'
-												}
-												aria-label="Project Website and Phone"
-											>
-												{info.details}
-											</a>
+											{/^https?:\/\//.test(info.details) ? (
+												<a
+													href={info.details}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="hover:underline hover:text-dev-blue duration-300 text-white"
+												>
+													{info.details}
+												</a>
+											) : (
+												<span className="text-gray-300">{info.details}</span>
+											)}
 										</li>
 									);
 								}

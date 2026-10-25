@@ -6,7 +6,7 @@ import { FiArrowDownCircle, FiArrowRight } from 'react-icons/fi';
 import profileImage from '../../public/images/profile.jpeg';
 import logo from '../../public/images/DN-Logo.svg';
 
-function AppHero() {
+function AppHero({ cvs = [] }) {
 	const router = useRouter();
 	const basePath = router.basePath || '';
 
@@ -31,7 +31,7 @@ function AppHero() {
 							<div className="relative">
 								<Image
 									src={profileImage}
-									alt="David Navarro - Machine Learning Engineer"
+									alt="David Navarro - Senior AI Engineer"
 									width={250}
 									height={250}
 									priority
@@ -57,7 +57,7 @@ function AppHero() {
 							transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.4 }}
 							className="hero-title"
 						>
-							Hi, I'm <span className="hero-title-accent">David</span>
+							Hi, I&apos;m <span className="hero-title-accent">David</span>
 						</motion.h1>
 
 						<motion.p
@@ -66,7 +66,8 @@ function AppHero() {
 							transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.5 }}
 							className="hero-subtitle"
 						>
-							I build LLM/RAG and MLOps systems that cut release cycles by ~40% and ship to production reliably.
+							<span className="block font-semibold text-white mb-2">Senior AI Engineer</span>
+							I design and evaluate production AI systems—from policy-governed LLM agents to reliable ML pipelines.
 						</motion.p>
 
 						{/* Botones */}
@@ -76,14 +77,17 @@ function AppHero() {
 							transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.6 }}
 							className="hero-buttons"
 						>
-							<a
-								download="CV_DavidNavarro_2025.pdf"
-								href={`${basePath}/files/CV_DavidNavarro_2025.pdf`}
-								className="hero-button-primary"
-							>
-								<FiArrowDownCircle className="mr-2 h-5 w-5" />
-								Download CV
-							</a>
+							{cvs.map((cv) => (
+								<a
+									key={cv.file}
+									download={cv.file}
+									href={`${basePath}/files/${cv.file}`}
+									className="hero-button-primary"
+								>
+									<FiArrowDownCircle className="mr-2 h-5 w-5" />
+									{cv.label}
+								</a>
+							))}
 							
 							<Link
 								href="/about"

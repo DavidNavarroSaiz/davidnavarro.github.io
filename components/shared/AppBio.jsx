@@ -47,7 +47,7 @@ function AppBio() {
 										<li>• 40% faster release cycles</li>
 										<li>• Production AI deployments</li>
 										<li>• Team leadership experience</li>
-										<li>• Research publications</li>
+										<li>• Evaluation gates in CI/CD pipelines</li>
 									</ul>
 								</div>
 							</div>

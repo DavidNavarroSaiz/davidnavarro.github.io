@@ -17,9 +17,9 @@ function PagesMetaHead({ title, keywords, description }) {
 }
 
 PagesMetaHead.defaultProps = {
-	title: 'David Navarro - Machine Learning Engineer',
-	keywords: 'machine learning, computer vision, AI, automation, python, pytorch, tensorflow',
-	description: 'Machine Learning Engineer specializing in Computer Vision, AI & Automation. 6+ years of experience in ML systems, LLMOps, and production deployments.',
+	title: 'David Navarro - Senior AI Engineer',
+	keywords: 'senior AI engineer, AI agents, LLM evaluation, AI platforms, applied machine learning, MLOps, python',
+	description: 'Senior AI Engineer specializing in production AI agents, LLM evaluation, AI platforms, and applied ML. 7+ years of experience designing and deploying ML and LLM systems.',
 };
 
 export default PagesMetaHead;
