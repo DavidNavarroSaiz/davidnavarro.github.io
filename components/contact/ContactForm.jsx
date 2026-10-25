@@ -58,7 +58,7 @@ function ContactForm() {
 
 					{submitStatus === 'success' && (
 						<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
-							Thank you for your message! I'll get back to you soon.
+							Thank you for your message! I&apos;ll get back to you soon.
 						</div>
 					)}
 
@@ -124,14 +124,13 @@ function ContactForm() {
 					</div>
 
 					<div className="mt-8">
-						<span className="form-button-primary">
-							<Button
-								title={isSubmitting ? "Sending..." : "Send Message"}
-								type="submit"
-								aria-label="Send Message"
-								disabled={isSubmitting}
-							/>
-						</span>
+						<Button
+							title={isSubmitting ? 'Sending...' : 'Send Message'}
+							type="submit"
+							className="form-button-primary"
+							aria-label="Send Message"
+							disabled={isSubmitting}
+						/>
 					</div>
 				</form>
 			</div>

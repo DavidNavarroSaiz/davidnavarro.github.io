@@ -2,40 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import component-specific styles */
-@import './components.css';
+:root {
+	--color-page: #070b12;
+	--color-surface: #0d141e;
+	--color-surface-raised: #151e2b;
+	--color-border: #293545;
+	--color-text: #f1f5f9;
+	--color-text-muted: #aebccd;
+	--color-accent: #22d3ee;
+	--color-accent-strong: #67e8f9;
+	--color-teal: #2dd4bf;
+	--color-on-accent: #04121a;
+}
 
-html,
+html {
+	background-color: var(--color-page);
+	scroll-padding-top: 5rem;
+	-webkit-text-size-adjust: 100%;
+}
+
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'GeneralSans-Variable';
-	background-color: #000000;
+	min-height: 100vh;
+	font-family: 'GeneralSans-Variable', ui-sans-serif, system-ui, sans-serif;
+	background-color: var(--color-page);
+	color: var(--color-text);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.02em;
+	text-wrap: balance;
+}
+
+::selection {
+	background: rgba(34, 211, 238, 0.28);
 	color: #ffffff;
 }
 
-/* Modern developer theme */
-body {
-	background: linear-gradient(135deg, #000000 0%, #0A0A0A 100%);
-	min-height: 100vh;
+/* Keyboard focus is always visible and never confused with hover. */
+:where(a, button, [role='button'], summary):focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 3px;
 }
 
-/* Glowing effects for developer feel */
+.skip-link {
+	position: fixed;
+	top: 0.75rem;
+	left: 0.75rem;
+	z-index: 100;
+	transform: translateY(-200%);
+	border-radius: 0.375rem;
+	background: var(--color-accent);
+	color: var(--color-on-accent);
+	padding: 0.625rem 1rem;
+	font-family: 'GeneralSans-Semibold', ui-sans-serif, system-ui, sans-serif;
+	font-size: 0.875rem;
+	transition: transform 150ms ease;
+}
+
+.skip-link:focus {
+	transform: translateY(0);
+}
+
+/* Subtle accent shadows instead of neon glows. */
 .glow-blue {
-	box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+	box-shadow: 0 10px 30px -20px rgba(34, 211, 238, 0.5);
 }
 
 .glow-cyan {
-	box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+	box-shadow: 0 10px 30px -20px rgba(45, 212, 191, 0.45);
 }
 
 /* Code-like styling */
 .code-text {
 	font-family: 'Courier New', monospace;
-	background: rgba(0, 212, 255, 0.1);
+	background: rgba(34, 211, 238, 0.1);
 	padding: 2px 6px;
 	border-radius: 4px;
-	border-left: 3px solid #00D4FF;
+	border-left: 3px solid var(--color-accent);
 }
 
 a {
@@ -62,19 +111,18 @@ a {
 }
 
 .related-projects-scroll::-webkit-scrollbar-track {
-	background: rgba(45, 55, 72, 0.3);
+	background: rgba(41, 53, 69, 0.35);
 	border-radius: 4px;
 }
 
 .related-projects-scroll::-webkit-scrollbar-thumb {
-	background: linear-gradient(90deg, #00D4FF, #00B4D8);
+	background: linear-gradient(90deg, #22d3ee, #0891b2);
 	border-radius: 4px;
-	transition: all 0.3s ease;
+	transition: background 0.3s ease;
 }
 
 .related-projects-scroll::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(90deg, #00B4D8, #0096C7);
-	box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+	background: linear-gradient(90deg, #67e8f9, #22d3ee);
 }
 
 /* Fonts */
@@ -278,8 +326,6 @@ a {
 
 /* Scroll to top style */
 .scrollToTop {
-	@apply bg-indigo-600;
-	@apply text-white;
 	position: fixed;
 	width: 100%;
 	align-items: center;
@@ -287,13 +333,16 @@ a {
 	justify-content: center;
 	z-index: 999;
 	cursor: pointer;
+	background-color: var(--color-surface-raised);
+	color: var(--color-accent);
+	border: 1px solid var(--color-border);
 	animation: fadeIn 0.3s;
-	transition: opacity 0.4s;
-	opacity: 1;
+	transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .scrollToTop:hover {
-	opacity: 1;
+	color: var(--color-accent-strong);
+	border-color: var(--color-accent);
 }
 
 @keyframes fadeIn {
@@ -301,6 +350,17 @@ a {
 		opacity: 0;
 	}
 	100% {
-		opacity: 0.5;
+		opacity: 1;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
 	}
 }

@@ -6,8 +6,13 @@ const DefaultLayout = ({ children }) => {
 	return (
 		<>
 			<PagesMetaHead />
+			<a href="#main-content" className="skip-link">
+				Skip to content
+			</a>
 			<AppHeader />
-			<div>{children}</div>
+			<main id="main-content" tabIndex={-1}>
+				{children}
+			</main>
 			<AppFooter />
 		</>
 	);
