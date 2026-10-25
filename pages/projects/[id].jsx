@@ -3,8 +3,29 @@ import { FiClock, FiTag } from 'react-icons/fi';
 import PagesMetaHead from '../../components/PagesMetaHead';
 import { projectsData } from '../../data/projectsData';
 import RelatedProjects from '../../components/projects/RelatedProjects';
+import CaseStudy from '../../components/projects/CaseStudy';
 
+// Projects with `caseStudy` data use the case study template; the rest keep
+// the legacy layout below.
 function ProjectSingle(props) {
+	if (props.project.caseStudy) {
+		return (
+			<>
+				<PagesMetaHead
+					title={props.project.title}
+					description={props.project.caseStudy.overview}
+				/>
+				<CaseStudy project={props.project} />
+				<div className="container mx-auto">
+					<RelatedProjects
+						currentProjectId={props.project.id}
+						currentCategory={props.project.category}
+					/>
+				</div>
+			</>
+		);
+	}
+
 	return (
 		<div className="container mx-auto">
 			<PagesMetaHead title={props.project.title} />
@@ -40,9 +61,8 @@ function ProjectSingle(props) {
 								className="rounded-xl cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700"
 								alt={project.title}
 								key={project.id}
-								layout="responsive"
-								width={100}
-								height={90}
+								sizes="(max-width: 639px) 100vw, 33vw"
+								style={{ width: '100%', height: 'auto' }}
 							/>
 						</div>
 					);

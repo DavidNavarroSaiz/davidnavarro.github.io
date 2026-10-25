@@ -163,6 +163,69 @@ export const projectsData = [
 			],
 			SocialSharingHeading: 'Share This',
 		},
+		// Optional engineering case study. Projects without this field keep
+		// the legacy detail layout. Every section is optional and is only
+		// rendered when present; add a section only with verified content.
+		caseStudy: {
+			overview:
+				'A Microsoft Teams agent, also reachable through other Bot Framework channels, that pairs a language model with project management tools, document retrieval, and calendar and meeting management.',
+			problem:
+				'Project status, calendars, and documents are spread across Teams and project tools, so routine coordination takes manual effort and context switching.',
+			architecture: {
+				summary:
+					'Teams and other Bot Framework channels deliver user requests to a language model, which calls into three kinds of backends: data sources, project management tools, and the Microsoft Graph API for calendar operations.',
+				components: [
+					{
+						name: 'Teams and Bot Framework channels',
+						role: 'Entry point for user conversations.',
+					},
+					{
+						name: 'Language model',
+						role: 'Interprets requests and selects which tool to call. Built with Azure OpenAI, LangChain and AutoGen behind a FastAPI service.',
+					},
+					{
+						name: 'Data sources with PGVector',
+						role: 'Vector search and retrieval over project documents.',
+					},
+					{
+						name: 'Project management tools',
+						role: 'Structured tool calls for project operations such as status queries and updates.',
+					},
+					{
+						name: 'Microsoft Graph API',
+						role: 'Calendar checks and meeting creation.',
+					},
+					{
+						name: 'Application Insights',
+						role: 'Centralized logging and monitoring.',
+					},
+				],
+				diagram: {
+					img: pm1,
+					alt: 'Architecture diagram. PM AI Agent receives requests from Microsoft Teams and Bot Framework channels, passes them to a language model, which connects to data sources, project management tools, and the Microsoft Graph API for calendar operations.',
+					caption:
+						'System overview: channels, language model, and the three backend integrations.',
+				},
+			},
+			implementation: [
+				{
+					title: 'Calendar and meeting management',
+					body: 'Microsoft Graph integration covers natural-language event creation, conflict detection, business-hours validation, and automatic Teams meeting creation.',
+				},
+				{
+					title: 'Document retrieval',
+					body: 'Project documents are searched with PGVector and LangChain, so users can find and analyze documents from the conversation.',
+				},
+				{
+					title: 'Structured tool execution',
+					body: 'Project actions run through structured tool calls rather than free-form text.',
+				},
+				{
+					title: 'Observability',
+					body: 'Application Insights provides centralized logging and monitoring.',
+				},
+			],
+		},
 	},
 	{
 		id: 2,
