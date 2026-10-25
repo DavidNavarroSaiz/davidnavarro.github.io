@@ -61,6 +61,15 @@ export const projectsData = [
 		url: 'pm-ai-agent',
 		category: 'LLMs and RAG',
 		img: pm1,
+		featured: {
+			rank: 1,
+			problem:
+				'Project status, calendars, and documents are spread across Teams and project tools, so routine coordination takes manual effort.',
+			approach:
+				'A conversational agent that uses Microsoft Graph for calendar checks and meeting creation, PGVector for document retrieval, and structured tool calls for project actions, instrumented with Application Insights.',
+			disciplines: ['Agentic workflows', 'LLM tooling', 'Azure platform'],
+			alt: 'PM AI Agent architecture connecting Microsoft Teams, bot channels, data sources, project tools, and calendar APIs.',
+		},
 		ProjectHeader: {
 			title: 'PM AI Agent',
 			publishDate: 'Feb 2025',
@@ -159,6 +168,15 @@ export const projectsData = [
 		url: 'candidate-recommendation-system',
 		category: 'LLMs and RAG',
 		img: rg1,
+		featured: {
+			rank: 3,
+			problem:
+				'Recruiters need to match a job description against hundreds of candidate profiles without losing the reasoning behind a shortlist.',
+			approach:
+				'A retrieval pipeline indexes resumes in Qdrant, enriches profiles with LLM-derived metadata, and ranks candidates against the role with explanations and filters in a FastAPI and Streamlit application.',
+			disciplines: ['Retrieval systems', 'LLM ranking', 'Product ML'],
+			alt: 'Candidate recommendation architecture showing resumes, RAG retrieval, LLM enrichment, metadata extraction, vector search, and ranked candidate explanations.',
+		},
 		ProjectHeader: {
 			title: 'Candidate Recommendation System',
 			publishDate: 'Apr 2024',
@@ -963,6 +981,19 @@ export const projectsData = [
 		url: 'industrial-computer-vision',
 		category: 'Computer Vision',
 		img: int4,
+		featured: {
+			rank: 4,
+			problem:
+				'Factory inspection and safety checks need reliable vision under real production constraints: lighting, throughput, hardware, and PLC integration.',
+			approach:
+				'End-to-end CV systems spanning imaging design, real-time detection pipelines, CVAT labeling workflows, and PLC/HMI integration for defect, fill, anomaly, and PPE checks.',
+			disciplines: [
+				'Applied computer vision',
+				'Edge deployment',
+				'Industrial integration',
+			],
+			alt: 'Industrial computer vision illustration showing a machine vision camera, CV algorithm, and product inspection.',
+		},
 		ProjectHeader: {
 			title: 'Industrial Computer Vision Systems',
 			publishDate: 'May 2019',
@@ -1388,6 +1419,20 @@ export const projectsData = [
 		url: 'marker-ingestion-pipeline',
 		category: 'RAG Infrastructure / Distributed Systems',
 		img: marker1,
+		featured: {
+			rank: 2,
+			image: marker3,
+			problem:
+				'RAG systems are only as good as the documents feeding them. Large PDF collections are slow to parse, chunk, embed, and keep observable.',
+			approach:
+				'A FastAPI service routes uploads into Celery workers through RabbitMQ, converts documents with Marker into structured JSON, and writes embeddings to pgVector with progress and failure tracking.',
+			disciplines: [
+				'RAG infrastructure',
+				'Distributed processing',
+				'Data pipelines',
+			],
+			alt: 'Parallel document ingestion diagram showing PDF, text, mixed, and unstructured inputs flowing into a document store.',
+		},
 		ProjectHeader: {
 			title: 'Parallel Document Ingestion Pipeline',
 			publishDate: 'Oct 2024',
@@ -1489,3 +1534,7 @@ export const projectsData = [
 		},
 	},
 ];
+
+export const featuredProjects = projectsData
+	.filter((project) => project.featured)
+	.sort((a, b) => a.featured.rank - b.featured.rank);

@@ -2,30 +2,23 @@ import fs from 'fs';
 import path from 'path';
 import { useEffect } from 'react';
 import PagesMetaHead from '../components/PagesMetaHead';
+import SelectedWork from '../components/home/SelectedWork';
 import AppHero from '../components/shared/AppHero';
 import AppBio from '../components/shared/AppBio';
-import NeuralNetwork from '../components/shared/NeuralNetwork';
+import { featuredProjects } from '../data/projectsData';
 
-export default function Home({ cvs }) {
+export default function Home({ cvs, selectedProjects }) {
 	// Force scroll to top on page load
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
 	return (
-		<div className="relative">
+		<div>
 			<PagesMetaHead title="David Navarro - Senior AI Engineer" />
-
-			{/* Neural network background */}
-			<NeuralNetwork intensity="low" />
-
-			<div className="relative z-10">
-				<AppHero cvs={cvs} />
-			</div>
-
-			<div className="relative z-10">
-				<AppBio />
-			</div>
+			<AppHero cvs={cvs} />
+			<SelectedWork projects={selectedProjects} />
+			<AppBio />
 		</div>
 	);
 }
@@ -43,5 +36,18 @@ export async function getStaticProps() {
 	const exists = (file) =>
 		fs.existsSync(path.join(process.cwd(), 'public', 'files', file));
 	const cvs = CV_FILES.filter((cv) => exists(cv.file));
-	return { props: { cvs } };
+
+	const selectedProjects = featuredProjects.map((project) => ({
+		id: project.id,
+		title: project.title,
+		category: project.category,
+		publishDate: project.ProjectHeader.publishDate,
+		image: (project.featured.image || project.img).src,
+		imageAlt: project.featured.alt,
+		problem: project.featured.problem,
+		approach: project.featured.approach,
+		disciplines: project.featured.disciplines,
+	}));
+
+	return { props: { cvs, selectedProjects } };
 }
