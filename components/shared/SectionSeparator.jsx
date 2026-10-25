@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 function SectionSeparator({ variant = 'blue', className = '' }) {
+	const shouldReduceMotion = useReducedMotion();
 	const variants = {
 		blue: {
 			lineColor: 'from-transparent via-blue-500/30 to-transparent',
@@ -40,7 +41,7 @@ function SectionSeparator({ variant = 'blue', className = '' }) {
 
 	return (
 		<motion.div 
-			initial={{ opacity: 0, scale: 0.8 }}
+			initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.8 }}
 			animate={{ opacity: 1, scale: 1 }}
 			transition={{ duration: 0.6 }}
 			className={`relative z-10 py-8 ${className}`}
@@ -55,7 +56,7 @@ function SectionSeparator({ variant = 'blue', className = '' }) {
 						{config.dots.map((dot, index) => (
 							<motion.div
 								key={index}
-								initial={{ opacity: 0, scale: 0 }}
+								initial={shouldReduceMotion ? false : { opacity: 0, scale: 0 }}
 								animate={{ opacity: 1, scale: 1 }}
 								transition={{ duration: 0.4, delay: index * 0.1 }}
 								className={`${dot.size} ${dot.color} rounded-full`}

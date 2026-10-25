@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -9,10 +9,11 @@ import logo from '../../public/images/DN-Logo.svg';
 function AppHero({ cvs = [] }) {
 	const router = useRouter();
 	const basePath = router.basePath || '';
+	const shouldReduceMotion = useReducedMotion();
 
 	return (
 		<motion.section
-			initial={{ opacity: 0 }}
+			initial={shouldReduceMotion ? false : { opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
 			className="hero-container"
@@ -21,7 +22,7 @@ function AppHero({ cvs = [] }) {
 				<div className="hero-grid">
 					{/* Columna Izquierda - Foto y Contenido */}
 					<motion.div
-						initial={{ opacity: 0, x: -50 }}
+						initial={shouldReduceMotion ? false : { opacity: 0, x: -50 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.3 }}
 						className="hero-content"
@@ -52,7 +53,7 @@ function AppHero({ cvs = [] }) {
 
 						{/* Intro */}
 						<motion.h1
-							initial={{ opacity: 0 }}
+							initial={shouldReduceMotion ? false : { opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.4 }}
 							className="hero-title"
@@ -61,7 +62,7 @@ function AppHero({ cvs = [] }) {
 						</motion.h1>
 
 						<motion.p
-							initial={{ opacity: 0 }}
+							initial={shouldReduceMotion ? false : { opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.5 }}
 							className="hero-subtitle"
@@ -72,7 +73,7 @@ function AppHero({ cvs = [] }) {
 
 						{/* Botones */}
 						<motion.div
-							initial={{ opacity: 0 }}
+							initial={shouldReduceMotion ? false : { opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.6 }}
 							className="hero-buttons"
@@ -101,7 +102,7 @@ function AppHero({ cvs = [] }) {
 
 					{/* Columna Derecha - Animación y Proyectos Destacados */}
 					<motion.div
-						initial={{ opacity: 0, x: 50 }}
+						initial={shouldReduceMotion ? false : { opacity: 0, x: 50 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.4 }}
 						className="relative"
@@ -154,7 +155,7 @@ function AppHero({ cvs = [] }) {
 								<div className="space-y-4">
 									{/* Proyecto 1 */}
 									<motion.div
-										whileHover={{ scale: 1.02, y: -2 }}
+										whileHover={shouldReduceMotion ? undefined : { scale: 1.02, y: -2 }}
 										className="bg-gray-800/80 border border-gray-600 rounded-lg p-4 hover:border-dev-blue/50 transition-all duration-300"
 									>
 										<div className="flex items-center justify-between mb-2">
@@ -173,7 +174,7 @@ function AppHero({ cvs = [] }) {
 
 									{/* Proyecto 2 */}
 									<motion.div
-										whileHover={{ scale: 1.02, y: -2 }}
+										whileHover={shouldReduceMotion ? undefined : { scale: 1.02, y: -2 }}
 										className="bg-gray-800/80 border border-gray-600 rounded-lg p-4 hover:border-dev-blue/50 transition-all duration-300"
 									>
 										<div className="flex items-center justify-between mb-2">
@@ -192,7 +193,7 @@ function AppHero({ cvs = [] }) {
 
 									{/* Proyecto 3 */}
 									<motion.div
-										whileHover={{ scale: 1.02, y: -2 }}
+										whileHover={shouldReduceMotion ? undefined : { scale: 1.02, y: -2 }}
 										className="bg-gray-800/80 border border-gray-600 rounded-lg p-4 hover:border-dev-blue/50 transition-all duration-300"
 									>
 										<div className="flex items-center justify-between mb-2">

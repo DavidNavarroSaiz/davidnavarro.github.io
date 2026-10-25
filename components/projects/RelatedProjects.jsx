@@ -1,13 +1,15 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { projectsData } from '../../data/projectsData';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 function RelatedProjects({ currentProjectId, currentCategory }) {
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const scrollContainerRef = useRef(null);
+	const shouldReduceMotion = useReducedMotion();
+	const scrollBehavior = shouldReduceMotion ? 'auto' : 'smooth';
 
 	// Filtrar proyectos relacionados (misma categoría, excluyendo el actual)
 	const relatedProjects = projectsData.filter(
@@ -24,7 +26,7 @@ function RelatedProjects({ currentProjectId, currentCategory }) {
 			const container = scrollContainerRef.current;
 			const scrollAmount = container.clientWidth * 0.8;
 			const newPosition = Math.max(0, scrollPosition - scrollAmount);
-			container.scrollTo({ left: newPosition, behavior: 'smooth' });
+			container.scrollTo({ left: newPosition, behavior: scrollBehavior });
 			setScrollPosition(newPosition);
 		}
 	};
@@ -35,7 +37,7 @@ function RelatedProjects({ currentProjectId, currentCategory }) {
 			const scrollAmount = container.clientWidth * 0.8;
 			const maxScroll = container.scrollWidth - container.clientWidth;
 			const newPosition = Math.min(maxScroll, scrollPosition + scrollAmount);
-			container.scrollTo({ left: newPosition, behavior: 'smooth' });
+			container.scrollTo({ left: newPosition, behavior: scrollBehavior });
 			setScrollPosition(newPosition);
 		}
 	};

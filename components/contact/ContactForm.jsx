@@ -57,13 +57,19 @@ function ContactForm() {
 					</p>
 
 					{submitStatus === 'success' && (
-						<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+						<div
+							role="status"
+							className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded"
+						>
 							Thank you for your message! I&apos;ll get back to you soon.
 						</div>
 					)}
 
 					{submitStatus === 'error' && (
-						<div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+						<div
+							role="alert"
+							className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded"
+						>
 							Sorry, there was an error sending your message. Please try again.
 						</div>
 					)}

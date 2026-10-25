@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
 import { sendHireMeEmail } from '../utils/emailService';
@@ -26,6 +26,7 @@ function HireMeModal({ onClose, onRequest }) {
 	const dialogRef = useRef(null);
 	const closeButtonRef = useRef(null);
 	const onCloseRef = useRef(onClose);
+	const shouldReduceMotion = useReducedMotion();
 
 	useEffect(() => {
 		onCloseRef.current = onClose;
@@ -122,7 +123,7 @@ function HireMeModal({ onClose, onRequest }) {
 
 	return (
 		<motion.div
-			initial={{ opacity: 0 }}
+			initial={shouldReduceMotion ? false : { opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
 			className="font-general-medium fixed inset-0 z-[80] transition-all duration-500"
@@ -271,7 +272,7 @@ function HireMeModal({ onClose, onRequest }) {
 								<Button
 									type="submit"
 									title={isSubmitting ? 'Sending...' : 'Send Request'}
-									className="btn-primary flex-1 px-6 py-3"
+									className="modal-button-primary"
 									aria-label="Submit Request"
 									disabled={isSubmitting}
 								/>
@@ -279,7 +280,7 @@ function HireMeModal({ onClose, onRequest }) {
 									type="button"
 									title="Cancel"
 									onClick={onClose}
-									className="btn-secondary px-6 py-3"
+									className="modal-button-secondary"
 									aria-label="Close Modal"
 								/>
 							</div>

@@ -138,9 +138,12 @@
   @apply px-6 py-3;
 }
 
-.modal-button-primary,
-.modal-button-secondary {
+.modal-button-primary {
   @apply flex-1 px-6 py-3;
+}
+
+.modal-button-secondary {
+  @apply px-6 py-3;
 }
 
 /* ===== FOOTER STYLES ===== */

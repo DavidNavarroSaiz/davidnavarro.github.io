@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import '../styles/components.css';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, MotionConfig } from 'framer-motion';
 import Head from 'next/head';
 import DefaultLayout from '../components/layout/DefaultLayout';
 import UseScrollToTop from '../hooks/useScrollToTop';
@@ -32,14 +32,16 @@ function MyApp({ Component, pageProps }) {
 					crossOrigin="anonymous"
 				/>
 			</Head>
-			<AnimatePresence>
-				<div className="bg-primary-dark dark:bg-primary-dark transition duration-300">
-					<DefaultLayout>
-						<Component {...pageProps} />
-					</DefaultLayout>
-					<UseScrollToTop />
-				</div>
-			</AnimatePresence>
+			<MotionConfig reducedMotion="user">
+				<AnimatePresence>
+					<div className="bg-primary-dark dark:bg-primary-dark transition duration-300">
+						<DefaultLayout>
+							<Component {...pageProps} />
+						</DefaultLayout>
+						<UseScrollToTop />
+					</div>
+				</AnimatePresence>
+			</MotionConfig>
 		</>
 	);
 }
