@@ -168,36 +168,36 @@ export const projectsData = [
 		// rendered when present; add a section only with verified content.
 		caseStudy: {
 			overview:
-				'A Microsoft Teams agent, also reachable through other Bot Framework channels, that pairs a language model with project management tools, document retrieval, and calendar and meeting management.',
+				'An AI-powered project management agent integrated with Microsoft Teams, knowledge retrieval, and Azure DevOps tools. I designed and implemented the end-to-end system, which was used internally at Kmeleon to organize and manage team tasks while the infrastructure was being prepared for potential distribution as a reusable offering through Microsoft Marketplace.',
 			problem:
 				'Project status, calendars, and documents are spread across Teams and project tools, so routine coordination takes manual effort and context switching.',
 			architecture: {
 				summary:
-					'Teams and other Bot Framework channels deliver user requests to a language model, which calls into three kinds of backends: data sources, project management tools, and the Microsoft Graph API for calendar operations.',
+					'User requests from Microsoft Teams and other Bot Framework channels go to a language-model agent. The agent answers from project knowledge through a document ingestion and PGVector retrieval pipeline, acts on Azure DevOps through a dedicated MCP server, and manages calendars through the Microsoft Graph API. Provisioned Azure infrastructure and Application Insights monitoring support the whole system.',
 				components: [
 					{
 						name: 'Teams and Bot Framework channels',
 						role: 'Entry point for user conversations.',
 					},
 					{
-						name: 'Language model',
+						name: 'Language model agent',
 						role: 'Interprets requests and selects which tool to call. Built with Azure OpenAI, LangChain and AutoGen behind a FastAPI service.',
 					},
 					{
-						name: 'Data sources with PGVector',
-						role: 'Vector search and retrieval over project documents.',
+						name: 'Knowledge and ingestion infrastructure',
+						role: 'Document ingestion workflows and PGVector administration over organized project, document, and conversation data.',
 					},
 					{
-						name: 'Project management tools',
-						role: 'Structured tool calls for project operations such as status queries and updates.',
+						name: 'MCP server for Azure DevOps',
+						role: 'Exposes Azure DevOps tools to the agent: work-item retrieval, assignment reads, project-specific assignments for selected team members, deletion, and other implemented tools. Detailed separately in the MCP Azure DevOps Server project notes.',
 					},
 					{
 						name: 'Microsoft Graph API',
 						role: 'Calendar checks and meeting creation.',
 					},
 					{
-						name: 'Application Insights',
-						role: 'Centralized logging and monitoring.',
+						name: 'Supporting infrastructure',
+						role: 'Service provisioning, infrastructure as code, and centralized logging and monitoring with Application Insights.',
 					},
 				],
 				diagram: {
@@ -209,20 +209,54 @@ export const projectsData = [
 			},
 			implementation: [
 				{
+					title: 'End-to-end architecture and infrastructure',
+					body: 'I designed and implemented the system architecture, provisioned the Azure services, and set up the infrastructure as code.',
+				},
+				{
+					title: 'Knowledge and ingestion infrastructure',
+					body: 'I built the document ingestion workflows, administered the PGVector vector database, and organized the project, document, and conversation data behind retrieval.',
+				},
+				{
+					title: 'Teams integration',
+					body: 'I integrated the agent with Microsoft Teams, keeping it reachable through other Bot Framework channels.',
+				},
+				{
+					title: 'MCP server and agent integration',
+					body: 'I developed an MCP server exposing Azure DevOps tools — work-item retrieval, assignment reads, project-specific assignments for selected team members, deletion, and other implemented tools — and integrated the agent with it.',
+				},
+				{
 					title: 'Calendar and meeting management',
 					body: 'Microsoft Graph integration covers natural-language event creation, conflict detection, business-hours validation, and automatic Teams meeting creation.',
 				},
 				{
-					title: 'Document retrieval',
-					body: 'Project documents are searched with PGVector and LangChain, so users can find and analyze documents from the conversation.',
+					title: 'Functional testing',
+					body: 'I functionally tested the integrated system, including automated checks of the Azure DevOps integrations and the document infrastructure described under Evaluation and operations.',
+				},
+			],
+			evidence: [
+				{
+					title: 'Prompt-driven tool tests',
+					body: 'Automated functional tests submitted prompts to the agent requesting specific Azure DevOps operations and verified that the agent invoked the corresponding tools with real effects.',
 				},
 				{
-					title: 'Structured tool execution',
-					body: 'Project actions run through structured tool calls rather than free-form text.',
+					title: 'Creation and assignment verification',
+					body: 'Tests verified that requested work items and project-specific assignments for selected team members were actually created.',
 				},
 				{
-					title: 'Observability',
-					body: 'Application Insights provides centralized logging and monitoring.',
+					title: 'Read and deletion checks',
+					body: 'Tests verified task-reading operations against actual assignments and confirmed that deletions through the supported tools took effect.',
+				},
+				{
+					title: 'Remaining tool coverage',
+					body: 'The other exposed Azure DevOps tools were exercised through the same prompt-and-verify loop.',
+				},
+				{
+					title: 'Document-ingestion verification',
+					body: 'Automated tests for the RAG and document infrastructure verified that documents were successfully ingested.',
+				},
+				{
+					title: 'Scope and limits',
+					body: 'These tests verify functional behavior — that the requested operation actually happened. They are not benchmark evaluations: no retrieval-relevance metrics, formal datasets, production availability figures, or reliability guarantees are claimed.',
 				},
 			],
 		},
