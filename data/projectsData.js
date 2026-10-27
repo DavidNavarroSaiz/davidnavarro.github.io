@@ -1657,6 +1657,101 @@ export const projectsData = [
 			],
 			SocialSharingHeading: 'Share This',
 		},
+		// Optional engineering case study (same template as project 1).
+		// Only sections with record-supported content are rendered;
+		// historical figures without documented methodology are left out.
+		caseStudy: {
+			overview:
+				'A distributed ingestion service that turns large collections of PDFs, text, and mixed-format documents into vector embeddings for RAG systems, built around FastAPI intake, Celery workers, RabbitMQ messaging, Marker parsing, and pgVector storage.',
+			problem:
+				'RAG systems are only as good as the documents feeding them. Large PDF collections are slow to parse, chunk, and embed, and long-running batch jobs are hard to observe while they run.',
+			architecture: {
+				summary:
+					'A FastAPI service accepts uploads and routes them as jobs into RabbitMQ queues. Celery workers parse documents with Marker into structured JSON, generate embeddings, and write vectors to pgVector, which serves downstream RAG retrieval. Progress and failures are tracked and surfaced on dashboards, and the full stack runs containerized with Docker Compose.',
+				components: [
+					{
+						name: 'FastAPI service',
+						role: 'Upload intake; routes jobs into worker queues and monitors progress in real time.',
+					},
+					{
+						name: 'RabbitMQ queues',
+						role: 'Task messaging between the intake service and the worker pool.',
+					},
+					{
+						name: 'Celery workers',
+						role: 'Asynchronous parsing and embedding; horizontal scaling with isolated worker scaling.',
+					},
+					{
+						name: 'Marker parsing',
+						role: 'Converts unstructured PDFs into structured JSON chunks optimized for vector-database ingestion.',
+					},
+					{
+						name: 'pgVector and embeddings',
+						role: 'Vector storage for downstream retrieval, populated with OpenAI embeddings.',
+					},
+					{
+						name: 'Dashboards',
+						role: 'Processing status and completion metrics for upload jobs.',
+					},
+					{
+						name: 'Docker Compose',
+						role: 'Containerized, reproducible deployment across environments.',
+					},
+				],
+				diagram: {
+					img: marker1,
+					alt: 'Pipeline diagram: FastAPI routes uploads into RabbitMQ queues consumed by Celery workers; parsed output flows as structured JSON into pgVector with OpenAI embeddings, while dashboards track tasks and metrics across a Docker Compose deployment.',
+					caption:
+						'Ingestion flow: intake, queued workers, vector storage, and progress dashboards.',
+				},
+			},
+			implementation: [
+				{
+					title: 'FastAPI intake service',
+					body: 'A modular FastAPI service accepts uploads and automatically routes them as jobs into the worker queues.',
+				},
+				{
+					title: 'Celery workers and RabbitMQ messaging',
+					body: 'Asynchronous task orchestration with Celery and RabbitMQ decouples intake from processing, allows horizontal scaling of ingestion workers, and keeps document processing fault-tolerant.',
+				},
+				{
+					title: 'Document extraction with Marker',
+					body: 'Marker converts unstructured PDFs into structured JSON chunks optimized for vector-database ingestion, covering PDFs, text, and mixed formats.',
+				},
+				{
+					title: 'Embeddings and vector storage',
+					body: 'Parsed chunks are embedded with OpenAI embeddings and written to pgVector, where they serve downstream RAG retrieval.',
+				},
+				{
+					title: 'Progress monitoring and dashboards',
+					body: 'The service monitors jobs in real time and updates user dashboards with processing status and completion metrics.',
+				},
+				{
+					title: 'Containerized deployment',
+					body: 'The complete stack is containerized with Docker Compose for reproducible deployment with isolated worker scaling.',
+				},
+			],
+			decisions: [
+				{
+					title: 'Queued workers instead of synchronous processing',
+					body: 'Upload intake is decoupled from parsing and embedding through Celery workers and RabbitMQ queues, so workers scale horizontally and document processing stays fault-tolerant.',
+				},
+				{
+					title: 'Marker for document parsing',
+					body: 'Marker converts complex unstructured PDFs into structured JSON chunks suited to vector-database ingestion.',
+				},
+			],
+			evidence: [
+				{
+					title: 'Progress observability',
+					body: 'Upload jobs are monitored in real time, with dashboards reporting processing status and completion metrics.',
+				},
+				{
+					title: 'Failure visibility',
+					body: 'The pipeline tracks processing progress and failures rather than running as an opaque batch job.',
+				},
+			],
+		},
 	},
 ];
 
