@@ -1,0 +1,23 @@
+%% Run-artifact and validation structure — editable owner-review source
+flowchart TB
+    RUN[Run evidence bundle]
+    RUN --> META[Experiment metadata and configuration]
+    RUN --> TRACE[Execution logs and transcript]
+    RUN --> CHANGE[Code diff and test results]
+    RUN --> CHECKS[Deterministic checks]
+    RUN --> REVIEW[Security and authorization review]
+    RUN --> ASSESS[Human / advisory assessment]
+
+    CHECKS --> FUNCTIONAL[Functional checks]
+    CHECKS --> QUALITY[Code-quality checks]
+    ASSESS --> MODEL[Model-assisted assessment where applicable]
+
+    classDef root fill:#0d2030,stroke:#22d3ee,color:#f1f5f9
+    classDef captured fill:#0d141e,stroke:#8b9bb0,color:#f1f5f9
+    classDef automated fill:#0b2b2b,stroke:#2dd4bf,color:#f1f5f9
+    classDef assisted fill:#231f18,stroke:#f4d38a,color:#f1f5f9
+
+    class RUN root
+    class META,TRACE,CHANGE captured
+    class CHECKS,FUNCTIONAL,QUALITY automated
+    class REVIEW,ASSESS,MODEL assisted

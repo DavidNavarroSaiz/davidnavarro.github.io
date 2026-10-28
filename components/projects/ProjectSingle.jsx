@@ -17,15 +17,38 @@ const ProjectSingle = ({
 	return (
 		<li className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-gray-900/50 transition-colors duration-200 hover:border-dev-blue/40 focus-within:border-dev-blue/40 focus-within:ring-2 focus-within:ring-dev-blue focus-within:ring-offset-2 focus-within:ring-offset-primary-dark">
 			<div className="relative aspect-[3/2] w-full overflow-hidden border-b border-white/10 bg-gray-950">
-				<Image
-					src={img}
-					alt={featured?.alt ?? ''}
-					fill
-					sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 400px"
-					loading={priority ? 'eager' : 'lazy'}
-					priority={priority}
-					className="object-contain"
-				/>
+				{img ? (
+					<Image
+						src={img}
+						alt={featured?.alt ?? ''}
+						fill
+						sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 400px"
+						loading={priority ? 'eager' : 'lazy'}
+						priority={priority}
+						className="object-contain"
+					/>
+				) : (
+					<div className="flex h-full flex-col justify-between bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.12),transparent_48%),linear-gradient(135deg,#0d141e,#070b12)] p-5 sm:p-6">
+						<div className="flex items-center justify-between gap-4">
+							<span className="font-mono text-[10px] uppercase tracking-[0.16em] text-dev-blue">
+								Internal engineering
+							</span>
+							<span className="font-mono text-xs text-gray-500">ID {id}</span>
+						</div>
+						<div>
+							<p className="font-mono text-[10px] uppercase tracking-[0.16em] text-gray-500">
+								Evaluation tooling
+							</p>
+							<p className="mt-2 max-w-[14rem] font-general-semibold text-xl leading-tight text-white">
+								Reproducible AI development evaluation
+							</p>
+						</div>
+						<div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-gray-400">
+							<span className="h-1.5 w-1.5 rounded-full bg-dev-cyan" />
+							No public demo
+						</div>
+					</div>
+				)}
 			</div>
 
 			<div className="flex flex-1 flex-col p-5">

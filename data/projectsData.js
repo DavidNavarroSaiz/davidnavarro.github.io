@@ -1725,6 +1725,221 @@ export const projectsData = [
 			],
 		},
 	},
+	{
+		id: 15,
+		title: 'Coding Agent Evaluation Workbench',
+		url: 'coding-agent-evaluation-workbench',
+		category: 'AI Evaluation / Engineering Systems',
+		summary:
+			'Internal workbench for comparing coding-agent runs through versioned tasks, clean baselines, traceable run artifacts, deterministic checks, and structured assessment.',
+		img: null,
+		ProjectHeader: {
+			title: 'Coding Agent Evaluation Workbench',
+			publishDate: 'Oct 2026',
+			tags: 'AI Evaluation / Coding Agents / Reproducibility',
+		},
+		ProjectInfo: {
+			ClientHeading: 'Project status',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Type',
+					details: 'Internal engineering evaluation workbench',
+				},
+				{
+					id: uuidv4(),
+					title: 'Contribution',
+					details: 'Evaluation framework and methodology',
+				},
+				{
+					id: uuidv4(),
+					title: 'Status',
+					details: 'Internal Engineering / Evaluation Tooling',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Create a traceable, repeatable way to compare coding-agent runs on comparable software-engineering tasks without presenting the process as fully autonomous.',
+			Technologies: [],
+			ProjectDetailsHeading: 'Engineering scope',
+			ProjectDetails: [],
+			SocialSharingHeading: 'Share This',
+		},
+		caseStudy: {
+			status: 'Internal Engineering / Evaluation Tooling',
+			headerFacts: ['Type', 'Contribution', 'Status'],
+			overview:
+				'An internal evaluation workbench for comparing coding-agent runs on reproducible software-engineering tasks. It organized versioned task prompts, clean starting baselines, execution evidence, deterministic checks, review inputs, and comparative reporting without presenting the system as fully autonomous.',
+			problem:
+				'Comparing coding agents is only meaningful when each run starts from an equivalent condition, receives a comparable task, and leaves enough evidence to reconstruct what happened. Without standardized tasks, clean baselines, traceable execution artifacts, and consistent assessment, implementation quality and agent behavior are difficult to compare responsibly.',
+			architecture: {
+				summary:
+					'The workbench followed a staged evaluation lifecycle: Task specification → Clean baseline → Agent execution → Run artifacts → Deterministic checks → Human/advisory assessment → Comparative reporting. Automated checks were kept distinct from manual or semi-automated operations so each result could be interpreted in context.',
+				workflow: {
+					title: 'Evaluation lifecycle',
+					summary:
+						'The sequence below separates controlled inputs, captured evidence, repeatable checks, and human or assisted review.',
+					steps: [
+						{
+							title: 'Task specification',
+							description: 'A versioned prompt and comparable engineering task define the run scope.',
+							mode: 'Specified / versioned',
+							type: 'controlled',
+						},
+						{
+							title: 'Clean baseline',
+							description: 'Each run starts from a clean, standardized full-stack reference codebase.',
+							mode: 'Controlled input',
+							type: 'controlled',
+						},
+						{
+							title: 'Agent execution',
+							description: 'A coding agent is run against the task, with follow-up scenarios where applicable.',
+							mode: 'Manual / semi-automated',
+							type: 'assisted',
+						},
+						{
+							title: 'Run artifacts',
+							description: 'Metadata, configuration, diffs, logs, transcripts, and test results are retained as evidence.',
+							mode: 'Captured evidence',
+							type: 'captured',
+						},
+						{
+							title: 'Deterministic checks',
+							description: 'Functional and code-quality checks provide repeatable signals about generated changes.',
+							mode: 'Automated checks',
+							type: 'automated',
+						},
+						{
+							title: 'Human / advisory assessment',
+							description: 'Security and authorization reviews, structured human assessment, and model-assisted assessment where applicable add context.',
+							mode: 'Manual / assisted',
+							type: 'assisted',
+						},
+						{
+							title: 'Comparative reporting',
+							description: 'Comparable runs are assembled into structured experiment reporting.',
+							mode: 'Semi-automated',
+							type: 'assisted',
+						},
+					],
+				},
+				artifactStructure: {
+					title: 'Run evidence structure',
+					summary:
+						'Each run was interpreted through a bundle of configuration, execution, verification, and review evidence. The internal schema and repository names are intentionally not disclosed.',
+					rootLabel: 'Run evidence bundle',
+					items: [
+						{
+							title: 'Experiment metadata',
+							description: 'Run configuration, task version, and execution context.',
+							type: 'captured',
+						},
+						{
+							title: 'Execution trace',
+							description: 'Execution logs and transcripts from the coding-agent run.',
+							type: 'captured',
+						},
+						{
+							title: 'Generated changes',
+							description: 'Code diffs and resulting test results.',
+							type: 'captured',
+						},
+						{
+							title: 'Deterministic checks',
+							description: 'Functional and code-quality check outputs.',
+							type: 'automated',
+						},
+						{
+							title: 'Security review',
+							description: 'Security and authorization review findings.',
+							type: 'assisted',
+						},
+						{
+							title: 'Assessment inputs',
+							description: 'Structured human assessment and model-assisted assessment where applicable.',
+							type: 'assisted',
+						},
+					],
+				},
+			},
+			implementationTitle: 'Engineering contributions',
+			implementation: [
+				{
+					title: 'Evaluation framework',
+					body: 'The implemented workbench used a standardized full-stack reference codebase, versioned prompts, comparable tasks, clean baselines, and run-level evidence.',
+				},
+				{
+					title: 'Execution and follow-up scenarios',
+					body: 'The workbench supported manual or semi-automated coding-agent execution and follow-up scenarios while retaining the task and run context.',
+				},
+				{
+					title: 'Evidence capture',
+					body: 'The workbench structured the capture of experiment metadata, configuration records, code diffs, execution logs, transcripts, and test results.',
+				},
+				{
+					title: 'Verification layers',
+					body: 'It connected deterministic functional and code-quality checks with security and authorization reviews.',
+				},
+				{
+					title: 'Comparative assessment',
+					body: 'It supported structured human assessment, model-assisted assessment where applicable, and comparative experiment reporting.',
+				},
+			],
+			decisionsTitle: 'Engineering decisions',
+			decisions: [
+				{
+					title: 'Clean starting conditions',
+					body: 'Using a standardized reference codebase and clean baselines made task execution evidence comparable across runs.',
+				},
+				{
+					title: 'Separate repeatable checks from expert review',
+					body: 'Deterministic functional and code-quality checks were kept distinct from security, authorization, human, and advisory assessment so automated signals did not stand in for contextual review.',
+				},
+				{
+					title: 'Evidence before summary',
+					body: 'Experiment metadata, configuration records, diffs, logs, transcripts, and test results were retained before comparative conclusions were assembled.',
+				},
+			],
+			evidenceTitle: 'Evaluation and verification',
+			evidence: [
+				{
+					title: 'Implementation correctness',
+					body: 'Generated changes were checked against task requirements through deterministic functional checks and recorded test results.',
+				},
+				{
+					title: 'Code quality and execution behavior',
+					body: 'Code-quality checks and observed execution behavior provided complementary signals for comparative assessment.',
+				},
+				{
+					title: 'Security and authorization',
+					body: 'Security and authorization reviews provided a distinct review path for findings that deterministic checks could not establish on their own.',
+				},
+				{
+					title: 'Traceable comparison',
+					body: 'Run artifacts and structured assessment supported comparisons between runs without publishing internal scores, rankings, or private evaluation results.',
+				},
+			],
+			limitations: [
+				{
+					title: 'Manual and semi-automated work',
+					body: 'Execution, follow-up scenarios, and parts of assessment involved manual or semi-automated operations; the workbench is not described as fully autonomous.',
+				},
+				{
+					title: 'Model and version variability',
+					body: 'Comparisons remain sensitive to model, prompt, task, and environment versioning, which is why the workbench records task and run context.',
+				},
+				{
+					title: 'Limits of automated quality assessment',
+					body: 'Deterministic checks provide repeatable evidence but do not replace structured human or advisory assessment of security, authorization, and engineering quality.',
+				},
+				{
+					title: 'Public-disclosure boundary',
+					body: 'Specific internal check counts, leaderboard details, scores, rankings, private evaluation results, and internal experiment artifacts are excluded pending explicit disclosure approval.',
+				},
+			],
+		},
+	},
 ];
 
 export const featuredProjects = projectsData
