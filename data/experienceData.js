@@ -82,9 +82,9 @@ export const experienceData = [
 		description: 'Built RAG systems and automation workflows for recruitment and lead generation.',
 		achievements: [
 			'Designed RAG systems with Qdrant vector DB and LLM-based enrichment',
-			'Applied Azure Pipelines CI/CD cutting deployment time by 40%',
+			'Applied Azure Pipelines CI/CD to shorten deployment cycles',
 			'Built no-code automations using Make.com, Zapier, and GoHighLevel',
-			'Raised lead conversion by 2% through automated workflows',
+			'Raised lead conversion through automated workflows',
 			'Developed AI-powered workflows for property reporting and meeting summarization',
 			'Created scalable lead-gen pipelines with Selenium, Apify, and n8n'
 		],
@@ -108,11 +108,11 @@ export const experienceData = [
 		description: 'Led ML team developing production recommender systems and document processing platforms.',
 		achievements: [
 			'Developed production recommender system chatbot with React, FastAPI, and RAG',
-			'Enabled 160+ users to find resources 50% faster',
+			'Enabled 160+ users to find resources faster',
 			'Added CHW domain Q&A with retrieval to program guides',
 			'Built document-processing platform handling ~100 documents/month',
 			'Delivered Generative AI automations reducing manual workload',
-			'Led MLOps and CI/CD initiatives accelerating deployment by 40%'
+			'Led MLOps and CI/CD initiatives accelerating deployment cycles'
 		],
 		technologies: ['React', 'FastAPI', 'RAG', 'LangChain', 'LangSmith', 'PGVector', 'MLOps', 'CI/CD'],
 		metrics: {
@@ -135,7 +135,7 @@ export const experienceData = [
 		description: 'Developed computer vision models for COVID-19 diagnosis from chest X-rays.',
 		achievements: [
 			'Curated 36k+ chest X-ray dataset with patient-level splits',
-			'Trained multi-class PyTorch CNNs achieving 96% accuracy',
+			'Trained multi-class PyTorch CNNs achieving over 90% accuracy',
 			'Benchmarked 10+ architectures: VGG19, DenseNet, MobileNet, EfficientNet, etc.',
 			'Built clinician-facing PyQt desktop and Flask web apps',
 			'Implemented preprocessing, augmentation, and evaluation pipelines',
@@ -162,8 +162,8 @@ export const experienceData = [
 		description: 'Led computer vision systems for industrial automation and safety applications.',
 		achievements: [
 			'Led 10-engineer team delivering end-to-end CV systems',
-			'Developed real-time CV pipelines improving incident detection by 30%',
-			'Reduced false alarms by 45% through robust detection systems',
+			'Developed real-time CV pipelines improving incident detection',
+			'Reduced false alarms through robust detection systems',
 			'Built data/labeling workflows with CVAT and automated retraining',
 			'Architected imaging stacks with illumination, sensors, and 3D scanners',
 			'Deployed Optical Gas Imaging solution reducing leak detection time'

@@ -7,10 +7,10 @@ export const aboutMeData = [
 	},
 	{
 		id: uuidv4(),
-		bio: 'Recent projects include building a PM Agent for Azure DevOps that answers status queries, suggests next actions, executes updates, and preserves traceability using LangChain, AutoGen, FastAPI, Azure OpenAI, PGVector, and ADO APIs, improving task throughput and user satisfaction while reducing context switching.',
+		bio: 'Recent projects include building a PM Agent for Azure DevOps that answers status queries, suggests next actions, executes updates, and preserves traceability using LangChain, AutoGen, FastAPI, Azure OpenAI, PGVector, and ADO APIs.',
 	},
 	{
 		id: uuidv4(),
-		bio: 'Developed a production RAG platform for chatbots and automations using LangChain, PGVector, and FastAPI with an evaluation harness and CI/CD, cutting release cycles by ~40% and accelerating feature rollout.',
+		bio: 'Developed a production RAG platform for chatbots and automations using LangChain, PGVector, and FastAPI with evaluation and CI/CD practices supporting faster iteration and feature rollout.',
 	},
 ];
