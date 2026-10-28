@@ -58,6 +58,8 @@ import cctv2_960 from '../assets/images/cctv2-960.webp';
 import cctv3_960 from '../assets/images/cctv3-960.webp';
 import pmArch from '../assets/images/pm-architecture.svg';
 import markerArch from '../assets/images/marker-architecture.svg';
+import codingAgentEvaluationCover from '../assets/images/coding-agent-evaluation-v2.webp';
+import pmEditorialCover from '../assets/images/pm-ai-agent-editorial.webp';
 import evaluationWorkflowDiagram from '../docs/diagrams/coding-agent-evaluation-workflow.svg';
 import evaluationArtifactsDiagram from '../docs/diagrams/coding-agent-evaluation-artifacts.svg';
 
@@ -157,6 +159,12 @@ export const projectsData = [
 		// the legacy detail layout. Every section is optional and is only
 		// rendered when present; add a section only with verified content.
 		caseStudy: {
+			editorialCover: {
+				img: pmEditorialCover,
+				alt: 'Conceptual illustration of conversational project-management requests, knowledge retrieval, MCP tool integration, and task operations; not the production architecture or a product screenshot.',
+				caption:
+					'Conceptual illustration — conversational requests, retrieval, MCP tools, and project-management operations. The factual system architecture remains documented below.',
+			},
 			overview:
 				'An AI-powered project management agent integrated with Microsoft Teams, knowledge retrieval, and Azure DevOps tools. I designed and implemented the end-to-end system, which was used internally at Kmeleon to organize and manage team tasks while the infrastructure was being prepared for potential distribution as a reusable offering through Microsoft Marketplace.',
 			problem:
@@ -1761,6 +1769,12 @@ export const projectsData = [
 			SocialSharingHeading: 'Share This',
 		},
 		caseStudy: {
+			editorialCover: {
+				img: codingAgentEvaluationCover,
+				alt: 'Conceptual illustration of a coding-agent evaluation workbench with a clean baseline, captured run evidence, deterministic checks, and comparative reporting; not a screenshot, benchmark result, or measured interface.',
+				caption:
+					'Conceptual illustration — reproducible coding-agent evaluation and evidence flow. It does not depict measured benchmark results or a production interface.',
+			},
 			status: 'Internal Engineering / Evaluation Tooling',
 			headerFacts: ['Type', 'Contribution', 'Status'],
 			overview:

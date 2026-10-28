@@ -45,6 +45,23 @@ function ArchitectureFigure({ figure }) {
 	);
 }
 
+function EditorialCover({ cover }) {
+	return (
+		<figure className="mt-10 max-w-5xl">
+			<div className="overflow-hidden rounded-lg border border-white/10 bg-gray-950">
+				<Image
+					src={cover.img}
+					alt={cover.alt}
+					sizes="(max-width: 1023px) 100vw, 1024px"
+					priority
+					className="h-auto w-full"
+				/>
+			</div>
+			{cover.caption && <figcaption className="mt-3 text-sm text-gray-400">{cover.caption}</figcaption>}
+		</figure>
+	);
+}
+
 function WorkflowDiagram({ workflow }) {
 	return (
 		<div className="mt-8 rounded-lg border border-white/10 bg-gray-950/70 p-5 sm:p-6">
@@ -242,6 +259,8 @@ function CaseStudy({ project }) {
 					</dl>
 				)}
 			</header>
+
+			{caseStudy.editorialCover && <EditorialCover cover={caseStudy.editorialCover} />}
 
 			<div className="mt-12 grid gap-10 lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-14">
 				<nav aria-label="On this page" className="lg:sticky lg:top-28 lg:self-start">
