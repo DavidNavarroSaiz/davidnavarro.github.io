@@ -144,8 +144,12 @@ function ProjectsGrid() {
 
 			{filteredProjects.length > 0 ? (
 				<ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
-					{filteredProjects.map((project) => (
-						<ProjectSingle key={project.id} {...project} />
+					{filteredProjects.map((project, index) => (
+						<ProjectSingle
+							key={project.id}
+							{...project}
+							priority={index === 0}
+						/>
 					))}
 				</ul>
 			) : (

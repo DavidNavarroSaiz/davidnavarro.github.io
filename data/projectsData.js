@@ -77,7 +77,7 @@ export const projectsData = [
 			approach:
 				'A conversational agent that uses Microsoft Graph for calendar checks and meeting creation, PGVector for document retrieval, and structured tool calls for project actions, instrumented with Application Insights.',
 			disciplines: ['Agentic workflows', 'LLM tooling', 'Azure platform'],
-			alt: 'PM AI Agent architecture connecting Microsoft Teams, bot channels, data sources, project tools, and calendar APIs.',
+			alt: 'PM AI Agent architecture: Microsoft Teams channels, a language-model agent, knowledge retrieval, an MCP server for Azure DevOps, and calendar APIs.',
 		},
 		ProjectHeader: {
 			title: 'PM AI Agent',
@@ -192,7 +192,7 @@ export const projectsData = [
 				],
 				diagram: {
 					img: pmArch,
-					alt: 'Architecture diagram. PM AI Agent receives requests from Microsoft Teams and Bot Framework channels, passes them to a language model, which connects to data sources, project management tools, and the Microsoft Graph API for calendar operations.',
+					alt: 'Architecture diagram. A language-model agent receives requests from Microsoft Teams and Bot Framework channels, retrieves project knowledge through ingestion and PGVector, acts on Azure DevOps through an MCP server, and manages calendars through the Microsoft Graph API.',
 					caption:
 						'System overview: channels, language model, and the three backend integrations.',
 				},

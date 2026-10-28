@@ -10,6 +10,7 @@ const ProjectSingle = ({
 	img,
 	featured,
 	ProjectInfo,
+	priority = false,
 }) => {
 	const technologies = ProjectInfo?.Technologies?.[0]?.techs ?? [];
 
@@ -21,7 +22,8 @@ const ProjectSingle = ({
 					alt={featured?.alt ?? ''}
 					fill
 					sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 400px"
-					loading="lazy"
+					loading={priority ? 'eager' : 'lazy'}
+					priority={priority}
 					className="object-contain"
 				/>
 			</div>
