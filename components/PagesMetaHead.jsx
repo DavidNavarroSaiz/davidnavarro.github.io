@@ -1,15 +1,22 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-// Canonical production origin, declared by public/CNAME. If the
-// production host ever changes, update this single constant.
-const SITE_URL = 'https://davidnavarro.github.io';
+// Canonical production origin: the default GitHub Pages project URL
+// (verified serving HTTP 200). Do not point this at an unverified
+// custom domain.
+const SITE_URL = 'https://davidnavarrosaiz.github.io/davidnavarro.github.io';
 const SOCIAL_IMAGE = `${SITE_URL}/images/og-cover.png`;
 
 function PagesMetaHead({ title, keywords, description }) {
 	const { basePath, asPath } = useRouter();
-	const cleanPath = (asPath || '/').split(/[?#]/)[0];
-	const canonical = `${SITE_URL}${cleanPath.startsWith(basePath) ? '' : basePath}${cleanPath}`;
+	const rawPath = (asPath || '/').split(/[?#]/)[0];
+	// asPath already carries basePath at runtime; strip it since SITE_URL
+	// ends with the production subpath.
+	const path =
+		basePath && rawPath.startsWith(basePath)
+			? rawPath.slice(basePath.length) || '/'
+			: rawPath;
+	const canonical = `${SITE_URL}${path}`;
 	return (
 		<Head>
 			<meta

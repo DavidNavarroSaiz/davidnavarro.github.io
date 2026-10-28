@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://davidnavarro.github.io/davidnavarro.github.io/sitemap.xml
+Sitemap: https://davidnavarrosaiz.github.io/davidnavarro.github.io/sitemap.xml
