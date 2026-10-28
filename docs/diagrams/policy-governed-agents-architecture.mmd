@@ -1,0 +1,21 @@
+%% Policy-governed AI agents — publication-safe logical architecture
+%% This separates model-assisted interpretation from deterministic operational control.
+flowchart LR
+    U[User interaction] --> L[LLM interpretation]
+    L --> C[Context and entity resolution]
+    C --> S[Explicit workflow state]
+    S --> P[Policy / confirmation boundary]
+    P --> X[Authorized execution]
+    X --> V[Verified result]
+    V --> R[Supported response or escalation]
+
+    classDef controlled fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
+    classDef reasoning fill:#2B211D,stroke:#D67B56,color:#ECE5D7
+    classDef state fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
+    classDef outcome fill:#263A39,stroke:#7FA7B4,color:#ECE5D7
+
+    class U controlled
+    class L reasoning
+    class C,S state
+    class P,X reasoning
+    class V,R outcome

@@ -17,3 +17,12 @@ The Enterprise AI Workspace case study uses publication-safe logical diagrams ra
 - `enterprise-ai-workspace-retrieval.mmd` / `.svg` — approved content, retrieval preparation, vector persistence, and context retrieval.
 
 These diagrams intentionally omit private topology, IAM policies, resource identifiers, schemas, retry behavior, monitoring coverage, and production guarantees.
+
+## Policy-Governed AI Agents diagrams
+
+The Policy-Governed AI Agents case study uses generalized reliability diagrams rather than an employer workflow export:
+
+- `policy-governed-agents-architecture.mmd` / `.svg` — model-assisted interpretation separated from deterministic operational control.
+- `policy-governed-agents-sequence.mmd` / `.svg` — a generic verified-action lifecycle with clarification and escalation paths.
+
+These sources intentionally omit private policies, workflow identifiers, API routes, payloads, tool names, regression datasets, and production metrics.

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Policy-governed AI agent workflow architecture</title>
+  <desc id="desc">A publication-safe logical architecture separating model-assisted interpretation from deterministic operational control. User interaction flows through language-model interpretation, context and entity resolution, explicit workflow state, a policy and confirmation boundary, authorized execution, verified result, and supported response or escalation.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7FA7B4"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="700" fill="#11161B"/>
+  <text x="64" y="56" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="28" font-weight="600">Governed workflow architecture</text>
+  <text x="64" y="86" fill="#B8A58C" font-family="General Sans, Arial, sans-serif" font-size="15">Model-assisted interpretation is separated from deterministic operational control</text>
+
+  <rect x="48" y="130" width="672" height="470" rx="12" fill="none" stroke="#B8A58C" stroke-opacity="0.55" stroke-dasharray="8 8"/>
+  <rect x="752" y="130" width="800" height="470" rx="12" fill="none" stroke="#7FA7B4" stroke-opacity="0.55" stroke-dasharray="8 8"/>
+  <text x="80" y="164" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">MODEL-ASSISTED INTERPRETATION</text>
+  <text x="784" y="164" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">DETERMINISTIC OPERATIONAL CONTROL</text>
+  <text x="80" y="188" fill="#B8A58C" font-family="General Sans, Arial, sans-serif" font-size="13">Reasoning proposes meaning; it does not commit the action.</text>
+  <text x="784" y="188" fill="#B8A58C" font-family="General Sans, Arial, sans-serif" font-size="13">State, policy, execution, and verification define the action boundary.</text>
+
+  <g fill="none" stroke="#7FA7B4" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M250 300 H290"/>
+    <path d="M460 300 H500"/>
+    <path d="M670 300 H800"/>
+    <path d="M970 300 H1010"/>
+    <path d="M1180 300 H1220"/>
+    <path d="M1305 360 V430"/>
+    <path d="M1220 505 H1180"/>
+    <path d="M1010 505 H970"/>
+  </g>
+
+  <g font-family="General Sans, Arial, sans-serif">
+    <g>
+      <rect x="80" y="240" width="170" height="120" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+      <text x="100" y="270" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">01 / INPUT</text>
+      <text x="100" y="311" fill="#ECE5D7" font-size="17" font-weight="600">User</text>
+      <text x="100" y="335" fill="#ECE5D7" font-size="17" font-weight="600">interaction</text>
+    </g>
+    <g>
+      <rect x="290" y="240" width="170" height="120" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="310" y="270" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">02 / REASON</text>
+      <text x="310" y="311" fill="#ECE5D7" font-size="17" font-weight="600">LLM</text>
+      <text x="310" y="335" fill="#ECE5D7" font-size="17" font-weight="600">interpretation</text>
+    </g>
+    <g>
+      <rect x="500" y="240" width="170" height="120" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="520" y="270" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">03 / RESOLVE</text>
+      <text x="520" y="311" fill="#ECE5D7" font-size="17" font-weight="600">Context and</text>
+      <text x="520" y="335" fill="#ECE5D7" font-size="17" font-weight="600">entity resolution</text>
+    </g>
+    <g>
+      <rect x="800" y="240" width="170" height="120" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="820" y="270" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">04 / STATE</text>
+      <text x="820" y="311" fill="#ECE5D7" font-size="17" font-weight="600">Explicit</text>
+      <text x="820" y="335" fill="#ECE5D7" font-size="17" font-weight="600">workflow state</text>
+    </g>
+    <g>
+      <rect x="1010" y="240" width="170" height="120" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="1030" y="270" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">05 / CONTROL</text>
+      <text x="1030" y="311" fill="#ECE5D7" font-size="17" font-weight="600">Policy /</text>
+      <text x="1030" y="335" fill="#ECE5D7" font-size="17" font-weight="600">confirmation</text>
+    </g>
+    <g>
+      <rect x="1220" y="240" width="170" height="120" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="1240" y="270" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">06 / ACTION</text>
+      <text x="1240" y="311" fill="#ECE5D7" font-size="17" font-weight="600">Authorized</text>
+      <text x="1240" y="335" fill="#ECE5D7" font-size="17" font-weight="600">execution</text>
+    </g>
+    <g>
+      <rect x="1010" y="445" width="170" height="120" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="1030" y="475" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">07 / VERIFY</text>
+      <text x="1030" y="516" fill="#ECE5D7" font-size="17" font-weight="600">Verified</text>
+      <text x="1030" y="540" fill="#ECE5D7" font-size="17" font-weight="600">result</text>
+    </g>
+    <g>
+      <rect x="800" y="445" width="170" height="120" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="820" y="475" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">08 / OUTCOME</text>
+      <text x="820" y="516" fill="#ECE5D7" font-size="17" font-weight="600">Supported response</text>
+      <text x="820" y="540" fill="#ECE5D7" font-size="17" font-weight="600">or escalation</text>
+    </g>
+  </g>
+
+  <text x="64" y="650" fill="#B8A58C" font-family="Consolas, monospace" font-size="11">Conceptual architecture only — no employer policy, workflow identifier, API route, or proprietary state machine is represented.</text>
+</svg>

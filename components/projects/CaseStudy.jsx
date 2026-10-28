@@ -93,6 +93,30 @@ function CapabilityStatusMatrix({ items }) {
 	);
 }
 
+function DiagramFallback({ figure }) {
+	return (
+		<div className="mt-6 rounded-lg border border-white/10 bg-gray-950/70 p-4">
+			<p className="font-mono text-[10px] uppercase tracking-[0.14em] text-gray-500">
+				Readable mobile sequence
+			</p>
+			<ol className="mt-4 space-y-3">
+				{figure.mobileFallback.map((item, index) => (
+					<li key={item.title} className="flex gap-3 rounded-md border border-white/10 bg-white/[0.025] p-3">
+						<span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-dev-blue/40 font-mono text-[10px] text-dev-blue">
+							{String(index + 1).padStart(2, '0')}
+						</span>
+						<div>
+							<h4 className="font-general-semibold text-sm text-white">{item.title}</h4>
+							<p className="mt-1 text-sm leading-relaxed text-gray-400">{item.description}</p>
+						</div>
+					</li>
+				))}
+			</ol>
+			{figure.caption && <p className="mt-4 text-sm text-gray-400">{figure.caption}</p>}
+		</div>
+	);
+}
+
 function WorkflowDiagram({ workflow }) {
 	return (
 		<div className="mt-8 rounded-lg border border-white/10 bg-gray-950/70 p-5 sm:p-6">
@@ -330,7 +354,18 @@ function CaseStudy({ project }) {
 									{diagram.title && (
 										<h3 className="mt-10 font-general-semibold text-lg text-white">{diagram.title}</h3>
 									)}
-									<ArchitectureFigure figure={diagram} />
+									{diagram.mobileFallback ? (
+										<>
+											<div className="hidden md:block">
+												<ArchitectureFigure figure={diagram} />
+											</div>
+											<div className="md:hidden">
+												<DiagramFallback figure={diagram} />
+											</div>
+										</>
+									) : (
+										<ArchitectureFigure figure={diagram} />
+									)}
 								</div>
 							))}
 							{architecture.workflow && <WorkflowDiagram workflow={architecture.workflow} />}

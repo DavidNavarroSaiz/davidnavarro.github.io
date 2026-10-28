@@ -61,10 +61,13 @@ import markerArch from '../assets/images/marker-architecture.svg';
 import codingAgentEvaluationCover from '../assets/images/coding-agent-evaluation-v2.webp';
 import pmEditorialCover from '../assets/images/pm-ai-agent-editorial.webp';
 import enterpriseAiWorkspaceCover from '../assets/images/enterprise-ai-workspace-editorial.webp';
+import policyGovernedAgentsCover from '../assets/images/policy-governed-ai-agents-editorial.webp';
 import evaluationWorkflowDiagram from '../docs/diagrams/coding-agent-evaluation-workflow.svg';
 import evaluationArtifactsDiagram from '../docs/diagrams/coding-agent-evaluation-artifacts.svg';
 import enterpriseWorkspaceArchitecture from '../docs/diagrams/enterprise-ai-workspace-architecture.svg';
 import enterpriseWorkspaceRetrieval from '../docs/diagrams/enterprise-ai-workspace-retrieval.svg';
+import policyGovernedAgentsArchitecture from '../docs/diagrams/policy-governed-agents-architecture.svg';
+import policyGovernedAgentsSequence from '../docs/diagrams/policy-governed-agents-sequence.svg';
 
 export const projectsData = [
 	{
@@ -2177,11 +2180,6 @@ export const projectsData = [
 					status: 'Disabled',
 					description: 'The public case treats general code execution as disabled; no unrestricted execution path is claimed.',
 				},
-				{
-					title: 'Broader unrestricted execution',
-					status: 'Planned',
-					description: 'Any future expansion of execution or preview capability would require separate authorization, review, and evidence.',
-				},
 			],
 			evidenceTitle: 'Validation and operations',
 			evidence: [
@@ -2222,6 +2220,321 @@ export const projectsData = [
 				{
 					title: 'No public metrics or guarantees',
 					body: 'This case does not disclose costs, latency, throughput, check counts, production availability, monitoring coverage, or other private operational measurements.',
+				},
+			],
+		},
+	},
+	{
+		id: 17,
+		title: 'Policy-Governed AI Agents',
+		url: 'policy-governed-ai-agents',
+		category: 'Production AI Engineering / Agent Reliability',
+		summary:
+			'An anonymized production engineering case about stateful conversational workflows, authorized actions, verified tool outcomes, and reliability-oriented evaluation.',
+		img: policyGovernedAgentsCover,
+		imageAlt:
+			'Conceptual illustration of policy-governed AI agents moving through stateful orchestration, authorization checks, verified actions, and escalation paths; not a private production state machine.',
+		ProjectHeader: {
+			title: 'Policy-Governed AI Agents',
+			publishDate: '2026',
+			tags: 'Stateful Agents / Policy / Reliability',
+		},
+		ProjectInfo: {
+			ClientHeading: 'Project status',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Role',
+					details: 'Staff AI Engineer / Agent Reliability',
+				},
+				{
+					id: uuidv4(),
+					title: 'Status',
+					details: 'Professional production engineering experience',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Build conversational workflows that can interact with operational systems while respecting business constraints, verifying consequential actions, and handling ambiguity or failure predictably.',
+			Technologies: [
+				{
+					title: 'Engineering practices',
+					techs: [
+						'LangGraph',
+						'LLM orchestration',
+						'Structured tool calls',
+						'State-transition validation',
+						'Scenario regression testing',
+						'Trace inspection',
+					],
+				},
+			],
+			ProjectDetailsHeading: 'Key implementation work',
+			ProjectDetails: [],
+			SocialSharingHeading: 'Share This',
+		},
+		caseStudy: {
+			status: 'Professional production engineering experience, anonymized',
+			headerFacts: ['Role', 'Status'],
+			editorialCover: {
+				img: policyGovernedAgentsCover,
+				alt: 'Conceptual illustration of policy-governed AI agents moving through stateful orchestration, authorization checks, verified actions, and escalation paths; not a private production state machine or product screenshot.',
+				caption:
+					'Conceptual illustration — stateful orchestration, authorization boundaries, verified actions, and escalation. It does not reproduce a private employer workflow or policy.',
+			},
+			overview:
+				'An anonymized production engineering case about building conversational AI workflows that could interact with operational systems while respecting business constraints. My work focused on workflow architecture, state control, action reliability, and evaluation without claiming ownership of the entire employer AI platform.',
+			problem:
+				'A plausible natural-language response is not proof that an operational action was authorized, executed, or completed. The workflow needed explicit state, context resolution, policy and confirmation boundaries, structured tool outcomes, verification before communicating success, and predictable handling for ambiguity or failure.',
+			architecture: {
+				summary:
+					'The diagrams show generalized agent-reliability patterns: model-assisted interpretation feeds explicit workflow state, deterministic control boundaries govern authorized execution, and observed outcomes determine whether the system responds, clarifies, or escalates. No private workflow, policy condition, tool name, or deployment topology is represented.',
+				diagrams: [
+					{
+						title: 'Governed workflow architecture',
+						img: policyGovernedAgentsArchitecture,
+						alt: 'Publication-safe governed workflow architecture separating model-assisted interpretation from deterministic operational control: user interaction, LLM interpretation, context and entity resolution, explicit workflow state, policy and confirmation boundary, authorized execution, verified result, and supported response or escalation.',
+						caption:
+							'Conceptual architecture — the language model proposes interpretation while explicit state and control boundaries govern operational action.',
+						mobileFallback: [
+							{
+								title: 'User interaction',
+								description: 'A request enters the conversational workflow.',
+							},
+							{
+								title: 'LLM interpretation',
+								description: 'The model helps interpret intent without committing an operational action.',
+							},
+							{
+								title: 'Context and entity resolution',
+								description: 'Relevant context and entities are resolved before a workflow state is selected.',
+							},
+							{
+								title: 'Explicit workflow state',
+								description: 'Controlled state transitions define which next steps are available.',
+							},
+							{
+								title: 'Policy and confirmation boundary',
+								description: 'Eligibility and confirmation requirements are evaluated before consequential action.',
+							},
+							{
+								title: 'Authorized execution and verification',
+								description: 'An authorized operation produces a structured outcome that must be verified.',
+							},
+							{
+								title: 'Supported response or escalation',
+								description: 'The workflow communicates only a supported outcome or routes the case for clarification or escalation.',
+							},
+						],
+					},
+					{
+						title: 'Verified action sequence',
+						img: policyGovernedAgentsSequence,
+						alt: 'Publication-safe verified-action sequence from interpreting a request through context resolution, eligibility and policy checks, confirmation where required, authorized execution, structured outcome verification, and communicating a supported result. Ambiguous or failed paths clarify or escalate.',
+						caption:
+							'Generic request lifecycle — ambiguous, ineligible, failed, or unverified paths do not become unsupported success messages.',
+						mobileFallback: [
+							{
+								title: 'Interpret the request',
+								description: 'Use model-assisted interpretation to identify the requested outcome.',
+							},
+							{
+								title: 'Resolve context',
+								description: 'Resolve relevant entities and current workflow state.',
+							},
+							{
+								title: 'Check conditions',
+								description: 'Evaluate eligibility and policy conditions before action.',
+							},
+							{
+								title: 'Confirm when required',
+								description: 'Request confirmation for applicable consequential actions.',
+							},
+							{
+								title: 'Execute authorized operation',
+								description: 'Call the authorized operation through a structured tool boundary.',
+							},
+							{
+								title: 'Verify structured outcome',
+								description: 'Inspect the observed result before communicating completion.',
+							},
+							{
+								title: 'Communicate or escalate',
+								description: 'Report only a supported outcome; clarify or escalate ambiguous or failed paths.',
+							},
+						],
+					},
+				],
+				components: [
+					{
+						name: 'LangGraph workflow orchestration',
+						role: 'Stateful workflow structure with explicit transitions and controlled next steps.',
+					},
+					{
+						name: 'Context and entity resolution',
+						role: 'Resolution of relevant context before the workflow is allowed to proceed.',
+					},
+					{
+						name: 'Policy and confirmation boundary',
+						role: 'Eligibility checks and confirmation requirements before consequential actions.',
+					},
+					{
+						name: 'Authorized operational execution',
+						role: 'Separation between model reasoning and structured tool execution.',
+					},
+					{
+						name: 'Verified outcomes',
+						role: 'Observed tool results determine whether success can be communicated.',
+					},
+					{
+						name: 'Failure handling and escalation',
+						role: 'Ambiguous, ineligible, failed, or unverified paths remain explicit.',
+					},
+				],
+			},
+			implementationTitle: 'Engineering ownership',
+			implementation: [
+				{
+					title: 'Stateful orchestration with LangGraph',
+					body: 'I contributed to LangGraph-based workflow architecture with explicit states and controlled transitions, keeping the workflow understandable and testable rather than relying on unconstrained model-driven action selection.',
+				},
+				{
+					title: 'Context and entity resolution',
+					body: 'I implemented and refined the resolution of relevant context and entities before action paths could proceed, reducing ambiguity at the boundary between conversational interpretation and operational execution.',
+				},
+				{
+					title: 'Authorization and verified actions',
+					body: 'I worked on eligibility and policy checks, confirmation where required, authorized tool execution, structured outcomes, and verification before a success response was communicated.',
+				},
+				{
+					title: 'Reliability improvements',
+					body: 'I improved predictable handling for negative, ambiguous, failed, and incomplete paths, including clarification or escalation instead of silently treating an unverified operation as successful.',
+				},
+				{
+					title: 'Scenario-based evaluation and trace analysis',
+					body: 'I contributed to scenario-based tests, regression coverage, state-transition validation, tool-result verification, trace inspection, and failure analysis without publishing internal datasets, counts, or production metrics.',
+				},
+				{
+					title: 'Bounded engineering ownership',
+					body: 'My ownership covered workflow architecture, implementation, reliability improvements, and evaluation within the relevant workstreams; I do not claim ownership of the entire employer AI platform.',
+				},
+			],
+			decisionsTitle: 'Engineering decisions',
+			decisions: [
+				{
+					title: 'Deterministic transitions over unconstrained action selection',
+					body: 'Explicit workflow states made the allowed progression visible and testable, while the language model remained responsible for interpretation rather than directly deciding that an operational action had completed.',
+				},
+				{
+					title: 'Separate reasoning from operational execution',
+					body: 'Keeping LLM reasoning distinct from structured tool execution created a control boundary for authorization, confirmation, result inspection, and escalation.',
+				},
+				{
+					title: 'Verify before communicating success',
+					body: 'A tool call or model-generated statement was not treated as proof of completion. The workflow required an observed, structured outcome before presenting supported success to the user.',
+				},
+				{
+					title: 'Treat confirmation as conditional control',
+					body: 'Confirmation was modeled as a boundary for applicable consequential actions rather than an indiscriminate interaction step, preserving usability without removing the control.',
+				},
+				{
+					title: 'Use scenarios and traces to find failure modes',
+					body: 'Scenario-based regression and trace inspection exposed negative, ambiguous, and state-transition failures more usefully than relying on aggregate scores or a single happy-path demonstration.',
+				},
+			],
+			capabilitySummary:
+				'These generalized labels describe the engineering control surface, not private employer policies or a guarantee of perfect behavior.',
+			capabilityMatrix: [
+				{
+					title: 'Model-assisted interpretation',
+					status: 'Implemented',
+					description: 'The language model interprets requests but does not directly commit an operational action.',
+				},
+				{
+					title: 'Explicit workflow states and transitions',
+					status: 'Implemented',
+					description: 'LangGraph-based orchestration makes state and allowed progression explicit at the workflow boundary.',
+				},
+				{
+					title: 'Context and entity resolution',
+					status: 'Implemented',
+					description: 'Relevant context is resolved before the workflow proceeds toward an operational action.',
+				},
+				{
+					title: 'Eligibility and policy checks',
+					status: 'Implemented',
+					description: 'Generalized checks gate whether an action path may continue; private decision criteria are excluded.',
+				},
+				{
+					title: 'Confirmation for applicable consequential actions',
+					status: 'Restricted',
+					description: 'Confirmation is required where the workflow considers it necessary; exact conditions are intentionally not disclosed.',
+				},
+				{
+					title: 'Authorized tool execution',
+					status: 'Implemented',
+					description: 'Operational actions are separated behind an authorized structured tool boundary.',
+				},
+				{
+					title: 'Structured outcome verification',
+					status: 'Implemented',
+					description: 'Observed tool outcomes are inspected before the workflow communicates supported completion.',
+				},
+				{
+					title: 'Scenario, regression, and trace validation',
+					status: 'Validated',
+					description: 'Scenario-based checks, state-transition validation, regression coverage, trace inspection, and failure analysis were used without public counts or metrics.',
+				},
+				{
+					title: 'Unverified success communication',
+					status: 'Disabled',
+					description: 'An unverified tool call or plausible model response is not treated as proof that an operational action completed.',
+				},
+				{
+					title: 'Ambiguous or failed path escalation',
+					status: 'Implemented',
+					description: 'Ambiguous, ineligible, failed, or incomplete paths remain explicit and can clarify, decline, or escalate.',
+				},
+			],
+			evidenceTitle: 'Reliability and evaluation',
+			evidence: [
+				{
+					title: 'Scenario-based tests',
+					body: 'I used scenario-based cases to exercise normal, negative, ambiguous, and failure paths without exposing the internal regression dataset or test counts.',
+				},
+				{
+					title: 'State-transition validation',
+					body: 'Workflow state and transition behavior were inspected as first-class reliability concerns, including whether a path could proceed, stop, clarify, or escalate.',
+				},
+				{
+					title: 'Tool-result verification',
+					body: 'The evaluation approach distinguished a requested operation from an observed result so that a tool response or failure could be handled explicitly.',
+				},
+				{
+					title: 'Trace inspection and failure analysis',
+					body: 'Trace review helped identify interpretation, context, transition, execution, and verification failures without claiming a formal benchmark or universal coverage.',
+				},
+			],
+			limitations: [
+				{
+					title: 'Probabilistic interpretation remains',
+					body: 'Stateful orchestration constrains progression but does not make language-model interpretation perfectly correct or deterministic.',
+				},
+				{
+					title: 'Policy definitions are external and changeable',
+					body: 'The workflow can expose control points, but the quality and maintenance of eligibility criteria remain dependent on the surrounding business and operational context.',
+				},
+				{
+					title: 'Context resolution can remain ambiguous',
+					body: 'Incomplete, conflicting, or multilingual inputs may require clarification or escalation; this case does not claim a complete language or entity-coverage matrix.',
+				},
+				{
+					title: 'Verification depends on observable outcomes',
+					body: 'A workflow can verify only what its operational boundary exposes, so verification is not a guarantee that every downstream business effect is known.',
+				},
+				{
+					title: 'No perfect safety or correctness claim',
+					body: 'The approach reduces avoidable unsupported actions and makes failure paths more explicit; it does not claim zero failure risk, perfect policy compliance, or universal correctness.',
 				},
 			],
 		},

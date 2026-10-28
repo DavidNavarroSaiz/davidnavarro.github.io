@@ -1,0 +1,21 @@
+%% Policy-governed AI agents — editable verified-action sequence
+%% This is a generic request lifecycle, not a private business workflow.
+flowchart LR
+    I[Interpret request] --> R[Resolve context]
+    R --> C[Check eligibility and policy conditions]
+    C --> Q[Confirm when required]
+    Q --> E[Execute authorized operation]
+    E --> V[Verify structured outcome]
+    V --> O[Communicate supported outcome]
+    C -. ambiguous or not eligible .-> X[Clarify or escalate]
+    V -. failed or unverified .-> X
+
+    classDef interpret fill:#2B211D,stroke:#D67B56,color:#ECE5D7
+    classDef control fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
+    classDef action fill:#263A39,stroke:#7FA7B4,color:#ECE5D7
+    classDef fallback fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
+
+    class I interpret
+    class R,C,Q control
+    class E,V,O action
+    class X fallback

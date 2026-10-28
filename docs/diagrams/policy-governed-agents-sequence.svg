@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 580" role="img" aria-labelledby="title desc">
+  <title id="title">Policy-governed verified action sequence</title>
+  <desc id="desc">A generic request lifecycle from interpreting a request, resolving context, checking eligibility and policy conditions, confirming where required, executing an authorized operation, verifying a structured outcome, and communicating a supported outcome. Ambiguous, ineligible, failed, or unverified paths clarify or escalate.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7FA7B4"/>
+    </marker>
+    <marker id="fallback-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B8A58C"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="580" fill="#11161B"/>
+  <text x="64" y="58" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="28" font-weight="600">Verified action sequence</text>
+  <text x="64" y="88" fill="#B8A58C" font-family="General Sans, Arial, sans-serif" font-size="15">A generic request lifecycle with explicit checks, confirmation, verification, and escalation paths</text>
+
+  <g fill="none" stroke="#7FA7B4" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M244 235 H284"/>
+    <path d="M464 235 H504"/>
+    <path d="M684 235 H724"/>
+    <path d="M904 235 H944"/>
+    <path d="M1124 235 H1164"/>
+    <path d="M1344 235 H1384"/>
+  </g>
+  <g fill="none" stroke="#B8A58C" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#fallback-arrow)">
+    <path d="M594 315 C594 420 430 430 430 450"/>
+    <path d="M1254 315 C1254 410 880 430 680 450"/>
+  </g>
+
+  <g font-family="General Sans, Arial, sans-serif">
+    <g>
+      <rect x="64" y="165" width="180" height="150" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="84" y="197" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">01 / INTERPRET</text>
+      <text x="84" y="238" fill="#ECE5D7" font-size="18" font-weight="600">Interpret</text>
+      <text x="84" y="265" fill="#ECE5D7" font-size="18" font-weight="600">the request</text>
+      <text x="84" y="294" fill="#B8A58C" font-size="13">Model-assisted</text>
+    </g>
+    <g>
+      <rect x="284" y="165" width="180" height="150" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="304" y="197" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">02 / RESOLVE</text>
+      <text x="304" y="238" fill="#ECE5D7" font-size="18" font-weight="600">Resolve</text>
+      <text x="304" y="265" fill="#ECE5D7" font-size="18" font-weight="600">context</text>
+      <text x="304" y="294" fill="#B8A58C" font-size="13">Entities and state</text>
+    </g>
+    <g>
+      <rect x="504" y="165" width="180" height="150" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="524" y="197" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">03 / CHECK</text>
+      <text x="524" y="238" fill="#ECE5D7" font-size="18" font-weight="600">Check</text>
+      <text x="524" y="265" fill="#ECE5D7" font-size="18" font-weight="600">conditions</text>
+      <text x="524" y="294" fill="#B8A58C" font-size="13">Eligibility and policy</text>
+    </g>
+    <g>
+      <rect x="724" y="165" width="180" height="150" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="744" y="197" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">04 / CONFIRM</text>
+      <text x="744" y="238" fill="#ECE5D7" font-size="18" font-weight="600">Confirm</text>
+      <text x="744" y="265" fill="#ECE5D7" font-size="18" font-weight="600">when required</text>
+      <text x="744" y="294" fill="#B8A58C" font-size="13">Consequential action</text>
+    </g>
+    <g>
+      <rect x="944" y="165" width="180" height="150" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="964" y="197" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">05 / EXECUTE</text>
+      <text x="964" y="238" fill="#ECE5D7" font-size="18" font-weight="600">Execute</text>
+      <text x="964" y="265" fill="#ECE5D7" font-size="18" font-weight="600">authorized operation</text>
+      <text x="964" y="294" fill="#B8A58C" font-size="13">Structured tool call</text>
+    </g>
+    <g>
+      <rect x="1164" y="165" width="180" height="150" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="1184" y="197" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">06 / VERIFY</text>
+      <text x="1184" y="238" fill="#ECE5D7" font-size="18" font-weight="600">Verify</text>
+      <text x="1184" y="265" fill="#ECE5D7" font-size="18" font-weight="600">structured outcome</text>
+      <text x="1184" y="294" fill="#B8A58C" font-size="13">Observed result</text>
+    </g>
+    <g>
+      <rect x="1384" y="165" width="152" height="150" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="1404" y="197" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">07 / REPORT</text>
+      <text x="1404" y="238" fill="#ECE5D7" font-size="18" font-weight="600">Communicate</text>
+      <text x="1404" y="265" fill="#ECE5D7" font-size="18" font-weight="600">supported result</text>
+      <text x="1404" y="294" fill="#B8A58C" font-size="13">No false success</text>
+    </g>
+  </g>
+
+  <rect x="430" y="450" width="500" height="72" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+  <text x="458" y="480" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">AMBIGUOUS / NOT ELIGIBLE / FAILED</text>
+  <text x="458" y="505" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="15">Clarify, decline, or escalate with explicit state.</text>
+  <text x="64" y="550" fill="#B8A58C" font-family="Consolas, monospace" font-size="11">Generic lifecycle only — no private policy condition, tool name, route, payload, or employer workflow is represented.</text>
+</svg>
