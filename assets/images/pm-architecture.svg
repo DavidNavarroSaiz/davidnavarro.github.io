@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="pmArchTitle pmArchDesc" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title id="pmArchTitle">PM AI Agent system overview</title>
+  <desc id="pmArchDesc">Microsoft Teams and Bot Framework channels send user requests to a language-model agent. The agent retrieves project knowledge through an ingestion and PGVector pipeline, acts on Azure DevOps through an MCP server, and manages calendars through the Microsoft Graph API. Provisioned Azure infrastructure and Application Insights support the system.</desc>
+  <rect x="0" y="0" width="800" height="600" rx="12" fill="#0B111A"/>
+  <text x="40" y="48" font-size="22" font-weight="600" fill="#FFFFFF" letter-spacing="-0.5">PM AI Agent — System Overview</text>
+  <text x="40" y="72" font-size="13" fill="#8B9BB0">Conversational project assistance over Teams, knowledge, Azure DevOps, and calendars</text>
+
+  <!-- Entry -->
+  <g>
+    <rect x="40" y="110" width="200" height="120" rx="8" fill="#101826" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="60" y="140" font-size="14" font-weight="600" fill="#FFFFFF">Microsoft Teams</text>
+    <text x="60" y="160" font-size="14" font-weight="600" fill="#FFFFFF">Bot Framework channels</text>
+    <text x="60" y="186" font-size="12" fill="#8B9BB0">User conversations,</text>
+    <text x="60" y="204" font-size="12" fill="#8B9BB0">entry point</text>
+  </g>
+
+  <!-- Agent -->
+  <g>
+    <rect x="300" y="110" width="200" height="120" rx="8" fill="#101826" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="320" y="140" font-size="14" font-weight="600" fill="#FFFFFF">Language-model agent</text>
+    <text x="320" y="164" font-size="12" fill="#8B9BB0">Azure OpenAI · LangChain</text>
+    <text x="320" y="182" font-size="12" fill="#8B9BB0">AutoGen · FastAPI</text>
+    <text x="320" y="206" font-size="12" fill="#67E8F9">Selects which tool to call</text>
+  </g>
+
+  <!-- Backends -->
+  <g>
+    <rect x="560" y="110" width="200" height="120" rx="8" fill="#101826" stroke="#334155" stroke-width="1"/>
+    <text x="580" y="140" font-size="14" font-weight="600" fill="#FFFFFF">Knowledge + ingestion</text>
+    <text x="580" y="164" font-size="12" fill="#8B9BB0">Document workflows</text>
+    <text x="580" y="182" font-size="12" fill="#8B9BB0">PGVector retrieval</text>
+    <text x="580" y="206" font-size="12" fill="#67E8F9">retrieval</text>
+  </g>
+  <g>
+    <rect x="560" y="250" width="200" height="140" rx="8" fill="#101826" stroke="#334155" stroke-width="1"/>
+    <text x="580" y="280" font-size="14" font-weight="600" fill="#FFFFFF">MCP server</text>
+    <text x="580" y="300" font-size="12" fill="#8B9BB0">Azure DevOps tools:</text>
+    <text x="580" y="318" font-size="12" fill="#8B9BB0">read · create · assign</text>
+    <text x="580" y="336" font-size="12" fill="#8B9BB0">delete work items</text>
+    <text x="580" y="360" font-size="12" fill="#67E8F9">work-item operations</text>
+  </g>
+  <g>
+    <rect x="560" y="410" width="200" height="100" rx="8" fill="#101826" stroke="#334155" stroke-width="1"/>
+    <text x="580" y="440" font-size="14" font-weight="600" fill="#FFFFFF">Microsoft Graph API</text>
+    <text x="580" y="464" font-size="12" fill="#8B9BB0">Calendar checks</text>
+    <text x="580" y="482" font-size="12" fill="#8B9BB0">Meeting creation</text>
+  </g>
+
+  <!-- Supporting -->
+  <g>
+    <rect x="40" y="470" width="360" height="90" rx="8" fill="#101826" stroke="#334155" stroke-width="1"/>
+    <text x="60" y="500" font-size="14" font-weight="600" fill="#FFFFFF">Provisioned Azure infrastructure</text>
+    <text x="60" y="524" font-size="12" fill="#8B9BB0">Service provisioning · infrastructure as code</text>
+  </g>
+  <g>
+    <rect x="420" y="470" width="200" height="90" rx="8" fill="#101826" stroke="#334155" stroke-width="1"/>
+    <text x="440" y="500" font-size="14" font-weight="600" fill="#FFFFFF">Application Insights</text>
+    <text x="440" y="524" font-size="12" fill="#8B9BB0">Logging + monitoring</text>
+  </g>
+
+  <!-- Edges -->
+  <g stroke="#67E8F9" stroke-width="1.5" fill="none">
+    <line x1="240" y1="170" x2="296" y2="170"/>
+    <line x1="500" y1="150" x2="556" y2="150"/>
+    <line x1="500" y1="180" x2="540" y2="180" stroke-dasharray="0"/>
+    <path d="M 500 200 C 530 200, 530 300, 556 305"/>
+    <path d="M 450 230 C 450 350, 470 430, 556 445"/>
+  </g>
+  <g fill="#67E8F9">
+    <polygon points="296,164 308,170 296,176"/>
+    <polygon points="556,144 568,150 556,156"/>
+  </g>
+  <text x="242" y="158" font-size="11" fill="#67E8F9">requests</text>
+  <text x="300" y="292" font-size="11" fill="#8B9BB0">tool calls</text>
+  <text x="452" y="360" font-size="11" fill="#8B9BB0">calendar ops</text>
+</svg>

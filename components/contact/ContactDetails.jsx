@@ -58,7 +58,7 @@ function ContactDetails() {
 					</div>
 					
 					<div className="contact-info-box">
-						<p className="contact-info-title">💡 Quick Contact</p>
+						<p className="contact-info-title">Quick Contact</p>
 						<p className="contact-info-text">
 							Feel free to reach out for AI/ML projects, consulting, or collaboration opportunities.
 						</p>

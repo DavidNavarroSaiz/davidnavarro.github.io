@@ -1,6 +1,8 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 function PagesMetaHead({ title, keywords, description }) {
+	const { basePath } = useRouter();
 	return (
 		<Head>
 			<meta
@@ -10,7 +12,7 @@ function PagesMetaHead({ title, keywords, description }) {
 			<meta name="keywords" content={keywords} />
 			<meta name="description" content={description} />
 			<meta charSet="utf-8" />
-			<link rel="icon" href="/images/DN-Logo.svg" />
+			<link rel="icon" href={`${basePath}/images/DN-Logo.svg`} />
 			<title>{title}</title>
 		</Head>
 	);

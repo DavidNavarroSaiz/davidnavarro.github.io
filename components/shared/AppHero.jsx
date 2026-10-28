@@ -6,7 +6,7 @@ import {
 	FiArrowDownCircle,
 	FiMail,
 } from 'react-icons/fi';
-import profileImage from '../../public/images/profile.jpeg';
+import profileImage from '../../assets/images/profile-480.webp';
 import logo from '../../public/images/DN-Logo.svg';
 
 function AppHero({ cvs = [] }) {

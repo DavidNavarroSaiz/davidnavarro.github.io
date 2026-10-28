@@ -10,27 +10,9 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				{/* Preload critical images with proper as attribute */}
-				<link
-					rel="preload"
-					href="/images/profile.jpeg"
-					as="image"
-					type="image/jpeg"
-				/>
-				<link
-					rel="preload"
-					href="/images/DN-Logo.svg"
-					as="image"
-					type="image/svg+xml"
-				/>
-				{/* Preload critical fonts */}
-				<link
-					rel="preload"
-					href="/fonts/GeneralSans-Variable.woff2"
-					as="font"
-					type="font/woff2"
-					crossOrigin="anonymous"
-				/>
+				{/* Fonts and images are served from hashed Next.js static
+					assets (basePath-aware). Do not add absolute-path preloads
+					here: they 404 under the GitHub Pages subpath. */}
 			</Head>
 			<MotionConfig reducedMotion="user">
 				<AnimatePresence>

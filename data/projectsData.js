@@ -7,52 +7,59 @@ import {
 	FiYoutube,
 } from 'react-icons/fi';
 
-// Import all project images
-import pm1 from '../public/images/pm-1.png';
-import pm2 from '../public/images/pm-2.png';
-import pm3 from '../public/images/pm-3.png';
-import rg1 from '../public/images/rg-1.png';
-import rg2 from '../public/images/rg-2.png';
-import rg3 from '../public/images/rg-3.png';
-import cov1 from '../public/images/cov-1.jpeg';
-import cov3 from '../public/images/cov-3.png';
-import cov4 from '../public/images/cov-4.png';
-import abo1 from '../public/images/abo-1.png';
-import abo2 from '../public/images/abo-2.png';
-import abo3 from '../public/images/abo-3.png';
-import lead1 from '../public/images/lead-1.png';
-import lead2 from '../public/images/lead-2.png';
-import lead3 from '../public/images/lead-3.png';
-import make1 from '../public/images/make-1.png';
-import make2 from '../public/images/make-2.png';
-import make10 from '../public/images/make-10.png';
-import make22 from '../public/images/make-22.png';
-import ai1 from '../public/images/ai-1.png';
-import health1 from '../public/images/health_1.png';
-import health2 from '../public/images/health_2.png';
-import health3 from '../public/images/health_3.png';
-import speech1 from '../public/images/speech_1.png';
-import speech2 from '../public/images/speech_2.png';
-import speech3 from '../public/images/speech_3.png';
-import int1 from '../public/images/int_1.png';
-import int2 from '../public/images/int_2.png';
-import int4 from '../public/images/int_4.png';
-// Realtime Voice Agent Server images (using AI-related placeholders)
-import realtime1 from '../public/images/voice-1.png';
-import realtime2 from '../public/images/voice-2.png';
-import realtime3 from '../public/images/voice-3.png';
-
-import mcp1 from '../public/images/mcp-1.png';
-import mcp2 from '../public/images/mcp-2.png';
-import mcp3 from '../public/images/mcp-3.png';
-
-import cctv1 from '../public/images/cctv-3.png';
-import cctv2 from '../public/images/cctv-2.png';
-import cctv3 from '../public/images/cctv-1.png';
-
-import marker1 from '../public/images/marker-1.png';
-import marker2 from '../public/images/marker-2.png';
-import marker3 from '../public/images/marker-3.png';
+// Optimized raster variants (WebP) + hand-authored architecture diagrams.
+// Originals are preserved in public/images for reference.
+import pm1_640 from '../assets/images/pm1-640.webp';
+import rg1_640 from '../assets/images/rg1-640.webp';
+import cov3_640 from '../assets/images/cov3-640.webp';
+import abo1_640 from '../assets/images/abo1-640.webp';
+import lead3_640 from '../assets/images/lead3-640.webp';
+import make2_640 from '../assets/images/make2-640.webp';
+import make1_640 from '../assets/images/make1-640.webp';
+import health1_640 from '../assets/images/health1-640.webp';
+import speech1_640 from '../assets/images/speech1-640.webp';
+import int4_640 from '../assets/images/int4-640.webp';
+import realtime1_640 from '../assets/images/realtime1-640.webp';
+import mcp1_640 from '../assets/images/mcp1-640.webp';
+import cctv1_640 from '../assets/images/cctv1-640.webp';
+import marker1_640 from '../assets/images/marker1-640.webp';
+import rg1_960 from '../assets/images/rg1-960.webp';
+import rg2_960 from '../assets/images/rg2-960.webp';
+import rg3_960 from '../assets/images/rg3-960.webp';
+import cov3_960 from '../assets/images/cov3-960.webp';
+import cov4_960 from '../assets/images/cov4-960.webp';
+import cov1_960 from '../assets/images/cov1-960.webp';
+import abo1_960 from '../assets/images/abo1-960.webp';
+import abo2_960 from '../assets/images/abo2-960.webp';
+import abo3_960 from '../assets/images/abo3-960.webp';
+import lead3_960 from '../assets/images/lead3-960.webp';
+import lead1_960 from '../assets/images/lead1-960.webp';
+import lead2_960 from '../assets/images/lead2-960.webp';
+import make2_960 from '../assets/images/make2-960.webp';
+import make22_960 from '../assets/images/make22-960.webp';
+import ai1_960 from '../assets/images/ai1-960.webp';
+import make10_960 from '../assets/images/make10-960.webp';
+import make1_960 from '../assets/images/make1-960.webp';
+import health1_960 from '../assets/images/health1-960.webp';
+import health2_960 from '../assets/images/health2-960.webp';
+import health3_960 from '../assets/images/health3-960.webp';
+import speech1_960 from '../assets/images/speech1-960.webp';
+import speech2_960 from '../assets/images/speech2-960.webp';
+import speech3_960 from '../assets/images/speech3-960.webp';
+import int4_960 from '../assets/images/int4-960.webp';
+import int2_960 from '../assets/images/int2-960.webp';
+import int1_960 from '../assets/images/int1-960.webp';
+import realtime1_960 from '../assets/images/realtime1-960.webp';
+import realtime2_960 from '../assets/images/realtime2-960.webp';
+import realtime3_960 from '../assets/images/realtime3-960.webp';
+import mcp1_960 from '../assets/images/mcp1-960.webp';
+import mcp2_960 from '../assets/images/mcp2-960.webp';
+import mcp3_960 from '../assets/images/mcp3-960.webp';
+import cctv1_960 from '../assets/images/cctv1-960.webp';
+import cctv2_960 from '../assets/images/cctv2-960.webp';
+import cctv3_960 from '../assets/images/cctv3-960.webp';
+import pmArch from '../assets/images/pm-architecture.svg';
+import markerArch from '../assets/images/marker-architecture.svg';
 
 export const projectsData = [
 	{
@@ -62,7 +69,7 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'A Microsoft Teams agent that coordinates project work through Microsoft Graph, document retrieval, and structured tool calls.',
-		img: pm1,
+		img: pm1_640,
 		featured: {
 			rank: 1,
 			problem:
@@ -77,23 +84,6 @@ export const projectsData = [
 			publishDate: 'Feb 2025',
 			tags: 'AI / Project Management / Teams Integration',
 		},
-		ProjectImages: [
-			{
-				id: uuidv4(),
-				title: 'PM AI Agent',
-				img: pm2,
-			},
-			{
-				id: uuidv4(),
-				title: 'PM AI Agent',
-				img: pm1,
-			},
-			{
-				id: uuidv4(),
-				title: 'PM AI Agent',
-				img: pm3,
-			},
-		],
 		ProjectInfo: {
 			ClientHeading: 'About Project',
 			CompanyInfo: [
@@ -201,7 +191,7 @@ export const projectsData = [
 					},
 				],
 				diagram: {
-					img: pm1,
+					img: pmArch,
 					alt: 'Architecture diagram. PM AI Agent receives requests from Microsoft Teams and Bot Framework channels, passes them to a language model, which connects to data sources, project management tools, and the Microsoft Graph API for calendar operations.',
 					caption:
 						'System overview: channels, language model, and the three backend integrations.',
@@ -268,7 +258,7 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'Retrieval and LLM ranking over candidate profiles, returning shortlists with explanations for recruiters.',
-		img: rg1,
+		img: rg1_640,
 		featured: {
 			rank: 3,
 			problem:
@@ -287,17 +277,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Candidate Recommendation System',
-				img: rg1,
+				img: rg1_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Candidate Recommendation System',
-				img: rg2,
+				img: rg2_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Candidate Recommendation System',
-				img: rg3,
+				img: rg3_960,
 			},
 		],
 		ProjectInfo: {
@@ -377,7 +367,7 @@ export const projectsData = [
 		category: 'Computer Vision',
 		summary:
 			'Chest X-ray diagnosis across ten CNN architectures, with heatmaps that show clinicians where the model is looking.',
-		img: cov3,
+		img: cov3_640,
 		ProjectHeader: {
 			title: 'COVID-Rx Diagnosis System',
 			publishDate: 'Dec 2020',
@@ -387,17 +377,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'COVID-Rx Diagnosis System',
-				img: cov3,
+				img: cov3_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'COVID-Rx Diagnosis System',
-				img: cov4,
+				img: cov4_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'COVID-Rx Diagnosis System',
-				img: cov1,
+				img: cov1_960,
 			},
 		],
 		ProjectInfo: {
@@ -482,7 +472,7 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'Legal research platform that finds relevant Colombian case law, recommends precedents, and helps draft documents.',
-		img: abo1,
+		img: abo1_640,
 		ProjectHeader: {
 			title: 'AbogacIA - AI Legal Platform',
 			publishDate: '2024',
@@ -492,17 +482,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'AbogacIA - AI Legal Platform',
-				img: abo1,
+				img: abo1_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'AbogacIA - AI Legal Platform',
-				img: abo2,
+				img: abo2_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'AbogacIA - AI Legal Platform',
-				img: abo3,
+				img: abo3_960,
 			},
 		],
 		ProjectInfo: {
@@ -589,7 +579,7 @@ export const projectsData = [
 		category: 'AI Automation',
 		summary:
 			'Lead capture and outreach across email and SMS, with HubSpot sync and GPT-written replies.',
-		img: lead3,
+		img: lead3_640,
 		ProjectHeader: {
 			title: 'Automatic Lead Management',
 			publishDate: '2024',
@@ -599,17 +589,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Automatic Lead Management',
-				img: lead3,
+				img: lead3_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Automatic Lead Management',
-				img: lead1,
+				img: lead1_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Automatic Lead Management',
-				img: lead2,
+				img: lead2_960,
 			},
 		],
 		ProjectInfo: {
@@ -689,7 +679,7 @@ export const projectsData = [
 			category: 'AI Automation',
 			summary:
 				'Automated reporting pipeline that collects a month of property data and drafts client-ready documents in Google Docs.',
-			img: make2,
+		img: make2_640,
 			ProjectHeader: {
 				title: 'AI-Generated Monthly Reports',
 				publishDate: '2024',
@@ -699,17 +689,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'AI-Generated Monthly Reports',
-				img: make2,
+				img: make2_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'AI-Generated Monthly Reports',
-				img: make22,
+				img: make22_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'AI-Generated Monthly Reports',
-				img: ai1,
+				img: ai1_960,
 			},
 		],
 		ProjectInfo: {
@@ -791,7 +781,7 @@ export const projectsData = [
 			category: 'AI Automation',
 			summary:
 				'Self-hosted n8n workflows that identify ideal customer profiles, enrich company data, and run personalized cold-email campaigns.',
-			img: make1,
+		img: make1_640,
 			ProjectHeader: {
 				title: 'n8n Lead Generation System',
 				publishDate: '2024',
@@ -801,17 +791,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'n8n Lead Generation System',
-				img: make1,
+				img: make1_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'n8n Lead Generation System',
-				img: make10,
+				img: make10_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'n8n Lead Generation System',
-				img: ai1,
+				img: ai1_960,
 			},
 		],
 		ProjectInfo: {
@@ -893,7 +883,7 @@ export const projectsData = [
 			category: 'LLMs and RAG',
 			summary:
 				'Permissions-aware resource hub with RAG search, built for community health workers and their teams.',
-			img: health1,
+		img: health1_640,
 			ProjectHeader: {
 				title: 'Healthcare Resource Recommender System',
 				publishDate: 'June 2023',
@@ -903,17 +893,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Healthcare Resource Recommender System',
-				img: health2,
+				img: health2_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Healthcare Resource Recommender System',
-				img: health3,
+				img: health3_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Healthcare Resource Recommender System',
-				img: health1,
+				img: health1_960,
 			},
 		],
 		ProjectInfo: {
@@ -995,7 +985,7 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'Speech-to-forms assistant that transcribes home visits and drafts structured reports and care plans.',
-		img: speech1,
+		img: speech1_640,
 		ProjectHeader: {
 			title: 'Community Health Workers Platform',
 			publishDate: 'June 2023',
@@ -1005,17 +995,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Community Health Workers Platform',
-				img: speech2,
+				img: speech2_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Community Health Workers Platform',
-				img: speech1,
+				img: speech1_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Community Health Workers Platform',
-				img: speech3,
+				img: speech3_960,
 			},
 		],
 		ProjectInfo: {
@@ -1097,7 +1087,7 @@ export const projectsData = [
 		category: 'Computer Vision',
 		summary:
 			'Production vision systems for defect detection, fill checks, anomaly detection, and PPE compliance on the factory floor.',
-		img: int4,
+		img: int4_640,
 		featured: {
 			rank: 4,
 			problem:
@@ -1120,17 +1110,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Industrial Computer Vision Systems',
-				img: int2,
+				img: int2_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Industrial Computer Vision Systems',
-				img: int4,
+				img: int4_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Industrial Computer Vision Systems',
-				img: int1,
+				img: int1_960,
 			},
 		],
 		ProjectInfo: {
@@ -1210,7 +1200,7 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'Low-latency voice agent over WebSockets and Twilio, with real-time prompt control and multi-agent tool calling.',
-		img: realtime1,
+		img: realtime1_640,
 		ProjectHeader: {
 			title: 'RealTime Voice Agent',
 			publishDate: 'Mar 2025',
@@ -1220,17 +1210,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Realtime Audio Streaming',
-				img: realtime1,
+				img: realtime1_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Real time Server Architecture',
-				img: realtime2,
+				img: realtime2_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'WebSocket Voice Pipeline',
-				img: realtime3,
+				img: realtime3_960,
 			},
 		],
 		ProjectInfo: {
@@ -1325,7 +1315,7 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'Model Context Protocol server that lets AI assistants query and manage Azure DevOps work items in natural language.',
-		img: mcp1,
+		img: mcp1_640,
 		ProjectHeader: {
 			title: 'MCP Azure DevOps Server',
 			publishDate: 'Mar 2025',
@@ -1335,17 +1325,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'MCP Azure DevOps Server',
-				img: mcp1,
+				img: mcp1_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Architecture Flow Diagram',
-				img: mcp2,
+				img: mcp2_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'MCP Client Interaction',
-				img: mcp3,
+				img: mcp3_960,
 			},
 		],
 		ProjectInfo: {
@@ -1434,7 +1424,7 @@ export const projectsData = [
 		category: 'Computer Vision / Edge AI',
 		summary:
 			'On-prem GPU pipeline that checks PPE and safety rules across live CCTV streams and alerts supervisors.',
-		img: cctv1,
+		img: cctv1_640,
 		ProjectHeader: {
 			title: 'CCTV Safety Detection',
 			publishDate: 'Nov 2024',
@@ -1444,17 +1434,17 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Safety Dashboard',
-				img: cctv1,
+				img: cctv1_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'YOLO Inference Pipeline',
-				img: cctv2,
+				img: cctv2_960,
 			},
 			{
 				id: uuidv4(),
 				title: 'Alarm Rules & Alerts',
-				img: cctv3,
+				img: cctv3_960,
 			},
 		],
 		ProjectInfo: {
@@ -1543,10 +1533,9 @@ export const projectsData = [
 		category: 'RAG Infrastructure / Distributed Systems',
 		summary:
 			'Distributed ingestion service that parses PDFs, generates embeddings, and tracks progress for large RAG corpora.',
-		img: marker1,
+		img: marker1_640,
 		featured: {
 			rank: 2,
-			image: marker3,
 			problem:
 				'RAG systems are only as good as the documents feeding them. Large PDF collections are slow to parse, chunk, embed, and keep observable.',
 			approach:
@@ -1556,30 +1545,13 @@ export const projectsData = [
 				'Distributed processing',
 				'Data pipelines',
 			],
-			alt: 'Parallel document ingestion diagram showing PDF, text, mixed, and unstructured inputs flowing into a document store.',
+			alt: 'Parallel ingestion flow: FastAPI routes uploads into queued Celery workers that parse, embed, and store vectors in pgVector.',
 		},
 		ProjectHeader: {
 			title: 'Parallel Document Ingestion Pipeline',
 			publishDate: 'Oct 2024',
 			tags: 'Marker API / Celery / RabbitMQ / RAG',
 		},
-		ProjectImages: [
-			{
-				id: uuidv4(),
-				title: 'Parallel Ingestion Dashboard',
-				img: marker1,
-			},
-			{
-				id: uuidv4(),
-				title: 'Celery Task Queue Architecture',
-				img: marker2,
-			},
-			{
-				id: uuidv4(),
-				title: 'Vector Database Workflow',
-				img: marker3,
-			},
-		],
 		ProjectInfo: {
 			ClientHeading: 'About Project',
 			CompanyInfo: [
@@ -1699,7 +1671,7 @@ export const projectsData = [
 					},
 				],
 				diagram: {
-					img: marker1,
+					img: markerArch,
 					alt: 'Pipeline diagram: FastAPI routes uploads into RabbitMQ queues consumed by Celery workers; parsed output flows as structured JSON into pgVector with OpenAI embeddings, while dashboards track tasks and metrics across a Docker Compose deployment.',
 					caption:
 						'Ingestion flow: intake, queued workers, vector storage, and progress dashboards.',
