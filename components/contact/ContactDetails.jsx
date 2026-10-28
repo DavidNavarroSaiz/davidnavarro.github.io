@@ -1,10 +1,17 @@
-import { FiMail } from 'react-icons/fi';
+import { FiMapPin, FiMail } from 'react-icons/fi';
 
 const contacts = [
+	{
+		id: 1,
+		name: 'Medellín, Antioquia, Colombia',
+		icon: <FiMapPin />,
+		href: null,
+	},
 	{
 		id: 2,
 		name: 'dcnavarros97@gmail.com',
 		icon: <FiMail />,
+		href: 'mailto:dcnavarros97@gmail.com',
 	},
 ];
 
@@ -24,12 +31,18 @@ function ContactDetails() {
 										{contact.icon}
 									</i>
 								</div>
-								<a
-									href="mailto:dcnavarros97@gmail.com"
-									className="contact-link"
-								>
-									{contact.name}
-								</a>
+								{contact.href ? (
+									<a
+										href={contact.href}
+										className="contact-link"
+									>
+										{contact.name}
+									</a>
+								) : (
+									<span className="contact-text">
+										{contact.name}
+									</span>
+								)}
 							</div>
 						))}
 					</div>
