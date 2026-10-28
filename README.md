@@ -33,19 +33,19 @@ A modern, responsive portfolio website built with Next.js, React, and Tailwind C
 davidnavarro.github.io/
 ├── components/                 # Reusable React components
 │   ├── about/                 # About page components
-│   │   ├── AboutClients.jsx
-│   │   ├── AboutClientSingle.jsx
-│   │   ├── AboutCounter.jsx
+│   │   ├── AboutAchievements.jsx
 │   │   ├── AboutEducation.jsx
+│   │   ├── AboutExperience.jsx
 │   │   ├── AboutMeBio.jsx
 │   │   ├── AboutSkills.jsx
-│   │   └── CounterItem.jsx
+│   │   └── ExperienceItem.jsx
 │   ├── contact/               # Contact page components
 │   │   ├── ContactDetails.jsx
 │   │   └── ContactForm.jsx
 │   ├── layout/                # Layout components
 │   │   └── DefaultLayout.jsx
 │   ├── projects/              # Project-related components
+│   │   ├── CaseStudy.jsx
 │   │   ├── ProjectsFilter.jsx
 │   │   ├── ProjectsGrid.jsx
 │   │   ├── ProjectSingle.jsx
@@ -54,7 +54,6 @@ davidnavarro.github.io/
 │   │   ├── Button.jsx
 │   │   └── FormInput.jsx
 │   ├── shared/                # Shared components
-│   │   ├── AppBanner.jsx
 │   │   ├── AppBio.jsx
 │   │   ├── AppFooter.jsx
 │   │   ├── AppFooterCopyright.jsx
@@ -64,8 +63,7 @@ davidnavarro.github.io/
 │   └── PagesMetaHead.jsx
 ├── data/                      # Static data files
 │   ├── aboutMeData.js         # Personal information
-│   ├── clientsData.js         # Client testimonials
-│   └── projectsData.js        # Project portfolio data
+│   ├── projectsData.js        # Project portfolio data
 ├── hooks/                     # Custom React hooks
 │   ├── useScrollToTop.jsx     # Scroll to top functionality
 │   └── useThemeSwitcher.jsx   # Dark/light theme toggle
@@ -115,8 +113,11 @@ davidnavarro.github.io/
 - **`AboutMeBio.jsx`**: Detailed personal information
 - **`AboutSkills.jsx`**: Technical skills showcase
 - **`AboutEducation.jsx`**: Educational background
-- **`AboutCounter.jsx`**: Statistics and achievements
-- **`AboutClients.jsx`**: Client testimonials
+- **`AboutAchievements.jsx`**: Speaking, research, and project achievements
+
+#### Experience Page (`experience.jsx`)
+- **`AboutExperience.jsx`**: Employment timeline with filters
+- **`ExperienceItem.jsx`**: Individual experience entries
 
 #### Projects Page (`projects/index.jsx`)
 - **`ProjectsFilter.jsx`**: Category and search filtering
@@ -251,8 +252,7 @@ Update the following files with your information:
 
 - `data/aboutMeData.js` - Personal bio and information
 - `data/projectsData.js` - Your projects and portfolio
-- `data/clientsData.js` - Client testimonials
-- `public/files/CV_DavidNavarro_2025.pdf` - Your CV
+- `public/files/CV_DavidNavarro_Senior_AI_Engineer.pdf` - Your CV
 
 ### Styling
 

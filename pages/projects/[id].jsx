@@ -32,9 +32,9 @@ function ProjectSingle(props) {
 
 			{/* Header */}
 			<div className="bg-gray-900 border border-gray-700 rounded-xl p-8 mb-8">
-				<p className="font-general-semibold text-left text-3xl sm:text-4xl font-bold text-white mt-14 sm:mt-20 mb-7">
+				<h1 className="font-general-semibold text-left text-3xl sm:text-4xl font-bold text-white mt-14 sm:mt-20 mb-7">
 					{props.project.ProjectHeader.title}
-				</p>
+				</h1>
 				<div className="flex flex-wrap gap-6">
 					<div className="flex items-center">
 						<FiClock className="text-xl text-dev-blue" />

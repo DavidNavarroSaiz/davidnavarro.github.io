@@ -52,10 +52,3 @@ export const achievementsData = [
 		impact: 'Automated Trading System with Risk Management'
 	}
 ];
-
-export const achievementsStats = {
-	totalAchievements: achievementsData.length,
-	categories: [...new Set(achievementsData.map(ach => ach.category))].length,
-	years: [...new Set(achievementsData.map(ach => ach.year))].length,
-	technologies: [...new Set(achievementsData.flatMap(ach => ach.technologies))].length
-};
