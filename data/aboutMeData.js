@@ -1,9 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
+import { experienceYears } from './experienceData';
 
 export const aboutMeData = [
 	{
 		id: uuidv4(),
-		bio: 'Senior AI Engineer with 7+ years of experience designing, deploying, and productionizing ML and LLM systems, backed by strong software engineering skills. Skilled in end-to-end system design, data ingestion and retrieval pipelines, offline/online evaluation, deployment, observability, LLMOps, CI/CD, and multi-agent orchestration across education, healthcare, CRM/marketing, industrial automation, and B2B SaaS.',
+		bio: `Senior AI Engineer with ${experienceYears}+ years of experience designing, deploying, and productionizing ML and LLM systems, backed by strong software engineering skills. Skilled in end-to-end system design, data ingestion and retrieval pipelines, offline/online evaluation, deployment, observability, LLMOps, CI/CD, and multi-agent orchestration across education, healthcare, CRM/marketing, industrial automation, and B2B SaaS.`,
 	},
 	{
 		id: uuidv4(),

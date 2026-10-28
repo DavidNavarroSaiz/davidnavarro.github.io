@@ -69,7 +69,7 @@ export const experienceData = [
 			'User Engagement': 'Improved with memory and tool usage'
 		},
 		companyLogo: '/images/companies/kmeleon.png',
-		companyUrl: 'https://kmeleon.com'
+		companyUrl: 'https://www.kmeleon.tech'
 	},
 	{
 		id: uuidv4(),
@@ -95,7 +95,7 @@ export const experienceData = [
 			'Manual Operations': 'Significantly reduced'
 		},
 		companyLogo: '/images/companies/southdesk.png',
-		companyUrl: 'https://southdesk.com'
+		companyUrl: 'https://southdesk.net'
 	},
 	{
 		id: uuidv4(),
@@ -122,7 +122,7 @@ export const experienceData = [
 			'Documents Processed': '~100/month'
 		},
 		companyLogo: '/images/companies/elsol.png',
-		companyUrl: 'https://elsol.org'
+		companyUrl: 'https://elsolnec.org'
 	},
 	{
 		id: uuidv4(),
@@ -186,12 +186,48 @@ export const experienceData = [
 			'Safety Impact': 'Improved plant safety'
 		},
 		companyLogo: '/images/companies/intecol.png',
-		companyUrl: 'https://intecol.com'
 	}
 ];
 
+const MONTHS = {
+	january: 0, jan: 0, february: 1, feb: 1, march: 2, mar: 2, april: 3, apr: 3,
+	may: 4, june: 5, jun: 5, july: 6, jul: 6, august: 7, aug: 7,
+	september: 8, sep: 8, sept: 8, october: 9, oct: 9, november: 10, nov: 10,
+	december: 11, dec: 11,
+};
+
+function parseStartDate(period) {
+	const match = period.split(/[–-]/)[0].trim().match(/([A-Za-z]+)\s+(\d{4})/);
+	if (!match) return null;
+	return new Date(+match[2], MONTHS[match[1].toLowerCase()] ?? 0, 1);
+}
+
+// Full years elapsed since the earliest recorded role start.
+// Recomputed on every build, so no manual updates are needed.
+function fullYearsSinceEarliest() {
+	const starts = experienceData.map((exp) => parseStartDate(exp.period)).filter(Boolean);
+	if (starts.length === 0) return 0;
+	const earliest = new Date(Math.min(...starts));
+	const now = new Date();
+	let years = now.getFullYear() - earliest.getFullYear();
+	const anniversary = new Date(earliest);
+	anniversary.setFullYear(now.getFullYear());
+	if (now < anniversary) years -= 1;
+	return Math.max(years, 0);
+}
+
+export const experienceYears = fullYearsSinceEarliest();
+
+export const industryDomains = [
+	'Healthcare',
+	'Education',
+	'CRM / marketing',
+	'Industrial automation',
+	'B2B SaaS',
+];
+
 export const experienceStats = {
-	totalYears: '7+',
+	totalYears: `${experienceYears}+`,
 	companies: experienceData.length,
 	technologies: [...new Set(experienceData.flatMap(exp => exp.technologies))].length,
 	projects: experienceData.reduce((acc, exp) => acc + exp.achievements.length, 0),

@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 import { aboutMeData } from '../../data/aboutMeData';
-import { experienceStats } from '../../data/experienceData';
+import {
+	experienceStats,
+	industryDomains,
+} from '../../data/experienceData';
 import { projectsData } from '../../data/projectsData';
 
 const focusAreas = [
@@ -36,13 +39,19 @@ function AboutMeBio() {
 
 			<dl className="mt-10 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-4">
 				{[
-					{ label: 'Years experience', value: '7+' },
+					{
+						label: 'Years experience',
+						value: String(experienceStats.totalYears),
+					},
 					{
 						label: 'Technologies',
 						value: String(experienceStats.technologies),
 					},
 					{ label: 'Projects', value: String(projectsData.length) },
-					{ label: 'Industries', value: '5' },
+					{
+						label: 'Industries',
+						value: String(industryDomains.length),
+					},
 				].map((stat) => (
 					<div key={stat.label} className="bg-gray-950 px-5 py-6">
 						<dt className="font-mono text-[11px] uppercase tracking-[0.14em] text-gray-400">

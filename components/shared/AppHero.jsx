@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fi';
 import profileImage from '../../assets/images/profile-480.webp';
 import logo from '../../public/images/DN-Logo.svg';
+import { experienceYears } from '../../data/experienceData';
 
 function AppHero({ cvs = [] }) {
 	const router = useRouter();
@@ -24,7 +25,7 @@ function AppHero({ cvs = [] }) {
 
 						<p className="hero-subtitle">
 							I&apos;m David Navarro, a senior AI engineer with
-							7+ years building LLM agents, retrieval
+							{experienceYears}+ years building LLM agents, retrieval
 							infrastructure, and applied ML systems. I focus on
 							the evaluation, observability, and operational
 							detail that make them dependable in production.

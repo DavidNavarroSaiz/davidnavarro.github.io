@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { experienceYears } from '../data/experienceData';
 
 // Canonical production origin: the default GitHub Pages project URL
 // (verified serving HTTP 200). Do not point this at an unverified
@@ -46,7 +47,7 @@ function PagesMetaHead({ title, keywords, description }) {
 PagesMetaHead.defaultProps = {
 	title: 'David Navarro - Senior AI Engineer',
 	keywords: 'senior AI engineer, AI agents, LLM evaluation, AI platforms, applied machine learning, MLOps, python',
-	description: 'Senior AI Engineer specializing in production AI agents, LLM evaluation, AI platforms, and applied ML. 7+ years of experience designing and deploying ML and LLM systems.',
+	description: `Senior AI Engineer specializing in production AI agents, LLM evaluation, AI platforms, and applied ML. ${experienceYears}+ years of experience designing and deploying ML and LLM systems.`,
 };
 
 export default PagesMetaHead;

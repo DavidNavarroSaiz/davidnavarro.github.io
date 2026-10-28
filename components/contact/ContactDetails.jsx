@@ -1,20 +1,10 @@
-import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
+import { FiMail } from 'react-icons/fi';
 
 const contacts = [
-	{
-		id: 1,
-		name: 'Medellin, Antioquia',
-		icon: <FiMapPin />,
-	},
 	{
 		id: 2,
 		name: 'dcnavarros97@gmail.com',
 		icon: <FiMail />,
-	},
-	{
-		id: 3,
-		name: '+57 3007751361',
-		icon: <FiPhone />,
 	},
 ];
 
@@ -34,25 +24,12 @@ function ContactDetails() {
 										{contact.icon}
 									</i>
 								</div>
-								{contact.id === 2 ? (
-									<a 
-										href="mailto:dcnavarros97@gmail.com"
-										className="contact-link"
-									>
-										{contact.name}
-									</a>
-								) : contact.id === 3 ? (
-									<a 
-										href="tel:+573007751361"
-										className="contact-link"
-									>
-										{contact.name}
-									</a>
-								) : (
-									<span className="contact-text">
-										{contact.name}
-									</span>
-								)}
+								<a
+									href="mailto:dcnavarros97@gmail.com"
+									className="contact-link"
+								>
+									{contact.name}
+								</a>
 							</div>
 						))}
 					</div>

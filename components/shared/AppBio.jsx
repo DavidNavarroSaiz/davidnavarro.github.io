@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
+import { experienceYears } from '../../data/experienceData';
 
 function AppBio() {
 	return (
@@ -19,7 +20,7 @@ function AppBio() {
 					<div className="lg:col-span-8">
 						<div className="max-w-3xl space-y-5 text-base leading-relaxed text-gray-300 sm:text-lg">
 							<p>
-								I have spent 7+ years building ML and AI systems
+								I have spent {experienceYears}+ years building ML and AI systems
 								across healthcare, education, industrial
 								automation, and enterprise software. That work
 								has ranged from real-time computer vision on
