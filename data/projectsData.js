@@ -60,8 +60,11 @@ import pmArch from '../assets/images/pm-architecture.svg';
 import markerArch from '../assets/images/marker-architecture.svg';
 import codingAgentEvaluationCover from '../assets/images/coding-agent-evaluation-v2.webp';
 import pmEditorialCover from '../assets/images/pm-ai-agent-editorial.webp';
+import enterpriseAiWorkspaceCover from '../assets/images/enterprise-ai-workspace-editorial.webp';
 import evaluationWorkflowDiagram from '../docs/diagrams/coding-agent-evaluation-workflow.svg';
 import evaluationArtifactsDiagram from '../docs/diagrams/coding-agent-evaluation-artifacts.svg';
+import enterpriseWorkspaceArchitecture from '../docs/diagrams/enterprise-ai-workspace-architecture.svg';
+import enterpriseWorkspaceRetrieval from '../docs/diagrams/enterprise-ai-workspace-retrieval.svg';
 
 export const projectsData = [
 	{
@@ -1957,6 +1960,268 @@ export const projectsData = [
 				{
 					title: 'Public-disclosure boundary',
 					body: 'Specific internal check counts, leaderboard details, scores, rankings, private evaluation results, and internal experiment artifacts are excluded pending explicit disclosure approval.',
+				},
+			],
+		},
+	},
+	{
+		id: 16,
+		title: 'Enterprise AI Workspace',
+		url: 'enterprise-ai-workspace',
+		category: 'LLMs and RAG',
+		summary:
+			'Enterprise conversational AI workspace based on LibreChat, extended with configured agents, retrieval infrastructure, and AWS application services under explicit capability boundaries.',
+		img: enterpriseAiWorkspaceCover,
+		imageAlt:
+			'Conceptual illustration of an enterprise AI workspace connecting users, agents, retrieval, cloud infrastructure, integrations, and controlled capabilities; not a deployed infrastructure diagram.',
+		ProjectHeader: {
+			title: 'Enterprise AI Workspace',
+			publishDate: '2026',
+			tags: 'AI Workspace / RAG / AWS Infrastructure',
+		},
+		ProjectInfo: {
+			ClientHeading: 'Project status',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Role',
+					details: 'AI Platform Engineer',
+				},
+				{
+					id: uuidv4(),
+					title: 'Status',
+					details: 'Professional enterprise engineering project',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Extend an enterprise conversational AI workspace with agent capabilities, retrieval-oriented persistence, and cloud application infrastructure while maintaining explicit authorization and execution boundaries.',
+			Technologies: [
+				{
+					title: 'Technologies',
+					techs: [
+						'LibreChat',
+						'AWS ECS',
+						'AWS Fargate',
+						'Application Load Balancer',
+						'Amazon RDS for PostgreSQL',
+						'pgvector',
+						'Amazon S3',
+						'HMAC authorization',
+					],
+				},
+			],
+			ProjectDetailsHeading: 'Key implementation work',
+			ProjectDetails: [],
+			SocialSharingHeading: 'Share This',
+		},
+		caseStudy: {
+			status: 'Professional enterprise engineering project',
+			headerFacts: ['Role', 'Status'],
+			editorialCover: {
+				img: enterpriseAiWorkspaceCover,
+				alt: 'Conceptual illustration of an enterprise AI workspace with users, agents, retrieval, cloud infrastructure, integrations, and controlled capabilities; not a deployed infrastructure diagram or product screenshot.',
+				caption:
+					'Conceptual illustration — an enterprise AI workspace, retrieval layer, cloud application surface, integrations, and capability boundaries. The diagrams below are the publication-safe technical view.',
+			},
+			overview:
+				'Professional enterprise engineering work extending a LibreChat-based conversational AI workspace with configured agents, retrieval and persistence infrastructure, and AWS application services. The public account focuses on implementation responsibility and capability boundaries without identifying the employer or exposing private topology.',
+			problem:
+				'An enterprise conversational workspace has to remain extensible without turning every connected capability into an implicit execution surface. Application customization, retrieval persistence, cloud hosting, and authorization boundaries need to remain legible and operable as one system while private configuration and deployment identifiers stay protected.',
+			architecture: {
+				summary:
+					'The diagrams show a logical view of confirmed application, retrieval, persistence, integration, and access boundaries. They do not claim a complete AWS network topology, IAM policy, scaling configuration, monitoring coverage, or production guarantee.',
+				diagrams: [
+					{
+						title: 'High-level workspace architecture',
+						img: enterpriseWorkspaceArchitecture,
+						alt: 'Publication-safe logical architecture connecting authenticated users, an application load balancer, ECS and Fargate application hosting, a LibreChat-based workspace, configured agents and integrations, controlled capabilities, RDS PostgreSQL with pgvector, Amazon S3 integration, and an HMAC authorization boundary. The diagram does not depict a complete network topology.',
+						caption:
+							'Logical responsibility view — application and service relationships are shown without private network, IAM, or resource details.',
+					},
+					{
+						title: 'Retrieval and persistence flow',
+						img: enterpriseWorkspaceRetrieval,
+						alt: 'Publication-safe retrieval flow from approved content and an Amazon S3 integration through retrieval preparation, RDS PostgreSQL with pgvector, context retrieval, and a configured workspace agent. Exact ingestion and indexing details are not disclosed.',
+						caption:
+							'Conceptual retrieval flow — exact schemas, chunking, indexing, and operational retry details remain private.',
+					},
+				],
+				components: [
+					{
+						name: 'LibreChat-based workspace',
+						role: 'Existing conversational application extended and configured for enterprise use; upstream authorship is not claimed.',
+					},
+					{
+						name: 'Agents and integrations',
+						role: 'Configured agent behavior and integration contracts within the workspace boundary.',
+					},
+					{
+						name: 'ECS / Fargate and ALB',
+						role: 'Application hosting and entry-point integration, generalized for publication.',
+					},
+					{
+						name: 'RDS PostgreSQL with pgvector',
+						role: 'Persistence and vector retrieval substrate for retrieval-oriented workflows.',
+					},
+					{
+						name: 'Amazon S3 integration',
+						role: 'Object-storage integration for approved content and workspace workflows.',
+					},
+					{
+						name: 'Access and capability controls',
+						role: 'Authentication and authorization boundaries, HMAC mechanisms, restricted previews, and disabled execution surfaces.',
+					},
+				],
+			},
+			implementationTitle: 'My role and contributions',
+			implementation: [
+				{
+					title: 'LibreChat-based application extension',
+					body: 'I customized and extended an existing LibreChat-based workspace for the enterprise context. I do not claim authorship of LibreChat itself or upstream contribution.',
+				},
+				{
+					title: 'Agent configuration and integration',
+					body: 'I configured enterprise agent behavior and integration surfaces within the workspace, keeping the responsibility at the application and integration boundary rather than exposing private service contracts.',
+				},
+				{
+					title: 'AWS application infrastructure',
+					body: 'I worked across ECS/Fargate application hosting and Application Load Balancer integration. Deployment identifiers, network rules, scaling settings, and account details are intentionally generalized.',
+				},
+				{
+					title: 'Retrieval and persistence infrastructure',
+					body: 'I integrated RDS PostgreSQL with pgvector for retrieval-oriented persistence and Amazon S3 for approved object-storage workflows. Exact schemas, ingestion settings, and data volumes are not disclosed.',
+				},
+				{
+					title: 'Authorization and capability controls',
+					body: 'I implemented or extended HMAC-based authorization boundaries and kept application-preview and execution surfaces subject to explicit restrictions rather than presenting them as generally available capabilities.',
+				},
+				{
+					title: 'Operational configuration',
+					body: 'I handled configuration and operational concerns across the application, storage, retrieval, and access boundaries while keeping broader team and employer responsibilities separate from my personal implementation claims.',
+				},
+			],
+			decisionsTitle: 'Engineering decisions',
+			decisions: [
+				{
+					title: 'Extend an existing open-source application',
+					body: 'Extending a LibreChat-based workspace provided an application foundation while keeping the engineering effort focused on enterprise configuration, agent integration, persistence, and operational boundaries rather than rebuilding a conversational shell.',
+				},
+				{
+					title: 'Keep application and retrieval responsibilities distinct',
+					body: 'The conversational surface and the retrieval-oriented persistence layer were treated as related but separate responsibilities, making the system easier to reason about without implying that every application capability had direct access to stored content.',
+				},
+				{
+					title: 'Use PostgreSQL and pgvector for retrieval persistence',
+					body: 'RDS PostgreSQL with pgvector provided a known persistence substrate for retrieval workflows while introducing the operational responsibility of managing data, indexing, configuration, and access boundaries.',
+				},
+				{
+					title: 'Restrict high-risk capabilities by default',
+					body: 'Application preview and code-execution surfaces were treated as bounded capabilities. The public case does not claim unrestricted execution, broad preview access, or a complete policy definition.',
+				},
+				{
+					title: 'Document the architecture at a safe abstraction level',
+					body: 'The published diagrams preserve the important engineering relationships while omitting employer-owned topology, identifiers, private prompts, exact policies, and operational statistics.',
+				},
+			],
+			capabilitySummary:
+				'These labels reflect the publication-safe evidence available for this case. They describe capability state at the engineering boundary and do not assert a complete security policy or production posture.',
+			capabilityMatrix: [
+				{
+					title: 'LibreChat-based workspace extension',
+					status: 'Implemented',
+					description: 'The existing open-source application was customized for the enterprise workspace; upstream authorship is not claimed.',
+				},
+				{
+					title: 'Enterprise agent configuration and integration',
+					status: 'Implemented',
+					description: 'Agent behavior and integration surfaces were configured within the application boundary.',
+				},
+				{
+					title: 'ECS / Fargate application infrastructure',
+					status: 'Implemented',
+					description: 'Application hosting responsibility is represented without account, network, or scaling details.',
+				},
+				{
+					title: 'Application Load Balancer integration',
+					status: 'Implemented',
+					description: 'The application entry-point integration is included at a generalized deployment boundary.',
+				},
+				{
+					title: 'RDS PostgreSQL with pgvector',
+					status: 'Implemented',
+					description: 'Retrieval-oriented persistence and vector storage are included without private schema or index details.',
+				},
+				{
+					title: 'Amazon S3 integration',
+					status: 'Implemented',
+					description: 'Object-storage integration is documented at the capability boundary, without bucket or data identifiers.',
+				},
+				{
+					title: 'HMAC-based authorization boundary',
+					status: 'Implemented',
+					description: 'HMAC-based request authorization was part of the integration boundary; exact secrets and policy definitions remain private.',
+				},
+				{
+					title: 'Configured application, persistence, and integration checks',
+					status: 'Validated',
+					description: 'Validation covered configured engineering paths; no benchmark, load result, or complete production coverage claim is made.',
+				},
+				{
+					title: 'Application-preview capabilities',
+					status: 'Restricted',
+					description: 'Preview-related surfaces were bounded rather than presented as broadly available to every workspace user or integration.',
+				},
+				{
+					title: 'General code execution',
+					status: 'Disabled',
+					description: 'The public case treats general code execution as disabled; no unrestricted execution path is claimed.',
+				},
+				{
+					title: 'Broader unrestricted execution',
+					status: 'Planned',
+					description: 'Any future expansion of execution or preview capability would require separate authorization, review, and evidence.',
+				},
+			],
+			evidenceTitle: 'Validation and operations',
+			evidence: [
+				{
+					title: 'Application behavior and integration checks',
+					body: 'I validated configured application paths and agent/integration behavior at the implementation boundary. No user-adoption metric, performance benchmark, or production SLA is published.',
+				},
+				{
+					title: 'Persistence and retrieval checks',
+					body: 'I checked retrieval-oriented persistence paths involving RDS PostgreSQL with pgvector and the S3 integration at the configured implementation boundary. Schema, volume, and index details remain private.',
+				},
+				{
+					title: 'Infrastructure configuration validation',
+					body: 'I validated the relevant ECS/Fargate and Application Load Balancer configuration surfaces within project scope without claiming a complete topology, autoscaling profile, or monitoring coverage.',
+				},
+				{
+					title: 'Authorization and capability verification',
+					body: 'I verified the documented authorization and capability boundaries, including HMAC mechanisms and restricted or disabled surfaces. Exact policies and secrets are intentionally omitted.',
+				},
+			],
+			limitations: [
+				{
+					title: 'Anonymized professional context',
+					body: 'The employer, customer, private repositories, domains, account identifiers, and internal configuration are intentionally not identified.',
+				},
+				{
+					title: 'Inherited application lifecycle',
+					body: 'Extending an open-source application reduces the need to build a conversational shell but introduces upstream compatibility and maintenance considerations.',
+				},
+				{
+					title: 'Managed persistence responsibility',
+					body: 'RDS PostgreSQL and pgvector provide a practical retrieval substrate while leaving data management, indexing, access, and operational configuration as ongoing responsibilities.',
+				},
+				{
+					title: 'Bounded capability surface',
+					body: 'Restricted preview and disabled general code execution reduce feature breadth but make the public capability boundary more honest and safer to describe.',
+				},
+				{
+					title: 'No public metrics or guarantees',
+					body: 'This case does not disclose costs, latency, throughput, check counts, production availability, monitoring coverage, or other private operational measurements.',
 				},
 			],
 		},

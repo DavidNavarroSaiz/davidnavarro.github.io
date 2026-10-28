@@ -62,6 +62,37 @@ function EditorialCover({ cover }) {
 	);
 }
 
+const capabilityStatusStyles = {
+	Implemented: 'border-dev-blue/30 bg-dev-blue/5 text-dev-blue-light',
+	Validated: 'border-dev-cyan/40 bg-dev-cyan/10 text-dev-cyan',
+	Restricted: 'border-amber-300/30 bg-amber-300/5 text-amber-200',
+	Disabled: 'border-white/15 bg-white/[0.03] text-gray-300',
+	Planned: 'border-dev-blue/20 bg-dev-blue/[0.03] text-gray-400',
+};
+
+function CapabilityStatusMatrix({ items }) {
+	return (
+		<ul className="mt-6 space-y-3" aria-label="Capability status matrix">
+			{items.map((item) => (
+				<li
+					key={item.title}
+					className="grid gap-3 rounded-md border border-white/10 bg-white/[0.025] p-4 sm:grid-cols-[minmax(0,1fr)_10rem] sm:items-start"
+				>
+					<div>
+						<h3 className="font-general-semibold text-base text-white">{item.title}</h3>
+						<p className="mt-1.5 text-sm leading-relaxed text-gray-400">{item.description}</p>
+					</div>
+					<span
+						className={`inline-flex w-fit items-center rounded border px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.12em] ${capabilityStatusStyles[item.status] ?? capabilityStatusStyles.Planned}`}
+					>
+						{item.status}
+					</span>
+				</li>
+			))}
+		</ul>
+	);
+}
+
 function WorkflowDiagram({ workflow }) {
 	return (
 		<div className="mt-8 rounded-lg border border-white/10 bg-gray-950/70 p-5 sm:p-6">
@@ -194,6 +225,8 @@ function CaseStudy({ project }) {
 		evidence,
 		evidenceTitle,
 		limitations,
+		capabilityMatrix,
+		capabilitySummary,
 		links,
 	} = caseStudy;
 
@@ -205,6 +238,7 @@ function CaseStudy({ project }) {
 	const sections = [
 		problem && { id: 'problem', label: 'Problem and context' },
 		architecture && { id: 'architecture', label: 'System architecture' },
+		capabilityMatrix?.length && { id: 'capabilities', label: 'Security and capability boundaries' },
 		implementation?.length && { id: 'implementation', label: implementationTitle ?? 'Implementation' },
 		decisions?.length && { id: 'decisions', label: decisionsTitle ?? 'Decisions and trade-offs' },
 		evidence?.length && { id: 'evidence', label: evidenceTitle ?? 'Evaluation and operations' },
@@ -291,6 +325,14 @@ function CaseStudy({ project }) {
 					{architecture && (
 						<Section id="architecture" title="System architecture">
 							{architecture.summary && <p className={proseClass}>{architecture.summary}</p>}
+							{architecture.diagrams?.map((diagram) => (
+								<div key={diagram.title ?? diagram.alt}>
+									{diagram.title && (
+										<h3 className="mt-10 font-general-semibold text-lg text-white">{diagram.title}</h3>
+									)}
+									<ArchitectureFigure figure={diagram} />
+								</div>
+							))}
 							{architecture.workflow && <WorkflowDiagram workflow={architecture.workflow} />}
 							{architecture.artifactStructure && (
 								<ArtifactStructure structure={architecture.artifactStructure} />
@@ -333,6 +375,13 @@ function CaseStudy({ project }) {
 									</ul>
 								</>
 							)}
+						</Section>
+					)}
+
+					{capabilityMatrix?.length > 0 && (
+						<Section id="capabilities" title="Security and capability boundaries">
+							{capabilitySummary && <p className={proseClass}>{capabilitySummary}</p>}
+							<CapabilityStatusMatrix items={capabilityMatrix} />
 						</Section>
 					)}
 

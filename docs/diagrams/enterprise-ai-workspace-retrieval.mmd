@@ -1,0 +1,17 @@
+%% Enterprise AI Workspace — editable retrieval and persistence source
+%% Exact ingestion, chunking, indexing, and retry details are intentionally not disclosed.
+flowchart LR
+    S[Approved content / S3 integration] --> P[Retrieval preparation]
+    P --> V[RDS PostgreSQL + pgvector]
+    V --> Q[Context retrieval]
+    Q --> W[Workspace / configured agent]
+
+    classDef source fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
+    classDef process fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
+    classDef store fill:#263A39,stroke:#7FA7B4,color:#ECE5D7
+    classDef output fill:#2B211D,stroke:#D67B56,color:#ECE5D7
+
+    class S source
+    class P,Q process
+    class V store
+    class W output

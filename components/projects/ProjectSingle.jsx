@@ -8,6 +8,7 @@ const ProjectSingle = ({
 	category,
 	summary,
 	img,
+	imageAlt,
 	featured,
 	ProjectInfo,
 	priority = false,
@@ -20,7 +21,7 @@ const ProjectSingle = ({
 				{img ? (
 					<Image
 						src={img}
-						alt={featured?.alt ?? ''}
+						alt={featured?.alt ?? imageAlt ?? title}
 						fill
 						sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 400px"
 						loading={priority ? 'eager' : 'lazy'}
