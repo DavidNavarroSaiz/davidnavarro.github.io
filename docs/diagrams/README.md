@@ -1,10 +1,10 @@
 # Coding-agent evaluation workbench diagrams
 
-These are owner-review drafts for the Coding Agent Evaluation Workbench case study. The Mermaid files are the editable source; the SVG files are static drafts generated for review. They are intentionally outside `public/` and are not referenced by the published case study until the visual assets receive explicit approval.
+These are owner-review drafts for the Coding Agent Evaluation Workbench case study. The Mermaid files are the editable source; the SVG files are static drafts integrated into the published case study at medium and larger breakpoints. They remain intentionally outside `public/`; the case study keeps a readable HTML fallback for narrow/mobile layouts.
 
-Proposed placement if approved:
+Current placement:
 
-- `coding-agent-evaluation-workflow.svg` — directly below the System architecture summary, replacing the current text-first workflow treatment.
-- `coding-agent-evaluation-artifacts.svg` — below the workflow diagram or at the start of Evaluation and verification as a compact evidence-map figure.
+- `coding-agent-evaluation-workflow.svg` — directly below the System architecture summary on medium and larger viewports.
+- `coding-agent-evaluation-artifacts.svg` — below the workflow diagram as a compact evidence-map figure on medium and larger viewports.
 
-The case study currently renders accessible HTML diagrams so the published page remains text-first and does not depend on unapproved artwork.
+On narrow/mobile viewports, the case study renders the accessible HTML diagrams instead so the content remains readable without requiring a wide visual canvas.

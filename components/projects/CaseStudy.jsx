@@ -28,6 +28,23 @@ const diagramToneStyles = {
 	assisted: 'border-amber-300/30 bg-amber-300/5 text-amber-200',
 };
 
+function ArchitectureFigure({ figure }) {
+	return (
+		<figure className="mt-6">
+			<div className="overflow-hidden rounded-md border border-white/10 bg-gray-950">
+				<Image
+					src={figure.img}
+					alt={figure.alt}
+					sizes="(max-width: 1023px) 100vw, 768px"
+					loading="lazy"
+					className="h-auto w-full"
+				/>
+			</div>
+			{figure.caption && <figcaption className="mt-3 text-sm text-gray-400">{figure.caption}</figcaption>}
+		</figure>
+	);
+}
+
 function WorkflowDiagram({ workflow }) {
 	return (
 		<div className="mt-8 rounded-lg border border-white/10 bg-gray-950/70 p-5 sm:p-6">
@@ -41,55 +58,63 @@ function WorkflowDiagram({ workflow }) {
 				</span>
 			</div>
 
-			<ol className="mt-6 border-l border-dev-blue/30 pl-5 sm:pl-7">
-				{workflow.steps.map((step, index) => (
-					<li key={step.title} className="relative pb-5 last:pb-0">
-						<span className="absolute -left-[2.05rem] top-0 inline-flex h-7 w-7 items-center justify-center rounded-full border border-dev-blue/50 bg-gray-950 font-mono text-[10px] text-dev-blue sm:-left-[2.65rem]">
-							{String(index + 1).padStart(2, '0')}
-						</span>
-						<div className="rounded-md border border-white/10 bg-white/[0.025] p-4">
-							<div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-								<h4 className="font-general-semibold text-base text-white">{step.title}</h4>
-								<span
-									className={`inline-flex w-fit rounded border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] ${
-										diagramToneStyles[step.type] ?? diagramToneStyles.controlled
-									}`}
-								>
-									{step.mode}
-								</span>
-							</div>
-							<p className="mt-2 text-sm leading-relaxed text-gray-300">{step.description}</p>
-						</div>
-					</li>
-				))}
-			</ol>
+			{workflow.figure && (
+				<div className="hidden md:block">
+					<ArchitectureFigure figure={workflow.figure} />
+				</div>
+			)}
 
-			<div className="mt-6 border-t border-white/10 pt-4" aria-label="Workflow legend">
-				<p className="font-mono text-[10px] uppercase tracking-[0.14em] text-gray-500">Legend</p>
-				<ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-xs text-gray-400">
-					{[
-						['controlled', 'Controlled input'],
-						['captured', 'Captured evidence'],
-						['automated', 'Automated checks'],
-						['assisted', 'Manual / assisted review'],
-					].map(([type, label]) => (
-						<li key={type} className="inline-flex items-center gap-2">
-							<span
-								aria-hidden="true"
-								className={`h-2 w-2 rounded-full ${
-								type === 'automated'
-									? 'bg-dev-cyan'
-									: type === 'assisted'
-										? 'bg-amber-200'
-										: type === 'captured'
-											? 'bg-dev-blue'
-											: 'bg-gray-400'
-								}`}
-							/>
-							{label}
+			<div className={workflow.figure ? 'md:hidden' : ''}>
+				<ol className="mt-6 border-l border-dev-blue/30 pl-5 sm:pl-7">
+					{workflow.steps.map((step, index) => (
+						<li key={step.title} className="relative pb-5 last:pb-0">
+							<span className="absolute -left-[2.05rem] top-0 inline-flex h-7 w-7 items-center justify-center rounded-full border border-dev-blue/50 bg-gray-950 font-mono text-[10px] text-dev-blue sm:-left-[2.65rem]">
+								{String(index + 1).padStart(2, '0')}
+							</span>
+							<div className="rounded-md border border-white/10 bg-white/[0.025] p-4">
+								<div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+									<h4 className="font-general-semibold text-base text-white">{step.title}</h4>
+									<span
+										className={`inline-flex w-fit rounded border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] ${
+											diagramToneStyles[step.type] ?? diagramToneStyles.controlled
+										}`}
+									>
+										{step.mode}
+									</span>
+								</div>
+								<p className="mt-2 text-sm leading-relaxed text-gray-300">{step.description}</p>
+							</div>
 						</li>
 					))}
-				</ul>
+				</ol>
+
+				<div className="mt-6 border-t border-white/10 pt-4" aria-label="Workflow legend">
+					<p className="font-mono text-[10px] uppercase tracking-[0.14em] text-gray-500">Legend</p>
+					<ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-xs text-gray-400">
+						{[
+							['controlled', 'Controlled input'],
+							['captured', 'Captured evidence'],
+							['automated', 'Automated checks'],
+							['assisted', 'Manual / assisted review'],
+						].map(([type, label]) => (
+							<li key={type} className="inline-flex items-center gap-2">
+								<span
+									aria-hidden="true"
+									className={`h-2 w-2 rounded-full ${
+										type === 'automated'
+											? 'bg-dev-cyan'
+											: type === 'assisted'
+												? 'bg-amber-200'
+												: type === 'captured'
+													? 'bg-dev-blue'
+													: 'bg-gray-400'
+									}`}
+								/>
+								{label}
+							</li>
+						))}
+					</ul>
+				</div>
 			</div>
 		</div>
 	);
@@ -101,27 +126,39 @@ function ArtifactStructure({ structure }) {
 			<h3 className="font-general-semibold text-lg text-white">{structure.title}</h3>
 			<p className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-400">{structure.summary}</p>
 
-			<div className="mt-6 rounded-md border border-dev-blue/40 bg-dev-blue/5 px-4 py-3">
-				<p className="font-mono text-[10px] uppercase tracking-[0.14em] text-dev-blue">Root</p>
-				<p className="mt-1 font-general-semibold text-white">{structure.rootLabel}</p>
-			</div>
+			{structure.figure && (
+				<div className="hidden md:block">
+					<ArchitectureFigure figure={structure.figure} />
+				</div>
+			)}
 
-			<ul className="mt-3 grid gap-3 sm:grid-cols-2">
-				{structure.items.map((item) => (
-					<li key={item.title} className="rounded-md border border-white/10 bg-white/[0.025] p-4">
-						<div className="flex items-start justify-between gap-3">
-							<h4 className="font-general-semibold text-sm text-white">{item.title}</h4>
-							<span
-								className={`h-2 w-2 shrink-0 rounded-full ${
-									item.type === 'automated' ? 'bg-dev-cyan' : item.type === 'assisted' ? 'bg-amber-200' : 'bg-dev-blue'
-								}`}
-								aria-label={item.type}
-							/>
-						</div>
-						<p className="mt-2 text-sm leading-relaxed text-gray-400">{item.description}</p>
-					</li>
-				))}
-			</ul>
+			<div className={structure.figure ? 'md:hidden' : ''}>
+				<div className="mt-6 rounded-md border border-dev-blue/40 bg-dev-blue/5 px-4 py-3">
+					<p className="font-mono text-[10px] uppercase tracking-[0.14em] text-dev-blue">Root</p>
+					<p className="mt-1 font-general-semibold text-white">{structure.rootLabel}</p>
+				</div>
+
+				<ul className="mt-3 grid gap-3 sm:grid-cols-2">
+					{structure.items.map((item) => (
+						<li key={item.title} className="rounded-md border border-white/10 bg-white/[0.025] p-4">
+							<div className="flex items-start justify-between gap-3">
+								<h4 className="font-general-semibold text-sm text-white">{item.title}</h4>
+								<span
+									className={`h-2 w-2 shrink-0 rounded-full ${
+										item.type === 'automated'
+											? 'bg-dev-cyan'
+											: item.type === 'assisted'
+												? 'bg-amber-200'
+												: 'bg-dev-blue'
+									}`}
+									aria-label={item.type}
+								/>
+							</div>
+							<p className="mt-2 text-sm leading-relaxed text-gray-400">{item.description}</p>
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 }

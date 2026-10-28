@@ -22,7 +22,6 @@ import int4_640 from '../assets/images/int4-640.webp';
 import realtime1_640 from '../assets/images/realtime1-640.webp';
 import mcp1_640 from '../assets/images/mcp1-640.webp';
 import cctv1_640 from '../assets/images/cctv1-640.webp';
-import marker1_640 from '../assets/images/marker1-640.webp';
 import rg1_960 from '../assets/images/rg1-960.webp';
 import rg2_960 from '../assets/images/rg2-960.webp';
 import rg3_960 from '../assets/images/rg3-960.webp';
@@ -53,13 +52,14 @@ import realtime1_960 from '../assets/images/realtime1-960.webp';
 import realtime2_960 from '../assets/images/realtime2-960.webp';
 import realtime3_960 from '../assets/images/realtime3-960.webp';
 import mcp1_960 from '../assets/images/mcp1-960.webp';
-import mcp2_960 from '../assets/images/mcp2-960.webp';
 import mcp3_960 from '../assets/images/mcp3-960.webp';
 import cctv1_960 from '../assets/images/cctv1-960.webp';
 import cctv2_960 from '../assets/images/cctv2-960.webp';
 import cctv3_960 from '../assets/images/cctv3-960.webp';
 import pmArch from '../assets/images/pm-architecture.svg';
 import markerArch from '../assets/images/marker-architecture.svg';
+import evaluationWorkflowDiagram from '../docs/diagrams/coding-agent-evaluation-workflow.svg';
+import evaluationArtifactsDiagram from '../docs/diagrams/coding-agent-evaluation-artifacts.svg';
 
 export const projectsData = [
 	{
@@ -1329,11 +1329,6 @@ export const projectsData = [
 			},
 			{
 				id: uuidv4(),
-				title: 'Architecture Flow Diagram',
-				img: mcp2_960,
-			},
-			{
-				id: uuidv4(),
 				title: 'MCP Client Interaction',
 				img: mcp3_960,
 			},
@@ -1533,7 +1528,7 @@ export const projectsData = [
 		category: 'RAG Infrastructure / Distributed Systems',
 		summary:
 			'Distributed ingestion service that parses PDFs, generates embeddings, and tracks progress for large RAG corpora.',
-		img: marker1_640,
+		img: markerArch,
 		featured: {
 			rank: 2,
 			problem:
@@ -1779,6 +1774,12 @@ export const projectsData = [
 					title: 'Evaluation lifecycle',
 					summary:
 						'The sequence below separates controlled inputs, captured evidence, repeatable checks, and human or assisted review.',
+					figure: {
+						img: evaluationWorkflowDiagram,
+						alt: 'Coding-agent evaluation workflow from task specification and clean baseline through agent execution, run artifacts, deterministic checks, human or advisory assessment, and comparative reporting. Automated checks are distinct from manual or assisted review.',
+						caption:
+							'Workflow draft: controlled inputs and captured evidence lead into automated checks, contextual review, and comparative reporting.',
+					},
 					steps: [
 						{
 							title: 'Task specification',
@@ -1828,6 +1829,12 @@ export const projectsData = [
 					title: 'Run evidence structure',
 					summary:
 						'Each run was interpreted through a bundle of configuration, execution, verification, and review evidence. The internal schema and repository names are intentionally not disclosed.',
+					figure: {
+						img: evaluationArtifactsDiagram,
+						alt: 'Run evidence bundle branching into experiment metadata, execution logs and transcript, code diff and test results, deterministic functional and code-quality checks, security and authorization review, and human or advisory assessment.',
+						caption:
+							'Evidence map draft: captured artifacts, automated validation, and assisted review remain distinct within the run record.',
+					},
 					rootLabel: 'Run evidence bundle',
 					items: [
 						{
