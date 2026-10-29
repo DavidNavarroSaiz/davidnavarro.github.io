@@ -84,6 +84,7 @@ export const projectsData = [
 		summary:
 			'A Microsoft Teams agent that coordinates project work through Microsoft Graph, document retrieval, and structured tool calls.',
 		img: pm1_640,
+		relatedProjectIds: [16, 19, 17, 14],
 		featured: {
 			rank: 1,
 			problem:
@@ -1108,6 +1109,7 @@ export const projectsData = [
 		summary:
 			'Production vision systems for defect detection, fill checks, anomaly detection, and PPE compliance on the factory floor.',
 		img: int4_640,
+		relatedProjectIds: [14, 17, 15, 16],
 		featured: {
 			rank: 4,
 			problem:
@@ -1549,6 +1551,7 @@ export const projectsData = [
 		summary:
 			'Distributed ingestion service that parses PDFs, generates embeddings, and tracks progress for large RAG corpora.',
 		img: markerArch,
+		relatedProjectIds: [19, 16, 15, 1],
 		featured: {
 			rank: 2,
 			problem:
@@ -1748,6 +1751,17 @@ export const projectsData = [
 		summary:
 			'Internal workbench for comparing coding-agent runs through versioned tasks, clean baselines, traceable run artifacts, deterministic checks, and structured assessment.',
 		img: null,
+		relatedProjectIds: [17, 16, 14, 19],
+		featured: {
+			rank: 2,
+			image: codingAgentEvaluationCover,
+			problem:
+				'Coding-agent comparisons need controlled tasks, clean baselines, traceable artifacts, and repeatable checks before a result can be interpreted responsibly.',
+			approach:
+				'A structured evaluation workbench separates task specification, agent execution, captured evidence, deterministic checks, and contextual assessment.',
+			disciplines: ['Evaluation engineering', 'Reproducibility', 'Agent reliability'],
+			alt: 'Conceptual coding-agent evaluation workbench showing clean baselines, run evidence, deterministic checks, and comparative assessment.',
+		},
 		ProjectHeader: {
 			title: 'Coding Agent Evaluation Workbench',
 			publishDate: 'Oct 2026',
@@ -1983,6 +1997,17 @@ export const projectsData = [
 		img: enterpriseAiWorkspaceCover,
 		imageAlt:
 			'Conceptual illustration of an enterprise AI workspace connecting users, agents, retrieval, cloud infrastructure, integrations, and controlled capabilities; not a deployed infrastructure diagram.',
+		relatedProjectIds: [1, 17, 19, 14],
+		featured: {
+			rank: 3,
+			image: enterpriseAiWorkspaceCover,
+			problem:
+				'An enterprise conversational workspace must connect agents, retrieval, persistence, hosting, and integrations without turning every capability into an implicit execution surface.',
+			approach:
+				'An extended LibreChat-based workspace with configured agents, retrieval-oriented persistence, AWS application infrastructure, and explicit authorization and capability boundaries.',
+			disciplines: ['Enterprise AI platforms', 'RAG infrastructure', 'Capability boundaries'],
+			alt: 'Conceptual enterprise AI workspace connecting users, agents, retrieval, cloud infrastructure, integrations, and controlled capabilities.',
+		},
 		ProjectHeader: {
 			title: 'Enterprise AI Workspace',
 			publishDate: '2026',
@@ -2240,6 +2265,17 @@ export const projectsData = [
 		img: policyGovernedAgentsCover,
 		imageAlt:
 			'Conceptual illustration of policy-governed AI agents moving through stateful orchestration, authorization checks, verified actions, and escalation paths; not a private production state machine.',
+		relatedProjectIds: [15, 16, 1, 19],
+		featured: {
+			rank: 1,
+			image: policyGovernedAgentsCover,
+			problem:
+				'A plausible natural-language response is not proof that an operational action was authorized, executed, or completed.',
+			approach:
+				'Stateful orchestration, explicit policy and confirmation boundaries, structured tool outcomes, verification, and predictable clarification or escalation paths.',
+			disciplines: ['Production AI agents', 'Policy controls', 'Reliability engineering'],
+			alt: 'Conceptual policy-governed AI agent workflow showing stateful orchestration, authorization checks, verified actions, and escalation paths.',
+		},
 		ProjectHeader: {
 			title: 'Policy-Governed AI Agents',
 			publishDate: '2026',
@@ -2555,6 +2591,7 @@ export const projectsData = [
 		img: professionalCasesCover,
 		imageAlt:
 			'Conceptual editorial illustration for Professional Cases: documents, images, knowledge organization, case generation, and assessment. Audio and video symbols are visual motifs, not proof of implemented speech capabilities.',
+		relatedProjectIds: [19, 14, 1, 16],
 		ProjectHeader: {
 			title: 'Professional Cases — AI-Powered Professional Practice Scenarios',
 			publishDate: 'In development',
@@ -2896,6 +2933,17 @@ export const projectsData = [
 		img: digitalTwinCover,
 		imageAlt:
 			'Conceptual editorial collage for AI Digital Twin showing contextual archives, projects, meetings, emails, vector retrieval, GraphRAG, and combined retrieval strategies.',
+		relatedProjectIds: [14, 16, 1, 15],
+		featured: {
+			rank: 4,
+			image: digitalTwinCover,
+			problem:
+				'Professional knowledge is distributed across projects, dates, emails, meetings, and other records, so semantic similarity alone may miss the context that makes retrieval useful.',
+			approach:
+				'Owner-confirmed experiments compared vector RAG, GraphRAG, and combined retrieval with response-time measurement, DeepEval/LLM evaluation, question-type comparison, and prompt refinement.',
+			disciplines: ['Retrieval systems', 'GraphRAG', 'Evaluation engineering'],
+			alt: 'Conceptual AI Digital Twin collage showing contextual archives, vector retrieval, GraphRAG, combined approaches, and retrieval evaluation.',
+		},
 		ProjectHeader: {
 			title: 'AI Digital Twin — Contextual Knowledge, GraphRAG & Retrieval Evaluation',
 			publishDate: 'Evidence audit',
@@ -3183,6 +3231,16 @@ export const projectsData = [
 	},
 ];
 
-export const featuredProjects = projectsData
-	.filter((project) => project.featured)
-	.sort((a, b) => a.featured.rank - b.featured.rank);
+// Curated presentation order is intentionally separate from canonical IDs and routes.
+export const featuredProjectIds = [17, 15, 16, 19, 1, 10];
+
+export const featuredProjects = featuredProjectIds
+	.map((id) => projectsData.find((project) => project.id === id))
+	.filter(Boolean);
+
+export const orderedProjects = [
+	...featuredProjectIds,
+	...projectsData
+		.map((project) => project.id)
+		.filter((id) => !featuredProjectIds.includes(id)),
+].map((id) => projectsData.find((project) => project.id === id)).filter(Boolean);

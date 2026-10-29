@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { FiSearch, FiX } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
-import { projectsData } from '../../data/projectsData';
+import { orderedProjects } from '../../data/projectsData';
 import ProjectsFilter from './ProjectsFilter';
 
 const ALL_CATEGORIES = 'All';
@@ -23,14 +23,14 @@ function ProjectsGrid() {
 	const [selectProject, setSelectProject] = useState(ALL_CATEGORIES);
 
 	const categories = useMemo(
-		() => Array.from(new Set(projectsData.map((project) => project.category))),
+		() => Array.from(new Set(orderedProjects.map((project) => project.category))),
 		[]
 	);
 
 	const filteredProjects = useMemo(() => {
 		const query = searchProject.trim().toLowerCase();
 
-		return projectsData.filter((project) => {
+		return orderedProjects.filter((project) => {
 			const matchesCategory =
 				selectProject === ALL_CATEGORIES ||
 				project.category === selectProject;
@@ -56,7 +56,7 @@ function ProjectsGrid() {
 		>
 			<header className="border-b border-white/10 pb-8 sm:pb-10">
 				<p className="font-mono text-[11px] uppercase tracking-[0.18em] text-gray-500">
-					Portfolio / {projectsData.length} projects
+				Portfolio / {orderedProjects.length} projects
 				</p>
 				<h1
 					id="projects-heading"
@@ -126,7 +126,7 @@ function ProjectsGrid() {
 						<span className="text-gray-300">
 							{filteredProjects.length}
 						</span>{' '}
-						of {projectsData.length} projects
+						of {orderedProjects.length} projects
 					</p>
 
 					{hasFilters && (
