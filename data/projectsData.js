@@ -179,12 +179,12 @@ export const projectsData = [
 					'Conceptual illustration — conversational requests, retrieval, MCP tools, and project-management operations. The factual system architecture remains documented below.',
 			},
 			overview:
-				'An AI-powered project management agent integrated with Microsoft Teams, knowledge retrieval, and Azure DevOps tools. I designed and implemented the end-to-end system, which was used internally at Kmeleon to organize and manage team tasks while the infrastructure was being prepared for potential distribution as a reusable offering through Microsoft Marketplace.',
+				'I built an AI project-management assistant that connected Microsoft Teams conversations with project knowledge and Azure DevOps actions. The team used it internally to organize work while we prepared the underlying infrastructure for possible distribution as a reusable offering; it was not a commercial marketplace launch.',
 			problem:
-				'Project status, calendars, and documents are spread across Teams and project tools, so routine coordination takes manual effort and context switching.',
+				'I wanted to reduce the manual coordination around questions that already had answers somewhere: who owns a task, what changed, which work is blocked, and what should happen after a meeting. A useful assistant had to connect knowledge with actions, not just summarize a document and leave the user to update the project by hand.',
 			architecture: {
 				summary:
-					'User requests from Microsoft Teams and other Bot Framework channels go to a language-model agent. The agent answers from project knowledge through a document ingestion and PGVector retrieval pipeline, acts on Azure DevOps through a dedicated MCP server, and manages calendars through the Microsoft Graph API. Provisioned Azure infrastructure and Application Insights monitoring support the whole system.',
+					'I connected Microsoft Teams and other Bot Framework channels to a language-model agent, a document-ingestion and PGVector retrieval path, a dedicated MCP server for Azure DevOps, and Microsoft Graph for calendar checks and meeting creation. The important boundary was between the model interpreting a request and a tool changing project state: the agent could look up work items, create and assign tasks, delete supported items, and verify the resulting operation through functional tests.',
 				components: [
 					{
 						name: 'Teams and Bot Framework channels',
@@ -1750,7 +1750,9 @@ export const projectsData = [
 		category: 'AI Evaluation / Engineering Systems',
 		summary:
 			'Internal workbench for comparing coding-agent runs through versioned tasks, clean baselines, traceable run artifacts, deterministic checks, and structured assessment.',
-		img: null,
+		img: codingAgentEvaluationCover,
+		imageAlt:
+			'Conceptual editorial illustration of a coding-agent evaluation workbench with a clean baseline, captured run evidence, deterministic checks, and comparative reporting; not a screenshot or benchmark result.',
 		relatedProjectIds: [17, 16, 14, 19],
 		featured: {
 			rank: 2,
@@ -1804,12 +1806,12 @@ export const projectsData = [
 			status: 'Internal Engineering / Evaluation Tooling',
 			headerFacts: ['Type', 'Contribution', 'Status'],
 			overview:
-				'An internal evaluation workbench for comparing coding-agent runs on reproducible software-engineering tasks. It organized versioned task prompts, clean starting baselines, execution evidence, deterministic checks, review inputs, and comparative reporting without presenting the system as fully autonomous.',
+				'I built an internal, UI-driven workbench to compare coding-agent runs under reproducible conditions. Each evaluation starts with a shared reference task and prompts, records the selected tool, model and version, tester, date, scenario, model profile, and environment, then guides the evaluator through setup, execution, evidence collection, review, and export. The workbench is not an autonomous judge or a leaderboard; it preserves the evidence needed to explain a result later.',
 			problem:
-				'Comparing coding agents is only meaningful when each run starts from an equivalent condition, receives a comparable task, and leaves enough evidence to reconstruct what happened. Without standardized tasks, clean baselines, traceable execution artifacts, and consistent assessment, implementation quality and agent behavior are difficult to compare responsibly.',
+				'Comparing coding agents is harder than giving them the same prompt and checking which one finishes first. A run can produce convincing code while failing tests, ignoring a security constraint, or quietly changing the scope. I needed a way to hold the task and starting conditions steady, then reconstruct what happened months later instead of relying on a final screenshot or someone’s notes.',
 			architecture: {
 				summary:
-					'The workbench followed a staged evaluation lifecycle: Task specification → Clean baseline → Agent execution → Run artifacts → Deterministic checks → Human/advisory assessment → Comparative reporting. Automated checks were kept distinct from manual or semi-automated operations so each result could be interpreted in context.',
+					'I kept the benchmark/reference repository separate from the evaluation repository. Each experiment received its own Git branch and run artifacts, while the workbench walked the evaluator through task specification, a clean checkout, agent execution, evidence capture, deterministic checks, rubric review, and export. That separation lets me inspect the exact generated code, patch, CI output, and transcript instead of treating the final result as a black box.',
 				workflow: {
 					title: 'Evaluation lifecycle',
 					summary:
@@ -1910,42 +1912,50 @@ export const projectsData = [
 					],
 				},
 			},
-			implementationTitle: 'Engineering contributions',
+			implementationTitle: 'How I ran an evaluation',
 			implementation: [
 				{
-					title: 'Evaluation framework',
-					body: 'The implemented workbench used a standardized full-stack reference codebase, versioned prompts, comparable tasks, clean baselines, and run-level evidence.',
+					title: 'Separate repositories and experiment branches',
+					body: 'I kept the benchmark/reference repository separate from the evaluation repository. Each experiment used its own Git branch so the reference task, generated patch, and run artifacts stayed tied to one reproducible setup.',
 				},
 				{
-					title: 'Execution and follow-up scenarios',
-					body: 'The workbench supported manual or semi-automated coding-agent execution and follow-up scenarios while retaining the task and run context.',
+					title: 'Guided run setup',
+					body: 'The UI captured the tool, model and version, tester, date, scenario, model profile, environment, shared reference task, and prompts before execution. The wizard made the process repeatable for someone who did not design the benchmark.',
 				},
 				{
-					title: 'Evidence capture',
-					body: 'The workbench structured the capture of experiment metadata, configuration records, code diffs, execution logs, transcripts, and test results.',
+					title: 'Execution and evidence capture',
+					body: 'During a run I recorded elapsed time, interventions, self-corrections, questions, execution logs, the conversation transcript, configuration, code diffs, and resulting artifacts. That context matters when a run needs to be reconstructed later.',
 				},
 				{
-					title: 'Verification layers',
-					body: 'It connected deterministic functional and code-quality checks with security and authorization reviews.',
+					title: 'Objective verification',
+					body: 'The evaluation ran code execution and CI checks for builds, linting, tests, coverage, type checks, and required constraints. These signals are repeatable, but they do not answer every architectural or security question.',
 				},
 				{
-					title: 'Comparative assessment',
-					body: 'It supported structured human assessment, model-assisted assessment where applicable, and comparative experiment reporting.',
+					title: 'Human and advisory review',
+					body: 'A human evaluator reviewed architecture, maintainability, testing, documentation, security, and policy violations against anchored rubrics. An optional LLM reviewer could identify possible bugs, add notes, and suggest rubric scores, but I treated it as a second opinion rather than ground truth.',
+				},
+				{
+					title: 'Export and comparison',
+					body: 'The workbench exported an evidence bundle and structured experiment comparison so a conclusion could be traced back to the branch, prompt, transcript, code diff, CI result, rubric decision, and evaluator note.',
 				},
 			],
 			decisionsTitle: 'Engineering decisions',
 			decisions: [
 				{
-					title: 'Clean starting conditions',
-					body: 'Using a standardized reference codebase and clean baselines made task execution evidence comparable across runs.',
+					title: 'Hold the reference task steady',
+					body: 'I used the same versioned task and prompts for comparable runs, then recorded any follow-up scenario rather than silently changing the task mid-experiment.',
 				},
 				{
-					title: 'Separate repeatable checks from expert review',
-					body: 'Deterministic functional and code-quality checks were kept distinct from security, authorization, human, and advisory assessment so automated signals did not stand in for contextual review.',
+					title: 'Keep automated signals separate from judgment',
+					body: 'Build, test, lint, coverage, type, security, and authorization evidence stays distinct from rubric review. A passing test suite is useful evidence, not a complete measure of engineering quality.',
 				},
 				{
 					title: 'Evidence before summary',
-					body: 'Experiment metadata, configuration records, diffs, logs, transcripts, and test results were retained before comparative conclusions were assembled.',
+					body: 'I retained metadata, configuration, diffs, logs, transcripts, test results, rubric decisions, and reviewer notes before assembling a comparison. That makes it possible to challenge a conclusion instead of trusting a headline score.',
+				},
+				{
+					title: 'Treat the LLM reviewer as advisory',
+					body: 'An LLM can surface a bug or suggest a rubric interpretation, but the human evaluator remains responsible for the final assessment and for deciding whether the evidence supports it.',
 				},
 			],
 			evidenceTitle: 'Evaluation and verification',
@@ -2261,7 +2271,7 @@ export const projectsData = [
 		url: 'policy-governed-ai-agents',
 		category: 'Production AI Engineering / Agent Reliability',
 		summary:
-			'An anonymized production engineering case about stateful conversational workflows, authorized actions, verified tool outcomes, and reliability-oriented evaluation.',
+			'I worked on reusable foundations for conversational agents that interpret requests, enforce authorization boundaries, execute guarded actions, and handle failure predictably.',
 		img: policyGovernedAgentsCover,
 		imageAlt:
 			'Conceptual illustration of policy-governed AI agents moving through stateful orchestration, authorization checks, verified actions, and escalation paths; not a private production state machine.',
@@ -2317,27 +2327,28 @@ export const projectsData = [
 		},
 		caseStudy: {
 			status: 'Professional production engineering experience, anonymized',
+			showCapabilityMatrix: false,
 			headerFacts: ['Role', 'Status'],
 			editorialCover: {
 				img: policyGovernedAgentsCover,
 				alt: 'Conceptual illustration of policy-governed AI agents moving through stateful orchestration, authorization checks, verified actions, and escalation paths; not a private production state machine or product screenshot.',
 				caption:
-					'Conceptual illustration — stateful orchestration, authorization boundaries, verified actions, and escalation. It does not reproduce a private employer workflow or policy.',
+					'Conceptual illustration — stateful orchestration, authorization boundaries, verified actions, and escalation. It does not reproduce a private workflow or policy.',
 			},
 			overview:
-				'An anonymized production engineering case about building conversational AI workflows that could interact with operational systems while respecting business constraints. My work focused on workflow architecture, state control, action reliability, and evaluation without claiming ownership of the entire employer AI platform.',
+				'I worked on reusable foundations for conversational agents that could interact with operational systems without leaving authorization and failure handling to the language model. Each agent could have its own business workflow, but the platform needed a consistent way to interpret requests, resolve context, control state, execute tools, verify outcomes, and communicate safely. My contribution covered the relevant workflow and reliability workstreams, not an entire company platform.',
 			problem:
-				'A plausible natural-language response is not proof that an operational action was authorized, executed, or completed. The workflow needed explicit state, context resolution, policy and confirmation boundaries, structured tool outcomes, verification before communicating success, and predictable handling for ambiguity or failure.',
+				'Getting a language model to answer a question is one problem. Giving it the ability to act on someone’s behalf is another: it can misunderstand the request, select the wrong entity, skip a required confirmation, or describe a failed operation as successful. I needed the system—not a persuasive model response—to decide whether an action was allowed and whether it actually happened.',
 			architecture: {
 				summary:
-					'The diagrams show generalized agent-reliability patterns: model-assisted interpretation feeds explicit workflow state, deterministic control boundaries govern authorized execution, and observed outcomes determine whether the system responds, clarifies, or escalates. No private workflow, policy condition, tool name, or deployment topology is represented.',
+					'I separated the workflow into layers. An input-safety boundary assessed the request; model-assisted interpretation and entity resolution identified what the person meant; explicit state controlled what could happen next; deterministic business and authorization checks gated consequential actions; guarded tools returned structured outcomes; and response governance decided whether to answer, clarify, refuse, degrade, or escalate. The diagrams are generalized so they do not expose private workflow or policy details.',
 				diagrams: [
 					{
 						title: 'Governed workflow architecture',
 						img: policyGovernedAgentsArchitecture,
-						alt: 'Publication-safe governed workflow architecture separating model-assisted interpretation from deterministic operational control: user interaction, LLM interpretation, context and entity resolution, explicit workflow state, policy and confirmation boundary, authorized execution, verified result, and supported response or escalation.',
+						alt: 'Generalized governed workflow architecture separating model-assisted interpretation from deterministic operational control: user interaction, LLM interpretation, context and entity resolution, explicit workflow state, policy and confirmation boundary, authorized execution, verified result, and supported response or escalation.',
 						caption:
-							'Conceptual architecture — the language model proposes interpretation while explicit state and control boundaries govern operational action.',
+							'Conceptual architecture — the language model proposes an interpretation while explicit state and control boundaries govern operational action.',
 						mobileFallback: [
 							{
 								title: 'User interaction',
@@ -2372,7 +2383,7 @@ export const projectsData = [
 					{
 						title: 'Verified action sequence',
 						img: policyGovernedAgentsSequence,
-						alt: 'Publication-safe verified-action sequence from interpreting a request through context resolution, eligibility and policy checks, confirmation where required, authorized execution, structured outcome verification, and communicating a supported result. Ambiguous or failed paths clarify or escalate.',
+						alt: 'Generalized verified-action sequence from interpreting a request through context resolution, eligibility and policy checks, confirmation where required, authorized execution, structured outcome verification, and communicating a supported result. Ambiguous or failed paths clarify or escalate.',
 						caption:
 							'Generic request lifecycle — ambiguous, ineligible, failed, or unverified paths do not become unsupported success messages.',
 						mobileFallback: [
@@ -2434,7 +2445,7 @@ export const projectsData = [
 					},
 				],
 			},
-			implementationTitle: 'Engineering ownership',
+			implementationTitle: 'What I built',
 			implementation: [
 				{
 					title: 'Stateful orchestration with LangGraph',
@@ -2451,6 +2462,10 @@ export const projectsData = [
 				{
 					title: 'Reliability improvements',
 					body: 'I improved predictable handling for negative, ambiguous, failed, and incomplete paths, including clarification or escalation instead of silently treating an unverified operation as successful.',
+				},
+				{
+					title: 'Multilingual response handling',
+					body: 'I worked with English, Spanish, and French response handling while keeping action semantics, guardrails, and state transitions independent from the wording shown to the user. Where language coverage or rollout was incomplete, I treated that as a test boundary rather than assuming production parity.',
 				},
 				{
 					title: 'Scenario-based evaluation and trace analysis',
@@ -2476,66 +2491,16 @@ export const projectsData = [
 					body: 'A tool call or model-generated statement was not treated as proof of completion. The workflow required an observed, structured outcome before presenting supported success to the user.',
 				},
 				{
+					title: 'Govern the response after execution',
+					body: 'I treated routine responses, sensitive outcomes, adjudication or revision passes, refusals, degraded behavior, and escalation as separate response paths. Not every turn needed the same level of review, but every path needed explicit semantics.',
+				},
+				{
 					title: 'Treat confirmation as conditional control',
 					body: 'Confirmation was modeled as a boundary for applicable consequential actions rather than an indiscriminate interaction step, preserving usability without removing the control.',
 				},
 				{
 					title: 'Use scenarios and traces to find failure modes',
 					body: 'Scenario-based regression and trace inspection exposed negative, ambiguous, and state-transition failures more usefully than relying on aggregate scores or a single happy-path demonstration.',
-				},
-			],
-			capabilitySummary:
-				'These generalized labels describe the engineering control surface, not private employer policies or a guarantee of perfect behavior.',
-			capabilityMatrix: [
-				{
-					title: 'Model-assisted interpretation',
-					status: 'Implemented',
-					description: 'The language model interprets requests but does not directly commit an operational action.',
-				},
-				{
-					title: 'Explicit workflow states and transitions',
-					status: 'Implemented',
-					description: 'LangGraph-based orchestration makes state and allowed progression explicit at the workflow boundary.',
-				},
-				{
-					title: 'Context and entity resolution',
-					status: 'Implemented',
-					description: 'Relevant context is resolved before the workflow proceeds toward an operational action.',
-				},
-				{
-					title: 'Eligibility and policy checks',
-					status: 'Implemented',
-					description: 'Generalized checks gate whether an action path may continue; private decision criteria are excluded.',
-				},
-				{
-					title: 'Confirmation for applicable consequential actions',
-					status: 'Restricted',
-					description: 'Confirmation is required where the workflow considers it necessary; exact conditions are intentionally not disclosed.',
-				},
-				{
-					title: 'Authorized tool execution',
-					status: 'Implemented',
-					description: 'Operational actions are separated behind an authorized structured tool boundary.',
-				},
-				{
-					title: 'Structured outcome verification',
-					status: 'Implemented',
-					description: 'Observed tool outcomes are inspected before the workflow communicates supported completion.',
-				},
-				{
-					title: 'Scenario, regression, and trace validation',
-					status: 'Validated',
-					description: 'Scenario-based checks, state-transition validation, regression coverage, trace inspection, and failure analysis were used without public counts or metrics.',
-				},
-				{
-					title: 'Unverified success communication',
-					status: 'Disabled',
-					description: 'An unverified tool call or plausible model response is not treated as proof that an operational action completed.',
-				},
-				{
-					title: 'Ambiguous or failed path escalation',
-					status: 'Implemented',
-					description: 'Ambiguous, ineligible, failed, or incomplete paths remain explicit and can clarify, decline, or escalate.',
 				},
 			],
 			evidenceTitle: 'Reliability and evaluation',
@@ -2929,7 +2894,7 @@ export const projectsData = [
 		url: 'ai-digital-twin-contextual-knowledge-retrieval-evaluation',
 		category: 'Retrieval Engineering / AI Evaluation',
 		summary:
-			'Owner-confirmed engineering work exploring contextual knowledge organization, vector RAG, GraphRAG, combined retrieval, and evaluation by question type.',
+			'I explored how contextual knowledge organization, vector RAG, GraphRAG, combined retrieval, and question-type evaluation can work together for professional context.',
 		img: digitalTwinCover,
 		imageAlt:
 			'Conceptual editorial collage for AI Digital Twin showing contextual archives, projects, meetings, emails, vector retrieval, GraphRAG, and combined retrieval strategies.',
@@ -2940,13 +2905,13 @@ export const projectsData = [
 			problem:
 				'Professional knowledge is distributed across projects, dates, emails, meetings, and other records, so semantic similarity alone may miss the context that makes retrieval useful.',
 			approach:
-				'Owner-confirmed experiments compared vector RAG, GraphRAG, and combined retrieval with response-time measurement, DeepEval/LLM evaluation, question-type comparison, and prompt refinement.',
+				'I compared vector RAG, GraphRAG, and combined retrieval with response-time measurement, DeepEval/LLM evaluation, question-type comparison, and prompt refinement.',
 			disciplines: ['Retrieval systems', 'GraphRAG', 'Evaluation engineering'],
 			alt: 'Conceptual AI Digital Twin collage showing contextual archives, vector retrieval, GraphRAG, combined approaches, and retrieval evaluation.',
 		},
 		ProjectHeader: {
 			title: 'AI Digital Twin — Contextual Knowledge, GraphRAG & Retrieval Evaluation',
-			publishDate: 'Evidence audit',
+			publishDate: 'Retrieval evaluation',
 			tags: 'Contextual Knowledge / GraphRAG / DeepEval',
 		},
 		ProjectInfo: {
@@ -2960,7 +2925,7 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Status',
-					details: 'Evidence audit — source access pending',
+					details: 'Retrieval evaluation — source access pending',
 				},
 				{
 					id: uuidv4(),
@@ -2989,36 +2954,37 @@ export const projectsData = [
 			SocialSharingHeading: 'Share This',
 		},
 		caseStudy: {
-			status: 'Evidence audit — source access pending',
+			status: 'Retrieval evaluation — source access pending',
+			showCapabilityMatrix: false,
 			headerFacts: ['Type', 'Status', 'Scope'],
 			editorialCover: {
 				img: digitalTwinCover,
 				alt: 'Conceptual editorial collage for AI Digital Twin showing project, document, meeting, and email archives connected to vector retrieval, GraphRAG, combined approaches, and retrieval evaluation.',
 				caption:
-					'Conceptual editorial artwork — a publication-safe visual of contextual archives and retrieval experiments. It is not an architecture export, benchmark chart, or claim of human-equivalent memory.',
+					'Conceptual editorial artwork — contextual archives and retrieval experiments. It is not an architecture export, benchmark chart, or claim of human-equivalent memory.',
 			},
 			overview:
-				'AI Digital Twin is an engineering effort exploring how distributed personal and professional knowledge can be organized around context and retrieved through multiple strategies. The owner confirms work with vector databases, project/date/source metadata, vector RAG, GraphRAG, combined retrieval, response-time measurement, DeepEval-based quality evaluation, and prompt refinement. Source-repository access was unavailable for this audit, so implementation-specific technologies and deployment details remain deliberately unclaimed.',
+				'I became interested in the digital-twin problem through knowledge rather than avatars. A useful assistant would need to connect projects, people, dates, emails, meetings, and decisions, then recover the context behind a question instead of matching a few similar words. I focused on organizing contextual knowledge and comparing retrieval strategies; I am not presenting this as human-equivalent memory or as proof that every workplace integration is complete.',
 			problem:
-				'Professional knowledge is spread across documents, projects, dates, emails, meetings, and other records. Semantic similarity can retrieve related language without preserving the relationships and time context that make an answer useful. The engineering question is when graph-enhanced retrieval adds value compared with vector-based RAG, and what quality and latency trade-offs appear for different question types. This is a retrieval and evaluation problem, not evidence of human-equivalent memory or autonomous long-term memory.',
+				'Professional knowledge is spread across documents, projects, dates, emails, meetings, and other records. Vector search is useful when the wording of a question differs from the source, but semantic similarity can miss who worked on a project, which meeting led to a decision, or how one event relates to another. I investigated whether graph-enhanced retrieval adds useful relationships over vector RAG, and what the quality and response-time trade-offs look like for different question types.',
 			architecture: {
 				summary:
-					'The publication-safe model below reflects owner-confirmed activities: contextual records are organized with metadata and vector representations; retrieval experiments compare vector RAG, GraphRAG, and a combined approach; retrieved evidence is passed into answer generation and evaluated. The exact vector database, graph persistence, extraction pipeline, fusion mechanism, session model, and runtime strategy selection could not be verified because the named source repositories were unavailable.',
+					'I organized the work around contextual records, metadata filters, and vector representations, then compared vector RAG, GraphRAG, and a combined approach before passing retrieved evidence to answer generation. I leave the exact database, graph persistence, extraction pipeline, fusion mechanism, session model, and runtime routing unspecified because those implementation artifacts were not available for this case.',
 				diagrams: [
 					{
 						title: 'Contextual knowledge organization and retrieval',
 						img: digitalTwinRetrievalDiagram,
-						alt: 'Publication-safe owner-confirmed model of contextual records organized with metadata and vector representations, compared through vector RAG, GraphRAG, and combined retrieval before evidence is passed to answer generation. Exact storage and graph construction details remain unverified.',
+						alt: 'Conceptual model of contextual records organized with metadata and vector representations, compared through vector RAG, GraphRAG, and combined retrieval before evidence is passed to answer generation. Exact storage and graph construction details are not specified.',
 						caption:
-							'Owner-confirmed retrieval activities are shown; vector-store and graph-construction technologies, extraction rules, fusion behavior, and automatic routing are not asserted.',
+							'The visual summarizes the retrieval work I explored; vector-store and graph-construction technologies, extraction rules, fusion behavior, and automatic routing are intentionally left unspecified.',
 						mobileFallback: [
 							{
 								title: 'Contextual records',
-								description: 'Projects, dates, emails, meetings, and other knowledge records are the owner-confirmed context categories.',
+								description: 'Projects, dates, emails, meetings, and other knowledge records form the contextual categories I explored.',
 							},
 							{
 								title: 'Metadata and vector organization',
-								description: 'Metadata filtering and vector representations are confirmed activities; exact schema and database product are not verified.',
+								description: 'Metadata filtering and vector representations narrow the context; the exact schema and database product are not specified here.',
 							},
 							{
 								title: 'Vector RAG',
@@ -3026,7 +2992,7 @@ export const projectsData = [
 							},
 							{
 								title: 'GraphRAG',
-								description: 'A relationship-aware retrieval strategy included in the comparative engineering work; graph construction details remain unverified.',
+								description: 'A relationship-aware retrieval strategy included in the comparison; graph construction details are not specified here.',
 							},
 							{
 								title: 'Combined retrieval',
@@ -3041,9 +3007,9 @@ export const projectsData = [
 					{
 						title: 'Comparative retrieval evaluation methodology',
 						img: digitalTwinEvaluationDiagram,
-						alt: 'Publication-safe evaluation flow comparing vector RAG, GraphRAG, and combined retrieval across question types, capturing measured response time and answer quality through DeepEval and an LLM-as-evaluator before informing prompt revisions.',
+						alt: 'Conceptual evaluation flow comparing vector RAG, GraphRAG, and combined retrieval across question types, measuring response time and assessing answer quality through DeepEval and an LLM-as-evaluator before informing prompt revisions.',
 						caption:
-							'Owner-confirmed methodology only — no private question set, metric names, benchmark scores, latency statistics, or universal winning strategy are published.',
+							'Conceptual methodology — no private question set, benchmark scores, latency statistics, or universal winning strategy are published.',
 						mobileFallback: [
 							{
 								title: 'Question set by type',
@@ -3067,7 +3033,7 @@ export const projectsData = [
 							},
 							{
 								title: 'Prompt refinement and rerun',
-								description: 'Evaluation findings informed prompt improvements; exact revisions and reproducibility artifacts remain unverified.',
+								description: 'Evaluation findings informed prompt improvements; exact revisions and reproducibility artifacts are not published.',
 							},
 						],
 					},
@@ -3075,15 +3041,15 @@ export const projectsData = [
 				components: [
 					{
 						name: 'Contextual knowledge records',
-						role: 'Projects, dates, emails, meetings, and related records form the owner-confirmed knowledge context.',
+					role: 'Projects, dates, emails, meetings, and related records form the contextual knowledge I explored.',
 					},
 					{
 						name: 'Metadata filtering',
-						role: 'Metadata is used to retrieve context appropriate to the question; exact fields and filter execution are not source-verified.',
+					role: 'Metadata narrows context appropriate to the question; exact fields and filter execution are not specified here.',
 					},
 					{
 						name: 'Vector retrieval',
-						role: 'Vector-based RAG is one of the evaluated retrieval strategies; product and index details remain unverified.',
+					role: 'Vector-based RAG was one of the retrieval strategies I compared; product and index details are not published.',
 					},
 					{
 						name: 'Graph-enhanced retrieval',
@@ -3091,76 +3057,27 @@ export const projectsData = [
 					},
 					{
 						name: 'Evaluation boundary',
-						role: 'DeepEval, LLM-as-evaluator review, response-time measurement, question-type comparison, and prompt refinement are owner-confirmed activities.',
+					role: 'I used DeepEval with an LLM-as-evaluator approach, response-time measurement, question-type comparison, and prompt refinement.',
 					},
 				],
 			},
-			capabilitySummary:
-				'Owner-confirmed means the owner attested that the activity occurred. Unverified means the current source audit could not inspect the implementation. Planned identifies architecture described in the historical Azure proposal, not deployed capability.',
-			capabilityMatrix: [
-				{
-					title: 'Contextual organization by projects, dates, emails, and meetings',
-					status: 'Owner-confirmed',
-					description: 'The owner confirms organizing personal-context knowledge around these records and other relevant contextual information.',
-				},
-				{
-					title: 'Metadata-based context filtering',
-					status: 'Owner-confirmed',
-					description: 'The owner confirms metadata filtering to retrieve context appropriate to a question; schema and implementation are not source-verified.',
-				},
-				{
-					title: 'Vector-based RAG',
-					status: 'Owner-confirmed',
-					description: 'Vector RAG was used and evaluated as an actual engineering strategy.',
-				},
-				{
-					title: 'GraphRAG',
-					status: 'Owner-confirmed',
-					description: 'GraphRAG was used and evaluated; entity extraction, traversal, and persistence details remain unverified.',
-				},
-				{
-					title: 'Combined GraphRAG + Vector RAG',
-					status: 'Owner-confirmed',
-					description: 'A combined retrieval approach was part of the comparative engineering work.',
-				},
-				{
-					title: 'Automatic strategy routing',
-					status: 'Unverified',
-					description: 'No automatic query router is claimed; source access is required to determine whether selection was manual or runtime-driven.',
-				},
-				{
-					title: 'DeepEval and LLM-as-evaluator',
-					status: 'Owner-confirmed',
-					description: 'DeepEval and an LLM-as-evaluator approach were used to assess answer quality.',
-				},
-				{
-					title: 'Measured response time',
-					status: 'Owner-confirmed',
-					description: 'Execution/response time was measured during the retrieval comparison; exact methodology and values are not published.',
-				},
-				{
-					title: 'Historical Arabic-first Azure architecture',
-					status: 'Unverified',
-					description: 'The separate Phase 1 proposal names Azure services, Terraform, Langfuse, and evaluation tools, but no deployment or project relationship is confirmed.',
-				},
-			],
-			implementationTitle: 'Engineering contributions',
+			implementationTitle: 'What I explored',
 			implementation: [
 				{
 					title: 'Contextual knowledge organization',
-					body: 'The owner confirms working with a knowledge model organized around projects, dates, emails, meetings, and other context so retrieval can reflect more than semantic similarity alone. Exact schema, indexing code, and storage technology remain unverified.',
+					body: 'I organized the work around projects, dates, emails, meetings, and other context so retrieval could reflect more than semantic similarity alone. The exact schema, indexing code, and storage technology are not part of this public case.',
 				},
 				{
 					title: 'Retrieval strategy experimentation',
-					body: 'The owner confirms implementing or working with vector RAG, GraphRAG, and a combined GraphRAG plus vector RAG strategy as comparative engineering activities.',
+					body: 'I compared vector RAG, GraphRAG, and a combined GraphRAG plus vector RAG strategy as retrieval engineering experiments.',
 				},
 				{
 					title: 'Evaluation design',
-					body: 'The owner confirms comparing the strategies across question types while measuring response time and evaluating answer quality with an LLM-as-evaluator approach using DeepEval.',
+					body: 'I compared the strategies across question types, measured response time, and assessed answer quality with DeepEval and an LLM-as-evaluator approach.',
 				},
 				{
 					title: 'Prompt refinement',
-					body: 'Evaluation findings informed prompt improvements. The public case does not claim a particular prompt revision, score increase, or universally superior retrieval strategy without the underlying artifacts.',
+					body: 'The experiments informed prompt improvements. I do not claim a particular score increase or universally superior retrieval strategy without the underlying artifacts.',
 				},
 			],
 			decisionsTitle: 'Engineering decisions and trade-offs',
@@ -3171,11 +3088,11 @@ export const projectsData = [
 				},
 				{
 					title: 'Use contextual metadata as part of retrieval reasoning',
-					body: 'Projects, dates, source types, emails, and meetings provide context that can narrow or qualify a retrieval request. The exact filter order and implementation remain source-verification questions.',
+					body: 'Projects, dates, source types, emails, and meetings provide context that can narrow or qualify a retrieval request. I leave the exact filter order and implementation unspecified.',
 				},
 				{
 					title: 'Evaluate by question type',
-					body: 'A single aggregate result could hide where vector, graph, or combined retrieval helps. The owner confirms question-type comparison, while the specific categories and results remain private or unavailable.',
+					body: 'A single aggregate result could hide where vector, graph, or combined retrieval helps. I compared question types, but the specific categories and results remain private or unavailable.',
 				},
 				{
 					title: 'Treat prompt changes as evaluation-driven',
@@ -3183,32 +3100,32 @@ export const projectsData = [
 				},
 				{
 					title: 'Do not imply automatic runtime routing',
-					body: 'The case describes comparable retrieval experiments, not an automatic router that selects a strategy for every question. That distinction remains until source code confirms otherwise.',
+					body: 'I describe comparable retrieval experiments, not an automatic router that selects a strategy for every question. That distinction remains until implementation evidence supports it.',
 				},
 			],
-			evidenceTitle: 'Evidence and verification boundary',
+			evidenceTitle: 'What the evidence supports',
 			evidence: [
 				{
-					title: 'Owner-confirmed activities',
-					body: 'The owner confirms contextual vector knowledge, metadata filtering, vector RAG, GraphRAG, combined retrieval, response-time measurement, DeepEval/LLM-as-evaluator assessment, question-type comparison, and prompt refinement.',
+					title: 'Engineering activities',
+					body: 'The work covered contextual knowledge organization, metadata filtering, vector RAG, GraphRAG, combined retrieval, response-time measurement, DeepEval/LLM-as-evaluator assessment, question-type comparison, and prompt refinement.',
 				},
 				{
 					title: 'Source repository access',
-					body: 'The named middleware repository was checked through its exact Azure DevOps remote, but access failed with an SSH permission error. The named knowledge-base repository was not available at the confirmed local paths and no accessible remote was supplied.',
+					body: 'The implementation repositories were not available for this portfolio case, so I am keeping database, graph, extraction, fusion, and runtime details at the level described above.',
 				},
 				{
 					title: 'Historical architecture plan',
-					body: 'The Arabic-first Azure Phase 1 plan is treated as a separate or unresolved proposal. Its services are not presented as deployed Digital Twin infrastructure.',
+					body: 'The Arabic-first Azure Phase 1 plan is separate from this retrieval study. I do not present its services as deployed Digital Twin infrastructure.',
 				},
 				{
 					title: 'Publication boundary',
-					body: 'No private evaluation questions, scores, latency statistics, personal records, employer-specific results, credentials, endpoints, or benchmark charts are included.',
+					body: 'I have excluded private evaluation questions, scores, latency statistics, personal records, employer-specific results, credentials, endpoints, and benchmark charts.',
 				},
 			],
 			limitations: [
 				{
 					title: 'Implementation details require source access',
-					body: 'The exact vector database, graph store, entity/relation extraction, traversal, fusion, reranking, prompt construction, session handling, tests, and evaluation artifacts remain unverified.',
+					body: 'I do not identify the exact vector database, graph store, entity/relation extraction, traversal, fusion, reranking, prompt construction, session handling, tests, or evaluation artifacts in this case.',
 				},
 				{
 					title: 'No human-equivalent memory claim',
@@ -3220,7 +3137,7 @@ export const projectsData = [
 				},
 				{
 					title: 'No deployment claim from the Azure proposal',
-					body: 'Azure Document Intelligence, Azure AI Search, Azure OpenAI, Azure PostgreSQL, Azure Storage, Container Apps, Terraform, Langfuse, RAGAS, and other plan references remain unverified.',
+					body: 'Azure Document Intelligence, Azure AI Search, Azure OpenAI, Azure PostgreSQL, Azure Storage, Container Apps, Terraform, Langfuse, RAGAS, and other plan references belong to a separate proposal and are not presented as deployed here.',
 				},
 				{
 					title: 'Private corpus and evaluation artifacts',

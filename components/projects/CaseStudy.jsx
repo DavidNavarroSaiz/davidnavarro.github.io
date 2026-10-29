@@ -257,6 +257,7 @@ function CaseStudy({ project }) {
 		capabilitySummary,
 		links,
 	} = caseStudy;
+	const showCapabilityMatrix = caseStudy.showCapabilityMatrix !== false;
 
 	const factTitles = caseStudy.headerFacts ?? ['Role', 'Duration'];
 	const facts = (ProjectInfo?.CompanyInfo ?? []).filter((info) => factTitles.includes(info.title));
@@ -266,7 +267,7 @@ function CaseStudy({ project }) {
 	const sections = [
 		problem && { id: 'problem', label: 'Problem and context' },
 		architecture && { id: 'architecture', label: 'System architecture' },
-		capabilityMatrix?.length && { id: 'capabilities', label: 'Security and capability boundaries' },
+		capabilityMatrix?.length && showCapabilityMatrix && { id: 'capabilities', label: 'Security and capability boundaries' },
 		implementation?.length && { id: 'implementation', label: implementationTitle ?? 'Implementation' },
 		decisions?.length && { id: 'decisions', label: decisionsTitle ?? 'Decisions and trade-offs' },
 		evidence?.length && { id: 'evidence', label: evidenceTitle ?? 'Evaluation and operations' },
@@ -417,7 +418,7 @@ function CaseStudy({ project }) {
 						</Section>
 					)}
 
-					{capabilityMatrix?.length > 0 && (
+					{capabilityMatrix?.length > 0 && showCapabilityMatrix && (
 						<Section id="capabilities" title="Security and capability boundaries">
 							{capabilitySummary && <p className={proseClass}>{capabilitySummary}</p>}
 							<CapabilityStatusMatrix items={capabilityMatrix} />
