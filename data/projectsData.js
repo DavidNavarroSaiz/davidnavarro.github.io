@@ -3157,7 +3157,7 @@ export const projectsData = [
 		url: 'ai-agent-evaluation-experimentation-framework',
 		category: 'Agent Evaluation / Reliability Engineering',
 		summary:
-			'Config-driven evaluation framework for testing grounded answers, retrieval behavior, tool use, workflow outcomes, and safety boundaries across repeatable agent experiments.',
+			'Config-driven, agent-agnostic evaluation platform that connects to knowledge bases, generates ground-truthed datasets, registers agents and metrics, and compares experiments across quality, retrieval, behavior, safety, and efficiency.',
 		img: aiAgentEvaluationCover,
 		imageAlt:
 			'Conceptual editorial illustration of AI agent evaluation with datasets, agent traces, deterministic checks, LLM-based evaluation, experiment comparison, and reproducibility; not a benchmark result or product screenshot.',
@@ -3165,7 +3165,7 @@ export const projectsData = [
 		ProjectHeader: {
 			title: 'AI Agent Evaluation & Experimentation Framework',
 			publishDate: '2026',
-			tags: 'Agent Evaluation / RAG / Experimentation',
+			tags: 'Agent Evaluation / Knowledge Bases / Experimentation',
 		},
 		ProjectInfo: {
 			ClientHeading: 'Project status',
@@ -3183,11 +3183,11 @@ export const projectsData = [
 			],
 			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
-				'Make agent changes comparable by running fixed datasets through reusable adapters, configurable metric families, and traceable experiment outputs.',
+				'Make agent changes comparable without rewriting the harness: connect a knowledge base, generate a dataset with explicit source context, register the agent and metrics, run repeatable experiments, and inspect both aggregate and per-example evidence.',
 			Technologies: [
 				{
 					title: 'Evaluation stack',
-					techs: ['Python', 'YAML configuration', 'RAGAS', 'DeepEval', 'Opik', 'LangGraph', 'pytest'],
+					techs: ['Python', 'YAML configuration', 'KB adapters', 'Metric registry', 'RAGAS', 'DeepEval', 'Opik', 'LangGraph', 'pytest'],
 				},
 			],
 			ProjectDetailsHeading: 'Evidence boundary',
@@ -3205,27 +3205,31 @@ export const projectsData = [
 					'Conceptual illustration — datasets, traces, metric families, experiment comparison, and reproducibility. It does not show measured benchmark results.',
 			},
 			overview:
-				'I wanted a way to answer a simple question: when I change an agent\'s prompt, retrieval strategy, or workflow, did I actually improve the system? A convincing answer is not enough if the agent called the wrong tool, missed important context, violated a constraint, or chose the wrong escalation path. I built around repeatable datasets, objective checks, and experiment artifacts so those differences could be investigated.',
+				'I built a reusable evaluation platform for the question that follows any agent change: did the system improve, and where? The platform was designed to connect to a knowledge base through a small source contract, generate evaluation data from that source, run any compatible agent, and compare experiments with the same dataset and metric configuration. That made it possible to evaluate retrieval agents, tool-using agents, and multi-step workflows without coupling the runner to one implementation.',
 			problem:
-				'Manual testing makes it too easy to remember the successful conversations and forget the awkward ones. I needed an evaluation layer that could exercise the whole agent behavior: the answer, the evidence it used, the actions it took, the order of those actions, and the way it failed when a request was ambiguous or disallowed.',
+				'Manual testing makes it too easy to remember successful conversations and forget the awkward ones. Evaluation also becomes misleading when a dataset is built from one store while the agent searches another, or when every agent is forced into a response shape that hides retrieval and tool behavior. I needed a layer that preserved source context, normalized different agent outputs, and made the same experiment easy to repeat after a prompt, retrieval, model, or workflow change.',
 			architecture: {
 				summary:
-					'I separated dataset preparation, agent execution, evidence capture, metric evaluation, and experiment analysis. The evaluation engines compute the configured checks; Opik is an optional observability and inspection integration rather than the evaluation engine itself.',
+					'I separated knowledge-base access, dataset preparation, agent execution, evidence capture, metric evaluation, and experiment analysis. A knowledge-base source provides bulk chunks and semantic search through one interface, so the builder can work with a local vector store or a compatible external knowledge base. Registered agents return a common output shape — answer, retrieved context, tool calls, trace, latency, and metadata — while the metric registry selects checks that match the evidence available for that experiment. Optional observability helps inspect runs; it is not the evaluation engine itself.',
 				diagrams: [
 					{
 						title: 'Evaluation and experiment flow',
 						img: evaluationFrameworkDiagram,
-						alt: 'Editable conceptual architecture showing dataset preparation feeding an agent adapter, captured responses and traces feeding configurable metric evaluation, and run comparison supported by optional Opik observability. It is not a benchmark result or production monitoring diagram.',
+						alt: 'Editable conceptual architecture showing a knowledge-base source feeding dataset preparation, a registered agent adapter producing captured responses and traces, configurable metric evaluation, and comparison artifacts with optional observability. It is not a benchmark result or production monitoring diagram.',
 						caption:
 							'Conceptual engineering view — metric evaluation and optional observability are shown as separate responsibilities. No scores, rankings, customer prompts, or private datasets are included.',
 						mobileFallback: [
 							{
-								title: 'Dataset preparation',
-								description: 'Curated and synthetic cases are validated against the knowledge context and reference fields they are meant to test.',
+								title: 'Knowledge-base connection',
+								description: 'A shared source interface can read chunks in bulk and perform semantic search against a local or external knowledge base.',
 							},
 							{
-								title: 'Agent adapter',
-								description: 'A reusable adapter runs the selected agent against the fixed evaluation examples and captures structured output.',
+								title: 'Dataset generation',
+								description: 'Single-chunk, multi-chunk, and topic-based methodologies create questions with the source context and generation method preserved as metadata.',
+							},
+							{
+								title: 'Registered agent adapter',
+								description: 'A registered agent runs against the fixed dataset and returns a normalized answer, retrieval context, actions, trace, timing, and metadata.',
 							},
 							{
 								title: 'Evidence capture',
@@ -3233,27 +3237,31 @@ export const projectsData = [
 							},
 							{
 								title: 'Metric evaluation',
-								description: 'Configured deterministic, reference-based, retrieval, workflow, safety, or model-assisted metrics are applied selectively.',
+								description: 'Registered deterministic, reference-based, retrieval, workflow, safety, cost, latency, or model-assisted metrics are applied only when their inputs are valid.',
 							},
 							{
 								title: 'Experiment analysis',
-								description: 'Run outputs, timing, failures, and metric summaries support comparisons without turning a single score into a universal ranking.',
+								description: 'Run outputs, timing, failures, per-metric statistics, and weighted summaries support comparisons without turning a single score into a universal ranking.',
 							},
 						],
 					},
 				],
 				components: [
 					{
-						name: 'Dataset builder and validator',
-						role: 'Builds curated or synthetic question/answer cases, preserves reference context, and checks dataset consistency before evaluation.',
+						name: 'Knowledge-base source contract',
+						role: 'Exposes bulk chunk retrieval and semantic search through the same interface for local vector stores or compatible external knowledge bases.',
 					},
 					{
-						name: 'Agent adapters',
-						role: 'Provides reusable execution paths for different agent shapes while keeping the experiment configuration separate from the runner.',
+						name: 'Dataset builder',
+						role: 'Generates source-grounded examples with single-chunk, multi-chunk, and topic-based methodologies, including the supporting chunk identities and generation metadata.',
+					},
+					{
+						name: 'Agent registry and adapters',
+						role: 'Registers agent implementations behind a common run/configure interface, so RAG, ReAct, multi-agent, or custom agents can use the same runner.',
 					},
 					{
 						name: 'Metric registry',
-						role: 'Creates configured metric implementations by type, threshold, weight, and agent-compatible inputs.',
+						role: 'Registers configurable metric implementations by type, threshold, weight, and the evidence fields an agent exposes.',
 					},
 					{
 						name: 'Experiment runner',
@@ -3268,61 +3276,73 @@ export const projectsData = [
 			implementationTitle: 'What I built',
 			implementation: [
 				{
-					title: 'Datasets that preserve their evidence',
-					body: 'I worked with curated and synthetic question/answer cases, including adversarial examples, then kept reference answers and relevant context tied to the dataset. That relationship matters: if a dataset was built from one chunk identity but the evaluated agent searches another indexed collection, Recall@K can look precise while measuring the wrong thing.',
+					title: 'A knowledge-base boundary that stays interchangeable',
+					body: 'I defined the dataset layer around a small source interface for bulk chunk retrieval and semantic search. That let the same builder use a local vector-store adapter or connect over HTTP to an external knowledge base, while keeping stable chunk identifiers and source metadata attached to each example. The practical requirement is explicit: a knowledge base must expose the fields needed for export and search; the evaluation logic itself is not tied to one vendor or storage engine.',
 				},
 				{
-					title: 'Configuration-driven experiments',
-					body: 'Experiment configuration selects the agent, dataset, metric definitions, thresholds, and optional observability behavior. The runner can therefore repeat a comparison after a prompt, retrieval, or workflow change without rewriting the evaluation harness.',
+					title: 'Dataset generation through different methodologies',
+					body: 'I supported three complementary ways to build evaluation data. Single-chunk generation creates focused baseline questions from one source chunk. Multi-chunk generation creates questions that require two to four chunks, grouped from the same document, adjacent sections, semantic neighbors, or precomputed clusters. Topic-based generation starts from realistic topic queries, retrieves relevant context, and asks the model to generate questions from that retrieved set. Each example keeps its supporting chunk IDs, answer context, source metadata, and generation method, so the dataset is inspectable rather than a bag of opaque prompts.',
 				},
 				{
-					title: 'Metric families for different failure modes',
-					body: 'For grounded answers I used RAGAS-style faithfulness, answer relevancy, context precision, and context recall where the example contains the required references. DeepEval integrations cover semantic similarity and LLM-as-judge style assessment. Retrieval metrics such as Precision@K and Recall@K, and task-oriented checks such as action-trace match, workflow success, invalid parameters, forbidden actions, and escalation correctness are selected when the agent output exposes those fields.',
+					title: 'Any compatible agent can enter through the registry',
+					body: 'Agents implement a common contract for running an input and reporting configuration. Registration keeps the experiment runner independent from the implementation, while the normalized output can carry the answer, retrieved IDs and text, tool calls, raw trace, latency, and metadata. The reference implementations cover deterministic RAG, tool-using ReAct, and supervisor-based multi-agent workflows; the same path can be extended with a custom agent adapter.',
 				},
 				{
-					title: 'Runs that explain failure',
-					body: 'Each run keeps more than an aggregate score: configuration, outputs, timing, runtime failures, metric details, and comparison artifacts give me a place to ask which part of the system changed and why.',
+					title: 'Metrics are registered by family and selected by contract',
+					body: 'The metric registry made it possible to add and configure checks without changing the runner. The available families cover answer quality and grounding, retrieval ranking and recall, exact structured outputs, tool-call and workflow correctness, routing and escalation, safety and guardrails, runtime errors, latency, token usage, and response length. Thresholds and weights are explicit, and a metric is only meaningful when the selected agent exposes the evidence it needs.',
 				},
 				{
-					title: 'Optional observability',
-					body: 'I integrated Opik as an optional path for dataset, prompt, trace, and experiment inspection. That makes runs easier to investigate when enabled, but it is not a claim that every experiment was continuously monitored in production.',
+					title: 'Experiments that can be compared, not just executed',
+					body: 'An experiment configuration selects the agent, dataset, metric definitions, thresholds, sample limits, and optional observability. Running the same dataset against different agent versions, prompts, retrieval strategies, or metric configurations produces JSON, CSV, and Markdown artifacts with per-example results, per-metric mean and pass-rate statistics, weighted summaries, timing, and failures. That makes it possible to compare experiments and metrics side by side without publishing private scores.',
 				},
 			],
 			decisionsTitle: 'Engineering decisions and trade-offs',
 			decisions: [
 				{
+					title: 'Make the knowledge-base boundary interchangeable',
+					body: 'The builder should not care whether chunks come from a local vector store or an external knowledge base. A shared export-and-search contract keeps dataset creation and evaluation aligned while leaving the storage implementation replaceable.',
+				},
+				{
+					title: 'Keep dataset methodology visible',
+					body: 'Single-chunk, multi-chunk, and topic-based questions expose different failure modes. Recording the strategy, supporting chunks, source version, and retrieval context makes it possible to compare results without pretending every example measures the same behavior.',
+				},
+				{
 					title: 'Use deterministic checks for hard contracts',
 					body: 'Exact structured-output, action-trace, forbidden-action, invalid-parameter, and workflow-outcome checks are repeatable and easy to explain. They are the right tool when the contract is explicit, but they cannot judge every useful variation in a natural-language answer.',
 				},
 				{
-					title: 'Use references and judges with clear limits',
-					body: 'Reference-answer and semantic metrics help with meaning and groundedness, while LLM-based judges can review qualities that are difficult to encode deterministically. They add model bias and variance, so I treat them as evidence to inspect rather than as unquestionable truth.',
-				},
-				{
-					title: 'Keep dataset and retrieval identities aligned',
-					body: 'Retrieval quality is only interpretable when the expected context and the indexed context refer to the same underlying chunks. Dataset validity is therefore part of the measurement design, not a cleanup step after the results arrive.',
+					title: 'Compare metrics without hiding their assumptions',
+					body: 'Reference-answer and semantic metrics help with meaning and groundedness, retrieval metrics need reliable context identities, and agent-specific metrics need traces or structured fields. I kept thresholds, weights, and metric inputs explicit so a comparison explains what was measured instead of collapsing everything into an unexplained score.',
 				},
 				{
 					title: 'Make observability optional',
-					body: 'The evaluation runner should still be useful without a live observability service. Treating Opik as an optional integration keeps local and automated runs decoupled from a particular deployment choice.',
+					body: 'The evaluation runner should still be useful without a live observability service. Optional tracing and experiment inspection make runs easier to investigate, but they are not a claim that every experiment was continuously monitored in production.',
 				},
 			],
 			evidenceTitle: 'Validation and evidence',
 			evidence: [
 				{
-					title: 'Repository structure',
-					body: 'The reference implementation contains dataset-builder, agent, metric, runner, and observability modules, with unit and integration test areas for those boundaries. This page describes supported engineering capability, not a claim that every metric combination ran against a production workload.',
+					title: 'Interchangeable source and registration boundaries',
+					body: 'The implementation separates knowledge-base adapters, dataset strategies, agent registration, metric registration, experiment execution, and observability. Those boundaries are testable independently and keep the runner from depending on one knowledge base or one agent architecture.',
 				},
 				{
-					title: 'Failure analysis',
-					body: 'Runtime errors, invalid parameters, forbidden actions, failed workflow outcomes, timing, and per-metric details are represented as evidence when the selected agent adapter supplies them. That is more useful than hiding failure modes behind a single average.',
+					title: 'Dataset and metric evidence',
+					body: 'Generated examples retain their supporting chunk identities, source metadata, strategy, and expected answer. Evaluation results retain configuration, outputs, timing, runtime failures, metric details, and comparison artifacts, which makes a failure inspectable rather than hidden behind a single average.',
 				},
 				{
 					title: 'Experiment comparison',
-					body: 'Run artifacts are structured for comparison across configuration changes. I am intentionally not publishing private scores, rankings, benchmark results, or internal dataset examples.',
+					body: 'Run artifacts are structured for comparison across agent, prompt, retrieval, and metric configuration changes. I am intentionally not publishing private scores, rankings, benchmark results, or internal dataset examples.',
 				},
 			],
 			limitations: [
+				{
+					title: 'Knowledge-base compatibility is explicit',
+					body: 'The platform can work with different knowledge bases through the shared source contract, but a source still needs reliable bulk export, semantic search, stable chunk identities, and the metadata required by the selected metrics.',
+				},
+				{
+					title: 'Generated datasets still need review',
+					body: 'Synthetic generation improves coverage but does not remove the need for spot checks. Simple word-overlap validation is not sufficient for every multi-chunk answer, so dataset quality remains part of the evaluation design.',
+				},
 				{
 					title: 'Metrics are contract-dependent',
 					body: 'Not every agent exposes retrieved context, action traces, workflow outcomes, or reference fields. A metric should be applied only when its inputs and semantics are valid for that experiment.',
