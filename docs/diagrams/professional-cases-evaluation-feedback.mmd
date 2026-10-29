@@ -1,0 +1,25 @@
+%% Professional Cases — implemented evaluation lifecycle
+%% The dashed browser feedback path is a remaining integration boundary.
+flowchart LR
+    A[Approved generated case] --> B[Authorized Senior runtime]
+    B --> C[Persisted text investigation]
+    C --> D[Conclusion snapshot]
+    D --> E[Evaluation-spec gate]
+    E -->|valid spec| F[Structured LLM dimension judgments]
+    E -. missing / incomplete .-> X[Stop with explicit error]
+    F --> G[Validate dimensions + evidence refs]
+    F -. provider failure .-> Y[Retryable error, no fallback score]
+    G --> H[Deterministic weighted assembly]
+    G -. invalid output or hallucinated reference .-> Y
+    H --> I[Persist score + semantic evaluation result]
+    I -. browser BFF cutover and feedback presentation .-> Z[Planned integration]
+
+    classDef current fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
+    classDef model fill:#2B211D,stroke:#D67B56,color:#ECE5D7
+    classDef failure fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
+    classDef planned fill:#24232B,stroke:#8F8AA8,color:#D8D4E7
+
+    class A,B,C,D,E,G,H,I current
+    class F model
+    class X,Y failure
+    class Z planned

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Professional Cases evaluation and feedback lifecycle</title>
+  <desc id="desc">Current backend lifecycle from an approved generated case through an authorized text runtime, persisted investigation, conclusion snapshot, evaluation specification validation, structured language-model judgments, deterministic score assembly, and a persisted semantic evaluation result. Missing specifications and invalid provider output stop safely; browser feedback presentation remains a planned integration.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7FA7B4"/>
+    </marker>
+    <marker id="fallback-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B8A58C"/>
+    </marker>
+    <marker id="planned-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8F8AA8"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="700" fill="#11161B"/>
+  <text x="50" y="54" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="28" font-weight="600">Evaluation and feedback lifecycle</text>
+  <text x="50" y="84" fill="#B8A58C" font-family="General Sans, Arial, sans-serif" font-size="15">Current backend evaluation path — safe failure boundaries remain explicit</text>
+  <text x="50" y="122" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">IMPLEMENTED BACKEND LIFECYCLE</text>
+
+  <g fill="none" stroke="#7FA7B4" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M220 280 H240"/>
+    <path d="M410 280 H430"/>
+    <path d="M600 280 H620"/>
+    <path d="M790 280 H810"/>
+    <path d="M980 280 H1000"/>
+    <path d="M1170 280 H1190"/>
+    <path d="M1360 280 H1380"/>
+  </g>
+  <g fill="none" stroke="#B8A58C" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#fallback-arrow)">
+    <path d="M895 360 V470"/>
+    <path d="M1085 360 C1085 430 1050 450 1030 470"/>
+    <path d="M1275 360 C1275 430 1160 450 1110 470"/>
+  </g>
+  <g fill="none" stroke="#8F8AA8" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#planned-arrow)">
+    <path d="M1465 360 V570"/>
+  </g>
+
+  <g font-family="General Sans, Arial, sans-serif">
+    <g>
+      <rect x="50" y="200" width="170" height="160" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="70" y="232" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">01 / START</text>
+      <text x="70" y="275" fill="#ECE5D7" font-size="17" font-weight="600">Approved</text>
+      <text x="70" y="302" fill="#ECE5D7" font-size="17" font-weight="600">generated case</text>
+      <text x="70" y="335" fill="#B8A58C" font-size="13">Assignment-ready</text>
+    </g>
+    <g>
+      <rect x="240" y="200" width="170" height="160" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="260" y="232" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">02 / AUTHORIZE</text>
+      <text x="260" y="275" fill="#ECE5D7" font-size="17" font-weight="600">Senior runtime</text>
+      <text x="260" y="302" fill="#ECE5D7" font-size="15">Ownership + status</text>
+      <text x="260" y="335" fill="#B8A58C" font-size="13">Token boundary</text>
+    </g>
+    <g>
+      <rect x="430" y="200" width="170" height="160" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="450" y="232" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">03 / CAPTURE</text>
+      <text x="450" y="275" fill="#ECE5D7" font-size="17" font-weight="600">Text investigation</text>
+      <text x="450" y="302" fill="#ECE5D7" font-size="15">Transcript + findings</text>
+      <text x="450" y="335" fill="#B8A58C" font-size="13">Persisted work</text>
+    </g>
+    <g>
+      <rect x="620" y="200" width="170" height="160" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="640" y="232" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">04 / SUBMIT</text>
+      <text x="640" y="275" fill="#ECE5D7" font-size="17" font-weight="600">Conclusion</text>
+      <text x="640" y="302" fill="#ECE5D7" font-size="15">Immutable snapshot</text>
+      <text x="640" y="335" fill="#B8A58C" font-size="13">Evaluating state</text>
+    </g>
+    <g>
+      <rect x="810" y="200" width="170" height="160" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="830" y="232" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">05 / GATE</text>
+      <text x="830" y="275" fill="#ECE5D7" font-size="17" font-weight="600">Evaluation spec</text>
+      <text x="830" y="302" fill="#ECE5D7" font-size="15">Validate rubric</text>
+      <text x="830" y="335" fill="#B8A58C" font-size="13">No generic fallback</text>
+    </g>
+    <g>
+      <rect x="1000" y="200" width="170" height="160" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="1020" y="232" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">06 / JUDGE</text>
+      <text x="1020" y="275" fill="#ECE5D7" font-size="17" font-weight="600">Structured LLM</text>
+      <text x="1020" y="302" fill="#ECE5D7" font-size="15">Dimension judgments</text>
+      <text x="1020" y="335" fill="#B8A58C" font-size="13">Evidence references</text>
+    </g>
+    <g>
+      <rect x="1190" y="200" width="170" height="160" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="1210" y="232" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">07 / ASSEMBLE</text>
+      <text x="1210" y="275" fill="#ECE5D7" font-size="17" font-weight="600">Validate + score</text>
+      <text x="1210" y="302" fill="#ECE5D7" font-size="15">Deterministic weights</text>
+      <text x="1210" y="335" fill="#B8A58C" font-size="13">Server authority</text>
+    </g>
+    <g>
+      <rect x="1380" y="200" width="170" height="160" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="1400" y="232" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">08 / PERSIST</text>
+      <text x="1400" y="275" fill="#ECE5D7" font-size="17" font-weight="600">Evaluation result</text>
+      <text x="1400" y="302" fill="#ECE5D7" font-size="15">Score + gaps</text>
+      <text x="1400" y="335" fill="#B8A58C" font-size="13">Semantic result</text>
+    </g>
+  </g>
+
+  <g font-family="General Sans, Arial, sans-serif">
+    <rect x="50" y="570" width="440" height="72" rx="8" fill="#24232B" stroke="#8F8AA8"/>
+    <text x="74" y="600" fill="#8F8AA8" font-family="Consolas, monospace" font-size="11" letter-spacing="1.1">PLANNED INTEGRATION</text>
+    <text x="74" y="626" fill="#D8D4E7" font-size="14">Browser BFF cutover + feedback presentation</text>
+
+    <rect x="690" y="470" width="260" height="72" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+    <text x="714" y="500" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.1">INCOMPLETE CONTENT</text>
+    <text x="714" y="526" fill="#ECE5D7" font-size="14">Stop explicitly; no fabricated score</text>
+
+    <rect x="980" y="470" width="390" height="72" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+    <text x="1004" y="500" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.1">PROVIDER / CONTRACT FAILURE</text>
+    <text x="1004" y="526" fill="#ECE5D7" font-size="14">Retry or reject; no fallback score</text>
+  </g>
+
+  <text x="50" y="682" fill="#B8A58C" font-family="Consolas, monospace" font-size="11">Current backend lifecycle only — no public adoption, learning outcome, or production availability is implied.</text>
+</svg>

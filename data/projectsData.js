@@ -62,12 +62,15 @@ import codingAgentEvaluationCover from '../assets/images/coding-agent-evaluation
 import pmEditorialCover from '../assets/images/pm-ai-agent-editorial.webp';
 import enterpriseAiWorkspaceCover from '../assets/images/enterprise-ai-workspace-editorial.webp';
 import policyGovernedAgentsCover from '../assets/images/policy-governed-ai-agents-editorial.webp';
+import professionalCasesCover from '../assets/images/professional-cases-editorial.webp';
 import evaluationWorkflowDiagram from '../docs/diagrams/coding-agent-evaluation-workflow.svg';
 import evaluationArtifactsDiagram from '../docs/diagrams/coding-agent-evaluation-artifacts.svg';
 import enterpriseWorkspaceArchitecture from '../docs/diagrams/enterprise-ai-workspace-architecture.svg';
 import enterpriseWorkspaceRetrieval from '../docs/diagrams/enterprise-ai-workspace-retrieval.svg';
 import policyGovernedAgentsArchitecture from '../docs/diagrams/policy-governed-agents-architecture.svg';
 import policyGovernedAgentsSequence from '../docs/diagrams/policy-governed-agents-sequence.svg';
+import professionalCasesIngestionDiagram from '../docs/diagrams/professional-cases-ingestion-generation.svg';
+import professionalCasesEvaluationDiagram from '../docs/diagrams/professional-cases-evaluation-feedback.svg';
 
 export const projectsData = [
 	{
@@ -2535,6 +2538,347 @@ export const projectsData = [
 				{
 					title: 'No perfect safety or correctness claim',
 					body: 'The approach reduces avoidable unsupported actions and makes failure paths more explicit; it does not claim zero failure risk, perfect policy compliance, or universal correctness.',
+				},
+			],
+		},
+	},
+	{
+		id: 18,
+		title: 'Professional Cases — AI-Powered Professional Practice Scenarios',
+		url: 'professional-cases-ai-practice-scenarios',
+		category: 'Independent AI Product Engineering / Knowledge Systems',
+		summary:
+			'Independent product under development for turning professional knowledge into practice scenarios, reviewable cases, and respectful rubric-based feedback.',
+		img: professionalCasesCover,
+		imageAlt:
+			'Conceptual editorial illustration for Professional Cases: documents, images, knowledge organization, case generation, and assessment. Audio and video symbols are visual motifs, not proof of implemented speech capabilities.',
+		ProjectHeader: {
+			title: 'Professional Cases — AI-Powered Professional Practice Scenarios',
+			publishDate: 'In development',
+			tags: 'Knowledge Systems / Case Generation / Evaluation',
+		},
+		ProjectInfo: {
+			ClientHeading: 'Project status',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Type',
+					details: 'Independent project',
+				},
+				{
+					id: uuidv4(),
+					title: 'Status',
+					details: 'Independent Project — In Development',
+				},
+				{
+					id: uuidv4(),
+					title: 'Scope',
+					details: 'Knowledge, generation, evaluation, and backend runtime',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Help experienced and retired professionals continue exercising professional judgment through realistic, profession-specific practice scenarios and respectful feedback, while keeping the current product boundary honest.',
+			Technologies: [
+				{
+					title: 'Technologies',
+					techs: [
+						'Next.js / React',
+						'Python / FastAPI',
+						'PostgreSQL / pgvector',
+						'Redis / Celery',
+						'LangGraph',
+						'Google GenAI client',
+						'PyMuPDF',
+						'scikit-learn',
+						'Alembic',
+					],
+				},
+			],
+			ProjectDetailsHeading: 'Implementation evidence',
+			ProjectDetails: [],
+			SocialSharingHeading: 'Share This',
+		},
+		caseStudy: {
+			status: 'Independent Project — In Development',
+			headerFacts: ['Type', 'Status', 'Scope'],
+			editorialCover: {
+				img: professionalCasesCover,
+				alt: 'Conceptual editorial illustration for Professional Cases showing documents, images, knowledge organization, case generation, and assessment. Audio and video symbols are visual motifs only; the current implementation is text-first and does not claim speech support.',
+				caption:
+					'Conceptual editorial artwork — documents, images, knowledge organization, scenario generation, and assessment. The audio/video symbols are not evidence of implemented modalities; the verified product boundary is text-first and in development.',
+			},
+			overview:
+				'Professional Cases is an independent product under development for experienced and retired professionals who want to continue exercising professional judgment through realistic, profession-specific practice scenarios and respectful feedback. The verified repository contains a Next.js/React web surface, a FastAPI backend, knowledge and content tooling, case generation, semantic evaluation, and a partially integrated Senior runtime. The browser Senior experience still uses deterministic mock BFF routes, so this case does not present the product as launched or publicly available.',
+			problem:
+				'Professional knowledge arrives as heterogeneous documents, images, terminology, and domain context. Turning that material into useful practice requires more than retrieving a paragraph: the system needs traceable ingestion, searchable evidence, topic diversity, case seeds, generated narratives, quality checks, and feedback grounded in the professional work. The product goal is to preserve dignity and professional identity without reducing the experience to a generic quiz, an AI chatbot, or unsupported claims about learning outcomes.',
+			architecture: {
+				summary:
+					'The current implementation is a modular web and backend monorepo. Admin and sponsor surfaces use Next.js/React; FastAPI modules own authentication, profiles, knowledge, generated cases, evaluation, and the Senior runtime; PostgreSQL with pgvector stores domain and retrieval data; Redis and Celery support background processing; and a centralized Google GenAI client forms the provider boundary. These diagrams show verified code paths, not the future deployment architecture or the full product design backlog.',
+				diagrams: [
+					{
+						title: 'Knowledge ingestion and case-generation architecture',
+						img: professionalCasesIngestionDiagram,
+						alt: 'Current Professional Cases implementation path from admin PDF, TXT, or MD upload through extraction, chunking, metadata, embeddings, PostgreSQL with pgvector, hybrid search, KMeans clusters, case seeds, LangGraph generation, and admin review.',
+						caption:
+							'Current implementation evidence — document and image processing, retrieval, clustering, generation, and review. Speech, rewards, and public deployment are not represented as implemented.',
+						mobileFallback: [
+							{
+								title: 'Admin upload and FastAPI intake',
+								description: 'The current processor accepts PDF, TXT, and MD sources through the knowledge API.',
+							},
+							{
+								title: 'Text and image extraction',
+								description: 'PDF/text processing extracts searchable text and source images into local storage.',
+							},
+							{
+								title: 'Chunking and metadata enrichment',
+								description: 'Markdown-aware chunking, token accounting, and metadata extraction prepare knowledge records.',
+							},
+							{
+								title: 'Text embeddings and image captions',
+								description: 'Text embeddings plus caption and visual-embedding paths make source material retrievable.',
+							},
+							{
+								title: 'PostgreSQL and pgvector',
+								description: 'Chunks, images, clusters, seeds, cases, and generation runs persist in the backend data model.',
+							},
+							{
+								title: 'Hybrid retrieval and diversity',
+								description: 'Lexical and vector search combine with per-document diversity limits, clustering, and seed rotation.',
+							},
+							{
+								title: 'LangGraph case generation',
+								description: 'Material checks, narrative generation, metadata extraction, image evaluation, judges, aggregation, and finalization form the current graph.',
+							},
+							{
+								title: 'Admin review and approval',
+								description: 'Generated cases retain status, evidence, quality metadata, and review actions before assignment.',
+							},
+						],
+					},
+					{
+						title: 'Evaluation and feedback lifecycle',
+						img: professionalCasesEvaluationDiagram,
+						alt: 'Current backend evaluation lifecycle from an approved generated case through authorized text runtime, persisted investigation, conclusion snapshot, evaluation specification validation, structured LLM judgments, deterministic score assembly, and persisted semantic evaluation result. Missing specifications and invalid output stop safely; browser feedback presentation remains planned.',
+						caption:
+							'Current backend evaluation path — the dashed browser feedback path is a remaining integration boundary, not a claim that the Senior browser is production-backed.',
+						mobileFallback: [
+							{
+								title: 'Approved generated case',
+								description: 'Only approved generated cases can start the current Senior runtime assignment path.',
+							},
+							{
+								title: 'Authorized text runtime',
+								description: 'Ownership and assignment status are checked through the authenticated sponsor boundary.',
+							},
+							{
+								title: 'Persisted investigation',
+								description: 'Text messages, findings, private notes, and conclusion drafts use durable assignment-owned records.',
+							},
+							{
+								title: 'Conclusion snapshot',
+								description: 'Submission creates an immutable conclusion snapshot and moves the assignment to evaluation.',
+							},
+							{
+								title: 'Evaluation-spec gate',
+								description: 'Missing or incomplete case-authored evaluation content stops explicitly instead of inventing generic feedback.',
+							},
+							{
+								title: 'Structured semantic judgment',
+								description: 'The provider returns dimension judgments and evidence references that are validated against the submitted work.',
+							},
+							{
+								title: 'Deterministic score assembly',
+								description: 'The backend computes the weighted overall score rather than trusting the provider to supply it.',
+							},
+							{
+								title: 'Persisted evaluation result',
+								description: 'The semantic result and score persist; browser BFF cutover and feedback presentation remain planned.',
+							},
+						],
+					},
+				],
+				components: [
+					{
+						name: 'Next.js / React web surfaces',
+						role: 'Admin and sponsor workflows exist; the browser Senior path still uses deterministic mock BFF routes.',
+					},
+					{
+						name: 'FastAPI domain modules',
+						role: 'Authentication, profiles, knowledge, generated cases, semantic evaluation, and Senior runtime routes form the backend boundary.',
+					},
+					{
+						name: 'PostgreSQL + pgvector',
+						role: 'Stores source documents, chunks, embeddings, images, clusters, seeds, cases, assignments, and evaluation state.',
+					},
+					{
+						name: 'Redis + Celery workers',
+						role: 'Supports queued ingestion, clustering, case generation, and other background jobs in the local stack.',
+					},
+					{
+						name: 'Centralized LLM provider boundary',
+						role: 'Structured generation, embeddings, retries, timeouts, and token accounting are centralized rather than duplicated per feature.',
+					},
+				],
+			},
+			capabilitySummary:
+				'Status vocabulary: Validated means source-backed and covered by targeted tests; Implemented means the code path exists but is not fully validated end to end; Partial means only a slice is present; Planned means the repository describes the capability without a delivered implementation; Not found means no production implementation was found.',
+			capabilityMatrix: [
+				{
+					title: 'Sponsor/admin authentication and role boundaries',
+					status: 'Validated',
+					description: 'FamilyAccount roles, bearer authentication, sponsor ownership, admin separation, and access checks are implemented and covered by auth/runtime tests.',
+				},
+				{
+					title: 'PDF/TXT/MD knowledge ingestion',
+					status: 'Validated',
+					description: 'Extraction, chunking, metadata, embedding, image persistence, job status, and failure paths are implemented; repository tests cover ingestion and jobs.',
+				},
+				{
+					title: 'Hybrid retrieval and related images',
+					status: 'Validated',
+					description: 'Lexical and vector chunk search combine with score diagnostics, per-document diversity limits, and page-aware related-image results.',
+				},
+				{
+					title: 'KMeans clustering and case-seed rotation',
+					status: 'Validated',
+					description: 'Embedding validation, KMeans runs, cluster summaries, seed generation, and rotation logic are present with targeted tests and admin routes.',
+				},
+				{
+					title: 'LangGraph case-generation workflow',
+					status: 'Implemented',
+					description: 'Material checks, narrative and metadata phases, image evaluation, quality judges, aggregation, optional refinement, finalization, and discard paths are implemented; full validation remains environment-sensitive.',
+				},
+				{
+					title: 'Rubric-based semantic evaluation',
+					status: 'Implemented',
+					description: 'Versioned case specs, structured dimension judgments, evidence-reference validation, deterministic weighted scoring, persistence, and provider failure handling are implemented; end-to-end production orchestration remains incomplete.',
+				},
+				{
+					title: 'Durable text Senior runtime',
+					status: 'Partial',
+					description: 'Assignment ownership, notes, drafts, conclusions, messages, findings, and idempotent state transitions exist in the backend, while the browser BFF has not been cut over.',
+				},
+				{
+					title: 'Case-subject conversation engine',
+					status: 'Partial',
+					description: 'A provider-backed, profession-neutral text engine and messages API validate authored facts and fail closed; generation does not yet author subject knowledge for cases.',
+				},
+				{
+					title: 'Production Senior browser cutover',
+					status: 'Planned',
+					description: 'The repository explicitly keeps the Next.js Senior BFF on deterministic mock routes until the production read-model and subject-knowledge boundaries are complete.',
+				},
+				{
+					title: 'Speech-to-text and text-to-speech',
+					status: 'Planned',
+					description: 'Profile settings contain voice configuration, but the repository instructions defer voice and no production speech provider or interaction path was found.',
+				},
+				{
+					title: 'Rewards and recognition ledger',
+					status: 'Partial',
+					description: 'A reward-mode profile setting exists, but no delivered reward ledger, event flow, or Senior reward presentation was found.',
+				},
+				{
+					title: 'Audio/video case modalities',
+					status: 'Not found',
+					description: 'The current implementation supports document and image knowledge paths; the audio/video symbols in the editorial artwork are not implementation evidence.',
+				},
+			],
+			implementationTitle: 'Engineering ownership',
+			implementation: [
+				{
+					title: 'Modular product boundary',
+					body: 'I worked across the Next.js/React web surface and the FastAPI/Python backend while keeping Admin/Content Studio concerns separate from the calmer Senior runtime. The repository uses explicit domain modules instead of collapsing knowledge, generation, evaluation, and runtime state into one client abstraction.',
+				},
+				{
+					title: 'Evidence-grounded knowledge pipeline',
+					body: 'I implemented and refined the path from supported document sources through extraction, Markdown-aware chunking, metadata, embeddings, image captions, pgvector persistence, hybrid retrieval, and related-image context. The pipeline exposes status and failure information instead of treating ingestion as an opaque batch.',
+				},
+				{
+					title: 'Stateful case generation',
+					body: 'I built the LangGraph generation path around material sufficiency, narrative generation, metadata extraction, image evaluation, quality judges, aggregation, optional refinement, finalization, and discard handling. Generated cases retain evidence references, quality metadata, node runs, and review state for Admin inspection.',
+				},
+				{
+					title: 'Rubric and evaluation contracts',
+					body: 'I separated the internal case-authored evaluation specification from provider output and the Senior-safe result. Evidence references are validated against the submitted work, the weighted overall score is assembled deterministically on the server, and malformed or hallucinated output does not receive a silent repair or fallback score.',
+				},
+				{
+					title: 'Durable runtime foundations',
+					body: 'I extended the backend runtime around assignment-owned state, authorization, idempotent conclusion submission, durable text messages, authored subject knowledge, finding persistence, leases, and explicit provider failure categories. Private notes and evaluator internals remain outside the evaluation input contract.',
+				},
+				{
+					title: 'Bounded product claims',
+					body: 'I kept voice, rewards, production browser cutover, and unverified multimedia capabilities outside the implemented claim set. The product remains independent and in development; no adoption, learning, clinical, or production-availability outcome is claimed.',
+				},
+			],
+			decisionsTitle: 'Engineering decisions and trade-offs',
+			decisions: [
+				{
+					title: 'Keep Admin/Content Studio separate from Senior UX',
+					body: 'Knowledge authoring, clustering, generated-case review, and operations need dense inspection surfaces. The Senior experience needs a calm, readable, judgment-oriented flow; combining those surfaces would obscure both responsibilities.',
+				},
+				{
+					title: 'Preserve provenance and safe projections',
+					body: 'The backend stores evidence, runs, specifications, and internal evaluation data, but browser-facing projections are assembled field by field. Hidden answers, rubrics, prompts, evaluator confidence, and generation metadata are not treated as Senior-visible data.',
+				},
+				{
+					title: 'Use hybrid retrieval with diversity controls',
+					body: 'Lexical matching handles exact professional terms while vector search supports semantic recall. Per-document limits, clusters, and seed rotation reduce the risk that one source dominates every generated case.',
+				},
+				{
+					title: 'Make the generation graph inspectable',
+					body: 'Separate generation phases and persisted node runs make failure, quality judgments, image decisions, and refinement behavior visible to the content workflow instead of hiding everything behind one provider call.',
+				},
+				{
+					title: 'Make scoring deterministic at the server boundary',
+					body: 'The provider supplies constrained dimension judgments; the backend validates ids and evidence references and computes the weighted 1–100 result. This keeps scoring rules in an auditable contract rather than delegating the final number to the model.',
+				},
+				{
+					title: 'Fail closed when authored content is incomplete',
+					body: 'A missing evaluation specification or subject-knowledge contract is an explicit incomplete-content error. The system does not invent a generic rubric, patient reply, or fallback score to make the flow appear complete.',
+				},
+			],
+			evidenceTitle: 'Verification and testing',
+			evidence: [
+				{
+					title: 'Targeted backend coverage',
+					body: 'The repository includes unit coverage for knowledge metadata, clustering, case-generation nodes and service behavior, evaluation contracts and service behavior, case-subject contracts, provider errors, and seed rotation. The focused suite exercised for this review passed 94 tests with one environment-specific test deselected.',
+				},
+				{
+					title: 'Integration coverage exists in the repository',
+					body: 'Integration suites cover authentication, knowledge upload and ingestion jobs, KB search, clustering, case-generation routes, evaluation persistence, Senior runtime authorization, and subject conversation behavior. They require the repository Docker Compose test database and were not run while that stack was stopped.',
+				},
+				{
+					title: 'Failure and security boundaries are tested',
+					body: 'The source and tests cover ownership checks, idempotency, provider failure, malformed structured output, hallucinated fact or evidence references, missing authored contracts, and the absence of private notes from provider inputs.',
+				},
+				{
+					title: 'Current validation finding',
+					body: 'The full unit run reached 140 passing tests but exposed one Windows locale failure while loading the UTF-8 patient_names.json file in a narrative-generator error-path test. That unrelated repository issue was not changed as part of this portfolio integration.',
+				},
+			],
+			limitations: [
+				{
+					title: 'Independent product remains in development',
+					body: 'There is no public launch, adoption evidence, learning-improvement evidence, clinical effectiveness claim, or production availability claim in this case study.',
+				},
+				{
+					title: 'Senior browser cutover is incomplete',
+					body: 'The backend runtime and production conversation boundary exist, but the Next.js Senior BFF still uses deterministic mock routes. The current case therefore describes backend foundations and not a fully production-backed browser journey.',
+				},
+				{
+					title: 'Case authoring contracts remain a product dependency',
+					body: 'The conversation engine requires case-authored subject_knowledge_json, and semantic evaluation requires evaluation_spec_json. The current generation pipeline does not yet produce the subject contract, so not every generated case is conversable.',
+				},
+				{
+					title: 'Voice and rewards are not delivered capabilities',
+					body: 'Voice is explicitly deferred and no speech provider was found. Reward configuration exists at the profile level, but a reward ledger, event flow, and Senior presentation were not found.',
+				},
+				{
+					title: 'Provider and environment boundaries',
+					body: 'Provider-backed behavior depends on configured credentials and the Docker test stack. This portfolio case does not publish benchmark scores, user counts, latency, adoption, or other quality metrics.',
 				},
 			],
 		},

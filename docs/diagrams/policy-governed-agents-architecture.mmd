@@ -4,18 +4,24 @@ flowchart LR
     U[User interaction] --> L[LLM interpretation]
     L --> C[Context and entity resolution]
     C --> S[Explicit workflow state]
-    S --> P[Policy / confirmation boundary]
-    P --> X[Authorized execution]
+    S --> P[Policy boundary]
+    P -->|eligible| Q[Confirmation when required]
+    P -. rejected / ambiguous .-> F[Clarify, decline, or escalate]
+    Q -->|confirmed or not required| X[Authorized execution]
+    Q -. missing or declined .-> F
     X --> V[Verified result]
-    V --> R[Supported response or escalation]
+    V -->|verified| R[Supported response]
+    V -. failed or unverified .-> F
 
     classDef controlled fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
     classDef reasoning fill:#2B211D,stroke:#D67B56,color:#ECE5D7
     classDef state fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
     classDef outcome fill:#263A39,stroke:#7FA7B4,color:#ECE5D7
+    classDef fallback fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
 
     class U controlled
     class L reasoning
     class C,S state
-    class P,X reasoning
+    class P,Q,X state
     class V,R outcome
+    class F fallback

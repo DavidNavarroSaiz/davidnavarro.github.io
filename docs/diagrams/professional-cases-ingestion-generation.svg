@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc">
+  <title id="title">Professional Cases knowledge ingestion and case generation architecture</title>
+  <desc id="desc">Current implementation path from admin document upload through text and image extraction, chunking, embeddings, PostgreSQL with pgvector, hybrid search, clustering, LangGraph case generation, and admin review. It does not represent speech, rewards, or a public production deployment.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7FA7B4"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="640" fill="#11161B"/>
+  <text x="50" y="54" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="28" font-weight="600">Knowledge ingestion and case generation</text>
+  <text x="50" y="84" fill="#B8A58C" font-family="General Sans, Arial, sans-serif" font-size="15">Verified current implementation path — evidence moves from the knowledge base into reviewable generated cases</text>
+  <text x="50" y="122" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">CURRENT BACKEND + ADMIN CONTENT PIPELINE</text>
+
+  <g fill="none" stroke="#7FA7B4" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M220 300 H240"/>
+    <path d="M410 300 H430"/>
+    <path d="M600 300 H620"/>
+    <path d="M790 300 H810"/>
+    <path d="M980 300 H1000"/>
+    <path d="M1170 300 H1190"/>
+    <path d="M1360 300 H1380"/>
+  </g>
+
+  <g font-family="General Sans, Arial, sans-serif">
+    <g>
+      <rect x="50" y="220" width="170" height="160" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+      <text x="70" y="252" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">01 / INTAKE</text>
+      <text x="70" y="295" fill="#ECE5D7" font-size="17" font-weight="600">Admin upload</text>
+      <text x="70" y="322" fill="#ECE5D7" font-size="15">FastAPI intake</text>
+      <text x="70" y="350" fill="#B8A58C" font-size="13">PDF / TXT / MD</text>
+    </g>
+    <g>
+      <rect x="240" y="220" width="170" height="160" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="260" y="252" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">02 / EXTRACT</text>
+      <text x="260" y="295" fill="#ECE5D7" font-size="17" font-weight="600">Text + images</text>
+      <text x="260" y="322" fill="#ECE5D7" font-size="15">PDF extraction</text>
+      <text x="260" y="350" fill="#B8A58C" font-size="13">Local storage</text>
+    </g>
+    <g>
+      <rect x="430" y="220" width="170" height="160" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="450" y="252" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">03 / PREPARE</text>
+      <text x="450" y="295" fill="#ECE5D7" font-size="17" font-weight="600">Chunk + enrich</text>
+      <text x="450" y="322" fill="#ECE5D7" font-size="15">Headers, tokens,</text>
+      <text x="450" y="347" fill="#ECE5D7" font-size="15">metadata</text>
+    </g>
+    <g>
+      <rect x="620" y="220" width="170" height="160" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="640" y="252" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">04 / EMBED</text>
+      <text x="640" y="295" fill="#ECE5D7" font-size="17" font-weight="600">Embed + caption</text>
+      <text x="640" y="322" fill="#ECE5D7" font-size="15">Text embeddings</text>
+      <text x="640" y="347" fill="#B8A58C" font-size="13">Image retrieval support</text>
+    </g>
+    <g>
+      <rect x="810" y="220" width="170" height="160" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="830" y="252" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">05 / STORE</text>
+      <text x="830" y="295" fill="#ECE5D7" font-size="17" font-weight="600">PostgreSQL</text>
+      <text x="830" y="322" fill="#ECE5D7" font-size="17" font-weight="600">+ pgvector</text>
+      <text x="830" y="350" fill="#B8A58C" font-size="13">Chunks, images, runs</text>
+    </g>
+    <g>
+      <rect x="1000" y="220" width="170" height="160" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="1020" y="252" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">06 / DISCOVER</text>
+      <text x="1020" y="295" fill="#ECE5D7" font-size="17" font-weight="600">Hybrid search</text>
+      <text x="1020" y="322" fill="#ECE5D7" font-size="15">KMeans clusters</text>
+      <text x="1020" y="350" fill="#B8A58C" font-size="13">Case seeds</text>
+    </g>
+    <g>
+      <rect x="1190" y="220" width="170" height="160" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="1210" y="252" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">07 / GENERATE</text>
+      <text x="1210" y="295" fill="#ECE5D7" font-size="17" font-weight="600">LangGraph</text>
+      <text x="1210" y="322" fill="#ECE5D7" font-size="15">Narrative, metadata,</text>
+      <text x="1210" y="347" fill="#ECE5D7" font-size="15">judges, finalizer</text>
+    </g>
+    <g>
+      <rect x="1380" y="220" width="170" height="160" rx="8" fill="#3A3024" stroke="#D6A967"/>
+      <text x="1400" y="252" fill="#D6A967" font-family="Consolas, monospace" font-size="11" letter-spacing="1.2">08 / REVIEW</text>
+      <text x="1400" y="295" fill="#ECE5D7" font-size="17" font-weight="600">Generated case</text>
+      <text x="1400" y="322" fill="#ECE5D7" font-size="15">Quality metadata</text>
+      <text x="1400" y="350" fill="#B8A58C" font-size="13">Admin approval</text>
+    </g>
+  </g>
+
+  <text x="50" y="480" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.1">IMPLEMENTATION BOUNDARY</text>
+  <text x="50" y="510" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="15">Knowledge, clustering, generation, and review are represented from source code and tests. Speech, rewards, and public launch are outside this current path.</text>
+  <text x="50" y="586" fill="#B8A58C" font-family="Consolas, monospace" font-size="11">Conceptual editorial diagram — no user counts, quality metrics, provider guarantees, or production deployment are implied.</text>
+</svg>

@@ -1,0 +1,28 @@
+%% Professional Cases — verified knowledge ingestion and case generation
+%% Current implementation evidence only; no future services are shown as live.
+flowchart LR
+    A[Admin upload PDF / TXT / MD] --> B[FastAPI knowledge API]
+    B --> C[Local storage]
+    B --> D[PDF/text extraction]
+    D --> E[Chunking + metadata extraction]
+    E --> F[Text embeddings]
+    F --> G[(PostgreSQL + pgvector)]
+    D --> H[Image captions + visual embeddings]
+    H --> G
+    G --> I[Hybrid KB search]
+    I --> J[KMeans clusters + case seeds]
+    J --> K[LangGraph case-generation workflow]
+    K --> L[Generated case + runs + quality metadata]
+    L --> M[Admin review / approval]
+
+    classDef input fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
+    classDef processing fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
+    classDef model fill:#2B211D,stroke:#D67B56,color:#ECE5D7
+    classDef data fill:#263A39,stroke:#7FA7B4,color:#ECE5D7
+    classDef review fill:#3A3024,stroke:#D6A967,color:#ECE5D7
+
+    class A,B input
+    class C,D,E processing
+    class F,H,K model
+    class G,I,J,L data
+    class M review

@@ -26,3 +26,12 @@ The Policy-Governed AI Agents case study uses generalized reliability diagrams r
 - `policy-governed-agents-sequence.mmd` / `.svg` — a generic verified-action lifecycle with clarification and escalation paths.
 
 These sources intentionally omit private policies, workflow identifiers, API routes, payloads, tool names, regression datasets, and production metrics.
+
+## Professional Cases diagrams
+
+The Professional Cases case study uses current implementation evidence and separates remaining browser integration work:
+
+- `professional-cases-ingestion-generation.mmd` / `.svg` — document and image ingestion, retrieval, clustering, LangGraph generation, and admin review.
+- `professional-cases-evaluation-feedback.mmd` / `.svg` — authorized text runtime, rubric/spec validation, semantic evaluation, deterministic score assembly, safe failure paths, and the planned browser feedback boundary.
+
+These sources intentionally omit user counts, provider guarantees, production deployment claims, audio/video support, and reward functionality that was not found in the implementation.
