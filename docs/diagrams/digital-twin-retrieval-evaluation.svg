@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI Digital Twin comparative retrieval evaluation methodology</title>
+  <desc id="desc">A publication-safe evaluation flow comparing vector RAG, GraphRAG, and combined retrieval across question types, capturing response time and answer quality through DeepEval and an LLM-as-evaluator before informing prompt revisions. No private questions, scores, metric names, or benchmark values are shown.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7FA7B4"/>
+    </marker>
+    <marker id="arrow-warm" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D67B56"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="720" fill="#11161B"/>
+  <text x="64" y="58" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="28" font-weight="600">Comparative retrieval evaluation methodology</text>
+  <text x="64" y="88" fill="#B8A58C" font-family="General Sans, Arial, sans-serif" font-size="15">Measured response time and DeepEval/LLM-as-evaluator review across question types</text>
+
+  <g fill="none" stroke="#7FA7B4" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M294 325 H350 V190 H404"/>
+    <path d="M294 325 H404"/>
+    <path d="M294 325 H350 V460 H404"/>
+    <path d="M654 190 H730 V325 H790"/>
+    <path d="M654 325 H790"/>
+    <path d="M654 460 H730 V325 H790"/>
+    <path d="M1050 325 H1120"/>
+    <path d="M1370 325 H1430 V190 H1470"/>
+    <path d="M1370 325 H1430 V460 H1470"/>
+  </g>
+  <g fill="none" stroke="#D67B56" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#arrow-warm)">
+    <path d="M1470 520 V590 H530 V535"/>
+  </g>
+
+  <g font-family="General Sans, Arial, sans-serif">
+    <g>
+      <rect x="64" y="245" width="230" height="160" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+      <text x="88" y="279" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">01 / QUESTIONS</text>
+      <text x="88" y="323" fill="#ECE5D7" font-size="19" font-weight="600">Question set</text>
+      <text x="88" y="353" fill="#ECE5D7" font-size="19" font-weight="600">by type</text>
+      <text x="88" y="385" fill="#B8A58C" font-size="13">Exact categories unverified</text>
+    </g>
+    <g>
+      <rect x="404" y="115" width="250" height="150" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="428" y="149" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">02A / RUN</text>
+      <text x="428" y="193" fill="#ECE5D7" font-size="19" font-weight="600">Vector RAG</text>
+      <text x="428" y="227" fill="#B8A58C" font-size="13">Comparable strategy</text>
+    </g>
+    <g>
+      <rect x="404" y="250" width="250" height="150" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="428" y="284" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">02B / RUN</text>
+      <text x="428" y="328" fill="#ECE5D7" font-size="19" font-weight="600">GraphRAG</text>
+      <text x="428" y="362" fill="#B8A58C" font-size="13">Comparable strategy</text>
+    </g>
+    <g>
+      <rect x="404" y="385" width="250" height="150" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="428" y="419" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">02C / RUN</text>
+      <text x="428" y="463" fill="#ECE5D7" font-size="19" font-weight="600">Combined</text>
+      <text x="428" y="497" fill="#B8A58C" font-size="13">GraphRAG + vector RAG</text>
+    </g>
+    <g>
+      <rect x="790" y="245" width="260" height="160" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="814" y="279" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">03 / CAPTURE</text>
+      <text x="814" y="323" fill="#ECE5D7" font-size="19" font-weight="600">Response + latency</text>
+      <text x="814" y="357" fill="#ECE5D7" font-size="19" font-weight="600">measurement</text>
+      <text x="814" y="389" fill="#B8A58C" font-size="13">Numeric results unpublished</text>
+    </g>
+    <g>
+      <rect x="1120" y="245" width="250" height="160" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="1144" y="279" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">04 / EVALUATE</text>
+      <text x="1144" y="323" fill="#ECE5D7" font-size="19" font-weight="600">DeepEval</text>
+      <text x="1144" y="357" fill="#ECE5D7" font-size="19" font-weight="600">LLM-as-evaluator</text>
+      <text x="1144" y="389" fill="#B8A58C" font-size="13">Metrics and judge prompt unverified</text>
+    </g>
+    <g>
+      <rect x="1470" y="115" width="100" height="150" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="1490" y="149" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">05A</text>
+      <text x="1490" y="193" fill="#ECE5D7" font-size="16" font-weight="600">Compare</text>
+      <text x="1490" y="224" fill="#B8A58C" font-size="12">by type</text>
+    </g>
+    <g>
+      <rect x="1470" y="385" width="100" height="150" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="1490" y="419" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">05B</text>
+      <text x="1490" y="463" fill="#ECE5D7" font-size="16" font-weight="600">Prompt</text>
+      <text x="1490" y="494" fill="#B8A58C" font-size="12">refinement</text>
+    </g>
+  </g>
+
+  <rect x="64" y="650" width="1506" height="30" rx="6" fill="#24232B" stroke="#8F8AA8" stroke-opacity="0.7"/>
+  <text x="88" y="670" fill="#D8D4E7" font-family="Consolas, monospace" font-size="11">Boundary: no private question set, scores, metric names, latency statistics, benchmark values, or universal winning strategy are published.</text>
+</svg>

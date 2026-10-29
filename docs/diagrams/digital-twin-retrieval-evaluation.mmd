@@ -1,0 +1,28 @@
+%% AI Digital Twin — comparative retrieval evaluation methodology
+%% Owner-confirmed methodology; no private questions, scores, metric names, or benchmark values are shown.
+flowchart LR
+    Q[Question set<br/>grouped by question type] --> V[Vector RAG run]
+    Q --> G[GraphRAG run]
+    Q --> H[Combined GraphRAG<br/>+ Vector RAG run]
+    V --> L[Capture response<br/>and measured latency]
+    G --> L
+    H --> L
+    L --> D[DeepEval<br/>LLM-as-evaluator]
+    D --> C[Compare quality and latency<br/>by question type]
+    C --> P[Prompt refinement<br/>informed by findings]
+    P -. rerun experiment .-> V
+    P -. rerun experiment .-> G
+    P -. rerun experiment .-> H
+    C --> N[No universal winner claimed<br/>without approved results]
+
+    classDef source fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
+    classDef strategy fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
+    classDef evaluation fill:#263A39,stroke:#7FA7B4,color:#ECE5D7
+    classDef refinement fill:#2B211D,stroke:#D67B56,color:#ECE5D7
+    classDef boundary fill:#24232B,stroke:#8F8AA8,color:#D8D4E7
+
+    class Q source
+    class V,G,H strategy
+    class L,D,C evaluation
+    class P refinement
+    class N boundary

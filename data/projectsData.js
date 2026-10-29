@@ -63,6 +63,7 @@ import pmEditorialCover from '../assets/images/pm-ai-agent-editorial.webp';
 import enterpriseAiWorkspaceCover from '../assets/images/enterprise-ai-workspace-editorial.webp';
 import policyGovernedAgentsCover from '../assets/images/policy-governed-ai-agents-editorial.webp';
 import professionalCasesCover from '../assets/images/professional-cases-editorial.webp';
+import digitalTwinCover from '../assets/images/ai-digital-twin-retrieval-collage.webp';
 import evaluationWorkflowDiagram from '../docs/diagrams/coding-agent-evaluation-workflow.svg';
 import evaluationArtifactsDiagram from '../docs/diagrams/coding-agent-evaluation-artifacts.svg';
 import enterpriseWorkspaceArchitecture from '../docs/diagrams/enterprise-ai-workspace-architecture.svg';
@@ -71,6 +72,8 @@ import policyGovernedAgentsArchitecture from '../docs/diagrams/policy-governed-a
 import policyGovernedAgentsSequence from '../docs/diagrams/policy-governed-agents-sequence.svg';
 import professionalCasesIngestionDiagram from '../docs/diagrams/professional-cases-ingestion-generation.svg';
 import professionalCasesEvaluationDiagram from '../docs/diagrams/professional-cases-evaluation-feedback.svg';
+import digitalTwinRetrievalDiagram from '../docs/diagrams/digital-twin-contextual-retrieval.svg';
+import digitalTwinEvaluationDiagram from '../docs/diagrams/digital-twin-retrieval-evaluation.svg';
 
 export const projectsData = [
 	{
@@ -2879,6 +2882,301 @@ export const projectsData = [
 				{
 					title: 'Provider and environment boundaries',
 					body: 'Provider-backed behavior depends on configured credentials and the Docker test stack. This portfolio case does not publish benchmark scores, user counts, latency, adoption, or other quality metrics.',
+				},
+			],
+		},
+	},
+	{
+		id: 19,
+		title: 'AI Digital Twin — Contextual Knowledge, GraphRAG & Retrieval Evaluation',
+		url: 'ai-digital-twin-contextual-knowledge-retrieval-evaluation',
+		category: 'Independent AI Engineering / Retrieval Evaluation',
+		summary:
+			'Owner-confirmed engineering work exploring contextual knowledge organization, vector RAG, GraphRAG, combined retrieval, and evaluation by question type.',
+		img: digitalTwinCover,
+		imageAlt:
+			'Conceptual editorial collage for AI Digital Twin showing contextual archives, projects, meetings, emails, vector retrieval, GraphRAG, and combined retrieval strategies.',
+		ProjectHeader: {
+			title: 'AI Digital Twin — Contextual Knowledge, GraphRAG & Retrieval Evaluation',
+			publishDate: 'Evidence audit',
+			tags: 'Contextual Knowledge / GraphRAG / DeepEval',
+		},
+		ProjectInfo: {
+			ClientHeading: 'Project status',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Type',
+					details: 'Independent engineering work',
+				},
+				{
+					id: uuidv4(),
+					title: 'Status',
+					details: 'Evidence audit — source access pending',
+				},
+				{
+					id: uuidv4(),
+					title: 'Scope',
+					details: 'Contextual retrieval and comparative evaluation',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Explore when graph-enhanced retrieval adds value over vector-based RAG for distributed professional knowledge, and make the quality and latency trade-offs testable without implying human-equivalent memory.',
+			Technologies: [
+				{
+					title: 'Confirmed methods and tools',
+					techs: [
+						'Vector database',
+						'Metadata filtering',
+						'Vector RAG',
+						'GraphRAG',
+						'DeepEval',
+						'LLM-as-evaluator',
+					],
+				},
+			],
+			ProjectDetailsHeading: 'Evidence boundary',
+			ProjectDetails: [],
+			SocialSharingHeading: 'Share This',
+		},
+		caseStudy: {
+			status: 'Evidence audit — source access pending',
+			headerFacts: ['Type', 'Status', 'Scope'],
+			editorialCover: {
+				img: digitalTwinCover,
+				alt: 'Conceptual editorial collage for AI Digital Twin showing project, document, meeting, and email archives connected to vector retrieval, GraphRAG, combined approaches, and retrieval evaluation.',
+				caption:
+					'Conceptual editorial artwork — a publication-safe visual of contextual archives and retrieval experiments. It is not an architecture export, benchmark chart, or claim of human-equivalent memory.',
+			},
+			overview:
+				'AI Digital Twin is an independent engineering effort exploring how distributed personal and professional knowledge can be organized around context and retrieved through multiple strategies. The owner confirms work with vector databases, project/date/source metadata, vector RAG, GraphRAG, combined retrieval, response-time measurement, DeepEval-based quality evaluation, and prompt refinement. Source-repository access was unavailable for this audit, so implementation-specific technologies and deployment details remain deliberately unclaimed.',
+			problem:
+				'Professional knowledge is spread across documents, projects, dates, emails, meetings, and other records. Semantic similarity can retrieve related language without preserving the relationships and time context that make an answer useful. The engineering question is when graph-enhanced retrieval adds value compared with vector-based RAG, and what quality and latency trade-offs appear for different question types. This is a retrieval and evaluation problem, not evidence of human-equivalent memory or autonomous long-term memory.',
+			architecture: {
+				summary:
+					'The publication-safe model below reflects owner-confirmed activities: contextual records are organized with metadata and vector representations; retrieval experiments compare vector RAG, GraphRAG, and a combined approach; retrieved evidence is passed into answer generation and evaluated. The exact vector database, graph persistence, extraction pipeline, fusion mechanism, session model, and runtime strategy selection could not be verified because the named source repositories were unavailable.',
+				diagrams: [
+					{
+						title: 'Contextual knowledge organization and retrieval',
+						img: digitalTwinRetrievalDiagram,
+						alt: 'Publication-safe owner-confirmed model of contextual records organized with metadata and vector representations, compared through vector RAG, GraphRAG, and combined retrieval before evidence is passed to answer generation. Exact storage and graph construction details remain unverified.',
+						caption:
+							'Owner-confirmed retrieval activities are shown; vector-store and graph-construction technologies, extraction rules, fusion behavior, and automatic routing are not asserted.',
+						mobileFallback: [
+							{
+								title: 'Contextual records',
+								description: 'Projects, dates, emails, meetings, and other knowledge records are the owner-confirmed context categories.',
+							},
+							{
+								title: 'Metadata and vector organization',
+								description: 'Metadata filtering and vector representations are confirmed activities; exact schema and database product are not verified.',
+							},
+							{
+								title: 'Vector RAG',
+								description: 'A semantic retrieval strategy included in the comparative engineering work.',
+							},
+							{
+								title: 'GraphRAG',
+								description: 'A relationship-aware retrieval strategy included in the comparative engineering work; graph construction details remain unverified.',
+							},
+							{
+								title: 'Combined retrieval',
+								description: 'A combined GraphRAG and vector RAG approach was evaluated as an experimental strategy.',
+							},
+							{
+								title: 'Evidence to answer generation',
+								description: 'Retrieved context supports answer generation; exact prompt and session implementation requires source verification.',
+							},
+						],
+					},
+					{
+						title: 'Comparative retrieval evaluation methodology',
+						img: digitalTwinEvaluationDiagram,
+						alt: 'Publication-safe evaluation flow comparing vector RAG, GraphRAG, and combined retrieval across question types, capturing measured response time and answer quality through DeepEval and an LLM-as-evaluator before informing prompt revisions.',
+						caption:
+							'Owner-confirmed methodology only — no private question set, metric names, benchmark scores, latency statistics, or universal winning strategy are published.',
+						mobileFallback: [
+							{
+								title: 'Question set by type',
+								description: 'The experiments compared retrieval behavior across question types; exact categories require artifact review.',
+							},
+							{
+								title: 'Three comparable retrieval runs',
+								description: 'Vector RAG, GraphRAG, and combined GraphRAG plus vector RAG were evaluated as separate strategies.',
+							},
+							{
+								title: 'Response time and answer quality',
+								description: 'Execution/response times were measured and answer quality was evaluated; numeric results remain unpublished.',
+							},
+							{
+								title: 'DeepEval and LLM-as-evaluator',
+								description: 'DeepEval was used with an LLM-as-evaluator approach; exact judge prompts and metrics require source or artifact review.',
+							},
+							{
+								title: 'Question-type comparison',
+								description: 'The comparison investigated which retrieval strategy fit different question types rather than assuming one universal winner.',
+							},
+							{
+								title: 'Prompt refinement and rerun',
+								description: 'Evaluation findings informed prompt improvements; exact revisions and reproducibility artifacts remain unverified.',
+							},
+						],
+					},
+				],
+				components: [
+					{
+						name: 'Contextual knowledge records',
+						role: 'Projects, dates, emails, meetings, and related records form the owner-confirmed knowledge context.',
+					},
+					{
+						name: 'Metadata filtering',
+						role: 'Metadata is used to retrieve context appropriate to the question; exact fields and filter execution are not source-verified.',
+					},
+					{
+						name: 'Vector retrieval',
+						role: 'Vector-based RAG is one of the evaluated retrieval strategies; product and index details remain unverified.',
+					},
+					{
+						name: 'Graph-enhanced retrieval',
+						role: 'GraphRAG and a combined strategy were evaluated; entity extraction, graph persistence, and fusion details require source access.',
+					},
+					{
+						name: 'Evaluation boundary',
+						role: 'DeepEval, LLM-as-evaluator review, response-time measurement, question-type comparison, and prompt refinement are owner-confirmed activities.',
+					},
+				],
+			},
+			capabilitySummary:
+				'Owner-confirmed means the owner attested that the activity occurred. Unverified means the current source audit could not inspect the implementation. Planned identifies architecture described in the historical Azure proposal, not deployed capability.',
+			capabilityMatrix: [
+				{
+					title: 'Contextual organization by projects, dates, emails, and meetings',
+					status: 'Owner-confirmed',
+					description: 'The owner confirms organizing personal-context knowledge around these records and other relevant contextual information.',
+				},
+				{
+					title: 'Metadata-based context filtering',
+					status: 'Owner-confirmed',
+					description: 'The owner confirms metadata filtering to retrieve context appropriate to a question; schema and implementation are not source-verified.',
+				},
+				{
+					title: 'Vector-based RAG',
+					status: 'Owner-confirmed',
+					description: 'Vector RAG was used and evaluated as an actual engineering strategy.',
+				},
+				{
+					title: 'GraphRAG',
+					status: 'Owner-confirmed',
+					description: 'GraphRAG was used and evaluated; entity extraction, traversal, and persistence details remain unverified.',
+				},
+				{
+					title: 'Combined GraphRAG + Vector RAG',
+					status: 'Owner-confirmed',
+					description: 'A combined retrieval approach was part of the comparative engineering work.',
+				},
+				{
+					title: 'Automatic strategy routing',
+					status: 'Unverified',
+					description: 'No automatic query router is claimed; source access is required to determine whether selection was manual or runtime-driven.',
+				},
+				{
+					title: 'DeepEval and LLM-as-evaluator',
+					status: 'Owner-confirmed',
+					description: 'DeepEval and an LLM-as-evaluator approach were used to assess answer quality.',
+				},
+				{
+					title: 'Measured response time',
+					status: 'Owner-confirmed',
+					description: 'Execution/response time was measured during the retrieval comparison; exact methodology and values are not published.',
+				},
+				{
+					title: 'Historical Arabic-first Azure architecture',
+					status: 'Unverified',
+					description: 'The separate Phase 1 proposal names Azure services, Terraform, Langfuse, and evaluation tools, but no deployment or project relationship is confirmed.',
+				},
+			],
+			implementationTitle: 'Engineering contributions',
+			implementation: [
+				{
+					title: 'Contextual knowledge organization',
+					body: 'The owner confirms working with a knowledge model organized around projects, dates, emails, meetings, and other context so retrieval can reflect more than semantic similarity alone. Exact schema, indexing code, and storage technology remain unverified.',
+				},
+				{
+					title: 'Retrieval strategy experimentation',
+					body: 'The owner confirms implementing or working with vector RAG, GraphRAG, and a combined GraphRAG plus vector RAG strategy as comparative engineering activities.',
+				},
+				{
+					title: 'Evaluation design',
+					body: 'The owner confirms comparing the strategies across question types while measuring response time and evaluating answer quality with an LLM-as-evaluator approach using DeepEval.',
+				},
+				{
+					title: 'Prompt refinement',
+					body: 'Evaluation findings informed prompt improvements. The public case does not claim a particular prompt revision, score increase, or universally superior retrieval strategy without the underlying artifacts.',
+				},
+			],
+			decisionsTitle: 'Engineering decisions and trade-offs',
+			decisions: [
+				{
+					title: 'Compare retrieval strategies instead of assuming graph value',
+					body: 'The central engineering question is empirical: determine when relationship-aware context adds value over vector similarity and where the additional complexity may not justify itself.',
+				},
+				{
+					title: 'Use contextual metadata as part of retrieval reasoning',
+					body: 'Projects, dates, source types, emails, and meetings provide context that can narrow or qualify a retrieval request. The exact filter order and implementation remain source-verification questions.',
+				},
+				{
+					title: 'Evaluate by question type',
+					body: 'A single aggregate result could hide where vector, graph, or combined retrieval helps. The owner confirms question-type comparison, while the specific categories and results remain private or unavailable.',
+				},
+				{
+					title: 'Treat prompt changes as evaluation-driven',
+					body: 'Prompt refinement is presented as a response to observed evaluation behavior, not as a claim that wording alone solved retrieval quality or latency trade-offs.',
+				},
+				{
+					title: 'Do not imply automatic runtime routing',
+					body: 'The case describes comparable retrieval experiments, not an automatic router that selects a strategy for every question. That distinction remains until source code confirms otherwise.',
+				},
+			],
+			evidenceTitle: 'Evidence and verification boundary',
+			evidence: [
+				{
+					title: 'Owner-confirmed activities',
+					body: 'The owner confirms contextual vector knowledge, metadata filtering, vector RAG, GraphRAG, combined retrieval, response-time measurement, DeepEval/LLM-as-evaluator assessment, question-type comparison, and prompt refinement.',
+				},
+				{
+					title: 'Source repository access',
+					body: 'The named middleware repository was checked through its exact Azure DevOps remote, but access failed with an SSH permission error. The named knowledge-base repository was not available at the confirmed local paths and no accessible remote was supplied.',
+				},
+				{
+					title: 'Historical architecture plan',
+					body: 'The Arabic-first Azure Phase 1 plan is treated as a separate or unresolved proposal. Its services are not presented as deployed Digital Twin infrastructure.',
+				},
+				{
+					title: 'Publication boundary',
+					body: 'No private evaluation questions, scores, latency statistics, personal records, employer-specific results, credentials, endpoints, or benchmark charts are included.',
+				},
+			],
+			limitations: [
+				{
+					title: 'Implementation details require source access',
+					body: 'The exact vector database, graph store, entity/relation extraction, traversal, fusion, reranking, prompt construction, session handling, tests, and evaluation artifacts remain unverified.',
+				},
+				{
+					title: 'No human-equivalent memory claim',
+					body: 'Contextual organization and retrieval do not establish human-like memory, consciousness, autonomy, or reliable long-term memory.',
+				},
+				{
+					title: 'No universal retrieval winner',
+					body: 'The case does not claim that vector RAG, GraphRAG, or the combined approach consistently wins without approved comparative results.',
+				},
+				{
+					title: 'No deployment claim from the Azure proposal',
+					body: 'Azure Document Intelligence, Azure AI Search, Azure OpenAI, Azure PostgreSQL, Azure Storage, Container Apps, Terraform, Langfuse, RAGAS, and other plan references remain unverified.',
+				},
+				{
+					title: 'Private corpus and evaluation artifacts',
+					body: 'The underlying personal-context corpus and evaluation artifacts require sanitization and owner approval before any detailed results or examples become public.',
 				},
 			],
 		},

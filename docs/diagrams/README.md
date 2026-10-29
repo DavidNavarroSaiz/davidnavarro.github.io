@@ -35,3 +35,12 @@ The Professional Cases case study uses current implementation evidence and separ
 - `professional-cases-evaluation-feedback.mmd` / `.svg` — authorized text runtime, rubric/spec validation, semantic evaluation, deterministic score assembly, safe failure paths, and the planned browser feedback boundary.
 
 These sources intentionally omit user counts, provider guarantees, production deployment claims, audio/video support, and reward functionality that was not found in the implementation.
+
+## AI Digital Twin diagrams
+
+The AI Digital Twin case study uses publication-safe specifications grounded in owner-confirmed engineering activities because the named source repositories were unavailable during the evidence audit:
+
+- `digital-twin-contextual-retrieval.mmd` / `.svg` — contextual records, metadata filtering, vector RAG, GraphRAG, combined retrieval, and evidence passed to answer generation.
+- `digital-twin-retrieval-evaluation.mmd` / `.svg` — question-type comparison of vector RAG, GraphRAG, and combined retrieval with measured response time, DeepEval/LLM-as-evaluator review, and prompt refinement.
+
+These sources intentionally omit private records, exact schemas, vector or graph-store products, entity-extraction rules, fusion behavior, automatic routing, deployment claims, metric names, scores, latency statistics, and benchmark charts.

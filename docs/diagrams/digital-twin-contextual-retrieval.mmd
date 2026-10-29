@@ -1,0 +1,27 @@
+%% AI Digital Twin — contextual knowledge organization and retrieval
+%% Owner-confirmed activities only; implementation-specific stores and graph construction remain unverified.
+flowchart LR
+    A[Contextual records<br/>projects · dates · emails · meetings] --> B[Metadata organization<br/>and question-aware filtering]
+    B --> C[Vector representations<br/>vector database activity confirmed]
+    B --> D[GraphRAG retrieval<br/>construction details unverified]
+    Q[Question and context] --> C
+    Q --> D
+    C --> V[Vector RAG<br/>experimental strategy]
+    D --> G[GraphRAG<br/>experimental strategy]
+    V --> H[Combined GraphRAG<br/>+ Vector RAG]
+    G --> H
+    V --> E[Retrieved evidence<br/>to answer generation]
+    G --> E
+    H --> E
+    E --> R[Response and evaluation]
+
+    classDef source fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
+    classDef context fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
+    classDef strategy fill:#263A39,stroke:#7FA7B4,color:#ECE5D7
+    classDef answer fill:#2B211D,stroke:#D67B56,color:#ECE5D7
+    classDef note fill:#24232B,stroke:#8F8AA8,color:#D8D4E7
+
+    class A,Q source
+    class B,C,D context
+    class V,G,H,E strategy
+    class R answer

@@ -65,10 +65,12 @@ function EditorialCover({ cover }) {
 const capabilityStatusStyles = {
 	Implemented: 'border-dev-blue/30 bg-dev-blue/5 text-dev-blue-light',
 	Validated: 'border-dev-cyan/40 bg-dev-cyan/10 text-dev-cyan',
+	'Owner-confirmed': 'border-dev-blue/30 bg-dev-blue/5 text-dev-blue-light',
 	Partial: 'border-amber-300/30 bg-amber-300/5 text-amber-200',
 	Restricted: 'border-amber-300/30 bg-amber-300/5 text-amber-200',
 	Disabled: 'border-white/15 bg-white/[0.03] text-gray-300',
 	Planned: 'border-dev-blue/20 bg-dev-blue/[0.03] text-gray-400',
+	Unverified: 'border-white/15 bg-white/[0.03] text-gray-400',
 	'Not found': 'border-white/15 bg-white/[0.03] text-gray-400',
 };
 
