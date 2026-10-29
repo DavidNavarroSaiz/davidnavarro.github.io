@@ -8,12 +8,32 @@ export const experienceData = [
 		location: 'Remote',
 		type: 'Full-time',
 		status: 'current',
+		chapter: 'reliable',
 		domains: ['AI Agents & Evaluation', 'RAG & AI Platforms', 'Technical Leadership'],
 		specialties: ['Governed agents', 'Evaluation design', 'RAG reliability', 'Tool verification'],
+		workstreams: [
+			{
+				label: 'Operational AI Agents & Evaluation',
+				period: 'Nov 2025 – Present',
+				maturity: 'Selected production workflow',
+			},
+			{
+				label: 'Visual Proctoring & Applied CV',
+				period: 'Aug – Nov 2025',
+				maturity: 'Experimentation',
+			},
+		],
+		editorialNote: {
+			label: 'Field note / 01',
+			quote: 'The model is one part of the system. Reliability lives in the decisions around it.',
+			body: 'From inspecting physical signals to verifying an agent’s actions, the underlying engineering discipline remains the same.',
+		},
 		summary:
 			'I work on production agent systems that combine policy-governed orchestration, retrieval, tool operations, and evaluation. My scope spans runtime reliability, experiment design, and trace-based debugging.',
 		context:
 			'The central engineering challenge is allowing a stateful, multilingual assistant to act on business workflows while keeping authorization, confirmation, evidence, and failure handling explicit. I also build the evaluation loop needed to understand whether retrieval, decisions, tool results, and responses are behaving as intended.',
+		evidence:
+			'A selected operational workflow is production-deployed. Related workflows and evaluation experiments have distinct development and testing states; this page does not claim a universal benchmark or production status for every workflow.',
 		ownership: [
 			'Designed LangGraph agent workflows with deterministic eligibility rules, confirmation gates, authorized tools, and explicit state transitions.',
 			'Built layered validation around action eligibility, tool-result verification, and response adjudication rather than relying on a single model decision.',
@@ -46,6 +66,7 @@ export const experienceData = [
 		location: 'Remote',
 		type: 'Concurrent engagement',
 		status: 'completed',
+		chapter: 'reliable',
 		overlapNote: 'Concurrent with the Svitla Systems role.',
 		domains: ['Computer Vision'],
 		specialties: ['Behavioral CV', 'Model comparison', 'Dataset versioning', 'Video inference'],
@@ -53,6 +74,8 @@ export const experienceData = [
 			'I worked on multi-signal proctoring models that combined face detection, gaze, head pose, and temporal behavior features. The work compared classical and neural approaches and tightened the path from labeled data to inference.',
 		context:
 			'Exam-integrity signals are noisy when treated in isolation. The engineering problem was to compare complementary features and model families while keeping data labeling, evaluation, and runtime heuristics understandable to the teams operating the system.',
+		evidence:
+			'Experimentation and model comparison work. Reported reductions remain scoped to the relevant proctoring pipeline and are not presented as universal deployment outcomes.',
 		ownership: [
 			'Combined face detection, gaze, head pose, and temporal behavior features for suspicious-behavior modeling.',
 			'Compared XGBoost, LightGBM, random forests, logistic regression, and neural models against the same evaluation goals.',
@@ -86,12 +109,15 @@ export const experienceData = [
 		location: 'Remote',
 		type: 'Full-time',
 		status: 'completed',
+		chapter: 'connected',
 		domains: ['AI Agents & Evaluation', 'RAG & AI Platforms'],
 		specialties: ['Multi-agent orchestration', 'MCP integrations', 'LLMOps', 'Azure delivery'],
 		summary:
 			'I designed configurable multi-agent systems with memory, tools, collaborative workflows, and enterprise integration points. I also helped turn the platform into an operable Azure-based system with repeatable LLMOps practices.',
 		context:
 			'The product challenge was to support different agent configurations without creating a separate bespoke application for each workflow. That meant making agent behavior, integrations, approvals, and infrastructure reusable while keeping the system understandable to the teams configuring it.',
+		evidence:
+			'Internal platform delivery and reusable enterprise foundations. This record does not claim Marketplace publication or a single deployment outcome across every configured workflow.',
 		ownership: [
 			'Built multi-agent workflows with LangChain and PydanticAI, including memory, tools, and collaborative task handoffs.',
 			'Integrated MCP servers and Microsoft Teams so agents could work through familiar enterprise channels.',
@@ -125,12 +151,15 @@ export const experienceData = [
 		location: 'Remote',
 		type: 'Full-time',
 		status: 'completed',
+		chapter: 'connected',
 		domains: ['RAG & AI Platforms'],
 		specialties: ['RAG systems', 'Vector retrieval', 'Data enrichment', 'Workflow automation'],
 		summary:
 			'I built retrieval and enrichment workflows for recruitment, lead generation, and customer operations. The work connected unstructured web and business data to structured CRM actions and automated communication.',
 		context:
 			'The recurring problem was not simply finding text; it was turning scattered prospect and operational information into data that downstream workflows could use. I worked across retrieval, extraction, CRM integration, and automation so the handoffs were repeatable.',
+		evidence:
+			'Operational retrieval and workflow automation reported in the existing project records. The listed metrics retain their original project scope rather than describing every engagement.',
 		ownership: [
 			'Designed RAG and vector-retrieval workflows with Qdrant for search, enrichment, and personalized communication.',
 			'Connected structured outputs to GoHighLevel CRM and workflow automation for recruitment and lead-generation operations.',
@@ -164,12 +193,15 @@ export const experienceData = [
 		location: 'Remote',
 		type: 'Full-time',
 		status: 'completed',
+		chapter: 'connected',
 		domains: ['RAG & AI Platforms', 'Technical Leadership'],
 		specialties: ['Document intelligence', 'Retrieval and reranking', 'MLOps', 'Technical leadership'],
 		summary:
 			'I led a team building conversational AI and document-intelligence systems for an education and community organization. I owned the path from multi-format ingestion and retrieval to usable forms, reports, and recommendations.',
 		context:
 			'The challenge was to make heterogeneous documents useful to staff without turning the assistant into an untraceable answer generator. The platform needed ingestion, filtering, reranking, speech and application interfaces, plus a deployment path the team could operate.',
+		evidence:
+			'Team delivery across resource discovery and document workflows. The reported user, throughput, and acceleration figures remain scoped to the existing project records.',
 		ownership: [
 			'Led development of conversational AI and document-intelligence workflows with LangChain, FastAPI, React, TypeScript, and Node.',
 			'Implemented multi-format ingestion, vector retrieval, filters, and reranking for program guides and operational documents.',
@@ -201,6 +233,7 @@ export const experienceData = [
 		location: 'Colombia',
 		type: 'Research project',
 		status: 'completed',
+		chapter: 'foundations',
 		overlapNote: 'Concurrent research project during the Intecol SAS tenure.',
 		domains: ['Computer Vision'],
 		specialties: ['CNN experimentation', 'Medical imaging', 'Model evaluation', 'Explainability'],
@@ -208,6 +241,8 @@ export const experienceData = [
 			'I developed a research and application workflow for comparing CNN architectures on a public chest X-ray classification task. The work covered dataset preparation, preprocessing, model evaluation, probability outputs, and visual explanation.',
 		context:
 			'Comparing image classifiers required keeping data decisions, architecture-specific preprocessing, metrics, and user-facing interpretation separate. I built the workflow as an applied research system, not as a claim of clinical validation or deployment.',
+		evidence:
+			'Research and application prototype using public data. Historical experiment metrics are retained with their scope and are not presented as clinical validation, regulatory clearance, or patient benefit.',
 		ownership: [
 			'Curated a working dataset of more than 36,000 public chest X-ray images across COVID-19, healthy, and pneumonia classes.',
 			'Trained and compared ten CNN families in PyTorch, including VGG19, DenseNet, MobileNet, EfficientNet, ResNet, and Xception.',
@@ -238,12 +273,15 @@ export const experienceData = [
 		location: 'Colombia',
 		type: 'Full-time',
 		status: 'completed',
+		chapter: 'foundations',
 		domains: ['Computer Vision', 'Technical Leadership'],
 		specialties: ['Industrial imaging', 'Real-time CV', 'PLC/HMI integration', 'Team leadership'],
 		summary:
 			'I led industrial computer-vision delivery from imaging design and model development through integration with automation systems. The role combined technical architecture, client requirements, delivery planning, and mentoring a 10-engineer team across 30+ projects.',
 		context:
 			'Industrial vision has to work with real optics, illumination, hardware, throughput, and plant interfaces. I worked across classical image processing, CNN and YOLO models, edge execution, PLC/HMI integration, and the operational details needed to turn a lab model into a usable system.',
+		evidence:
+			'Industrial delivery across the reported project scope. Representative outcomes remain scoped to relevant systems rather than being presented as a universal result across every installation.',
 		ownership: [
 			'Led a 10-engineer team and owned architecture, planning, client requirements, budgets, reviews, and delivery quality.',
 			'Designed imaging systems involving camera selection, optics, illumination, sensors, and 3D scanners.',
@@ -269,6 +307,24 @@ export const experienceData = [
 // Keep the public profile claim stable across static builds and browser hydration.
 // Refresh this value deliberately when the portfolio narrative is reviewed.
 export const experienceYears = 7;
+
+export const experienceChapters = {
+	foundations: {
+		label: 'Foundations',
+		years: '2019–2023',
+		accent: '#B8A58C',
+	},
+	connected: {
+		label: 'Connected Systems',
+		years: '2023–2025',
+		accent: '#7FA7B4',
+	},
+	reliable: {
+		label: 'Reliable AI',
+		years: '2025–present',
+		accent: '#87AC9A',
+	},
+};
 
 export const industryDomains = [
 	'AI Agents & Evaluation',
