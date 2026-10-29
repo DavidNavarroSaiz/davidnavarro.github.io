@@ -2927,7 +2927,7 @@ export const projectsData = [
 		id: 19,
 		title: 'AI Digital Twin — Contextual Knowledge, GraphRAG & Retrieval Evaluation',
 		url: 'ai-digital-twin-contextual-knowledge-retrieval-evaluation',
-		category: 'Independent AI Engineering / Retrieval Evaluation',
+		category: 'Retrieval Engineering / AI Evaluation',
 		summary:
 			'Owner-confirmed engineering work exploring contextual knowledge organization, vector RAG, GraphRAG, combined retrieval, and evaluation by question type.',
 		img: digitalTwinCover,
@@ -2955,7 +2955,7 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Type',
-					details: 'Independent engineering work',
+					details: 'Engineering project',
 				},
 				{
 					id: uuidv4(),
@@ -2998,7 +2998,7 @@ export const projectsData = [
 					'Conceptual editorial artwork — a publication-safe visual of contextual archives and retrieval experiments. It is not an architecture export, benchmark chart, or claim of human-equivalent memory.',
 			},
 			overview:
-				'AI Digital Twin is an independent engineering effort exploring how distributed personal and professional knowledge can be organized around context and retrieved through multiple strategies. The owner confirms work with vector databases, project/date/source metadata, vector RAG, GraphRAG, combined retrieval, response-time measurement, DeepEval-based quality evaluation, and prompt refinement. Source-repository access was unavailable for this audit, so implementation-specific technologies and deployment details remain deliberately unclaimed.',
+				'AI Digital Twin is an engineering effort exploring how distributed personal and professional knowledge can be organized around context and retrieved through multiple strategies. The owner confirms work with vector databases, project/date/source metadata, vector RAG, GraphRAG, combined retrieval, response-time measurement, DeepEval-based quality evaluation, and prompt refinement. Source-repository access was unavailable for this audit, so implementation-specific technologies and deployment details remain deliberately unclaimed.',
 			problem:
 				'Professional knowledge is spread across documents, projects, dates, emails, meetings, and other records. Semantic similarity can retrieve related language without preserving the relationships and time context that make an answer useful. The engineering question is when graph-enhanced retrieval adds value compared with vector-based RAG, and what quality and latency trade-offs appear for different question types. This is a retrieval and evaluation problem, not evidence of human-equivalent memory or autonomous long-term memory.',
 			architecture: {
