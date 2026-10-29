@@ -76,6 +76,8 @@ import digitalTwinRetrievalDiagram from '../docs/diagrams/digital-twin-contextua
 import digitalTwinEvaluationDiagram from '../docs/diagrams/digital-twin-retrieval-evaluation.svg';
 import evaluationFrameworkDiagram from '../docs/diagrams/agent-evaluation-framework.svg';
 import secureExecutionDiagram from '../docs/diagrams/secure-agent-code-execution.svg';
+import aiAgentEvaluationCover from '../assets/images/ai-agent-evaluation-editorial.webp';
+import secureAiCodeExecutionCover from '../assets/images/secure-ai-code-execution-editorial.webp';
 
 export const projectsData = [
 	{
@@ -3156,10 +3158,9 @@ export const projectsData = [
 		category: 'Agent Evaluation / Reliability Engineering',
 		summary:
 			'Config-driven evaluation framework for testing grounded answers, retrieval behavior, tool use, workflow outcomes, and safety boundaries across repeatable agent experiments.',
-		img: null,
-		cardEyebrow: 'Evaluation engineering',
-		cardTitle: 'Config-driven agent evaluation',
-		cardStatus: 'No editorial cover',
+		img: aiAgentEvaluationCover,
+		imageAlt:
+			'Conceptual editorial illustration of AI agent evaluation with datasets, agent traces, deterministic checks, LLM-based evaluation, experiment comparison, and reproducibility; not a benchmark result or product screenshot.',
 		relatedProjectIds: [15, 16, 17, 19],
 		ProjectHeader: {
 			title: 'AI Agent Evaluation & Experimentation Framework',
@@ -3197,6 +3198,12 @@ export const projectsData = [
 			status: 'Internal engineering evaluation tooling',
 			showCapabilityMatrix: false,
 			headerFacts: ['Role', 'Status'],
+			editorialCover: {
+				img: aiAgentEvaluationCover,
+				alt: 'Conceptual editorial illustration of AI agent evaluation with datasets, agent traces, deterministic checks, LLM-based evaluation, experiment comparison, and reproducibility; not a benchmark result or product screenshot.',
+				caption:
+					'Conceptual illustration — datasets, traces, metric families, experiment comparison, and reproducibility. It does not show measured benchmark results.',
+			},
 			overview:
 				'I wanted a way to answer a simple question: when I change an agent\'s prompt, retrieval strategy, or workflow, did I actually improve the system? A convincing answer is not enough if the agent called the wrong tool, missed important context, violated a constraint, or chose the wrong escalation path. I built around repeatable datasets, objective checks, and experiment artifacts so those differences could be investigated.',
 			problem:
@@ -3342,10 +3349,9 @@ export const projectsData = [
 		category: 'AI Security / Execution Boundaries',
 		summary:
 			'Controlled code-execution architecture that binds authenticated users to managed sessions, owner-scoped persistent workspaces, verified mounts, and fail-closed artifact handling.',
-		img: null,
-		cardEyebrow: 'Security engineering',
-		cardTitle: 'Workspace-bound code execution',
-		cardStatus: 'No editorial cover',
+		img: secureAiCodeExecutionCover,
+		imageAlt:
+			'Conceptual editorial illustration of secure AI code execution showing authenticated requests, a controlled runtime, verified workspace mounts, persistent artifacts, and gated results; not a production architecture diagram.',
 		relatedProjectIds: [16, 20, 17, 15],
 		ProjectHeader: {
 			title: 'Secure AI Code Execution & Workspace Isolation',
@@ -3383,6 +3389,12 @@ export const projectsData = [
 			status: 'Controlled implementation — broader rollout gated',
 			showCapabilityMatrix: false,
 			headerFacts: ['Role', 'Status'],
+			editorialCover: {
+				img: secureAiCodeExecutionCover,
+				alt: 'Conceptual editorial illustration of secure AI code execution showing authenticated requests, a controlled runtime, verified workspace mounts, persistent artifacts, and gated results; not a production architecture diagram.',
+				caption:
+					'Conceptual illustration — runtime boundaries, workspace ownership, persistence, and verified outputs. It does not imply perfect isolation or completed production deployment.',
+			},
 			overview:
 				'Adding code execution to an AI workspace sounds straightforward until the code is not trusted. I approached the problem from identity and workspace boundaries first: how do I know which user owns a session, what files that session should see, whether the intended workspace is actually mounted, and what artifacts can safely return to the application?',
 			problem:
