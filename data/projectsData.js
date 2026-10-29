@@ -78,6 +78,9 @@ import evaluationFrameworkDiagram from '../docs/diagrams/agent-evaluation-framew
 import secureExecutionDiagram from '../docs/diagrams/secure-agent-code-execution.svg';
 import aiAgentEvaluationCover from '../assets/images/ai-agent-evaluation-editorial.webp';
 import secureAiCodeExecutionCover from '../assets/images/secure-ai-code-execution-editorial.webp';
+import machineVisionCourseMorphology from '../assets/images/machine-vision-course-morphology.png';
+import machineVisionCourseAlignment from '../assets/images/machine-vision-course-alignment.png';
+import machineVisionCourseStructuringElements from '../assets/images/machine-vision-course-structuring-elements.png';
 
 export const projectsData = [
 	{
@@ -489,6 +492,153 @@ export const projectsData = [
 			],
 			SocialSharingHeading: 'Share This',
 		},
+		caseStudy: {
+			showCapabilityMatrix: false,
+			headerFacts: ['Role', 'Duration', 'Dataset'],
+			overview:
+				'I built a research and application workflow for comparing ten CNN families on a public chest X-ray classification task, then exposed the selected experiments through both a PyQt desktop interface and a Flask web interface. The project combined dataset preparation, repeatable preprocessing, model comparison, probability outputs, and visual explanation.',
+			problem:
+				'Comparing image classifiers is not only a matter of choosing a larger network. Data sources, class balance, resize policy, normalization, model family, training configuration, evaluation metrics, and user-facing interpretation all affect what the comparison means. I needed a workflow that could register experiments and make model behavior inspectable without presenting it as a clinical diagnostic device.',
+			architecture: {
+				summary:
+					'The system moved from a multi-class chest X-ray dataset through model-specific preprocessing and ten PyTorch CNN implementations into evaluation records, probability outputs, and CAM-family heatmaps. The public source is an implementation reference, not a complete clinical validation protocol.',
+				workflow: {
+					title: 'From dataset assembly to comparable experiments',
+					summary: 'Data decisions, model runs, metrics, and explanation remain separate parts of the evaluation.',
+					steps: [
+						{
+							title: 'Dataset assembly',
+							mode: 'Controlled input',
+							type: 'controlled',
+							description: 'Combine public COVID-19, healthy, and pneumonia image sources into a working dataset of more than 36,000 images.',
+						},
+						{
+							title: 'Preprocessing policy',
+							mode: 'Controlled input',
+							type: 'controlled',
+							description: 'Resize images to each architecture’s expected input and apply ImageNet-style normalization where the model pipeline expects it.',
+						},
+						{
+							title: 'Ten model families',
+							mode: 'Automated checks',
+							type: 'automated',
+							description: 'Compare VGG19, DenseNet, MobileNet, AlexNet, EfficientNet, InceptionV3, ResNet, RexNet, Inception-ResNet, and Xception.',
+						},
+						{
+							title: 'Metrics and experiment records',
+							mode: 'Captured evidence',
+							type: 'captured',
+							description: 'Register runs and compare available accuracy and classification metrics. The owner reports MLflow use; the public repository does not expose a complete tracking configuration.',
+						},
+						{
+							title: 'Inference and visual explanation',
+							mode: 'Automated checks',
+							type: 'automated',
+							description: 'Return class probabilities in PyQt or Flask and generate CAM-family heatmaps to show which image regions influenced the output.',
+						},
+					],
+				},
+				components: [
+					{
+						name: 'Public image sources',
+						role: 'More than 10,000 COVID-19, more than 15,000 healthy, and more than 11,000 pneumonia images described in the public README.',
+					},
+					{
+						name: 'PyTorch model comparison',
+						role: 'Ten CNN implementations share the application workflow while retaining architecture-specific input handling.',
+					},
+					{
+						name: 'Metrics and run registration',
+						role: 'Experiment records make comparisons possible; exact ranking and split protocol are not asserted without public evidence.',
+					},
+					{
+						name: 'CAM-family explanations',
+						role: 'Heatmaps help inspect model attention; they are not proof of clinical correctness.',
+					},
+				],
+			},
+			gallery: [
+				{
+					title: 'Evaluation concept and model families',
+					img: cov3_960,
+					alt: 'Conceptual COVID-Rx project illustration showing a comparison of neural-network model families.',
+					caption: 'Conceptual illustration of the evaluation workflow; it is not a clinical benchmark chart.',
+				},
+				{
+					title: 'CNN experiment comparison',
+					img: cov4_960,
+					alt: 'Conceptual illustration showing CNN architectures used in the chest X-ray experiment comparison.',
+					caption: 'Editorial summary of the comparison, not a measured results table.',
+				},
+				{
+					title: 'Application output with heatmap',
+					img: cov1_960,
+					alt: 'COVID-Rx application interface showing a chest X-ray, model probabilities, and an explanatory heatmap.',
+					caption: 'Representative application evidence. Heatmaps show model attention and do not establish clinical diagnosis or radiologist equivalence.',
+				},
+			],
+			implementationTitle: 'How I structured the comparison',
+			implementation: [
+				{
+					title: 'Make the data policy explicit',
+					body: 'I treated the public sources, class composition, image dimensions, normalization, and dataset preparation as part of the experiment definition. A metric is meaningful only in the context of the data policy that produced it.',
+				},
+				{
+					title: 'Compare model families under a shared interface',
+					body: 'The project brought ten CNN families into one PyTorch application flow so architecture changes could be compared through the same prediction and presentation path.',
+				},
+				{
+					title: 'Register metrics instead of relying on memory',
+					body: 'Experiment tracking was part of the owner-reported workflow, including MLflow. I do not invent a leaderboard, split strategy, or exact metric table that is not present in the public source.',
+				},
+				{
+					title: 'Connect inference to an inspectable interface',
+					body: 'The desktop and web interfaces expose probabilities and heatmaps so a user can inspect the output instead of receiving an opaque class label.',
+				},
+			],
+			decisionsTitle: 'Engineering decisions and boundaries',
+			decisions: [
+				{
+					title: 'Separate comparison from clinical claims',
+					body: 'A reported accuracy figure belongs to the project experiment and dataset context. It is not a clinical validation claim, deployment approval, or evidence that the system can replace a radiologist.',
+				},
+				{
+					title: 'Use heatmaps as an inspection aid',
+					body: 'CAM-family maps can reveal whether the model appears to use plausible image regions, but remain an interpretability aid and not a guarantee that the prediction is correct.',
+				},
+			],
+			evidenceTitle: 'Technical evidence',
+			evidence: [
+				{
+					title: 'Public dataset scope',
+					body: 'The public README describes more than 10,000 COVID-19 images, more than 15,000 healthy images, and more than 11,000 pneumonia images, for roughly 36,000 images in total.',
+				},
+				{
+					title: 'Ten architectures retained',
+					body: 'The implementation reference includes VGG19, DenseNet, MobileNet, AlexNet, EfficientNet, InceptionV3, ResNet, RexNet, Inception-ResNet, and Xception.',
+				},
+				{
+					title: 'Existing project metric',
+					body: 'The existing portfolio record reports more than 90% accuracy for the selected experiments. Because the public source does not provide a complete comparison table and split protocol, this is not presented as a clinical result or model ranking.',
+				},
+			],
+			limitations: [
+				{
+					title: 'Research and application prototype',
+					body: 'The project demonstrates model comparison and interface behavior. It does not establish clinical validation, regulatory approval, prospective performance, or safe use as a diagnostic service.',
+				},
+				{
+					title: 'Public evidence is incomplete',
+					body: 'The public repository does not expose a complete MLflow configuration, run registry, split protocol, or full metric table, so those details remain intentionally bounded.',
+				},
+			],
+			links: [
+				{
+					label: 'Public source repository',
+					href: 'https://github.com/DavidNavarroSaiz/CovidRX_Interface',
+				},
+			],
+		},
 	},
 	{
 		id: 4,
@@ -595,6 +745,162 @@ export const projectsData = [
 				},
 			],
 			SocialSharingHeading: 'Share This',
+		},
+		caseStudy: {
+			showCapabilityMatrix: true,
+			headerFacts: ['Type', 'Domain', 'Status'],
+			overview:
+				'I shaped AbogacIA as a domain-aware professional knowledge and writing assistant for Colombian legal work. It combines document ingestion, semantic retrieval, similar-case discovery, context-aware questions, and drafting support so a lawyer can work from relevant sources instead of starting from an empty page.',
+			problem:
+				'Legal work requires more than a generic chat response: the assistant needs to retrieve relevant sentences, codes, constitutional material, and regulations, then keep the user’s case context in view while suggesting sources or draft content. The system is an assistive workflow, not an autonomous legal decision-maker and not a guarantee of legal correctness.',
+			capabilitySummary:
+				'The implemented prototype centers on retrieval, case context, similar-case discovery, Q&A, and document generation. Extensions to medicine or psychology are conceptual directions only; they are not presented as implemented or clinically validated capabilities.',
+			capabilityMatrix: [
+				{
+					title: 'Document ingestion and semantic retrieval',
+					status: 'Implemented',
+					description: 'FastAPI, Selenium, MongoDB, and Chroma support ingestion and semantic search across the documented legal sources.',
+				},
+				{
+					title: 'Similar-case discovery',
+					status: 'Implemented',
+					description: 'The existing project record describes recommendations of similar judicial sentences and precedents for professional review.',
+				},
+				{
+					title: 'Relevant regulations and relationships',
+					status: 'Partial',
+					description: 'The prototype surfaces potentially relevant regulations, rights, articles, and relationships; it does not claim an exhaustive legal rule engine.',
+				},
+				{
+					title: 'Context-aware drafting support',
+					status: 'Implemented',
+					description: 'Q&A and document-generation flows use retrieved knowledge and case information to help construct draft material for human review.',
+				},
+				{
+					title: 'Medicine and psychology extensions',
+					status: 'Planned',
+					description: 'Cross-domain adaptation is a conceptual extensibility direction, not an implemented or validated capability of this case.',
+				},
+			],
+			architecture: {
+				summary:
+					'The prototype combines public-source collection, document processing, vector retrieval in Chroma, graph-oriented relationship support, and LangGraph orchestration. Retrieved context feeds professional Q&A and drafting flows while the user remains responsible for reviewing the material.',
+				workflow: {
+					title: 'From legal source to draft support',
+					summary: 'Retrieval and case context precede generation so the assistant can show where its suggestions come from.',
+					steps: [
+						{
+							title: 'Collect and process legal sources',
+							mode: 'Controlled input',
+							type: 'controlled',
+							description: 'Process the documented judiciary sources, court sentences, national codes, constitution, and regulations used by the prototype.',
+						},
+						{
+							title: 'Retrieve relevant knowledge',
+							mode: 'Automated checks',
+							type: 'automated',
+							description: 'Use vector similarity and relationship-oriented data access to find potentially relevant sources and similar cases.',
+						},
+						{
+							title: 'Apply case context',
+							mode: 'Captured evidence',
+							type: 'captured',
+							description: 'Combine the user’s case description, uploaded documents, retrieved passages, and prior questions into the working context.',
+						},
+						{
+							title: 'Draft and review',
+							mode: 'Manual / assisted review',
+							type: 'assisted',
+							description: 'Generate Q&A responses or draft documents for a lawyer to verify, edit, and use with professional judgment.',
+						},
+					],
+				},
+				components: [
+					{
+						name: 'Source ingestion',
+						role: 'Selenium and Python workflows collect and process the legal documents described in the project record.',
+					},
+					{
+						name: 'Semantic retrieval',
+						role: 'Chroma and vector search surface relevant passages and similar documents for the current case.',
+					},
+					{
+						name: 'Relationship context',
+						role: 'Graph-oriented data supports connections among cases, regulations, rights, and articles without claiming exhaustive legal reasoning.',
+					},
+					{
+						name: 'LangGraph workflow',
+						role: 'Orchestrates retrieval, Q&A, and drafting steps while keeping the system in an assistive workflow.',
+					},
+				],
+			},
+			gallery: [
+				{
+					title: 'Legal research workspace',
+					img: abo1_960,
+					alt: 'AbogacIA project interface illustrating a legal research and retrieval workspace.',
+					caption: 'Representative project interface for assisted legal research; it is not a guarantee of legal correctness.',
+				},
+				{
+					title: 'Relevant case and source context',
+					img: abo2_960,
+					alt: 'AbogacIA project interface showing retrieved legal case or source context.',
+					caption: 'The prototype brings potentially relevant sources and similar cases into the professional review workflow.',
+				},
+				{
+					title: 'Drafting support flow',
+					img: abo3_960,
+					alt: 'AbogacIA project interface showing context-aware document drafting support.',
+					caption: 'Generated material remains draft support for human verification, not autonomous legal advice.',
+				},
+			],
+			implementationTitle: 'How I framed the assistant',
+			implementation: [
+				{
+					title: 'Retrieve before writing',
+					body: 'The assistant first looks for potentially relevant legal documents, cases, regulations, rights, and articles so drafting can begin from a source-aware context.',
+				},
+				{
+					title: 'Keep case context visible',
+					body: 'Uploaded documents, user descriptions, questions, retrieved passages, and similar cases form the working context for the professional workflow.',
+				},
+				{
+					title: 'Separate support from decision-making',
+					body: 'The system helps research, compare, explain, and draft. A lawyer still reviews sources, interprets the law, and decides what belongs in a final document.',
+				},
+			],
+			decisionsTitle: 'Boundaries and extensibility',
+			decisions: [
+				{
+					title: 'Use retrieval as evidence support',
+					body: 'The architecture emphasizes potentially relevant source material and similar cases rather than implying that an LLM can independently determine the correct legal outcome.',
+				},
+				{
+					title: 'Treat other domains as a direction',
+					body: 'The retrieval-and-context pattern could be adapted to medicine or psychology in principle, but those extensions are conceptual and do not represent implemented or validated domain capabilities here.',
+				},
+			],
+			evidenceTitle: 'Project evidence',
+			evidence: [
+				{
+					title: 'Implemented prototype scope',
+					body: 'The existing project record documents legal-source ingestion, semantic retrieval, similar-case recommendations, Q&A, document generation, Chroma, graph-oriented data, and LangGraph orchestration.',
+				},
+				{
+					title: 'Professional review remains central',
+					body: 'The public case describes an assistive research and writing workflow, not legal advice, guaranteed correctness, regulatory compliance, or an autonomous decision system.',
+				},
+			],
+			limitations: [
+				{
+					title: 'No correctness guarantee',
+					body: 'Retrieval and generated drafts can be incomplete, outdated, or wrong. A qualified professional must verify sources, interpretation, and final wording.',
+				},
+				{
+					title: 'Cross-domain work is conceptual',
+					body: 'Nothing in this case establishes medical or psychological diagnosis, treatment guidance, or validated deployment outside the documented legal domain.',
+				},
+			],
 		},
 	},
 	{
@@ -1109,17 +1415,17 @@ export const projectsData = [
 		id: 10,
 		title: 'Industrial Computer Vision Systems',
 		url: 'industrial-computer-vision',
-		category: 'Computer Vision',
+		category: 'Computer Vision / Industrial Automation',
 		summary:
-			'Production vision systems for defect detection, fill checks, anomaly detection, and PPE compliance on the factory floor.',
+			'Industrial inspection and safety systems built from imaging design, classical computer vision, machine learning, edge software, and PLC/HMI integration.',
 		img: int4_640,
-		relatedProjectIds: [14, 17, 15, 16],
+		relatedProjectIds: [14, 17, 15, 16, 22],
 		featured: {
 			rank: 4,
 			problem:
-				'Factory inspection and safety checks need reliable vision under real production constraints: lighting, throughput, hardware, and PLC integration.',
+				'Factory inspection and safety checks need reliable vision under real production constraints: optics, lighting, throughput, hardware, and PLC integration.',
 			approach:
-				'End-to-end CV systems spanning imaging design, real-time detection pipelines, CVAT labeling workflows, and PLC/HMI integration for defect, fill, anomaly, and PPE checks.',
+				'End-to-end systems spanning camera and lighting design, calibration, classical image processing, learned detection pipelines, CVAT labeling workflows, and PLC/HMI integration for defect, fill, anomaly, and PPE checks.',
 			disciplines: [
 				'Applied computer vision',
 				'Edge deployment',
@@ -1175,11 +1481,13 @@ export const projectsData = [
 			],
 			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
-				'Led a 10-engineer team to deliver end-to-end computer vision systems, covering requirements, optical/sensor design, model development, and edge deployment for industrial automation.',
+				'Lead a 10-engineer team across more than 30 industrial computer-vision projects, taking inspection systems from physical imaging requirements through algorithms, operator software, and factory integration.',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
 					techs: [
+						'Camera and optics design',
+						'Industrial lighting',
 						'PyTorch',
 						'TensorFlow',
 						'Keras',
@@ -1190,6 +1498,7 @@ export const projectsData = [
 						'PLCs',
 						'C#',
 						'CVAT',
+						'3D and thermal imaging',
 					],
 				},
 			],
@@ -1217,6 +1526,155 @@ export const projectsData = [
 				},
 			],
 			SocialSharingHeading: 'Share This',
+		},
+		caseStudy: {
+			showCapabilityMatrix: false,
+			headerFacts: ['Role', 'Duration', 'Team Size'],
+			overview:
+				'I spent almost four years building computer-vision systems for industrial environments. One of the most important things I learned is that the model is only one part of a machine-vision system. Camera selection, optics, lighting, timing, and integration with the production line can matter just as much as the algorithm.',
+			problem:
+				'An inspection system has to make a useful decision from imperfect physical evidence and then fit into a moving production process. A defect may be smaller than the available pixels, reflections may change with the material or lighting, and a correct classification is still operationally useless if the trigger, PLC signal, operator interface, or reject mechanism is unreliable. The engineering problem was to design the complete path instead of treating inference as the product.',
+			architecture: {
+				summary:
+					'I worked from the physical scene toward the software decision: define the defect or safety requirement, select the acquisition setup, calibrate the image, choose deterministic processing or a learned model, validate behavior under production variation, and integrate the result with the operator and line controls. The exact stack varied by installation; not every project used every camera type, model family, or specialized sensor.',
+				workflow: {
+					title: 'From physical evidence to production decision',
+					summary: 'The recurring engineering path connected imaging constraints with algorithms, validation, and factory behavior.',
+					steps: [
+						{
+							title: 'Inspection requirements and defect geometry',
+							mode: 'Controlled input',
+							type: 'controlled',
+							description: 'Define what must be detected or measured, the smallest relevant defect, available cycle time, and the consequences of false positives or false negatives.',
+						},
+						{
+							title: 'Camera, lens, resolution, and lighting',
+							mode: 'Controlled input',
+							type: 'controlled',
+							description: 'Choose sensors, focal length, working distance, field of view, depth of field, illumination geometry, and contrast for the physical scene.',
+						},
+						{
+							title: 'Acquisition and image preparation',
+							mode: 'Captured evidence',
+							type: 'captured',
+							description: 'Synchronize triggers, calibrate regions of interest, and use filtering, contrast enhancement, thresholding, morphology, or geometric measurements where they are sufficient.',
+						},
+						{
+							title: 'Classical CV or learned model',
+							mode: 'Automated checks',
+							type: 'automated',
+							description: 'Use deterministic image processing for explicit geometry and stable appearance; use labeled CNN/YOLO-style models when learned variation handling is justified.',
+						},
+						{
+							title: 'Operator and factory integration',
+							mode: 'Automated checks',
+							type: 'automated',
+							description: 'Connect inspection outcomes to desktop or web interfaces, PLC/HMI signals, alarms, and rejection mechanisms at production speed.',
+						},
+					],
+				},
+				components: [
+					{
+						name: 'Image acquisition and optics',
+						role: 'Camera, lens, working-distance, resolution, depth-of-field, trigger, and lighting decisions shaped the quality of the evidence before inference.',
+					},
+					{
+						name: 'Classical computer vision',
+						role: 'Preprocessing, contrast, thresholding, morphology, contours, blobs, calibration, regions of interest, and measurements handled explicit visual structure.',
+					},
+					{
+						name: 'Machine learning and deep learning',
+						role: 'Labeled datasets and CNN/YOLO-style models addressed variable appearance, orientation, lighting, and product conditions when deterministic rules were not enough.',
+					},
+					{
+						name: 'Industrial software and controls',
+						role: 'Real-time acquisition, operator interfaces, PLC/HMI communication, alarms, and line decisions turned image evidence into an operational response.',
+					},
+				],
+			},
+			gallery: [
+				{
+					title: 'Inspection and operator-facing evidence',
+					img: int2_960,
+					alt: 'Industrial computer-vision project image showing a production inspection interface or visual inspection result.',
+					caption: 'Representative project evidence from the existing portfolio gallery; customer-specific equipment and factory details are intentionally not disclosed.',
+				},
+				{
+					title: 'Machine-vision system integration',
+					img: int4_960,
+					alt: 'Industrial machine-vision system evidence showing inspection imagery and engineering integration.',
+					caption: 'The software decision was only one part of the system; acquisition, timing, operator feedback, and line integration had to work together.',
+				},
+				{
+					title: 'Applied industrial vision result',
+					img: int1_960,
+					alt: 'Applied industrial computer-vision result from an inspection or safety-monitoring workflow.',
+					caption: 'Representative visual evidence, not a universal template for every installation.',
+				},
+			],
+			implementationTitle: 'What I worked across',
+			implementation: [
+				{
+					title: 'Start with the physical scene',
+					body: 'I translated inspection requirements into imaging constraints: field of view, smallest defect, required resolution, working distance, focal length, depth of field, acquisition speed, and the likely sources of reflection or environmental variation. Camera and lighting cost mattered, but so did repeatability and serviceability on the factory floor.',
+				},
+				{
+					title: 'Use deterministic vision when the structure is explicit',
+					body: 'Filtering, contrast enhancement, thresholding, morphology, contour extraction, blob analysis, calibration, regions of interest, and geometric measurements were useful when the appearance and rule were stable. This kept the system understandable and avoided training a model for a problem that could be measured directly.',
+				},
+				{
+					title: 'Build data and learned models when variation demands it',
+					body: 'For changing product appearance, orientation, lighting, or background conditions, I worked with labeling workflows, CNN/YOLO-style training, error analysis, and operating thresholds. The right threshold depended on the cost of missing a defect versus stopping the line for a false alarm.',
+				},
+				{
+					title: 'Integrate the decision into the line',
+					body: 'The systems connected real-time acquisition and processing with operator interfaces, PLC/HMI communication, alarms, and rejection mechanisms. Desktop, C#, React, and lower-level integration choices varied with the installation rather than being prescribed as one universal stack.',
+				},
+				{
+					title: 'Lead delivery across a portfolio of projects',
+					body: 'I led a team of 10 engineers across more than 30 industrial computer-vision projects. The work ranged across defect detection, fill checks, surface anomalies, PPE compliance, and specialized imaging where the inspection required it.',
+				},
+			],
+			decisionsTitle: 'Engineering decisions and trade-offs',
+			decisions: [
+				{
+					title: 'Design the image before tuning the model',
+					body: 'A higher-capacity model cannot recover information that the camera, lens, trigger, or lighting never captured. Improving the evidence often produced a more reliable system than adding algorithmic complexity.',
+				},
+				{
+					title: 'Choose deterministic or learned processing deliberately',
+					body: 'Classical computer vision was easier to inspect and maintain for explicit geometry; learned models were valuable when the variation was difficult to enumerate. The decision depended on data, explainability, maintenance, and the operating environment.',
+				},
+				{
+					title: 'Set thresholds around operational consequences',
+					body: 'A false negative and a false positive do not cost the same thing in every line. I treated operating thresholds as part of the system design, not just a model-training afterthought.',
+				},
+			],
+			evidenceTitle: 'Scope and evidence',
+			evidence: [
+				{
+					title: 'Owner-reported engineering scope',
+					body: 'The project record covers almost four years of industrial machine-vision engineering, technical leadership for a 10-engineer team, and delivery across more than 30 projects.',
+				},
+				{
+					title: 'Reported operational outcomes',
+					body: 'Existing project evidence reports a 30% improvement in incident detection and a 45% reduction in false alarms for the relevant systems. These figures are not generalized to every installation, customer, or inspection task.',
+				},
+				{
+					title: 'Technical evidence retained',
+					body: 'The portfolio retains representative computer-vision images and the documented stack of acquisition, CVAT labeling, OpenCV processing, learned models, PLC/HMI integration, and specialized imaging. Customer names, factory imagery, and private equipment details remain excluded.',
+				},
+			],
+			limitations: [
+				{
+					title: 'Projects used different stacks',
+					body: 'The portfolio spans multiple installations. It would be inaccurate to imply that every project used YOLO, thermal or 3D imaging, React, PLC rejection, or the same camera and lighting configuration.',
+				},
+				{
+					title: 'Factory details stay private',
+					body: 'The public case focuses on reusable engineering decisions and representative outcomes rather than customer identities, line layouts, equipment configurations, or proprietary inspection rules.',
+				},
+			],
 		},
 	},
 	{
@@ -3573,6 +4031,225 @@ export const projectsData = [
 				{
 					title: 'Private infrastructure details stay private',
 					body: 'The published case intentionally excludes IAM policies, resource identifiers, filesystem paths, endpoints, account structure, credentials, and proprietary threat-model details.',
+				},
+			],
+		},
+	},
+	{
+		id: 22,
+		title: 'Industrial Machine Vision — Course & Practical Labs',
+		url: 'industrial-machine-vision-course',
+		category: 'Computer Vision / Engineering Education',
+		summary:
+			'Collaborative public course covering image processing, industrial imaging systems, machine learning, and practical machine-vision labs.',
+		img: machineVisionCourseMorphology,
+		imageAlt: 'Authentic machine-vision course lab image showing a morphology exercise on industrial objects.',
+		relatedProjectIds: [10, 3, 13],
+		ProjectHeader: {
+			title: 'Industrial Machine Vision — Course & Practical Labs',
+			publishDate: 'Public course repository',
+			tags: 'Computer Vision / Industrial Systems / Education',
+		},
+		ProjectInfo: {
+			ClientHeading: 'About Project',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Role',
+					details: 'Co-designer and instructor',
+				},
+				{
+					id: uuidv4(),
+					title: 'Status',
+					details: 'Public collaborative course materials',
+				},
+				{
+					id: uuidv4(),
+					title: 'Scope',
+					details: 'Image processing, vision systems, and industrial integration',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Co-designed and delivered a practical course that connects image-processing fundamentals with the physical and software constraints of industrial machine vision. The public repository includes modules, notebooks, slides, labs, and a final-project structure; the teaching work was collaborative rather than exclusively authored by one person.',
+			Technologies: [
+				{
+					title: 'Course topics',
+					techs: [
+						'Python',
+						'OpenCV',
+						'PyTorch',
+						'Image processing',
+						'Optics and cameras',
+						'Industrial lighting',
+						'Thermography',
+						'3D and smart cameras',
+						'Industrial communications',
+						'CNNs and deep learning',
+					],
+				},
+			],
+			ProjectDetailsHeading: 'Course modules',
+			ProjectDetails: [
+				{
+					id: uuidv4(),
+					details: 'Digital image processing: pixels, RGB and bit depth, filtering, edges, brightness and contrast, histograms, binarization, morphology, connected components, and shape or texture features.',
+				},
+				{
+					id: uuidv4(),
+					details: 'Dimensioning systems: cameras, lenses, optics, field of view, resolution, depth of field, lighting, polarization, filters, thermography, optical gas imaging, 3D, hyperspectral and multispectral approaches.',
+				},
+				{
+					id: uuidv4(),
+					details: 'Industrial integration: PC and smart cameras, FPGA and memory considerations, Ethernet/TCP/IP/PROFINET, and practical machine-vision communication exercises.',
+				},
+				{
+					id: uuidv4(),
+					details: 'Machine and deep learning: feature-based classification, dataset construction, classical ML, neural networks, PyTorch, CNNs, evaluation, labs, and a final project.',
+				},
+			],
+			SocialSharingHeading: 'Share This',
+		},
+		caseStudy: {
+			showCapabilityMatrix: false,
+			headerFacts: ['Role', 'Status'],
+			overview:
+				'I co-designed and delivered a public industrial machine-vision course with practical material that moves from pixels and image operators to cameras, optics, lighting, factory communication, and learned models. The repository is a collaborative teaching artifact: its value is the learning path and hands-on material, not an individual authorship claim.',
+			problem:
+				'Machine vision is often taught as either image processing or model training, while real systems require both technical layers plus physical imaging and industrial integration. The course connects those layers so a learner can understand why field of view, lens choice, illumination, calibration, feature design, dataset construction, and communication all affect the final inspection behavior.',
+			architecture: {
+				summary:
+					'The learning path starts with digital images and deterministic operators, then introduces physical imaging systems, specialized sensors and lighting, industrial communication, and machine/deep learning. Labs and a final project connect each concept to an applied workflow.',
+				workflow: {
+					title: 'A learning path from pixels to inspection systems',
+					summary: 'Each stage adds a new engineering constraint while keeping the previous layer visible.',
+					steps: [
+						{
+							title: 'Represent and transform the image',
+							mode: 'Controlled input',
+							type: 'controlled',
+							description: 'Work with pixel matrices, color, bit depth, filtering, histograms, thresholding, edges, and morphology before choosing a model.',
+						},
+						{
+							title: 'Measure and extract structure',
+							mode: 'Automated checks',
+							type: 'automated',
+							description: 'Use connected components, contours, geometric measurements, texture, moments, and fitted curves to describe objects and defects.',
+						},
+						{
+							title: 'Design the physical imaging system',
+							mode: 'Controlled input',
+							type: 'controlled',
+						description: 'Relate cameras, lenses, field of view, resolution, depth of field, lighting, polarization, filters, thermography, and 3D or smart-camera options to the inspection requirement.',
+						},
+						{
+							title: 'Connect the inspection to industry',
+							mode: 'Captured evidence',
+							type: 'captured',
+							description: 'Explore industrial computers, camera platforms, Ethernet/TCP/IP/PROFINET, and practical communication or acquisition labs.',
+						},
+						{
+							title: 'Build and evaluate learned models',
+							mode: 'Automated checks',
+							type: 'automated',
+							description: 'Construct datasets, introduce classical ML and neural networks, use PyTorch and CNNs, and consolidate the work in a final project.',
+						},
+					],
+				},
+				components: [
+					{
+						name: 'Image-processing foundations',
+						role: 'Filtering, histograms, thresholding, morphology, features, and measurements provide a deterministic vocabulary for visual evidence.',
+					},
+					{
+						name: 'Optics and acquisition',
+						role: 'Cameras, lenses, field of view, resolution, depth of field, and lighting connect the physical scene to pixels.',
+					},
+					{
+						name: 'Industrial imaging',
+						role: 'Thermography, optical gas imaging, 3D, smart cameras, and communication labs show how specialized systems fit production constraints.',
+					},
+					{
+						name: 'Machine and deep learning',
+						role: 'Dataset construction, classical ML, PyTorch, neural networks, CNNs, and evaluation extend the toolkit when explicit rules are insufficient.',
+					},
+				],
+			},
+			gallery: [
+				{
+					title: 'Morphology lab material',
+					img: machineVisionCourseMorphology,
+					alt: 'Authentic course lab image showing a grayscale morphology exercise with beans and peas.',
+					caption: 'Authentic image from the public course repository, used here to illustrate morphological operations.',
+				},
+				{
+					title: 'Alignment lab',
+					img: machineVisionCourseAlignment,
+					alt: 'Authentic course lab plate showing a sequence of images for an industrial vision alignment exercise.',
+					caption: 'Authentic practical lab material from the public repository.',
+				},
+				{
+					title: 'Structuring elements',
+					img: machineVisionCourseStructuringElements,
+					alt: 'Authentic course diagram illustrating structuring elements used in mathematical morphology.',
+					caption: 'Authentic course diagram used to explain how morphology changes image structure.',
+				},
+			],
+			implementationTitle: 'What the public material covers',
+			implementation: [
+				{
+					title: 'Digital image processing',
+					body: 'The first module builds from pixel representation and basic transformations through filtering, histograms, thresholding, morphology, connected components, and feature extraction such as size, curvature, circularity, perimeter, bounding boxes, centroids, texture, and moments.',
+				},
+				{
+					title: 'Physical vision-system design',
+					body: 'The material treats cameras, CCD/CMOS sensors, lenses, field of view, resolution, depth of field, illumination, polarization, filters, thermography, optical gas imaging, 3D, hyperspectral, multispectral, and stereo methods as system-design choices.',
+				},
+				{
+					title: 'Practical industrial labs',
+					body: 'The repository includes practical material around visible-camera and illumination setups, thermography, Gocator 3D work, Cognex smart-camera work, and industrial communication concepts.',
+				},
+				{
+					title: 'Applied machine learning',
+					body: 'Dataset construction, feature-based prediction and classification, basic ML, neural networks, PyTorch notebooks, CNNs, evaluation, and a final project complete the path.',
+				},
+			],
+			decisionsTitle: 'Teaching and attribution boundaries',
+			decisions: [
+				{
+					title: 'Teach the system, not only the model',
+					body: 'The course keeps physical image formation, deterministic processing, industrial communication, and learned inference in one progression so the model is understood as one component of a larger system.',
+				},
+				{
+					title: 'Preserve collaborative authorship',
+					body: 'I describe the course as co-designed and collaboratively delivered. The public repository is linked as the source of the modules, notebooks, slides, and labs rather than presented as an exclusively authored work.',
+				},
+			],
+			evidenceTitle: 'Public course evidence',
+			evidence: [
+				{
+					title: 'Repository structure',
+					body: 'The public repository contains README-described modules, notebooks, slide material, practical labs, and a final-project structure covering image processing, industrial vision, and machine learning.',
+				},
+				{
+					title: 'Authentic visual material',
+					body: 'The gallery uses selected images copied from the public course repository. They are learning material, not portfolio-generated illustrations or evidence of a specific production installation.',
+				},
+			],
+			limitations: [
+				{
+					title: 'Collaborative course artifact',
+					body: 'The case does not claim exclusive authorship, student counts, completion rates, or learning outcomes that are not documented in the public source.',
+				},
+				{
+					title: 'Educational examples are not production guarantees',
+					body: 'The labs and examples teach transferable concepts. They do not by themselves establish a production-ready inspection system, sensor specification, or industrial performance result.',
+				},
+			],
+			links: [
+				{
+					label: 'Public course repository',
+					href: 'https://github.com/DavidNavarroSaiz/MachineVision-in-the-industry-Course',
 				},
 			],
 		},

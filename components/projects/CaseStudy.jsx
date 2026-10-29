@@ -239,6 +239,30 @@ function ArtifactStructure({ structure }) {
 	);
 }
 
+function EvidenceGallery({ gallery }) {
+	return (
+		<div className="mt-6 grid gap-6 md:grid-cols-2">
+			{gallery.map((item) => (
+				<figure key={item.title} className="overflow-hidden rounded-lg border border-white/10 bg-gray-950/70">
+					<div className="overflow-hidden border-b border-white/10 bg-gray-950">
+						<Image
+							src={item.img}
+							alt={item.alt}
+							sizes="(max-width: 767px) 100vw, 50vw"
+							loading="lazy"
+					className="max-h-[28rem] w-full object-contain"
+						/>
+					</div>
+					<figcaption className="p-4">
+						<p className="font-general-semibold text-sm text-white">{item.title}</p>
+						{item.caption && <p className="mt-1.5 text-sm leading-relaxed text-gray-400">{item.caption}</p>}
+					</figcaption>
+				</figure>
+			))}
+		</div>
+	);
+}
+
 // Renders a project's optional `caseStudy` data. Sections without content are
 // skipped, so a case study only shows what has been verified.
 function CaseStudy({ project }) {
@@ -255,6 +279,7 @@ function CaseStudy({ project }) {
 		limitations,
 		capabilityMatrix,
 		capabilitySummary,
+		gallery,
 		links,
 	} = caseStudy;
 	const showCapabilityMatrix = caseStudy.showCapabilityMatrix !== false;
@@ -268,6 +293,7 @@ function CaseStudy({ project }) {
 		problem && { id: 'problem', label: 'Problem and context' },
 		architecture && { id: 'architecture', label: 'System architecture' },
 		capabilityMatrix?.length && showCapabilityMatrix && { id: 'capabilities', label: 'Security and capability boundaries' },
+		gallery?.length && { id: 'gallery', label: 'Selected visual evidence' },
 		implementation?.length && { id: 'implementation', label: implementationTitle ?? 'Implementation' },
 		decisions?.length && { id: 'decisions', label: decisionsTitle ?? 'Decisions and trade-offs' },
 		evidence?.length && { id: 'evidence', label: evidenceTitle ?? 'Evaluation and operations' },
@@ -422,6 +448,12 @@ function CaseStudy({ project }) {
 						<Section id="capabilities" title="Security and capability boundaries">
 							{capabilitySummary && <p className={proseClass}>{capabilitySummary}</p>}
 							<CapabilityStatusMatrix items={capabilityMatrix} />
+						</Section>
+					)}
+
+					{gallery?.length > 0 && (
+						<Section id="gallery" title="Selected visual evidence">
+							<EvidenceGallery gallery={gallery} />
 						</Section>
 					)}
 
