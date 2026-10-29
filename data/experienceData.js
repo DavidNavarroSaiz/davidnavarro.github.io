@@ -33,7 +33,7 @@ export const experienceData = [
 				detail: 'Shared runtime foundations, governed actions, evaluation experiments, and operational debugging.',
 			},
 		],
-		relatedProjectIds: [17, 20, 1],
+		relatedProjectIds: [17, 20],
 		companyLogo: '/images/companies/svitla.png',
 		companyUrl: 'https://svitla.com',
 	},
@@ -46,6 +46,7 @@ export const experienceData = [
 		location: 'Remote',
 		type: 'Concurrent engagement',
 		status: 'completed',
+		overlapNote: 'Concurrent with the Svitla Systems role.',
 		domains: ['Computer Vision'],
 		specialties: ['Behavioral CV', 'Model comparison', 'Dataset versioning', 'Video inference'],
 		summary:
@@ -70,6 +71,9 @@ export const experienceData = [
 				value: 'Multi-signal behavior modeling',
 				detail: 'A practical comparison of feature combinations and model families for video-based proctoring.',
 			},
+			{ label: 'False positives', value: '45% reduction', detail: 'Reported result from the relevant proctoring pipeline.' },
+			{ label: 'Deployment speed', value: '40% faster', detail: 'Reported result from the relevant proctoring workflow.' },
+			{ label: 'Model selection', value: '50% less time', detail: 'Reported reduction in time spent comparing candidate models.' },
 		],
 		relatedProjectIds: [],
 	},
@@ -106,8 +110,9 @@ export const experienceData = [
 				value: 'Configurable agent workflows',
 				detail: 'Reusable orchestration, integrations, approvals, and deployment foundations for enterprise use cases.',
 			},
+			{ label: 'Time-to-deploy', value: '< 1 hour', detail: 'Reported platform outcome for customer setup; not a universal guarantee.' },
 		],
-		relatedProjectIds: [16, 17, 1],
+		relatedProjectIds: [1],
 		companyLogo: '/images/companies/kmeleon.png',
 		companyUrl: 'https://www.kmeleon.tech',
 	},
@@ -144,8 +149,9 @@ export const experienceData = [
 				value: '40% shorter deployment cycles',
 				detail: 'Reported in the existing project record alongside automated retrieval and CRM workflows.',
 			},
+			{ label: 'Lead conversion', value: '+2%', detail: 'Reported outcome from the relevant lead-generation workflow.' },
 		],
-		relatedProjectIds: [1],
+		relatedProjectIds: [],
 		companyLogo: '/images/companies/southdesk.png',
 		companyUrl: 'https://southdesk.net',
 	},
@@ -179,9 +185,10 @@ export const experienceData = [
 		impact: [
 			{ label: 'Users', value: '160+', detail: 'Users supported by the resource-discovery workflow.' },
 			{ label: 'Throughput', value: '~100 documents/month', detail: 'Document-processing volume in the existing project record.' },
-			{ label: 'Reported outcome', value: '50% faster discovery', detail: 'Existing project record also reports 40% faster deployment cycles.' },
+			{ label: 'Resource discovery', value: '50% faster', detail: 'Existing project record also reports 40% faster deployment cycles.' },
+			{ label: 'Deployment cycles', value: '40% acceleration', detail: 'Reported outcome from the team’s MLOps and CI/CD work.' },
 		],
-		relatedProjectIds: [1, 16],
+		relatedProjectIds: [],
 		companyLogo: '/images/companies/elsol.png',
 		companyUrl: 'https://elsolnec.org',
 	},
@@ -194,6 +201,7 @@ export const experienceData = [
 		location: 'Colombia',
 		type: 'Research project',
 		status: 'completed',
+		overlapNote: 'Concurrent research project during the Intecol SAS tenure.',
 		domains: ['Computer Vision'],
 		specialties: ['CNN experimentation', 'Medical imaging', 'Model evaluation', 'Explainability'],
 		summary:
@@ -215,7 +223,7 @@ export const experienceData = [
 		impact: [
 			{ label: 'Dataset', value: '36k+ chest X-rays', detail: 'Public multi-class image sources used for the research workflow.' },
 			{ label: 'Comparison', value: '10 CNN architectures', detail: 'Reported experiment scope across model families.' },
-			{ label: 'Reported result', value: '>90% accuracy', detail: 'A project-level experiment result, not a clinical validation metric.' },
+			{ label: 'Reported result', value: '96% accuracy', detail: 'Historical project result; this is an experiment metric, not clinical validation.' },
 		],
 		relatedProjectIds: [3],
 		companyLogo: '/images/companies/universidad-magdalena.png',
@@ -258,33 +266,9 @@ export const experienceData = [
 	},
 ];
 
-const MONTHS = {
-	january: 0, jan: 0, february: 1, feb: 1, march: 2, mar: 2, april: 3, apr: 3,
-	may: 4, june: 5, jun: 5, july: 6, jul: 6, august: 7, aug: 7,
-	september: 8, sep: 8, sept: 8, october: 9, oct: 9, november: 10, nov: 10,
-	december: 11, dec: 11,
-};
-
-function parseStartDate(period) {
-	const match = period.split(/[–-]/)[0].trim().match(/([A-Za-z]+)\s+(\d{4})/);
-	if (!match) return null;
-	return new Date(+match[2], MONTHS[match[1].toLowerCase()] ?? 0, 1);
-}
-
-// Full years elapsed since the earliest recorded role start.
-function fullYearsSinceEarliest() {
-	const starts = experienceData.map((exp) => parseStartDate(exp.period)).filter(Boolean);
-	if (starts.length === 0) return 0;
-	const earliest = new Date(Math.min(...starts));
-	const now = new Date();
-	let years = now.getFullYear() - earliest.getFullYear();
-	const anniversary = new Date(earliest);
-	anniversary.setFullYear(now.getFullYear());
-	if (now < anniversary) years -= 1;
-	return Math.max(years, 0);
-}
-
-export const experienceYears = fullYearsSinceEarliest();
+// Keep the public profile claim stable across static builds and browser hydration.
+// Refresh this value deliberately when the portfolio narrative is reviewed.
+export const experienceYears = 7;
 
 export const industryDomains = [
 	'AI Agents & Evaluation',
@@ -293,10 +277,20 @@ export const industryDomains = [
 	'Technical Leadership',
 ];
 
+const employerNames = new Set(
+	experienceData
+		.filter((experience) => experience.type !== 'Research project')
+		.map((experience) => experience.company)
+);
+const relatedCaseStudyIds = new Set(
+	experienceData.flatMap((experience) => experience.relatedProjectIds)
+);
+
 export const experienceStats = {
 	totalYears: `${experienceYears}+`,
-	companies: experienceData.length,
+	companies: employerNames.size,
+	roles: experienceData.length,
 	technologies: [...new Set(experienceData.flatMap((exp) => exp.technologies))].length,
-	projects: new Set(experienceData.flatMap((exp) => exp.relatedProjectIds)).size,
+	relatedCaseStudies: relatedCaseStudyIds.size,
 	leadership: experienceData.filter((exp) => exp.domains.includes('Technical Leadership')).length,
 };

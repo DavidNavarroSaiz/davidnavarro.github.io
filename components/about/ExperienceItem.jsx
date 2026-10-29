@@ -33,6 +33,7 @@ function ExperienceItem({ experience }) {
 	const detailsId = `experience-details-${experience.id}`;
 	const titleId = `experience-title-${experience.id}`;
 	const specialties = experience.specialties || experience.technologies.slice(0, 4);
+	const additionalImpact = experience.impact?.slice(1) || [];
 	const relatedProjects = (experience.relatedProjectIds || [])
 		.map((projectId) => projectsById.get(projectId))
 		.filter(Boolean)
@@ -74,6 +75,11 @@ function ExperienceItem({ experience }) {
 						<p className="mt-1 text-sm text-gray-300">
 							{experience.company} · {experience.location} · {experience.type}
 						</p>
+						{experience.overlapNote && (
+							<p className="mt-2 text-xs leading-relaxed text-gray-500">
+								{experience.overlapNote}
+							</p>
+						)}
 					</div>
 					<span
 						aria-hidden="true"
@@ -136,11 +142,11 @@ function ExperienceItem({ experience }) {
 						</ul>
 					</section>
 
-					{experience.impact?.length > 0 && (
+					{additionalImpact.length > 0 && (
 						<section aria-label="Impact and outcomes">
 							<h3 className="font-general-semibold text-base text-white">Impact and outcomes</h3>
 							<div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-								{experience.impact.map((item) => (
+								{additionalImpact.map((item) => (
 									<div key={`${item.label}-${item.value}`} className="rounded border border-white/10 bg-white/[0.025] p-4">
 										<p className="font-mono text-[10px] uppercase tracking-[0.14em] text-gray-500">
 											{item.label}
