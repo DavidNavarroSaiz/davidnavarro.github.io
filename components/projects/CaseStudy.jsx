@@ -45,7 +45,7 @@ function ArchitectureFigure({ figure }) {
 	);
 }
 
-function EditorialCover({ cover }) {
+export function EditorialCover({ cover }) {
 	return (
 		<figure className="mt-10 max-w-5xl">
 			<div className="overflow-hidden rounded-lg border border-white/10 bg-gray-950">

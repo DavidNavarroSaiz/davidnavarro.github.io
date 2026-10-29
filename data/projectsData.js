@@ -12,6 +12,7 @@ import {
 import pm1_640 from '../assets/images/pm1-640.webp';
 import rg1_640 from '../assets/images/rg1-640.webp';
 import covidRxEditorialCover from '../assets/images/covid-rx-editorial-cover.webp';
+import candidateRecommendationEditorialCover from '../assets/images/candidate-recommendation-editorial-cover.webp';
 import abo1_640 from '../assets/images/abo1-640.webp';
 import abogaciaEditorialCover from '../assets/images/abogacia-editorial-cover.webp';
 import lead3_640 from '../assets/images/lead3-640.webp';
@@ -20,6 +21,7 @@ import make1_640 from '../assets/images/make1-640.webp';
 import health1_640 from '../assets/images/health1-640.webp';
 import speech1_640 from '../assets/images/speech1-640.webp';
 import int4_640 from '../assets/images/int4-640.webp';
+import industrialComputerVisionEditorialCover from '../assets/images/industrial-computer-vision-editorial-cover.webp';
 import realtime1_640 from '../assets/images/realtime1-640.webp';
 import mcp1_640 from '../assets/images/mcp1-640.webp';
 import cctv1_640 from '../assets/images/cctv1-640.webp';
@@ -287,7 +289,13 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'Retrieval and LLM ranking over candidate profiles, returning shortlists with explanations for recruiters.',
-		img: rg1_640,
+		img: candidateRecommendationEditorialCover,
+		editorialCover: {
+			img: candidateRecommendationEditorialCover,
+			alt: 'Conceptual editorial illustration of semantic candidate recommendation showing a job brief, candidate knowledge base, vector retrieval, structured comparison, ranked recommendations, and supporting evidence; not genuine candidate records or experimental rankings.',
+			caption:
+				'Conceptual illustration — semantic retrieval, structured candidate comparison, ranked recommendations, and supporting evidence. The depicted records and rankings are illustrative, not experimental results.',
+		},
 		featured: {
 			rank: 3,
 			problem:
@@ -295,7 +303,7 @@ export const projectsData = [
 			approach:
 				'A retrieval pipeline indexes resumes in Qdrant, enriches profiles with LLM-derived metadata, and ranks candidates against the role with explanations and filters in a FastAPI and Streamlit application.',
 			disciplines: ['Retrieval systems', 'LLM ranking', 'Product ML'],
-			alt: 'Candidate recommendation architecture showing resumes, RAG retrieval, LLM enrichment, metadata extraction, vector search, and ranked candidate explanations.',
+			alt: 'Conceptual editorial illustration of candidate recommendation showing resumes, RAG retrieval, LLM enrichment, metadata extraction, vector search, and ranked candidate explanations; not genuine candidate records or experimental rankings.',
 		},
 		ProjectHeader: {
 			title: 'Candidate Recommendation System',
@@ -1431,7 +1439,7 @@ export const projectsData = [
 		category: 'Computer Vision / Industrial Automation',
 		summary:
 			'Industrial inspection and safety systems built from imaging design, classical computer vision, machine learning, edge software, and PLC/HMI integration.',
-		img: int4_640,
+		img: industrialComputerVisionEditorialCover,
 		relatedProjectIds: [14, 17, 15, 16, 22],
 		featured: {
 			rank: 4,
@@ -1444,7 +1452,7 @@ export const projectsData = [
 				'Edge deployment',
 				'Industrial integration',
 			],
-			alt: 'Industrial computer vision illustration showing a machine vision camera, CV algorithm, and product inspection.',
+			alt: 'Conceptual editorial illustration of industrial computer vision showing a machine vision camera, CV algorithm, and product inspection; not a photograph of a deployed customer installation.',
 		},
 		ProjectHeader: {
 			title: 'Industrial Computer Vision Systems',
@@ -1541,6 +1549,12 @@ export const projectsData = [
 			SocialSharingHeading: 'Share This',
 		},
 		caseStudy: {
+			editorialCover: {
+				img: industrialComputerVisionEditorialCover,
+				alt: 'Conceptual editorial illustration of industrial computer-vision inspection showing camera and lens selection, engineered illumination, image processing stages, inspection decisions, and PLC factory automation; not a photograph of a deployed customer installation.',
+				caption:
+					'Conceptual illustration — industrial camera inspection, optics and illumination, processing stages, and factory automation. It represents recurring system patterns, not a photograph of a deployed customer installation.',
+			},
 			showCapabilityMatrix: false,
 			headerFacts: ['Role', 'Duration', 'Team Size'],
 			overview:

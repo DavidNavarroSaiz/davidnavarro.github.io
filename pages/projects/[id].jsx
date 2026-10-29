@@ -3,7 +3,7 @@ import { FiClock, FiTag } from 'react-icons/fi';
 import PagesMetaHead from '../../components/PagesMetaHead';
 import { projectsData } from '../../data/projectsData';
 import RelatedProjects from '../../components/projects/RelatedProjects';
-import CaseStudy from '../../components/projects/CaseStudy';
+import CaseStudy, { EditorialCover } from '../../components/projects/CaseStudy';
 
 // Projects with `caseStudy` data use the case study template; the rest keep
 // the legacy layout below.
@@ -50,6 +50,8 @@ function ProjectSingle(props) {
 					</div>
 				</div>
 			</div>
+
+			{props.project.editorialCover && <EditorialCover cover={props.project.editorialCover} />}
 
 			{/* Gallery */}
 			<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
