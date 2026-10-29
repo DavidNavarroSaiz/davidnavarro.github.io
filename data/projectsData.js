@@ -13,6 +13,7 @@ import pm1_640 from '../assets/images/pm1-640.webp';
 import rg1_640 from '../assets/images/rg1-640.webp';
 import cov3_640 from '../assets/images/cov3-640.webp';
 import abo1_640 from '../assets/images/abo1-640.webp';
+import abogaciaEditorialCover from '../assets/images/abogacia-editorial-cover.webp';
 import lead3_640 from '../assets/images/lead3-640.webp';
 import make2_640 from '../assets/images/make2-640.webp';
 import make1_640 from '../assets/images/make1-640.webp';
@@ -647,7 +648,7 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'Legal research platform that finds relevant Colombian case law, recommends precedents, and helps draft documents.',
-		img: abo1_640,
+		img: abogaciaEditorialCover,
 		ProjectHeader: {
 			title: 'AbogacIA - AI Legal Platform',
 			publishDate: '2024',
@@ -747,6 +748,12 @@ export const projectsData = [
 			SocialSharingHeading: 'Share This',
 		},
 		caseStudy: {
+			editorialCover: {
+				img: abogaciaEditorialCover,
+				alt: 'Conceptual editorial illustration for AbogacIA showing legal knowledge retrieval, related cases, and assisted document drafting; not an actual legal-system architecture diagram or legal advice.',
+				caption:
+					'Conceptual illustration — legal retrieval, case context, and drafting support. It does not represent proprietary system state or guarantee legal correctness.',
+			},
 			showCapabilityMatrix: true,
 			headerFacts: ['Type', 'Domain', 'Status'],
 			overview:
