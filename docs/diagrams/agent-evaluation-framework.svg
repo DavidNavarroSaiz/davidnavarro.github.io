@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 470" role="img" aria-labelledby="title desc">
+  <title id="title">Agent evaluation and experimentation framework</title>
+  <desc id="desc">A publication-safe evaluation flow from dataset preparation through agent execution, evidence capture, configurable metric evaluation, and experiment analysis, with optional Opik observability shown separately.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7FA7B4"/>
+    </marker>
+    <marker id="arrow-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B8A58C"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="470" fill="#11161B"/>
+  <text x="64" y="54" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="25" font-weight="600">Agent evaluation and experimentation framework</text>
+  <text x="64" y="84" fill="#B8A58C" font-family="General Sans, Arial, sans-serif" font-size="15">Repeatable datasets, captured behavior, selective metrics, and inspectable run comparisons</text>
+
+  <g fill="none" stroke="#7FA7B4" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M244 200 H274"/>
+    <path d="M484 200 H514"/>
+    <path d="M724 200 H754"/>
+    <path d="M964 200 H994"/>
+  </g>
+
+  <g font-family="General Sans, Arial, sans-serif">
+    <g>
+      <rect x="64" y="138" width="180" height="124" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+      <text x="84" y="169" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">01 / CONTROLLED</text>
+      <text x="84" y="205" fill="#ECE5D7" font-size="17" font-weight="600">Dataset</text>
+      <text x="84" y="228" fill="#ECE5D7" font-size="17" font-weight="600">preparation</text>
+      <text x="84" y="250" fill="#B8A58C" font-size="12">curated / synthetic cases</text>
+    </g>
+    <g>
+      <rect x="274" y="138" width="210" height="124" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="294" y="169" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">02 / EXECUTION</text>
+      <text x="294" y="205" fill="#ECE5D7" font-size="17" font-weight="600">Reusable</text>
+      <text x="294" y="228" fill="#ECE5D7" font-size="17" font-weight="600">agent adapter</text>
+      <text x="294" y="250" fill="#7FA7B4" font-size="12">fixed dataset input</text>
+    </g>
+    <g>
+      <rect x="514" y="138" width="210" height="124" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="534" y="169" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">03 / EVIDENCE</text>
+      <text x="534" y="205" fill="#ECE5D7" font-size="17" font-weight="600">Responses</text>
+      <text x="534" y="228" fill="#ECE5D7" font-size="17" font-weight="600">and traces</text>
+      <text x="534" y="250" fill="#7FA7B4" font-size="12">timing / failures / actions</text>
+    </g>
+    <g>
+      <rect x="754" y="138" width="210" height="124" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="774" y="169" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">04 / EVALUATION</text>
+      <text x="774" y="205" fill="#ECE5D7" font-size="17" font-weight="600">Metric</text>
+      <text x="774" y="228" fill="#ECE5D7" font-size="17" font-weight="600">registry</text>
+      <text x="774" y="250" fill="#D67B56" font-size="12">RAGAS / DeepEval / task checks</text>
+    </g>
+    <g>
+      <rect x="994" y="138" width="210" height="124" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="1014" y="169" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">05 / ANALYSIS</text>
+      <text x="1014" y="205" fill="#ECE5D7" font-size="17" font-weight="600">Experiment</text>
+      <text x="1014" y="228" fill="#ECE5D7" font-size="17" font-weight="600">comparison</text>
+      <text x="1014" y="250" fill="#7FA7B4" font-size="12">run artifacts / failure analysis</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#B8A58C" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#arrow-muted)">
+    <path d="M619 262 V342 H1324"/>
+    <path d="M1099 262 V342 H1324"/>
+  </g>
+  <g>
+    <rect x="1324" y="300" width="212" height="92" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+    <text x="1344" y="331" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">OPTIONAL</text>
+    <text x="1344" y="359" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="17" font-weight="600">Opik observability</text>
+    <text x="1344" y="380" fill="#7FA7B4" font-family="General Sans, Arial, sans-serif" font-size="12">traces / datasets / experiments</text>
+  </g>
+  <text x="64" y="390" fill="#6F7E86" font-family="General Sans, Arial, sans-serif" font-size="13">Dashed links indicate optional inspection support. Metric families run only when their inputs and agent contract are valid.</text>
+</svg>

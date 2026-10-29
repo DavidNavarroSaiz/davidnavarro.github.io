@@ -1,0 +1,22 @@
+%% Secure AI code execution and workspace isolation — publication-safe editable source
+%% Shared managed interpreter and shared execution role are not hostile-tenant isolation.
+flowchart LR
+    R[Authenticated request<br/>JWT-derived owner] --> G[Execution gateway]
+    G --> V[Session + mount validation]
+    V --> I[Managed interpreter session]
+    I --> W[Owner-scoped persistent workspace]
+    W --> F[Verified files and artifacts]
+    V -->|unexpected state| N[Fail closed]
+    I -. shared managed resource<br/>shared execution role .-> L[Residual hostile-tenant risk]
+
+    classDef access fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
+    classDef process fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
+    classDef storage fill:#263A39,stroke:#7FA7B4,color:#ECE5D7
+    classDef control fill:#2B211D,stroke:#D67B56,color:#ECE5D7
+    classDef risk fill:#35221D,stroke:#D67B56,color:#FFD8C7
+
+    class R access
+    class G,V,I process
+    class W,F storage
+    class N control
+    class L risk

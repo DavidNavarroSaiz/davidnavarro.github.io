@@ -11,6 +11,9 @@ const ProjectSingle = ({
 	imageAlt,
 	featured,
 	ProjectInfo,
+	cardEyebrow,
+	cardTitle,
+	cardStatus,
 	priority = false,
 }) => {
 	const technologies = ProjectInfo?.Technologies?.[0]?.techs ?? [];
@@ -32,13 +35,13 @@ const ProjectSingle = ({
 					<div className="flex h-full flex-col justify-between bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.12),transparent_48%),linear-gradient(135deg,#0d141e,#070b12)] p-5 sm:p-6">
 						<div className="flex items-center justify-between gap-4">
 							<span className="font-mono text-[10px] uppercase tracking-[0.16em] text-dev-blue">
-								Internal engineering
+								{cardEyebrow ?? 'Internal engineering'}
 							</span>
 							<span className="font-mono text-xs text-gray-500">ID {id}</span>
 						</div>
 						<div>
 							<p className="font-mono text-[10px] uppercase tracking-[0.16em] text-gray-500">
-								Evaluation tooling
+								{cardTitle ?? 'Reproducible AI development evaluation'}
 							</p>
 							<p className="mt-2 max-w-[14rem] font-general-semibold text-xl leading-tight text-white">
 								Reproducible AI development evaluation
@@ -46,7 +49,7 @@ const ProjectSingle = ({
 						</div>
 						<div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-gray-400">
 							<span className="h-1.5 w-1.5 rounded-full bg-dev-cyan" />
-							No public demo
+							{cardStatus ?? 'No public demo'}
 						</div>
 					</div>
 				)}

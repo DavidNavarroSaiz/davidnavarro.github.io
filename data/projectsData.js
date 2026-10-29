@@ -74,6 +74,8 @@ import professionalCasesIngestionDiagram from '../docs/diagrams/professional-cas
 import professionalCasesEvaluationDiagram from '../docs/diagrams/professional-cases-evaluation-feedback.svg';
 import digitalTwinRetrievalDiagram from '../docs/diagrams/digital-twin-contextual-retrieval.svg';
 import digitalTwinEvaluationDiagram from '../docs/diagrams/digital-twin-retrieval-evaluation.svg';
+import evaluationFrameworkDiagram from '../docs/diagrams/agent-evaluation-framework.svg';
+import secureExecutionDiagram from '../docs/diagrams/secure-agent-code-execution.svg';
 
 export const projectsData = [
 	{
@@ -2007,7 +2009,7 @@ export const projectsData = [
 		img: enterpriseAiWorkspaceCover,
 		imageAlt:
 			'Conceptual illustration of an enterprise AI workspace connecting users, agents, retrieval, cloud infrastructure, integrations, and controlled capabilities; not a deployed infrastructure diagram.',
-		relatedProjectIds: [1, 17, 19, 14],
+		relatedProjectIds: [21, 1, 17, 19],
 		featured: {
 			rank: 3,
 			image: enterpriseAiWorkspaceCover,
@@ -2061,32 +2063,33 @@ export const projectsData = [
 		},
 		caseStudy: {
 			status: 'Professional enterprise engineering project',
+			showCapabilityMatrix: false,
 			headerFacts: ['Role', 'Status'],
 			editorialCover: {
 				img: enterpriseAiWorkspaceCover,
 				alt: 'Conceptual illustration of an enterprise AI workspace with users, agents, retrieval, cloud infrastructure, integrations, and controlled capabilities; not a deployed infrastructure diagram or product screenshot.',
 				caption:
-					'Conceptual illustration — an enterprise AI workspace, retrieval layer, cloud application surface, integrations, and capability boundaries. The diagrams below are the publication-safe technical view.',
+					'Conceptual illustration — an enterprise AI workspace, retrieval layer, cloud application surface, integrations, and capability boundaries. The diagrams below show the technical relationships at a shareable level.',
 			},
 			overview:
-				'Professional enterprise engineering work extending a LibreChat-based conversational AI workspace with configured agents, retrieval and persistence infrastructure, and AWS application services. The public account focuses on implementation responsibility and capability boundaries without identifying the employer or exposing private topology.',
+				'I worked on extending a LibreChat-based conversational AI workspace into a more useful enterprise platform: one that could combine configured agents, retrieval, persistence, integrations, and cloud application services without making every capability implicitly executable. The work crossed the visible product surface and the less visible decisions around authorization, deployment, and operational boundaries.',
 			problem:
-				'An enterprise conversational workspace has to remain extensible without turning every connected capability into an implicit execution surface. Application customization, retrieval persistence, cloud hosting, and authorization boundaries need to remain legible and operable as one system while private configuration and deployment identifiers stay protected.',
+				'A conversational interface is only the entry point. The workspace also needs a dependable way to configure agents, retrieve organizational context, persist the right data, connect approved integrations, and keep users inside the capabilities they are allowed to use. I treated those boundaries as part of the product rather than as deployment details to solve later.',
 			architecture: {
 				summary:
-					'The diagrams show a logical view of confirmed application, retrieval, persistence, integration, and access boundaries. They do not claim a complete AWS network topology, IAM policy, scaling configuration, monitoring coverage, or production guarantee.',
+					'I worked across the application, hosting, retrieval, persistence, integration, and access boundaries. The diagrams are a logical responsibility view; they intentionally leave out private network topology, IAM policy details, scaling configuration, and monitoring coverage.',
 				diagrams: [
 					{
 						title: 'High-level workspace architecture',
 						img: enterpriseWorkspaceArchitecture,
-						alt: 'Publication-safe logical architecture connecting authenticated users, an application load balancer, ECS and Fargate application hosting, a LibreChat-based workspace, configured agents and integrations, controlled capabilities, RDS PostgreSQL with pgvector, Amazon S3 integration, and an HMAC authorization boundary. The diagram does not depict a complete network topology.',
+						alt: 'Logical architecture connecting authenticated users, an application load balancer, ECS and Fargate application hosting, a LibreChat-based workspace, configured agents and integrations, controlled capabilities, RDS PostgreSQL with pgvector, Amazon S3 integration, and an HMAC authorization boundary. The diagram does not depict a complete network topology.',
 						caption:
 							'Logical responsibility view — application and service relationships are shown without private network, IAM, or resource details.',
 					},
 					{
 						title: 'Retrieval and persistence flow',
 						img: enterpriseWorkspaceRetrieval,
-						alt: 'Publication-safe retrieval flow from approved content and an Amazon S3 integration through retrieval preparation, RDS PostgreSQL with pgvector, context retrieval, and a configured workspace agent. Exact ingestion and indexing details are not disclosed.',
+						alt: 'Retrieval flow from approved content and an Amazon S3 integration through retrieval preparation, RDS PostgreSQL with pgvector, context retrieval, and a configured workspace agent. Exact ingestion and indexing details are not disclosed.',
 						caption:
 							'Conceptual retrieval flow — exact schemas, chunking, indexing, and operational retry details remain private.',
 					},
@@ -2094,19 +2097,19 @@ export const projectsData = [
 				components: [
 					{
 						name: 'LibreChat-based workspace',
-						role: 'Existing conversational application extended and configured for enterprise use; upstream authorship is not claimed.',
+						role: 'I extended and configured the existing conversational application without claiming authorship of its upstream codebase.',
 					},
 					{
 						name: 'Agents and integrations',
-						role: 'Configured agent behavior and integration contracts within the workspace boundary.',
+						role: 'Agent behavior, tools, and integration contracts configured within explicit workspace permissions.',
 					},
 					{
 						name: 'ECS / Fargate and ALB',
-						role: 'Application hosting and entry-point integration, generalized for publication.',
+						role: 'Containerized application hosting and entry-point integration across the cloud application boundary.',
 					},
 					{
 						name: 'RDS PostgreSQL with pgvector',
-						role: 'Persistence and vector retrieval substrate for retrieval-oriented workflows.',
+						role: 'Persistence and vector retrieval substrate for knowledge-grounded workflows.',
 					},
 					{
 						name: 'Amazon S3 integration',
@@ -2114,7 +2117,7 @@ export const projectsData = [
 					},
 					{
 						name: 'Access and capability controls',
-						role: 'Authentication and authorization boundaries, HMAC mechanisms, restricted previews, and disabled execution surfaces.',
+						role: 'Authentication and authorization boundaries, HMAC mechanisms, restricted previews, and deliberately bounded execution surfaces.',
 					},
 				],
 			},
@@ -2122,54 +2125,54 @@ export const projectsData = [
 			implementation: [
 				{
 					title: 'LibreChat-based application extension',
-					body: 'I customized and extended an existing LibreChat-based workspace for the enterprise context. I do not claim authorship of LibreChat itself or upstream contribution.',
+					body: 'I customized and extended an existing LibreChat-based workspace for an enterprise context. That let me focus my contribution on platform integration and capability boundaries rather than rebuilding a conversational shell.',
 				},
 				{
 					title: 'Agent configuration and integration',
-					body: 'I configured enterprise agent behavior and integration surfaces within the workspace, keeping the responsibility at the application and integration boundary rather than exposing private service contracts.',
+					body: 'I configured agent behavior and integration surfaces within the workspace, keeping permissions and service contracts explicit instead of treating every connected API as automatically available to an agent.',
 				},
 				{
 					title: 'AWS application infrastructure',
-					body: 'I worked across ECS/Fargate application hosting and Application Load Balancer integration. Deployment identifiers, network rules, scaling settings, and account details are intentionally generalized.',
+					body: 'I worked across containerized application hosting and Application Load Balancer integration. The public case keeps deployment identifiers, network rules, scaling settings, and account details generalized.',
 				},
 				{
 					title: 'Retrieval and persistence infrastructure',
-					body: 'I integrated RDS PostgreSQL with pgvector for retrieval-oriented persistence and Amazon S3 for approved object-storage workflows. Exact schemas, ingestion settings, and data volumes are not disclosed.',
+					body: 'I integrated PostgreSQL with pgvector for retrieval-oriented persistence and object storage for approved content workflows. The important engineering concern was keeping retrieval, persistence, and access responsibilities understandable without exposing private schemas or data volumes.',
 				},
 				{
 					title: 'Authorization and capability controls',
-					body: 'I implemented or extended HMAC-based authorization boundaries and kept application-preview and execution surfaces subject to explicit restrictions rather than presenting them as generally available capabilities.',
+					body: 'I implemented or extended HMAC-based authorization boundaries and treated preview and execution as distinct capabilities with explicit restrictions. Code execution required a deeper identity and workspace design, which I document separately in Project 21.',
 				},
 				{
 					title: 'Operational configuration',
-					body: 'I handled configuration and operational concerns across the application, storage, retrieval, and access boundaries while keeping broader team and employer responsibilities separate from my personal implementation claims.',
+					body: 'I worked across application configuration, storage, retrieval, access, and deployment concerns. I keep the narrative focused on the boundaries I handled rather than implying ownership of every surrounding team or employer responsibility.',
 				},
 			],
 			decisionsTitle: 'Engineering decisions',
 			decisions: [
 				{
 					title: 'Extend an existing open-source application',
-					body: 'Extending a LibreChat-based workspace provided an application foundation while keeping the engineering effort focused on enterprise configuration, agent integration, persistence, and operational boundaries rather than rebuilding a conversational shell.',
+					body: 'Extending an existing conversational application gave me a useful product foundation. The trade-off was inheriting an upstream lifecycle while concentrating engineering effort on enterprise configuration, agent integration, persistence, and operational boundaries.',
 				},
 				{
 					title: 'Keep application and retrieval responsibilities distinct',
-					body: 'The conversational surface and the retrieval-oriented persistence layer were treated as related but separate responsibilities, making the system easier to reason about without implying that every application capability had direct access to stored content.',
+					body: 'I kept the conversational surface and retrieval-oriented persistence related but distinct. That separation made access easier to reason about and avoided implying that every application capability should directly reach stored organizational content.',
 				},
 				{
 					title: 'Use PostgreSQL and pgvector for retrieval persistence',
-					body: 'RDS PostgreSQL with pgvector provided a known persistence substrate for retrieval workflows while introducing the operational responsibility of managing data, indexing, configuration, and access boundaries.',
+					body: 'PostgreSQL with pgvector provided a familiar persistence substrate for retrieval workflows. It also made data management, indexing, configuration, and access boundaries explicit operational responsibilities.',
 				},
 				{
 					title: 'Restrict high-risk capabilities by default',
-					body: 'Application preview and code-execution surfaces were treated as bounded capabilities. The public case does not claim unrestricted execution, broad preview access, or a complete policy definition.',
+					body: 'I treated application preview and code execution as bounded capabilities rather than as inevitable extensions of chat. The deeper execution design needed its own identity, session, workspace, and artifact controls.',
 				},
 				{
 					title: 'Document the architecture at a safe abstraction level',
-					body: 'The published diagrams preserve the important engineering relationships while omitting employer-owned topology, identifiers, private prompts, exact policies, and operational statistics.',
+					body: 'I documented the useful engineering relationships at a level that can be shared: application, retrieval, persistence, integration, and authorization. Employer-owned topology, identifiers, private prompts, exact policies, and operational statistics remain out of scope.',
 				},
 			],
 			capabilitySummary:
-				'These labels reflect the publication-safe evidence available for this case. They describe capability state at the engineering boundary and do not assert a complete security policy or production posture.',
+				'These labels describe the capability boundary I worked with; they do not assert a complete security policy or production posture.',
 			capabilityMatrix: [
 				{
 					title: 'LibreChat-based workspace extension',
@@ -3142,6 +3145,382 @@ export const projectsData = [
 				{
 					title: 'Private corpus and evaluation artifacts',
 					body: 'The underlying personal-context corpus and evaluation artifacts require sanitization and owner approval before any detailed results or examples become public.',
+				},
+			],
+		},
+	},
+	{
+		id: 20,
+		title: 'AI Agent Evaluation & Experimentation Framework',
+		url: 'ai-agent-evaluation-experimentation-framework',
+		category: 'Agent Evaluation / Reliability Engineering',
+		summary:
+			'Config-driven evaluation framework for testing grounded answers, retrieval behavior, tool use, workflow outcomes, and safety boundaries across repeatable agent experiments.',
+		img: null,
+		cardEyebrow: 'Evaluation engineering',
+		cardTitle: 'Config-driven agent evaluation',
+		cardStatus: 'No editorial cover',
+		relatedProjectIds: [15, 16, 17, 19],
+		ProjectHeader: {
+			title: 'AI Agent Evaluation & Experimentation Framework',
+			publishDate: '2026',
+			tags: 'Agent Evaluation / RAG / Experimentation',
+		},
+		ProjectInfo: {
+			ClientHeading: 'Project status',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Role',
+					details: 'AI Evaluation Engineer',
+				},
+				{
+					id: uuidv4(),
+					title: 'Status',
+					details: 'Internal engineering evaluation tooling',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Make agent changes comparable by running fixed datasets through reusable adapters, configurable metric families, and traceable experiment outputs.',
+			Technologies: [
+				{
+					title: 'Evaluation stack',
+					techs: ['Python', 'YAML configuration', 'RAGAS', 'DeepEval', 'Opik', 'LangGraph', 'pytest'],
+				},
+			],
+			ProjectDetailsHeading: 'Evidence boundary',
+			ProjectDetails: [],
+			SocialSharingHeading: 'Share This',
+		},
+		caseStudy: {
+			status: 'Internal engineering evaluation tooling',
+			showCapabilityMatrix: false,
+			headerFacts: ['Role', 'Status'],
+			overview:
+				'I wanted a way to answer a simple question: when I change an agent\'s prompt, retrieval strategy, or workflow, did I actually improve the system? A convincing answer is not enough if the agent called the wrong tool, missed important context, violated a constraint, or chose the wrong escalation path. I built around repeatable datasets, objective checks, and experiment artifacts so those differences could be investigated.',
+			problem:
+				'Manual testing makes it too easy to remember the successful conversations and forget the awkward ones. I needed an evaluation layer that could exercise the whole agent behavior: the answer, the evidence it used, the actions it took, the order of those actions, and the way it failed when a request was ambiguous or disallowed.',
+			architecture: {
+				summary:
+					'I separated dataset preparation, agent execution, evidence capture, metric evaluation, and experiment analysis. The evaluation engines compute the configured checks; Opik is an optional observability and inspection integration rather than the evaluation engine itself.',
+				diagrams: [
+					{
+						title: 'Evaluation and experiment flow',
+						img: evaluationFrameworkDiagram,
+						alt: 'Editable conceptual architecture showing dataset preparation feeding an agent adapter, captured responses and traces feeding configurable metric evaluation, and run comparison supported by optional Opik observability. It is not a benchmark result or production monitoring diagram.',
+						caption:
+							'Conceptual engineering view — metric evaluation and optional observability are shown as separate responsibilities. No scores, rankings, customer prompts, or private datasets are included.',
+						mobileFallback: [
+							{
+								title: 'Dataset preparation',
+								description: 'Curated and synthetic cases are validated against the knowledge context and reference fields they are meant to test.',
+							},
+							{
+								title: 'Agent adapter',
+								description: 'A reusable adapter runs the selected agent against the fixed evaluation examples and captures structured output.',
+							},
+							{
+								title: 'Evidence capture',
+								description: 'Answers, retrieved context, actions, timing, runtime errors, and failure details become inspectable run evidence where the agent contract supports them.',
+							},
+							{
+								title: 'Metric evaluation',
+								description: 'Configured deterministic, reference-based, retrieval, workflow, safety, or model-assisted metrics are applied selectively.',
+							},
+							{
+								title: 'Experiment analysis',
+								description: 'Run outputs, timing, failures, and metric summaries support comparisons without turning a single score into a universal ranking.',
+							},
+						],
+					},
+				],
+				components: [
+					{
+						name: 'Dataset builder and validator',
+						role: 'Builds curated or synthetic question/answer cases, preserves reference context, and checks dataset consistency before evaluation.',
+					},
+					{
+						name: 'Agent adapters',
+						role: 'Provides reusable execution paths for different agent shapes while keeping the experiment configuration separate from the runner.',
+					},
+					{
+						name: 'Metric registry',
+						role: 'Creates configured metric implementations by type, threshold, weight, and agent-compatible inputs.',
+					},
+					{
+						name: 'Experiment runner',
+						role: 'Runs fixed datasets, aggregates results, records errors and timing, and produces comparison-ready artifacts.',
+					},
+					{
+						name: 'Optional Opik integration',
+						role: 'Supports dataset, prompt, trace, and experiment inspection when configured; it is not presented as continuous production monitoring.',
+					},
+				],
+			},
+			implementationTitle: 'What I built',
+			implementation: [
+				{
+					title: 'Datasets that preserve their evidence',
+					body: 'I worked with curated and synthetic question/answer cases, including adversarial examples, then kept reference answers and relevant context tied to the dataset. That relationship matters: if a dataset was built from one chunk identity but the evaluated agent searches another indexed collection, Recall@K can look precise while measuring the wrong thing.',
+				},
+				{
+					title: 'Configuration-driven experiments',
+					body: 'Experiment configuration selects the agent, dataset, metric definitions, thresholds, and optional observability behavior. The runner can therefore repeat a comparison after a prompt, retrieval, or workflow change without rewriting the evaluation harness.',
+				},
+				{
+					title: 'Metric families for different failure modes',
+					body: 'For grounded answers I used RAGAS-style faithfulness, answer relevancy, context precision, and context recall where the example contains the required references. DeepEval integrations cover semantic similarity and LLM-as-judge style assessment. Retrieval metrics such as Precision@K and Recall@K, and task-oriented checks such as action-trace match, workflow success, invalid parameters, forbidden actions, and escalation correctness are selected when the agent output exposes those fields.',
+				},
+				{
+					title: 'Runs that explain failure',
+					body: 'Each run keeps more than an aggregate score: configuration, outputs, timing, runtime failures, metric details, and comparison artifacts give me a place to ask which part of the system changed and why.',
+				},
+				{
+					title: 'Optional observability',
+					body: 'I integrated Opik as an optional path for dataset, prompt, trace, and experiment inspection. That makes runs easier to investigate when enabled, but it is not a claim that every experiment was continuously monitored in production.',
+				},
+			],
+			decisionsTitle: 'Engineering decisions and trade-offs',
+			decisions: [
+				{
+					title: 'Use deterministic checks for hard contracts',
+					body: 'Exact structured-output, action-trace, forbidden-action, invalid-parameter, and workflow-outcome checks are repeatable and easy to explain. They are the right tool when the contract is explicit, but they cannot judge every useful variation in a natural-language answer.',
+				},
+				{
+					title: 'Use references and judges with clear limits',
+					body: 'Reference-answer and semantic metrics help with meaning and groundedness, while LLM-based judges can review qualities that are difficult to encode deterministically. They add model bias and variance, so I treat them as evidence to inspect rather than as unquestionable truth.',
+				},
+				{
+					title: 'Keep dataset and retrieval identities aligned',
+					body: 'Retrieval quality is only interpretable when the expected context and the indexed context refer to the same underlying chunks. Dataset validity is therefore part of the measurement design, not a cleanup step after the results arrive.',
+				},
+				{
+					title: 'Make observability optional',
+					body: 'The evaluation runner should still be useful without a live observability service. Treating Opik as an optional integration keeps local and automated runs decoupled from a particular deployment choice.',
+				},
+			],
+			evidenceTitle: 'Validation and evidence',
+			evidence: [
+				{
+					title: 'Repository structure',
+					body: 'The reference implementation contains dataset-builder, agent, metric, runner, and observability modules, with unit and integration test areas for those boundaries. This page describes supported engineering capability, not a claim that every metric combination ran against a production workload.',
+				},
+				{
+					title: 'Failure analysis',
+					body: 'Runtime errors, invalid parameters, forbidden actions, failed workflow outcomes, timing, and per-metric details are represented as evidence when the selected agent adapter supplies them. That is more useful than hiding failure modes behind a single average.',
+				},
+				{
+					title: 'Experiment comparison',
+					body: 'Run artifacts are structured for comparison across configuration changes. I am intentionally not publishing private scores, rankings, benchmark results, or internal dataset examples.',
+				},
+			],
+			limitations: [
+				{
+					title: 'Metrics are contract-dependent',
+					body: 'Not every agent exposes retrieved context, action traces, workflow outcomes, or reference fields. A metric should be applied only when its inputs and semantics are valid for that experiment.',
+				},
+				{
+					title: 'Model-assisted assessment varies',
+					body: 'LLM-based judges and semantic metrics introduce evaluator-model and prompt sensitivity. They complement deterministic checks; they do not remove the need for failure inspection or human judgment.',
+				},
+				{
+					title: 'No public benchmark claim',
+					body: 'The public case excludes private prompts, datasets, scores, rankings, model comparisons, and customer results. It documents the evaluation capability and design decisions rather than a headline improvement.',
+				},
+				{
+					title: 'No continuous-monitoring claim',
+					body: 'Opik integration supports optional tracing and experiment inspection; it does not by itself establish a continuously monitored production system.',
+				},
+			],
+		},
+	},
+	{
+		id: 21,
+		title: 'Secure AI Code Execution & Workspace Isolation',
+		url: 'secure-ai-code-execution-workspace-isolation',
+		category: 'AI Security / Execution Boundaries',
+		summary:
+			'Controlled code-execution architecture that binds authenticated users to managed sessions, owner-scoped persistent workspaces, verified mounts, and fail-closed artifact handling.',
+		img: null,
+		cardEyebrow: 'Security engineering',
+		cardTitle: 'Workspace-bound code execution',
+		cardStatus: 'No editorial cover',
+		relatedProjectIds: [16, 20, 17, 15],
+		ProjectHeader: {
+			title: 'Secure AI Code Execution & Workspace Isolation',
+			publishDate: '2026',
+			tags: 'AI Security / Code Execution / Workspace Isolation',
+		},
+		ProjectInfo: {
+			ClientHeading: 'Project status',
+			CompanyInfo: [
+				{
+					id: uuidv4(),
+					title: 'Role',
+					details: 'AI Platform Engineer',
+				},
+				{
+					id: uuidv4(),
+					title: 'Status',
+					details: 'Controlled internal engineering implementation',
+				},
+			],
+			ObjectivesHeading: 'Objective',
+			ObjectivesDetails:
+				'Connect an AI workspace to managed code execution without trusting caller-supplied workspace identities or treating a shared interpreter role as a hostile-tenant security boundary.',
+			Technologies: [
+				{
+					title: 'Engineering boundaries',
+					techs: ['JWT-derived ownership', 'Managed interpreter sessions', 'Persistent workspace storage', 'Filesystem safety checks', 'Infrastructure as code', 'Automated security tests'],
+				},
+			],
+			ProjectDetailsHeading: 'Implementation boundary',
+			ProjectDetails: [],
+			SocialSharingHeading: 'Share This',
+		},
+		caseStudy: {
+			status: 'Controlled implementation — broader rollout gated',
+			showCapabilityMatrix: false,
+			headerFacts: ['Role', 'Status'],
+			overview:
+				'Adding code execution to an AI workspace sounds straightforward until the code is not trusted. I approached the problem from identity and workspace boundaries first: how do I know which user owns a session, what files that session should see, whether the intended workspace is actually mounted, and what artifacts can safely return to the application?',
+			problem:
+				'Code execution creates a different trust boundary from text generation. A request can be authenticated and still be routed to the wrong workspace, attached to an unexpected filesystem, or allowed to survive longer than intended. I needed the execution path to verify ownership and runtime state before allowing a managed interpreter session to work with persistent files.',
+			architecture: {
+				summary:
+					'I separated the authenticated application and translation/API layer from the execution gateway, then made session validation, owner-scoped storage, mount verification, and artifact handling explicit parts of the path. The shared managed interpreter resource and shared execution role are shown as an operational choice with a residual security limitation, not as a complete hostile-tenant isolation boundary.',
+				diagrams: [
+					{
+						title: 'Authenticated execution and workspace binding',
+						img: secureExecutionDiagram,
+						alt: 'Editable conceptual architecture showing an authenticated request with JWT-derived ownership entering an execution gateway, followed by session and mount validation, a managed interpreter, an owner-scoped persistent workspace, verified artifacts, and a fail-closed denial path. A note identifies the residual risk of a shared interpreter role.',
+						caption:
+							'Technical view I can share — application-level ownership and runtime checks reduce accidental cross-owner routing, but a shared execution role is not a strong boundary against mutually hostile users who can abuse its credentials.',
+						mobileFallback: [
+							{
+								title: 'Authenticated request',
+								description: 'The application passes an authenticated request; the caller does not choose the workspace identity used for authorization.',
+							},
+							{
+								title: 'Execution gateway',
+								description: 'The gateway derives ownership from verified identity and prepares the execution request at the application boundary.',
+							},
+							{
+								title: 'Session and mount validation',
+								description: 'The session is bound to the owner and the expected workspace attachment is checked before code is allowed to run.',
+							},
+							{
+								title: 'Managed interpreter and persistent workspace',
+								description: 'Ephemeral managed sessions work with an owner-scoped persistent storage access point and bounded filesystem operations.',
+							},
+							{
+								title: 'Verified artifacts or denial',
+								description: 'File transfers and artifacts stay within the controlled boundary; unexpected sessions or mounts fail closed instead of continuing.',
+							},
+						],
+					},
+				],
+				components: [
+					{
+						name: 'Authenticated translation/API layer',
+						role: 'Receives the application request and passes verified identity context into the execution path.',
+					},
+					{
+						name: 'Execution gateway',
+						role: 'Resolves the owner and intended workspace server-side instead of trusting a caller-supplied workspace identity.',
+					},
+					{
+						name: 'Managed interpreter sessions',
+						role: 'Provides ephemeral execution lifecycle under a controlled managed resource.',
+					},
+					{
+						name: 'Owner-scoped persistent workspace',
+						role: 'Provides per-owner filesystem access points for files that must persist across short-lived sessions.',
+					},
+					{
+						name: 'Validation and artifact boundary',
+						role: 'Checks session, mount, filesystem, upload, download, and artifact expectations before allowing or returning work.',
+					},
+				],
+			},
+			implementationTitle: 'What I implemented',
+			implementation: [
+				{
+					title: 'Derive ownership from authenticated identity',
+					body: 'I kept workspace ownership on the server side. The execution request does not get to nominate an arbitrary workspace identity; the gateway resolves the owner from verified authentication context and uses that result for the rest of the flow.',
+				},
+				{
+					title: 'Bind sessions to workspaces',
+					body: 'I treated session creation and storage attachment as one relationship to verify. Before execution, the path checks that the intended owner-scoped access point is present and that the session state matches what the application authorized.',
+				},
+				{
+					title: 'Harden filesystem and lifecycle behavior',
+					body: 'The implementation includes bounded filesystem operations, storage restrictions, session lifecycle handling, and checks that reject unexpected mounts or session states rather than attempting to recover silently.',
+				},
+				{
+					title: 'Keep file and artifact handling explicit',
+					body: 'Uploads, downloads, and generated artifacts remain part of the security boundary. The execution service should return only artifacts associated with the verified workspace and expected session flow.',
+				},
+				{
+					title: 'Prepare infrastructure and security tests',
+					body: 'I worked with infrastructure-as-code preparation and automated security-oriented tests for ownership and filesystem behavior. The implementation work is documented separately from staging activation and broader user routing.',
+				},
+			],
+			decisionsTitle: 'Engineering decisions and trade-offs',
+			decisions: [
+				{
+					title: 'Reject caller-supplied workspace identity',
+					body: 'Trusting a workspace ID in the request would make the most important authorization decision part of the user input. Deriving ownership from verified identity gives the gateway one authoritative starting point.',
+				},
+				{
+					title: 'Separate execution from the chat application',
+					body: 'A dedicated execution service makes runtime, filesystem, session, and artifact controls visible as their own boundary. It also avoids making the conversational application responsible for arbitrary interpreter lifecycle details.',
+				},
+				{
+					title: 'Persist workspaces, keep sessions ephemeral',
+					body: 'Persistent owner-scoped storage supports useful files and artifacts, while managed interpreter sessions can remain short-lived. The trade-off is that the attachment and cleanup lifecycle must be verified instead of assumed.',
+				},
+				{
+					title: 'Fail closed on unexpected runtime state',
+					body: 'If the session, mount, or filesystem state does not match the authorized request, the safer behavior is to deny execution and surface a controlled failure rather than guessing which workspace was intended.',
+				},
+				{
+					title: 'Be honest about the shared-role boundary',
+					body: 'The design reduces accidental cross-owner access and incorrect routing at the application boundary. A shared interpreter resource and shared execution role are not a strong security boundary against mutually hostile users who can abuse those credentials, so I describe this as a controlled internal design rather than a hostile-tenant sandbox.',
+				},
+			],
+			evidenceTitle: 'Validation and release boundary',
+			evidence: [
+				{
+					title: 'Source-level implementation',
+					body: 'The documented source components and automated tests cover the ownership, session, filesystem, and artifact boundaries described here. The public case omits private resource names, policies, paths, credentials, and topology.',
+				},
+				{
+					title: 'Security-oriented test coverage',
+					body: 'I exercised the cases that matter when identity and runtime state disagree: incorrect ownership, unexpected filesystem access, invalid mounts, and unsafe session conditions should be rejected rather than allowed to drift into execution.',
+				},
+				{
+					title: 'Rollout status',
+					body: 'The source-level components and automated tests were reported complete, and the infrastructure configuration was reviewed. The handover did not confirm complete staging activation, full end-to-end rollout, or production deployment of the multi-owner architecture.',
+				},
+			],
+			limitations: [
+				{
+					title: 'Not a hostile-tenant isolation claim',
+					body: 'A shared managed interpreter resource and associated shared execution role can still expose residual risk to mutually hostile users who can abuse those credentials. Application-level ownership checks reduce routing mistakes; they do not remove that threat model.',
+				},
+				{
+					title: 'Controlled internal scope',
+					body: 'The selected architecture was designed for a controlled internal environment. I do not describe it as unrestricted secure execution, a zero-trust sandbox, or a production-grade multitenancy guarantee.',
+				},
+				{
+					title: 'Activation remained gated',
+					body: 'Implementation and tests are not the same as a completed rollout. Broader routing, staging activation, acceptance, and production deployment required separate operational gates that were not confirmed in the available handover context.',
+				},
+				{
+					title: 'Private infrastructure details stay private',
+					body: 'The published case intentionally excludes IAM policies, resource identifiers, filesystem paths, endpoints, account structure, credentials, and proprietary threat-model details.',
 				},
 			],
 		},

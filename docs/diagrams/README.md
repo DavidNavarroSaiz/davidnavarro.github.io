@@ -44,3 +44,12 @@ The AI Digital Twin case study uses publication-safe specifications grounded in 
 - `digital-twin-retrieval-evaluation.mmd` / `.svg` — question-type comparison of vector RAG, GraphRAG, and combined retrieval with measured response time, DeepEval/LLM-as-evaluator review, and prompt refinement.
 
 These sources intentionally omit private records, exact schemas, vector or graph-store products, entity-extraction rules, fusion behavior, automatic routing, deployment claims, metric names, scores, latency statistics, and benchmark charts.
+
+## AI Agent Evaluation and Secure Execution diagrams
+
+Stage 8B adds two publication-safe technical sources:
+
+- `agent-evaluation-framework.mmd` / `.svg` — dataset preparation, reusable agent execution, evidence capture, selective metric evaluation, run comparison, and optional Opik inspection.
+- `secure-agent-code-execution.mmd` / `.svg` — authenticated ownership, session and mount validation, managed interpreter execution, owner-scoped persistent storage, verified artifacts, and fail-closed behavior.
+
+These diagrams intentionally omit private datasets, prompts, scores, resource identifiers, IAM policies, filesystem paths, credentials, account structure, and proprietary deployment topology. The secure-execution diagram explicitly preserves the residual limitation of a shared managed interpreter resource and shared execution role.
