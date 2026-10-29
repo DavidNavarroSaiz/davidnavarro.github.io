@@ -3,6 +3,7 @@ import { FiSearch, FiX } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import { orderedProjects } from '../../data/projectsData';
 import ProjectsFilter from './ProjectsFilter';
+import EngineeringJourney from './EngineeringJourney';
 
 const ALL_CATEGORIES = 'All';
 
@@ -55,24 +56,31 @@ function ProjectsGrid() {
 			aria-labelledby="projects-heading"
 		>
 			<header className="border-b border-white/10 pb-8 sm:pb-10">
-				<p className="font-mono text-[11px] uppercase tracking-[0.18em] text-gray-500">
-				Portfolio / {orderedProjects.length} projects
-				</p>
-				<h1
-					id="projects-heading"
-					className="mt-3 max-w-3xl font-general-semibold text-3xl leading-tight tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl"
-				>
-					Projects
-				</h1>
-				<p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg">
-					Systems I have designed and shipped across agentic workflows,
-					retrieval infrastructure, applied computer vision, and
-					automation. Open an entry for the architecture, role, and
-					implementation notes.
-				</p>
+				<div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+					<div>
+						<p className="font-mono text-[11px] uppercase tracking-[0.18em] text-gray-500">
+							Selected work / {orderedProjects.length} case studies
+						</p>
+						<h1
+							id="projects-heading"
+							className="mt-3 max-w-3xl font-general-semibold text-4xl leading-none tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl"
+						>
+							Projects<span className="text-[#B8A58C]">.</span>
+						</h1>
+					</div>
+					<p className="max-w-md text-base leading-relaxed text-gray-400 sm:text-lg">
+						A record of engineering work across computer vision,
+						knowledge systems, AI platforms, and agent evaluation.
+					</p>
+				</div>
 			</header>
 
+			<EngineeringJourney />
+
 			<div className="border-b border-white/10 py-6">
+				<p className="mb-5 font-mono text-[10px] uppercase tracking-[0.18em] text-gray-500">
+					Explore case studies
+				</p>
 				<div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-8">
 					<div className="w-full md:max-w-sm">
 						<label
