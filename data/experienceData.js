@@ -1,192 +1,261 @@
-import { v4 as uuidv4 } from 'uuid';
-
 export const experienceData = [
 	{
-		id: uuidv4(),
+		id: 'svitla-systems',
 		company: 'Svitla Systems',
-		position: 'Machine Learning Engineer & Technical Lead',
+		position: 'Sr. ML/AI Engineer',
 		period: 'Aug 2025 – Present',
+		duration: '1+ year',
 		location: 'Remote',
 		type: 'Full-time',
 		status: 'current',
-		description: 'Building production ML systems with focus on computer vision and proctoring solutions.',
-		achievements: [
-			'Built production proctoring/cheat-detection pipeline with face detection and gaze estimation',
-			'Reduced manual review time with reliable suspicious behavior detection',
-			'Led dataset operations with CVAT workflows and DVC for versioned data',
-			'Operationalized MLflow for metrics, artifacts, and evaluations',
-			'Implemented systematic HPO and evaluation protocols',
-			'Delivered runtime-optimized video classifiers achieving high FPS/stream'
+		domains: ['AI Agents & Evaluation', 'RAG & AI Platforms', 'Technical Leadership'],
+		specialties: ['Governed agents', 'Evaluation design', 'RAG reliability', 'Tool verification'],
+		summary:
+			'I work on production agent systems that combine policy-governed orchestration, retrieval, tool operations, and evaluation. My scope spans runtime reliability, experiment design, and trace-based debugging.',
+		context:
+			'The central engineering challenge is allowing a stateful, multilingual assistant to act on business workflows while keeping authorization, confirmation, evidence, and failure handling explicit. I also build the evaluation loop needed to understand whether retrieval, decisions, tool results, and responses are behaving as intended.',
+		ownership: [
+			'Designed LangGraph agent workflows with deterministic eligibility rules, confirmation gates, authorized tools, and explicit state transitions.',
+			'Built layered validation around action eligibility, tool-result verification, and response adjudication rather than relying on a single model decision.',
+			'Designed synthetic QA and configurable evaluation experiments using RAGAS, DeepEval, retrieval ranking, and repeatable run records.',
+			'Instrumented traces, retrieved context, tool outcomes, and human-review scenarios with Opik to make failures diagnosable.',
 		],
-		tasks: [
-			'Lead technical architecture decisions for ML systems',
-			'Develop and maintain computer vision models for proctoring systems',
-			'Implement real-time video processing pipelines',
-			'Collaborate with product and engineering teams on feature requirements',
-			'Optimize model performance for production deployment',
-			'Conduct research on latest computer vision and ML techniques',
-			'Mentor junior engineers and conduct code reviews',
-			'Lead cross-functional teams on ML project delivery'
+		decisions: [
+			'Kept policy and business rules deterministic so the model interprets requests without becoming the authority for irreversible actions.',
+			'Used structured outcomes, timeout handling, retry classification, and fallbacks to separate recoverable tool failures from workflow failures.',
+			'Treated retrieval quality, agent behavior, safety, and response quality as related but separately inspectable evaluation concerns.',
 		],
-		technologies: ['PyTorch', 'OpenCV', 'MLflow', 'DVC', 'CVAT', 'Python', 'Computer Vision'],
-		metrics: {
-			'False Positives Reduction': '45%',
-			'Deployment Speed': '40% faster',
-			'Model Selection Time': 'Cut by 50%'
-		},
+		technologies: ['LangGraph', 'Python', 'RAGAS', 'DeepEval', 'Opik', 'Vector retrieval', 'Synthetic QA'],
+		impact: [
+			{
+				label: 'Scope',
+				value: 'Production agent + evaluation',
+				detail: 'Shared runtime foundations, governed actions, evaluation experiments, and operational debugging.',
+			},
+		],
+		relatedProjectIds: [17, 20, 1],
 		companyLogo: '/images/companies/svitla.png',
-		companyUrl: 'https://svitla.com'
+		companyUrl: 'https://svitla.com',
 	},
 	{
-		id: uuidv4(),
+		id: '360training',
+		company: '360Training',
+		position: 'Machine Learning Engineer — Computer Vision & ML',
+		period: 'Aug 2025 – Nov 2025',
+		duration: '4 months',
+		location: 'Remote',
+		type: 'Concurrent engagement',
+		status: 'completed',
+		domains: ['Computer Vision'],
+		specialties: ['Behavioral CV', 'Model comparison', 'Dataset versioning', 'Video inference'],
+		summary:
+			'I worked on multi-signal proctoring models that combined face detection, gaze, head pose, and temporal behavior features. The work compared classical and neural approaches and tightened the path from labeled data to inference.',
+		context:
+			'Exam-integrity signals are noisy when treated in isolation. The engineering problem was to compare complementary features and model families while keeping data labeling, evaluation, and runtime heuristics understandable to the teams operating the system.',
+		ownership: [
+			'Combined face detection, gaze, head pose, and temporal behavior features for suspicious-behavior modeling.',
+			'Compared XGBoost, LightGBM, random forests, logistic regression, and neural models against the same evaluation goals.',
+			'Worked with CVAT, DVC, and MLflow for annotation, dataset versioning, experiment records, and model comparison.',
+			'Connected model outputs to inference heuristics designed for practical video-processing behavior.',
+		],
+		decisions: [
+			'Used multiple behavioral signals so a single noisy frame or detector did not decide an outcome alone.',
+			'Kept classical baselines in the comparison to make trade-offs in robustness, interpretability, and runtime visible.',
+			'Separated data and experiment versioning from the inference heuristics so changes could be traced.',
+		],
+		technologies: ['Python', 'Computer Vision', 'XGBoost', 'LightGBM', 'CVAT', 'DVC', 'MLflow'],
+		impact: [
+			{
+				label: 'Evaluation scope',
+				value: 'Multi-signal behavior modeling',
+				detail: 'A practical comparison of feature combinations and model families for video-based proctoring.',
+			},
+		],
+		relatedProjectIds: [],
+	},
+	{
+		id: 'kmeleon',
 		company: 'Kmeleon',
 		position: 'Generative AI Engineer',
-		period: 'Feb 2025 – Aug 2025',
+		period: 'Jan 2025 – Aug 2025',
+		duration: '8 months',
 		location: 'Remote',
 		type: 'Full-time',
 		status: 'completed',
-		description: 'Designed and deployed modular multi-agent conversational systems with enterprise-grade LLMOps.',
-		achievements: [
-			'Designed modular multi-agent system using AutoGen and LangChain',
-			'Established LLMOps best practices with Azure AI platform and MLflow',
-			'Implemented human-in-the-loop approval steps for enterprise governance',
-			'Developed user-centric platform for custom AI agent creation',
-			'Integrated MCP servers with Microsoft Teams for seamless interaction',
-			'Authored Azure Bicep modules and packaged solution for Azure Marketplace'
+		domains: ['AI Agents & Evaluation', 'RAG & AI Platforms'],
+		specialties: ['Multi-agent orchestration', 'MCP integrations', 'LLMOps', 'Azure delivery'],
+		summary:
+			'I designed configurable multi-agent systems with memory, tools, collaborative workflows, and enterprise integration points. I also helped turn the platform into an operable Azure-based system with repeatable LLMOps practices.',
+		context:
+			'The product challenge was to support different agent configurations without creating a separate bespoke application for each workflow. That meant making agent behavior, integrations, approvals, and infrastructure reusable while keeping the system understandable to the teams configuring it.',
+		ownership: [
+			'Built multi-agent workflows with LangChain and PydanticAI, including memory, tools, and collaborative task handoffs.',
+			'Integrated MCP servers and Microsoft Teams so agents could work through familiar enterprise channels.',
+			'Established Azure infrastructure and maintainable LLMOps practices for configuration, deployment, and monitoring.',
+			'Contributed to human-in-the-loop approval flows and packaging work for a reusable enterprise solution.',
 		],
-		tasks: [
-			'Design and implement multi-agent conversational systems',
-			'Establish LLMOps pipelines and monitoring systems',
-			'Develop Azure infrastructure using Bicep templates',
-			'Integrate AI agents with Microsoft Teams and other platforms',
-			'Ensure compliance with enterprise governance requirements',
-			'Package solutions for Azure Marketplace deployment'
+		decisions: [
+			'Used typed configuration and explicit tool boundaries to keep agent variations composable instead of hard-coding each workflow.',
+			'Treated approvals and external integrations as first-class workflow steps rather than hidden prompt behavior.',
+			'Kept infrastructure definitions versioned with the platform so environment changes were reviewable.',
 		],
-		technologies: ['AutoGen', 'LangChain', 'Azure AI', 'MLflow', 'Bicep', 'Microsoft Teams', 'MCP'],
-		metrics: {
-			'Customer Time-to-Deploy': '< 1 hour',
-			'Task Throughput': 'Enhanced significantly',
-			'User Engagement': 'Improved with memory and tool usage'
-		},
+		technologies: ['LangChain', 'PydanticAI', 'Azure AI', 'MCP', 'Microsoft Teams', 'LLMOps', 'Bicep'],
+		impact: [
+			{
+				label: 'Platform scope',
+				value: 'Configurable agent workflows',
+				detail: 'Reusable orchestration, integrations, approvals, and deployment foundations for enterprise use cases.',
+			},
+		],
+		relatedProjectIds: [16, 17, 1],
 		companyLogo: '/images/companies/kmeleon.png',
-		companyUrl: 'https://www.kmeleon.tech'
+		companyUrl: 'https://www.kmeleon.tech',
 	},
 	{
-		id: uuidv4(),
+		id: 'southdesk',
 		company: 'Southdesk',
 		position: 'Machine Learning Engineer',
-		period: 'April 2024 – Feb 2025',
+		period: 'Apr 2024 – Jan 2025',
+		duration: '10 months',
 		location: 'Remote',
 		type: 'Full-time',
 		status: 'completed',
-		description: 'Built RAG systems and automation workflows for recruitment and lead generation.',
-		achievements: [
-			'Designed RAG systems with Qdrant vector DB and LLM-based enrichment',
-			'Applied Azure Pipelines CI/CD to shorten deployment cycles',
-			'Built no-code automations using Make.com, Zapier, and GoHighLevel',
-			'Raised lead conversion through automated workflows',
-			'Developed AI-powered workflows for property reporting and meeting summarization',
-			'Created scalable lead-gen pipelines with Selenium, Apify, and n8n'
+		domains: ['RAG & AI Platforms'],
+		specialties: ['RAG systems', 'Vector retrieval', 'Data enrichment', 'Workflow automation'],
+		summary:
+			'I built retrieval and enrichment workflows for recruitment, lead generation, and customer operations. The work connected unstructured web and business data to structured CRM actions and automated communication.',
+		context:
+			'The recurring problem was not simply finding text; it was turning scattered prospect and operational information into data that downstream workflows could use. I worked across retrieval, extraction, CRM integration, and automation so the handoffs were repeatable.',
+		ownership: [
+			'Designed RAG and vector-retrieval workflows with Qdrant for search, enrichment, and personalized communication.',
+			'Connected structured outputs to GoHighLevel CRM and workflow automation for recruitment and lead-generation operations.',
+			'Built web-scraping and data-extraction paths with Selenium, Apify, and n8n.',
+			'Used Azure Pipelines and FastAPI patterns to keep feature delivery and service changes repeatable.',
 		],
-		technologies: ['RAG', 'Qdrant', 'FastAPI', 'Azure Pipelines', 'Make.com', 'Zapier', 'Selenium', 'n8n'],
-		metrics: {
-			'Feature Deployment Time': '40% reduction',
-			'Lead Conversion': '+2%',
-			'Manual Operations': 'Significantly reduced'
-		},
+		decisions: [
+			'Separated extraction and enrichment from CRM actions so source data could be reviewed before automation changed a record.',
+			'Used retrieval where context was distributed across documents and web sources, then normalized the result for operational systems.',
+			'Kept automation components replaceable so the platform could support different business workflows without rewriting the retrieval layer.',
+		],
+		technologies: ['RAG', 'Qdrant', 'FastAPI', 'Azure Pipelines', 'GoHighLevel', 'Selenium', 'Apify', 'n8n'],
+		impact: [
+			{
+				label: 'Delivery',
+				value: '40% shorter deployment cycles',
+				detail: 'Reported in the existing project record alongside automated retrieval and CRM workflows.',
+			},
+		],
+		relatedProjectIds: [1],
 		companyLogo: '/images/companies/southdesk.png',
-		companyUrl: 'https://southdesk.net'
+		companyUrl: 'https://southdesk.net',
 	},
 	{
-		id: uuidv4(),
+		id: 'el-sol',
 		company: 'El Sol',
 		position: 'Machine Learning Team Leader',
-		period: 'June 2023 – April 2024',
+		period: 'Jun 2023 – Apr 2024',
+		duration: '11 months',
 		location: 'Remote',
 		type: 'Full-time',
 		status: 'completed',
-		description: 'Led ML team developing production recommender systems and document processing platforms.',
-		achievements: [
-			'Developed production recommender system chatbot with React, FastAPI, and RAG',
-			'Enabled 160+ users to find resources faster',
-			'Added CHW domain Q&A with retrieval to program guides',
-			'Built document-processing platform handling ~100 documents/month',
-			'Delivered Generative AI automations reducing manual workload',
-			'Led MLOps and CI/CD initiatives accelerating deployment cycles'
+		domains: ['RAG & AI Platforms', 'Technical Leadership'],
+		specialties: ['Document intelligence', 'Retrieval and reranking', 'MLOps', 'Technical leadership'],
+		summary:
+			'I led a team building conversational AI and document-intelligence systems for an education and community organization. I owned the path from multi-format ingestion and retrieval to usable forms, reports, and recommendations.',
+		context:
+			'The challenge was to make heterogeneous documents useful to staff without turning the assistant into an untraceable answer generator. The platform needed ingestion, filtering, reranking, speech and application interfaces, plus a deployment path the team could operate.',
+		ownership: [
+			'Led development of conversational AI and document-intelligence workflows with LangChain, FastAPI, React, TypeScript, and Node.',
+			'Implemented multi-format ingestion, vector retrieval, filters, and reranking for program guides and operational documents.',
+			'Connected Azure Speech and generated forms, reports, and recommendations around retrieved knowledge.',
+			'Coordinated deployment through AKS, App Service, and Container Apps with CI/CD practices.',
 		],
-		technologies: ['React', 'FastAPI', 'RAG', 'LangChain', 'LangSmith', 'PGVector', 'MLOps', 'CI/CD'],
-		metrics: {
-			'Resource Discovery': '50% faster',
-			'Deployment Cycles': '40% acceleration',
-			'Users Served': '160+',
-			'Documents Processed': '~100/month'
-		},
+		decisions: [
+			'Used retrieval filters and reranking to keep domain answers grounded in the right program context.',
+			'Built the application layer around the workflow staff already used instead of exposing a model-only interface.',
+			'Balanced delivery speed with operational ownership by standardizing deployment and monitoring patterns for the team.',
+		],
+		technologies: ['LangChain', 'FastAPI', 'React', 'PGVector', 'Azure Speech', 'AKS', 'CI/CD'],
+		impact: [
+			{ label: 'Users', value: '160+', detail: 'Users supported by the resource-discovery workflow.' },
+			{ label: 'Throughput', value: '~100 documents/month', detail: 'Document-processing volume in the existing project record.' },
+			{ label: 'Reported outcome', value: '50% faster discovery', detail: 'Existing project record also reports 40% faster deployment cycles.' },
+		],
+		relatedProjectIds: [1, 16],
 		companyLogo: '/images/companies/elsol.png',
-		companyUrl: 'https://elsolnec.org'
+		companyUrl: 'https://elsolnec.org',
 	},
 	{
-		id: uuidv4(),
+		id: 'university-of-magdalena-covid-rx',
 		company: 'University of Magdalena',
-		position: 'COVID-Rx Diagnosis CV Engineer',
+		position: 'Applied ML Researcher — COVID-Rx',
 		period: 'Dec 2020 – Nov 2021',
+		duration: '1 year',
 		location: 'Colombia',
-		type: 'Research',
+		type: 'Research project',
 		status: 'completed',
-		description: 'Developed computer vision models for COVID-19 diagnosis from chest X-rays.',
-		achievements: [
-			'Curated 36k+ chest X-ray dataset with patient-level splits',
-			'Trained multi-class PyTorch CNNs achieving over 90% accuracy',
-			'Benchmarked 10+ architectures: VGG19, DenseNet, MobileNet, EfficientNet, etc.',
-			'Built clinician-facing PyQt desktop and Flask web apps',
-			'Implemented preprocessing, augmentation, and evaluation pipelines',
-			'Created model ensemble picker improving accuracy vs single models'
+		domains: ['Computer Vision'],
+		specialties: ['CNN experimentation', 'Medical imaging', 'Model evaluation', 'Explainability'],
+		summary:
+			'I developed a research and application workflow for comparing CNN architectures on a public chest X-ray classification task. The work covered dataset preparation, preprocessing, model evaluation, probability outputs, and visual explanation.',
+		context:
+			'Comparing image classifiers required keeping data decisions, architecture-specific preprocessing, metrics, and user-facing interpretation separate. I built the workflow as an applied research system, not as a claim of clinical validation or deployment.',
+		ownership: [
+			'Curated a working dataset of more than 36,000 public chest X-ray images across COVID-19, healthy, and pneumonia classes.',
+			'Trained and compared ten CNN families in PyTorch, including VGG19, DenseNet, MobileNet, EfficientNet, ResNet, and Xception.',
+			'Built PyQt desktop and Flask web interfaces for probability outputs and heatmap-based visual explanation.',
+			'Implemented preprocessing, augmentation, evaluation, and model-comparison paths for repeatable experiments.',
 		],
-		technologies: ['PyTorch', 'CNN', 'PyQt', 'Flask', 'Computer Vision', 'Medical AI', 'Ensemble Learning'],
-		metrics: {
-			'Model Accuracy': '96%',
-			'Dataset Size': '36k+ images',
-			'Architectures Tested': '10+',
-			'Clinical Impact': 'Remote diagnosis capability'
-		},
+		decisions: [
+			'Compared multiple architectures rather than treating a single model score as the conclusion.',
+			'Kept preprocessing and evaluation choices explicit because they change what a model comparison means.',
+			'Presented heatmaps as model-behavior inspection, not evidence of clinical correctness.',
+		],
+		technologies: ['PyTorch', 'CNN', 'OpenCV', 'PyQt', 'Flask', 'Medical imaging', 'Model evaluation'],
+		impact: [
+			{ label: 'Dataset', value: '36k+ chest X-rays', detail: 'Public multi-class image sources used for the research workflow.' },
+			{ label: 'Comparison', value: '10 CNN architectures', detail: 'Reported experiment scope across model families.' },
+			{ label: 'Reported result', value: '>90% accuracy', detail: 'A project-level experiment result, not a clinical validation metric.' },
+		],
+		relatedProjectIds: [3],
 		companyLogo: '/images/companies/universidad-magdalena.png',
-		companyUrl: 'https://unimagdalena.edu.co'
+		companyUrl: 'https://unimagdalena.edu.co',
 	},
 	{
-		id: uuidv4(),
-		company: 'Intecol Sas',
+		id: 'intecol-sas',
+		company: 'Intecol SAS',
 		position: 'Computer Vision Engineer & Team Lead',
-		period: 'May 2019 – April 2023',
+		period: 'May 2019 – Apr 2023',
+		duration: '4 years',
 		location: 'Colombia',
 		type: 'Full-time',
 		status: 'completed',
-		description: 'Led computer vision systems for industrial automation and safety applications.',
-		achievements: [
-			'Led 10-engineer team delivering end-to-end CV systems',
-			'Developed real-time CV pipelines improving incident detection',
-			'Reduced false alarms through robust detection systems',
-			'Built data/labeling workflows with CVAT and automated retraining',
-			'Architected imaging stacks with illumination, sensors, and 3D scanners',
-			'Deployed Optical Gas Imaging solution reducing leak detection time'
+		domains: ['Computer Vision', 'Technical Leadership'],
+		specialties: ['Industrial imaging', 'Real-time CV', 'PLC/HMI integration', 'Team leadership'],
+		summary:
+			'I led industrial computer-vision delivery from imaging design and model development through integration with automation systems. The role combined technical architecture, client requirements, delivery planning, and mentoring a 10-engineer team across 30+ projects.',
+		context:
+			'Industrial vision has to work with real optics, illumination, hardware, throughput, and plant interfaces. I worked across classical image processing, CNN and YOLO models, edge execution, PLC/HMI integration, and the operational details needed to turn a lab model into a usable system.',
+		ownership: [
+			'Led a 10-engineer team and owned architecture, planning, client requirements, budgets, reviews, and delivery quality.',
+			'Designed imaging systems involving camera selection, optics, illumination, sensors, and 3D scanners.',
+			'Built CNN, YOLO, PyTorch, TensorFlow, Python, and C++ solutions for inspection, safety, and human-behavior use cases.',
+			'Connected vision software to real-time execution, PLC/HMI interfaces, monitoring systems, and automated retraining workflows.',
 		],
-		tasks: [
-			'Lead and manage 10-engineer computer vision team',
-			'Define technical strategy and architecture for CV systems',
-			'Develop real-time computer vision pipelines',
-			'Design and implement data labeling workflows',
-			'Architect imaging systems with sensors and 3D scanners',
-			'Mentor team members and conduct technical reviews',
-			'Collaborate with clients on system requirements',
-			'Ensure project delivery and quality standards'
+		decisions: [
+			'Started with the imaging conditions and plant constraints because model quality cannot compensate for poor capture.',
+			'Chose classical CV, deep learning, or a hybrid according to latency, variation, explainability, and maintenance needs.',
+			'Used labeling and retraining loops to keep deployed systems adaptable instead of treating delivery as a one-time model handoff.',
 		],
-		technologies: ['PyTorch', 'TensorFlow', 'Keras', 'OpenCV', 'C++', 'PLC', 'C#', 'CVAT', 'LiDAR'],
-		metrics: {
-			'Incident Detection': '+30% improvement',
-			'False Alarms': '-45% reduction',
-			'Team Size': '10 engineers',
-			'Safety Impact': 'Improved plant safety'
-		},
+		technologies: ['Python', 'C++', 'PyTorch', 'TensorFlow', 'YOLO', 'OpenCV', 'PLC/HMI', 'CVAT'],
+		impact: [
+			{ label: 'Leadership', value: '10 engineers', detail: 'Team leadership across architecture, delivery, and technical mentoring.' },
+			{ label: 'Delivery', value: '30+ industrial CV projects', detail: 'Scope reported in the supplied professional background.' },
+			{ label: 'Reported outcomes', value: '+30% detection · −45% false alarms', detail: 'Representative results from relevant systems, not a universal claim across every project.' },
+		],
+		relatedProjectIds: [10, 22],
 		companyLogo: '/images/companies/intecol.png',
-	}
+	},
 ];
 
 const MONTHS = {
@@ -203,7 +272,6 @@ function parseStartDate(period) {
 }
 
 // Full years elapsed since the earliest recorded role start.
-// Recomputed on every build, so no manual updates are needed.
 function fullYearsSinceEarliest() {
 	const starts = experienceData.map((exp) => parseStartDate(exp.period)).filter(Boolean);
 	if (starts.length === 0) return 0;
@@ -219,17 +287,16 @@ function fullYearsSinceEarliest() {
 export const experienceYears = fullYearsSinceEarliest();
 
 export const industryDomains = [
-	'Healthcare',
-	'Education',
-	'CRM / marketing',
-	'Industrial automation',
-	'B2B SaaS',
+	'AI Agents & Evaluation',
+	'RAG & AI Platforms',
+	'Computer Vision',
+	'Technical Leadership',
 ];
 
 export const experienceStats = {
 	totalYears: `${experienceYears}+`,
 	companies: experienceData.length,
-	technologies: [...new Set(experienceData.flatMap(exp => exp.technologies))].length,
-	projects: experienceData.reduce((acc, exp) => acc + exp.achievements.length, 0),
-	leadership: experienceData.filter(exp => exp.position.toLowerCase().includes('lead') || exp.position.toLowerCase().includes('team')).length
+	technologies: [...new Set(experienceData.flatMap((exp) => exp.technologies))].length,
+	projects: new Set(experienceData.flatMap((exp) => exp.relatedProjectIds)).size,
+	leadership: experienceData.filter((exp) => exp.domains.includes('Technical Leadership')).length,
 };
