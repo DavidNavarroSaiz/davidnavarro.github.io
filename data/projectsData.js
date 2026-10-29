@@ -3368,7 +3368,7 @@ export const projectsData = [
 		url: 'secure-ai-code-execution-workspace-isolation',
 		category: 'AI Security / Execution Boundaries',
 		summary:
-			'Controlled code-execution architecture that binds authenticated users to managed sessions, owner-scoped persistent workspaces, verified mounts, and fail-closed artifact handling.',
+			'Controlled AWS Bedrock AgentCore Code Interpreter integration with a TypeScript translation layer, JWT-derived ownership, persistent EFS workspaces, verified mounts, and fail-closed artifact handling.',
 		img: secureAiCodeExecutionCover,
 		imageAlt:
 			'Conceptual editorial illustration of secure AI code execution showing authenticated requests, a controlled runtime, verified workspace mounts, persistent artifacts, and gated results; not a production architecture diagram.',
@@ -3394,11 +3394,11 @@ export const projectsData = [
 			],
 			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
-				'Connect an AI workspace to managed code execution without trusting caller-supplied workspace identities or treating a shared interpreter role as a hostile-tenant security boundary.',
+				'Connect an AI workspace to AWS Bedrock AgentCore Code Interpreter through a TypeScript translation layer without trusting caller-supplied workspace identities or treating a shared interpreter role as a hostile-tenant security boundary.',
 			Technologies: [
 				{
 					title: 'Engineering boundaries',
-					techs: ['JWT-derived ownership', 'Managed interpreter sessions', 'Persistent workspace storage', 'Filesystem safety checks', 'Infrastructure as code', 'Automated security tests'],
+					techs: ['AWS Bedrock AgentCore Code Interpreter', 'TypeScript / Fastify CodeAPI adapter', 'JWT-derived ownership', 'Persistent EFS workspaces', 'Managed sessions', 'Filesystem safety checks', 'Infrastructure as code', 'Automated security tests'],
 				},
 			],
 			ProjectDetailsHeading: 'Implementation boundary',
@@ -3421,30 +3421,30 @@ export const projectsData = [
 				'Code execution creates a different trust boundary from text generation. A request can be authenticated and still be routed to the wrong workspace, attached to an unexpected filesystem, or allowed to survive longer than intended. I needed the execution path to verify ownership and runtime state before allowing a managed interpreter session to work with persistent files.',
 			architecture: {
 				summary:
-					'I separated the authenticated application and translation/API layer from the execution gateway, then made session validation, owner-scoped storage, mount verification, and artifact handling explicit parts of the path. The shared managed interpreter resource and shared execution role are shown as an operational choice with a residual security limitation, not as a complete hostile-tenant isolation boundary.',
+					'I separated the authenticated application from a TypeScript/Fastify CodeAPI Translator and the managed execution service. The translator verifies JWT-derived ownership, resolves the owner-bound EFS access point, checks session and mount state, and then invokes AWS Bedrock AgentCore Code Interpreter. AgentCore runs the code; EFS persists owner-scoped files; the translator owns the application-level session, filesystem, upload, download, and artifact checks. The shared interpreter resource and execution role remain an operational choice with a residual security limitation, not a complete hostile-tenant isolation boundary.',
 				diagrams: [
 					{
 						title: 'Authenticated execution and workspace binding',
 						img: secureExecutionDiagram,
-						alt: 'Editable conceptual architecture showing an authenticated request with JWT-derived ownership entering an execution gateway, followed by session and mount validation, a managed interpreter, an owner-scoped persistent workspace, verified artifacts, and a fail-closed denial path. A note identifies the residual risk of a shared interpreter role.',
+						alt: 'Editable conceptual architecture showing an authenticated request with JWT-derived ownership entering a TypeScript CodeAPI Translator, followed by session and mount validation, AWS Bedrock AgentCore Code Interpreter, an owner-scoped EFS workspace, verified artifacts, and a fail-closed denial path. A note identifies the residual risk of a shared execution role.',
 						caption:
-							'Technical view I can share — application-level ownership and runtime checks reduce accidental cross-owner routing, but a shared execution role is not a strong boundary against mutually hostile users who can abuse its credentials.',
+							'Technical view I can share — the translator enforces application-level ownership and runtime checks before invoking AgentCore, while EFS persists files. A shared execution role is not a strong boundary against mutually hostile users who can abuse its credentials.',
 						mobileFallback: [
 							{
 								title: 'Authenticated request',
 								description: 'The application passes an authenticated request; the caller does not choose the workspace identity used for authorization.',
 							},
 							{
-								title: 'Execution gateway',
-								description: 'The gateway derives ownership from verified identity and prepares the execution request at the application boundary.',
+								title: 'CodeAPI Translator',
+								description: 'A TypeScript/Fastify translation layer derives ownership from verified identity and prepares the AgentCore execution request at the application boundary.',
 							},
 							{
 								title: 'Session and mount validation',
-								description: 'The session is bound to the owner and the expected workspace attachment is checked before code is allowed to run.',
+								description: 'The session is bound to the owner and the expected EFS workspace attachment is checked before code is sent to the interpreter.',
 							},
 							{
-								title: 'Managed interpreter and persistent workspace',
-								description: 'Ephemeral managed sessions work with an owner-scoped persistent storage access point and bounded filesystem operations.',
+								title: 'AgentCore Code Interpreter and EFS',
+								description: 'AWS Bedrock AgentCore Code Interpreter runs the code while an owner-scoped EFS access point provides persistence across short-lived sessions.',
 							},
 							{
 								title: 'Verified artifacts or denial',
@@ -3459,16 +3459,16 @@ export const projectsData = [
 						role: 'Receives the application request and passes verified identity context into the execution path.',
 					},
 					{
-						name: 'Execution gateway',
-						role: 'Resolves the owner and intended workspace server-side instead of trusting a caller-supplied workspace identity.',
+						name: 'TypeScript CodeAPI Translator',
+						role: 'Resolves the owner and intended workspace server-side, validates the request, and invokes AgentCore instead of trusting a caller-supplied workspace identity.',
 					},
 					{
-						name: 'Managed interpreter sessions',
-						role: 'Provides ephemeral execution lifecycle under a controlled managed resource.',
+						name: 'AWS Bedrock AgentCore Code Interpreter',
+						role: 'Runs the submitted code in managed interpreter sessions. AgentCore is the execution service; it is not the ECS-hosted translator.',
 					},
 					{
-						name: 'Owner-scoped persistent workspace',
-						role: 'Provides per-owner filesystem access points for files that must persist across short-lived sessions.',
+						name: 'Owner-scoped EFS workspace',
+						role: 'Provides dynamically resolved per-owner access points for files that must persist across short-lived sessions.',
 					},
 					{
 						name: 'Validation and artifact boundary',
@@ -3479,8 +3479,12 @@ export const projectsData = [
 			implementationTitle: 'What I implemented',
 			implementation: [
 				{
+					title: 'Integrate the CodeAPI Translator with AgentCore',
+					body: 'I implemented and tested a TypeScript/Fastify CodeAPI adapter for AWS Bedrock AgentCore Code Interpreter. The translator is the application-facing boundary: it verifies identity and prepares the execution request, while AgentCore is the managed service that actually runs the code.',
+				},
+				{
 					title: 'Derive ownership from authenticated identity',
-					body: 'I kept workspace ownership on the server side. The execution request does not get to nominate an arbitrary workspace identity; the gateway resolves the owner from verified authentication context and uses that result for the rest of the flow.',
+					body: 'I kept workspace ownership on the server side. The execution request does not get to nominate an arbitrary workspace identity; the CodeAPI Translator resolves the owner from verified authentication context and uses that result for the rest of the flow.',
 				},
 				{
 					title: 'Bind sessions to workspaces',
@@ -3488,11 +3492,15 @@ export const projectsData = [
 				},
 				{
 					title: 'Harden filesystem and lifecycle behavior',
-					body: 'The implementation includes bounded filesystem operations, storage restrictions, session lifecycle handling, and checks that reject unexpected mounts or session states rather than attempting to recover silently.',
+					body: 'The implementation includes bounded filesystem operations, storage restrictions, session lifecycle handling, EFS access-point checks, and validation that rejects unexpected mounts or session states rather than attempting to recover silently.',
 				},
 				{
 					title: 'Keep file and artifact handling explicit',
 					body: 'Uploads, downloads, and generated artifacts remain part of the security boundary. The execution service should return only artifacts associated with the verified workspace and expected session flow.',
+				},
+				{
+					title: 'Keep artifact previews separate from code execution',
+					body: 'The Sandpack preview path is a different capability: an ECS/Fargate-hosted bundler sits behind an HTTP authorization sidecar for generated React and artifact previews. That sidecar protects preview requests; it is not the AgentCore Code Interpreter and does not provide general-purpose hostile-code sandboxing.',
 				},
 				{
 					title: 'Prepare infrastructure and security tests',
@@ -3508,6 +3516,10 @@ export const projectsData = [
 				{
 					title: 'Separate execution from the chat application',
 					body: 'A dedicated execution service makes runtime, filesystem, session, and artifact controls visible as their own boundary. It also avoids making the conversational application responsible for arbitrary interpreter lifecycle details.',
+				},
+				{
+					title: 'Separate AgentCore execution from Sandpack previews',
+					body: 'AgentCore Code Interpreter is the server-side code-execution path. Sandpack is the preview path for generated React or artifact output, protected by a separate HTTP authorization sidecar. Treating the two as the same sandbox would overstate what either boundary proves.',
 				},
 				{
 					title: 'Persist workspaces, keep sessions ephemeral',
@@ -3526,7 +3538,7 @@ export const projectsData = [
 			evidence: [
 				{
 					title: 'Source-level implementation',
-					body: 'The documented source components and automated tests cover the ownership, session, filesystem, and artifact boundaries described here. The public case omits private resource names, policies, paths, credentials, and topology.',
+					body: 'The documented source components include the TypeScript/Fastify CodeAPI adapter for AgentCore, owner-bound EFS workspace resolution, session and mount checks, and automated tests for the ownership, filesystem, and artifact boundaries described here. The public case omits private resource names, policies, paths, credentials, and topology.',
 				},
 				{
 					title: 'Security-oriented test coverage',
@@ -3538,6 +3550,14 @@ export const projectsData = [
 				},
 			],
 			limitations: [
+				{
+					title: 'AgentCore, translator, and storage are separate components',
+					body: 'AgentCore Code Interpreter runs code, the translator mediates application requests, and EFS persists workspaces. ECS/Fargate hosts the translator; it is not accurate to describe AgentCore itself as an ECS service or to treat EFS as the execution sandbox.',
+				},
+				{
+					title: 'Sandpack is an artifact-preview boundary',
+					body: 'The Sandpack bundler and HTTP authorization sidecar support generated artifact previews. They are not the same implementation as AgentCore Code Interpreter and are not presented as a general-purpose hostile-code sandbox.',
+				},
 				{
 					title: 'Not a hostile-tenant isolation claim',
 					body: 'A shared managed interpreter resource and associated shared execution role can still expose residual risk to mutually hostile users who can abuse those credentials. Application-level ownership checks reduce routing mistakes; they do not remove that threat model.',
