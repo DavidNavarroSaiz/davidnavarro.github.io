@@ -11,7 +11,7 @@ import {
 // Originals are preserved in public/images for reference.
 import pm1_640 from '../assets/images/pm1-640.webp';
 import rg1_640 from '../assets/images/rg1-640.webp';
-import cov3_640 from '../assets/images/cov3-640.webp';
+import covidRxEditorialCover from '../assets/images/covid-rx-editorial-cover.webp';
 import abo1_640 from '../assets/images/abo1-640.webp';
 import abogaciaEditorialCover from '../assets/images/abogacia-editorial-cover.webp';
 import lead3_640 from '../assets/images/lead3-640.webp';
@@ -396,7 +396,7 @@ export const projectsData = [
 		category: 'Computer Vision',
 		summary:
 			'Chest X-ray diagnosis across ten CNN architectures, with heatmaps that show clinicians where the model is looking.',
-		img: cov3_640,
+		img: covidRxEditorialCover,
 		ProjectHeader: {
 			title: 'COVID-Rx Diagnosis System',
 			publishDate: 'Dec 2020',
@@ -494,6 +494,12 @@ export const projectsData = [
 			SocialSharingHeading: 'Share This',
 		},
 		caseStudy: {
+			editorialCover: {
+				img: covidRxEditorialCover,
+				alt: 'Conceptual editorial illustration for COVID-Rx showing chest X-ray preprocessing, convolutional feature extraction, CNN model families, and comparative evaluation; not a clinical screenshot or measured benchmark chart.',
+				caption:
+					'Conceptual illustration — chest X-ray preprocessing, CNN feature extraction, and comparative evaluation. Embedded charts are illustrative, not experimental results.',
+			},
 			showCapabilityMatrix: false,
 			headerFacts: ['Role', 'Duration', 'Dataset'],
 			overview:
