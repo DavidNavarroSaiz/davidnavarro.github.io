@@ -11,16 +11,24 @@ export const experienceData = [
 		chapter: 'reliable',
 		domains: ['AI Agents & Evaluation', 'RAG & AI Platforms', 'Technical Leadership'],
 		specialties: ['Governed agents', 'Evaluation design', 'RAG reliability', 'Tool verification'],
+		responsibilities: [
+			'Own reliability foundations for production agent workflows, from state transitions and authorization to verified tool outcomes and failure handling.',
+			'Coordinate applied model experimentation and evaluation practices across distinct assignments within the Svitla employment record.',
+		],
 		workstreams: [
 			{
 				label: 'Operational AI Agents & Evaluation',
 				period: 'Nov 2025 – Present',
 				maturity: 'Selected production workflow',
+				responsibility: 'Own stateful agent behavior, authorization boundaries, tool verification, and the evaluation loop around operational workflows.',
+				implementation: 'LangGraph workflows, deterministic eligibility rules, confirmation paths, structured outcomes, traces, and repeatable evaluation scenarios.',
 			},
 			{
 				label: 'Visual Proctoring & Applied CV',
 				period: 'Aug – Nov 2025',
 				maturity: 'Experimentation',
+				responsibility: 'Contribute to multi-signal behavior modeling and reproducible model comparison for video-based proctoring workflows.',
+				implementation: 'Face detection, gaze and head-pose features, temporal behavior signals, CVAT annotation, DVC versioning, and MLflow experiment records.',
 			},
 		],
 		editorialNote: {
@@ -70,6 +78,10 @@ export const experienceData = [
 		overlapNote: 'Concurrent with the Svitla Systems role.',
 		domains: ['Computer Vision'],
 		specialties: ['Behavioral CV', 'Model comparison', 'Dataset versioning', 'Video inference'],
+		responsibilities: [
+			'Contribute as a Machine Learning Engineer to visual-proctoring experimentation, model comparison, dataset versioning, and video inference behavior.',
+			'Keep feature extraction, labeling, experiment records, and runtime heuristics traceable for the teams evaluating the workflow.',
+		],
 		summary:
 			'I worked on multi-signal proctoring models that combined face detection, gaze, head pose, and temporal behavior features. The work compared classical and neural approaches and tightened the path from labeled data to inference.',
 		context:
@@ -112,6 +124,10 @@ export const experienceData = [
 		chapter: 'connected',
 		domains: ['AI Agents & Evaluation', 'RAG & AI Platforms'],
 		specialties: ['Multi-agent orchestration', 'MCP integrations', 'LLMOps', 'Azure delivery'],
+		responsibilities: [
+			'Own architecture and infrastructure contributions for reusable multi-agent workflows, retrieval services, enterprise integrations, and Azure delivery.',
+			'Implement and test the interfaces that connect agent behavior to Microsoft Teams, vector-backed knowledge, and Azure DevOps operations.',
+		],
 		summary:
 			'I designed configurable multi-agent systems with memory, tools, collaborative workflows, and enterprise integration points. I also helped turn the platform into an operable Azure-based system with repeatable LLMOps practices.',
 		context:
@@ -120,7 +136,9 @@ export const experienceData = [
 			'Internal platform delivery and reusable enterprise foundations. This record does not claim Marketplace publication or a single deployment outcome across every configured workflow.',
 		ownership: [
 			'Built multi-agent workflows with LangChain and PydanticAI, including memory, tools, and collaborative task handoffs.',
+			'Designed vector-backed ingestion and retrieval paths so configurable agents could work from shared enterprise knowledge rather than isolated prompts.',
 			'Integrated MCP servers and Microsoft Teams so agents could work through familiar enterprise channels.',
+			'Implemented Azure DevOps MCP operations and functional tests for work-item creation, assignment, reading, deletion, and document-ingestion verification.',
 			'Established Azure infrastructure and maintainable LLMOps practices for configuration, deployment, and monitoring.',
 			'Contributed to human-in-the-loop approval flows and packaging work for a reusable enterprise solution.',
 		],
@@ -154,6 +172,10 @@ export const experienceData = [
 		chapter: 'connected',
 		domains: ['RAG & AI Platforms'],
 		specialties: ['RAG systems', 'Vector retrieval', 'Data enrichment', 'Workflow automation'],
+		responsibilities: [
+			'Build applied AI services that turn web, recruitment, and business data into retrievable context and structured workflow actions.',
+			'Own integrations across retrieval, enrichment, CRM automation, scraping, and delivery pipelines while keeping attribution scoped to the relevant workflow.',
+		],
 		summary:
 			'I built retrieval and enrichment workflows for recruitment, lead generation, and customer operations. The work connected unstructured web and business data to structured CRM actions and automated communication.',
 		context:
@@ -196,6 +218,10 @@ export const experienceData = [
 		chapter: 'connected',
 		domains: ['RAG & AI Platforms', 'Technical Leadership'],
 		specialties: ['Document intelligence', 'Retrieval and reranking', 'MLOps', 'Technical leadership'],
+		responsibilities: [
+			'Lead a team delivering backend, retrieval, document-intelligence, and cloud implementation work for education and community workflows.',
+			'Own the path from heterogeneous ingestion and reranking to usable forms, reports, recommendations, deployment, and operational handoff.',
+		],
 		summary:
 			'I led a team building conversational AI and document-intelligence systems for an education and community organization. I owned the path from multi-format ingestion and retrieval to usable forms, reports, and recommendations.',
 		context:
@@ -237,6 +263,10 @@ export const experienceData = [
 		overlapNote: 'Concurrent research project during the Intecol SAS tenure.',
 		domains: ['Computer Vision'],
 		specialties: ['CNN experimentation', 'Medical imaging', 'Model evaluation', 'Explainability'],
+		responsibilities: [
+			'Conduct applied research on public chest X-ray classification, keeping dataset preparation, preprocessing, model comparison, and interpretation explicit.',
+			'Build the experimental and application interfaces needed to inspect probability outputs and model behavior without implying clinical deployment.',
+		],
 		summary:
 			'I developed a research and application workflow for comparing CNN architectures on a public chest X-ray classification task. The work covered dataset preparation, preprocessing, model evaluation, probability outputs, and visual explanation.',
 		context:
@@ -276,6 +306,10 @@ export const experienceData = [
 		chapter: 'foundations',
 		domains: ['Computer Vision', 'Technical Leadership'],
 		specialties: ['Industrial imaging', 'Real-time CV', 'PLC/HMI integration', 'Team leadership'],
+		responsibilities: [
+			'Lead industrial computer-vision delivery from camera, optics, illumination, and acquisition design through model development and automation integration.',
+			'Lead a 10-engineer team across architecture, requirements, project delivery, technical reviews, mentoring, and customer-facing constraints.',
+		],
 		summary:
 			'I led industrial computer-vision delivery from imaging design and model development through integration with automation systems. The role combined technical architecture, client requirements, delivery planning, and mentoring a 10-engineer team across 30+ projects.',
 		context:

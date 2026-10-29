@@ -89,6 +89,11 @@
 	line-height: 1.45;
 }
 
+.companyName {
+	color: #ece5d7;
+	font-weight: 500;
+}
+
 .overlapNote {
 	max-width: 52rem;
 	margin: 0.45rem 0 0;
@@ -267,6 +272,12 @@
 	font-size: 0.68rem;
 }
 
+.workstreams .workstreamDetail {
+	margin-top: 0.4rem;
+	color: #9ba9ab;
+	line-height: 1.45;
+}
+
 .detailHeading {
 	display: grid;
 	grid-template-columns: 2rem minmax(0, 1fr) auto;
@@ -293,6 +304,22 @@
 	color: #b2c0d2;
 	font-size: 0.82rem;
 	line-height: 1.5;
+}
+
+.responsibilities {
+	margin: 1.15rem 0 0;
+	padding: 0.9rem 1rem 0.95rem;
+	border-left: 2px solid #7fa7b4;
+	background: rgba(127, 167, 180, 0.07);
+}
+
+.responsibilityList {
+	display: grid;
+	gap: 0.55rem;
+	margin: 0.7rem 0 0;
+	color: #c2ccd6;
+	font-size: 0.82rem;
+	line-height: 1.55;
 }
 
 .detailPeriod {
@@ -331,18 +358,21 @@
 }
 
 .contributionList,
+.responsibilityList,
 .decisionList {
 	display: grid;
 	gap: 0.55rem;
 }
 
 .contributionList li,
+.responsibilityList li,
 .decisionList li {
 	position: relative;
 	padding-left: 0.9rem;
 }
 
 .contributionList li::before,
+.responsibilityList li::before,
 .decisionList li::before {
 	content: '—';
 	position: absolute;

@@ -72,13 +72,24 @@ function ExperienceItem({ experience }) {
 					{experience.position}
 				</h2>
 				<p className={styles.companyLine}>
-					{experience.company} · {experience.location} · {experience.type}
+					<strong className={styles.companyName}>{experience.company}</strong> · {experience.location} · {experience.type}
 				</p>
 				{experience.overlapNote && (
 					<p className={styles.overlapNote}>{experience.overlapNote}</p>
 				)}
 
 				<p className={styles.summaryCopy}>{experience.summary}</p>
+
+				{experience.domains?.length > 0 && (
+					<div className={`${styles.workstreamStrip} ${styles.domainStrip}`}>
+						<span className={styles.stripLabel}>Domains</span>
+						{experience.domains.slice(0, 3).map((domain) => (
+							<span key={domain} className={styles.stripValue}>
+								{domain}
+							</span>
+						))}
+					</div>
+				)}
 
 				{experience.workstreams?.length > 0 && (
 					<div className={styles.workstreamStrip}>
@@ -138,8 +149,14 @@ function ExperienceItem({ experience }) {
 												<span>
 													<strong>{workstream.label}</strong>
 													<small>
-														{workstream.period} · {workstream.maturity}
-													</small>
+																	{workstream.period} · {workstream.maturity}
+															</small>
+															{workstream.responsibility && (
+																<small className={styles.workstreamDetail}>{workstream.responsibility}</small>
+															)}
+															{workstream.implementation && (
+																<small className={styles.workstreamDetail}>{workstream.implementation}</small>
+															)}
 												</span>
 											</li>
 										))}
@@ -156,16 +173,27 @@ function ExperienceItem({ experience }) {
 								<span className={styles.detailPeriod}>{experience.period}</span>
 							</div>
 
+							{experience.responsibilities?.length > 0 && (
+								<section className={styles.responsibilities} aria-label="Professional responsibilities">
+									<p className={styles.sectionLabel}>Professional responsibilities</p>
+									<ul className={styles.responsibilityList}>
+										{experience.responsibilities.map((responsibility) => (
+											<li key={responsibility}>{responsibility}</li>
+										))}
+									</ul>
+								</section>
+							)}
+
 							<dl className={styles.detailRows}>
 								<DetailRow label="The challenge">{experience.context}</DetailRow>
-								<DetailRow label="What I built">
+								<DetailRow label="What I implemented">
 									<ul className={styles.contributionList}>
 										{experience.ownership.map((item) => (
 											<li key={item}>{item}</li>
 										))}
 									</ul>
 								</DetailRow>
-								<DetailRow label="Evidence & status">{evidence}</DetailRow>
+								<DetailRow label="Results & evidence">{evidence}</DetailRow>
 							</dl>
 
 							{experience.decisions?.length > 0 && (
@@ -182,8 +210,8 @@ function ExperienceItem({ experience }) {
 								</section>
 							)}
 
-							<section className={styles.technologySection} aria-label="Technologies in context">
-								<p className={styles.sectionLabel}>Technologies in context</p>
+							<section className={styles.technologySection} aria-label="Technologies and architecture">
+								<p className={styles.sectionLabel}>Technologies &amp; architecture</p>
 								<ul className={styles.technologyList}>
 									{experience.technologies.map((technology) => (
 										<li key={technology}>{technology}</li>
