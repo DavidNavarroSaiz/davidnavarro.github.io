@@ -9,7 +9,7 @@ export const experienceData = [
 		type: 'Full-time',
 		status: 'current',
 		chapter: 'reliable',
-		domains: ['AI Agents & Evaluation', 'RAG & AI Platforms', 'Technical Leadership'],
+		domains: ['AI Agents & Evaluation', 'RAG & AI Platforms', 'Computer Vision', 'Technical Leadership'],
 		specialties: ['Governed agents', 'Evaluation design', 'RAG reliability', 'Tool verification'],
 		responsibilities: [
 			'Own reliability foundations for production agent workflows, from state transitions and authorization to verified tool outcomes and failure handling.',
@@ -21,14 +21,15 @@ export const experienceData = [
 				period: 'Nov 2025 – Present',
 				maturity: 'Selected production workflow',
 				responsibility: 'Own stateful agent behavior, authorization boundaries, tool verification, and the evaluation loop around operational workflows.',
-				implementation: 'LangGraph workflows, deterministic eligibility rules, confirmation paths, structured outcomes, traces, and repeatable evaluation scenarios.',
+				implementation: 'Production agent-runtime reliability, governed tool operations, traces, and repeatable evaluation scenarios.',
 			},
 			{
-				label: 'Visual Proctoring & Applied CV',
+				label: '360Training · Visual Proctoring & Applied CV',
 				period: 'Aug – Nov 2025',
-				maturity: 'Experimentation',
-				responsibility: 'Contribute to multi-signal behavior modeling and reproducible model comparison for video-based proctoring workflows.',
-				implementation: 'Face detection, gaze and head-pose features, temporal behavior signals, CVAT annotation, DVC versioning, and MLflow experiment records.',
+				maturity: 'Client assignment via Svitla · Experimentation',
+				responsibility: 'Own applied ML experimentation for the 360Training visual-proctoring client assignment, keeping it distinct from Svitla’s operational agent platform.',
+				implementation: 'Face detection, gaze estimation, head-pose analysis, temporal behavior features, and inference heuristics; compared XGBoost, LightGBM, Random Forest, logistic regression, and neural models with CVAT, DVC, and MLflow.',
+				evidence: 'Scoped experimental pipeline: 45% fewer false positives, 40% faster deployment, and 50% less model-selection time in the relevant proctoring workflow; not universal deployment outcomes.',
 			},
 		],
 		editorialNote: {
@@ -64,53 +65,6 @@ export const experienceData = [
 		relatedProjectIds: [17, 20],
 		companyLogo: '/images/companies/svitla.png',
 		companyUrl: 'https://svitla.com',
-	},
-	{
-		id: '360training',
-		company: '360Training',
-		position: 'Machine Learning Engineer — Computer Vision & ML',
-		period: 'Aug 2025 – Nov 2025',
-		duration: '4 months',
-		location: 'Remote',
-		type: 'Concurrent engagement',
-		status: 'completed',
-		chapter: 'reliable',
-		overlapNote: 'Concurrent with the Svitla Systems role.',
-		domains: ['Computer Vision'],
-		specialties: ['Behavioral CV', 'Model comparison', 'Dataset versioning', 'Video inference'],
-		responsibilities: [
-			'Contribute as a Machine Learning Engineer to visual-proctoring experimentation, model comparison, dataset versioning, and video inference behavior.',
-			'Keep feature extraction, labeling, experiment records, and runtime heuristics traceable for the teams evaluating the workflow.',
-		],
-		summary:
-			'I worked on multi-signal proctoring models that combined face detection, gaze, head pose, and temporal behavior features. The work compared classical and neural approaches and tightened the path from labeled data to inference.',
-		context:
-			'Exam-integrity signals are noisy when treated in isolation. The engineering problem was to compare complementary features and model families while keeping data labeling, evaluation, and runtime heuristics understandable to the teams operating the system.',
-		evidence:
-			'Experimentation and model comparison work. Reported reductions remain scoped to the relevant proctoring pipeline and are not presented as universal deployment outcomes.',
-		ownership: [
-			'Combined face detection, gaze, head pose, and temporal behavior features for suspicious-behavior modeling.',
-			'Compared XGBoost, LightGBM, random forests, logistic regression, and neural models against the same evaluation goals.',
-			'Worked with CVAT, DVC, and MLflow for annotation, dataset versioning, experiment records, and model comparison.',
-			'Connected model outputs to inference heuristics designed for practical video-processing behavior.',
-		],
-		decisions: [
-			'Used multiple behavioral signals so a single noisy frame or detector did not decide an outcome alone.',
-			'Kept classical baselines in the comparison to make trade-offs in robustness, interpretability, and runtime visible.',
-			'Separated data and experiment versioning from the inference heuristics so changes could be traced.',
-		],
-		technologies: ['Python', 'Computer Vision', 'XGBoost', 'LightGBM', 'CVAT', 'DVC', 'MLflow'],
-		impact: [
-			{
-				label: 'Evaluation scope',
-				value: 'Multi-signal behavior modeling',
-				detail: 'A practical comparison of feature combinations and model families for video-based proctoring.',
-			},
-			{ label: 'False positives', value: '45% reduction', detail: 'Reported result from the relevant proctoring pipeline.' },
-			{ label: 'Deployment speed', value: '40% faster', detail: 'Reported result from the relevant proctoring workflow.' },
-			{ label: 'Model selection', value: '50% less time', detail: 'Reported reduction in time spent comparing candidate models.' },
-		],
-		relatedProjectIds: [],
 	},
 	{
 		id: 'kmeleon',
@@ -379,7 +333,7 @@ const relatedCaseStudyIds = new Set(
 export const experienceStats = {
 	totalYears: `${experienceYears}+`,
 	companies: employerNames.size,
-	roles: experienceData.length,
+	entries: experienceData.length,
 	technologies: [...new Set(experienceData.flatMap((exp) => exp.technologies))].length,
 	relatedCaseStudies: relatedCaseStudyIds.size,
 	leadership: experienceData.filter((exp) => exp.domains.includes('Technical Leadership')).length,

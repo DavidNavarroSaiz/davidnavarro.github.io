@@ -9,7 +9,7 @@ import styles from './AboutExperience.module.css';
 
 const filterOptions = [
 	{ value: 'all', label: 'All experience' },
-	{ value: 'current', label: 'Current roles' },
+	{ value: 'current', label: 'Current work' },
 	...industryDomains.map((domain) => ({
 		value: domain,
 		label: domain,
@@ -84,10 +84,10 @@ function AboutExperience() {
 					className={styles.status}
 				>
 					<span>
-						Showing {filteredExperience.length} of {experienceData.length} roles.
+						Showing {filteredExperience.length} of {experienceData.length} entries.
 					</span>
 					<span className={styles.statusHint}>
-						Open a role for its engineering context, decisions, evidence, and related work.
+						Open an entry for its engineering context, decisions, evidence, and related work.
 					</span>
 				</p>
 			</div>

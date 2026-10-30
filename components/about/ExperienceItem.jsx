@@ -30,7 +30,7 @@ function ExperienceItem({ experience }) {
 	const evidence =
 		experience.evidence ||
 		experience.impact?.[0]?.detail ||
-		'Current status and scope are described in the role record above.';
+		'Current status and scope are described in the entry record above.';
 
 	const toggleDetails = () => setShowDetails((isOpen) => !isOpen);
 
@@ -157,6 +157,9 @@ function ExperienceItem({ experience }) {
 															{workstream.implementation && (
 																<small className={styles.workstreamDetail}>{workstream.implementation}</small>
 															)}
+															{workstream.evidence && (
+																<small className={styles.workstreamEvidence}>{workstream.evidence}</small>
+															)}
 												</span>
 											</li>
 										))}
@@ -168,7 +171,6 @@ function ExperienceItem({ experience }) {
 								<span className={styles.detailNumber}>01</span>
 								<div>
 									<h3>Engineering scope</h3>
-									<p>{experience.summary}</p>
 								</div>
 								<span className={styles.detailPeriod}>{experience.period}</span>
 							</div>

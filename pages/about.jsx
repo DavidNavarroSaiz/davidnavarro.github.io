@@ -37,7 +37,7 @@ function about() {
 						Professional experience
 					</h2>
 					<p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg">
-						{experienceData.length} roles across industrial automation, healthcare,
+						{experienceData.length} entries across industrial automation, healthcare,
 						education, and enterprise software — from real-time
 						computer vision on factory floors to LLM agents and
 						retrieval infrastructure.
