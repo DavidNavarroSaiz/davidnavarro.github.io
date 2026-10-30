@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useReducedMotion } from 'framer-motion';
@@ -20,6 +20,7 @@ const projectSignals = (project) => [
 
 function RelatedProjects({ currentProjectId, currentCategory }) {
 	const [scrollPosition, setScrollPosition] = useState(0);
+	const [scrollMax, setScrollMax] = useState(0);
 	const scrollContainerRef = useRef(null);
 	const shouldReduceMotion = useReducedMotion();
 	const scrollBehavior = shouldReduceMotion ? 'auto' : 'smooth';
@@ -46,6 +47,28 @@ function RelatedProjects({ currentProjectId, currentCategory }) {
 		({ project }) => project
 	);
 	const hasRelatedProjects = relevantProjects.length > 0;
+
+	useEffect(() => {
+		const container = scrollContainerRef.current;
+
+		if (!container) {
+			return undefined;
+		}
+
+		const updateScrollMetrics = () => {
+			setScrollPosition(container.scrollLeft);
+			setScrollMax(Math.max(0, container.scrollWidth - container.clientWidth));
+		};
+
+		updateScrollMetrics();
+		container.addEventListener('scroll', updateScrollMetrics, { passive: true });
+		window.addEventListener('resize', updateScrollMetrics);
+
+		return () => {
+			container.removeEventListener('scroll', updateScrollMetrics);
+			window.removeEventListener('resize', updateScrollMetrics);
+		};
+	}, [projectsToShow.length]);
 
 	const scrollLeft = () => {
 		if (scrollContainerRef.current) {
@@ -104,7 +127,7 @@ function RelatedProjects({ currentProjectId, currentCategory }) {
 					{/* Right arrow */}
 					<button
 						onClick={scrollRight}
-						disabled={scrollPosition >= (scrollContainerRef.current?.scrollWidth - scrollContainerRef.current?.clientWidth || 0)}
+						disabled={scrollMax === 0 || scrollPosition >= scrollMax - 1}
 						className="absolute right-0 top-1/2 z-20 translate-x-4 -translate-y-1/2 rounded-full border-2 border-dev-blue/90 bg-dev-blue/80 p-3 shadow-lg transition-all duration-300 hover:border-white hover:bg-dev-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dev-blue focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark disabled:cursor-not-allowed disabled:opacity-30 group"
 						aria-label="Scroll right"
 					>

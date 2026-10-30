@@ -25,7 +25,7 @@ function ContactDetails() {
 					</h2>
 					<div className="space-y-6">
 						{contacts.map((contact) => (
-							<div className="contact-item" key={contact.id}>
+							<div className="contact-item min-w-0" key={contact.id}>
 								<div className="contact-icon-container">
 									<i className="contact-icon">
 										{contact.icon}
@@ -34,7 +34,7 @@ function ContactDetails() {
 								{contact.href ? (
 									<a
 										href={contact.href}
-										className="contact-link"
+										className="contact-link min-w-0 break-all"
 									>
 										{contact.name}
 									</a>
