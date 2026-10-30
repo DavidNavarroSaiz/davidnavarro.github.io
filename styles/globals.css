@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-	--color-page: #070b12;
-	--color-surface: #0d141e;
-	--color-surface-raised: #151e2b;
-	--color-border: #293545;
-	--color-text: #f1f5f9;
-	--color-text-muted: #aebccd;
-	--color-accent: #22d3ee;
-	--color-accent-strong: #67e8f9;
-	--color-teal: #2dd4bf;
-	--color-on-accent: #04121a;
+	--color-page: #0d0e0d;
+	--color-surface: #151614;
+	--color-surface-raised: #1b1b19;
+	--color-border: #383530;
+	--color-text: #efe8dc;
+	--color-text-muted: #beb4a8;
+	--color-accent: #c58b69;
+	--color-accent-strong: #daa381;
+	--color-teal: #96a18d;
+	--color-on-accent: #0d0e0d;
 }
 
 html {
@@ -40,8 +40,8 @@ h3 {
 }
 
 ::selection {
-	background: rgba(34, 211, 238, 0.28);
-	color: #ffffff;
+	background: rgba(197, 139, 105, 0.3);
+	color: #0d0e0d;
 }
 
 /* Keyboard focus is always visible and never confused with hover. */
@@ -71,17 +71,17 @@ h3 {
 
 /* Subtle accent shadows instead of neon glows. */
 .glow-blue {
-	box-shadow: 0 10px 30px -20px rgba(34, 211, 238, 0.5);
+	box-shadow: 0 10px 30px -20px rgba(197, 139, 105, 0.32);
 }
 
 .glow-cyan {
-	box-shadow: 0 10px 30px -20px rgba(45, 212, 191, 0.45);
+	box-shadow: 0 10px 30px -20px rgba(150, 161, 141, 0.26);
 }
 
 /* Code-like styling */
 .code-text {
 	font-family: 'Courier New', monospace;
-	background: rgba(34, 211, 238, 0.1);
+	background: rgba(197, 139, 105, 0.1);
 	padding: 2px 6px;
 	border-radius: 4px;
 	border-left: 3px solid var(--color-accent);
@@ -111,21 +111,51 @@ a {
 }
 
 .related-projects-scroll::-webkit-scrollbar-track {
-	background: rgba(41, 53, 69, 0.35);
+	background: #25211e;
 	border-radius: 4px;
 }
 
 .related-projects-scroll::-webkit-scrollbar-thumb {
-	background: linear-gradient(90deg, #22d3ee, #0891b2);
+	background: #75604d;
 	border-radius: 4px;
 	transition: background 0.3s ease;
 }
 
 .related-projects-scroll::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(90deg, #67e8f9, #22d3ee);
+	background: #c58b69;
 }
 
 /* Fonts */
+@font-face {
+	font-family: 'Newsreader';
+	src: url('../public/fonts/Newsreader-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Newsreader';
+	src: url('../public/fonts/Newsreader-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Newsreader';
+	src: url('../public/fonts/Newsreader-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-display: swap;
+	font-style: normal;
+}
+
+.font-editorial {
+	font-family: 'Newsreader', Georgia, serif !important;
+	font-weight: 500;
+	font-optical-sizing: auto;
+}
+
 @font-face {
 	font-family: 'GeneralSans-Variable';
 	src: url('../public/fonts/GeneralSans-Variable.woff2') format('woff2'),

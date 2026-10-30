@@ -10,7 +10,7 @@ function SelectedWork({ projects = [] }) {
 			<div className="container mx-auto py-20 sm:py-24">
 				<div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
 					<div className="max-w-2xl">
-						<h2 className="font-general-semibold text-3xl tracking-[-0.02em] text-white sm:text-4xl">
+						<h2 className="font-editorial text-4xl font-medium tracking-[-0.02em] text-white sm:text-5xl">
 							Selected engineering work
 						</h2>
 						<p className="mt-4 text-base leading-relaxed text-gray-400 sm:text-lg">
@@ -53,7 +53,7 @@ function SelectedWork({ projects = [] }) {
 								<p className="text-sm font-general-medium text-gray-400">
 									{project.category}, {project.publishDate}
 								</p>
-								<h3 className="mt-3 font-general-semibold text-2xl tracking-[-0.02em] text-white transition-colors duration-200 group-hover:text-dev-blue sm:text-3xl">
+								<h3 className="mt-3 font-editorial text-3xl font-medium tracking-[-0.02em] text-white transition-colors duration-200 group-hover:text-dev-blue sm:text-4xl">
 									{project.title}
 								</h3>
 

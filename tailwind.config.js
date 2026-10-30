@@ -7,38 +7,35 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				// Light colors (for light mode - minimal usage)
-				'primary-light': '#0A0A0A',
-				'secondary-light': '#111111',
-				'ternary-light': '#1A1A1A',
+				// Copper Workshop black edition palette. Semantic names remain stable
+				// so the existing components keep their behavior.
+				'primary-light': '#0D0E0D',
+				'secondary-light': '#151614',
+				'ternary-light': '#1B1B19',
+				'primary-dark': '#0D0E0D',
+				'secondary-dark': '#151614',
+				'ternary-dark': '#1B1B19',
 
-				// Dark colors (deep navy-charcoal foundation)
-				'primary-dark': '#070B12',
-				'secondary-dark': '#0B111A',
-				'ternary-dark': '#111A26',
+				'dev-blue': '#C58B69',
+				'dev-blue-dark': '#A97946',
+				'dev-blue-light': '#DAA381',
+				'dev-cyan': '#96A18D',
+				'dev-purple': '#A97946',
+				'dev-green': '#96A18D',
+				'ink': '#0A0B0A',
 
-				// Restrained cyan / teal accents
-				'dev-blue': '#22D3EE',
-				'dev-blue-dark': '#0891B2',
-				'dev-blue-light': '#67E8F9',
-				'dev-cyan': '#2DD4BF',
-				'dev-purple': '#8B5CF6',
-				'dev-green': '#10B981',
-				'ink': '#080D14',
-
-				// Blue-tinted neutral scale for consistent dark surfaces
 				gray: {
-					50: '#F4F7FA',
-					100: '#E8EEF5',
-					200: '#CBD5E1',
-					300: '#AEBCCD',
-					400: '#8B9BB0',
-					500: '#7D8DA3',
-					600: '#46566A',
-					700: '#293545',
-					800: '#151E2B',
-					900: '#0D141E',
-					950: '#070B12',
+					50: '#EFE8DC',
+					100: '#E5DED2',
+					200: '#D1C7B9',
+					300: '#BEB4A8',
+					400: '#A9A59C',
+					500: '#928C83',
+					600: '#625B54',
+					700: '#383530',
+					800: '#25211E',
+					900: '#1B1B19',
+					950: '#0D0E0D',
 				},
 			},
 			container: {
@@ -82,6 +79,11 @@ module.exports = {
 					'ui-sans-serif',
 					'system-ui',
 					'sans-serif',
+				],
+				editorial: [
+					'Newsreader',
+					'Georgia',
+					'serif',
 				],
 			},
 		},

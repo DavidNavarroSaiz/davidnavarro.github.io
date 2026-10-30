@@ -1,9 +1,9 @@
 .journey {
-	--journey-text: #ece5d7;
-	--journey-muted: #9ba9ab;
-	--journey-quiet: #78898e;
-	--journey-line: #34434a;
-	--journey-line-soft: #29373d;
+	--journey-text: #efe8dc;
+	--journey-muted: #beb4a8;
+	--journey-quiet: #a9a59c;
+	--journey-line: #383530;
+	--journey-line-soft: #2a2926;
 	color: var(--journey-text);
 	border-block: 1px solid var(--journey-line);
 	padding-block: 18px 24px;
@@ -50,7 +50,7 @@
 	width: 6px;
 	height: 6px;
 	margin-right: 9px;
-	background: #b8a58c;
+	background: #a97946;
 	vertical-align: 1px;
 }
 
@@ -68,7 +68,8 @@
 .headingRow h2 {
 	margin: 0;
 	font-size: 37px;
-	font-weight: 560;
+	font-family: 'Newsreader', Georgia, serif;
+	font-weight: 500;
 	letter-spacing: -0.046em;
 	line-height: 1.07;
 }
@@ -148,7 +149,7 @@
 .chapterLabel {
 	display: block;
 	margin-top: 9px;
-	color: #aebaba;
+	color: #a9a59c;
 	font-size: 10px;
 	font-weight: 500;
 	letter-spacing: 0.14em;
@@ -182,7 +183,7 @@
 
 .links a {
 	padding-bottom: 3px;
-	border-bottom: 1px solid #576268;
+	border-bottom: 1px solid #75604d;
 	color: var(--journey-text);
 	font-size: 11px;
 	font-weight: 500;
@@ -192,12 +193,12 @@
 }
 
 .links a:hover {
-	border-color: #7fa7b4;
-	color: #fff;
+	border-color: #c58b69;
+	color: #efe8dc;
 }
 
 .links a:focus-visible {
-	outline: 2px solid #7fa7b4;
+	outline: 2px solid #c58b69;
 	outline-offset: 4px;
 	border-radius: 2px;
 }

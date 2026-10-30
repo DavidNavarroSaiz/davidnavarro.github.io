@@ -32,7 +32,7 @@ const ProjectSingle = ({
 						className="object-contain"
 					/>
 				) : (
-					<div className="flex h-full flex-col justify-between bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.12),transparent_48%),linear-gradient(135deg,#0d141e,#070b12)] p-5 sm:p-6">
+					<div className="flex h-full flex-col justify-between bg-gray-950 p-5 sm:p-6">
 						<div className="flex items-center justify-between gap-4">
 							<span className="font-mono text-[10px] uppercase tracking-[0.16em] text-dev-blue">
 								{cardEyebrow ?? 'Internal engineering'}

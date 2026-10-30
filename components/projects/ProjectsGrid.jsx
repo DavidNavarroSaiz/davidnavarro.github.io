@@ -63,9 +63,9 @@ function ProjectsGrid() {
 						</p>
 						<h1
 							id="projects-heading"
-							className="mt-3 max-w-3xl font-general-semibold text-4xl leading-none tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl"
+							className="mt-3 max-w-3xl font-editorial text-5xl font-medium leading-none tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl"
 						>
-							Projects<span className="text-[#B8A58C]">.</span>
+							Projects<span className="text-dev-blue">.</span>
 						</h1>
 					</div>
 					<p className="max-w-md text-base leading-relaxed text-gray-400 sm:text-lg">

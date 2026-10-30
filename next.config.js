@@ -1,5 +1,5 @@
 const isDev = process.env.NODE_ENV === 'development';
-const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true' && !isDev;
 
 module.exports = {
   reactStrictMode: true,

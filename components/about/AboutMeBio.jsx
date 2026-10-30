@@ -22,7 +22,7 @@ function AboutMeBio() {
 			<p className="font-mono text-xs uppercase leading-relaxed tracking-[0.14em] text-dev-blue/90">
 				About
 			</p>
-			<h1 className="mt-3 max-w-3xl font-general-semibold text-4xl leading-tight tracking-[-0.02em] text-white sm:text-5xl">
+			<h1 className="font-editorial mt-3 max-w-3xl text-5xl font-medium leading-[0.98] tracking-[-0.03em] text-white sm:text-6xl">
 				Senior AI engineer building production ML and LLM systems.
 			</h1>
 
@@ -65,7 +65,7 @@ function AboutMeBio() {
 			</dl>
 
 			<div className="mt-10 max-w-3xl">
-				<h2 className="font-general-semibold text-lg text-white">
+				<h2 className="font-editorial text-2xl font-medium text-white">
 					Areas of focus
 				</h2>
 				<ul className="mt-4 flex flex-wrap gap-2">

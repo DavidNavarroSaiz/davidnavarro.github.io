@@ -300,17 +300,17 @@ export const experienceChapters = {
 	foundations: {
 		label: 'Foundations',
 		years: '2019–2023',
-		accent: '#B8A58C',
+		accent: '#C58B69',
 	},
 	connected: {
 		label: 'Connected Systems',
 		years: '2023–2025',
-		accent: '#7FA7B4',
+		accent: '#A97946',
 	},
 	reliable: {
 		label: 'Reliable AI',
 		years: '2025–present',
-		accent: '#87AC9A',
+		accent: '#96A18D',
 	},
 };
 

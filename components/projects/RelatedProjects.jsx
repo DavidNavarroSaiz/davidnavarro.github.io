@@ -160,7 +160,7 @@ function RelatedProjects({ currentProjectId, currentCategory }) {
 									}}
 									whileTap={{ scale: 0.97 }}
 								>
-									<div className={`relative overflow-hidden ${project.img ? 'h-52' : 'border-b border-gray-700/50 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.12),transparent_48%),linear-gradient(135deg,#0d141e,#070b12)] px-5 py-5'}`}>
+									<div className={`relative overflow-hidden ${project.img ? 'h-52' : 'border-b border-gray-700/50 bg-gray-950 px-5 py-5'}`}>
 										{project.img ? (
 											<Image
 												src={project.img}
@@ -182,8 +182,8 @@ function RelatedProjects({ currentProjectId, currentCategory }) {
 										)}
 										{project.img && (
 											<>
-												{/* Gradient overlay */}
-												<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+												{/* Solid overlay keeps the editorial treatment legible without a gradient. */}
+												<div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
 												{/* Category badge */}
 												<div className="absolute left-4 top-4 translate-y-2 transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">

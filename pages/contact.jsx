@@ -16,7 +16,7 @@ function Contact() {
 			<PagesMetaHead title="Contact - David Navarro" />
 
 			{/* Neural network background */}
-			<NeuralNetwork intensity="high" />
+			<NeuralNetwork intensity="low" />
 
 			<motion.div
 				initial={{ opacity: 0 }}

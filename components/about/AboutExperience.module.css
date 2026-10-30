@@ -15,7 +15,7 @@
 }
 
 .eyebrow {
-	color: #9ba9ab;
+	color: #a9a59c;
 	font-size: 11px;
 	letter-spacing: 0.16em;
 	line-height: 1.4;
@@ -25,20 +25,21 @@
 .title {
 	margin-top: 0.9rem;
 	max-width: 48rem;
+	font-family: 'Newsreader', Georgia, serif;
 	font-size: clamp(2.5rem, 5vw, 4rem);
-	font-weight: 600;
+	font-weight: 500;
 	letter-spacing: -0.045em;
 	line-height: 0.98;
 }
 
 .titleDot {
-	color: #b8a58c;
+	color: #c58b69;
 }
 
 .deck {
 	max-width: 58rem;
 	margin-top: 1.35rem;
-	color: #aebccd;
+	color: #beb4a8;
 	font-size: clamp(1rem, 1.5vw, 1.2rem);
 	line-height: 1.55;
 }
@@ -50,7 +51,7 @@
 	gap: 0.5rem 1rem;
 	margin-top: 1.6rem;
 	padding-top: 0.9rem;
-	border-top: 1px solid rgba(255, 255, 255, 0.12);
+	border-top: 1px solid #383530;
 }
 
 .practiceLabel,
@@ -62,16 +63,16 @@
 }
 
 .practiceLabel {
-	color: #b8a58c;
+	color: #c58b69;
 }
 
 .practiceValue {
-	color: #78898e;
+	color: #a9a59c;
 }
 
 .filters {
 	padding: 1.35rem 0 0.25rem;
-	border-top: 1px solid rgba(255, 255, 255, 0.12);
+	border-top: 1px solid #383530;
 }
 
 .filterGroup {
@@ -92,9 +93,9 @@
 }
 
 .filterButton[aria-pressed='true'] {
-	border-color: #b8a58c !important;
-	background: rgba(184, 165, 140, 0.12) !important;
-	color: #ece5d7 !important;
+	border-color: #c58b69 !important;
+	background: rgba(197, 139, 105, 0.12) !important;
+	color: #efe8dc !important;
 }
 
 .status {
@@ -102,14 +103,14 @@
 	flex-wrap: wrap;
 	gap: 0.35rem 0.75rem;
 	margin-top: 1rem;
-	color: #78898e;
+	color: #a9a59c;
 	font-size: 11px;
 	letter-spacing: 0.04em;
 	line-height: 1.5;
 }
 
 .statusHint {
-	color: #9ba9ab;
+	color: #beb4a8;
 }
 
 .timeline {
@@ -126,7 +127,7 @@
 	bottom: 2.75rem;
 	left: 0.4rem;
 	width: 1px;
-	background: rgba(120, 137, 142, 0.42);
+	background: rgba(56, 53, 48, 0.8);
 }
 
 .timelineItem {
@@ -155,7 +156,7 @@
 .disclaimer {
 	max-width: 58rem;
 	margin: 1.5rem 0 0 1.55rem;
-	color: #78898e;
+	color: #a9a59c;
 	font-size: 11px;
 	line-height: 1.55;
 }

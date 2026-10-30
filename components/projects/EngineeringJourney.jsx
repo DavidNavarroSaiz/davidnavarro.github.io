@@ -9,7 +9,7 @@ const chapters = [
 		heading: ['Industrial Vision ', '& Applied ML'],
 		focus:
 			'Camera and optics integration, image processing, deep learning, and industrial automation.',
-		accent: '#B8A58C',
+		accent: '#C58B69',
 		projects: [
 			{ label: 'Industrial Vision', href: '/projects/10/' },
 			{ label: 'COVID-RX', href: '/projects/3/' },
@@ -22,7 +22,7 @@ const chapters = [
 		heading: ['Retrieval ', '& Applied AI'],
 		focus:
 			'Document ingestion, vector retrieval, enterprise integrations, and AI-assisted workflows.',
-		accent: '#7FA7B4',
+		accent: '#A97946',
 		projects: [
 			{ label: 'Document Ingestion', href: '/projects/14/' },
 			{ label: 'PM AI Agent', href: '/projects/1/' },
@@ -35,7 +35,7 @@ const chapters = [
 		heading: ['Agent Platforms ', '& Evaluation'],
 		focus:
 			'Stateful orchestration, governed actions, execution boundaries, and repeatable evaluation.',
-		accent: '#87AC9A',
+		accent: '#96A18D',
 		projects: [
 			{ label: 'Policy-Governed Agents', href: '/projects/17/' },
 			{ label: 'Agent Evaluation', href: '/projects/20/' },

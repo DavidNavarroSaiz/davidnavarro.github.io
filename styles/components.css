@@ -73,12 +73,12 @@
 }
 
 .hire-me-button {
-  @apply inline-flex min-h-[36px] items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dev-blue px-4 text-[11px] font-general-semibold uppercase tracking-[0.12em] text-[#04121A] transition duration-200 hover:bg-dev-blue-light active:translate-y-px;
+  @apply inline-flex min-h-[36px] items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-dev-blue px-4 text-[11px] font-general-semibold uppercase tracking-[0.12em] text-[#0D0E0D] transition duration-200 hover:bg-dev-blue-light active:translate-y-px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
 .hire-me-button-mobile {
-  @apply mt-4 inline-flex min-h-[44px] w-full items-center justify-center rounded-md border border-transparent bg-dev-blue px-4 text-sm font-general-semibold text-[#04121A] transition duration-200 hover:bg-dev-blue-light active:translate-y-px;
+  @apply mt-4 inline-flex min-h-[44px] w-full items-center justify-center rounded-md border border-transparent bg-dev-blue px-4 text-sm font-general-semibold text-[#0D0E0D] transition duration-200 hover:bg-dev-blue-light active:translate-y-px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
@@ -104,7 +104,7 @@
 .bio-button,
 .education-button,
 .modal-button-primary {
-  @apply inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-dev-blue px-5 py-2.5 font-general-semibold text-sm text-[#04121A] transition duration-200 ease-out hover:bg-dev-blue-light active:translate-y-px disabled:pointer-events-none disabled:opacity-50;
+  @apply inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-dev-blue px-5 py-2.5 font-general-semibold text-sm text-[#0D0E0D] transition duration-200 ease-out hover:bg-dev-blue-light active:translate-y-px disabled:pointer-events-none disabled:opacity-50;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
@@ -500,7 +500,9 @@
 }
 
 .hero-title {
-  @apply mb-4 font-general-semibold text-white;
+	@apply mb-4 text-white;
+	font-family: 'Newsreader', Georgia, serif;
+	font-weight: 500;
   font-size: clamp(2.25rem, 4vw, 4rem);
   line-height: 1.02;
   letter-spacing: -0.035em;
@@ -543,7 +545,7 @@
 
 .enhanced-hover:hover {
   @apply transform scale-105 shadow-2xl;
-  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(197, 139, 105, 0.16);
 }
 
 /* ===== FLOATING ANIMATION ===== */
@@ -563,10 +565,10 @@
 
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 5px rgba(197, 139, 105, 0.18);
   }
   50% {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 30px rgba(0, 212, 255, 0.4);
+    box-shadow: 0 0 20px rgba(197, 139, 105, 0.28), 0 0 30px rgba(197, 139, 105, 0.12);
   }
 }
 
@@ -638,7 +640,7 @@
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(0, 212, 255, 0.3);
+  background: rgba(197, 139, 105, 0.24);
   transform: translate(-50%, -50%);
   transition: width 0.6s, height 0.6s;
 }
@@ -770,12 +772,12 @@
   0%, 100% {
     opacity: 0.3;
     transform: scale(1);
-    box-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 5px rgba(197, 139, 105, 0.18);
   }
   50% {
     opacity: 1;
     transform: scale(1.2);
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+    box-shadow: 0 0 15px rgba(197, 139, 105, 0.28);
   }
 }
 
@@ -977,7 +979,7 @@
 }
 
 .education-achievements-container {
-  @apply bg-gradient-to-r from-dev-blue to-dev-purple rounded-xl p-8 text-white;
+  @apply bg-dev-purple rounded-xl p-8 text-white;
 }
 
 .education-achievements-title {

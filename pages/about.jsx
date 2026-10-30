@@ -33,7 +33,7 @@ function about() {
 					<p className="font-mono text-xs uppercase leading-relaxed tracking-[0.14em] text-dev-blue/90">
 						Trajectory
 					</p>
-					<h2 className="mt-3 font-general-semibold text-3xl tracking-[-0.02em] text-white sm:text-4xl">
+					<h2 className="font-editorial mt-3 text-4xl font-medium tracking-[-0.02em] text-white sm:text-5xl">
 						Professional experience
 					</h2>
 					<p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg">

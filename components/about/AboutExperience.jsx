@@ -99,7 +99,7 @@ function AboutExperience() {
 						className={styles.timelineItem}
 						style={{
 							'--chapter-accent':
-								experienceChapters[experience.chapter]?.accent || '#7FA7B4',
+								experienceChapters[experience.chapter]?.accent || '#C58B69',
 						}}
 					>
 						<span

@@ -19,7 +19,7 @@ function AppHero({ cvs = [] }) {
 			<div className="container mx-auto">
 				<div className="hero-grid">
 					<div className="hero-content">
-						<h1 className="hero-title">
+						<h1 className="hero-title font-editorial">
 							Production AI, built to be evaluated.
 						</h1>
 

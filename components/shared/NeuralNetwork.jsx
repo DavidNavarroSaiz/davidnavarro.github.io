@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 
 const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
   const [isClient, setIsClient] = useState(false);
@@ -32,7 +32,7 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
   const connectionCount = getConnectionCount();
 
   // Generate completely random positions for nodes
-  const generateNodes = () => {
+  const generateNodes = useCallback(() => {
     const nodes = [];
     
     for (let i = 0; i < nodeCount; i++) {
@@ -60,13 +60,13 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
       });
     }
     return nodes;
-  };
+  }, [nodeCount]);
 
   useEffect(() => {
     if (isClient) {
       setNodes(generateNodes());
     }
-  }, [isClient, nodeCount]);
+  }, [isClient, generateNodes]);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -129,7 +129,7 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
               <motion.path
                 key={i}
                 d={`M${startNode.x},${startNode.y} Q${(startNode.x + endNode.x) / 2},${(startNode.y + endNode.y) / 2 - 10} ${endNode.x},${endNode.y}`}
-                stroke="rgba(0, 212, 255, 0.3)"
+                stroke="rgba(197, 139, 105, 0.18)"
                 strokeWidth="0.2"
                 fill="none"
                 strokeDasharray={startNode.isDashed ? startNode.dashPattern : "none"}

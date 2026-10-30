@@ -1,14 +1,14 @@
 .item {
 	overflow: hidden;
 	border: 1px solid rgba(255, 255, 255, 0.12);
-	background: rgba(13, 20, 30, 0.72);
+	background: rgba(21, 22, 20, 0.82);
 	transition: border-color 180ms ease, background-color 180ms ease;
 }
 
 .item:hover,
 .item[data-open='true'] {
-	border-color: rgba(127, 167, 180, 0.48);
-	background: rgba(15, 23, 36, 0.88);
+	border-color: rgba(197, 139, 105, 0.56);
+	background: rgba(27, 27, 25, 0.94);
 }
 
 .summary {
@@ -22,7 +22,7 @@
 }
 
 .summary:focus-visible {
-	outline: 2px solid #7fa7b4;
+	outline: 2px solid #c58b69;
 	outline-offset: -2px;
 }
 
@@ -50,7 +50,7 @@
 
 .period {
 	margin: 0;
-	color: #78898e;
+	color: #a9a59c;
 }
 
 .toggle {
@@ -62,20 +62,20 @@
 	flex: 0 0 auto;
 	border: 1px solid rgba(255, 255, 255, 0.22);
 	border-radius: 50%;
-	color: #9ba9ab;
+	color: #a9a59c;
 	font-size: 0.9rem;
 	transition: border-color 180ms ease, color 180ms ease;
 }
 
 .summary:hover .toggle,
 .toggleOpen {
-	border-color: #7fa7b4;
-	color: #7fa7b4;
+	border-color: #c58b69;
+	color: #c58b69;
 }
 
 .position {
 	margin: 0.7rem 2.5rem 0 0;
-	color: #f1f5fa;
+	color: #efe8dc;
 	font-family: 'GeneralSans-Semibold', ui-sans-serif, system-ui, sans-serif;
 	font-size: clamp(1.25rem, 2vw, 1.55rem);
 	letter-spacing: -0.035em;
@@ -84,20 +84,20 @@
 
 .companyLine {
 	margin: 0.35rem 0 0;
-	color: #b2c0d2;
+	color: #beb4a8;
 	font-size: 0.875rem;
 	line-height: 1.45;
 }
 
 .companyName {
-	color: #ece5d7;
+	color: #efe8dc;
 	font-weight: 500;
 }
 
 .overlapNote {
 	max-width: 52rem;
 	margin: 0.45rem 0 0;
-	color: #78898e;
+	color: #a9a59c;
 	font-size: 0.75rem;
 	line-height: 1.45;
 }
@@ -105,7 +105,7 @@
 .summaryCopy {
 	max-width: 60rem;
 	margin: 1rem 0 0;
-	color: #c2ccd6;
+	color: #d1c7b9;
 	font-size: 0.95rem;
 	line-height: 1.55;
 }
@@ -120,7 +120,7 @@
 
 .stripLabel {
 	margin-right: 0.2rem;
-	color: #78898e;
+	color: #a9a59c;
 	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 	font-size: 10px;
 	letter-spacing: 0.14em;
@@ -128,9 +128,9 @@
 }
 
 .stripValue {
-	border: 1px solid rgba(127, 167, 180, 0.28);
+	border: 1px solid rgba(197, 139, 105, 0.28);
 	padding: 0.25rem 0.45rem;
-	color: #b2c0d2;
+	color: #beb4a8;
 	font-size: 0.7rem;
 	line-height: 1.25;
 }
@@ -157,7 +157,7 @@
 .technologyList li {
 	border: 1px solid rgba(255, 255, 255, 0.13);
 	padding: 0.3rem 0.5rem;
-	color: #aebccd;
+	color: #beb4a8;
 	font-size: 0.72rem;
 	line-height: 1.25;
 }
@@ -165,18 +165,18 @@
 .primaryEvidence {
 	margin-top: 1.05rem;
 	padding-left: 0.75rem;
-	border-left: 2px solid #7fa7b4;
+	border-left: 2px solid #c58b69;
 }
 
 .primaryEvidence p {
 	margin: 0;
-	color: #78898e;
+	color: #a9a59c;
 }
 
 .primaryEvidence strong {
 	display: block;
 	margin-top: 0.25rem;
-	color: #d5e2e5;
+	color: #e5ded2;
 	font-size: 0.82rem;
 	font-weight: 500;
 }
@@ -184,7 +184,7 @@
 .details {
 	padding: 1.5rem;
 	border-top: 1px solid rgba(255, 255, 255, 0.12);
-	background: rgba(7, 11, 18, 0.32);
+	background: rgba(13, 14, 13, 0.42);
 }
 
 .detailLayout {
@@ -203,19 +203,19 @@
 .editorialNote {
 	align-self: start;
 	padding-top: 0.25rem;
-	border-top: 1px solid #b8a58c;
+	border-top: 1px solid #c58b69;
 }
 
 .noteLabel,
 .sectionLabel {
 	margin: 0;
-	color: #b8a58c;
+	color: #c58b69;
 }
 
 .editorialNote blockquote {
 	margin: 1rem 0 0;
-	color: #ece5d7;
-	font-family: Georgia, 'Times New Roman', serif;
+	color: #efe8dc;
+	font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
 	font-size: clamp(1.15rem, 2vw, 1.45rem);
 	letter-spacing: -0.025em;
 	line-height: 1.18;
@@ -223,7 +223,7 @@
 
 .editorialNote > p:last-child {
 	margin: 1rem 0 0;
-	color: #9ba9ab;
+	color: #a9a59c;
 	font-size: 0.75rem;
 	line-height: 1.5;
 }
@@ -249,38 +249,38 @@
 	display: flex;
 	gap: 0.65rem;
 	min-width: 0;
-	color: #c2ccd6;
+	color: #d1c7b9;
 	font-size: 0.85rem;
 	line-height: 1.4;
 }
 
 .workstreamNumber,
 .detailNumber {
-	color: #7fa7b4;
+	color: #c58b69;
 }
 
 .workstreams strong {
 	display: block;
-	color: #ece5d7;
+	color: #efe8dc;
 	font-weight: 500;
 }
 
 .workstreams small {
 	display: block;
 	margin-top: 0.2rem;
-	color: #78898e;
+	color: #a9a59c;
 	font-size: 0.75rem;
 }
 
 .workstreams .workstreamDetail {
 	margin-top: 0.4rem;
-	color: #9ba9ab;
+	color: #a9a59c;
 	line-height: 1.45;
 }
 
 .workstreams .workstreamEvidence {
 	margin-top: 0.55rem;
-	color: #b8a58c;
+	color: #c58b69;
 	line-height: 1.5;
 }
 
@@ -299,7 +299,7 @@
 
 .detailHeading h3 {
 	margin: 0;
-	color: #ece5d7;
+	color: #efe8dc;
 	font-size: 1.15rem;
 	letter-spacing: -0.025em;
 	line-height: 1.2;
@@ -308,7 +308,7 @@
 .detailHeading p {
 	margin: 0.35rem 0 0;
 	max-width: 48rem;
-	color: #b2c0d2;
+	color: #beb4a8;
 	font-size: 0.9rem;
 	line-height: 1.5;
 }
@@ -316,22 +316,22 @@
 .responsibilities {
 	margin: 1.15rem 0 0;
 	padding: 0.9rem 1rem 0.95rem;
-	border-left: 2px solid #7fa7b4;
-	background: rgba(127, 167, 180, 0.07);
+	border-left: 2px solid #c58b69;
+	background: rgba(197, 139, 105, 0.07);
 }
 
 .responsibilityList {
 	display: grid;
 	gap: 0.55rem;
 	margin: 0.7rem 0 0;
-	color: #c2ccd6;
+	color: #d1c7b9;
 	font-size: 0.82rem;
 	line-height: 1.55;
 }
 
 .detailPeriod {
 	padding-top: 0.15rem;
-	color: #78898e;
+	color: #a9a59c;
 	white-space: nowrap;
 }
 
@@ -349,7 +349,7 @@
 
 .detailRow dt {
 	padding-top: 0.1rem;
-	color: #78898e;
+	color: #a9a59c;
 	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 	font-size: 10px;
 	letter-spacing: 0.14em;
@@ -360,7 +360,7 @@
 .detailRow dd {
 	max-width: 55rem;
 	margin: 0;
-	color: #b2c0d2;
+	color: #beb4a8;
 	font-size: 0.9rem;
 	line-height: 1.55;
 }
@@ -385,26 +385,26 @@
 	content: '—';
 	position: absolute;
 	left: 0;
-	color: #7fa7b4;
+	color: #c58b69;
 }
 
 .decisionSection {
 	margin-top: 1.25rem;
 	padding: 0.9rem 1rem 0.95rem;
-	border-left: 2px solid #b8a58c;
-	background: rgba(184, 165, 140, 0.08);
+	border-left: 2px solid #a97946;
+	background: rgba(169, 121, 70, 0.1);
 }
 
 .decisionLead {
 	margin: 0.55rem 0 0;
-	color: #ece5d7;
+	color: #efe8dc;
 	font-size: 0.9rem;
 	line-height: 1.5;
 }
 
 .decisionList {
 	margin: 0.8rem 0 0;
-	color: #9ba9ab;
+	color: #a9a59c;
 	font-size: 0.82rem;
 }
 
@@ -436,13 +436,13 @@
 
 .impactGrid p {
 	margin: 0;
-	color: #78898e;
+	color: #a9a59c;
 }
 
 .impactGrid strong {
 	display: block;
 	margin-top: 0.4rem;
-	color: #ece5d7;
+	color: #efe8dc;
 	font-size: 0.85rem;
 	font-weight: 500;
 }
@@ -450,7 +450,7 @@
 .impactGrid span {
 	display: block;
 	margin-top: 0.4rem;
-	color: #9ba9ab;
+	color: #a9a59c;
 	font-size: 0.75rem;
 	line-height: 1.45;
 }
@@ -475,9 +475,9 @@
 	display: inline-flex;
 	align-items: center;
 	gap: 0.25rem;
-	border-bottom: 1px solid #576268;
+	border-bottom: 1px solid #75604d;
 	padding-bottom: 0.2rem;
-	color: #d5e2e5;
+	color: #e5ded2;
 	font-size: 0.82rem;
 	line-height: 1.35;
 	transition: color 180ms ease, border-color 180ms ease;
@@ -485,8 +485,8 @@
 
 .relatedList a:hover,
 .companyLink:hover {
-	border-color: #7fa7b4;
-	color: #fff;
+	border-color: #c58b69;
+	color: #efe8dc;
 }
 
 .relatedList svg,
@@ -497,7 +497,7 @@
 
 .relatedList a:focus-visible,
 .companyLink:focus-visible {
-	outline: 2px solid #7fa7b4;
+	outline: 2px solid #c58b69;
 	outline-offset: 4px;
 }
 
@@ -505,7 +505,7 @@
 	flex: 0 0 auto;
 	margin-top: 1.35rem;
 	border-bottom: 0;
-	color: #7fa7b4;
+	color: #c58b69;
 }
 
 @media (max-width: 900px) {

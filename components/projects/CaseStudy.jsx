@@ -13,7 +13,7 @@ function Section({ id, title, children }) {
 			aria-labelledby={`${id}-heading`}
 			className="scroll-mt-28 border-t border-white/10 pt-10"
 		>
-			<h2 id={`${id}-heading`} className={headingClass}>
+			<h2 id={`${id}-heading`} className={`${headingClass} font-editorial font-medium`}>
 				{title}
 			</h2>
 			{children}
@@ -329,7 +329,7 @@ function CaseStudy({ project }) {
 				<p className="font-mono text-xs uppercase leading-relaxed tracking-[0.14em] text-dev-blue/90">
 					{category}
 				</p>
-				<h1 className="mt-3 font-general-semibold text-4xl leading-tight tracking-[-0.02em] text-white sm:text-5xl">
+				<h1 className="font-editorial mt-3 text-5xl font-medium leading-tight tracking-[-0.02em] text-white sm:text-6xl">
 					{ProjectHeader?.title ?? title}
 				</h1>
 				<p className="mt-5 text-lg leading-relaxed text-gray-300 sm:text-xl">
