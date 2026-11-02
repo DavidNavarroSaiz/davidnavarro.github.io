@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img" aria-labelledby="title desc">
-  <title id="title">DN monogram, monochrome dark</title>
-  <desc id="desc">Monochrome near-black refined Precision DN monogram for light backgrounds.</desc>
-  <path fill="#0D0E0D" fill-rule="evenodd" d="M8 20h50c23 0 40 12 40 29S81 78 58 78H8V20Zm18 16v26h30c12 0 21-5 21-13s-9-13-21-13H26Z"/>
-  <path fill="#0D0E0D" d="M68 26h18l40 32V44h18v34h-18L86 50v28H68V26Z"/>
-  <path fill="#0D0E0D" d="M92 4h20l14 24h-20L92 4Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="710" height="412" viewBox="0 0 710 412" fill="none" role="img" aria-label="David Navarro DN monogram">
+  <path d="M 0,0 H 234 C 344,0 415,78 415,205 C 415,332 344,412 231,412 H 0 Z M 107,108 H 224 C 289,108 325,146 325,205 C 325,263 290,305 225,305 H 107 Z" fill="#191917" fill-rule="evenodd"/>
+  <path d="M 235,0 C 282,0 311,19 347,54 L 595,266 V 166 H 710 V 412 H 574 L 309,151 C 289,130 271,108 235,108 Z" fill="#191917"/>
+  <path d="M 452,0 H 524 L 710,121 V 146 H 595 Z" fill="#191917"/>
 </svg>

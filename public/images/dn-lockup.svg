@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 128" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 128" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">David Navarro DN lockup</title>
-  <desc id="desc">Refined Precision DN monogram with David Navarro wordmark and Senior AI Engineer descriptor.</desc>
-  <g transform="translate(0 16)">
-    <path fill="#EFE8DC" fill-rule="evenodd" d="M8 20h50c23 0 40 12 40 29S81 78 58 78H8V20Zm18 16v26h30c12 0 21-5 21-13s-9-13-21-13H26Z"/>
-    <path fill="#EFE8DC" d="M68 26h18l40 32V44h18v34h-18L86 50v28H68V26Z"/>
-    <path fill="#C58B69" d="M92 4h20l14 24h-20L92 4Z"/>
+  <desc id="desc">DN Precision monogram with David Navarro wordmark and Senior AI Engineer descriptor.</desc>
+  <g transform="translate(0 16) scale(.22)">
+    <path d="M 0,0 H 234 C 344,0 415,78 415,205 C 415,332 344,412 231,412 H 0 Z M 107,108 H 224 C 289,108 325,146 325,205 C 325,263 290,305 225,305 H 107 Z" fill="#E2D9CD" fill-rule="evenodd"/>
+    <path d="M 235,0 C 282,0 311,19 347,54 L 595,266 V 166 H 710 V 412 H 574 L 309,151 C 289,130 271,108 235,108 Z" fill="#EFE8DC"/>
+    <path d="M 452,0 H 524 L 710,121 V 146 H 595 Z" fill="#C58B69"/>
   </g>
-  <path fill="#EFE8DC" d="M180 24h1v80h-1z"/>
-  <text x="210" y="62" fill="#EFE8DC" font-family="GeneralSans, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="4">DAVID NAVARRO</text>
-  <text x="210" y="91" fill="#EFE8DC" font-family="GeneralSans, Arial, sans-serif" font-size="16" letter-spacing="4">SENIOR AI ENGINEER</text>
+  <path d="M190 24h1v80h-1z" fill="#EFE8DC"/>
+  <text x="220" y="62" fill="#EFE8DC" font-family="GeneralSans, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="4">DAVID NAVARRO</text>
+  <text x="220" y="91" fill="#EFE8DC" font-family="GeneralSans, Arial, sans-serif" font-size="16" letter-spacing="4">SENIOR AI ENGINEER</text>
 </svg>
