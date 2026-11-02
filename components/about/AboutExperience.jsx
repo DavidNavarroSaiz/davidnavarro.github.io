@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {
 	experienceChapters,
 	experienceData,
+	experienceStats,
 	industryDomains,
 } from '../../data/experienceData';
 import ExperienceItem from './ExperienceItem';
@@ -84,7 +85,7 @@ function AboutExperience() {
 					className={styles.status}
 				>
 					<span>
-						Showing {filteredExperience.length} of {experienceData.length} entries.
+						Showing {filteredExperience.length} of {experienceData.length} entries · {experienceStats.employers} employers · {experienceStats.engagements} client or internal engagements + {experienceStats.researchEntries} research record.
 					</span>
 					<span className={styles.statusHint}>
 						Open an entry for its engineering context, decisions, evidence, and related work.

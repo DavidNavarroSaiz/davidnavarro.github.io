@@ -72,8 +72,20 @@ function ExperienceItem({ experience }) {
 					{experience.position}
 				</h2>
 				<p className={styles.companyLine}>
-					<strong className={styles.companyName}>{experience.company}</strong> · {experience.location} · {experience.type}
+					<strong className={styles.companyName}>{experience.company}</strong>
+					{experience.client && (
+						<>
+							<span aria-hidden="true"> · </span>
+							<span className={styles.clientName}>{experience.client}</span>
+						</>
+					)}{' '}
+					· {experience.location} · {experience.type}
 				</p>
+				{experience.employmentPeriod && (
+					<p className={styles.employmentNote}>
+						Svitla employment: {experience.employmentPeriod}
+					</p>
+				)}
 				{experience.overlapNote && (
 					<p className={styles.overlapNote}>{experience.overlapNote}</p>
 				)}
@@ -189,11 +201,26 @@ function ExperienceItem({ experience }) {
 							<dl className={styles.detailRows}>
 								<DetailRow label="The challenge">{experience.context}</DetailRow>
 								<DetailRow label="What I implemented">
+					{experience.implementationGroups?.length > 0 ? (
+						<div className={styles.implementationGroups}>
+							{experience.implementationGroups.map((group) => (
+								<section key={group.label} className={styles.implementationGroup}>
+									<h4>{group.label}</h4>
 									<ul className={styles.contributionList}>
-										{experience.ownership.map((item) => (
+										{group.items.map((item) => (
 											<li key={item}>{item}</li>
 										))}
 									</ul>
+								</section>
+							))}
+						</div>
+					) : (
+						<ul className={styles.contributionList}>
+							{experience.ownership.map((item) => (
+								<li key={item}>{item}</li>
+							))}
+						</ul>
+					)}
 								</DetailRow>
 								<DetailRow label="Results & evidence">{evidence}</DetailRow>
 							</dl>

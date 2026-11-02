@@ -94,6 +94,20 @@
 	font-weight: 500;
 }
 
+.clientName {
+	color: #e5ded2;
+	font-weight: 500;
+}
+
+.employmentNote {
+	margin: 0.35rem 0 0;
+	color: #a9a59c;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	font-size: 0.68rem;
+	letter-spacing: 0.04em;
+	line-height: 1.4;
+}
+
 .overlapNote {
 	max-width: 52rem;
 	margin: 0.45rem 0 0;
@@ -386,6 +400,19 @@
 	position: absolute;
 	left: 0;
 	color: #c58b69;
+}
+
+.implementationGroups {
+	display: grid;
+	gap: 1.15rem;
+}
+
+.implementationGroup h4 {
+	margin: 0 0 0.55rem;
+	color: #efe8dc;
+	font-size: 0.82rem;
+	font-weight: 500;
+	letter-spacing: -0.01em;
 }
 
 .decisionSection {

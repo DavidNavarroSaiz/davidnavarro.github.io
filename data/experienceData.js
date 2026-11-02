@@ -1,68 +1,138 @@
 export const experienceData = [
 	{
-		id: 'svitla-systems',
+		id: 'svitla-roadie',
 		company: 'Svitla Systems',
+		client: 'Roadie',
 		position: 'Sr. ML/AI Engineer',
-		period: 'Aug 2025 – Present',
+		period: 'Nov 2025 – Present',
+		employmentPeriod: 'Aug 2025 – Present',
 		duration: '1+ year',
 		location: 'Remote',
-		type: 'Full-time',
+		type: 'Client engagement · Full-time',
 		status: 'current',
 		chapter: 'reliable',
-		domains: ['AI Agents & Evaluation', 'RAG & AI Platforms', 'Computer Vision', 'Technical Leadership'],
-		specialties: ['Governed agents', 'Evaluation design', 'RAG reliability', 'Tool verification'],
+		domains: ['Production AI Agents', 'Agent Orchestration', 'Reliability Engineering', 'AI Evaluation', 'RAG & Tool Integration'],
+		specialties: ['Stateful agents', 'Authorization gates', 'Tool verification', 'Regression evaluation'],
 		responsibilities: [
-			'Own reliability foundations for production agent workflows, from state transitions and authorization to verified tool outcomes and failure handling.',
-			'Coordinate applied model experimentation and evaluation practices across distinct assignments within the Svitla employment record.',
+			'Build and operate Roadie’s stateful conversational AI workflows through Svitla Systems, from LangGraph orchestration to verified backend actions.',
+			'Own authorization and confirmation boundaries, multilingual interaction, tool execution, governed responses, and recovery paths for operational customer interactions.',
 		],
 		workstreams: [
 			{
-				label: 'Operational AI Agents & Evaluation',
+				label: 'Roadie · Operational AI Agents',
 				period: 'Nov 2025 – Present',
-				maturity: 'Selected production workflow',
-				responsibility: 'Own stateful agent behavior, authorization boundaries, tool verification, and the evaluation loop around operational workflows.',
-				implementation: 'Production agent-runtime reliability, governed tool operations, traces, and repeatable evaluation scenarios.',
-			},
-			{
-				label: '360Training · Visual Proctoring & Applied CV',
-				period: 'Aug – Nov 2025',
-				maturity: 'Client assignment via Svitla · Experimentation',
-				responsibility: 'Own applied ML experimentation for the 360Training visual-proctoring client assignment, keeping it distinct from Svitla’s operational agent platform.',
-				implementation: 'Face detection, gaze estimation, head-pose analysis, temporal behavior features, and inference heuristics; compared XGBoost, LightGBM, Random Forest, logistic regression, and neural models with CVAT, DVC, and MLflow.',
-				evidence: 'Scoped experimental pipeline: 45% fewer false positives, 40% faster deployment, and 50% less model-selection time in the relevant proctoring workflow; not universal deployment outcomes.',
+				maturity: 'Production workflow',
+				responsibility: 'Connect conversational interpretation to explicit state transitions, authorized tools, confirmation gates, and verified outcomes.',
+				implementation: 'LangGraph orchestration, retrieval and tool integration, traces, regression scenarios, and structured error recovery.',
 			},
 		],
 		editorialNote: {
 			label: 'Field note / 01',
 			quote: 'The model is one part of the system. Reliability lives in the decisions around it.',
-			body: 'From inspecting physical signals to verifying an agent’s actions, the underlying engineering discipline remains the same.',
+			body: 'A useful agent is not only conversational; it knows when to retrieve, when to ask, when to act, and how to verify what happened.',
 		},
 		summary:
-			'I work on production agent systems that combine policy-governed orchestration, retrieval, tool operations, and evaluation. My scope spans runtime reliability, experiment design, and trace-based debugging.',
+			'I build Roadie’s production conversational AI agents through Svitla Systems, combining LangGraph orchestration, retrieval, tool operations, multilingual interaction, and governed responses.',
 		context:
-			'The central engineering challenge is allowing a stateful, multilingual assistant to act on business workflows while keeping authorization, confirmation, evidence, and failure handling explicit. I also build the evaluation loop needed to understand whether retrieval, decisions, tool results, and responses are behaving as intended.',
+			'Roadie workflows need to move from a natural-language request to a safe, observable backend action. The engineering challenge is preserving state and context while making authorization, confirmation, evidence, and recovery explicit at every operational boundary.',
 		evidence:
-			'A selected operational workflow is production-deployed. Related workflows and evaluation experiments have distinct development and testing states; this page does not claim a universal benchmark or production status for every workflow.',
+			'Designed, implemented, and shipped production AI agent workflows supporting operational customer interactions. Evaluation datasets, regression scenarios, and trace analysis guide the continued development of adjacent workflows.',
 		ownership: [
-			'Designed LangGraph agent workflows with deterministic eligibility rules, confirmation gates, authorized tools, and explicit state transitions.',
-			'Built layered validation around action eligibility, tool-result verification, and response adjudication rather than relying on a single model decision.',
-			'Designed synthetic QA and configurable evaluation experiments using RAGAS, DeepEval, retrieval ranking, and repeatable run records.',
-			'Instrumented traces, retrieved context, tool outcomes, and human-review scenarios with Opik to make failures diagnosable.',
+			'Designed LangGraph state machines with deterministic eligibility rules, confirmation gates, authorized tools, and explicit transitions.',
+			'Built layered validation for action eligibility, tool-result verification, governed responses, timeout handling, retries, and recoverable failures.',
+			'Created evaluation datasets and repeatable experiments with retrieval ranking, RAGAS, DeepEval, Opik traces, and human-review scenarios.',
+			'Instrumented retrieved context, tool outcomes, and regression cases so failures could be diagnosed across interpretation, execution, and response.',
 		],
 		decisions: [
 			'Kept policy and business rules deterministic so the model interprets requests without becoming the authority for irreversible actions.',
-			'Used structured outcomes, timeout handling, retry classification, and fallbacks to separate recoverable tool failures from workflow failures.',
-			'Treated retrieval quality, agent behavior, safety, and response quality as related but separately inspectable evaluation concerns.',
+			'Separated retrieval quality, agent behavior, safety, and response quality into inspectable evaluation concerns.',
+			'Used structured outcomes and recovery classification to distinguish a tool problem from a workflow problem.',
 		],
 		technologies: ['LangGraph', 'Python', 'RAGAS', 'DeepEval', 'Opik', 'Vector retrieval', 'Synthetic QA'],
 		impact: [
 			{
-				label: 'Scope',
-				value: 'Production agent + evaluation',
-				detail: 'Shared runtime foundations, governed actions, evaluation experiments, and operational debugging.',
+				label: 'Shipped scope',
+				value: 'Roadie production agent workflows',
+				detail: 'Stateful conversational interaction, governed actions, evaluation experiments, and operational debugging.',
 			},
 		],
 		relatedProjectIds: [17, 20],
+		companyLogo: '/images/companies/svitla.png',
+		companyUrl: 'https://svitla.com',
+	},
+	{
+		id: 'svitla-360training',
+		company: 'Svitla Systems',
+		client: '360Training',
+		position: 'Sr. ML/AI Engineer — Computer Vision',
+		period: 'Aug – Nov 2025',
+		employmentPeriod: 'Aug 2025 – Present',
+		duration: '4 months',
+		location: 'Remote',
+		type: 'Client engagement · Full-time',
+		status: 'completed',
+		chapter: 'reliable',
+		domains: ['Computer Vision', 'Applied Machine Learning', 'Real-time Inference', 'Model Experimentation', 'MLOps'],
+		specialties: ['Multimodal proctoring', 'Temporal features', 'Model comparison', 'Reproducible experiments'],
+		responsibilities: [
+			'Led design and deployment of production-grade computer-vision and proctoring ML systems for a 360Training client engagement.',
+			'Own the experimentation and inference path across annotation, feature engineering, model comparison, Python services, and monitoring integration.',
+		],
+		workstreams: [
+			{
+				label: '360Training · Visual Proctoring',
+				period: 'Aug – Nov 2025',
+				maturity: 'Production and experimentation',
+				responsibility: 'Combine face detection, gaze estimation, yaw/pitch angles, head movement, and temporal behavior features for multimodal proctoring signals.',
+				implementation: 'CVAT annotation workflows, DVC datasets, MLflow tracking, model comparison, Python inference, and Node.js/JavaScript real-time heuristics.',
+			},
+		],
+		summary:
+			'I led computer-vision experimentation and inference work for 360Training’s visual-proctoring systems, connecting multimodal signals to reproducible model development and monitoring.',
+		context:
+			'Proctoring behavior varies across people, cameras, and operating conditions. The system needed robust temporal signals and a reproducible way to compare models, tune edge cases, and move useful inference into a service and dashboard workflow.',
+		evidence:
+			'The relevant proctoring workflow recorded 45% fewer false positives, 40% faster deployment, and 50% less model-selection time across the scoped experimental pipeline.',
+		implementationGroups: [
+			{
+				label: 'Production computer vision systems',
+				items: [
+					'Built multimodal proctoring features from face detection, gaze estimation, yaw/pitch angles, head movement, and temporal behavior.',
+					'Implemented real-time heuristics and inference services with JavaScript/Node.js, plus React and TypeScript monitoring integration.',
+				],
+			},
+			{
+				label: 'Data engineering and experimentation',
+				items: [
+					'Authored CVAT annotation guides and workflows, managed reproducible datasets with DVC, and built statistical and temporal feature pipelines.',
+					'Applied systematic hyperparameter optimization and evaluation procedures to improve robustness across operating conditions.',
+				],
+			},
+			{
+				label: 'Model development and MLOps',
+				items: [
+					'Trained and compared XGBoost, LightGBM, Random Forest, Logistic Regression, neural networks, and relevant deep-learning approaches using multiple evaluation signals.',
+					'Used MLflow for experiment tracking, model versioning, and artifact management; developed a Python inference service and contributed to deployment decisions.',
+				],
+			},
+		],
+		ownership: [],
+		decisions: [
+			'Kept annotation, dataset versioning, feature engineering, and model evaluation explicit so improvements could be reproduced rather than attributed to a single score.',
+			'Combined temporal behavior with frame-level signals because isolated detections were not enough to represent proctoring context.',
+			'Used model comparison to choose an appropriate operating point for the workflow instead of assuming the most complex model was best.',
+		],
+		technologies: ['Python', 'Node.js', 'JavaScript', 'React', 'TypeScript', 'CVAT', 'DVC', 'MLflow', 'XGBoost', 'LightGBM'],
+		impact: [
+			{
+				label: 'Scoped result',
+				value: '−45% false positives',
+				detail: 'Reported result from the relevant 360Training proctoring workflow.',
+			},
+			{ label: 'Deployment', value: '40% faster', detail: 'Reported workflow improvement.' },
+			{ label: 'Selection cycle', value: '50% less time', detail: 'Reported reduction in model-selection time.' },
+		],
+		relatedProjectIds: [10],
 		companyLogo: '/images/companies/svitla.png',
 		companyUrl: 'https://svitla.com',
 	},
@@ -79,22 +149,22 @@ export const experienceData = [
 		domains: ['AI Agents & Evaluation', 'RAG & AI Platforms'],
 		specialties: ['Multi-agent orchestration', 'MCP integrations', 'LLMOps', 'Azure delivery'],
 		responsibilities: [
-			'Own architecture and infrastructure contributions for reusable multi-agent workflows, retrieval services, enterprise integrations, and Azure delivery.',
-			'Implement and test the interfaces that connect agent behavior to Microsoft Teams, vector-backed knowledge, and Azure DevOps operations.',
+			'Contribute to the architecture of configurable conversational and multi-agent systems, enterprise knowledge retrieval, Microsoft Teams integration, and Azure delivery.',
+			'Own infrastructure, vector-database administration, ingestion, MCP integration, and functional validation across the platform’s reusable engineering surface.',
 		],
 		summary:
-			'I designed configurable multi-agent systems with memory, tools, collaborative workflows, and enterprise integration points. I also helped turn the platform into an operable Azure-based system with repeatable LLMOps practices.',
+			'I helped design configurable conversational and multi-agent systems that connect enterprise knowledge, Microsoft Teams, Azure DevOps operations, and reusable cloud infrastructure.',
 		context:
-			'The product challenge was to support different agent configurations without creating a separate bespoke application for each workflow. That meant making agent behavior, integrations, approvals, and infrastructure reusable while keeping the system understandable to the teams configuring it.',
+			'The platform needed to support different agent configurations without creating a bespoke application for each workflow. The engineering challenge was to make orchestration, retrieval, integrations, approvals, infrastructure, and testing reusable while keeping the system understandable to the teams configuring it.',
 		evidence:
-			'Internal platform delivery and reusable enterprise foundations. This record does not claim Marketplace publication or a single deployment outcome across every configured workflow.',
+			'Internal platform delivery with reusable enterprise foundations, Azure infrastructure, and functional tests that verified the exposed integration boundaries.',
 		ownership: [
 			'Built multi-agent workflows with LangChain and PydanticAI, including memory, tools, and collaborative task handoffs.',
 			'Designed vector-backed ingestion and retrieval paths so configurable agents could work from shared enterprise knowledge rather than isolated prompts.',
 			'Integrated MCP servers and Microsoft Teams so agents could work through familiar enterprise channels.',
-			'Implemented Azure DevOps MCP operations and functional tests for work-item creation, assignment, reading, deletion, and document-ingestion verification.',
-			'Established Azure infrastructure and maintainable LLMOps practices for configuration, deployment, and monitoring.',
-			'Contributed to human-in-the-loop approval flows and packaging work for a reusable enterprise solution.',
+			'Implemented the Azure DevOps MCP server operations and functional tests for creating, assigning, reading, and deleting work items, plus document-ingestion verification.',
+			'Administered vector-backed knowledge and ingestion paths, established Azure infrastructure and IaC, and contributed to maintainable LLMOps practices.',
+			'Contributed to human-in-the-loop approval flows and preparation of a reusable internal solution without representing it as a commercial Marketplace launch.',
 		],
 		decisions: [
 			'Used typed configuration and explicit tool boundaries to keep agent variations composable instead of hard-coding each workflow.',
@@ -110,7 +180,7 @@ export const experienceData = [
 			},
 			{ label: 'Time-to-deploy', value: '< 1 hour', detail: 'Reported platform outcome for customer setup; not a universal guarantee.' },
 		],
-		relatedProjectIds: [1],
+		relatedProjectIds: [1, 12],
 		companyLogo: '/images/companies/kmeleon.png',
 		companyUrl: 'https://www.kmeleon.tech',
 	},
@@ -127,25 +197,25 @@ export const experienceData = [
 		domains: ['RAG & AI Platforms'],
 		specialties: ['RAG systems', 'Vector retrieval', 'Data enrichment', 'Workflow automation'],
 		responsibilities: [
-			'Build applied AI services that turn web, recruitment, and business data into retrievable context and structured workflow actions.',
-			'Own integrations across retrieval, enrichment, CRM automation, scraping, and delivery pipelines while keeping attribution scoped to the relevant workflow.',
+			'Build AI-native business workflows for lead generation, qualification, outreach, reporting, recruitment, and customer operations.',
+			'Own integrations across semantic retrieval, enrichment, CRM automation, scraping, and delivery pipelines so business data becomes repeatable workflow input.',
 		],
 		summary:
-			'I built retrieval and enrichment workflows for recruitment, lead generation, and customer operations. The work connected unstructured web and business data to structured CRM actions and automated communication.',
+			'I built applied AI workflows for lead generation, qualification, outreach, reporting, and recruitment. The work connected unstructured business data to organized CRM actions and automated communication.',
 		context:
-			'The recurring problem was not simply finding text; it was turning scattered prospect and operational information into data that downstream workflows could use. I worked across retrieval, extraction, CRM integration, and automation so the handoffs were repeatable.',
+			'The engineering question was how AI could make business processes more intelligent, integrated, and efficient. I worked across extraction, candidate organization, semantic search, CRM integration, and automation so scattered information could move through repeatable workflows.',
 		evidence:
-			'Operational retrieval and workflow automation reported in the existing project records. The listed metrics retain their original project scope rather than describing every engagement.',
+			'Built and integrated repeatable business workflows for outreach, recruitment, reporting, and CRM operations, with the relevant project metrics retained in their original scope.',
 		ownership: [
-			'Designed RAG and vector-retrieval workflows with Qdrant for search, enrichment, and personalized communication.',
-			'Connected structured outputs to GoHighLevel CRM and workflow automation for recruitment and lead-generation operations.',
-			'Built web-scraping and data-extraction paths with Selenium, Apify, and n8n.',
-			'Used Azure Pipelines and FastAPI patterns to keep feature delivery and service changes repeatable.',
+			'Built lead-generation and qualification workflows, including cold-email and cold-call automation where supported by the engagement scope, outreach, and AI-generated monthly reporting.',
+			'Organized and enriched candidate data, then used semantic retrieval and ranking with Qdrant to find people whose experience was relevant to open positions.',
+			'Connected structured outputs to GoHighLevel CRM and workflow automation for recruitment, lead-generation, and customer operations.',
+			'Built web-scraping and data-extraction paths with Selenium, Apify, and n8n, with Azure Pipelines and FastAPI patterns for repeatable delivery.',
 		],
 		decisions: [
-			'Separated extraction and enrichment from CRM actions so source data could be reviewed before automation changed a record.',
-			'Used retrieval where context was distributed across documents and web sources, then normalized the result for operational systems.',
-			'Kept automation components replaceable so the platform could support different business workflows without rewriting the retrieval layer.',
+			'Separated extraction and enrichment from CRM actions so source data could be organized before automation changed a record.',
+			'Applied RAG and vector retrieval specifically to candidate search and recommendation, where relevant experience had to be found across distributed profiles.',
+			'Kept workflow components replaceable so outreach, reporting, recruitment, and lead operations could evolve without rewriting the retrieval layer.',
 		],
 		technologies: ['RAG', 'Qdrant', 'FastAPI', 'Azure Pipelines', 'GoHighLevel', 'Selenium', 'Apify', 'n8n'],
 		impact: [
@@ -156,7 +226,7 @@ export const experienceData = [
 			},
 			{ label: 'Lead conversion', value: '+2%', detail: 'Reported outcome from the relevant lead-generation workflow.' },
 		],
-		relatedProjectIds: [],
+		relatedProjectIds: [2, 5, 6, 7],
 		companyLogo: '/images/companies/southdesk.png',
 		companyUrl: 'https://southdesk.net',
 	},
@@ -173,20 +243,20 @@ export const experienceData = [
 		domains: ['RAG & AI Platforms', 'Technical Leadership'],
 		specialties: ['Document intelligence', 'Retrieval and reranking', 'MLOps', 'Technical leadership'],
 		responsibilities: [
-			'Lead a team delivering backend, retrieval, document-intelligence, and cloud implementation work for education and community workflows.',
-			'Own the path from heterogeneous ingestion and reranking to usable forms, reports, recommendations, deployment, and operational handoff.',
+			'Lead a team delivering infrastructure architecture, backend services, document intelligence, retrieval, and cloud implementation for education and community workflows.',
+			'Own the path from heterogeneous ingestion and reranking to automatic form completion, personalized reports, healthcare-plan generation, deployment, and operational handoff.',
 		],
 		summary:
-			'I led a team building conversational AI and document-intelligence systems for an education and community organization. I owned the path from multi-format ingestion and retrieval to usable forms, reports, and recommendations.',
+			'I led a team building AI infrastructure and document-intelligence services for an education and community organization, from cloud provisioning and backend delivery to retrieval-grounded forms, reports, and healthcare plans.',
 		context:
-			'The challenge was to make heterogeneous documents useful to staff without turning the assistant into an untraceable answer generator. The platform needed ingestion, filtering, reranking, speech and application interfaces, plus a deployment path the team could operate.',
+			'The challenge was to make heterogeneous documents useful to staff while giving the team an operable path from infrastructure and ingestion to grounded outputs. The platform needed filtering, reranking, application interfaces, service integration, and deployment patterns the team could maintain.',
 		evidence:
-			'Team delivery across resource discovery and document workflows. The reported user, throughput, and acceleration figures remain scoped to the existing project records.',
+			'Team delivery across resource discovery and document workflows, including the existing records’ 160+ users, approximately 100 documents per month, and reported acceleration outcomes.',
 		ownership: [
 			'Led development of conversational AI and document-intelligence workflows with LangChain, FastAPI, React, TypeScript, and Node.',
 			'Implemented multi-format ingestion, vector retrieval, filters, and reranking for program guides and operational documents.',
-			'Connected Azure Speech and generated forms, reports, and recommendations around retrieved knowledge.',
-			'Coordinated deployment through AKS, App Service, and Container Apps with CI/CD practices.',
+			'Connected Azure Speech and generated automatic forms, personalized reports, recommendations, and healthcare plans around retrieved knowledge.',
+			'Architected and provisioned AI services, then coordinated deployment through AKS, App Service, and Container Apps with CI/CD practices.',
 		],
 		decisions: [
 			'Used retrieval filters and reranking to keep domain answers grounded in the right program context.',
@@ -200,7 +270,7 @@ export const experienceData = [
 			{ label: 'Resource discovery', value: '50% faster', detail: 'Existing project record also reports 40% faster deployment cycles.' },
 			{ label: 'Deployment cycles', value: '40% acceleration', detail: 'Reported outcome from the team’s MLOps and CI/CD work.' },
 		],
-		relatedProjectIds: [],
+		relatedProjectIds: [6, 8, 9],
 		companyLogo: '/images/companies/elsol.png',
 		companyUrl: 'https://elsolnec.org',
 	},
@@ -208,7 +278,7 @@ export const experienceData = [
 		id: 'university-of-magdalena-covid-rx',
 		company: 'University of Magdalena',
 		position: 'Applied ML Researcher — COVID-Rx',
-		period: 'Dec 2020 – Nov 2021',
+		period: '2020 – 2021',
 		duration: '1 year',
 		location: 'Colombia',
 		type: 'Research project',
@@ -219,26 +289,26 @@ export const experienceData = [
 		specialties: ['CNN experimentation', 'Medical imaging', 'Model evaluation', 'Explainability'],
 		responsibilities: [
 			'Conduct applied research on public chest X-ray classification, keeping dataset preparation, preprocessing, model comparison, and interpretation explicit.',
-			'Build the experimental and application interfaces needed to inspect probability outputs and model behavior without implying clinical deployment.',
+			'Build the experimental and application interfaces needed to inspect probability outputs and model behavior, with experiment tracking for repeatable comparison.',
 		],
 		summary:
 			'I developed a research and application workflow for comparing CNN architectures on a public chest X-ray classification task. The work covered dataset preparation, preprocessing, model evaluation, probability outputs, and visual explanation.',
 		context:
 			'Comparing image classifiers required keeping data decisions, architecture-specific preprocessing, metrics, and user-facing interpretation separate. I built the workflow as an applied research system, not as a claim of clinical validation or deployment.',
 		evidence:
-			'Research and application prototype using public data. Historical experiment metrics are retained with their scope and are not presented as clinical validation, regulatory clearance, or patient benefit.',
+			'Applied research prototype using public data; the reported 96% result is an experiment metric within this workflow, not a clinical performance claim.',
 		ownership: [
 			'Curated a working dataset of more than 36,000 public chest X-ray images across COVID-19, healthy, and pneumonia classes.',
 			'Trained and compared ten CNN families in PyTorch, including VGG19, DenseNet, MobileNet, EfficientNet, ResNet, and Xception.',
+			'Implemented preprocessing, augmentation, evaluation, model-comparison, and MLflow experiment-tracking paths for repeatable experiments.',
 			'Built PyQt desktop and Flask web interfaces for probability outputs and heatmap-based visual explanation.',
-			'Implemented preprocessing, augmentation, evaluation, and model-comparison paths for repeatable experiments.',
 		],
 		decisions: [
 			'Compared multiple architectures rather than treating a single model score as the conclusion.',
 			'Kept preprocessing and evaluation choices explicit because they change what a model comparison means.',
 			'Presented heatmaps as model-behavior inspection, not evidence of clinical correctness.',
 		],
-		technologies: ['PyTorch', 'CNN', 'OpenCV', 'PyQt', 'Flask', 'Medical imaging', 'Model evaluation'],
+		technologies: ['PyTorch', 'CNN', 'OpenCV', 'PyQt', 'Flask', 'MLflow', 'Medical imaging', 'Model evaluation'],
 		impact: [
 			{ label: 'Dataset', value: '36k+ chest X-rays', detail: 'Public multi-class image sources used for the research workflow.' },
 			{ label: 'Comparison', value: '10 CNN architectures', detail: 'Reported experiment scope across model families.' },
@@ -259,29 +329,60 @@ export const experienceData = [
 		status: 'completed',
 		chapter: 'foundations',
 		domains: ['Computer Vision', 'Technical Leadership'],
-		specialties: ['Industrial imaging', 'Real-time CV', 'PLC/HMI integration', 'Team leadership'],
+		specialties: ['Industrial imaging', 'Real-time CV', 'PLC/HMI integration', '3D measurement'],
 		responsibilities: [
-			'Lead industrial computer-vision delivery from camera, optics, illumination, and acquisition design through model development and automation integration.',
-			'Lead a 10-engineer team across architecture, requirements, project delivery, technical reviews, mentoring, and customer-facing constraints.',
+			'Design industrial computer-vision systems from initial requirements through cameras, optics, illumination, models, plant interfaces, and delivery constraints.',
+			'Lead approximately ten engineers across architecture, requirements, project delivery, technical reviews, mentoring, and customer-facing constraints.',
 		],
 		summary:
-			'I led industrial computer-vision delivery from imaging design and model development through integration with automation systems. The role combined technical architecture, client requirements, delivery planning, and mentoring a 10-engineer team across 30+ projects.',
+			'I led hands-on industrial computer-vision delivery across 30+ projects, from physical imaging design and model development to PLC integration, measurement systems, delivery planning, and mentoring a team of approximately ten engineers.',
 		context:
-			'Industrial vision has to work with real optics, illumination, hardware, throughput, and plant interfaces. I worked across classical image processing, CNN and YOLO models, edge execution, PLC/HMI integration, and the operational details needed to turn a lab model into a usable system.',
+			'Industrial vision has to work with real optics, illumination, hardware, throughput, maintenance, and plant interfaces. I moved between deterministic image processing, learned models, thermography, 3D sensing, edge execution, PLC/HMI integration, and the physical constraints that determine whether a system works outside the lab.',
 		evidence:
-			'Industrial delivery across the reported project scope. Representative outcomes remain scoped to relevant systems rather than being presented as a universal result across every installation.',
-		ownership: [
-			'Led a 10-engineer team and owned architecture, planning, client requirements, budgets, reviews, and delivery quality.',
-			'Designed imaging systems involving camera selection, optics, illumination, sensors, and 3D scanners.',
-			'Built CNN, YOLO, PyTorch, TensorFlow, Python, and C++ solutions for inspection, safety, and human-behavior use cases.',
-			'Connected vision software to real-time execution, PLC/HMI interfaces, monitoring systems, and automated retraining workflows.',
+			'Industrial delivery across the reported project scope, with representative detection and false-alarm outcomes retained for the relevant systems.',
+		implementationGroups: [
+			{
+				label: 'Physical machine-vision system design',
+				items: [
+					'Designed projects from inspection requirements, selecting industrial cameras and sensors, lenses for field of view, working distance, and resolution, and lighting for reliable acquisition.',
+					'Accounted for operating conditions, maintenance, throughput, installation constraints, calibration, and physical access before model selection.',
+				],
+			},
+			{
+				label: 'Software and model development',
+				items: [
+					'Developed systems with C#, C++, and Python, using OpenCV and classical image-processing methods alongside learned models.',
+					'Built classification and object-detection solutions with PyTorch, TensorFlow, and Keras, integrating acquisition, preprocessing, inference, and application logic.',
+				],
+			},
+			{
+				label: 'Industrial automation and operator interfaces',
+				items: [
+					'Connected inspection results to PLCs and plant control systems, including reject mechanisms, alarms, and operational outputs.',
+					'Built graphical interfaces for control, monitoring, and result visualization under real-time execution constraints.',
+				],
+			},
+			{
+				label: 'Thermography and 3D measurement',
+				items: [
+					'Configured thermographic imaging for thermal defects, hotspots, people detection, and temperature-screening use cases without representing them as medically validated fever diagnosis.',
+					'Integrated 3D laser profilers and Time-of-Flight cameras for dimensional and distance measurement, working through calibration, sensor placement, precision, and physical constraints.',
+				],
+			},
+			{
+				label: 'Technical leadership',
+				items: [
+					'Led approximately ten engineers across architecture, budgets, delivery planning, client requirements, technical reviews, mentoring, and more than thirty industrial computer-vision projects.',
+				],
+			},
 		],
+		ownership: [],
 		decisions: [
-			'Started with the imaging conditions and plant constraints because model quality cannot compensate for poor capture.',
-			'Chose classical CV, deep learning, or a hybrid according to latency, variation, explainability, and maintenance needs.',
-			'Used labeling and retraining loops to keep deployed systems adaptable instead of treating delivery as a one-time model handoff.',
+			'Started with the physical scene and plant constraints because model quality cannot compensate for poor capture or an unusable installation.',
+			'Chose classical CV, deep learning, or a hybrid according to latency, variation, explainability, maintenance, and the cost of an operational error.',
+			'Used labeling and retraining loops to keep systems adaptable instead of treating delivery as a one-time model handoff.',
 		],
-		technologies: ['Python', 'C++', 'PyTorch', 'TensorFlow', 'YOLO', 'OpenCV', 'PLC/HMI', 'CVAT'],
+		technologies: ['C#', 'C++', 'Python', 'PyTorch', 'TensorFlow', 'Keras', 'YOLO', 'OpenCV', 'PLC/HMI', 'Thermography', '3D laser', 'ToF cameras'],
 		impact: [
 			{ label: 'Leadership', value: '10 engineers', detail: 'Team leadership across architecture, delivery, and technical mentoring.' },
 			{ label: 'Delivery', value: '30+ industrial CV projects', detail: 'Scope reported in the supplied professional background.' },
@@ -314,12 +415,7 @@ export const experienceChapters = {
 	},
 };
 
-export const industryDomains = [
-	'AI Agents & Evaluation',
-	'RAG & AI Platforms',
-	'Computer Vision',
-	'Technical Leadership',
-];
+export const industryDomains = [...new Set(experienceData.flatMap((experience) => experience.domains))];
 
 const employerNames = new Set(
 	experienceData
@@ -333,6 +429,9 @@ const relatedCaseStudyIds = new Set(
 export const experienceStats = {
 	totalYears: `${experienceYears}+`,
 	companies: employerNames.size,
+	employers: employerNames.size,
+	engagements: experienceData.filter((experience) => experience.type !== 'Research project').length,
+	researchEntries: experienceData.filter((experience) => experience.type === 'Research project').length,
 	entries: experienceData.length,
 	technologies: [...new Set(experienceData.flatMap((exp) => exp.technologies))].length,
 	relatedCaseStudies: relatedCaseStudyIds.size,
