@@ -5,9 +5,12 @@
     "dev": "next dev",
     "dev:original": "next dev",
     "build": "next build",
+    "prebuild:github": "node scripts/generate-portfolio-exports.cjs",
     "build:github": "cross-env GITHUB_ACTIONS=true next build",
+    "postbuild:github": "node scripts/sync-portfolio-export-assets.cjs",
     "start": "npx serve@latest out",
     "lint": "next lint",
+    "test:portfolio": "node --test tests/portfolio-exports.test.cjs",
     "export": "next export"
   },
   "dependencies": {

@@ -10,6 +10,6 @@ module.exports = {
   },
   // Only use basePath for GitHub Pages in production
   basePath: isGitHubPages ? '/davidnavarro.github.io' : '',
-  assetPrefix: isGitHubPages ? '/davidnavarro.github.io/' : '',
+  assetPrefix: isGitHubPages ? '/davidnavarro.github.io' : '',
   eslint: { ignoreDuringBuilds: true },
 };

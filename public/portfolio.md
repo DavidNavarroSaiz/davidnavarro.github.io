@@ -310,6 +310,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: I built an AI project-management assistant that connected Microsoft Teams conversations with project knowledge and Azure DevOps actions. The team used it internally to organize work while we prepared the underlying infrastructure for possible distribution as a reusable offering; it was not a commercial marketplace launch.
 - Problem: I wanted to reduce the manual coordination around questions that already had answers somewhere: who owns a task, what changed, which work is blocked, and what should happen after a meeting. A useful assistant had to connect knowledge with actions, not just summarize a document and leave the user to update the project by hand.
 - Technologies: LangChain, AutoGen, FastAPI, Azure OpenAI, Microsoft Graph API, Microsoft Teams, PGVector, Azure Bot Framework, Docker, Application Insights
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/pm-ai-agent-system-architecture.71bf9b2c.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/pm-ai-agent-system-architecture.71bf9b2c.webp)
+  - Alt text: Conceptual editorial illustration of PM AI Agent showing Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration; not a deployed-system screenshot.
+  - Caption: Conceptual illustration — Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration. The factual architecture diagram below remains the technical source.
 - Contributions:
   - Built a sophisticated PM Agent that integrates with Microsoft Teams and Bot Framework channels, providing AI-powered project management capabilities including natural language event creation, calendar management, and intelligent project assistance.
   - Implemented comprehensive calendar and meeting management features with Microsoft Graph API integration, including conflict detection, business hours validation, and automatic Teams meeting creation.
@@ -342,6 +346,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: Retrieval and LLM ranking over candidate profiles, returning shortlists with explanations for recruiters.
 - Problem: Recruiters need to match a job description against hundreds of candidate profiles without losing the reasoning behind a shortlist.
 - Technologies: Python, FastAPI, Streamlit, Qdrant, LangChain, LLMs, Vector Search, RAG, Docker, CI/CD
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/candidate-recommendation-editorial-cover.a692f72c.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/candidate-recommendation-editorial-cover.a692f72c.webp)
+  - Alt text: Conceptual editorial illustration of semantic candidate recommendation showing a job brief, candidate knowledge base, vector retrieval, structured comparison, ranked recommendations, and supporting evidence; not genuine candidate records or experimental rankings.
+  - Caption: Conceptual illustration — semantic retrieval, structured candidate comparison, ranked recommendations, and supporting evidence. The depicted records and rankings are illustrative, not experimental results.
 - Contributions:
   - Built a comprehensive RAG system processing 700+ professional resumes and job descriptions, implementing vector search with Qdrant and LLM enrichment to extract metadata and improve candidate matching accuracy.
   - Developed intelligent candidate ranking algorithm that analyzes job descriptions, processes candidate profiles, and provides top 10-20 ranked candidates with detailed explanations of strengths and weaknesses for HR decision-making.
@@ -359,6 +367,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: I built a research and application workflow for comparing ten CNN families on a public chest X-ray classification task, then exposed the selected experiments through both a PyQt desktop interface and a Flask web interface. The project combined dataset preparation, repeatable preprocessing, model comparison, probability outputs, and visual explanation.
 - Problem: Comparing image classifiers is not only a matter of choosing a larger network. Data sources, class balance, resize policy, normalization, model family, training configuration, evaluation metrics, and user-facing interpretation all affect what the comparison means. I needed a workflow that could register experiments and make model behavior inspectable without presenting it as a clinical diagnostic device.
 - Technologies: PyTorch, Python, PyQt, OpenCV, Flask, VGG19, DenseNet, MobileNet, AlexNet, EfficientNet, InceptionV3, ResNet, Xception, CNN, Deep Learning
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/covid-rx-editorial-cover.6230062f.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/covid-rx-editorial-cover.6230062f.webp)
+  - Alt text: Conceptual editorial illustration for COVID-Rx showing chest X-ray preprocessing, convolutional feature extraction, CNN model families, and comparative evaluation; not a clinical screenshot or measured benchmark chart.
+  - Caption: Conceptual illustration — chest X-ray preprocessing, CNN feature extraction, and comparative evaluation. Embedded charts are illustrative, not experimental results.
 - Contributions:
   - Curated a comprehensive dataset of 36k+ chest X-ray images from multiple sources including 10,000+ COVID-19 cases, 15,000+ healthy cases, and 11,000+ pneumonia cases, ensuring robust model training.
   - Trained and benchmarked 10 state-of-the-art CNN architectures (VGG19, DenseNet, MobileNet, AlexNet, EfficientNet, InceptionV3, ResNet, RexNet, Inception-ResNet, Xception) achieving >90% accuracy in COVID-19 detection.
@@ -391,6 +403,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: I shaped AbogacIA as a domain-aware professional knowledge and writing assistant for Colombian legal work. It combines document ingestion, semantic retrieval, similar-case discovery, context-aware questions, and drafting support so a lawyer can work from relevant sources instead of starting from an empty page.
 - Problem: Legal work requires more than a generic chat response: the assistant needs to retrieve relevant sentences, codes, constitutional material, and regulations, then keep the user’s case context in view while suggesting sources or draft content. The system is an assistive workflow, not an autonomous legal decision-maker and not a guarantee of legal correctness.
 - Technologies: Python, FastAPI, MongoDB, Chroma, Vector Database, Graph Database, LangChain, LangGraph, Selenium, OpenAI, RAG, Web Scraping
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/abogacia-editorial-cover.8f93caba.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/abogacia-editorial-cover.8f93caba.webp)
+  - Alt text: Conceptual editorial illustration for AbogacIA showing legal knowledge retrieval, related cases, and assisted document drafting; not an actual legal-system architecture diagram or legal advice.
+  - Caption: Conceptual illustration — legal retrieval, case context, and drafting support. It does not represent proprietary system state or guarantee legal correctness.
 - Contributions:
   - Automatic Legal Document Analysis: When users upload case documents and descriptions, the system automatically identifies relevant regulations, rights, and specific articles that may be violated or related to the case.
   - Similar Case Recommendations: Provides lawyers with a comprehensive view of similar judicial sentences and precedents, helping them understand how similar cases were resolved in the past.
@@ -419,6 +435,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Status: Active Development
 - Description: Lead capture and outreach across email and SMS, with HubSpot sync and GPT-written replies.
 - Technologies: Python, FastAPI, HubSpot, Twilio, OpenAI, SMTP, GPT, CRM Integration, Lead Generation, Email Automation
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/automatic-lead-management-editorial.fef6459f.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/automatic-lead-management-editorial.fef6459f.webp)
+  - Alt text: Conceptual editorial illustration of automatic lead management showing lead sources, AI orchestration, CRM integration, automated email/SMS communication, and assignment stages; not a screenshot or actual customer records.
+  - Caption: Conceptual illustration — lead capture, GPT-assisted communication, CRM actions, and lifecycle stages. It is not a screenshot or actual customer data.
 - Contributions:
   - FastAPI Backend: Built a modern web framework for handling HTTP requests and responses efficiently, providing robust API endpoints for lead generation and processing.
   - Multi-Channel Communication: Integrated Twilio for SMS messaging and SMTP for email communication, enabling real-time communication with leads across multiple channels.
@@ -433,6 +453,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Status: Production
 - Description: Automated reporting pipeline that collects a month of property data and drafts client-ready documents in Google Docs.
 - Technologies: Make.com, OpenAI, Google Sheets, Google Drive, Google Docs, CircleBack, Fireflies, Zapier, Email Automation, Report Generation, Data Processing, LLMs
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/ai-generated-monthly-reports-editorial.11d6c44d.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/ai-generated-monthly-reports-editorial.11d6c44d.webp)
+  - Alt text: Conceptual editorial illustration of AI-generated monthly reports showing source materials, structured extraction, report generation, and publishing workflow; not an actual client report or measured result.
+  - Caption: Conceptual illustration — source-material collection, structured processing, monthly report generation, and document publishing. It is not an actual client report or measured result.
 - Contributions:
   - Automated Data Collection: Built comprehensive system that automatically collects property data including emails (stored in Google Sheets), photos (uploaded to Google Drive), meeting summaries (generated via CircleBack and Fireflies), and event descriptions throughout the month.
   - AI-Powered Report Generation: Created intelligent system using LLMs to process all collected data and automatically generate comprehensive monthly property reports with proper formatting and client-ready presentation.
@@ -447,6 +471,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Status: Production
 - Description: Self-hosted n8n workflows that identify ideal customer profiles, enrich company data, and run personalized cold-email campaigns.
 - Technologies: n8n, Apollo, Smartleads, Selenium, OpenAI, GoHighLevel, Web Scraping, Lead Generation, Cold Email, Data Extraction, ICP Identification, Email Automation
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/lead-generation-system-editorial.16193f15.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/lead-generation-system-editorial.16193f15.webp)
+  - Alt text: Conceptual editorial illustration of a lead generation system showing ICP discovery, company research, and outreach/CRM handoff; not a screenshot or actual prospect data.
+  - Caption: Conceptual illustration — ICP discovery, company research, personalized outreach, and CRM handoff. It is not a screenshot or actual prospect data.
 - Contributions:
   - Self-Hosted n8n Platform: Implemented and configured self-hosted n8n automation platform within the company infrastructure, providing complete control over automation workflows and data processing.
   - Apollo ICP Extraction: Built automated workflows to extract potential Ideal Customer Profiles from Apollo database, identifying high-value prospects based on company size, industry, and other relevant criteria.
@@ -463,6 +491,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Role: Machine Learning Team Leader
 - Description: Permissions-aware resource hub with RAG search, built for community health workers and their teams.
 - Technologies: React, FastAPI, LangChain, LangSmith, PGVector, Redis, RabbitMQ, Azure Bicep, Azure OpenAI, RAG, Vector Search, CI/CD
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/healthcare-resource-recommender-editorial.c5cca132.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/healthcare-resource-recommender-editorial.c5cca132.webp)
+  - Alt text: Conceptual editorial illustration of a permission-aware healthcare resource recommender showing multimodal resources, semantic context, and role-aware retrieval; not a patient record or clinical recommendation.
+  - Caption: Conceptual illustration — multimodal resource ingestion, semantic retrieval, and permission-aware access for healthcare teams. It does not represent a patient record or a clinical recommendation.
 - Contributions:
   - Permissions-Aware Platform: Built tiered-access system where CHWs and staff can upload/consume resources based on user roles and plans, ensuring appropriate content access and security controls for different organizational levels.
   - Advanced RAG Implementation: Applied sophisticated RAG tactics including query rewriting, sub-queries, filters, document research tasks, and reranking to deliver 50% faster resource discovery compared to manual filters and search, serving 160+ active users.
@@ -479,6 +511,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Role: Machine Learning Team Leader
 - Description: Speech-to-forms assistant that transcribes home visits and drafts structured reports and care plans.
 - Technologies: FastAPI, Azure Language Services, Azure OpenAI, Python, LLMs, Speech Recognition, Azure Bicep, Azure Container Registry, Azure Key Vault, CI/CD, Form Automation, Report Generation
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/community-health-workers-editorial.aafa623c.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/community-health-workers-editorial.aafa623c.webp)
+  - Alt text: Conceptual editorial illustration of a community health workers platform showing speech-to-form capture, visit reports, contextual data access, and care-plan drafting; not an actual patient record or clinical outcome.
+  - Caption: Conceptual illustration — speech-to-form capture, structured visit reporting, contextual access, and care-plan drafting. It is not an actual patient record or clinical outcome.
 - Contributions:
   - Speech-to-Forms Automation: Built real-time assistant using Azure Cognitive Services (Speech) to transcribe conversations during home visits, with LLMs extracting structured fields to automatically populate dynamic forms, eliminating manual data entry.
   - Intelligent Report Generation: Developed LLM-powered system that analyzes conversation data and stored patient information to automatically generate comprehensive visit reports and personalized care plans for each individual, significantly reducing drafting time.
@@ -496,6 +532,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: I spent almost four years building computer-vision systems for industrial environments. One of the most important things I learned is that the model is only one part of a machine-vision system. Camera selection, optics, lighting, timing, and integration with the production line can matter just as much as the algorithm.
 - Problem: An inspection system has to make a useful decision from imperfect physical evidence and then fit into a moving production process. A defect may be smaller than the available pixels, reflections may change with the material or lighting, and a correct classification is still operationally useless if the trigger, PLC signal, operator interface, or reject mechanism is unreliable. The engineering problem was to design the complete path instead of treating inference as the product.
 - Technologies: Camera and optics design, Industrial lighting, PyTorch, TensorFlow, Keras, OpenCV, Python, C++, React, PLCs, C#, CVAT, 3D and thermal imaging
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/industrial-computer-vision-editorial-cover.44c9a5bb.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/industrial-computer-vision-editorial-cover.44c9a5bb.webp)
+  - Alt text: Conceptual editorial illustration of industrial computer-vision inspection showing camera and lens selection, engineered illumination, image processing stages, inspection decisions, and PLC factory automation; not a photograph of a deployed customer installation.
+  - Caption: Conceptual illustration — industrial camera inspection, optics and illumination, processing stages, and factory automation. It represents recurring system patterns, not a photograph of a deployed customer installation.
 - Contributions:
   - Developed and deployed real-time CV pipelines for defect detection, product fill checks, surface anomalies, and PPE compliance analytics, improving incident detection by 30% and reducing false alarms by 45%.
   - Built robust data/labeling workflows using CVAT, automated retraining, and OpenCV post-processing to meet factory latency/throughput constraints.
@@ -530,6 +570,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Role: Lead AI Engineer & Backend Developer
 - Description: Low-latency voice agent over WebSockets and Twilio, with real-time prompt control and multi-agent tool calling.
 - Technologies: FastAPI, Uvicorn, OpenAI Realtime API, OpenAI, Azure OpenAI, Twilio, WebRTC, AutoGen, Docker, OpenAPI/Swagger
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/realtime-voice-agent-editorial.16be037c.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/realtime-voice-agent-editorial.16be037c.webp)
+  - Alt text: Conceptual editorial illustration of a real-time voice agent showing bidirectional audio, WebSockets, agent runtime, and tool actions; not a live call trace or measured latency result.
+  - Caption: Conceptual illustration — bidirectional audio, WebSocket transport, agent runtime, and tool actions. It is not a live call trace or measured latency result.
 - Contributions:
   - Built a fully containerized FastAPI server with real-time voice streaming and WebSocket communication, supporting natural, low-latency conversations.
   - Integrated OpenAI's Realtime API and Twilio Media Streams to allow AI-powered phone calls with bidirectional voice processing and response generation.
@@ -549,6 +593,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Role: AI Engineer & Backend Developer
 - Description: Model Context Protocol server that lets AI assistants query and manage Azure DevOps work items in natural language.
 - Technologies: FastMCP, Azure DevOps REST API, Azure DevOps Python SDK, Python 3.11, Server-Sent Events (SSE), Docker, OpenAI / Claude Integration, pytest, uv
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/mcp-azure-devops-server-editorial.1b51d1f7.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/mcp-azure-devops-server-editorial.1b51d1f7.webp)
+  - Alt text: Conceptual editorial illustration of an MCP Azure DevOps server showing natural-language requests, a protocol boundary, structured tool calls, and Azure DevOps work-item operations; not a screenshot or a claim of repository or build-pipeline execution.
+  - Caption: Conceptual illustration — MCP request handling and structured Azure DevOps work-item operations. It does not depict repository or build-pipeline execution.
 - Contributions:
   - Forked and enhanced Microsoft's Azure DevOps MCP repository with custom improvements, additional integrations, and tailored services to meet specific workflow requirements while maintaining compatibility with the original MCP protocol.
   - Implemented modular feature sets for work items, teams, and project management, enabling AI assistants to perform complex DevOps queries with natural language.
@@ -567,6 +615,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Role: ML Engineer & Full-Stack Developer
 - Description: On-prem GPU pipeline that checks PPE and safety rules across live CCTV streams and alerts supervisors.
 - Technologies: YOLO (custom fine-tuning), PyTorch + CUDA, OpenCV / FFmpeg, FastAPI, React Dashboard, WebSockets, PostgreSQL, Docker, GPU Edge Server
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/cctv-safety-detection-editorial.e4ac35a8.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/cctv-safety-detection-editorial.e4ac35a8.webp)
+  - Alt text: Conceptual editorial illustration of CCTV safety detection with fixed-camera observation, PPE and spatial safety zones, and human review; not detection output or a customer installation.
+  - Caption: Conceptual illustration — fixed-camera safety observation, PPE and spatial rules, and review flow. It is not a detection result or a photograph of a deployed installation.
 - Contributions:
   - Built a comprehensive dataset of 10,000+ CCTV images and fine-tuned YOLO models to detect persons, safety helmets, goggles, vests (with color classification), forklifts/lift cars, and ladders with high accuracy.
   - Deployed on a local GPU server (air-gapped for security) with <200ms per-frame latency and parallel inference across 3 cameras, ensuring real-time safety monitoring without network dependencies.
@@ -586,6 +638,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: A distributed ingestion service that turns large collections of PDFs, text, and mixed-format documents into vector embeddings for RAG systems, built around FastAPI intake, Celery workers, RabbitMQ messaging, Marker parsing, and pgVector storage.
 - Problem: RAG systems are only as good as the documents feeding them. Large PDF collections are slow to parse, chunk, and embed, and long-running batch jobs are hard to observe while they run.
 - Technologies: Marker API, Celery Distributed Tasks, RabbitMQ Queues, FastAPI, pgVector, Redis, Docker Compose, OpenAI Embeddings
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/parallel-document-ingestion-editorial.ffbed87e.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/parallel-document-ingestion-editorial.ffbed87e.webp)
+  - Alt text: Conceptual editorial illustration of a parallel document ingestion pipeline showing FastAPI intake, RabbitMQ queues, Celery workers, Marker parsing, and pgVector retrieval storage; not an actual production dashboard or measured throughput.
+  - Caption: Conceptual illustration — parallel document intake, queued workers, structured parsing, and vector storage. The authentic project gallery and technical diagram remain the implementation evidence.
 - Contributions:
   - Integrated Marker API to convert unstructured PDFs into structured JSON chunks optimized for vector database ingestion, enabling seamless processing of complex document formats.
   - Implemented robust asynchronous task orchestration using Celery and RabbitMQ, allowing horizontal scaling of ingestion workers and fault-tolerant document processing.
@@ -617,6 +673,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Contribution: Evaluation framework and methodology
 - Description: I built an internal, UI-driven workbench to compare coding-agent runs under reproducible conditions. Each evaluation starts with a shared reference task and prompts, records the selected tool, model and version, tester, date, scenario, model profile, and environment, then guides the evaluator through setup, execution, evidence collection, review, and export. The workbench is not an autonomous judge or a leaderboard; it preserves the evidence needed to explain a result later.
 - Problem: Comparing coding agents is harder than giving them the same prompt and checking which one finishes first. A run can produce convincing code while failing tests, ignoring a security constraint, or quietly changing the scope. I needed a way to hold the task and starting conditions steady, then reconstruct what happened months later instead of relying on a final screenshot or someone’s notes.
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/coding-agent-evaluation-v2.0401e082.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/coding-agent-evaluation-v2.0401e082.webp)
+  - Alt text: Conceptual illustration of a coding-agent evaluation workbench with a clean baseline, captured run evidence, deterministic checks, and comparative reporting; not a screenshot, benchmark result, or measured interface.
+  - Caption: Conceptual illustration — reproducible coding-agent evaluation and evidence flow. It does not depict measured benchmark results or a production interface.
 - Technical decisions:
   - Hold the reference task steady: I used the same versioned task and prompts for comparable runs, then recorded any follow-up scenario rather than silently changing the task mid-experiment.
   - Keep automated signals separate from judgment: Build, test, lint, coverage, type, security, and authorization evidence stays distinct from rubric review. A passing test suite is useful evidence, not a complete measure of engineering quality.
@@ -651,6 +711,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: I worked on extending a LibreChat-based conversational AI workspace into a more useful enterprise platform: one that could combine configured agents, retrieval, persistence, integrations, and cloud application services without making every capability implicitly executable. The work crossed the visible product surface and the less visible decisions around authorization, deployment, and operational boundaries.
 - Problem: A conversational interface is only the entry point. The workspace also needs a dependable way to configure agents, retrieve organizational context, persist the right data, connect approved integrations, and keep users inside the capabilities they are allowed to use. I treated those boundaries as part of the product rather than as deployment details to solve later.
 - Technologies: LibreChat, AWS ECS, AWS Fargate, Application Load Balancer, Amazon RDS for PostgreSQL, pgvector, Amazon S3, HMAC authorization
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/enterprise-ai-workspace-editorial.55011ca2.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/enterprise-ai-workspace-editorial.55011ca2.webp)
+  - Alt text: Conceptual illustration of an enterprise AI workspace with users, agents, retrieval, cloud infrastructure, integrations, and controlled capabilities; not a deployed infrastructure diagram or product screenshot.
+  - Caption: Conceptual illustration — an enterprise AI workspace, retrieval layer, cloud application surface, integrations, and capability boundaries. The diagrams below show the technical relationships at a shareable level.
 - Technical decisions:
   - Extend an existing open-source application: Extending an existing conversational application gave me a useful product foundation. The trade-off was inheriting an upstream lifecycle while concentrating engineering effort on enterprise configuration, agent integration, persistence, and operational boundaries.
   - Keep application and retrieval responsibilities distinct: I kept the conversational surface and retrieval-oriented persistence related but distinct. That separation made access easier to reason about and avoided implying that every application capability should directly reach stored organizational content.
@@ -687,6 +751,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: I worked on reusable foundations for conversational agents that could interact with operational systems without leaving authorization and failure handling to the language model. Each agent could have its own business workflow, but the platform needed a consistent way to interpret requests, resolve context, control state, execute tools, verify outcomes, and communicate safely. My contribution covered the relevant workflow and reliability workstreams, not an entire company platform.
 - Problem: Getting a language model to answer a question is one problem. Giving it the ability to act on someone’s behalf is another: it can misunderstand the request, select the wrong entity, skip a required confirmation, or describe a failed operation as successful. I needed the system—not a persuasive model response—to decide whether an action was allowed and whether it actually happened.
 - Technologies: LangGraph, LLM orchestration, Structured tool calls, State-transition validation, Scenario regression testing, Trace inspection
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/policy-governed-ai-agents-editorial.6b8153aa.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/policy-governed-ai-agents-editorial.6b8153aa.webp)
+  - Alt text: Conceptual illustration of policy-governed AI agents moving through stateful orchestration, authorization checks, verified actions, and escalation paths; not a private production state machine or product screenshot.
+  - Caption: Conceptual illustration — stateful orchestration, authorization boundaries, verified actions, and escalation. It does not reproduce a private workflow or policy.
 - Technical decisions:
   - Deterministic transitions over unconstrained action selection: Explicit workflow states made the allowed progression visible and testable, while the language model remained responsible for interpretation rather than directly deciding that an operational action had completed.
   - Separate reasoning from operational execution: Keeping LLM reasoning distinct from structured tool execution created a control boundary for authorization, confirmation, result inspection, and escalation.
@@ -724,6 +792,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: Professional Cases is an independent product under development for experienced and retired professionals who want to continue exercising professional judgment through realistic, profession-specific practice scenarios and respectful feedback. The verified repository contains a Next.js/React web surface, a FastAPI backend, knowledge and content tooling, case generation, semantic evaluation, and a partially integrated Senior runtime. The browser Senior experience still uses deterministic mock BFF routes, so this case does not present the product as launched or publicly available.
 - Problem: Professional knowledge arrives as heterogeneous documents, images, terminology, and domain context. Turning that material into useful practice requires more than retrieving a paragraph: the system needs traceable ingestion, searchable evidence, topic diversity, case seeds, generated narratives, quality checks, and feedback grounded in the professional work. The product goal is to preserve dignity and professional identity without reducing the experience to a generic quiz, an AI chatbot, or unsupported claims about learning outcomes.
 - Technologies: Next.js / React, Python / FastAPI, PostgreSQL / pgvector, Redis / Celery, LangGraph, Google GenAI client, PyMuPDF, scikit-learn, Alembic
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/professional-cases-editorial.581312f2.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/professional-cases-editorial.581312f2.webp)
+  - Alt text: Conceptual editorial illustration for Professional Cases showing documents, images, knowledge organization, case generation, and assessment. Audio and video symbols are visual motifs only; the current implementation is text-first and does not claim speech support.
+  - Caption: Conceptual editorial artwork — documents, images, knowledge organization, scenario generation, and assessment. The audio/video symbols are not evidence of implemented modalities; the verified product boundary is text-first and in development.
 - Technical decisions:
   - Keep Admin/Content Studio separate from Senior UX: Knowledge authoring, clustering, generated-case review, and operations need dense inspection surfaces. The Senior experience needs a calm, readable, judgment-oriented flow; combining those surfaces would obscure both responsibilities.
   - Preserve provenance and safe projections: The backend stores evidence, runs, specifications, and internal evaluation data, but browser-facing projections are assembled field by field. Hidden answers, rubrics, prompts, evaluator confidence, and generation metadata are not treated as Senior-visible data.
@@ -760,6 +832,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: I became interested in the digital-twin problem through knowledge rather than avatars. A useful assistant would need to connect projects, people, dates, emails, meetings, and decisions, then recover the context behind a question instead of matching a few similar words. I focused on organizing contextual knowledge and comparing retrieval strategies; I am not presenting this as human-equivalent memory or as proof that every workplace integration is complete.
 - Problem: Professional knowledge is spread across documents, projects, dates, emails, meetings, and other records. Vector search is useful when the wording of a question differs from the source, but semantic similarity can miss who worked on a project, which meeting led to a decision, or how one event relates to another. I investigated whether graph-enhanced retrieval adds useful relationships over vector RAG, and what the quality and response-time trade-offs look like for different question types.
 - Technologies: Vector database, Metadata filtering, Vector RAG, GraphRAG, DeepEval, LLM-as-evaluator
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/ai-digital-twin-retrieval-collage.b59851e5.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/ai-digital-twin-retrieval-collage.b59851e5.webp)
+  - Alt text: Conceptual editorial collage for AI Digital Twin showing project, document, meeting, and email archives connected to vector retrieval, GraphRAG, combined approaches, and retrieval evaluation.
+  - Caption: Conceptual editorial artwork — contextual archives and retrieval experiments. It is not an architecture export, benchmark chart, or claim of human-equivalent memory.
 - Technical decisions:
   - Compare retrieval strategies instead of assuming graph value: The central engineering question is empirical: determine when relationship-aware context adds value over vector similarity and where the additional complexity may not justify itself.
   - Use contextual metadata as part of retrieval reasoning: Projects, dates, source types, emails, and meetings provide context that can narrow or qualify a retrieval request. I leave the exact filter order and implementation unspecified.
@@ -794,6 +870,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: I built a reusable evaluation platform for the question that follows any agent change: did the system improve, and where? The platform was designed to connect to a knowledge base through a small source contract, generate evaluation data from that source, run any compatible agent, and compare experiments with the same dataset and metric configuration. That made it possible to evaluate retrieval agents, tool-using agents, and multi-step workflows without coupling the runner to one implementation.
 - Problem: Manual testing makes it too easy to remember successful conversations and forget the awkward ones. Evaluation also becomes misleading when a dataset is built from one store while the agent searches another, or when every agent is forced into a response shape that hides retrieval and tool behavior. I needed a layer that preserved source context, normalized different agent outputs, and made the same experiment easy to repeat after a prompt, retrieval, model, or workflow change.
 - Technologies: Python, YAML configuration, KB adapters, Metric registry, RAGAS, DeepEval, Opik, LangGraph, pytest
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/ai-agent-evaluation-editorial.c98a6faa.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/ai-agent-evaluation-editorial.c98a6faa.webp)
+  - Alt text: Conceptual editorial illustration of AI agent evaluation with datasets, agent traces, deterministic checks, LLM-based evaluation, experiment comparison, and reproducibility; not a benchmark result or product screenshot.
+  - Caption: Conceptual illustration — datasets, traces, metric families, experiment comparison, and reproducibility. It does not show measured benchmark results.
 - Technical decisions:
   - Make the knowledge-base boundary interchangeable: The builder should not care whether chunks come from a local vector store or an external knowledge base. A shared export-and-search contract keeps dataset creation and evaluation aligned while leaving the storage implementation replaceable.
   - Keep dataset methodology visible: Single-chunk, multi-chunk, and topic-based questions expose different failure modes. Recording the strategy, supporting chunks, source version, and retrieval context makes it possible to compare results without pretending every example measures the same behavior.
@@ -829,6 +909,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: Adding code execution to an AI workspace sounds straightforward until the code is not trusted. I approached the problem from identity and workspace boundaries first: how do I know which user owns a session, what files that session should see, whether the intended workspace is actually mounted, and what artifacts can safely return to the application?
 - Problem: Code execution creates a different trust boundary from text generation. A request can be authenticated and still be routed to the wrong workspace, attached to an unexpected filesystem, or allowed to survive longer than intended. I needed the execution path to verify ownership and runtime state before allowing a managed interpreter session to work with persistent files.
 - Technologies: AWS Bedrock AgentCore Code Interpreter, TypeScript / Fastify CodeAPI adapter, JWT-derived ownership, Persistent EFS workspaces, Managed sessions, Filesystem safety checks, Infrastructure as code, Automated security tests
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/secure-ai-code-execution-editorial.05b12f5c.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/secure-ai-code-execution-editorial.05b12f5c.webp)
+  - Alt text: Conceptual editorial illustration of secure AI code execution showing authenticated requests, a controlled runtime, verified workspace mounts, persistent artifacts, and gated results; not a production architecture diagram.
+  - Caption: Conceptual illustration — runtime boundaries, workspace ownership, persistence, and verified outputs. It does not imply perfect isolation or completed production deployment.
 - Technical decisions:
   - Reject caller-supplied workspace identity: Trusting a workspace ID in the request would make the most important authorization decision part of the user input. Deriving ownership from verified identity gives the gateway one authoritative starting point.
   - Separate execution from the chat application: A dedicated execution service makes runtime, filesystem, session, and artifact controls visible as their own boundary. It also avoids making the conversational application responsible for arbitrary interpreter lifecycle details.
@@ -867,6 +951,10 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - Description: I co-designed and delivered a public industrial machine-vision course with practical material that moves from pixels and image operators to cameras, optics, lighting, factory communication, and learned models. The repository is a collaborative teaching artifact: its value is the learning path and hands-on material, not an individual authorship claim.
 - Problem: Machine vision is often taught as either image processing or model training, while real systems require both technical layers plus physical imaging and industrial integration. The course connects those layers so a learner can understand why field of view, lens choice, illumination, calibration, feature design, dataset construction, and communication all affect the final inspection behavior.
 - Technologies: Python, OpenCV, PyTorch, Image processing, Optics and cameras, Industrial lighting, Thermography, 3D and smart cameras, Industrial communications, CNNs and deep learning
+- Conceptual illustration:
+  - Image URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/industrial-machine-vision-course-editorial.82d5d005.webp](https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/industrial-machine-vision-course-editorial.82d5d005.webp)
+  - Alt text: Conceptual editorial illustration for the Industrial Machine Vision Course showing industrial camera systems, optical principles, field-of-view diagrams, image-processing exercises, and practical inspection education; not a photograph of the actual course or classroom.
+  - Caption: Conceptual editorial artwork — industrial cameras, optics, field of view, image processing, and inspection education. The authentic course labs and diagrams remain available in the gallery below.
 - Contributions:
   - Digital image processing: pixels, RGB and bit depth, filtering, edges, brightness and contrast, histograms, binarization, morphology, connected components, and shape or texture features.
   - Dimensioning systems: cameras, lenses, optics, field of view, resolution, depth of field, lighting, polarization, filters, thermography, optical gas imaging, 3D, hyperspectral and multispectral approaches.

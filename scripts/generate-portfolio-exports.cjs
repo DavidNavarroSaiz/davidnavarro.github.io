@@ -114,8 +114,15 @@ function mapArchitecture(architecture) {
 	};
 }
 
+function getEditorialAssetFile(editorialCover) {
+	const source = editorialCover?.img;
+	const sourcePath = typeof source === 'string' ? source : source?.src;
+	return sourcePath ? path.basename(sourcePath.split('?')[0]) : null;
+}
+
 function buildProjectRecord(project) {
 	const caseStudy = project.caseStudy || {};
+	const editorialCover = caseStudy.editorialCover || project.editorialCover;
 	const projectInfo = project.ProjectInfo || {};
 	const companyInfo = projectInfo.CompanyInfo || [];
 	const technologies = (projectInfo.Technologies || []).flatMap((group) => group.techs || []);
@@ -125,6 +132,15 @@ function buildProjectRecord(project) {
 		url: compact(link.href),
 	}));
 	const relatedProjectIds = Array.isArray(project.relatedProjectIds) ? project.relatedProjectIds : [];
+
+	const editorialAssetFile = getEditorialAssetFile(editorialCover);
+	const conceptualIllustration = editorialCover
+		? {
+				alt: compact(editorialCover.alt),
+				caption: compact(editorialCover.caption),
+				...(editorialAssetFile ? { assetFile: editorialAssetFile } : {}),
+			}
+		: null;
 
 	return {
 		id: project.id,
@@ -152,12 +168,7 @@ function buildProjectRecord(project) {
 		limitations: asSectionList(caseStudy.limitations),
 		evidenceLinks,
 		relatedProjectIds,
-		conceptualIllustration: caseStudy.editorialCover
-			? {
-				alt: compact(caseStudy.editorialCover.alt),
-				caption: compact(caseStudy.editorialCover.caption),
-			}
-			: null,
+		conceptualIllustration,
 		publicFacts: Object.fromEntries(
 			companyInfo
 				.filter((item) => item.title && item.details)
@@ -407,6 +418,18 @@ function renderMarkdown(profile) {
 		if (project.description) lines.push(`- Description: ${project.description}`);
 		if (project.problem) lines.push(`- Problem: ${project.problem}`);
 		if (project.technologies.length) lines.push(`- Technologies: ${project.technologies.join(', ')}`);
+		if (project.conceptualIllustration) {
+			lines.push('- Conceptual illustration:');
+			if (project.conceptualIllustration.url) {
+				lines.push(`  - Image URL: ${markdownLink(project.conceptualIllustration.url, project.conceptualIllustration.url)}`);
+			}
+			if (project.conceptualIllustration.alt) {
+				lines.push(`  - Alt text: ${project.conceptualIllustration.alt}`);
+			}
+			if (project.conceptualIllustration.caption) {
+				lines.push(`  - Caption: ${project.conceptualIllustration.caption}`);
+			}
+		}
 		appendSectionList(lines, 'Responsibilities', project.responsibilities);
 		appendSectionList(lines, 'Contributions', project.contributions.map((text) => ({ text })));
 		appendSectionList(lines, 'Technical decisions', project.technicalDecisions);
@@ -464,4 +487,4 @@ function writeOutputs() {
 
 if (require.main === module) writeOutputs();
 
-module.exports = { buildPortfolioExport, renderLlmsTxt, renderMarkdown, writeOutputs };
+module.exports = { buildPortfolioExport, buildProjectRecord, renderLlmsTxt, renderMarkdown, writeOutputs };

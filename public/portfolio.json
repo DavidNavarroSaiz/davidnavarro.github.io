@@ -847,7 +847,8 @@
       ],
       "conceptualIllustration": {
         "alt": "Conceptual editorial illustration of PM AI Agent showing Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration; not a deployed-system screenshot.",
-        "caption": "Conceptual illustration — Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration. The factual architecture diagram below remains the technical source."
+        "caption": "Conceptual illustration — Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration. The factual architecture diagram below remains the technical source.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/pm-ai-agent-system-architecture.71bf9b2c.webp"
       },
       "publicFacts": {
         "Type": "AI Project Management Tool",
@@ -898,7 +899,11 @@
       "limitations": [],
       "evidenceLinks": [],
       "relatedProjectIds": [],
-      "conceptualIllustration": null,
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of semantic candidate recommendation showing a job brief, candidate knowledge base, vector retrieval, structured comparison, ranked recommendations, and supporting evidence; not genuine candidate records or experimental rankings.",
+        "caption": "Conceptual illustration — semantic retrieval, structured candidate comparison, ranked recommendations, and supporting evidence. The depicted records and rankings are illustrative, not experimental results.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/candidate-recommendation-editorial-cover.a692f72c.webp"
+      },
       "publicFacts": {
         "Type": "HR Tech Platform",
         "Role": "Machine Learning Engineer",
@@ -1065,7 +1070,8 @@
       "relatedProjectIds": [],
       "conceptualIllustration": {
         "alt": "Conceptual editorial illustration for COVID-Rx showing chest X-ray preprocessing, convolutional feature extraction, CNN model families, and comparative evaluation; not a clinical screenshot or measured benchmark chart.",
-        "caption": "Conceptual illustration — chest X-ray preprocessing, CNN feature extraction, and comparative evaluation. Embedded charts are illustrative, not experimental results."
+        "caption": "Conceptual illustration — chest X-ray preprocessing, CNN feature extraction, and comparative evaluation. Embedded charts are illustrative, not experimental results.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/covid-rx-editorial-cover.6230062f.webp"
       },
       "publicFacts": {
         "Institution": "University of Magdalena",
@@ -1212,7 +1218,8 @@
       "relatedProjectIds": [],
       "conceptualIllustration": {
         "alt": "Conceptual editorial illustration for AbogacIA showing legal knowledge retrieval, related cases, and assisted document drafting; not an actual legal-system architecture diagram or legal advice.",
-        "caption": "Conceptual illustration — legal retrieval, case context, and drafting support. It does not represent proprietary system state or guarantee legal correctness."
+        "caption": "Conceptual illustration — legal retrieval, case context, and drafting support. It does not represent proprietary system state or guarantee legal correctness.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/abogacia-editorial-cover.8f93caba.webp"
       },
       "publicFacts": {
         "Type": "Legal Tech Platform",
@@ -1263,7 +1270,11 @@
       "limitations": [],
       "evidenceLinks": [],
       "relatedProjectIds": [],
-      "conceptualIllustration": null,
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of automatic lead management showing lead sources, AI orchestration, CRM integration, automated email/SMS communication, and assignment stages; not a screenshot or actual customer records.",
+        "caption": "Conceptual illustration — lead capture, GPT-assisted communication, CRM actions, and lifecycle stages. It is not a screenshot or actual customer data.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/automatic-lead-management-editorial.fef6459f.webp"
+      },
       "publicFacts": {
         "Type": "Lead Management Platform",
         "Domain": "Sales Automation",
@@ -1315,7 +1326,11 @@
       "limitations": [],
       "evidenceLinks": [],
       "relatedProjectIds": [],
-      "conceptualIllustration": null,
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of AI-generated monthly reports showing source materials, structured extraction, report generation, and publishing workflow; not an actual client report or measured result.",
+        "caption": "Conceptual illustration — source-material collection, structured processing, monthly report generation, and document publishing. It is not an actual client report or measured result.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/ai-generated-monthly-reports-editorial.11d6c44d.webp"
+      },
       "publicFacts": {
         "Type": "AI Report Generation Platform",
         "Domain": "Property Management & Business Intelligence",
@@ -1367,7 +1382,11 @@
       "limitations": [],
       "evidenceLinks": [],
       "relatedProjectIds": [],
-      "conceptualIllustration": null,
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of a lead generation system showing ICP discovery, company research, and outreach/CRM handoff; not a screenshot or actual prospect data.",
+        "caption": "Conceptual illustration — ICP discovery, company research, personalized outreach, and CRM handoff. It is not a screenshot or actual prospect data.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/lead-generation-system-editorial.16193f15.webp"
+      },
       "publicFacts": {
         "Type": "Self-Hosted Automation Platform",
         "Domain": "Lead Generation & Cold Outreach",
@@ -1419,7 +1438,11 @@
       "limitations": [],
       "evidenceLinks": [],
       "relatedProjectIds": [],
-      "conceptualIllustration": null,
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of a permission-aware healthcare resource recommender showing multimodal resources, semantic context, and role-aware retrieval; not a patient record or clinical recommendation.",
+        "caption": "Conceptual illustration — multimodal resource ingestion, semantic retrieval, and permission-aware access for healthcare teams. It does not represent a patient record or a clinical recommendation.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/healthcare-resource-recommender-editorial.c5cca132.webp"
+      },
       "publicFacts": {
         "Company": "Healthcare Technology Platform",
         "Role": "Machine Learning Team Leader",
@@ -1471,7 +1494,11 @@
       "limitations": [],
       "evidenceLinks": [],
       "relatedProjectIds": [],
-      "conceptualIllustration": null,
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of a community health workers platform showing speech-to-form capture, visit reports, contextual data access, and care-plan drafting; not an actual patient record or clinical outcome.",
+        "caption": "Conceptual illustration — speech-to-form capture, structured visit reporting, contextual access, and care-plan drafting. It is not an actual patient record or clinical outcome.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/community-health-workers-editorial.aafa623c.webp"
+      },
       "publicFacts": {
         "Company": "Healthcare Technology Platform",
         "Role": "Machine Learning Team Leader",
@@ -1645,7 +1672,8 @@
       ],
       "conceptualIllustration": {
         "alt": "Conceptual editorial illustration of industrial computer-vision inspection showing camera and lens selection, engineered illumination, image processing stages, inspection decisions, and PLC factory automation; not a photograph of a deployed customer installation.",
-        "caption": "Conceptual illustration — industrial camera inspection, optics and illumination, processing stages, and factory automation. It represents recurring system patterns, not a photograph of a deployed customer installation."
+        "caption": "Conceptual illustration — industrial camera inspection, optics and illumination, processing stages, and factory automation. It represents recurring system patterns, not a photograph of a deployed customer installation.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/industrial-computer-vision-editorial-cover.44c9a5bb.webp"
       },
       "publicFacts": {
         "Company": "Intecol SAS",
@@ -1699,7 +1727,11 @@
       "limitations": [],
       "evidenceLinks": [],
       "relatedProjectIds": [],
-      "conceptualIllustration": null,
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of a real-time voice agent showing bidirectional audio, WebSockets, agent runtime, and tool actions; not a live call trace or measured latency result.",
+        "caption": "Conceptual illustration — bidirectional audio, WebSocket transport, agent runtime, and tool actions. It is not a live call trace or measured latency result.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/realtime-voice-agent-editorial.16be037c.webp"
+      },
       "publicFacts": {
         "Type": "Realtime AI Voice Server",
         "Role": "Lead AI Engineer & Backend Developer",
@@ -1750,7 +1782,11 @@
       "limitations": [],
       "evidenceLinks": [],
       "relatedProjectIds": [],
-      "conceptualIllustration": null,
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of an MCP Azure DevOps server showing natural-language requests, a protocol boundary, structured tool calls, and Azure DevOps work-item operations; not a screenshot or a claim of repository or build-pipeline execution.",
+        "caption": "Conceptual illustration — MCP request handling and structured Azure DevOps work-item operations. It does not depict repository or build-pipeline execution.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/mcp-azure-devops-server-editorial.1b51d1f7.webp"
+      },
       "publicFacts": {
         "Type": "AI Integration Server for Azure DevOps",
         "Role": "AI Engineer & Backend Developer",
@@ -1801,7 +1837,11 @@
       "limitations": [],
       "evidenceLinks": [],
       "relatedProjectIds": [],
-      "conceptualIllustration": null,
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of CCTV safety detection with fixed-camera observation, PPE and spatial safety zones, and human review; not detection output or a customer installation.",
+        "caption": "Conceptual illustration — fixed-camera safety observation, PPE and spatial rules, and review flow. It is not a detection result or a photograph of a deployed installation.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/cctv-safety-detection-editorial.e4ac35a8.webp"
+      },
       "publicFacts": {
         "Type": "Industrial Safety Monitoring System",
         "Role": "ML Engineer & Full-Stack Developer",
@@ -1933,7 +1973,11 @@
         15,
         1
       ],
-      "conceptualIllustration": null,
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of a parallel document ingestion pipeline showing FastAPI intake, RabbitMQ queues, Celery workers, Marker parsing, and pgVector retrieval storage; not an actual production dashboard or measured throughput.",
+        "caption": "Conceptual illustration — parallel document intake, queued workers, structured parsing, and vector storage. The authentic project gallery and technical diagram remain the implementation evidence.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/parallel-document-ingestion-editorial.ffbed87e.webp"
+      },
       "publicFacts": {
         "Type": "Scalable RAG Document Ingestion System",
         "Role": "AI Infrastructure Engineer",
@@ -2138,7 +2182,8 @@
       ],
       "conceptualIllustration": {
         "alt": "Conceptual illustration of a coding-agent evaluation workbench with a clean baseline, captured run evidence, deterministic checks, and comparative reporting; not a screenshot, benchmark result, or measured interface.",
-        "caption": "Conceptual illustration — reproducible coding-agent evaluation and evidence flow. It does not depict measured benchmark results or a production interface."
+        "caption": "Conceptual illustration — reproducible coding-agent evaluation and evidence flow. It does not depict measured benchmark results or a production interface.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/coding-agent-evaluation-v2.0401e082.webp"
       },
       "publicFacts": {
         "Type": "Internal engineering evaluation workbench",
@@ -2302,7 +2347,8 @@
       ],
       "conceptualIllustration": {
         "alt": "Conceptual illustration of an enterprise AI workspace with users, agents, retrieval, cloud infrastructure, integrations, and controlled capabilities; not a deployed infrastructure diagram or product screenshot.",
-        "caption": "Conceptual illustration — an enterprise AI workspace, retrieval layer, cloud application surface, integrations, and capability boundaries. The diagrams below show the technical relationships at a shareable level."
+        "caption": "Conceptual illustration — an enterprise AI workspace, retrieval layer, cloud application surface, integrations, and capability boundaries. The diagrams below show the technical relationships at a shareable level.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/enterprise-ai-workspace-editorial.55011ca2.webp"
       },
       "publicFacts": {
         "Role": "AI Platform Engineer",
@@ -2471,7 +2517,8 @@
       ],
       "conceptualIllustration": {
         "alt": "Conceptual illustration of policy-governed AI agents moving through stateful orchestration, authorization checks, verified actions, and escalation paths; not a private production state machine or product screenshot.",
-        "caption": "Conceptual illustration — stateful orchestration, authorization boundaries, verified actions, and escalation. It does not reproduce a private workflow or policy."
+        "caption": "Conceptual illustration — stateful orchestration, authorization boundaries, verified actions, and escalation. It does not reproduce a private workflow or policy.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/policy-governed-ai-agents-editorial.6b8153aa.webp"
       },
       "publicFacts": {
         "Role": "Staff AI Engineer / Agent Reliability",
@@ -2635,7 +2682,8 @@
       ],
       "conceptualIllustration": {
         "alt": "Conceptual editorial illustration for Professional Cases showing documents, images, knowledge organization, case generation, and assessment. Audio and video symbols are visual motifs only; the current implementation is text-first and does not claim speech support.",
-        "caption": "Conceptual editorial artwork — documents, images, knowledge organization, scenario generation, and assessment. The audio/video symbols are not evidence of implemented modalities; the verified product boundary is text-first and in development."
+        "caption": "Conceptual editorial artwork — documents, images, knowledge organization, scenario generation, and assessment. The audio/video symbols are not evidence of implemented modalities; the verified product boundary is text-first and in development.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/professional-cases-editorial.581312f2.webp"
       },
       "publicFacts": {
         "Type": "Independent project",
@@ -2785,7 +2833,8 @@
       ],
       "conceptualIllustration": {
         "alt": "Conceptual editorial collage for AI Digital Twin showing project, document, meeting, and email archives connected to vector retrieval, GraphRAG, combined approaches, and retrieval evaluation.",
-        "caption": "Conceptual editorial artwork — contextual archives and retrieval experiments. It is not an architecture export, benchmark chart, or claim of human-equivalent memory."
+        "caption": "Conceptual editorial artwork — contextual archives and retrieval experiments. It is not an architecture export, benchmark chart, or claim of human-equivalent memory.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/ai-digital-twin-retrieval-collage.b59851e5.webp"
       },
       "publicFacts": {
         "Type": "Engineering project",
@@ -2946,7 +2995,8 @@
       ],
       "conceptualIllustration": {
         "alt": "Conceptual editorial illustration of AI agent evaluation with datasets, agent traces, deterministic checks, LLM-based evaluation, experiment comparison, and reproducibility; not a benchmark result or product screenshot.",
-        "caption": "Conceptual illustration — datasets, traces, metric families, experiment comparison, and reproducibility. It does not show measured benchmark results."
+        "caption": "Conceptual illustration — datasets, traces, metric families, experiment comparison, and reproducibility. It does not show measured benchmark results.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/ai-agent-evaluation-editorial.c98a6faa.webp"
       },
       "publicFacts": {
         "Role": "AI Evaluation Engineer",
@@ -3113,7 +3163,8 @@
       ],
       "conceptualIllustration": {
         "alt": "Conceptual editorial illustration of secure AI code execution showing authenticated requests, a controlled runtime, verified workspace mounts, persistent artifacts, and gated results; not a production architecture diagram.",
-        "caption": "Conceptual illustration — runtime boundaries, workspace ownership, persistence, and verified outputs. It does not imply perfect isolation or completed production deployment."
+        "caption": "Conceptual illustration — runtime boundaries, workspace ownership, persistence, and verified outputs. It does not imply perfect isolation or completed production deployment.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/secure-ai-code-execution-editorial.05b12f5c.webp"
       },
       "publicFacts": {
         "Role": "AI Platform Engineer",
@@ -3274,7 +3325,8 @@
       ],
       "conceptualIllustration": {
         "alt": "Conceptual editorial illustration for the Industrial Machine Vision Course showing industrial camera systems, optical principles, field-of-view diagrams, image-processing exercises, and practical inspection education; not a photograph of the actual course or classroom.",
-        "caption": "Conceptual editorial artwork — industrial cameras, optics, field of view, image processing, and inspection education. The authentic course labs and diagrams remain available in the gallery below."
+        "caption": "Conceptual editorial artwork — industrial cameras, optics, field of view, image processing, and inspection education. The authentic course labs and diagrams remain available in the gallery below.",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/_next/static/media/industrial-machine-vision-course-editorial.82d5d005.webp"
       },
       "publicFacts": {
         "Role": "Co-designer and instructor",

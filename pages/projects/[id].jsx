@@ -31,20 +31,20 @@ function ProjectSingle(props) {
 			<PagesMetaHead title={props.project.title} />
 
 			{/* Header */}
-			<div className="bg-gray-900 border border-gray-700 rounded-xl p-8 mb-8">
-				<h1 className="font-general-semibold text-left text-3xl sm:text-4xl font-bold text-white mt-14 sm:mt-20 mb-7">
+			<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 sm:p-8 mb-8">
+				<h1 className="font-general-semibold text-left text-3xl sm:text-4xl font-bold text-white mt-8 sm:mt-12 mb-6">
 					{props.project.ProjectHeader.title}
 				</h1>
-				<div className="flex flex-wrap gap-6">
-					<div className="flex items-center">
+				<div className="grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:gap-6">
+					<div className="flex w-full min-w-0 items-center sm:w-auto">
 						<FiClock className="text-xl text-dev-blue" />
-						<span className="font-general-regular ml-2 leading-none text-gray-300">
+						<span className="font-general-regular ml-2 min-w-0 flex-1 break-words leading-tight text-gray-300">
 							{props.project.ProjectHeader.publishDate}
 						</span>
 					</div>
-					<div className="flex items-center">
+					<div className="flex w-full min-w-0 items-start sm:w-auto sm:items-center">
 						<FiTag className="w-4 h-4 text-dev-blue" />
-						<span className="font-general-regular ml-2 leading-none text-gray-300">
+						<span className="font-general-regular ml-2 min-w-0 flex-1 break-words leading-tight text-gray-300">
 							{props.project.ProjectHeader.tags}
 						</span>
 					</div>
