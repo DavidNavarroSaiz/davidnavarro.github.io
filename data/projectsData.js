@@ -24,6 +24,15 @@ import industrialComputerVisionEditorialCover from '../assets/images/industrial-
 import realtime1_640 from '../assets/images/realtime1-640.webp';
 import mcp1_640 from '../assets/images/mcp1-640.webp';
 import cctv1_640 from '../assets/images/cctv1-640.webp';
+import parallelDocumentIngestionEditorialCover from '../assets/images/parallel-document-ingestion-editorial.webp';
+import mcpAzureDevOpsServerEditorialCover from '../assets/images/mcp-azure-devops-server-editorial.webp';
+import cctvSafetyDetectionEditorialCover from '../assets/images/cctv-safety-detection-editorial.webp';
+import healthcareResourceRecommenderEditorialCover from '../assets/images/healthcare-resource-recommender-editorial.webp';
+import communityHealthWorkersEditorialCover from '../assets/images/community-health-workers-editorial.webp';
+import automaticLeadManagementEditorialCover from '../assets/images/automatic-lead-management-editorial.webp';
+import aiGeneratedMonthlyReportsEditorialCover from '../assets/images/ai-generated-monthly-reports-editorial.webp';
+import leadGenerationSystemEditorialCover from '../assets/images/lead-generation-system-editorial.webp';
+import realtimeVoiceAgentEditorialCover from '../assets/images/realtime-voice-agent-editorial.webp';
 import rg1_960 from '../assets/images/rg1-960.webp';
 import rg2_960 from '../assets/images/rg2-960.webp';
 import rg3_960 from '../assets/images/rg3-960.webp';
@@ -933,7 +942,15 @@ export const projectsData = [
 		category: 'AI Automation',
 		summary:
 			'Lead capture and outreach across email and SMS, with HubSpot sync and GPT-written replies.',
-		img: lead3_640,
+		img: automaticLeadManagementEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration of automatic lead management showing lead sources, AI orchestration, CRM integration, automated email/SMS communication, and assignment stages; not a screenshot or actual customer records.',
+		editorialCover: {
+			img: automaticLeadManagementEditorialCover,
+			alt: 'Conceptual editorial illustration of automatic lead management showing lead sources, AI orchestration, CRM integration, automated email/SMS communication, and assignment stages; not a screenshot or actual customer records.',
+			caption:
+				'Conceptual illustration — lead capture, GPT-assisted communication, CRM actions, and lifecycle stages. It is not a screenshot or actual customer data.',
+		},
 		ProjectHeader: {
 			title: 'Automatic Lead Management',
 			publishDate: '2025',
@@ -1033,7 +1050,15 @@ export const projectsData = [
 			category: 'AI Automation',
 			summary:
 				'Automated reporting pipeline that collects a month of property data and drafts client-ready documents in Google Docs.',
-		img: make2_640,
+		img: aiGeneratedMonthlyReportsEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration of AI-generated monthly reports showing source materials, structured extraction, report generation, and publishing workflow; not an actual client report or measured result.',
+		editorialCover: {
+			img: aiGeneratedMonthlyReportsEditorialCover,
+			alt: 'Conceptual editorial illustration of AI-generated monthly reports showing source materials, structured extraction, report generation, and publishing workflow; not an actual client report or measured result.',
+			caption:
+				'Conceptual illustration — source-material collection, structured processing, monthly report generation, and document publishing. It is not an actual client report or measured result.',
+		},
 			ProjectHeader: {
 				title: 'AI-Generated Monthly Reports',
 				publishDate: '2025',
@@ -1135,7 +1160,15 @@ export const projectsData = [
 			category: 'AI Automation',
 			summary:
 				'Self-hosted n8n workflows that identify ideal customer profiles, enrich company data, and run personalized cold-email campaigns.',
-		img: make1_640,
+		img: leadGenerationSystemEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration of a lead generation system showing ICP discovery, company research, and outreach/CRM handoff; not a screenshot or actual prospect data.',
+		editorialCover: {
+			img: leadGenerationSystemEditorialCover,
+			alt: 'Conceptual editorial illustration of a lead generation system showing ICP discovery, company research, and outreach/CRM handoff; not a screenshot or actual prospect data.',
+			caption:
+				'Conceptual illustration — ICP discovery, company research, personalized outreach, and CRM handoff. It is not a screenshot or actual prospect data.',
+		},
 			ProjectHeader: {
 				title: 'Lead Generation System',
 				publishDate: '2025',
@@ -1237,7 +1270,15 @@ export const projectsData = [
 			category: 'LLMs and RAG',
 			summary:
 				'Permissions-aware resource hub with RAG search, built for community health workers and their teams.',
-		img: health1_640,
+		img: healthcareResourceRecommenderEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration of a permission-aware healthcare resource recommender showing multimodal resources, semantic context, and role-aware retrieval; not a patient record or clinical recommendation.',
+		editorialCover: {
+			img: healthcareResourceRecommenderEditorialCover,
+			alt: 'Conceptual editorial illustration of a permission-aware healthcare resource recommender showing multimodal resources, semantic context, and role-aware retrieval; not a patient record or clinical recommendation.',
+			caption:
+				'Conceptual illustration — multimodal resource ingestion, semantic retrieval, and permission-aware access for healthcare teams. It does not represent a patient record or a clinical recommendation.',
+		},
 			ProjectHeader: {
 				title: 'Healthcare Resource Recommender System',
 				publishDate: '2024',
@@ -1339,7 +1380,15 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'Speech-to-forms assistant that transcribes home visits and drafts structured reports and care plans.',
-		img: speech1_640,
+		img: communityHealthWorkersEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration of a community health workers platform showing speech-to-form capture, visit reports, contextual data access, and care-plan drafting; not an actual patient record or clinical outcome.',
+		editorialCover: {
+			img: communityHealthWorkersEditorialCover,
+			alt: 'Conceptual editorial illustration of a community health workers platform showing speech-to-form capture, visit reports, contextual data access, and care-plan drafting; not an actual patient record or clinical outcome.',
+			caption:
+				'Conceptual illustration — speech-to-form capture, structured visit reporting, contextual access, and care-plan drafting. It is not an actual patient record or clinical outcome.',
+		},
 		ProjectHeader: {
 			title: 'Community Health Workers Platform',
 			publishDate: '2024 – 2025',
@@ -1713,7 +1762,15 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'Low-latency voice agent over WebSockets and Twilio, with real-time prompt control and multi-agent tool calling.',
-		img: realtime1_640,
+		img: realtimeVoiceAgentEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration of a real-time voice agent showing bidirectional audio, WebSockets, agent runtime, and tool actions; not a live call trace or measured latency result.',
+		editorialCover: {
+			img: realtimeVoiceAgentEditorialCover,
+			alt: 'Conceptual editorial illustration of a real-time voice agent showing bidirectional audio, WebSockets, agent runtime, and tool actions; not a live call trace or measured latency result.',
+			caption:
+				'Conceptual illustration — bidirectional audio, WebSocket transport, agent runtime, and tool actions. It is not a live call trace or measured latency result.',
+		},
 		ProjectHeader: {
 			title: 'RealTime Voice Agent',
 			publishDate: 'Mar 2025',
@@ -1828,7 +1885,15 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'Model Context Protocol server that lets AI assistants query and manage Azure DevOps work items in natural language.',
-		img: mcp1_640,
+		img: mcpAzureDevOpsServerEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration of an MCP Azure DevOps server showing natural-language requests, a protocol boundary, structured tool calls, and Azure DevOps work-item operations; not a screenshot or a claim of repository or build-pipeline execution.',
+		editorialCover: {
+			img: mcpAzureDevOpsServerEditorialCover,
+			alt: 'Conceptual editorial illustration of an MCP Azure DevOps server showing natural-language requests, a protocol boundary, structured tool calls, and Azure DevOps work-item operations; not a screenshot or a claim of repository or build-pipeline execution.',
+			caption:
+				'Conceptual illustration — MCP request handling and structured Azure DevOps work-item operations. It does not depict repository or build-pipeline execution.',
+		},
 		ProjectHeader: {
 			title: 'MCP Azure DevOps Server',
 			publishDate: 'Mar 2025',
@@ -1932,7 +1997,15 @@ export const projectsData = [
 		category: 'Computer Vision / Edge AI',
 		summary:
 			'On-prem GPU pipeline that checks PPE and safety rules across live CCTV streams and alerts supervisors.',
-		img: cctv1_640,
+		img: cctvSafetyDetectionEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration of CCTV safety detection with fixed-camera observation, PPE and spatial safety zones, and human review; not detection output or a customer installation.',
+		editorialCover: {
+			img: cctvSafetyDetectionEditorialCover,
+			alt: 'Conceptual editorial illustration of CCTV safety detection with fixed-camera observation, PPE and spatial safety zones, and human review; not detection output or a customer installation.',
+			caption:
+				'Conceptual illustration — fixed-camera safety observation, PPE and spatial rules, and review flow. It is not a detection result or a photograph of a deployed installation.',
+		},
 		ProjectHeader: {
 			title: 'CCTV Safety Detection',
 			publishDate: '2023',
@@ -2041,7 +2114,9 @@ export const projectsData = [
 		category: 'RAG Infrastructure / Distributed Systems',
 		summary:
 			'Distributed ingestion service that parses PDFs, generates embeddings, and tracks progress for large RAG corpora.',
-		img: markerArch,
+		img: parallelDocumentIngestionEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration of a parallel document ingestion pipeline showing FastAPI intake, RabbitMQ queues, Celery workers, Marker parsing, and pgVector retrieval storage; not an actual production dashboard or measured throughput.',
 		relatedProjectIds: [19, 16, 15, 1],
 		featured: {
 			rank: 2,
@@ -2054,7 +2129,7 @@ export const projectsData = [
 				'Distributed processing',
 				'Data pipelines',
 			],
-			alt: 'Parallel ingestion flow: FastAPI routes uploads into queued Celery workers that parse, embed, and store vectors in pgVector.',
+			alt: 'Conceptual editorial illustration of a parallel document ingestion pipeline showing FastAPI intake, RabbitMQ queues, Celery workers, Marker parsing, and pgVector retrieval storage; not an actual production dashboard or measured throughput.',
 		},
 		ProjectHeader: {
 			title: 'Parallel Document Ingestion Pipeline',
@@ -2142,6 +2217,12 @@ export const projectsData = [
 		// Only sections with record-supported content are rendered;
 		// historical figures without documented methodology are left out.
 		caseStudy: {
+			editorialCover: {
+				img: parallelDocumentIngestionEditorialCover,
+				alt: 'Conceptual editorial illustration of a parallel document ingestion pipeline showing FastAPI intake, RabbitMQ queues, Celery workers, Marker parsing, and pgVector retrieval storage; not an actual production dashboard or measured throughput.',
+				caption:
+					'Conceptual illustration — parallel document intake, queued workers, structured parsing, and vector storage. The authentic project gallery and technical diagram remain the implementation evidence.',
+			},
 			overview:
 				'A distributed ingestion service that turns large collections of PDFs, text, and mixed-format documents into vector embeddings for RAG systems, built around FastAPI intake, Celery workers, RabbitMQ messaging, Marker parsing, and pgVector storage.',
 			problem:
