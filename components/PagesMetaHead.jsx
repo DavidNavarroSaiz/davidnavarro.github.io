@@ -27,7 +27,15 @@ function PagesMetaHead({ title, keywords, description }) {
 			<meta name="keywords" content={keywords} />
 			<meta name="description" content={description} />
 			<meta charSet="utf-8" />
-			<link rel="icon" href={`${basePath}/images/DN-Logo.svg`} />
+			<link
+				rel="icon"
+				type="image/svg+xml"
+				href={`${basePath}/images/dn-favicon.svg`}
+			/>
+			<link
+				rel="apple-touch-icon"
+				href={`${basePath}/images/dn-favicon-180.png`}
+			/>
 			<link rel="canonical" href={canonical} />
 			<meta property="og:type" content="website" />
 			<meta property="og:site_name" content="David Navarro" />

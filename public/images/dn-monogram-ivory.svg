@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 96" role="img" aria-labelledby="title desc">
+  <title id="title">DN monogram, monochrome ivory</title>
+  <desc id="desc">Monochrome ivory geometric DN monogram.</desc>
+  <path fill="#EFE8DC" fill-rule="evenodd" d="M8 14h46c21 0 38 14 38 34S75 82 54 82H8V14Zm18 18v32h28c11 0 20-7 20-16s-9-16-20-16H26Z"/>
+  <path fill="#EFE8DC" d="M56 14h18l30 31V14h18v68h-18L74 51v31H56V14Z"/>
+  <path fill="#EFE8DC" d="M84 4h18l12 12v12h-12L84 16V4Z"/>
+</svg>
