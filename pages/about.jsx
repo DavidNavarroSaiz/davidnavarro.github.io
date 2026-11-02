@@ -7,6 +7,7 @@ import AboutEducation from '../components/about/AboutEducation';
 import PagesMetaHead from '../components/PagesMetaHead';
 import StructuredProfileData from '../components/StructuredProfileData';
 import { experienceData } from '../data/experienceData';
+import { trackUmamiEvent } from '../utils/analytics';
 
 function about() {
 	return (
@@ -56,6 +57,7 @@ function about() {
 					</Link>
 					<Link
 						href="/portfolio.md"
+						onClick={() => trackUmamiEvent('ai_profile_opened')}
 						className="mt-4 block text-xs font-mono uppercase tracking-[0.14em] text-gray-500 transition-colors duration-200 hover:text-dev-blue"
 					>
 						Machine-readable profile

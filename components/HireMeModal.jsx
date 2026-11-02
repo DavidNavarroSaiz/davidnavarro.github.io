@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
 import { sendHireMeEmail } from '../utils/emailService';
+import { trackUmamiEvent } from '../utils/analytics';
 
 const selectOptions = [
 	'Machine Learning',
@@ -103,6 +104,7 @@ function HireMeModal({ onClose, onRequest }) {
 			});
 
 			if (result.success) {
+				trackUmamiEvent('contact_submit_success');
 				setSubmitStatus('success');
 				setFormData({
 					name: '',

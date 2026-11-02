@@ -3,6 +3,7 @@ import { FiSearch, FiX } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import { orderedProjects } from '../../data/projectsData';
 import ProjectsFilter from './ProjectsFilter';
+import { trackUmamiEvent } from '../../utils/analytics';
 
 const ALL_CATEGORIES = 'All';
 
@@ -123,7 +124,13 @@ function ProjectsGrid() {
 							key={option.value}
 							type="button"
 							aria-pressed={view === option.value}
-							onClick={() => setView(option.value)}
+							onClick={() => {
+								if (view === option.value) return;
+								setView(option.value);
+								trackUmamiEvent('project_view_changed', {
+									view: option.value,
+								});
+							}}
 							className="rounded-md border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-general-semibold uppercase tracking-[0.12em] text-gray-300 transition-colors duration-200 hover:border-dev-blue/50 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dev-blue/70 motion-reduce:transition-none"
 						>
 							{option.label}

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import AppFooterCopyright from './AppFooterCopyright';
+import { trackUmamiEvent } from '../../utils/analytics';
 
 const socialLinks = [
 	{
@@ -46,6 +47,16 @@ function AppFooter() {
 										href={link.url}
 										target="_blank"
 										rel="noopener noreferrer"
+										onClick={() =>
+										trackUmamiEvent(
+											link.label === 'LinkedIn'
+												? 'linkedin_outbound'
+												: 'github_outbound',
+											{
+												destination: link.label.toLowerCase(),
+											},
+										)
+									}
 										className="footer-social-link"
 									>
 										<span aria-hidden="true">{link.icon}</span>

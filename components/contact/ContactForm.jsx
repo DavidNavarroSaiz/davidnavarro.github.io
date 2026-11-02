@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
 import { sendEmail } from '../../utils/emailService';
+import { trackUmamiEvent } from '../../utils/analytics';
 
 function ContactForm() {
 	const [formData, setFormData] = useState({
@@ -30,6 +31,7 @@ function ContactForm() {
 			const result = await sendEmail(formData);
 
 			if (result.success) {
+				trackUmamiEvent('contact_submit_success');
 				setSubmitStatus('success');
 				setFormData({
 					name: '',

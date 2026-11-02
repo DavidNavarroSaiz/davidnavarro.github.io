@@ -9,6 +9,7 @@ import {
 import profileImage from '../../assets/images/profile-portrait.webp';
 import logo from '../../public/images/DN-Logo.svg';
 import { experienceYears } from '../../data/experienceData';
+import { trackUmamiEvent } from '../../utils/analytics';
 
 function AppHero({ cvs = [] }) {
 	const router = useRouter();
@@ -64,6 +65,14 @@ function AppHero({ cvs = [] }) {
 										key={cv.file}
 										download={cv.file}
 										href={`${basePath}/files/${cv.file}`}
+										onClick={() =>
+											trackUmamiEvent('cv_download_click', {
+												cv_type: cv.file.includes('Evaluation_Research')
+													? 'evaluation_research'
+													: 'senior_ai_engineer',
+												placement: 'hero',
+											})
+									}
 										className="hero-resume-link"
 									>
 										<FiArrowDownCircle

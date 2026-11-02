@@ -3,6 +3,7 @@ import '../styles/components.css';
 import { AnimatePresence, MotionConfig } from 'framer-motion';
 import Head from 'next/head';
 import DefaultLayout from '../components/layout/DefaultLayout';
+import UmamiAnalytics from '../components/analytics/UmamiAnalytics';
 import UseScrollToTop from '../hooks/useScrollToTop';
 import PageTransition from '../components/shared/PageTransition';
 
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
 					assets (basePath-aware). Do not add absolute-path preloads
 					here: they 404 under the GitHub Pages subpath. */}
 			</Head>
+			<UmamiAnalytics />
 			<MotionConfig reducedMotion="user">
 				<AnimatePresence>
 					<div className="bg-primary-dark dark:bg-primary-dark transition duration-300">
