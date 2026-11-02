@@ -14,6 +14,7 @@ const ProjectSingle = ({
 	cardEyebrow,
 	cardTitle,
 	cardStatus,
+	projectPeriod,
 	priority = false,
 }) => {
 	const technologies = ProjectInfo?.Technologies?.[0]?.techs ?? [];
@@ -56,9 +57,16 @@ const ProjectSingle = ({
 			</div>
 
 			<div className="flex flex-1 flex-col p-5">
-				<p className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.14em] text-dev-blue/90">
-					{category}
-				</p>
+				<div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
+					<p className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.14em] text-dev-blue/90">
+						{category}
+					</p>
+					{projectPeriod && (
+						<p className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-gray-500">
+							{projectPeriod}
+						</p>
+					)}
+				</div>
 
 				<h2 className="mt-3 font-general-semibold text-lg leading-snug tracking-[-0.01em] text-white transition-colors duration-200 group-hover:text-dev-blue sm:text-xl">
 					<Link

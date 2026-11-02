@@ -9,7 +9,6 @@ import {
 
 // Optimized raster variants (WebP) + hand-authored architecture diagrams.
 // Originals are preserved in public/images for reference.
-import pm1_640 from '../assets/images/pm1-640.webp';
 import rg1_640 from '../assets/images/rg1-640.webp';
 import covidRxEditorialCover from '../assets/images/covid-rx-editorial-cover.webp';
 import candidateRecommendationEditorialCover from '../assets/images/candidate-recommendation-editorial-cover.webp';
@@ -93,7 +92,9 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'A Microsoft Teams agent that coordinates project work through Microsoft Graph, document retrieval, and structured tool calls.',
-		img: pm1_640,
+		img: pmEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration of conversational project-management requests, knowledge retrieval, MCP tool integration, and task operations; not the production architecture or a product screenshot.',
 		relatedProjectIds: [16, 19, 17, 14],
 		featured: {
 			rank: 1,
@@ -4284,7 +4285,9 @@ export const projectsData = [
 ];
 
 // Curated presentation order is intentionally separate from canonical IDs and routes.
-export const featuredProjectIds = [17, 15, 16, 19, 1, 10];
+export const featuredProjectIds = [17, 20, 10, 21, 16, 15];
+
+const curatedRemainderIds = [1, 14, 19, 12, 2, 3, 13, 22, 8, 9, 4, 5, 6, 7, 11, 18];
 
 export const featuredProjects = featuredProjectIds
 	.map((id) => projectsData.find((project) => project.id === id))
@@ -4292,7 +4295,5 @@ export const featuredProjects = featuredProjectIds
 
 export const orderedProjects = [
 	...featuredProjectIds,
-	...projectsData
-		.map((project) => project.id)
-		.filter((id) => !featuredProjectIds.includes(id)),
+	...curatedRemainderIds,
 ].map((id) => projectsData.find((project) => project.id === id)).filter(Boolean);

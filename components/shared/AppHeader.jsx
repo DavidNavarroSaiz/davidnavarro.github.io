@@ -116,13 +116,13 @@ function AppHeader() {
 										className="header-subtitle hidden xl:block"
 										aria-hidden="true"
 									>
-										Senior AI Engineer | Production AI Agents | LLM Evaluation | ML Platforms
+										SENIOR AI ENGINEER | PRODUCTION AI AGENTS | LLMOPS | ML PLATFORMS
 									</span>
 									<span
 										className="header-subtitle truncate xl:hidden"
 										aria-hidden="true"
 									>
-										Senior AI Engineer · LLM Evaluation
+										SENIOR AI ENGINEER
 									</span>
 								</span>
 							</Link>

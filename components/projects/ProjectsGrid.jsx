@@ -3,7 +3,6 @@ import { FiSearch, FiX } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import { orderedProjects } from '../../data/projectsData';
 import ProjectsFilter from './ProjectsFilter';
-import EngineeringJourney from './EngineeringJourney';
 
 const ALL_CATEGORIES = 'All';
 
@@ -19,9 +18,28 @@ const getSearchText = (project) =>
 		.join(' ')
 		.toLowerCase();
 
+const getProjectPeriod = (project) => {
+	const duration = project.ProjectInfo?.CompanyInfo?.find((item) =>
+		/period|duration/i.test(item.title)
+	)?.details;
+
+	return duration || project.ProjectHeader?.publishDate || 'Date not specified';
+};
+
+const getChronologyYear = (project) => {
+	const years = getProjectPeriod(project).match(/\b(?:19|20)\d{2}\b/g) || [];
+	return years.length > 0 ? Math.max(...years.map(Number)) : null;
+};
+
+const getChronologyLabel = (project) => {
+	const year = getChronologyYear(project);
+	return year ? String(year) : 'Date not specified';
+};
+
 function ProjectsGrid() {
 	const [searchProject, setSearchProject] = useState('');
 	const [selectProject, setSelectProject] = useState(ALL_CATEGORIES);
+	const [view, setView] = useState('featured');
 
 	const categories = useMemo(
 		() => Array.from(new Set(orderedProjects.map((project) => project.category))),
@@ -41,6 +59,22 @@ function ProjectsGrid() {
 			return matchesCategory && matchesSearch;
 		});
 	}, [searchProject, selectProject]);
+
+	const chronologyGroups = useMemo(() => {
+		const groups = new Map();
+		const projectsByYear = [...filteredProjects].sort((a, b) => {
+			const yearDifference = (getChronologyYear(b) ?? -1) - (getChronologyYear(a) ?? -1);
+			return yearDifference;
+		});
+
+		projectsByYear.forEach((project) => {
+			const label = getChronologyLabel(project);
+			if (!groups.has(label)) groups.set(label, []);
+			groups.get(label).push(project);
+		});
+
+		return [...groups.entries()];
+	}, [filteredProjects]);
 
 	const hasFilters =
 		searchProject.trim() !== '' || selectProject !== ALL_CATEGORIES;
@@ -75,11 +109,30 @@ function ProjectsGrid() {
 				</div>
 			</header>
 
-			<EngineeringJourney />
-
 			<div className="border-b border-white/10 py-6">
+				<div
+					role="group"
+					aria-label="Project view"
+					className="mb-6 flex flex-wrap gap-2"
+				>
+					{[
+						{ value: 'featured', label: 'Featured' },
+						{ value: 'chronology', label: 'Chronology' },
+					].map((option) => (
+						<button
+							key={option.value}
+							type="button"
+							aria-pressed={view === option.value}
+							onClick={() => setView(option.value)}
+							className="rounded-md border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-general-semibold uppercase tracking-[0.12em] text-gray-300 transition-colors duration-200 hover:border-dev-blue/50 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dev-blue/70 motion-reduce:transition-none"
+						>
+							{option.label}
+						</button>
+					))}
+				</div>
+
 				<p className="mb-5 font-mono text-[10px] uppercase tracking-[0.18em] text-gray-500">
-					Explore case studies
+					{view === 'featured' ? 'Featured case studies' : 'Case studies by documented period'}
 				</p>
 				<div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-8">
 					<div className="w-full md:max-w-sm">
@@ -151,15 +204,44 @@ function ProjectsGrid() {
 			</div>
 
 			{filteredProjects.length > 0 ? (
-				<ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
-					{filteredProjects.map((project, index) => (
-						<ProjectSingle
-							key={project.id}
-							{...project}
-							priority={index === 0}
-						/>
-					))}
-				</ul>
+				view === 'chronology' ? (
+					<div className="mt-8 space-y-10">
+						{chronologyGroups.map(([label, projects]) => (
+							<section key={label} aria-labelledby={`project-period-${label.replace(/\s+/g, '-').toLowerCase()}`}>
+								<div className="mb-4 flex items-baseline gap-3 border-b border-white/10 pb-2">
+									<h2
+										id={`project-period-${label.replace(/\s+/g, '-').toLowerCase()}`}
+										className="font-mono text-xs uppercase tracking-[0.16em] text-dev-blue"
+									>
+										{label}
+									</h2>
+									<span className="text-xs text-gray-500">{projects.length} {projects.length === 1 ? 'project' : 'projects'}</span>
+								</div>
+								<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+									{projects.map((project, index) => (
+										<ProjectSingle
+											key={project.id}
+											{...project}
+											projectPeriod={getProjectPeriod(project)}
+											priority={index === 0 && label === chronologyGroups[0]?.[0]}
+										/>
+									))}
+								</ul>
+							</section>
+						))}
+					</div>
+				) : (
+					<ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+						{filteredProjects.map((project, index) => (
+							<ProjectSingle
+								key={project.id}
+								{...project}
+								projectPeriod={getProjectPeriod(project)}
+								priority={index === 0}
+							/>
+						))}
+					</ul>
+				)
 			) : (
 				<div className="mt-8 rounded-lg border border-dashed border-white/10 bg-white/[0.02] px-6 py-16 text-center">
 					<h2 className="font-general-semibold text-xl text-white">

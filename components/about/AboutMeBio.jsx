@@ -8,12 +8,12 @@ import {
 import { projectsData } from '../../data/projectsData';
 
 const focusAreas = [
-	'End-to-end system design',
-	'Data ingestion and retrieval pipelines',
-	'Offline and online evaluation',
+	'Stateful agent orchestration',
+	'Retrieval and evaluation systems',
+	'Applied computer vision',
 	'Deployment and observability',
-	'LLMOps and CI/CD',
-	'Multi-agent orchestration',
+	'Infrastructure and integration',
+	'Technical delivery and mentoring',
 ];
 
 function AboutMeBio() {
@@ -49,7 +49,7 @@ function AboutMeBio() {
 					},
 					{ label: 'Projects', value: String(projectsData.length) },
 					{
-						label: 'Industries',
+						label: 'Engineering domains',
 						value: String(industryDomains.length),
 					},
 				].map((stat) => (

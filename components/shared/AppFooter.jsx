@@ -32,7 +32,7 @@ function AppFooter() {
 							David Navarro
 						</Link>
 						<p className="footer-role">
-							Senior AI Engineer · Production AI Agents · LLM Evaluation
+							Senior AI Engineer · Production AI Agents · LLMOps · ML Platforms
 						</p>
 					</div>
 

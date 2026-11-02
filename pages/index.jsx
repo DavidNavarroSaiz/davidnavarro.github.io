@@ -37,17 +37,27 @@ export async function getStaticProps() {
 		fs.existsSync(path.join(process.cwd(), 'public', 'files', file));
 	const cvs = CV_FILES.filter((cv) => exists(cv.file));
 
-	const selectedProjects = featuredProjects.map((project) => ({
-		id: project.id,
-		title: project.title,
-		category: project.category,
-		publishDate: project.ProjectHeader.publishDate,
-		image: (project.featured.image || project.img).src,
-		imageAlt: project.featured.alt,
-		problem: project.featured.problem,
-		approach: project.featured.approach,
-		disciplines: project.featured.disciplines,
-	}));
+	const selectedProjects = featuredProjects.map((project) => {
+		const editorialCover = project.caseStudy?.editorialCover;
+		const featured = project.featured ?? {};
+		const imageAsset = featured.image || project.img || editorialCover?.img;
+
+		return {
+			id: project.id,
+			title: project.title,
+			category: project.category,
+			publishDate: project.ProjectHeader.publishDate,
+			image: imageAsset?.src ?? imageAsset,
+			imageAlt:
+				project.imageAlt ||
+				featured.alt ||
+				editorialCover?.alt ||
+				`Conceptual illustration for ${project.title}`,
+			problem: featured.problem || project.summary,
+			approach: featured.approach || project.caseStudy?.overview || project.summary,
+			disciplines: featured.disciplines || [project.category],
+		};
+	});
 
 	return { props: { cvs, selectedProjects } };
 }
