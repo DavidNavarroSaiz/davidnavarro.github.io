@@ -5,12 +5,14 @@ import AboutSkills from '../components/about/AboutSkills';
 import AboutAchievements from '../components/about/AboutAchievements';
 import AboutEducation from '../components/about/AboutEducation';
 import PagesMetaHead from '../components/PagesMetaHead';
+import StructuredProfileData from '../components/StructuredProfileData';
 import { experienceData } from '../data/experienceData';
 
 function about() {
 	return (
 		<div>
 			<PagesMetaHead title="About Me" />
+			<StructuredProfileData />
 
 			<div className="container mx-auto">
 				<AboutMeBio />
@@ -51,6 +53,12 @@ function about() {
 							className="h-4 w-4"
 							aria-hidden="true"
 						/>
+					</Link>
+					<Link
+						href="/portfolio.md"
+						className="mt-4 block text-xs font-mono uppercase tracking-[0.14em] text-gray-500 transition-colors duration-200 hover:text-dev-blue"
+					>
+						Machine-readable profile
 					</Link>
 				</div>
 			</div>

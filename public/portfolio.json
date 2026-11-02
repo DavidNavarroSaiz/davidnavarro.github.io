@@ -1,0 +1,3330 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileType": "Public portfolio export",
+  "sourceOfTruth": [
+    "data/projectsData.js",
+    "data/experienceData.js"
+  ],
+  "publicScope": "Public professional portfolio content; confidential employer and customer details are excluded.",
+  "person": {
+    "name": "David Navarro",
+    "role": "Senior AI Engineer",
+    "location": "Medellín, Colombia",
+    "website": "https://davidnavarrosaiz.github.io/davidnavarro.github.io",
+    "profileUrl": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/about/",
+    "professionalSummary": "Senior AI Engineer specializing in production AI agents, LLM evaluation, AI platforms, retrieval infrastructure, and applied machine learning.",
+    "specializations": [
+      "Production AI agents and agent orchestration",
+      "AI evaluation, reliability, and reproducible experimentation",
+      "RAG, vector retrieval, and document intelligence",
+      "Applied machine learning and computer vision",
+      "MLOps, cloud delivery, and technical leadership"
+    ],
+    "experienceYears": 7,
+    "cv": [
+      {
+        "label": "Senior AI Engineer CV",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer.pdf"
+      },
+      {
+        "label": "Senior AI Engineer — Evaluation & Research CV",
+        "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer_Evaluation_Research.pdf"
+      }
+    ],
+    "publicProfiles": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/davidnavarrosaiz/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/DavidNavarroSaiz"
+      }
+    ]
+  },
+  "experience": {
+    "summary": "Seven visible professional and research entries across five employers, plus one separate research institution.",
+    "stats": {
+      "years": "7+",
+      "employers": 5,
+      "engagements": 6,
+      "researchEntries": 1,
+      "entries": 7
+    },
+    "employers": [
+      {
+        "name": "Svitla Systems",
+        "engagements": [
+          {
+            "id": "svitla-roadie",
+            "employer": "Svitla Systems",
+            "client": "Roadie",
+            "position": "Sr. ML/AI Engineer",
+            "period": "Nov 2025 – Present",
+            "employmentPeriod": "Aug 2025 – Present",
+            "duration": "1+ year",
+            "location": "Remote",
+            "type": "Client engagement · Full-time",
+            "status": "current",
+            "isResearch": false,
+            "overlapNote": null,
+            "domains": [
+              "Production AI Agents",
+              "Agent Orchestration",
+              "Reliability Engineering",
+              "AI Evaluation",
+              "RAG & Tool Integration"
+            ],
+            "specialties": [
+              "Stateful agents",
+              "Authorization gates",
+              "Tool verification",
+              "Regression evaluation"
+            ],
+            "responsibilities": [
+              "Build and operate Roadie’s stateful conversational AI workflows through Svitla Systems, from LangGraph orchestration to verified backend actions.",
+              "Own authorization and confirmation boundaries, multilingual interaction, tool execution, governed responses, and recovery paths for operational customer interactions."
+            ],
+            "context": "Roadie workflows need to move from a natural-language request to a safe, observable backend action. The engineering challenge is preserving state and context while making authorization, confirmation, evidence, and recovery explicit at every operational boundary.",
+            "contributions": [
+              "Designed LangGraph state machines with deterministic eligibility rules, confirmation gates, authorized tools, and explicit transitions.",
+              "Built layered validation for action eligibility, tool-result verification, governed responses, timeout handling, retries, and recoverable failures.",
+              "Created evaluation datasets and repeatable experiments with retrieval ranking, RAGAS, DeepEval, Opik traces, and human-review scenarios.",
+              "Instrumented retrieved context, tool outcomes, and regression cases so failures could be diagnosed across interpretation, execution, and response."
+            ],
+            "workstreams": [
+              {
+                "label": "Roadie · Operational AI Agents",
+                "period": "Nov 2025 – Present",
+                "maturity": "Production workflow",
+                "responsibility": "Connect conversational interpretation to explicit state transitions, authorized tools, confirmation gates, and verified outcomes.",
+                "implementation": "LangGraph orchestration, retrieval and tool integration, traces, regression scenarios, and structured error recovery."
+              }
+            ],
+            "implementationGroups": [],
+            "technicalDecisions": [
+              "Kept policy and business rules deterministic so the model interprets requests without becoming the authority for irreversible actions.",
+              "Separated retrieval quality, agent behavior, safety, and response quality into inspectable evaluation concerns.",
+              "Used structured outcomes and recovery classification to distinguish a tool problem from a workflow problem."
+            ],
+            "technologies": [
+              "LangGraph",
+              "Python",
+              "RAGAS",
+              "DeepEval",
+              "Opik",
+              "Vector retrieval",
+              "Synthetic QA"
+            ],
+            "evidence": "Designed, implemented, and shipped production AI agent workflows supporting operational customer interactions. Evaluation datasets, regression scenarios, and trace analysis guide the continued development of adjacent workflows.",
+            "outcomes": [
+              {
+                "label": "Shipped scope",
+                "value": "Roadie production agent workflows",
+                "detail": "Stateful conversational interaction, governed actions, evaluation experiments, and operational debugging."
+              }
+            ],
+            "relatedProjects": [
+              {
+                "id": 17,
+                "title": "Policy-Governed AI Agents",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/17/"
+              },
+              {
+                "id": 20,
+                "title": "AI Agent Evaluation & Experimentation Framework",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/20/"
+              }
+            ]
+          },
+          {
+            "id": "svitla-360training",
+            "employer": "Svitla Systems",
+            "client": "360Training",
+            "position": "Sr. ML/AI Engineer — Computer Vision",
+            "period": "Aug – Nov 2025",
+            "employmentPeriod": "Aug 2025 – Present",
+            "duration": "4 months",
+            "location": "Remote",
+            "type": "Client engagement · Full-time",
+            "status": "completed",
+            "isResearch": false,
+            "overlapNote": null,
+            "domains": [
+              "Computer Vision",
+              "Applied Machine Learning",
+              "Real-time Inference",
+              "Model Experimentation",
+              "MLOps"
+            ],
+            "specialties": [
+              "Multimodal proctoring",
+              "Temporal features",
+              "Model comparison",
+              "Reproducible experiments"
+            ],
+            "responsibilities": [
+              "Led design and deployment of production-grade computer-vision and proctoring ML systems for a 360Training client engagement.",
+              "Own the experimentation and inference path across annotation, feature engineering, model comparison, Python services, and monitoring integration."
+            ],
+            "context": "Proctoring behavior varies across people, cameras, and operating conditions. The system needed robust temporal signals and a reproducible way to compare models, tune edge cases, and move useful inference into a service and dashboard workflow.",
+            "contributions": [],
+            "workstreams": [
+              {
+                "label": "360Training · Visual Proctoring",
+                "period": "Aug – Nov 2025",
+                "maturity": "Production and experimentation",
+                "responsibility": "Combine face detection, gaze estimation, yaw/pitch angles, head movement, and temporal behavior features for multimodal proctoring signals.",
+                "implementation": "CVAT annotation workflows, DVC datasets, MLflow tracking, model comparison, Python inference, and Node.js/JavaScript real-time heuristics."
+              }
+            ],
+            "implementationGroups": [
+              {
+                "label": "Production computer vision systems",
+                "items": [
+                  "Built multimodal proctoring features from face detection, gaze estimation, yaw/pitch angles, head movement, and temporal behavior.",
+                  "Implemented real-time heuristics and inference services with JavaScript/Node.js, plus React and TypeScript monitoring integration."
+                ]
+              },
+              {
+                "label": "Data engineering and experimentation",
+                "items": [
+                  "Authored CVAT annotation guides and workflows, managed reproducible datasets with DVC, and built statistical and temporal feature pipelines.",
+                  "Applied systematic hyperparameter optimization and evaluation procedures to improve robustness across operating conditions."
+                ]
+              },
+              {
+                "label": "Model development and MLOps",
+                "items": [
+                  "Trained and compared XGBoost, LightGBM, Random Forest, Logistic Regression, neural networks, and relevant deep-learning approaches using multiple evaluation signals.",
+                  "Used MLflow for experiment tracking, model versioning, and artifact management; developed a Python inference service and contributed to deployment decisions."
+                ]
+              }
+            ],
+            "technicalDecisions": [
+              "Kept annotation, dataset versioning, feature engineering, and model evaluation explicit so improvements could be reproduced rather than attributed to a single score.",
+              "Combined temporal behavior with frame-level signals because isolated detections were not enough to represent proctoring context.",
+              "Used model comparison to choose an appropriate operating point for the workflow instead of assuming the most complex model was best."
+            ],
+            "technologies": [
+              "Python",
+              "Node.js",
+              "JavaScript",
+              "React",
+              "TypeScript",
+              "CVAT",
+              "DVC",
+              "MLflow",
+              "XGBoost",
+              "LightGBM"
+            ],
+            "evidence": "The relevant proctoring workflow recorded 45% fewer false positives, 40% faster deployment, and 50% less model-selection time across the scoped experimental pipeline.",
+            "outcomes": [
+              {
+                "label": "Scoped result",
+                "value": "−45% false positives",
+                "detail": "Reported result from the relevant 360Training proctoring workflow."
+              },
+              {
+                "label": "Deployment",
+                "value": "40% faster",
+                "detail": "Reported workflow improvement."
+              },
+              {
+                "label": "Selection cycle",
+                "value": "50% less time",
+                "detail": "Reported reduction in model-selection time."
+              }
+            ],
+            "relatedProjects": [
+              {
+                "id": 10,
+                "title": "Industrial Computer Vision Systems",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/10/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kmeleon",
+        "engagements": [
+          {
+            "id": "kmeleon",
+            "employer": "Kmeleon",
+            "client": null,
+            "position": "Generative AI Engineer",
+            "period": "Jan 2025 – Aug 2025",
+            "employmentPeriod": null,
+            "duration": "8 months",
+            "location": "Remote",
+            "type": "Full-time",
+            "status": "completed",
+            "isResearch": false,
+            "overlapNote": null,
+            "domains": [
+              "AI Agents & Evaluation",
+              "RAG & AI Platforms"
+            ],
+            "specialties": [
+              "Multi-agent orchestration",
+              "MCP integrations",
+              "LLMOps",
+              "Azure delivery"
+            ],
+            "responsibilities": [
+              "Contribute to the architecture of configurable conversational and multi-agent systems, enterprise knowledge retrieval, Microsoft Teams integration, and Azure delivery.",
+              "Own infrastructure, vector-database administration, ingestion, MCP integration, and functional validation across the platform’s reusable engineering surface."
+            ],
+            "context": "The platform needed to support different agent configurations without creating a bespoke application for each workflow. The engineering challenge was to make orchestration, retrieval, integrations, approvals, infrastructure, and testing reusable while keeping the system understandable to the teams configuring it.",
+            "contributions": [
+              "Built multi-agent workflows with LangChain and PydanticAI, including memory, tools, and collaborative task handoffs.",
+              "Designed vector-backed ingestion and retrieval paths so configurable agents could work from shared enterprise knowledge rather than isolated prompts.",
+              "Integrated MCP servers and Microsoft Teams so agents could work through familiar enterprise channels.",
+              "Implemented the Azure DevOps MCP server operations and functional tests for creating, assigning, reading, and deleting work items, plus document-ingestion verification.",
+              "Administered vector-backed knowledge and ingestion paths, established Azure infrastructure and IaC, and contributed to maintainable LLMOps practices.",
+              "Contributed to human-in-the-loop approval flows and preparation of a reusable internal solution without representing it as a commercial Marketplace launch."
+            ],
+            "workstreams": [],
+            "implementationGroups": [],
+            "technicalDecisions": [
+              "Used typed configuration and explicit tool boundaries to keep agent variations composable instead of hard-coding each workflow.",
+              "Treated approvals and external integrations as first-class workflow steps rather than hidden prompt behavior.",
+              "Kept infrastructure definitions versioned with the platform so environment changes were reviewable."
+            ],
+            "technologies": [
+              "LangChain",
+              "PydanticAI",
+              "Azure AI",
+              "MCP",
+              "Microsoft Teams",
+              "LLMOps",
+              "Bicep"
+            ],
+            "evidence": "Internal platform delivery with reusable enterprise foundations, Azure infrastructure, and functional tests that verified the exposed integration boundaries.",
+            "outcomes": [
+              {
+                "label": "Platform scope",
+                "value": "Configurable agent workflows",
+                "detail": "Reusable orchestration, integrations, approvals, and deployment foundations for enterprise use cases."
+              },
+              {
+                "label": "Time-to-deploy",
+                "value": "< 1 hour",
+                "detail": "Reported platform outcome for customer setup; not a universal guarantee."
+              }
+            ],
+            "relatedProjects": [
+              {
+                "id": 1,
+                "title": "PM AI Agent",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/1/"
+              },
+              {
+                "id": 12,
+                "title": "MCP Azure DevOps Server",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/12/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Southdesk",
+        "engagements": [
+          {
+            "id": "southdesk",
+            "employer": "Southdesk",
+            "client": null,
+            "position": "Machine Learning Engineer",
+            "period": "Apr 2024 – Jan 2025",
+            "employmentPeriod": null,
+            "duration": "10 months",
+            "location": "Remote",
+            "type": "Full-time",
+            "status": "completed",
+            "isResearch": false,
+            "overlapNote": null,
+            "domains": [
+              "RAG & AI Platforms"
+            ],
+            "specialties": [
+              "RAG systems",
+              "Vector retrieval",
+              "Data enrichment",
+              "Workflow automation"
+            ],
+            "responsibilities": [
+              "Build AI-native business workflows for lead generation, qualification, outreach, reporting, recruitment, and customer operations.",
+              "Own integrations across semantic retrieval, enrichment, CRM automation, scraping, and delivery pipelines so business data becomes repeatable workflow input."
+            ],
+            "context": "The engineering question was how AI could make business processes more intelligent, integrated, and efficient. I worked across extraction, candidate organization, semantic search, CRM integration, and automation so scattered information could move through repeatable workflows.",
+            "contributions": [
+              "Built lead-generation and qualification workflows, including cold-email and cold-call automation where supported by the engagement scope, outreach, and AI-generated monthly reporting.",
+              "Organized and enriched candidate data, then used semantic retrieval and ranking with Qdrant to find people whose experience was relevant to open positions.",
+              "Connected structured outputs to GoHighLevel CRM and workflow automation for recruitment, lead-generation, and customer operations.",
+              "Built web-scraping and data-extraction paths with Selenium, Apify, and n8n, with Azure Pipelines and FastAPI patterns for repeatable delivery."
+            ],
+            "workstreams": [],
+            "implementationGroups": [],
+            "technicalDecisions": [
+              "Separated extraction and enrichment from CRM actions so source data could be organized before automation changed a record.",
+              "Applied RAG and vector retrieval specifically to candidate search and recommendation, where relevant experience had to be found across distributed profiles.",
+              "Kept workflow components replaceable so outreach, reporting, recruitment, and lead operations could evolve without rewriting the retrieval layer."
+            ],
+            "technologies": [
+              "RAG",
+              "Qdrant",
+              "FastAPI",
+              "Azure Pipelines",
+              "GoHighLevel",
+              "Selenium",
+              "Apify",
+              "n8n"
+            ],
+            "evidence": "Built and integrated repeatable business workflows for outreach, recruitment, reporting, and CRM operations, with the relevant project metrics retained in their original scope.",
+            "outcomes": [
+              {
+                "label": "Delivery",
+                "value": "40% shorter deployment cycles",
+                "detail": "Reported in the existing project record alongside automated retrieval and CRM workflows."
+              },
+              {
+                "label": "Lead conversion",
+                "value": "+2%",
+                "detail": "Reported outcome from the relevant lead-generation workflow."
+              }
+            ],
+            "relatedProjects": [
+              {
+                "id": 2,
+                "title": "Candidate Recommendation System",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/2/"
+              },
+              {
+                "id": 5,
+                "title": "Automatic Lead Management",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/5/"
+              },
+              {
+                "id": 6,
+                "title": "AI-Generated Monthly Reports",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/6/"
+              },
+              {
+                "id": 7,
+                "title": "Lead Generation System",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/7/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "El Sol",
+        "engagements": [
+          {
+            "id": "el-sol",
+            "employer": "El Sol",
+            "client": null,
+            "position": "Machine Learning Team Leader",
+            "period": "Jun 2023 – Apr 2024",
+            "employmentPeriod": null,
+            "duration": "11 months",
+            "location": "Remote",
+            "type": "Full-time",
+            "status": "completed",
+            "isResearch": false,
+            "overlapNote": null,
+            "domains": [
+              "RAG & AI Platforms",
+              "Technical Leadership"
+            ],
+            "specialties": [
+              "Document intelligence",
+              "Retrieval and reranking",
+              "MLOps",
+              "Technical leadership"
+            ],
+            "responsibilities": [
+              "Lead a team delivering infrastructure architecture, backend services, document intelligence, retrieval, and cloud implementation for education and community workflows.",
+              "Own the path from heterogeneous ingestion and reranking to automatic form completion, personalized reports, healthcare-plan generation, deployment, and operational handoff."
+            ],
+            "context": "The challenge was to make heterogeneous documents useful to staff while giving the team an operable path from infrastructure and ingestion to grounded outputs. The platform needed filtering, reranking, application interfaces, service integration, and deployment patterns the team could maintain.",
+            "contributions": [
+              "Led development of conversational AI and document-intelligence workflows with LangChain, FastAPI, React, TypeScript, and Node.",
+              "Implemented multi-format ingestion, vector retrieval, filters, and reranking for program guides and operational documents.",
+              "Connected Azure Speech and generated automatic forms, personalized reports, recommendations, and healthcare plans around retrieved knowledge.",
+              "Architected and provisioned AI services, then coordinated deployment through AKS, App Service, and Container Apps with CI/CD practices."
+            ],
+            "workstreams": [],
+            "implementationGroups": [],
+            "technicalDecisions": [
+              "Used retrieval filters and reranking to keep domain answers grounded in the right program context.",
+              "Built the application layer around the workflow staff already used instead of exposing a model-only interface.",
+              "Balanced delivery speed with operational ownership by standardizing deployment and monitoring patterns for the team."
+            ],
+            "technologies": [
+              "LangChain",
+              "FastAPI",
+              "React",
+              "PGVector",
+              "Azure Speech",
+              "AKS",
+              "CI/CD"
+            ],
+            "evidence": "Team delivery across resource discovery and document workflows, including the existing records’ 160+ users, approximately 100 documents per month, and reported acceleration outcomes.",
+            "outcomes": [
+              {
+                "label": "Users",
+                "value": "160+",
+                "detail": "Users supported by the resource-discovery workflow."
+              },
+              {
+                "label": "Throughput",
+                "value": "~100 documents/month",
+                "detail": "Document-processing volume in the existing project record."
+              },
+              {
+                "label": "Resource discovery",
+                "value": "50% faster",
+                "detail": "Existing project record also reports 40% faster deployment cycles."
+              },
+              {
+                "label": "Deployment cycles",
+                "value": "40% acceleration",
+                "detail": "Reported outcome from the team’s MLOps and CI/CD work."
+              }
+            ],
+            "relatedProjects": [
+              {
+                "id": 6,
+                "title": "AI-Generated Monthly Reports",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/6/"
+              },
+              {
+                "id": 8,
+                "title": "Healthcare Resource Recommender System",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/8/"
+              },
+              {
+                "id": 9,
+                "title": "Community Health Workers Platform",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/9/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Intecol SAS",
+        "engagements": [
+          {
+            "id": "intecol-sas",
+            "employer": "Intecol SAS",
+            "client": null,
+            "position": "Computer Vision Engineer & Team Lead",
+            "period": "May 2019 – Apr 2023",
+            "employmentPeriod": null,
+            "duration": "4 years",
+            "location": "Colombia",
+            "type": "Full-time",
+            "status": "completed",
+            "isResearch": false,
+            "overlapNote": null,
+            "domains": [
+              "Computer Vision",
+              "Technical Leadership"
+            ],
+            "specialties": [
+              "Industrial imaging",
+              "Real-time CV",
+              "PLC/HMI integration",
+              "3D measurement"
+            ],
+            "responsibilities": [
+              "Design industrial computer-vision systems from initial requirements through cameras, optics, illumination, models, plant interfaces, and delivery constraints.",
+              "Lead approximately ten engineers across architecture, requirements, project delivery, technical reviews, mentoring, and customer-facing constraints."
+            ],
+            "context": "Industrial vision has to work with real optics, illumination, hardware, throughput, maintenance, and plant interfaces. I moved between deterministic image processing, learned models, thermography, 3D sensing, edge execution, PLC/HMI integration, and the physical constraints that determine whether a system works outside the lab.",
+            "contributions": [],
+            "workstreams": [],
+            "implementationGroups": [
+              {
+                "label": "Physical machine-vision system design",
+                "items": [
+                  "Designed projects from inspection requirements, selecting industrial cameras and sensors, lenses for field of view, working distance, and resolution, and lighting for reliable acquisition.",
+                  "Accounted for operating conditions, maintenance, throughput, installation constraints, calibration, and physical access before model selection."
+                ]
+              },
+              {
+                "label": "Software and model development",
+                "items": [
+                  "Developed systems with C#, C++, and Python, using OpenCV and classical image-processing methods alongside learned models.",
+                  "Built classification and object-detection solutions with PyTorch, TensorFlow, and Keras, integrating acquisition, preprocessing, inference, and application logic."
+                ]
+              },
+              {
+                "label": "Industrial automation and operator interfaces",
+                "items": [
+                  "Connected inspection results to PLCs and plant control systems, including reject mechanisms, alarms, and operational outputs.",
+                  "Built graphical interfaces for control, monitoring, and result visualization under real-time execution constraints."
+                ]
+              },
+              {
+                "label": "Thermography and 3D measurement",
+                "items": [
+                  "Configured thermographic imaging for thermal defects, hotspots, people detection, and temperature-screening use cases without representing them as medically validated fever diagnosis.",
+                  "Integrated 3D laser profilers and Time-of-Flight cameras for dimensional and distance measurement, working through calibration, sensor placement, precision, and physical constraints."
+                ]
+              },
+              {
+                "label": "Technical leadership",
+                "items": [
+                  "Led approximately ten engineers across architecture, budgets, delivery planning, client requirements, technical reviews, mentoring, and more than thirty industrial computer-vision projects."
+                ]
+              }
+            ],
+            "technicalDecisions": [
+              "Started with the physical scene and plant constraints because model quality cannot compensate for poor capture or an unusable installation.",
+              "Chose classical CV, deep learning, or a hybrid according to latency, variation, explainability, maintenance, and the cost of an operational error.",
+              "Used labeling and retraining loops to keep systems adaptable instead of treating delivery as a one-time model handoff."
+            ],
+            "technologies": [
+              "C#",
+              "C++",
+              "Python",
+              "PyTorch",
+              "TensorFlow",
+              "Keras",
+              "YOLO",
+              "OpenCV",
+              "PLC/HMI",
+              "Thermography",
+              "3D laser",
+              "ToF cameras"
+            ],
+            "evidence": "Industrial delivery across the reported project scope, with representative detection and false-alarm outcomes retained for the relevant systems.",
+            "outcomes": [
+              {
+                "label": "Leadership",
+                "value": "10 engineers",
+                "detail": "Team leadership across architecture, delivery, and technical mentoring."
+              },
+              {
+                "label": "Delivery",
+                "value": "30+ industrial CV projects",
+                "detail": "Scope reported in the supplied professional background."
+              },
+              {
+                "label": "Reported outcomes",
+                "value": "+30% detection · −45% false alarms",
+                "detail": "Representative results from relevant systems, not a universal claim across every project."
+              }
+            ],
+            "relatedProjects": [
+              {
+                "id": 10,
+                "title": "Industrial Computer Vision Systems",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/10/"
+              },
+              {
+                "id": 22,
+                "title": "Industrial Machine Vision — Course & Practical Labs",
+                "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/22/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "research": [
+      {
+        "id": "university-of-magdalena-covid-rx",
+        "employer": "University of Magdalena",
+        "client": null,
+        "position": "Applied ML Researcher — COVID-Rx",
+        "period": "2020 – 2021",
+        "employmentPeriod": null,
+        "duration": "1 year",
+        "location": "Colombia",
+        "type": "Research project",
+        "status": "completed",
+        "isResearch": true,
+        "overlapNote": "Concurrent research project during the Intecol SAS tenure.",
+        "domains": [
+          "Computer Vision"
+        ],
+        "specialties": [
+          "CNN experimentation",
+          "Medical imaging",
+          "Model evaluation",
+          "Explainability"
+        ],
+        "responsibilities": [
+          "Conduct applied research on public chest X-ray classification, keeping dataset preparation, preprocessing, model comparison, and interpretation explicit.",
+          "Build the experimental and application interfaces needed to inspect probability outputs and model behavior, with experiment tracking for repeatable comparison."
+        ],
+        "context": "Comparing image classifiers required keeping data decisions, architecture-specific preprocessing, metrics, and user-facing interpretation separate. I built the workflow as an applied research system, not as a claim of clinical validation or deployment.",
+        "contributions": [
+          "Curated a working dataset of more than 36,000 public chest X-ray images across COVID-19, healthy, and pneumonia classes.",
+          "Trained and compared ten CNN families in PyTorch, including VGG19, DenseNet, MobileNet, EfficientNet, ResNet, and Xception.",
+          "Implemented preprocessing, augmentation, evaluation, model-comparison, and MLflow experiment-tracking paths for repeatable experiments.",
+          "Built PyQt desktop and Flask web interfaces for probability outputs and heatmap-based visual explanation."
+        ],
+        "workstreams": [],
+        "implementationGroups": [],
+        "technicalDecisions": [
+          "Compared multiple architectures rather than treating a single model score as the conclusion.",
+          "Kept preprocessing and evaluation choices explicit because they change what a model comparison means.",
+          "Presented heatmaps as model-behavior inspection, not evidence of clinical correctness."
+        ],
+        "technologies": [
+          "PyTorch",
+          "CNN",
+          "OpenCV",
+          "PyQt",
+          "Flask",
+          "MLflow",
+          "Medical imaging",
+          "Model evaluation"
+        ],
+        "evidence": "Applied research prototype using public data; the reported 96% result is an experiment metric within this workflow, not a clinical performance claim.",
+        "outcomes": [
+          {
+            "label": "Dataset",
+            "value": "36k+ chest X-rays",
+            "detail": "Public multi-class image sources used for the research workflow."
+          },
+          {
+            "label": "Comparison",
+            "value": "10 CNN architectures",
+            "detail": "Reported experiment scope across model families."
+          },
+          {
+            "label": "Reported result",
+            "value": "96% accuracy",
+            "detail": "Historical project result; this is an experiment metric, not clinical validation."
+          }
+        ],
+        "relatedProjects": [
+          {
+            "id": 3,
+            "title": "COVID-Rx Diagnosis System",
+            "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/3/"
+          }
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "PM AI Agent",
+      "slug": "pm-ai-agent",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/1/",
+      "category": "LLMs and RAG",
+      "description": "I built an AI project-management assistant that connected Microsoft Teams conversations with project knowledge and Azure DevOps actions. The team used it internally to organize work while we prepared the underlying infrastructure for possible distribution as a reusable offering; it was not a commercial marketplace launch.",
+      "problem": "I wanted to reduce the manual coordination around questions that already had answers somewhere: who owns a task, what changed, which work is blocked, and what should happen after a meeting. A useful assistant had to connect knowledge with actions, not just summarize a document and leave the user to update the project by hand.",
+      "date": {
+        "published": "Feb 2025",
+        "duration": "Feb 2025 – Aug 2025"
+      },
+      "status": "Public project record",
+      "role": "AI Engineer & Developer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Built a sophisticated PM Agent that integrates with Microsoft Teams and Bot Framework channels, providing AI-powered project management capabilities including natural language event creation, calendar management, and intelligent project assistance.",
+        "Implemented comprehensive calendar and meeting management features with Microsoft Graph API integration, including conflict detection, business hours validation, and automatic Teams meeting creation.",
+        "Developed document intelligence capabilities with vector search and retrieval, enabling teams to find and analyze project documents efficiently using PGVector and LangChain.",
+        "Established LLMOps best practices and architected a scalable, auditable Azure AI platform with Application Insights for centralized logging and monitoring."
+      ],
+      "technicalDecisions": [],
+      "implementation": [
+        {
+          "title": "End-to-end architecture and infrastructure",
+          "text": "I designed and implemented the system architecture, provisioned the Azure services, and set up the infrastructure as code."
+        },
+        {
+          "title": "Knowledge and ingestion infrastructure",
+          "text": "I built the document ingestion workflows, administered the PGVector vector database, and organized the project, document, and conversation data behind retrieval."
+        },
+        {
+          "title": "Teams integration",
+          "text": "I integrated the agent with Microsoft Teams, keeping it reachable through other Bot Framework channels."
+        },
+        {
+          "title": "MCP server and agent integration",
+          "text": "I developed an MCP server exposing Azure DevOps tools — work-item retrieval, assignment reads, project-specific assignments for selected team members, deletion, and other implemented tools — and integrated the agent with it."
+        },
+        {
+          "title": "Calendar and meeting management",
+          "text": "Microsoft Graph integration covers natural-language event creation, conflict detection, business-hours validation, and automatic Teams meeting creation."
+        },
+        {
+          "title": "Functional testing",
+          "text": "I functionally tested the integrated system, including automated checks of the Azure DevOps integrations and the document infrastructure described under Evaluation and operations."
+        }
+      ],
+      "architecture": {
+        "summary": "I connected Microsoft Teams and other Bot Framework channels to a language-model agent, a document-ingestion and PGVector retrieval path, a dedicated MCP server for Azure DevOps, and Microsoft Graph for calendar checks and meeting creation. The important boundary was between the model interpreting a request and a tool changing project state: the agent could look up work items, create and assign tasks, delete supported items, and verify the resulting operation through functional tests.",
+        "workflow": null,
+        "components": [
+          {
+            "name": "Teams and Bot Framework channels",
+            "role": "Entry point for user conversations."
+          },
+          {
+            "name": "Language model agent",
+            "role": "Interprets requests and selects which tool to call. Built with Azure OpenAI, LangChain and AutoGen behind a FastAPI service."
+          },
+          {
+            "name": "Knowledge and ingestion infrastructure",
+            "role": "Document ingestion workflows and PGVector administration over organized project, document, and conversation data."
+          },
+          {
+            "name": "MCP server for Azure DevOps",
+            "role": "Exposes Azure DevOps tools to the agent: work-item retrieval, assignment reads, project-specific assignments for selected team members, deletion, and other implemented tools. Detailed separately in the MCP Azure DevOps Server project notes."
+          },
+          {
+            "name": "Microsoft Graph API",
+            "role": "Calendar checks and meeting creation."
+          },
+          {
+            "name": "Supporting infrastructure",
+            "role": "Service provisioning, infrastructure as code, and centralized logging and monitoring with Application Insights."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "LangChain",
+        "AutoGen",
+        "FastAPI",
+        "Azure OpenAI",
+        "Microsoft Graph API",
+        "Microsoft Teams",
+        "PGVector",
+        "Azure Bot Framework",
+        "Docker",
+        "Application Insights"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Prompt-driven tool tests",
+          "text": "Automated functional tests submitted prompts to the agent requesting specific Azure DevOps operations and verified that the agent invoked the corresponding tools with real effects."
+        },
+        {
+          "title": "Creation and assignment verification",
+          "text": "Tests verified that requested work items and project-specific assignments for selected team members were actually created."
+        },
+        {
+          "title": "Read and deletion checks",
+          "text": "Tests verified task-reading operations against actual assignments and confirmed that deletions through the supported tools took effect."
+        },
+        {
+          "title": "Remaining tool coverage",
+          "text": "The other exposed Azure DevOps tools were exercised through the same prompt-and-verify loop."
+        },
+        {
+          "title": "Document-ingestion verification",
+          "text": "Automated tests for the RAG and document infrastructure verified that documents were successfully ingested."
+        },
+        {
+          "title": "Scope and limits",
+          "text": "These tests verify functional behavior — that the requested operation actually happened. They are not benchmark evaluations: no retrieval-relevance metrics, formal datasets, production availability figures, or reliability guarantees are claimed."
+        }
+      ],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [
+        16,
+        19,
+        17,
+        14
+      ],
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of PM AI Agent showing Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration; not a deployed-system screenshot.",
+        "caption": "Conceptual illustration — Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration. The factual architecture diagram below remains the technical source."
+      },
+      "publicFacts": {
+        "Type": "AI Project Management Tool",
+        "Role": "AI Engineer & Developer",
+        "Duration": "Feb 2025 – Aug 2025",
+        "Technologies": "Microsoft Teams, Azure OpenAI, FastAPI"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Candidate Recommendation System",
+      "slug": "candidate-recommendation-system",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/2/",
+      "category": "LLMs and RAG",
+      "description": "Retrieval and LLM ranking over candidate profiles, returning shortlists with explanations for recruiters.",
+      "problem": "Recruiters need to match a job description against hundreds of candidate profiles without losing the reasoning behind a shortlist.",
+      "date": {
+        "published": "2025",
+        "duration": "2025"
+      },
+      "status": "Public project record",
+      "role": "Machine Learning Engineer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Built a comprehensive RAG system processing 700+ professional resumes and job descriptions, implementing vector search with Qdrant and LLM enrichment to extract metadata and improve candidate matching accuracy.",
+        "Developed intelligent candidate ranking algorithm that analyzes job descriptions, processes candidate profiles, and provides top 10-20 ranked candidates with detailed explanations of strengths and weaknesses for HR decision-making.",
+        "Implemented FastAPI backend with Streamlit frontend for seamless user experience, enabling HR managers to input job descriptions and receive intelligent candidate recommendations with filtering capabilities.",
+        "Established CI/CD pipeline reducing deployment time by 40% and enabling faster iterations, improving system responsiveness and allowing rapid feature deployment for the candidate recommendation platform."
+      ],
+      "technicalDecisions": [],
+      "implementation": [],
+      "architecture": null,
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Streamlit",
+        "Qdrant",
+        "LangChain",
+        "LLMs",
+        "Vector Search",
+        "RAG",
+        "Docker",
+        "CI/CD"
+      ],
+      "outcomes": [],
+      "publicEvidence": [],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [],
+      "conceptualIllustration": null,
+      "publicFacts": {
+        "Type": "HR Tech Platform",
+        "Role": "Machine Learning Engineer",
+        "Duration": "2025",
+        "Technologies": "Python, FastAPI, Streamlit, Qdrant"
+      }
+    },
+    {
+      "id": 3,
+      "title": "COVID-Rx Diagnosis System",
+      "slug": "covid-rx-diagnosis",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/3/",
+      "category": "Computer Vision",
+      "description": "I built a research and application workflow for comparing ten CNN families on a public chest X-ray classification task, then exposed the selected experiments through both a PyQt desktop interface and a Flask web interface. The project combined dataset preparation, repeatable preprocessing, model comparison, probability outputs, and visual explanation.",
+      "problem": "Comparing image classifiers is not only a matter of choosing a larger network. Data sources, class balance, resize policy, normalization, model family, training configuration, evaluation metrics, and user-facing interpretation all affect what the comparison means. I needed a workflow that could register experiments and make model behavior inspectable without presenting it as a clinical diagnostic device.",
+      "date": {
+        "published": "Dec 2020",
+        "duration": "Dec 2020 – Nov 2021"
+      },
+      "status": "Public project record",
+      "role": "COVID-Rx Diagnosis CV Engineer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Curated a comprehensive dataset of 36k+ chest X-ray images from multiple sources including 10,000+ COVID-19 cases, 15,000+ healthy cases, and 11,000+ pneumonia cases, ensuring robust model training.",
+        "Trained and benchmarked 10 state-of-the-art CNN architectures (VGG19, DenseNet, MobileNet, AlexNet, EfficientNet, InceptionV3, ResNet, RexNet, Inception-ResNet, Xception) achieving >90% accuracy in COVID-19 detection.",
+        "Developed dual-interface prototype: PyQt desktop application and Flask web application, enabling users to upload X-ray images and inspect model probabilities for the evaluated classes.",
+        "Implemented explainability features with heatmap visualizations showing image regions associated with model output, providing an inspection aid without claiming clinical decision support or diagnostic validity."
+      ],
+      "technicalDecisions": [
+        {
+          "title": "Separate comparison from clinical claims",
+          "text": "A reported accuracy figure belongs to the project experiment and dataset context. It is not a clinical validation claim, deployment approval, or evidence that the system can replace a radiologist."
+        },
+        {
+          "title": "Use heatmaps as an inspection aid",
+          "text": "CAM-family maps can reveal whether the model appears to use plausible image regions, but remain an interpretability aid and not a guarantee that the prediction is correct."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "Make the data policy explicit",
+          "text": "I treated the public sources, class composition, image dimensions, normalization, and dataset preparation as part of the experiment definition. A metric is meaningful only in the context of the data policy that produced it."
+        },
+        {
+          "title": "Compare model families under a shared interface",
+          "text": "The project brought ten CNN families into one PyTorch application flow so architecture changes could be compared through the same prediction and presentation path."
+        },
+        {
+          "title": "Register metrics instead of relying on memory",
+          "text": "Experiment tracking was part of the owner-reported workflow, including MLflow. I do not invent a leaderboard, split strategy, or exact metric table that is not present in the public source."
+        },
+        {
+          "title": "Connect inference to an inspectable interface",
+          "text": "The desktop and web interfaces expose probabilities and heatmaps so a user can inspect the output instead of receiving an opaque class label."
+        }
+      ],
+      "architecture": {
+        "summary": "The system moved from a multi-class chest X-ray dataset through model-specific preprocessing and ten PyTorch CNN implementations into evaluation records, probability outputs, and CAM-family heatmaps. The public source is an implementation reference, not a complete clinical validation protocol.",
+        "workflow": {
+          "title": "From dataset assembly to comparable experiments",
+          "summary": "Data decisions, model runs, metrics, and explanation remain separate parts of the evaluation.",
+          "steps": [
+            {
+              "title": "Dataset assembly",
+              "mode": "Controlled input",
+              "type": "controlled",
+              "description": "Combine public COVID-19, healthy, and pneumonia image sources into a working dataset of more than 36,000 images."
+            },
+            {
+              "title": "Preprocessing policy",
+              "mode": "Controlled input",
+              "type": "controlled",
+              "description": "Resize images to each architecture’s expected input and apply ImageNet-style normalization where the model pipeline expects it."
+            },
+            {
+              "title": "Ten model families",
+              "mode": "Automated checks",
+              "type": "automated",
+              "description": "Compare VGG19, DenseNet, MobileNet, AlexNet, EfficientNet, InceptionV3, ResNet, RexNet, Inception-ResNet, and Xception."
+            },
+            {
+              "title": "Metrics and experiment records",
+              "mode": "Captured evidence",
+              "type": "captured",
+              "description": "Register runs and compare available accuracy and classification metrics. The owner reports MLflow use; the public repository does not expose a complete tracking configuration."
+            },
+            {
+              "title": "Inference and visual explanation",
+              "mode": "Automated checks",
+              "type": "automated",
+              "description": "Return class probabilities in PyQt or Flask and generate CAM-family heatmaps to show which image regions influenced the output."
+            }
+          ]
+        },
+        "components": [
+          {
+            "name": "Public image sources",
+            "role": "More than 10,000 COVID-19, more than 15,000 healthy, and more than 11,000 pneumonia images described in the public README."
+          },
+          {
+            "name": "PyTorch model comparison",
+            "role": "Ten CNN implementations share the application workflow while retaining architecture-specific input handling."
+          },
+          {
+            "name": "Metrics and run registration",
+            "role": "Experiment records make comparisons possible; exact ranking and split protocol are not asserted without public evidence."
+          },
+          {
+            "name": "CAM-family explanations",
+            "role": "Heatmaps help inspect model attention; they are not proof of clinical correctness."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "PyTorch",
+        "Python",
+        "PyQt",
+        "OpenCV",
+        "Flask",
+        "VGG19",
+        "DenseNet",
+        "MobileNet",
+        "AlexNet",
+        "EfficientNet",
+        "InceptionV3",
+        "ResNet",
+        "Xception",
+        "CNN",
+        "Deep Learning"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Public dataset scope",
+          "text": "The public README describes more than 10,000 COVID-19 images, more than 15,000 healthy images, and more than 11,000 pneumonia images, for roughly 36,000 images in total."
+        },
+        {
+          "title": "Ten architectures retained",
+          "text": "The implementation reference includes VGG19, DenseNet, MobileNet, AlexNet, EfficientNet, InceptionV3, ResNet, RexNet, Inception-ResNet, and Xception."
+        },
+        {
+          "title": "Existing project metric",
+          "text": "The existing portfolio record reports more than 90% accuracy for the selected experiments. Because the public source does not provide a complete comparison table and split protocol, this is not presented as a clinical result or model ranking."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "Research and application prototype",
+          "text": "The project demonstrates model comparison and interface behavior. It does not establish clinical validation, regulatory approval, prospective performance, or safe use as a diagnostic service."
+        },
+        {
+          "title": "Public evidence is incomplete",
+          "text": "The public repository does not expose a complete MLflow configuration, run registry, split protocol, or full metric table, so those details remain intentionally bounded."
+        }
+      ],
+      "evidenceLinks": [
+        {
+          "label": "Public source repository",
+          "url": "https://github.com/DavidNavarroSaiz/CovidRX_Interface"
+        }
+      ],
+      "relatedProjectIds": [],
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration for COVID-Rx showing chest X-ray preprocessing, convolutional feature extraction, CNN model families, and comparative evaluation; not a clinical screenshot or measured benchmark chart.",
+        "caption": "Conceptual illustration — chest X-ray preprocessing, CNN feature extraction, and comparative evaluation. Embedded charts are illustrative, not experimental results."
+      },
+      "publicFacts": {
+        "Institution": "University of Magdalena",
+        "Role": "COVID-Rx Diagnosis CV Engineer",
+        "Duration": "Dec 2020 – Nov 2021",
+        "Dataset": "36k+ chest X-ray images"
+      }
+    },
+    {
+      "id": 4,
+      "title": "AbogacIA - AI Legal Platform",
+      "slug": "abogacia-ai-legal-platform",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/4/",
+      "category": "LLMs and RAG",
+      "description": "I shaped AbogacIA as a domain-aware professional knowledge and writing assistant for Colombian legal work. It combines document ingestion, semantic retrieval, similar-case discovery, context-aware questions, and drafting support so a lawyer can work from relevant sources instead of starting from an empty page.",
+      "problem": "Legal work requires more than a generic chat response: the assistant needs to retrieve relevant sentences, codes, constitutional material, and regulations, then keep the user’s case context in view while suggesting sources or draft content. The system is an assistive workflow, not an autonomous legal decision-maker and not a guarantee of legal correctness.",
+      "date": {
+        "published": "2025",
+        "duration": null
+      },
+      "status": "In Development",
+      "role": null,
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Automatic Legal Document Analysis: When users upload case documents and descriptions, the system automatically identifies relevant regulations, rights, and specific articles that may be violated or related to the case.",
+        "Similar Case Recommendations: Provides lawyers with a comprehensive view of similar judicial sentences and precedents, helping them understand how similar cases were resolved in the past.",
+        "Intelligent Q&A System: Enables lawyers to ask questions about their case, recommended cases, or legal regulations, receiving accurate answers powered by RAG and LangGraph technology.",
+        "Document Generation: Allows construction of legal documents based on collected information, case analysis, and relevant regulations, streamlining the document creation process.",
+        "Advanced Database Architecture: Implemented vector database (Chroma) for semantic search and similarity matching, and graph database for complex legal relationships and precedent connections, enabling sophisticated legal document retrieval and analysis."
+      ],
+      "technicalDecisions": [
+        {
+          "title": "Use retrieval as evidence support",
+          "text": "The architecture emphasizes potentially relevant source material and similar cases rather than implying that an LLM can independently determine the correct legal outcome."
+        },
+        {
+          "title": "Treat other domains as a direction",
+          "text": "The retrieval-and-context pattern could be adapted to medicine or psychology in principle, but those extensions are conceptual and do not represent implemented or validated domain capabilities here."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "Retrieve before writing",
+          "text": "The assistant first looks for potentially relevant legal documents, cases, regulations, rights, and articles so drafting can begin from a source-aware context."
+        },
+        {
+          "title": "Keep case context visible",
+          "text": "Uploaded documents, user descriptions, questions, retrieved passages, and similar cases form the working context for the professional workflow."
+        },
+        {
+          "title": "Separate support from decision-making",
+          "text": "The system helps research, compare, explain, and draft. A lawyer still reviews sources, interprets the law, and decides what belongs in a final document."
+        }
+      ],
+      "architecture": {
+        "summary": "The prototype combines public-source collection, document processing, vector retrieval in Chroma, graph-oriented relationship support, and LangGraph orchestration. Retrieved context feeds professional Q&A and drafting flows while the user remains responsible for reviewing the material.",
+        "workflow": {
+          "title": "From legal source to draft support",
+          "summary": "Retrieval and case context precede generation so the assistant can show where its suggestions come from.",
+          "steps": [
+            {
+              "title": "Collect and process legal sources",
+              "mode": "Controlled input",
+              "type": "controlled",
+              "description": "Process the documented judiciary sources, court sentences, national codes, constitution, and regulations used by the prototype."
+            },
+            {
+              "title": "Retrieve relevant knowledge",
+              "mode": "Automated checks",
+              "type": "automated",
+              "description": "Use vector similarity and relationship-oriented data access to find potentially relevant sources and similar cases."
+            },
+            {
+              "title": "Apply case context",
+              "mode": "Captured evidence",
+              "type": "captured",
+              "description": "Combine the user’s case description, uploaded documents, retrieved passages, and prior questions into the working context."
+            },
+            {
+              "title": "Draft and review",
+              "mode": "Manual / assisted review",
+              "type": "assisted",
+              "description": "Generate Q&A responses or draft documents for a lawyer to verify, edit, and use with professional judgment."
+            }
+          ]
+        },
+        "components": [
+          {
+            "name": "Source ingestion",
+            "role": "Selenium and Python workflows collect and process the legal documents described in the project record."
+          },
+          {
+            "name": "Semantic retrieval",
+            "role": "Chroma and vector search surface relevant passages and similar documents for the current case."
+          },
+          {
+            "name": "Relationship context",
+            "role": "Graph-oriented data supports connections among cases, regulations, rights, and articles without claiming exhaustive legal reasoning."
+          },
+          {
+            "name": "LangGraph workflow",
+            "role": "Orchestrates retrieval, Q&A, and drafting steps while keeping the system in an assistive workflow."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "MongoDB",
+        "Chroma",
+        "Vector Database",
+        "Graph Database",
+        "LangChain",
+        "LangGraph",
+        "Selenium",
+        "OpenAI",
+        "RAG",
+        "Web Scraping"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Implemented prototype scope",
+          "text": "The existing project record documents legal-source ingestion, semantic retrieval, similar-case recommendations, Q&A, document generation, Chroma, graph-oriented data, and LangGraph orchestration."
+        },
+        {
+          "title": "Professional review remains central",
+          "text": "The public case describes an assistive research and writing workflow, not legal advice, guaranteed correctness, regulatory compliance, or an autonomous decision system."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "No correctness guarantee",
+          "text": "Retrieval and generated drafts can be incomplete, outdated, or wrong. A qualified professional must verify sources, interpretation, and final wording."
+        },
+        {
+          "title": "Cross-domain work is conceptual",
+          "text": "Nothing in this case establishes medical or psychological diagnosis, treatment guidance, or validated deployment outside the documented legal domain."
+        }
+      ],
+      "evidenceLinks": [],
+      "relatedProjectIds": [],
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration for AbogacIA showing legal knowledge retrieval, related cases, and assisted document drafting; not an actual legal-system architecture diagram or legal advice.",
+        "caption": "Conceptual illustration — legal retrieval, case context, and drafting support. It does not represent proprietary system state or guarantee legal correctness."
+      },
+      "publicFacts": {
+        "Type": "Legal Tech Platform",
+        "Domain": "Colombian Legal System",
+        "Status": "In Development",
+        "Technologies": "FastAPI, MongoDB, Chroma, LangGraph"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Automatic Lead Management",
+      "slug": "automatic-lead-management",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/5/",
+      "category": "AI Automation",
+      "description": "Lead capture and outreach across email and SMS, with HubSpot sync and GPT-written replies.",
+      "problem": null,
+      "date": {
+        "published": "2025",
+        "duration": null
+      },
+      "status": "Active Development",
+      "role": null,
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "FastAPI Backend: Built a modern web framework for handling HTTP requests and responses efficiently, providing robust API endpoints for lead generation and processing.",
+        "Multi-Channel Communication: Integrated Twilio for SMS messaging and SMTP for email communication, enabling real-time communication with leads across multiple channels.",
+        "HubSpot CRM Integration: Seamlessly integrated with HubSpot CRM API to manage lead data, including creation, retrieval, updating, and deletion of contacts for comprehensive lead management.",
+        "GPT-Powered Automation: Incorporated OpenAI GPT for creating automatic and personalized responses to emails and SMS, analyzing lead inquiries and generating relevant and engaging responses to enhance lead interaction."
+      ],
+      "technicalDecisions": [],
+      "implementation": [],
+      "architecture": null,
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "HubSpot",
+        "Twilio",
+        "OpenAI",
+        "SMTP",
+        "GPT",
+        "CRM Integration",
+        "Lead Generation",
+        "Email Automation"
+      ],
+      "outcomes": [],
+      "publicEvidence": [],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [],
+      "conceptualIllustration": null,
+      "publicFacts": {
+        "Type": "Lead Management Platform",
+        "Domain": "Sales Automation",
+        "Status": "Active Development",
+        "Technologies": "FastAPI, HubSpot, Twilio, OpenAI"
+      }
+    },
+    {
+      "id": 6,
+      "title": "AI-Generated Monthly Reports",
+      "slug": "ai-generated-monthly-reports",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/6/",
+      "category": "AI Automation",
+      "description": "Automated reporting pipeline that collects a month of property data and drafts client-ready documents in Google Docs.",
+      "problem": null,
+      "date": {
+        "published": "2025",
+        "duration": null
+      },
+      "status": "Production",
+      "role": null,
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Automated Data Collection: Built comprehensive system that automatically collects property data including emails (stored in Google Sheets), photos (uploaded to Google Drive), meeting summaries (generated via CircleBack and Fireflies), and event descriptions throughout the month.",
+        "AI-Powered Report Generation: Created intelligent system using LLMs to process all collected data and automatically generate comprehensive monthly property reports with proper formatting and client-ready presentation.",
+        "Google Docs Integration: Implemented automated report upload to Google Docs with proper formatting, enabling seamless document sharing and client presentation while maintaining professional standards.",
+        "Workflow Optimization: Designed automation workflows that reduce manual processing time by 80%, allowing property managers to focus on evaluation and improvement of final reports rather than data collection and formatting."
+      ],
+      "technicalDecisions": [],
+      "implementation": [],
+      "architecture": null,
+      "technologies": [
+        "Make.com",
+        "OpenAI",
+        "Google Sheets",
+        "Google Drive",
+        "Google Docs",
+        "CircleBack",
+        "Fireflies",
+        "Zapier",
+        "Email Automation",
+        "Report Generation",
+        "Data Processing",
+        "LLMs"
+      ],
+      "outcomes": [],
+      "publicEvidence": [],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [],
+      "conceptualIllustration": null,
+      "publicFacts": {
+        "Type": "AI Report Generation Platform",
+        "Domain": "Property Management & Business Intelligence",
+        "Status": "Production",
+        "Technologies": "Make.com, OpenAI, Google Suite, CircleBack"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Lead Generation System",
+      "slug": "n8n-lead-generation-system",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/7/",
+      "category": "AI Automation",
+      "description": "Self-hosted n8n workflows that identify ideal customer profiles, enrich company data, and run personalized cold-email campaigns.",
+      "problem": null,
+      "date": {
+        "published": "2025",
+        "duration": null
+      },
+      "status": "Production",
+      "role": null,
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Self-Hosted n8n Platform: Implemented and configured self-hosted n8n automation platform within the company infrastructure, providing complete control over automation workflows and data processing.",
+        "Apollo ICP Extraction: Built automated workflows to extract potential Ideal Customer Profiles from Apollo database, identifying high-value prospects based on company size, industry, and other relevant criteria.",
+        "Company Data Scraping: Developed Selenium-based automation to scrape company websites and extract relevant business information, then used LLMs to process and structure the data for personalized outreach.",
+        "Smartleads Cold Email Integration: Created AI-powered email generation system that produces personalized subject lines and email bodies, automatically sending targeted outreach via Smartleads and pushing qualified leads to GoHighLevel CRM upon response."
+      ],
+      "technicalDecisions": [],
+      "implementation": [],
+      "architecture": null,
+      "technologies": [
+        "n8n",
+        "Apollo",
+        "Smartleads",
+        "Selenium",
+        "OpenAI",
+        "GoHighLevel",
+        "Web Scraping",
+        "Lead Generation",
+        "Cold Email",
+        "Data Extraction",
+        "ICP Identification",
+        "Email Automation"
+      ],
+      "outcomes": [],
+      "publicEvidence": [],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [],
+      "conceptualIllustration": null,
+      "publicFacts": {
+        "Type": "Self-Hosted Automation Platform",
+        "Domain": "Lead Generation & Cold Outreach",
+        "Status": "Production",
+        "Technologies": "n8n, Apollo, Smartleads, Selenium"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Healthcare Resource Recommender System",
+      "slug": "healthcare-resource-recommender-system",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/8/",
+      "category": "LLMs and RAG",
+      "description": "Permissions-aware resource hub with RAG search, built for community health workers and their teams.",
+      "problem": null,
+      "date": {
+        "published": "2024",
+        "duration": "2024"
+      },
+      "status": "Public project record",
+      "role": "Machine Learning Team Leader",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Permissions-Aware Platform: Built tiered-access system where CHWs and staff can upload/consume resources based on user roles and plans, ensuring appropriate content access and security controls for different organizational levels.",
+        "Advanced RAG Implementation: Applied sophisticated RAG tactics including query rewriting, sub-queries, filters, document research tasks, and reranking to deliver 50% faster resource discovery compared to manual filters and search, serving 160+ active users.",
+        "Document Processing Pipeline: Delivered automated pipeline handling ~100 documents/month with LLM-based analysis and insight generation, enabling continuous content updates and intelligent resource recommendations for new and updated materials.",
+        "Infrastructure & CI/CD: Implemented Azure Bicep for three isolated environments (dev/QA/prod) with comprehensive Azure Pipelines including tests, evaluations, linting, and quality gates, accelerating release cycles by 40% through automated deployment processes."
+      ],
+      "technicalDecisions": [],
+      "implementation": [],
+      "architecture": null,
+      "technologies": [
+        "React",
+        "FastAPI",
+        "LangChain",
+        "LangSmith",
+        "PGVector",
+        "Redis",
+        "RabbitMQ",
+        "Azure Bicep",
+        "Azure OpenAI",
+        "RAG",
+        "Vector Search",
+        "CI/CD"
+      ],
+      "outcomes": [],
+      "publicEvidence": [],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [],
+      "conceptualIllustration": null,
+      "publicFacts": {
+        "Company": "Healthcare Technology Platform",
+        "Role": "Machine Learning Team Leader",
+        "Duration": "2024",
+        "Technologies": "React, FastAPI, RAG, PGVector"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Community Health Workers Platform",
+      "slug": "community-health-workers-platform",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/9/",
+      "category": "LLMs and RAG",
+      "description": "Speech-to-forms assistant that transcribes home visits and drafts structured reports and care plans.",
+      "problem": null,
+      "date": {
+        "published": "2024 – 2025",
+        "duration": "2024 – 2025"
+      },
+      "status": "Public project record",
+      "role": "Machine Learning Team Leader",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Speech-to-Forms Automation: Built real-time assistant using Azure Cognitive Services (Speech) to transcribe conversations during home visits, with LLMs extracting structured fields to automatically populate dynamic forms, eliminating manual data entry.",
+        "Intelligent Report Generation: Developed LLM-powered system that analyzes conversation data and stored patient information to automatically generate comprehensive visit reports and personalized care plans for each individual, significantly reducing drafting time.",
+        "Secure Data Orchestration: Implemented FastAPI backend with secure access to user and context data from the application, ensuring data privacy while enabling intelligent form enrichment and report generation.",
+        "Infrastructure & CI/CD: Implemented Azure Bicep for multi-environment deployment with comprehensive Azure Pipelines including tests, evaluations, linting, and quality gates, accelerating release cycles by 40% through automated deployment processes."
+      ],
+      "technicalDecisions": [],
+      "implementation": [],
+      "architecture": null,
+      "technologies": [
+        "FastAPI",
+        "Azure Language Services",
+        "Azure OpenAI",
+        "Python",
+        "LLMs",
+        "Speech Recognition",
+        "Azure Bicep",
+        "Azure Container Registry",
+        "Azure Key Vault",
+        "CI/CD",
+        "Form Automation",
+        "Report Generation"
+      ],
+      "outcomes": [],
+      "publicEvidence": [],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [],
+      "conceptualIllustration": null,
+      "publicFacts": {
+        "Company": "Healthcare Technology Platform",
+        "Role": "Machine Learning Team Leader",
+        "Duration": "2024 – 2025",
+        "Technologies": "FastAPI, Azure Language Services, LLMs"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Industrial Computer Vision Systems",
+      "slug": "industrial-computer-vision",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/10/",
+      "category": "Computer Vision / Industrial Automation",
+      "description": "I spent almost four years building computer-vision systems for industrial environments. One of the most important things I learned is that the model is only one part of a machine-vision system. Camera selection, optics, lighting, timing, and integration with the production line can matter just as much as the algorithm.",
+      "problem": "An inspection system has to make a useful decision from imperfect physical evidence and then fit into a moving production process. A defect may be smaller than the available pixels, reflections may change with the material or lighting, and a correct classification is still operationally useless if the trigger, PLC signal, operator interface, or reject mechanism is unreliable. The engineering problem was to design the complete path instead of treating inference as the product.",
+      "date": {
+        "published": "May 2019",
+        "duration": "May 2019 – April 2023"
+      },
+      "status": "Public project record",
+      "role": "Computer Vision Engineer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Developed and deployed real-time CV pipelines for defect detection, product fill checks, surface anomalies, and PPE compliance analytics, improving incident detection by 30% and reducing false alarms by 45%.",
+        "Built robust data/labeling workflows using CVAT, automated retraining, and OpenCV post-processing to meet factory latency/throughput constraints.",
+        "Architected imaging stacks (illumination, sensors, 3D scanners, thermal/LiDAR) and deployed an Optical Gas Imaging solution with PLC alarms, reducing time-to-detection of hazardous leaks.",
+        "Integrated CV modules with PLCs and C# HMIs to enable real-time defect rejection at production speed, complemented with a React-based console for live video overlays and dashboards."
+      ],
+      "technicalDecisions": [
+        {
+          "title": "Design the image before tuning the model",
+          "text": "A higher-capacity model cannot recover information that the camera, lens, trigger, or lighting never captured. Improving the evidence often produced a more reliable system than adding algorithmic complexity."
+        },
+        {
+          "title": "Choose deterministic or learned processing deliberately",
+          "text": "Classical computer vision was easier to inspect and maintain for explicit geometry; learned models were valuable when the variation was difficult to enumerate. The decision depended on data, explainability, maintenance, and the operating environment."
+        },
+        {
+          "title": "Set thresholds around operational consequences",
+          "text": "A false negative and a false positive do not cost the same thing in every line. I treated operating thresholds as part of the system design, not just a model-training afterthought."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "Start with the physical scene",
+          "text": "I translated inspection requirements into imaging constraints: field of view, smallest defect, required resolution, working distance, focal length, depth of field, acquisition speed, and the likely sources of reflection or environmental variation. Camera and lighting cost mattered, but so did repeatability and serviceability on the factory floor."
+        },
+        {
+          "title": "Use deterministic vision when the structure is explicit",
+          "text": "Filtering, contrast enhancement, thresholding, morphology, contour extraction, blob analysis, calibration, regions of interest, and geometric measurements were useful when the appearance and rule were stable. This kept the system understandable and avoided training a model for a problem that could be measured directly."
+        },
+        {
+          "title": "Build data and learned models when variation demands it",
+          "text": "For changing product appearance, orientation, lighting, or background conditions, I worked with labeling workflows, CNN/YOLO-style training, error analysis, and operating thresholds. The right threshold depended on the cost of missing a defect versus stopping the line for a false alarm."
+        },
+        {
+          "title": "Integrate the decision into the line",
+          "text": "The systems connected real-time acquisition and processing with operator interfaces, PLC/HMI communication, alarms, and rejection mechanisms. Desktop, C#, React, and lower-level integration choices varied with the installation rather than being prescribed as one universal stack."
+        },
+        {
+          "title": "Lead delivery across a portfolio of projects",
+          "text": "I led a team of 10 engineers across more than 30 industrial computer-vision projects. The work ranged across defect detection, fill checks, surface anomalies, PPE compliance, and specialized imaging where the inspection required it."
+        }
+      ],
+      "architecture": {
+        "summary": "I worked from the physical scene toward the software decision: define the defect or safety requirement, select the acquisition setup, calibrate the image, choose deterministic processing or a learned model, validate behavior under production variation, and integrate the result with the operator and line controls. The exact stack varied by installation; not every project used every camera type, model family, or specialized sensor.",
+        "workflow": {
+          "title": "From physical evidence to production decision",
+          "summary": "The recurring engineering path connected imaging constraints with algorithms, validation, and factory behavior.",
+          "steps": [
+            {
+              "title": "Inspection requirements and defect geometry",
+              "mode": "Controlled input",
+              "type": "controlled",
+              "description": "Define what must be detected or measured, the smallest relevant defect, available cycle time, and the consequences of false positives or false negatives."
+            },
+            {
+              "title": "Camera, lens, resolution, and lighting",
+              "mode": "Controlled input",
+              "type": "controlled",
+              "description": "Choose sensors, focal length, working distance, field of view, depth of field, illumination geometry, and contrast for the physical scene."
+            },
+            {
+              "title": "Acquisition and image preparation",
+              "mode": "Captured evidence",
+              "type": "captured",
+              "description": "Synchronize triggers, calibrate regions of interest, and use filtering, contrast enhancement, thresholding, morphology, or geometric measurements where they are sufficient."
+            },
+            {
+              "title": "Classical CV or learned model",
+              "mode": "Automated checks",
+              "type": "automated",
+              "description": "Use deterministic image processing for explicit geometry and stable appearance; use labeled CNN/YOLO-style models when learned variation handling is justified."
+            },
+            {
+              "title": "Operator and factory integration",
+              "mode": "Automated checks",
+              "type": "automated",
+              "description": "Connect inspection outcomes to desktop or web interfaces, PLC/HMI signals, alarms, and rejection mechanisms at production speed."
+            }
+          ]
+        },
+        "components": [
+          {
+            "name": "Image acquisition and optics",
+            "role": "Camera, lens, working-distance, resolution, depth-of-field, trigger, and lighting decisions shaped the quality of the evidence before inference."
+          },
+          {
+            "name": "Classical computer vision",
+            "role": "Preprocessing, contrast, thresholding, morphology, contours, blobs, calibration, regions of interest, and measurements handled explicit visual structure."
+          },
+          {
+            "name": "Machine learning and deep learning",
+            "role": "Labeled datasets and CNN/YOLO-style models addressed variable appearance, orientation, lighting, and product conditions when deterministic rules were not enough."
+          },
+          {
+            "name": "Industrial software and controls",
+            "role": "Real-time acquisition, operator interfaces, PLC/HMI communication, alarms, and line decisions turned image evidence into an operational response."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "Camera and optics design",
+        "Industrial lighting",
+        "PyTorch",
+        "TensorFlow",
+        "Keras",
+        "OpenCV",
+        "Python",
+        "C++",
+        "React",
+        "PLCs",
+        "C#",
+        "CVAT",
+        "3D and thermal imaging"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Owner-reported engineering scope",
+          "text": "The project record covers almost four years of industrial machine-vision engineering, technical leadership for a 10-engineer team, and delivery across more than 30 projects."
+        },
+        {
+          "title": "Reported operational outcomes",
+          "text": "Existing project evidence reports a 30% improvement in incident detection and a 45% reduction in false alarms for the relevant systems. These figures are not generalized to every installation, customer, or inspection task."
+        },
+        {
+          "title": "Technical evidence retained",
+          "text": "The portfolio retains representative computer-vision images and the documented stack of acquisition, CVAT labeling, OpenCV processing, learned models, PLC/HMI integration, and specialized imaging. Customer names, factory imagery, and private equipment details remain excluded."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "Projects used different stacks",
+          "text": "The portfolio spans multiple installations. It would be inaccurate to imply that every project used YOLO, thermal or 3D imaging, React, PLC rejection, or the same camera and lighting configuration."
+        },
+        {
+          "title": "Factory details stay private",
+          "text": "The public case focuses on reusable engineering decisions and representative outcomes rather than customer identities, line layouts, equipment configurations, or proprietary inspection rules."
+        }
+      ],
+      "evidenceLinks": [],
+      "relatedProjectIds": [
+        14,
+        17,
+        15,
+        16,
+        22
+      ],
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of industrial computer-vision inspection showing camera and lens selection, engineered illumination, image processing stages, inspection decisions, and PLC factory automation; not a photograph of a deployed customer installation.",
+        "caption": "Conceptual illustration — industrial camera inspection, optics and illumination, processing stages, and factory automation. It represents recurring system patterns, not a photograph of a deployed customer installation."
+      },
+      "publicFacts": {
+        "Company": "Intecol SAS",
+        "Role": "Computer Vision Engineer",
+        "Duration": "May 2019 – April 2023",
+        "Team Size": "10 engineers"
+      }
+    },
+    {
+      "id": 11,
+      "title": "RealTime Voice Agent",
+      "slug": "realtime-voice-agent",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/11/",
+      "category": "LLMs and RAG",
+      "description": "Low-latency voice agent over WebSockets and Twilio, with real-time prompt control and multi-agent tool calling.",
+      "problem": null,
+      "date": {
+        "published": "Mar 2025",
+        "duration": "Jan 2025 – Ongoing"
+      },
+      "status": "Public project record",
+      "role": "Lead AI Engineer & Backend Developer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Built a fully containerized FastAPI server with real-time voice streaming and WebSocket communication, supporting natural, low-latency conversations.",
+        "Integrated OpenAI's Realtime API and Twilio Media Streams to allow AI-powered phone calls with bidirectional voice processing and response generation.",
+        "Implemented an agent swarm system using AutoGen framework, enabling multi-agent collaboration and function calling for dynamic real-time responses.",
+        "Deployed secure and scalable containers with Azure Container Registry and enforced best practices in CORS, environment management, and API security.",
+        "Developed a comprehensive frontend application for real-time prompt modification and agent testing, enabling live interaction with the voice agent and dynamic prompt adjustments.",
+        "Successfully deployed the complete system with telephone number integration, allowing users to call and interact with the AI agent through a standard phone number for real-world testing and usage.",
+        "Added system health endpoints, error monitoring, and performance tracking to ensure reliable deployment in production environments."
+      ],
+      "technicalDecisions": [],
+      "implementation": [],
+      "architecture": null,
+      "technologies": [
+        "FastAPI",
+        "Uvicorn",
+        "OpenAI Realtime API",
+        "OpenAI",
+        "Azure OpenAI",
+        "Twilio",
+        "WebRTC",
+        "AutoGen",
+        "Docker",
+        "OpenAPI/Swagger"
+      ],
+      "outcomes": [],
+      "publicEvidence": [],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [],
+      "conceptualIllustration": null,
+      "publicFacts": {
+        "Type": "Realtime AI Voice Server",
+        "Role": "Lead AI Engineer & Backend Developer",
+        "Duration": "Jan 2025 – Ongoing",
+        "Technologies": "FastAPI, WebSocket, Twilio, OpenAI Realtime API, Docker, Azure"
+      }
+    },
+    {
+      "id": 12,
+      "title": "MCP Azure DevOps Server",
+      "slug": "mcp-azure-devops-server",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/12/",
+      "category": "LLMs and RAG",
+      "description": "Model Context Protocol server that lets AI assistants query and manage Azure DevOps work items in natural language.",
+      "problem": null,
+      "date": {
+        "published": "Mar 2025",
+        "duration": "Feb 2025 – Ongoing"
+      },
+      "status": "Public project record",
+      "role": "AI Engineer & Backend Developer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Forked and enhanced Microsoft's Azure DevOps MCP repository with custom improvements, additional integrations, and tailored services to meet specific workflow requirements while maintaining compatibility with the original MCP protocol.",
+        "Implemented modular feature sets for work items, teams, and project management, enabling AI assistants to perform complex DevOps queries with natural language.",
+        "Integrated with the Azure DevOps Python API and secured authentication using Personal Access Tokens (PAT) with least-privilege scopes.",
+        "Developed an asynchronous MCP client using SSE (Server-Sent Events) for efficient, low-latency communication between the agent and server.",
+        "Containerized the application with Docker and provided full deployment support via Docker Compose, enabling reproducible environments and scalability.",
+        "Documented 20+ MCP tools for AI-assisted project management, including querying sprints, managing tasks, analyzing team velocity, and mapping dependencies."
+      ],
+      "technicalDecisions": [],
+      "implementation": [],
+      "architecture": null,
+      "technologies": [
+        "FastMCP",
+        "Azure DevOps REST API",
+        "Azure DevOps Python SDK",
+        "Python 3.11",
+        "Server-Sent Events (SSE)",
+        "Docker",
+        "OpenAI / Claude Integration",
+        "pytest",
+        "uv"
+      ],
+      "outcomes": [],
+      "publicEvidence": [],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [],
+      "conceptualIllustration": null,
+      "publicFacts": {
+        "Type": "AI Integration Server for Azure DevOps",
+        "Role": "AI Engineer & Backend Developer",
+        "Duration": "Feb 2025 – Ongoing",
+        "Technologies": "Python, FastMCP, Azure DevOps API, Docker, MCP SDK"
+      }
+    },
+    {
+      "id": 13,
+      "title": "CCTV Safety Detection",
+      "slug": "cctv-safety-detection",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/13/",
+      "category": "Computer Vision / Edge AI",
+      "description": "On-prem GPU pipeline that checks PPE and safety rules across live CCTV streams and alerts supervisors.",
+      "problem": null,
+      "date": {
+        "published": "2023",
+        "duration": "2023"
+      },
+      "status": "Public project record",
+      "role": "ML Engineer & Full-Stack Developer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Built a comprehensive dataset of 10,000+ CCTV images and fine-tuned YOLO models to detect persons, safety helmets, goggles, vests (with color classification), forklifts/lift cars, and ladders with high accuracy.",
+        "Deployed on a local GPU server (air-gapped for security) with <200ms per-frame latency and parallel inference across 3 cameras, ensuring real-time safety monitoring without network dependencies.",
+        "Implemented intelligent rule engine for real-world safety policies including missing PPE detection, incorrect vest color identification, person-forklift distance thresholds, forklift parking compliance, safe ladder handling, and mandatory truck safety nets during movement.",
+        "Created a comprehensive web admin UI to tune confidence/sensitivity per class, define safety zones and distance thresholds, review safety events, and visualize KPIs including compliance rates, false positives, and incidents by shift/zone.",
+        "Established real-time alerting system via email/SMS/WhatsApp to supervisors with incident snapshots and timeline links, including smart cooldowns and deduplication to reduce alert fatigue while maintaining safety oversight.",
+        "Designed a resilient streaming pipeline (RTSP ingest → batching → GPU inference → rule evaluation → alerting) with comprehensive watchdogs, auto-reconnect capabilities, and rolling logs for compliance audits and system monitoring."
+      ],
+      "technicalDecisions": [],
+      "implementation": [],
+      "architecture": null,
+      "technologies": [
+        "YOLO (custom fine-tuning)",
+        "PyTorch + CUDA",
+        "OpenCV / FFmpeg",
+        "FastAPI",
+        "React Dashboard",
+        "WebSockets",
+        "PostgreSQL",
+        "Docker",
+        "GPU Edge Server"
+      ],
+      "outcomes": [],
+      "publicEvidence": [],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [],
+      "conceptualIllustration": null,
+      "publicFacts": {
+        "Type": "Industrial Safety Monitoring System",
+        "Role": "ML Engineer & Full-Stack Developer",
+        "Duration": "2023",
+        "Technologies": "YOLOv5/YOLOv8, Python, OpenCV, CUDA, FastAPI, React, WebSockets, PostgreSQL, Docker"
+      }
+    },
+    {
+      "id": 14,
+      "title": "Parallel Document Ingestion Pipeline",
+      "slug": "marker-ingestion-pipeline",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/14/",
+      "category": "RAG Infrastructure / Distributed Systems",
+      "description": "A distributed ingestion service that turns large collections of PDFs, text, and mixed-format documents into vector embeddings for RAG systems, built around FastAPI intake, Celery workers, RabbitMQ messaging, Marker parsing, and pgVector storage.",
+      "problem": "RAG systems are only as good as the documents feeding them. Large PDF collections are slow to parse, chunk, and embed, and long-running batch jobs are hard to observe while they run.",
+      "date": {
+        "published": "Oct 2024",
+        "duration": "Aug 2024 – Dec 2024"
+      },
+      "status": "Public project record",
+      "role": "AI Infrastructure Engineer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Integrated Marker API to convert unstructured PDFs into structured JSON chunks optimized for vector database ingestion, enabling seamless processing of complex document formats.",
+        "Implemented robust asynchronous task orchestration using Celery and RabbitMQ, allowing horizontal scaling of ingestion workers and fault-tolerant document processing.",
+        "Achieved 80% reduction in ingestion time per user by parallelizing document processing across distributed task queues, significantly improving user experience and system throughput.",
+        "Designed a modular FastAPI service that automatically routes upload jobs into worker queues, monitors progress in real-time, and updates user dashboards with processing status and completion metrics.",
+        "Enabled scalable ingestion for multi-user RAG systems, supporting thousands of documents per user without performance degradation through intelligent queue management and resource allocation.",
+        "Containerized the complete stack using Docker Compose for reproducible deployment across environments with isolated worker scaling, ensuring consistent performance and easy maintenance."
+      ],
+      "technicalDecisions": [
+        {
+          "title": "Queued workers instead of synchronous processing",
+          "text": "Upload intake is decoupled from parsing and embedding through Celery workers and RabbitMQ queues, so workers scale horizontally and document processing stays fault-tolerant."
+        },
+        {
+          "title": "Marker for document parsing",
+          "text": "Marker converts complex unstructured PDFs into structured JSON chunks suited to vector-database ingestion."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "FastAPI intake service",
+          "text": "A modular FastAPI service accepts uploads and automatically routes them as jobs into the worker queues."
+        },
+        {
+          "title": "Celery workers and RabbitMQ messaging",
+          "text": "Asynchronous task orchestration with Celery and RabbitMQ decouples intake from processing, allows horizontal scaling of ingestion workers, and keeps document processing fault-tolerant."
+        },
+        {
+          "title": "Document extraction with Marker",
+          "text": "Marker converts unstructured PDFs into structured JSON chunks optimized for vector-database ingestion, covering PDFs, text, and mixed formats."
+        },
+        {
+          "title": "Embeddings and vector storage",
+          "text": "Parsed chunks are embedded with OpenAI embeddings and written to pgVector, where they serve downstream RAG retrieval."
+        },
+        {
+          "title": "Progress monitoring and dashboards",
+          "text": "The service monitors jobs in real time and updates user dashboards with processing status and completion metrics."
+        },
+        {
+          "title": "Containerized deployment",
+          "text": "The complete stack is containerized with Docker Compose for reproducible deployment with isolated worker scaling."
+        }
+      ],
+      "architecture": {
+        "summary": "A FastAPI service accepts uploads and routes them as jobs into RabbitMQ queues. Celery workers parse documents with Marker into structured JSON, generate embeddings, and write vectors to pgVector, which serves downstream RAG retrieval. Progress and failures are tracked and surfaced on dashboards, and the full stack runs containerized with Docker Compose.",
+        "workflow": null,
+        "components": [
+          {
+            "name": "FastAPI service",
+            "role": "Upload intake; routes jobs into worker queues and monitors progress in real time."
+          },
+          {
+            "name": "RabbitMQ queues",
+            "role": "Task messaging between the intake service and the worker pool."
+          },
+          {
+            "name": "Celery workers",
+            "role": "Asynchronous parsing and embedding; horizontal scaling with isolated worker scaling."
+          },
+          {
+            "name": "Marker parsing",
+            "role": "Converts unstructured PDFs into structured JSON chunks optimized for vector-database ingestion."
+          },
+          {
+            "name": "pgVector and embeddings",
+            "role": "Vector storage for downstream retrieval, populated with OpenAI embeddings."
+          },
+          {
+            "name": "Dashboards",
+            "role": "Processing status and completion metrics for upload jobs."
+          },
+          {
+            "name": "Docker Compose",
+            "role": "Containerized, reproducible deployment across environments."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "Marker API",
+        "Celery Distributed Tasks",
+        "RabbitMQ Queues",
+        "FastAPI",
+        "pgVector",
+        "Redis",
+        "Docker Compose",
+        "OpenAI Embeddings"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Progress observability",
+          "text": "Upload jobs are monitored in real time, with dashboards reporting processing status and completion metrics."
+        },
+        {
+          "title": "Failure visibility",
+          "text": "The pipeline tracks processing progress and failures rather than running as an opaque batch job."
+        }
+      ],
+      "limitations": [],
+      "evidenceLinks": [],
+      "relatedProjectIds": [
+        19,
+        16,
+        15,
+        1
+      ],
+      "conceptualIllustration": null,
+      "publicFacts": {
+        "Type": "Scalable RAG Document Ingestion System",
+        "Role": "AI Infrastructure Engineer",
+        "Duration": "Aug 2024 – Dec 2024",
+        "Technologies": "Marker API, Celery, RabbitMQ, FastAPI, Docker, Redis, pgVector, OpenAI Embeddings"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Coding Agent Evaluation Workbench",
+      "slug": "coding-agent-evaluation-workbench",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/15/",
+      "category": "AI Evaluation / Engineering Systems",
+      "description": "I built an internal, UI-driven workbench to compare coding-agent runs under reproducible conditions. Each evaluation starts with a shared reference task and prompts, records the selected tool, model and version, tester, date, scenario, model profile, and environment, then guides the evaluator through setup, execution, evidence collection, review, and export. The workbench is not an autonomous judge or a leaderboard; it preserves the evidence needed to explain a result later.",
+      "problem": "Comparing coding agents is harder than giving them the same prompt and checking which one finishes first. A run can produce convincing code while failing tests, ignoring a security constraint, or quietly changing the scope. I needed a way to hold the task and starting conditions steady, then reconstruct what happened months later instead of relying on a final screenshot or someone’s notes.",
+      "date": {
+        "published": "Oct 2026",
+        "duration": null
+      },
+      "status": "Internal Engineering / Evaluation Tooling",
+      "role": null,
+      "contribution": "Evaluation framework and methodology",
+      "responsibilities": [],
+      "contributions": [],
+      "technicalDecisions": [
+        {
+          "title": "Hold the reference task steady",
+          "text": "I used the same versioned task and prompts for comparable runs, then recorded any follow-up scenario rather than silently changing the task mid-experiment."
+        },
+        {
+          "title": "Keep automated signals separate from judgment",
+          "text": "Build, test, lint, coverage, type, security, and authorization evidence stays distinct from rubric review. A passing test suite is useful evidence, not a complete measure of engineering quality."
+        },
+        {
+          "title": "Evidence before summary",
+          "text": "I retained metadata, configuration, diffs, logs, transcripts, test results, rubric decisions, and reviewer notes before assembling a comparison. That makes it possible to challenge a conclusion instead of trusting a headline score."
+        },
+        {
+          "title": "Treat the LLM reviewer as advisory",
+          "text": "An LLM can surface a bug or suggest a rubric interpretation, but the human evaluator remains responsible for the final assessment and for deciding whether the evidence supports it."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "Separate repositories and experiment branches",
+          "text": "I kept the benchmark/reference repository separate from the evaluation repository. Each experiment used its own Git branch so the reference task, generated patch, and run artifacts stayed tied to one reproducible setup."
+        },
+        {
+          "title": "Guided run setup",
+          "text": "The UI captured the tool, model and version, tester, date, scenario, model profile, environment, shared reference task, and prompts before execution. The wizard made the process repeatable for someone who did not design the benchmark."
+        },
+        {
+          "title": "Execution and evidence capture",
+          "text": "During a run I recorded elapsed time, interventions, self-corrections, questions, execution logs, the conversation transcript, configuration, code diffs, and resulting artifacts. That context matters when a run needs to be reconstructed later."
+        },
+        {
+          "title": "Objective verification",
+          "text": "The evaluation ran code execution and CI checks for builds, linting, tests, coverage, type checks, and required constraints. These signals are repeatable, but they do not answer every architectural or security question."
+        },
+        {
+          "title": "Human and advisory review",
+          "text": "A human evaluator reviewed architecture, maintainability, testing, documentation, security, and policy violations against anchored rubrics. An optional LLM reviewer could identify possible bugs, add notes, and suggest rubric scores, but I treated it as a second opinion rather than ground truth."
+        },
+        {
+          "title": "Export and comparison",
+          "text": "The workbench exported an evidence bundle and structured experiment comparison so a conclusion could be traced back to the branch, prompt, transcript, code diff, CI result, rubric decision, and evaluator note."
+        }
+      ],
+      "architecture": {
+        "summary": "I kept the benchmark/reference repository separate from the evaluation repository. Each experiment received its own Git branch and run artifacts, while the workbench walked the evaluator through task specification, a clean checkout, agent execution, evidence capture, deterministic checks, rubric review, and export. That separation lets me inspect the exact generated code, patch, CI output, and transcript instead of treating the final result as a black box.",
+        "workflow": {
+          "title": "Evaluation lifecycle",
+          "summary": "The sequence below separates controlled inputs, captured evidence, repeatable checks, and human or assisted review.",
+          "steps": [
+            {
+              "title": "Task specification",
+              "mode": "Specified / versioned",
+              "type": "controlled",
+              "description": "A versioned prompt and comparable engineering task define the run scope."
+            },
+            {
+              "title": "Clean baseline",
+              "mode": "Controlled input",
+              "type": "controlled",
+              "description": "Each run starts from a clean, standardized full-stack reference codebase."
+            },
+            {
+              "title": "Agent execution",
+              "mode": "Manual / semi-automated",
+              "type": "assisted",
+              "description": "A coding agent is run against the task, with follow-up scenarios where applicable."
+            },
+            {
+              "title": "Run artifacts",
+              "mode": "Captured evidence",
+              "type": "captured",
+              "description": "Metadata, configuration, diffs, logs, transcripts, and test results are retained as evidence."
+            },
+            {
+              "title": "Deterministic checks",
+              "mode": "Automated checks",
+              "type": "automated",
+              "description": "Functional and code-quality checks provide repeatable signals about generated changes."
+            },
+            {
+              "title": "Human / advisory assessment",
+              "mode": "Manual / assisted",
+              "type": "assisted",
+              "description": "Security and authorization reviews, structured human assessment, and model-assisted assessment where applicable add context."
+            },
+            {
+              "title": "Comparative reporting",
+              "mode": "Semi-automated",
+              "type": "assisted",
+              "description": "Comparable runs are assembled into structured experiment reporting."
+            }
+          ]
+        },
+        "components": [],
+        "artifactStructure": {
+          "title": "Run evidence structure",
+          "summary": "Each run was interpreted through a bundle of configuration, execution, verification, and review evidence. The internal schema and repository names are intentionally not disclosed.",
+          "rootLabel": "Run evidence bundle",
+          "items": [
+            {
+              "title": "Experiment metadata",
+              "type": "captured",
+              "description": "Run configuration, task version, and execution context."
+            },
+            {
+              "title": "Execution trace",
+              "type": "captured",
+              "description": "Execution logs and transcripts from the coding-agent run."
+            },
+            {
+              "title": "Generated changes",
+              "type": "captured",
+              "description": "Code diffs and resulting test results."
+            },
+            {
+              "title": "Deterministic checks",
+              "type": "automated",
+              "description": "Functional and code-quality check outputs."
+            },
+            {
+              "title": "Security review",
+              "type": "assisted",
+              "description": "Security and authorization review findings."
+            },
+            {
+              "title": "Assessment inputs",
+              "type": "assisted",
+              "description": "Structured human assessment and model-assisted assessment where applicable."
+            }
+          ]
+        }
+      },
+      "technologies": [],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Implementation correctness",
+          "text": "Generated changes were checked against task requirements through deterministic functional checks and recorded test results."
+        },
+        {
+          "title": "Code quality and execution behavior",
+          "text": "Code-quality checks and observed execution behavior provided complementary signals for comparative assessment."
+        },
+        {
+          "title": "Security and authorization",
+          "text": "Security and authorization reviews provided a distinct review path for findings that deterministic checks could not establish on their own."
+        },
+        {
+          "title": "Traceable comparison",
+          "text": "Run artifacts and structured assessment supported comparisons between runs without publishing internal scores, rankings, or private evaluation results."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "Manual and semi-automated work",
+          "text": "Execution, follow-up scenarios, and parts of assessment involved manual or semi-automated operations; the workbench is not described as fully autonomous."
+        },
+        {
+          "title": "Model and version variability",
+          "text": "Comparisons remain sensitive to model, prompt, task, and environment versioning, which is why the workbench records task and run context."
+        },
+        {
+          "title": "Limits of automated quality assessment",
+          "text": "Deterministic checks provide repeatable evidence but do not replace structured human or advisory assessment of security, authorization, and engineering quality."
+        },
+        {
+          "title": "Public-disclosure boundary",
+          "text": "Specific internal check counts, leaderboard details, scores, rankings, private evaluation results, and internal experiment artifacts are excluded pending explicit disclosure approval."
+        }
+      ],
+      "evidenceLinks": [],
+      "relatedProjectIds": [
+        17,
+        16,
+        14,
+        19
+      ],
+      "conceptualIllustration": {
+        "alt": "Conceptual illustration of a coding-agent evaluation workbench with a clean baseline, captured run evidence, deterministic checks, and comparative reporting; not a screenshot, benchmark result, or measured interface.",
+        "caption": "Conceptual illustration — reproducible coding-agent evaluation and evidence flow. It does not depict measured benchmark results or a production interface."
+      },
+      "publicFacts": {
+        "Type": "Internal engineering evaluation workbench",
+        "Contribution": "Evaluation framework and methodology",
+        "Status": "Internal Engineering / Evaluation Tooling"
+      }
+    },
+    {
+      "id": 16,
+      "title": "Enterprise AI Workspace",
+      "slug": "enterprise-ai-workspace",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/16/",
+      "category": "LLMs and RAG",
+      "description": "I worked on extending a LibreChat-based conversational AI workspace into a more useful enterprise platform: one that could combine configured agents, retrieval, persistence, integrations, and cloud application services without making every capability implicitly executable. The work crossed the visible product surface and the less visible decisions around authorization, deployment, and operational boundaries.",
+      "problem": "A conversational interface is only the entry point. The workspace also needs a dependable way to configure agents, retrieve organizational context, persist the right data, connect approved integrations, and keep users inside the capabilities they are allowed to use. I treated those boundaries as part of the product rather than as deployment details to solve later.",
+      "date": {
+        "published": "2026",
+        "duration": null
+      },
+      "status": "Professional enterprise engineering project",
+      "role": "AI Platform Engineer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [],
+      "technicalDecisions": [
+        {
+          "title": "Extend an existing open-source application",
+          "text": "Extending an existing conversational application gave me a useful product foundation. The trade-off was inheriting an upstream lifecycle while concentrating engineering effort on enterprise configuration, agent integration, persistence, and operational boundaries."
+        },
+        {
+          "title": "Keep application and retrieval responsibilities distinct",
+          "text": "I kept the conversational surface and retrieval-oriented persistence related but distinct. That separation made access easier to reason about and avoided implying that every application capability should directly reach stored organizational content."
+        },
+        {
+          "title": "Use PostgreSQL and pgvector for retrieval persistence",
+          "text": "PostgreSQL with pgvector provided a familiar persistence substrate for retrieval workflows. It also made data management, indexing, configuration, and access boundaries explicit operational responsibilities."
+        },
+        {
+          "title": "Restrict high-risk capabilities by default",
+          "text": "I treated application preview and code execution as bounded capabilities rather than as inevitable extensions of chat. The deeper execution design needed its own identity, session, workspace, and artifact controls."
+        },
+        {
+          "title": "Document the architecture at a safe abstraction level",
+          "text": "I documented the useful engineering relationships at a level that can be shared: application, retrieval, persistence, integration, and authorization. Employer-owned topology, identifiers, private prompts, exact policies, and operational statistics remain out of scope."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "LibreChat-based application extension",
+          "text": "I customized and extended an existing LibreChat-based workspace for an enterprise context. That let me focus my contribution on platform integration and capability boundaries rather than rebuilding a conversational shell."
+        },
+        {
+          "title": "Agent configuration and integration",
+          "text": "I configured agent behavior and integration surfaces within the workspace, keeping permissions and service contracts explicit instead of treating every connected API as automatically available to an agent."
+        },
+        {
+          "title": "AWS application infrastructure",
+          "text": "I worked across containerized application hosting and Application Load Balancer integration. The public case keeps deployment identifiers, network rules, scaling settings, and account details generalized."
+        },
+        {
+          "title": "Retrieval and persistence infrastructure",
+          "text": "I integrated PostgreSQL with pgvector for retrieval-oriented persistence and object storage for approved content workflows. The important engineering concern was keeping retrieval, persistence, and access responsibilities understandable without exposing private schemas or data volumes."
+        },
+        {
+          "title": "Authorization and capability controls",
+          "text": "I implemented or extended HMAC-based authorization boundaries and treated preview and execution as distinct capabilities with explicit restrictions. Code execution required a deeper identity and workspace design, which I document separately in Project 21."
+        },
+        {
+          "title": "Operational configuration",
+          "text": "I worked across application configuration, storage, retrieval, access, and deployment concerns. I keep the narrative focused on the boundaries I handled rather than implying ownership of every surrounding team or employer responsibility."
+        }
+      ],
+      "architecture": {
+        "summary": "I worked across the application, hosting, retrieval, persistence, integration, and access boundaries. The diagrams are a logical responsibility view; they intentionally leave out private network topology, IAM policy details, scaling configuration, and monitoring coverage.",
+        "workflow": null,
+        "components": [
+          {
+            "name": "LibreChat-based workspace",
+            "role": "I extended and configured the existing conversational application without claiming authorship of its upstream codebase."
+          },
+          {
+            "name": "Agents and integrations",
+            "role": "Agent behavior, tools, and integration contracts configured within explicit workspace permissions."
+          },
+          {
+            "name": "ECS / Fargate and ALB",
+            "role": "Containerized application hosting and entry-point integration across the cloud application boundary."
+          },
+          {
+            "name": "RDS PostgreSQL with pgvector",
+            "role": "Persistence and vector retrieval substrate for knowledge-grounded workflows."
+          },
+          {
+            "name": "Amazon S3 integration",
+            "role": "Object-storage integration for approved content and workspace workflows."
+          },
+          {
+            "name": "Access and capability controls",
+            "role": "Authentication and authorization boundaries, HMAC mechanisms, restricted previews, and deliberately bounded execution surfaces."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "LibreChat",
+        "AWS ECS",
+        "AWS Fargate",
+        "Application Load Balancer",
+        "Amazon RDS for PostgreSQL",
+        "pgvector",
+        "Amazon S3",
+        "HMAC authorization"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Application behavior and integration checks",
+          "text": "I validated configured application paths and agent/integration behavior at the implementation boundary. No user-adoption metric, performance benchmark, or production SLA is published."
+        },
+        {
+          "title": "Persistence and retrieval checks",
+          "text": "I checked retrieval-oriented persistence paths involving RDS PostgreSQL with pgvector and the S3 integration at the configured implementation boundary. Schema, volume, and index details remain private."
+        },
+        {
+          "title": "Infrastructure configuration validation",
+          "text": "I validated the relevant ECS/Fargate and Application Load Balancer configuration surfaces within project scope without claiming a complete topology, autoscaling profile, or monitoring coverage."
+        },
+        {
+          "title": "Authorization and capability verification",
+          "text": "I verified the documented authorization and capability boundaries, including HMAC mechanisms and restricted or disabled surfaces. Exact policies and secrets are intentionally omitted."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "Anonymized professional context",
+          "text": "The employer, customer, private repositories, domains, account identifiers, and internal configuration are intentionally not identified."
+        },
+        {
+          "title": "Inherited application lifecycle",
+          "text": "Extending an open-source application reduces the need to build a conversational shell but introduces upstream compatibility and maintenance considerations."
+        },
+        {
+          "title": "Managed persistence responsibility",
+          "text": "RDS PostgreSQL and pgvector provide a practical retrieval substrate while leaving data management, indexing, access, and operational configuration as ongoing responsibilities."
+        },
+        {
+          "title": "Bounded capability surface",
+          "text": "Restricted preview and disabled general code execution reduce feature breadth but make the public capability boundary more honest and safer to describe."
+        },
+        {
+          "title": "No public metrics or guarantees",
+          "text": "This case does not disclose costs, latency, throughput, check counts, production availability, monitoring coverage, or other private operational measurements."
+        }
+      ],
+      "evidenceLinks": [],
+      "relatedProjectIds": [
+        21,
+        1,
+        17,
+        19
+      ],
+      "conceptualIllustration": {
+        "alt": "Conceptual illustration of an enterprise AI workspace with users, agents, retrieval, cloud infrastructure, integrations, and controlled capabilities; not a deployed infrastructure diagram or product screenshot.",
+        "caption": "Conceptual illustration — an enterprise AI workspace, retrieval layer, cloud application surface, integrations, and capability boundaries. The diagrams below show the technical relationships at a shareable level."
+      },
+      "publicFacts": {
+        "Role": "AI Platform Engineer",
+        "Status": "Professional enterprise engineering project"
+      }
+    },
+    {
+      "id": 17,
+      "title": "Policy-Governed AI Agents",
+      "slug": "policy-governed-ai-agents",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/17/",
+      "category": "Production AI Engineering / Agent Reliability",
+      "description": "I worked on reusable foundations for conversational agents that could interact with operational systems without leaving authorization and failure handling to the language model. Each agent could have its own business workflow, but the platform needed a consistent way to interpret requests, resolve context, control state, execute tools, verify outcomes, and communicate safely. My contribution covered the relevant workflow and reliability workstreams, not an entire company platform.",
+      "problem": "Getting a language model to answer a question is one problem. Giving it the ability to act on someone’s behalf is another: it can misunderstand the request, select the wrong entity, skip a required confirmation, or describe a failed operation as successful. I needed the system—not a persuasive model response—to decide whether an action was allowed and whether it actually happened.",
+      "date": {
+        "published": "2026",
+        "duration": null
+      },
+      "status": "Professional production engineering experience, anonymized",
+      "role": "Staff AI Engineer / Agent Reliability",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [],
+      "technicalDecisions": [
+        {
+          "title": "Deterministic transitions over unconstrained action selection",
+          "text": "Explicit workflow states made the allowed progression visible and testable, while the language model remained responsible for interpretation rather than directly deciding that an operational action had completed."
+        },
+        {
+          "title": "Separate reasoning from operational execution",
+          "text": "Keeping LLM reasoning distinct from structured tool execution created a control boundary for authorization, confirmation, result inspection, and escalation."
+        },
+        {
+          "title": "Verify before communicating success",
+          "text": "A tool call or model-generated statement was not treated as proof of completion. The workflow required an observed, structured outcome before presenting supported success to the user."
+        },
+        {
+          "title": "Govern the response after execution",
+          "text": "I treated routine responses, sensitive outcomes, adjudication or revision passes, refusals, degraded behavior, and escalation as separate response paths. Not every turn needed the same level of review, but every path needed explicit semantics."
+        },
+        {
+          "title": "Treat confirmation as conditional control",
+          "text": "Confirmation was modeled as a boundary for applicable consequential actions rather than an indiscriminate interaction step, preserving usability without removing the control."
+        },
+        {
+          "title": "Use scenarios and traces to find failure modes",
+          "text": "Scenario-based regression and trace inspection exposed negative, ambiguous, and state-transition failures more usefully than relying on aggregate scores or a single happy-path demonstration."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "Stateful orchestration with LangGraph",
+          "text": "I contributed to LangGraph-based workflow architecture with explicit states and controlled transitions, keeping the workflow understandable and testable rather than relying on unconstrained model-driven action selection."
+        },
+        {
+          "title": "Context and entity resolution",
+          "text": "I implemented and refined the resolution of relevant context and entities before action paths could proceed, reducing ambiguity at the boundary between conversational interpretation and operational execution."
+        },
+        {
+          "title": "Authorization and verified actions",
+          "text": "I worked on eligibility and policy checks, confirmation where required, authorized tool execution, structured outcomes, and verification before a success response was communicated."
+        },
+        {
+          "title": "Reliability improvements",
+          "text": "I improved predictable handling for negative, ambiguous, failed, and incomplete paths, including clarification or escalation instead of silently treating an unverified operation as successful."
+        },
+        {
+          "title": "Multilingual response handling",
+          "text": "I worked with English, Spanish, and French response handling while keeping action semantics, guardrails, and state transitions independent from the wording shown to the user. Where language coverage or rollout was incomplete, I treated that as a test boundary rather than assuming production parity."
+        },
+        {
+          "title": "Scenario-based evaluation and trace analysis",
+          "text": "I contributed to scenario-based tests, regression coverage, state-transition validation, tool-result verification, trace inspection, and failure analysis without publishing internal datasets, counts, or production metrics."
+        },
+        {
+          "title": "Bounded engineering ownership",
+          "text": "My ownership covered workflow architecture, implementation, reliability improvements, and evaluation within the relevant workstreams; I do not claim ownership of the entire employer AI platform."
+        }
+      ],
+      "architecture": {
+        "summary": "I separated the workflow into layers. An input-safety boundary assessed the request; model-assisted interpretation and entity resolution identified what the person meant; explicit state controlled what could happen next; deterministic business and authorization checks gated consequential actions; guarded tools returned structured outcomes; and response governance decided whether to answer, clarify, refuse, degrade, or escalate. The diagrams are generalized so they do not expose private workflow or policy details.",
+        "workflow": null,
+        "components": [
+          {
+            "name": "LangGraph workflow orchestration",
+            "role": "Stateful workflow structure with explicit transitions and controlled next steps."
+          },
+          {
+            "name": "Context and entity resolution",
+            "role": "Resolution of relevant context before the workflow is allowed to proceed."
+          },
+          {
+            "name": "Policy and confirmation boundary",
+            "role": "Eligibility checks and confirmation requirements before consequential actions."
+          },
+          {
+            "name": "Authorized operational execution",
+            "role": "Separation between model reasoning and structured tool execution."
+          },
+          {
+            "name": "Verified outcomes",
+            "role": "Observed tool results determine whether success can be communicated."
+          },
+          {
+            "name": "Failure handling and escalation",
+            "role": "Ambiguous, ineligible, failed, or unverified paths remain explicit."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "LangGraph",
+        "LLM orchestration",
+        "Structured tool calls",
+        "State-transition validation",
+        "Scenario regression testing",
+        "Trace inspection"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Scenario-based tests",
+          "text": "I used scenario-based cases to exercise normal, negative, ambiguous, and failure paths without exposing the internal regression dataset or test counts."
+        },
+        {
+          "title": "State-transition validation",
+          "text": "Workflow state and transition behavior were inspected as first-class reliability concerns, including whether a path could proceed, stop, clarify, or escalate."
+        },
+        {
+          "title": "Tool-result verification",
+          "text": "The evaluation approach distinguished a requested operation from an observed result so that a tool response or failure could be handled explicitly."
+        },
+        {
+          "title": "Trace inspection and failure analysis",
+          "text": "Trace review helped identify interpretation, context, transition, execution, and verification failures without claiming a formal benchmark or universal coverage."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "Probabilistic interpretation remains",
+          "text": "Stateful orchestration constrains progression but does not make language-model interpretation perfectly correct or deterministic."
+        },
+        {
+          "title": "Policy definitions are external and changeable",
+          "text": "The workflow can expose control points, but the quality and maintenance of eligibility criteria remain dependent on the surrounding business and operational context."
+        },
+        {
+          "title": "Context resolution can remain ambiguous",
+          "text": "Incomplete, conflicting, or multilingual inputs may require clarification or escalation; this case does not claim a complete language or entity-coverage matrix."
+        },
+        {
+          "title": "Verification depends on observable outcomes",
+          "text": "A workflow can verify only what its operational boundary exposes, so verification is not a guarantee that every downstream business effect is known."
+        },
+        {
+          "title": "No perfect safety or correctness claim",
+          "text": "The approach reduces avoidable unsupported actions and makes failure paths more explicit; it does not claim zero failure risk, perfect policy compliance, or universal correctness."
+        }
+      ],
+      "evidenceLinks": [],
+      "relatedProjectIds": [
+        15,
+        16,
+        1,
+        19
+      ],
+      "conceptualIllustration": {
+        "alt": "Conceptual illustration of policy-governed AI agents moving through stateful orchestration, authorization checks, verified actions, and escalation paths; not a private production state machine or product screenshot.",
+        "caption": "Conceptual illustration — stateful orchestration, authorization boundaries, verified actions, and escalation. It does not reproduce a private workflow or policy."
+      },
+      "publicFacts": {
+        "Role": "Staff AI Engineer / Agent Reliability",
+        "Status": "Professional production engineering experience"
+      }
+    },
+    {
+      "id": 18,
+      "title": "Professional Cases — AI-Powered Professional Practice Scenarios",
+      "slug": "professional-cases-ai-practice-scenarios",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/18/",
+      "category": "Independent AI Product Engineering / Knowledge Systems",
+      "description": "Professional Cases is an independent product under development for experienced and retired professionals who want to continue exercising professional judgment through realistic, profession-specific practice scenarios and respectful feedback. The verified repository contains a Next.js/React web surface, a FastAPI backend, knowledge and content tooling, case generation, semantic evaluation, and a partially integrated Senior runtime. The browser Senior experience still uses deterministic mock BFF routes, so this case does not present the product as launched or publicly available.",
+      "problem": "Professional knowledge arrives as heterogeneous documents, images, terminology, and domain context. Turning that material into useful practice requires more than retrieving a paragraph: the system needs traceable ingestion, searchable evidence, topic diversity, case seeds, generated narratives, quality checks, and feedback grounded in the professional work. The product goal is to preserve dignity and professional identity without reducing the experience to a generic quiz, an AI chatbot, or unsupported claims about learning outcomes.",
+      "date": {
+        "published": "2026",
+        "duration": null
+      },
+      "status": "Independent Project — In Development",
+      "role": null,
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [],
+      "technicalDecisions": [
+        {
+          "title": "Keep Admin/Content Studio separate from Senior UX",
+          "text": "Knowledge authoring, clustering, generated-case review, and operations need dense inspection surfaces. The Senior experience needs a calm, readable, judgment-oriented flow; combining those surfaces would obscure both responsibilities."
+        },
+        {
+          "title": "Preserve provenance and safe projections",
+          "text": "The backend stores evidence, runs, specifications, and internal evaluation data, but browser-facing projections are assembled field by field. Hidden answers, rubrics, prompts, evaluator confidence, and generation metadata are not treated as Senior-visible data."
+        },
+        {
+          "title": "Use hybrid retrieval with diversity controls",
+          "text": "Lexical matching handles exact professional terms while vector search supports semantic recall. Per-document limits, clusters, and seed rotation reduce the risk that one source dominates every generated case."
+        },
+        {
+          "title": "Make the generation graph inspectable",
+          "text": "Separate generation phases and persisted node runs make failure, quality judgments, image decisions, and refinement behavior visible to the content workflow instead of hiding everything behind one provider call."
+        },
+        {
+          "title": "Make scoring deterministic at the server boundary",
+          "text": "The provider supplies constrained dimension judgments; the backend validates ids and evidence references and computes the weighted 1–100 result. This keeps scoring rules in an auditable contract rather than delegating the final number to the model."
+        },
+        {
+          "title": "Fail closed when authored content is incomplete",
+          "text": "A missing evaluation specification or subject-knowledge contract is an explicit incomplete-content error. The system does not invent a generic rubric, patient reply, or fallback score to make the flow appear complete."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "Modular product boundary",
+          "text": "I worked across the Next.js/React web surface and the FastAPI/Python backend while keeping Admin/Content Studio concerns separate from the calmer Senior runtime. The repository uses explicit domain modules instead of collapsing knowledge, generation, evaluation, and runtime state into one client abstraction."
+        },
+        {
+          "title": "Evidence-grounded knowledge pipeline",
+          "text": "I implemented and refined the path from supported document sources through extraction, Markdown-aware chunking, metadata, embeddings, image captions, pgvector persistence, hybrid retrieval, and related-image context. The pipeline exposes status and failure information instead of treating ingestion as an opaque batch."
+        },
+        {
+          "title": "Stateful case generation",
+          "text": "I built the LangGraph generation path around material sufficiency, narrative generation, metadata extraction, image evaluation, quality judges, aggregation, optional refinement, finalization, and discard handling. Generated cases retain evidence references, quality metadata, node runs, and review state for Admin inspection."
+        },
+        {
+          "title": "Rubric and evaluation contracts",
+          "text": "I separated the internal case-authored evaluation specification from provider output and the Senior-safe result. Evidence references are validated against the submitted work, the weighted overall score is assembled deterministically on the server, and malformed or hallucinated output does not receive a silent repair or fallback score."
+        },
+        {
+          "title": "Durable runtime foundations",
+          "text": "I extended the backend runtime around assignment-owned state, authorization, idempotent conclusion submission, durable text messages, authored subject knowledge, finding persistence, leases, and explicit provider failure categories. Private notes and evaluator internals remain outside the evaluation input contract."
+        },
+        {
+          "title": "Bounded product claims",
+          "text": "I kept voice, rewards, production browser cutover, and unverified multimedia capabilities outside the implemented claim set. The product remains independent and in development; no adoption, learning, clinical, or production-availability outcome is claimed."
+        }
+      ],
+      "architecture": {
+        "summary": "The current implementation is a modular web and backend monorepo. Admin and sponsor surfaces use Next.js/React; FastAPI modules own authentication, profiles, knowledge, generated cases, evaluation, and the Senior runtime; PostgreSQL with pgvector stores domain and retrieval data; Redis and Celery support background processing; and a centralized Google GenAI client forms the provider boundary. These diagrams show verified code paths, not the future deployment architecture or the full product design backlog.",
+        "workflow": null,
+        "components": [
+          {
+            "name": "Next.js / React web surfaces",
+            "role": "Admin and sponsor workflows exist; the browser Senior path still uses deterministic mock BFF routes."
+          },
+          {
+            "name": "FastAPI domain modules",
+            "role": "Authentication, profiles, knowledge, generated cases, semantic evaluation, and Senior runtime routes form the backend boundary."
+          },
+          {
+            "name": "PostgreSQL + pgvector",
+            "role": "Stores source documents, chunks, embeddings, images, clusters, seeds, cases, assignments, and evaluation state."
+          },
+          {
+            "name": "Redis + Celery workers",
+            "role": "Supports queued ingestion, clustering, case generation, and other background jobs in the local stack."
+          },
+          {
+            "name": "Centralized LLM provider boundary",
+            "role": "Structured generation, embeddings, retries, timeouts, and token accounting are centralized rather than duplicated per feature."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "Next.js / React",
+        "Python / FastAPI",
+        "PostgreSQL / pgvector",
+        "Redis / Celery",
+        "LangGraph",
+        "Google GenAI client",
+        "PyMuPDF",
+        "scikit-learn",
+        "Alembic"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Targeted backend coverage",
+          "text": "The repository includes unit coverage for knowledge metadata, clustering, case-generation nodes and service behavior, evaluation contracts and service behavior, case-subject contracts, provider errors, and seed rotation. The focused suite exercised for this review passed 94 tests with one environment-specific test deselected."
+        },
+        {
+          "title": "Integration coverage exists in the repository",
+          "text": "Integration suites cover authentication, knowledge upload and ingestion jobs, KB search, clustering, case-generation routes, evaluation persistence, Senior runtime authorization, and subject conversation behavior. They require the repository Docker Compose test database and were not run while that stack was stopped."
+        },
+        {
+          "title": "Failure and security boundaries are tested",
+          "text": "The source and tests cover ownership checks, idempotency, provider failure, malformed structured output, hallucinated fact or evidence references, missing authored contracts, and the absence of private notes from provider inputs."
+        },
+        {
+          "title": "Current validation finding",
+          "text": "The full unit run reached 140 passing tests but exposed one Windows locale failure while loading the UTF-8 patient_names.json file in a narrative-generator error-path test. That unrelated repository issue was not changed as part of this portfolio integration."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "Independent product remains in development",
+          "text": "There is no public launch, adoption evidence, learning-improvement evidence, clinical effectiveness claim, or production availability claim in this case study."
+        },
+        {
+          "title": "Senior browser cutover is incomplete",
+          "text": "The backend runtime and production conversation boundary exist, but the Next.js Senior BFF still uses deterministic mock routes. The current case therefore describes backend foundations and not a fully production-backed browser journey."
+        },
+        {
+          "title": "Case authoring contracts remain a product dependency",
+          "text": "The conversation engine requires case-authored subject_knowledge_json, and semantic evaluation requires evaluation_spec_json. The current generation pipeline does not yet produce the subject contract, so not every generated case is conversable."
+        },
+        {
+          "title": "Voice and rewards are not delivered capabilities",
+          "text": "Voice is explicitly deferred and no speech provider was found. Reward configuration exists at the profile level, but a reward ledger, event flow, and Senior presentation were not found."
+        },
+        {
+          "title": "Provider and environment boundaries",
+          "text": "Provider-backed behavior depends on configured credentials and the Docker test stack. This portfolio case does not publish benchmark scores, user counts, latency, adoption, or other quality metrics."
+        }
+      ],
+      "evidenceLinks": [],
+      "relatedProjectIds": [
+        19,
+        14,
+        1,
+        16
+      ],
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration for Professional Cases showing documents, images, knowledge organization, case generation, and assessment. Audio and video symbols are visual motifs only; the current implementation is text-first and does not claim speech support.",
+        "caption": "Conceptual editorial artwork — documents, images, knowledge organization, scenario generation, and assessment. The audio/video symbols are not evidence of implemented modalities; the verified product boundary is text-first and in development."
+      },
+      "publicFacts": {
+        "Type": "Independent project",
+        "Status": "Independent Project — In Development",
+        "Scope": "Knowledge, generation, evaluation, and backend runtime"
+      }
+    },
+    {
+      "id": 19,
+      "title": "AI Digital Twin — Contextual Knowledge, GraphRAG & Retrieval Evaluation",
+      "slug": "ai-digital-twin-contextual-knowledge-retrieval-evaluation",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/19/",
+      "category": "Retrieval Engineering / AI Evaluation",
+      "description": "I became interested in the digital-twin problem through knowledge rather than avatars. A useful assistant would need to connect projects, people, dates, emails, meetings, and decisions, then recover the context behind a question instead of matching a few similar words. I focused on organizing contextual knowledge and comparing retrieval strategies; I am not presenting this as human-equivalent memory or as proof that every workplace integration is complete.",
+      "problem": "Professional knowledge is spread across documents, projects, dates, emails, meetings, and other records. Vector search is useful when the wording of a question differs from the source, but semantic similarity can miss who worked on a project, which meeting led to a decision, or how one event relates to another. I investigated whether graph-enhanced retrieval adds useful relationships over vector RAG, and what the quality and response-time trade-offs look like for different question types.",
+      "date": {
+        "published": "Retrieval evaluation",
+        "duration": null
+      },
+      "status": "Retrieval evaluation — source access pending",
+      "role": null,
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [],
+      "technicalDecisions": [
+        {
+          "title": "Compare retrieval strategies instead of assuming graph value",
+          "text": "The central engineering question is empirical: determine when relationship-aware context adds value over vector similarity and where the additional complexity may not justify itself."
+        },
+        {
+          "title": "Use contextual metadata as part of retrieval reasoning",
+          "text": "Projects, dates, source types, emails, and meetings provide context that can narrow or qualify a retrieval request. I leave the exact filter order and implementation unspecified."
+        },
+        {
+          "title": "Evaluate by question type",
+          "text": "A single aggregate result could hide where vector, graph, or combined retrieval helps. I compared question types, but the specific categories and results remain private or unavailable."
+        },
+        {
+          "title": "Treat prompt changes as evaluation-driven",
+          "text": "Prompt refinement is presented as a response to observed evaluation behavior, not as a claim that wording alone solved retrieval quality or latency trade-offs."
+        },
+        {
+          "title": "Do not imply automatic runtime routing",
+          "text": "I describe comparable retrieval experiments, not an automatic router that selects a strategy for every question. That distinction remains until implementation evidence supports it."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "Contextual knowledge organization",
+          "text": "I organized the work around projects, dates, emails, meetings, and other context so retrieval could reflect more than semantic similarity alone. The exact schema, indexing code, and storage technology are not part of this public case."
+        },
+        {
+          "title": "Retrieval strategy experimentation",
+          "text": "I compared vector RAG, GraphRAG, and a combined GraphRAG plus vector RAG strategy as retrieval engineering experiments."
+        },
+        {
+          "title": "Evaluation design",
+          "text": "I compared the strategies across question types, measured response time, and assessed answer quality with DeepEval and an LLM-as-evaluator approach."
+        },
+        {
+          "title": "Prompt refinement",
+          "text": "The experiments informed prompt improvements. I do not claim a particular score increase or universally superior retrieval strategy without the underlying artifacts."
+        }
+      ],
+      "architecture": {
+        "summary": "I organized the work around contextual records, metadata filters, and vector representations, then compared vector RAG, GraphRAG, and a combined approach before passing retrieved evidence to answer generation. I leave the exact database, graph persistence, extraction pipeline, fusion mechanism, session model, and runtime routing unspecified because those implementation artifacts were not available for this case.",
+        "workflow": null,
+        "components": [
+          {
+            "name": "Contextual knowledge records",
+            "role": "Projects, dates, emails, meetings, and related records form the contextual knowledge I explored."
+          },
+          {
+            "name": "Metadata filtering",
+            "role": "Metadata narrows context appropriate to the question; exact fields and filter execution are not specified here."
+          },
+          {
+            "name": "Vector retrieval",
+            "role": "Vector-based RAG was one of the retrieval strategies I compared; product and index details are not published."
+          },
+          {
+            "name": "Graph-enhanced retrieval",
+            "role": "GraphRAG and a combined strategy were evaluated; entity extraction, graph persistence, and fusion details require source access."
+          },
+          {
+            "name": "Evaluation boundary",
+            "role": "I used DeepEval with an LLM-as-evaluator approach, response-time measurement, question-type comparison, and prompt refinement."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "Vector database",
+        "Metadata filtering",
+        "Vector RAG",
+        "GraphRAG",
+        "DeepEval",
+        "LLM-as-evaluator"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Engineering activities",
+          "text": "The work covered contextual knowledge organization, metadata filtering, vector RAG, GraphRAG, combined retrieval, response-time measurement, DeepEval/LLM-as-evaluator assessment, question-type comparison, and prompt refinement."
+        },
+        {
+          "title": "Source repository access",
+          "text": "The implementation repositories were not available for this portfolio case, so I am keeping database, graph, extraction, fusion, and runtime details at the level described above."
+        },
+        {
+          "title": "Historical architecture plan",
+          "text": "The Arabic-first Azure Phase 1 plan is separate from this retrieval study. I do not present its services as deployed Digital Twin infrastructure."
+        },
+        {
+          "title": "Publication boundary",
+          "text": "I have excluded private evaluation questions, scores, latency statistics, personal records, employer-specific results, credentials, endpoints, and benchmark charts."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "Implementation details require source access",
+          "text": "I do not identify the exact vector database, graph store, entity/relation extraction, traversal, fusion, reranking, prompt construction, session handling, tests, or evaluation artifacts in this case."
+        },
+        {
+          "title": "No human-equivalent memory claim",
+          "text": "Contextual organization and retrieval do not establish human-like memory, consciousness, autonomy, or reliable long-term memory."
+        },
+        {
+          "title": "No universal retrieval winner",
+          "text": "The case does not claim that vector RAG, GraphRAG, or the combined approach consistently wins without approved comparative results."
+        },
+        {
+          "title": "No deployment claim from the Azure proposal",
+          "text": "Azure Document Intelligence, Azure AI Search, Azure OpenAI, Azure PostgreSQL, Azure Storage, Container Apps, Terraform, Langfuse, RAGAS, and other plan references belong to a separate proposal and are not presented as deployed here."
+        },
+        {
+          "title": "Private corpus and evaluation artifacts",
+          "text": "The underlying personal-context corpus and evaluation artifacts require sanitization and owner approval before any detailed results or examples become public."
+        }
+      ],
+      "evidenceLinks": [],
+      "relatedProjectIds": [
+        14,
+        16,
+        1,
+        15
+      ],
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial collage for AI Digital Twin showing project, document, meeting, and email archives connected to vector retrieval, GraphRAG, combined approaches, and retrieval evaluation.",
+        "caption": "Conceptual editorial artwork — contextual archives and retrieval experiments. It is not an architecture export, benchmark chart, or claim of human-equivalent memory."
+      },
+      "publicFacts": {
+        "Type": "Engineering project",
+        "Status": "Retrieval evaluation — source access pending",
+        "Scope": "Contextual retrieval and comparative evaluation"
+      }
+    },
+    {
+      "id": 20,
+      "title": "AI Agent Evaluation & Experimentation Framework",
+      "slug": "ai-agent-evaluation-experimentation-framework",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/20/",
+      "category": "Agent Evaluation / Reliability Engineering",
+      "description": "I built a reusable evaluation platform for the question that follows any agent change: did the system improve, and where? The platform was designed to connect to a knowledge base through a small source contract, generate evaluation data from that source, run any compatible agent, and compare experiments with the same dataset and metric configuration. That made it possible to evaluate retrieval agents, tool-using agents, and multi-step workflows without coupling the runner to one implementation.",
+      "problem": "Manual testing makes it too easy to remember successful conversations and forget the awkward ones. Evaluation also becomes misleading when a dataset is built from one store while the agent searches another, or when every agent is forced into a response shape that hides retrieval and tool behavior. I needed a layer that preserved source context, normalized different agent outputs, and made the same experiment easy to repeat after a prompt, retrieval, model, or workflow change.",
+      "date": {
+        "published": "2025 – 2026",
+        "duration": null
+      },
+      "status": "Internal engineering evaluation tooling",
+      "role": "AI Evaluation Engineer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [],
+      "technicalDecisions": [
+        {
+          "title": "Make the knowledge-base boundary interchangeable",
+          "text": "The builder should not care whether chunks come from a local vector store or an external knowledge base. A shared export-and-search contract keeps dataset creation and evaluation aligned while leaving the storage implementation replaceable."
+        },
+        {
+          "title": "Keep dataset methodology visible",
+          "text": "Single-chunk, multi-chunk, and topic-based questions expose different failure modes. Recording the strategy, supporting chunks, source version, and retrieval context makes it possible to compare results without pretending every example measures the same behavior."
+        },
+        {
+          "title": "Use deterministic checks for hard contracts",
+          "text": "Exact structured-output, action-trace, forbidden-action, invalid-parameter, and workflow-outcome checks are repeatable and easy to explain. They are the right tool when the contract is explicit, but they cannot judge every useful variation in a natural-language answer."
+        },
+        {
+          "title": "Compare metrics without hiding their assumptions",
+          "text": "Reference-answer and semantic metrics help with meaning and groundedness, retrieval metrics need reliable context identities, and agent-specific metrics need traces or structured fields. I kept thresholds, weights, and metric inputs explicit so a comparison explains what was measured instead of collapsing everything into an unexplained score."
+        },
+        {
+          "title": "Make observability optional",
+          "text": "The evaluation runner should still be useful without a live observability service. Optional tracing and experiment inspection make runs easier to investigate, but they are not a claim that every experiment was continuously monitored in production."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "A knowledge-base boundary that stays interchangeable",
+          "text": "I defined the dataset layer around a small source interface for bulk chunk retrieval and semantic search. That let the same builder use a local vector-store adapter or connect over HTTP to an external knowledge base, while keeping stable chunk identifiers and source metadata attached to each example. The practical requirement is explicit: a knowledge base must expose the fields needed for export and search; the evaluation logic itself is not tied to one vendor or storage engine."
+        },
+        {
+          "title": "Dataset generation through different methodologies",
+          "text": "I supported three complementary ways to build evaluation data. Single-chunk generation creates focused baseline questions from one source chunk. Multi-chunk generation creates questions that require two to four chunks, grouped from the same document, adjacent sections, semantic neighbors, or precomputed clusters. Topic-based generation starts from realistic topic queries, retrieves relevant context, and asks the model to generate questions from that retrieved set. Each example keeps its supporting chunk IDs, answer context, source metadata, and generation method, so the dataset is inspectable rather than a bag of opaque prompts."
+        },
+        {
+          "title": "Any compatible agent can enter through the registry",
+          "text": "Agents implement a common contract for running an input and reporting configuration. Registration keeps the experiment runner independent from the implementation, while the normalized output can carry the answer, retrieved IDs and text, tool calls, raw trace, latency, and metadata. The reference implementations cover deterministic RAG, tool-using ReAct, and supervisor-based multi-agent workflows; the same path can be extended with a custom agent adapter."
+        },
+        {
+          "title": "Metrics are registered by family and selected by contract",
+          "text": "The metric registry made it possible to add and configure checks without changing the runner. The available families cover answer quality and grounding, retrieval ranking and recall, exact structured outputs, tool-call and workflow correctness, routing and escalation, safety and guardrails, runtime errors, latency, token usage, and response length. Thresholds and weights are explicit, and a metric is only meaningful when the selected agent exposes the evidence it needs."
+        },
+        {
+          "title": "Experiments that can be compared, not just executed",
+          "text": "An experiment configuration selects the agent, dataset, metric definitions, thresholds, sample limits, and optional observability. Running the same dataset against different agent versions, prompts, retrieval strategies, or metric configurations produces JSON, CSV, and Markdown artifacts with per-example results, per-metric mean and pass-rate statistics, weighted summaries, timing, and failures. That makes it possible to compare experiments and metrics side by side without publishing private scores."
+        }
+      ],
+      "architecture": {
+        "summary": "I separated knowledge-base access, dataset preparation, agent execution, evidence capture, metric evaluation, and experiment analysis. A knowledge-base source provides bulk chunks and semantic search through one interface, so the builder can work with a local vector store or a compatible external knowledge base. Registered agents return a common output shape — answer, retrieved context, tool calls, trace, latency, and metadata — while the metric registry selects checks that match the evidence available for that experiment. Optional observability helps inspect runs; it is not the evaluation engine itself.",
+        "workflow": null,
+        "components": [
+          {
+            "name": "Knowledge-base source contract",
+            "role": "Exposes bulk chunk retrieval and semantic search through the same interface for local vector stores or compatible external knowledge bases."
+          },
+          {
+            "name": "Dataset builder",
+            "role": "Generates source-grounded examples with single-chunk, multi-chunk, and topic-based methodologies, including the supporting chunk identities and generation metadata."
+          },
+          {
+            "name": "Agent registry and adapters",
+            "role": "Registers agent implementations behind a common run/configure interface, so RAG, ReAct, multi-agent, or custom agents can use the same runner."
+          },
+          {
+            "name": "Metric registry",
+            "role": "Registers configurable metric implementations by type, threshold, weight, and the evidence fields an agent exposes."
+          },
+          {
+            "name": "Experiment runner",
+            "role": "Runs fixed datasets, aggregates results, records errors and timing, and produces comparison-ready artifacts."
+          },
+          {
+            "name": "Optional Opik integration",
+            "role": "Supports dataset, prompt, trace, and experiment inspection when configured; it is not presented as continuous production monitoring."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "Python",
+        "YAML configuration",
+        "KB adapters",
+        "Metric registry",
+        "RAGAS",
+        "DeepEval",
+        "Opik",
+        "LangGraph",
+        "pytest"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Interchangeable source and registration boundaries",
+          "text": "The implementation separates knowledge-base adapters, dataset strategies, agent registration, metric registration, experiment execution, and observability. Those boundaries are testable independently and keep the runner from depending on one knowledge base or one agent architecture."
+        },
+        {
+          "title": "Dataset and metric evidence",
+          "text": "Generated examples retain their supporting chunk identities, source metadata, strategy, and expected answer. Evaluation results retain configuration, outputs, timing, runtime failures, metric details, and comparison artifacts, which makes a failure inspectable rather than hidden behind a single average."
+        },
+        {
+          "title": "Experiment comparison",
+          "text": "Run artifacts are structured for comparison across agent, prompt, retrieval, and metric configuration changes. I am intentionally not publishing private scores, rankings, benchmark results, or internal dataset examples."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "Knowledge-base compatibility is explicit",
+          "text": "The platform can work with different knowledge bases through the shared source contract, but a source still needs reliable bulk export, semantic search, stable chunk identities, and the metadata required by the selected metrics."
+        },
+        {
+          "title": "Generated datasets still need review",
+          "text": "Synthetic generation improves coverage but does not remove the need for spot checks. Simple word-overlap validation is not sufficient for every multi-chunk answer, so dataset quality remains part of the evaluation design."
+        },
+        {
+          "title": "Metrics are contract-dependent",
+          "text": "Not every agent exposes retrieved context, action traces, workflow outcomes, or reference fields. A metric should be applied only when its inputs and semantics are valid for that experiment."
+        },
+        {
+          "title": "Model-assisted assessment varies",
+          "text": "LLM-based judges and semantic metrics introduce evaluator-model and prompt sensitivity. They complement deterministic checks; they do not remove the need for failure inspection or human judgment."
+        },
+        {
+          "title": "No public benchmark claim",
+          "text": "The public case excludes private prompts, datasets, scores, rankings, model comparisons, and customer results. It documents the evaluation capability and design decisions rather than a headline improvement."
+        },
+        {
+          "title": "No continuous-monitoring claim",
+          "text": "Opik integration supports optional tracing and experiment inspection; it does not by itself establish a continuously monitored production system."
+        }
+      ],
+      "evidenceLinks": [],
+      "relatedProjectIds": [
+        15,
+        16,
+        17,
+        19
+      ],
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of AI agent evaluation with datasets, agent traces, deterministic checks, LLM-based evaluation, experiment comparison, and reproducibility; not a benchmark result or product screenshot.",
+        "caption": "Conceptual illustration — datasets, traces, metric families, experiment comparison, and reproducibility. It does not show measured benchmark results."
+      },
+      "publicFacts": {
+        "Role": "AI Evaluation Engineer",
+        "Status": "Internal engineering evaluation tooling"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Secure AI Code Execution & Workspace Isolation",
+      "slug": "secure-ai-code-execution-workspace-isolation",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/21/",
+      "category": "AI Security / Execution Boundaries",
+      "description": "Adding code execution to an AI workspace sounds straightforward until the code is not trusted. I approached the problem from identity and workspace boundaries first: how do I know which user owns a session, what files that session should see, whether the intended workspace is actually mounted, and what artifacts can safely return to the application?",
+      "problem": "Code execution creates a different trust boundary from text generation. A request can be authenticated and still be routed to the wrong workspace, attached to an unexpected filesystem, or allowed to survive longer than intended. I needed the execution path to verify ownership and runtime state before allowing a managed interpreter session to work with persistent files.",
+      "date": {
+        "published": "2026",
+        "duration": null
+      },
+      "status": "Controlled implementation — broader rollout gated",
+      "role": "AI Platform Engineer",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [],
+      "technicalDecisions": [
+        {
+          "title": "Reject caller-supplied workspace identity",
+          "text": "Trusting a workspace ID in the request would make the most important authorization decision part of the user input. Deriving ownership from verified identity gives the gateway one authoritative starting point."
+        },
+        {
+          "title": "Separate execution from the chat application",
+          "text": "A dedicated execution service makes runtime, filesystem, session, and artifact controls visible as their own boundary. It also avoids making the conversational application responsible for arbitrary interpreter lifecycle details."
+        },
+        {
+          "title": "Separate AgentCore execution from Sandpack previews",
+          "text": "AgentCore Code Interpreter is the server-side code-execution path. Sandpack is the preview path for generated React or artifact output, protected by a separate HTTP authorization sidecar. Treating the two as the same sandbox would overstate what either boundary proves."
+        },
+        {
+          "title": "Persist workspaces, keep sessions ephemeral",
+          "text": "Persistent owner-scoped storage supports useful files and artifacts, while managed interpreter sessions can remain short-lived. The trade-off is that the attachment and cleanup lifecycle must be verified instead of assumed."
+        },
+        {
+          "title": "Fail closed on unexpected runtime state",
+          "text": "If the session, mount, or filesystem state does not match the authorized request, the safer behavior is to deny execution and surface a controlled failure rather than guessing which workspace was intended."
+        },
+        {
+          "title": "Be honest about the shared-role boundary",
+          "text": "The design reduces accidental cross-owner access and incorrect routing at the application boundary. A shared interpreter resource and shared execution role are not a strong security boundary against mutually hostile users who can abuse those credentials, so I describe this as a controlled internal design rather than a hostile-tenant sandbox."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "Integrate the CodeAPI Translator with AgentCore",
+          "text": "I implemented and tested a TypeScript/Fastify CodeAPI adapter for AWS Bedrock AgentCore Code Interpreter. The translator is the application-facing boundary: it verifies identity and prepares the execution request, while AgentCore is the managed service that actually runs the code."
+        },
+        {
+          "title": "Derive ownership from authenticated identity",
+          "text": "I kept workspace ownership on the server side. The execution request does not get to nominate an arbitrary workspace identity; the CodeAPI Translator resolves the owner from verified authentication context and uses that result for the rest of the flow."
+        },
+        {
+          "title": "Bind sessions to workspaces",
+          "text": "I treated session creation and storage attachment as one relationship to verify. Before execution, the path checks that the intended owner-scoped access point is present and that the session state matches what the application authorized."
+        },
+        {
+          "title": "Harden filesystem and lifecycle behavior",
+          "text": "The implementation includes bounded filesystem operations, storage restrictions, session lifecycle handling, EFS access-point checks, and validation that rejects unexpected mounts or session states rather than attempting to recover silently."
+        },
+        {
+          "title": "Keep file and artifact handling explicit",
+          "text": "Uploads, downloads, and generated artifacts remain part of the security boundary. The execution service should return only artifacts associated with the verified workspace and expected session flow."
+        },
+        {
+          "title": "Keep artifact previews separate from code execution",
+          "text": "The Sandpack preview path is a different capability: an ECS/Fargate-hosted bundler sits behind an HTTP authorization sidecar for generated React and artifact previews. That sidecar protects preview requests; it is not the AgentCore Code Interpreter and does not provide general-purpose hostile-code sandboxing."
+        },
+        {
+          "title": "Prepare infrastructure and security tests",
+          "text": "I worked with infrastructure-as-code preparation and automated security-oriented tests for ownership and filesystem behavior. The implementation work is documented separately from staging activation and broader user routing."
+        }
+      ],
+      "architecture": {
+        "summary": "I separated the authenticated application from a TypeScript/Fastify CodeAPI Translator and the managed execution service. The translator verifies JWT-derived ownership, resolves the owner-bound EFS access point, checks session and mount state, and then invokes AWS Bedrock AgentCore Code Interpreter. AgentCore runs the code; EFS persists owner-scoped files; the translator owns the application-level session, filesystem, upload, download, and artifact checks. The shared interpreter resource and execution role remain an operational choice with a residual security limitation, not a complete hostile-tenant isolation boundary.",
+        "workflow": null,
+        "components": [
+          {
+            "name": "Authenticated translation/API layer",
+            "role": "Receives the application request and passes verified identity context into the execution path."
+          },
+          {
+            "name": "TypeScript CodeAPI Translator",
+            "role": "Resolves the owner and intended workspace server-side, validates the request, and invokes AgentCore instead of trusting a caller-supplied workspace identity."
+          },
+          {
+            "name": "AWS Bedrock AgentCore Code Interpreter",
+            "role": "Runs the submitted code in managed interpreter sessions. AgentCore is the execution service; it is not the ECS-hosted translator."
+          },
+          {
+            "name": "Owner-scoped EFS workspace",
+            "role": "Provides dynamically resolved per-owner access points for files that must persist across short-lived sessions."
+          },
+          {
+            "name": "Validation and artifact boundary",
+            "role": "Checks session, mount, filesystem, upload, download, and artifact expectations before allowing or returning work."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "AWS Bedrock AgentCore Code Interpreter",
+        "TypeScript / Fastify CodeAPI adapter",
+        "JWT-derived ownership",
+        "Persistent EFS workspaces",
+        "Managed sessions",
+        "Filesystem safety checks",
+        "Infrastructure as code",
+        "Automated security tests"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Source-level implementation",
+          "text": "The documented source components include the TypeScript/Fastify CodeAPI adapter for AgentCore, owner-bound EFS workspace resolution, session and mount checks, and automated tests for the ownership, filesystem, and artifact boundaries described here. The public case omits private resource names, policies, paths, credentials, and topology."
+        },
+        {
+          "title": "Security-oriented test coverage",
+          "text": "I exercised the cases that matter when identity and runtime state disagree: incorrect ownership, unexpected filesystem access, invalid mounts, and unsafe session conditions should be rejected rather than allowed to drift into execution."
+        },
+        {
+          "title": "Rollout status",
+          "text": "The source-level components and automated tests were reported complete, and the infrastructure configuration was reviewed. The handover did not confirm complete staging activation, full end-to-end rollout, or production deployment of the multi-owner architecture."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "AgentCore, translator, and storage are separate components",
+          "text": "AgentCore Code Interpreter runs code, the translator mediates application requests, and EFS persists workspaces. ECS/Fargate hosts the translator; it is not accurate to describe AgentCore itself as an ECS service or to treat EFS as the execution sandbox."
+        },
+        {
+          "title": "Sandpack is an artifact-preview boundary",
+          "text": "The Sandpack bundler and HTTP authorization sidecar support generated artifact previews. They are not the same implementation as AgentCore Code Interpreter and are not presented as a general-purpose hostile-code sandbox."
+        },
+        {
+          "title": "Not a hostile-tenant isolation claim",
+          "text": "A shared managed interpreter resource and associated shared execution role can still expose residual risk to mutually hostile users who can abuse those credentials. Application-level ownership checks reduce routing mistakes; they do not remove that threat model."
+        },
+        {
+          "title": "Controlled internal scope",
+          "text": "The selected architecture was designed for a controlled internal environment. I do not describe it as unrestricted secure execution, a zero-trust sandbox, or a production-grade multitenancy guarantee."
+        },
+        {
+          "title": "Activation remained gated",
+          "text": "Implementation and tests are not the same as a completed rollout. Broader routing, staging activation, acceptance, and production deployment required separate operational gates that were not confirmed in the available handover context."
+        },
+        {
+          "title": "Private infrastructure details stay private",
+          "text": "The published case intentionally excludes IAM policies, resource identifiers, filesystem paths, endpoints, account structure, credentials, and proprietary threat-model details."
+        }
+      ],
+      "evidenceLinks": [],
+      "relatedProjectIds": [
+        16,
+        20,
+        17,
+        15
+      ],
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration of secure AI code execution showing authenticated requests, a controlled runtime, verified workspace mounts, persistent artifacts, and gated results; not a production architecture diagram.",
+        "caption": "Conceptual illustration — runtime boundaries, workspace ownership, persistence, and verified outputs. It does not imply perfect isolation or completed production deployment."
+      },
+      "publicFacts": {
+        "Role": "AI Platform Engineer",
+        "Status": "Controlled internal engineering implementation"
+      }
+    },
+    {
+      "id": 22,
+      "title": "Industrial Machine Vision — Course & Practical Labs",
+      "slug": "industrial-machine-vision-course",
+      "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/22/",
+      "category": "Computer Vision / Engineering Education",
+      "description": "I co-designed and delivered a public industrial machine-vision course with practical material that moves from pixels and image operators to cameras, optics, lighting, factory communication, and learned models. The repository is a collaborative teaching artifact: its value is the learning path and hands-on material, not an individual authorship claim.",
+      "problem": "Machine vision is often taught as either image processing or model training, while real systems require both technical layers plus physical imaging and industrial integration. The course connects those layers so a learner can understand why field of view, lens choice, illumination, calibration, feature design, dataset construction, and communication all affect the final inspection behavior.",
+      "date": {
+        "published": "2022",
+        "duration": null
+      },
+      "status": "Public collaborative course materials",
+      "role": "Co-designer and instructor",
+      "contribution": null,
+      "responsibilities": [],
+      "contributions": [
+        "Digital image processing: pixels, RGB and bit depth, filtering, edges, brightness and contrast, histograms, binarization, morphology, connected components, and shape or texture features.",
+        "Dimensioning systems: cameras, lenses, optics, field of view, resolution, depth of field, lighting, polarization, filters, thermography, optical gas imaging, 3D, hyperspectral and multispectral approaches.",
+        "Industrial integration: PC and smart cameras, FPGA and memory considerations, Ethernet/TCP/IP/PROFINET, and practical machine-vision communication exercises.",
+        "Machine and deep learning: feature-based classification, dataset construction, classical ML, neural networks, PyTorch, CNNs, evaluation, labs, and a final project."
+      ],
+      "technicalDecisions": [
+        {
+          "title": "Teach the system, not only the model",
+          "text": "The course keeps physical image formation, deterministic processing, industrial communication, and learned inference in one progression so the model is understood as one component of a larger system."
+        },
+        {
+          "title": "Preserve collaborative authorship",
+          "text": "I describe the course as co-designed and collaboratively delivered. The public repository is linked as the source of the modules, notebooks, slides, and labs rather than presented as an exclusively authored work."
+        }
+      ],
+      "implementation": [
+        {
+          "title": "Digital image processing",
+          "text": "The first module builds from pixel representation and basic transformations through filtering, histograms, thresholding, morphology, connected components, and feature extraction such as size, curvature, circularity, perimeter, bounding boxes, centroids, texture, and moments."
+        },
+        {
+          "title": "Physical vision-system design",
+          "text": "The material treats cameras, CCD/CMOS sensors, lenses, field of view, resolution, depth of field, illumination, polarization, filters, thermography, optical gas imaging, 3D, hyperspectral, multispectral, and stereo methods as system-design choices."
+        },
+        {
+          "title": "Practical industrial labs",
+          "text": "The repository includes practical material around visible-camera and illumination setups, thermography, Gocator 3D work, Cognex smart-camera work, and industrial communication concepts."
+        },
+        {
+          "title": "Applied machine learning",
+          "text": "Dataset construction, feature-based prediction and classification, basic ML, neural networks, PyTorch notebooks, CNNs, evaluation, and a final project complete the path."
+        }
+      ],
+      "architecture": {
+        "summary": "The learning path starts with digital images and deterministic operators, then introduces physical imaging systems, specialized sensors and lighting, industrial communication, and machine/deep learning. Labs and a final project connect each concept to an applied workflow.",
+        "workflow": {
+          "title": "A learning path from pixels to inspection systems",
+          "summary": "Each stage adds a new engineering constraint while keeping the previous layer visible.",
+          "steps": [
+            {
+              "title": "Represent and transform the image",
+              "mode": "Controlled input",
+              "type": "controlled",
+              "description": "Work with pixel matrices, color, bit depth, filtering, histograms, thresholding, edges, and morphology before choosing a model."
+            },
+            {
+              "title": "Measure and extract structure",
+              "mode": "Automated checks",
+              "type": "automated",
+              "description": "Use connected components, contours, geometric measurements, texture, moments, and fitted curves to describe objects and defects."
+            },
+            {
+              "title": "Design the physical imaging system",
+              "mode": "Controlled input",
+              "type": "controlled",
+              "description": "Relate cameras, lenses, field of view, resolution, depth of field, lighting, polarization, filters, thermography, and 3D or smart-camera options to the inspection requirement."
+            },
+            {
+              "title": "Connect the inspection to industry",
+              "mode": "Captured evidence",
+              "type": "captured",
+              "description": "Explore industrial computers, camera platforms, Ethernet/TCP/IP/PROFINET, and practical communication or acquisition labs."
+            },
+            {
+              "title": "Build and evaluate learned models",
+              "mode": "Automated checks",
+              "type": "automated",
+              "description": "Construct datasets, introduce classical ML and neural networks, use PyTorch and CNNs, and consolidate the work in a final project."
+            }
+          ]
+        },
+        "components": [
+          {
+            "name": "Image-processing foundations",
+            "role": "Filtering, histograms, thresholding, morphology, features, and measurements provide a deterministic vocabulary for visual evidence."
+          },
+          {
+            "name": "Optics and acquisition",
+            "role": "Cameras, lenses, field of view, resolution, depth of field, and lighting connect the physical scene to pixels."
+          },
+          {
+            "name": "Industrial imaging",
+            "role": "Thermography, optical gas imaging, 3D, smart cameras, and communication labs show how specialized systems fit production constraints."
+          },
+          {
+            "name": "Machine and deep learning",
+            "role": "Dataset construction, classical ML, PyTorch, neural networks, CNNs, and evaluation extend the toolkit when explicit rules are insufficient."
+          }
+        ],
+        "artifactStructure": null
+      },
+      "technologies": [
+        "Python",
+        "OpenCV",
+        "PyTorch",
+        "Image processing",
+        "Optics and cameras",
+        "Industrial lighting",
+        "Thermography",
+        "3D and smart cameras",
+        "Industrial communications",
+        "CNNs and deep learning"
+      ],
+      "outcomes": [],
+      "publicEvidence": [
+        {
+          "title": "Repository structure",
+          "text": "The public repository contains README-described modules, notebooks, slide material, practical labs, and a final-project structure covering image processing, industrial vision, and machine learning."
+        },
+        {
+          "title": "Authentic visual material",
+          "text": "The gallery uses selected images copied from the public course repository. They are learning material, not portfolio-generated illustrations or evidence of a specific production installation."
+        }
+      ],
+      "limitations": [
+        {
+          "title": "Collaborative course artifact",
+          "text": "The case does not claim exclusive authorship, student counts, completion rates, or learning outcomes that are not documented in the public source."
+        },
+        {
+          "title": "Educational examples are not production guarantees",
+          "text": "The labs and examples teach transferable concepts. They do not by themselves establish a production-ready inspection system, sensor specification, or industrial performance result."
+        }
+      ],
+      "evidenceLinks": [
+        {
+          "label": "Public course repository",
+          "url": "https://github.com/DavidNavarroSaiz/MachineVision-in-the-industry-Course"
+        }
+      ],
+      "relatedProjectIds": [
+        10,
+        3,
+        13
+      ],
+      "conceptualIllustration": {
+        "alt": "Conceptual editorial illustration for the Industrial Machine Vision Course showing industrial camera systems, optical principles, field-of-view diagrams, image-processing exercises, and practical inspection education; not a photograph of the actual course or classroom.",
+        "caption": "Conceptual editorial artwork — industrial cameras, optics, field of view, image processing, and inspection education. The authentic course labs and diagrams remain available in the gallery below."
+      },
+      "publicFacts": {
+        "Role": "Co-designer and instructor",
+        "Status": "Public collaborative course materials",
+        "Scope": "Image processing, vision systems, and industrial integration"
+      }
+    }
+  ],
+  "indexes": {
+    "projectCount": 22,
+    "projectIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "featuredProjectIds": [
+      17,
+      20,
+      10,
+      21,
+      16,
+      15
+    ],
+    "experienceEntryCount": 7,
+    "employerCount": 5,
+    "clientEngagements": 2,
+    "researchEntryCount": 1
+  },
+  "urls": {
+    "projects": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/",
+    "experience": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/experience/",
+    "about": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/about/"
+  }
+}
