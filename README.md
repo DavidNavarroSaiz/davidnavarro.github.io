@@ -1,14 +1,14 @@
-# David Navarro - Machine Learning Engineer Portfolio
+# David Navarro - Senior AI Engineer Portfolio
 
-A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS. This portfolio showcases my work as a Machine Learning Engineer with a clean, professional design and smooth animations.
+A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS. This portfolio showcases my work as a Senior AI Engineer with a clean, professional design and smooth animations.
 
 ## 🚀 Live Demo
 
-**Live Site:** [https://davidnavarro.github.io](https://davidnavarro.github.io)
+**Live Site:** [https://davidnavarrosaiz.github.io/davidnavarro.github.io](https://davidnavarrosaiz.github.io/davidnavarro.github.io)
 
 ## ✨ Features
 
-- **Modern Tech Stack**: Built with Next.js 13, React 18, and Tailwind CSS
+- **Modern Tech Stack**: Built with Next.js 14, React 18, and Tailwind CSS
 - **Responsive Design**: Fully responsive across all devices
 - **Dark Mode**: Toggle between light and dark themes
 - **Smooth Animations**: Powered by Framer Motion
@@ -16,15 +16,16 @@ A modern, responsive portfolio website built with Next.js, React, and Tailwind C
 - **Project Showcase**: Dynamic project filtering and detailed project pages
 - **SEO Optimized**: Meta tags and structured data for better search visibility
 - **Static Export**: Optimized for GitHub Pages deployment
+- **Machine-Readable Exports**: Public JSON, Markdown, and `llms.txt` portfolio exports
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 13
+- **Framework**: Next.js 14
 - **Frontend**: React 18
 - **Styling**: Tailwind CSS 3
 - **Animations**: Framer Motion
 - **Icons**: React Icons
-- **Email**: Nodemailer
+- **Email**: EmailJS for static-hosting-compatible contact forms
 - **Deployment**: GitHub Pages with GitHub Actions
 
 ## 📁 Project Structure
@@ -68,9 +69,9 @@ davidnavarro.github.io/
 │   ├── useScrollToTop.jsx     # Scroll to top functionality
 │   └── useThemeSwitcher.jsx   # Dark/light theme toggle
 ├── pages/                     # Next.js pages
-│   ├── api/                   # API routes
+│   ├── api/                   # Optional server API handlers (not used by the static export)
 │   │   ├── hello.js
-│   │   └── send-email.js      # Contact form email handler
+│   │   └── send-email.js      # Optional server-side email handler
 │   ├── projects/              # Project pages
 │   │   ├── [id].jsx          # Dynamic project page
 │   │   └── index.jsx         # Projects listing page
@@ -182,6 +183,10 @@ The project is configured for automatic deployment to GitHub Pages using GitHub 
    #    - Deploys to GitHub Pages
    ```
 
+The GitHub Pages build uses the repository base path `/davidnavarro.github.io`
+and copies the committed machine-readable exports from `public/` into the
+static output: `portfolio.json`, `portfolio.md`, and `llms.txt`.
+
 ### Manual Deployment
 
 If you prefer manual deployment:
@@ -208,7 +213,7 @@ npm run build
 
 ```bash
 # Clone the repository
-git clone https://github.com/davidnavarro/davidnavarro.github.io.git
+git clone https://github.com/DavidNavarroSaiz/davidnavarro.github.io.git
 
 # Navigate to project directory
 cd davidnavarro.github.io
@@ -224,25 +229,22 @@ npm run dev
 
 - `npm run dev` - Start development server (http://localhost:3000)
 - `npm run build` - Build for production
-- `npm run start` - Start production server
+- `npm run start` - Preview the static production export from `out/` (run `npm run build` first)
 - `npm run lint` - Run ESLint
 
 ## 📧 Contact Form Setup
 
-The contact form uses Nodemailer for email functionality:
+The contact form uses EmailJS so it works with the static GitHub Pages export.
+See [EMAILJS_SETUP_INSTRUCTIONS.md](EMAILJS_SETUP_INSTRUCTIONS.md) for the
+service and template setup. Local builds need these public environment variables
+in `.env.local`; the GitHub Actions workflow provides them from repository
+secrets:
 
-1. **Email Configuration** (`pages/api/send-email.js`):
-   - Configure SMTP settings
-   - Set up email templates
-   - Handle form validation
-
-2. **Environment Variables** (create `.env.local`):
-   ```env
-   SMTP_HOST=your-smtp-host
-   SMTP_PORT=587
-   SMTP_USER=your-email
-   SMTP_PASS=your-password
-   ```
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
 ## 🎯 Customization
 
@@ -270,9 +272,9 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📞 Contact
 
-**David Navarro** - Machine Learning Engineer
-- Portfolio: [https://davidnavarro.github.io](https://davidnavarro.github.io)
-- GitHub: [@davidnavarro](https://github.com/davidnavarro)
+**David Navarro** - Senior AI Engineer
+- Portfolio: [https://davidnavarrosaiz.github.io/davidnavarro.github.io](https://davidnavarrosaiz.github.io/davidnavarro.github.io)
+- GitHub: [@DavidNavarroSaiz](https://github.com/DavidNavarroSaiz)
 
 ---
 

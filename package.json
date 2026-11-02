@@ -6,7 +6,7 @@
     "dev:original": "next dev",
     "build": "next build",
     "build:github": "cross-env GITHUB_ACTIONS=true next build",
-    "start": "next start",
+    "start": "npx serve@latest out",
     "lint": "next lint",
     "export": "next export"
   },

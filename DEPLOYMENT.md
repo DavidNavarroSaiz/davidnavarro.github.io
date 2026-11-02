@@ -12,6 +12,14 @@ npm run dev
 # Open http://localhost:3000
 ```
 
+After a production build, preview the exact static export locally with:
+
+```bash
+npm run build
+npm run start
+# Open http://localhost:3000
+```
+
 ## Production Deployment
 
 ### GitHub Pages
@@ -33,6 +41,15 @@ npm run build
 # The build will be in ./out directory
 ```
 
+### Machine-readable portfolio exports
+
+`public/portfolio.json`, `public/portfolio.md`, and `public/llms.txt` are
+included in the static export. Regenerate them after changing the source data:
+
+```bash
+node scripts/generate-portfolio-exports.cjs
+```
+
 ## Environment Configuration
 
 ### Local Development
@@ -51,6 +68,15 @@ npm run build
 - `NODE_ENV=production`
 - `basePath=""` (empty)
 - `assetPrefix=""` (empty)
+
+### EmailJS and Umami
+
+- The static contact form uses the `NEXT_PUBLIC_EMAILJS_*` variables documented
+  in `EMAILJS_SETUP_INSTRUCTIONS.md`. The GitHub Actions workflow reads them
+  from repository secrets during the build.
+- Umami loads only on `davidnavarrosaiz.github.io`, so local previews do not
+  send analytics events. The tracker is mounted once in `pages/_app.jsx` and
+  event helpers are host-gated.
 
 ## Troubleshooting
 

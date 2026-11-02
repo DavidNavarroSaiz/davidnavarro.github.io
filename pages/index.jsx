@@ -41,13 +41,19 @@ export async function getStaticProps() {
 		const editorialCover = project.caseStudy?.editorialCover;
 		const featured = project.featured ?? {};
 		const imageAsset = featured.image || project.img || editorialCover?.img;
+		const image = imageAsset?.src ?? imageAsset;
+
+		// A project may be featured without having the optional presentation
+		// metadata. Keep the homepage data shape complete and skip entries that
+		// do not have an image instead of passing undefined to next/image.
+		if (!image) return null;
 
 		return {
 			id: project.id,
 			title: project.title,
 			category: project.category,
-			publishDate: project.ProjectHeader.publishDate,
-			image: imageAsset?.src ?? imageAsset,
+			publishDate: project.ProjectHeader?.publishDate ?? 'Date not specified',
+			image,
 			imageAlt:
 				project.imageAlt ||
 				featured.alt ||
@@ -57,7 +63,7 @@ export async function getStaticProps() {
 			approach: featured.approach || project.caseStudy?.overview || project.summary,
 			disciplines: featured.disciplines || [project.category],
 		};
-	});
+	}).filter(Boolean);
 
 	return { props: { cvs, selectedProjects } };
 }
