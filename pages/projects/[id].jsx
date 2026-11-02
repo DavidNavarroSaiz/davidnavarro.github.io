@@ -54,31 +54,45 @@ function ProjectSingle(props) {
 			{props.project.editorialCover && <EditorialCover cover={props.project.editorialCover} />}
 
 			{/* Gallery */}
-			<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-				{props.project.ProjectImages.map((project) => {
-					return (
-						<div className="mb-10 sm:mb-0" key={project.id}>
-							<Image
-								src={project.img}
-								className="rounded-xl cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700"
-								alt={project.title}
-								key={project.id}
-								sizes="(max-width: 639px) 100vw, 33vw"
-								style={{ width: '100%', height: 'auto' }}
-							/>
-						</div>
-					);
-				})}
-			</div>
+			<section aria-labelledby="project-gallery-heading" className="mt-12">
+				<h2 id="project-gallery-heading" className="sr-only">
+					Project gallery
+				</h2>
+				<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10">
+					{props.project.ProjectImages.map((project, index) => {
+						const galleryAlt =
+							project.alt ??
+							`${props.project.ProjectHeader.title} project gallery image ${index + 1}`;
+
+						return (
+							<figure className="mb-10 sm:mb-0" key={project.id}>
+								<Image
+									src={project.img}
+									className="rounded-xl cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700"
+									alt={galleryAlt}
+									key={project.id}
+									sizes="(max-width: 639px) 100vw, 33vw"
+									style={{ width: '100%', height: 'auto' }}
+								/>
+								{project.caption && (
+									<figcaption className="mt-3 text-sm text-gray-400">
+										{project.caption}
+									</figcaption>
+								)}
+							</figure>
+						);
+					})}
+				</div>
+			</section>
 
 			{/* Info */}
 			<div className="block sm:flex gap-0 sm:gap-10 mt-14">
 				<div className="w-full sm:w-1/3 text-left">
 					{/* Single project client details */}
 					<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-7">
-						<p className="font-general-semibold text-2xl font-semibold text-white mb-4">
+						<h2 className="font-general-semibold text-2xl font-semibold text-white mb-4">
 							{props.project.ProjectInfo.ClientHeading}
-						</p>
+						</h2>
 						<ul className="leading-loose">
 							{props.project.ProjectInfo.CompanyInfo.map(
 								(info) => {
@@ -109,9 +123,9 @@ function ProjectSingle(props) {
 
 					{/* Single project objectives */}
 					<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-7">
-						<p className="font-general-semibold text-2xl font-semibold text-white mb-4">
+						<h2 className="font-general-semibold text-2xl font-semibold text-white mb-4">
 							{props.project.ProjectInfo.ObjectivesHeading}
-						</p>
+						</h2>
 						<p className="font-general-regular text-gray-300 leading-relaxed">
 							{props.project.ProjectInfo.ObjectivesDetails}
 						</p>
@@ -119,9 +133,9 @@ function ProjectSingle(props) {
 
 					{/* Single project technologies */}
 					<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-7">
-						<p className="font-general-semibold text-2xl font-semibold text-white mb-4">
+						<h2 className="font-general-semibold text-2xl font-semibold text-white mb-4">
 							{props.project.ProjectInfo.Technologies[0].title}
-						</p>
+						</h2>
 						<div className="flex flex-wrap gap-2">
 							{props.project.ProjectInfo.Technologies[0].techs.map((tech, index) => (
 								<span key={index} className="px-3 py-1 rounded-full text-sm font-medium text-white bg-dev-blue/20 border border-dev-blue/30">
@@ -136,9 +150,9 @@ function ProjectSingle(props) {
 				{/*  Single project right section details */}
 				<div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
 					<div className="bg-gray-900 border border-gray-700 rounded-xl p-8">
-						<p className="text-white text-2xl font-bold mb-7">
+						<h2 className="text-white text-2xl font-bold mb-7">
 							{props.project.ProjectInfo.ProjectDetailsHeading}
-						</p>
+						</h2>
 						{props.project.ProjectInfo.ProjectDetails.map((details) => {
 							return (
 								<p

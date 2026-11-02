@@ -309,7 +309,7 @@ export const projectsData = [
 		},
 		ProjectHeader: {
 			title: 'Candidate Recommendation System',
-			publishDate: 'Apr 2024',
+			publishDate: '2025',
 			tags: 'AI / RAG / HR Tech',
 		},
 		ProjectImages: [
@@ -345,7 +345,7 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Duration',
-					details: 'April 2024 – Feb 2025',
+					details: '2025',
 				},
 				{
 					id: uuidv4(),
@@ -405,7 +405,7 @@ export const projectsData = [
 		url: 'covid-rx-diagnosis',
 		category: 'Computer Vision',
 		summary:
-			'Chest X-ray diagnosis across ten CNN architectures, with heatmaps that show clinicians where the model is looking.',
+			'Chest X-ray classification research across ten CNN architectures, with heatmaps that show where the models attend.',
 		img: covidRxEditorialCover,
 		ProjectHeader: {
 			title: 'COVID-Rx Diagnosis System',
@@ -455,7 +455,7 @@ export const projectsData = [
 			],
 			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
-				'Developed a comprehensive COVID-19 and pneumonia diagnosis system using chest X-ray images. The project addresses the critical need for accessible, accurate, and cost-effective COVID-19 detection tools. Built both desktop (PyQt) and web applications that allow users to upload chest X-ray images and receive AI-powered diagnoses with heatmap visualizations showing areas of concern.',
+				'Developed a chest X-ray classification research and prototype workflow for COVID-19 and pneumonia image categories. The project compared model families and exposed probability outputs through desktop (PyQt) and web interfaces, with heatmap visualizations showing image regions that influenced the model output. It was not a clinically validated diagnostic service.',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
@@ -493,12 +493,12 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'Developed dual-interface system: PyQt desktop application and Flask web application, enabling healthcare professionals to upload X-ray images and receive AI-powered diagnoses with probability scores.',
+						'Developed dual-interface prototype: PyQt desktop application and Flask web application, enabling users to upload X-ray images and inspect model probabilities for the evaluated classes.',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'Implemented explainable AI features with heatmap visualizations showing areas of concern in chest X-rays, providing transparency and supporting clinical decision-making for radiologists.',
+						'Implemented explainability features with heatmap visualizations showing image regions associated with model output, providing an inspection aid without claiming clinical decision support or diagnostic validity.',
 				},
 			],
 			SocialSharingHeading: 'Share This',
@@ -667,7 +667,7 @@ export const projectsData = [
 		img: abogaciaEditorialCover,
 		ProjectHeader: {
 			title: 'AbogacIA - AI Legal Platform',
-			publishDate: '2024',
+			publishDate: '2025',
 			tags: 'AI / Legal Tech / RAG',
 		},
 		ProjectImages: [
@@ -936,7 +936,7 @@ export const projectsData = [
 		img: lead3_640,
 		ProjectHeader: {
 			title: 'Automatic Lead Management',
-			publishDate: '2024',
+			publishDate: '2025',
 			tags: 'AI / Lead Generation / CRM Integration',
 		},
 		ProjectImages: [
@@ -1036,7 +1036,7 @@ export const projectsData = [
 		img: make2_640,
 			ProjectHeader: {
 				title: 'AI-Generated Monthly Reports',
-				publishDate: '2024',
+				publishDate: '2025',
 				tags: 'AI / Automation / Report Generation',
 			},
 		ProjectImages: [
@@ -1130,31 +1130,31 @@ export const projectsData = [
 	},
 		{
 			id: 7,
-			title: 'n8n Lead Generation System',
+			title: 'Lead Generation System',
 			url: 'n8n-lead-generation-system',
 			category: 'AI Automation',
 			summary:
 				'Self-hosted n8n workflows that identify ideal customer profiles, enrich company data, and run personalized cold-email campaigns.',
 		img: make1_640,
 			ProjectHeader: {
-				title: 'n8n Lead Generation System',
-				publishDate: '2024',
+				title: 'Lead Generation System',
+				publishDate: '2025',
 				tags: 'n8n / Lead Generation / Cold Email / Automation',
 			},
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'n8n Lead Generation System',
+				title: 'Lead Generation System',
 				img: make1_960,
 			},
 			{
 				id: uuidv4(),
-				title: 'n8n Lead Generation System',
+				title: 'Lead Generation System',
 				img: make10_960,
 			},
 			{
 				id: uuidv4(),
-				title: 'n8n Lead Generation System',
+				title: 'Lead Generation System',
 				img: ai1_960,
 			},
 		],
@@ -1240,7 +1240,7 @@ export const projectsData = [
 		img: health1_640,
 			ProjectHeader: {
 				title: 'Healthcare Resource Recommender System',
-				publishDate: 'June 2023',
+				publishDate: '2024',
 				tags: 'AI / RAG / Recommender System / Healthcare',
 			},
 		ProjectImages: [
@@ -1276,7 +1276,7 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Duration',
-					details: 'June 2023 – April 2024',
+					details: '2024',
 				},
 				{
 					id: uuidv4(),
@@ -1342,7 +1342,7 @@ export const projectsData = [
 		img: speech1_640,
 		ProjectHeader: {
 			title: 'Community Health Workers Platform',
-			publishDate: 'June 2023',
+			publishDate: '2024 – 2025',
 			tags: 'AI / Speech Recognition / Healthcare / Automation',
 		},
 		ProjectImages: [
@@ -1378,7 +1378,7 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Duration',
-					details: 'June 2023 – April 2024',
+					details: '2024 – 2025',
 				},
 				{
 					id: uuidv4(),
@@ -1935,7 +1935,7 @@ export const projectsData = [
 		img: cctv1_640,
 		ProjectHeader: {
 			title: 'CCTV Safety Detection',
-			publishDate: 'Nov 2024',
+			publishDate: '2023',
 			tags: 'YOLO / PPE Detection / On-Prem GPU',
 		},
 		ProjectImages: [
@@ -1971,7 +1971,7 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Duration',
-					details: 'Jul 2024 – Jan 2025',
+					details: '2023',
 				},
 				{
 					id: uuidv4(),
@@ -3051,7 +3051,7 @@ export const projectsData = [
 		relatedProjectIds: [19, 14, 1, 16],
 		ProjectHeader: {
 			title: 'Professional Cases — AI-Powered Professional Practice Scenarios',
-			publishDate: 'In development',
+			publishDate: '2026',
 			tags: 'Knowledge Systems / Case Generation / Evaluation',
 		},
 		ProjectInfo: {
@@ -3651,7 +3651,7 @@ export const projectsData = [
 		relatedProjectIds: [15, 16, 17, 19],
 		ProjectHeader: {
 			title: 'AI Agent Evaluation & Experimentation Framework',
-			publishDate: '2026',
+			publishDate: '2025 – 2026',
 			tags: 'Agent Evaluation / Knowledge Bases / Experimentation',
 		},
 		ProjectInfo: {
@@ -4077,7 +4077,7 @@ export const projectsData = [
 		relatedProjectIds: [10, 3, 13],
 		ProjectHeader: {
 			title: 'Industrial Machine Vision — Course & Practical Labs',
-			publishDate: 'Public course repository',
+			publishDate: '2022',
 			tags: 'Computer Vision / Industrial Systems / Education',
 		},
 		ProjectInfo: {

@@ -22,6 +22,7 @@ function ExperienceItem({ experience }) {
 	const titleId = `experience-title-${experience.id}`;
 	const specialties = experience.specialties || experience.technologies.slice(0, 4);
 	const additionalImpact = experience.impact?.slice(1) || [];
+	const hasMultipleWorkstreams = experience.workstreams?.length > 1;
 	const relatedProjects = (experience.relatedProjectIds || [])
 		.map((projectId) => projectsById.get(projectId))
 		.filter(Boolean)
@@ -103,7 +104,7 @@ function ExperienceItem({ experience }) {
 					</div>
 				)}
 
-				{experience.workstreams?.length > 0 && (
+				{hasMultipleWorkstreams && (
 					<div className={styles.workstreamStrip}>
 						<span className={styles.stripLabel}>Workstreams</span>
 						{experience.workstreams.map((workstream) => (
@@ -149,7 +150,7 @@ function ExperienceItem({ experience }) {
 						)}
 
 						<div className={styles.detailMain}>
-							{experience.workstreams?.length > 0 && (
+							{hasMultipleWorkstreams && (
 								<section className={styles.workstreams} aria-label="Workstreams">
 									<p className={styles.sectionLabel}>Workstreams</p>
 									<ul>
@@ -250,7 +251,7 @@ function ExperienceItem({ experience }) {
 
 							{additionalImpact.length > 0 && (
 								<section className={styles.impactSection} aria-label="Impact and outcomes">
-									<p className={styles.sectionLabel}>Evidence retained from the role record</p>
+									<p className={styles.sectionLabel}>Additional outcomes</p>
 									<div className={styles.impactGrid}>
 										{additionalImpact.map((item) => (
 											<div key={`${item.label}-${item.value}`}>
