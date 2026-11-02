@@ -6,7 +6,7 @@ import {
 	FiArrowDownCircle,
 	FiMail,
 } from 'react-icons/fi';
-import profileImage from '../../assets/images/profile-480.webp';
+import profileImage from '../../assets/images/profile-portrait.webp';
 import logo from '../../public/images/DN-Logo.svg';
 import { experienceYears } from '../../data/experienceData';
 
