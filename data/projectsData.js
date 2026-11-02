@@ -61,7 +61,7 @@ import cctv3_960 from '../assets/images/cctv3-960.webp';
 import pmArch from '../assets/images/pm-architecture.svg';
 import markerArch from '../assets/images/marker-architecture.svg';
 import codingAgentEvaluationCover from '../assets/images/coding-agent-evaluation-v2.webp';
-import pmEditorialCover from '../assets/images/pm-ai-agent-editorial.webp';
+import pmSystemArchitectureCover from '../assets/images/pm-ai-agent-system-architecture.webp';
 import enterpriseAiWorkspaceCover from '../assets/images/enterprise-ai-workspace-editorial.webp';
 import policyGovernedAgentsCover from '../assets/images/policy-governed-ai-agents-editorial.webp';
 import professionalCasesCover from '../assets/images/professional-cases-editorial.webp';
@@ -80,6 +80,7 @@ import evaluationFrameworkDiagram from '../docs/diagrams/agent-evaluation-framew
 import secureExecutionDiagram from '../docs/diagrams/secure-agent-code-execution.svg';
 import aiAgentEvaluationCover from '../assets/images/ai-agent-evaluation-editorial.webp';
 import secureAiCodeExecutionCover from '../assets/images/secure-ai-code-execution-editorial.webp';
+import machineVisionCourseEditorialCover from '../assets/images/industrial-machine-vision-course-editorial.webp';
 import machineVisionCourseMorphology from '../assets/images/machine-vision-course-morphology.png';
 import machineVisionCourseAlignment from '../assets/images/machine-vision-course-alignment.png';
 import machineVisionCourseStructuringElements from '../assets/images/machine-vision-course-structuring-elements.png';
@@ -92,9 +93,9 @@ export const projectsData = [
 		category: 'LLMs and RAG',
 		summary:
 			'A Microsoft Teams agent that coordinates project work through Microsoft Graph, document retrieval, and structured tool calls.',
-		img: pmEditorialCover,
+		img: pmSystemArchitectureCover,
 		imageAlt:
-			'Conceptual editorial illustration of conversational project-management requests, knowledge retrieval, MCP tool integration, and task operations; not the production architecture or a product screenshot.',
+			'Conceptual editorial illustration of PM AI Agent showing Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration; not a deployed-system screenshot.',
 		relatedProjectIds: [16, 19, 17, 14],
 		featured: {
 			rank: 1,
@@ -103,7 +104,7 @@ export const projectsData = [
 			approach:
 				'A conversational agent that uses Microsoft Graph for calendar checks and meeting creation, PGVector for document retrieval, and structured tool calls for project actions, instrumented with Application Insights.',
 			disciplines: ['Agentic workflows', 'LLM tooling', 'Azure platform'],
-			alt: 'PM AI Agent architecture: Microsoft Teams channels, a language-model agent, knowledge retrieval, an MCP server for Azure DevOps, and calendar APIs.',
+			alt: 'Conceptual editorial illustration of PM AI Agent showing Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration; not a deployed-system screenshot.',
 		},
 		ProjectHeader: {
 			title: 'PM AI Agent',
@@ -184,10 +185,10 @@ export const projectsData = [
 		// rendered when present; add a section only with verified content.
 		caseStudy: {
 			editorialCover: {
-				img: pmEditorialCover,
-				alt: 'Conceptual illustration of conversational project-management requests, knowledge retrieval, MCP tool integration, and task operations; not the production architecture or a product screenshot.',
+				img: pmSystemArchitectureCover,
+				alt: 'Conceptual editorial illustration of PM AI Agent showing Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration; not a deployed-system screenshot.',
 				caption:
-					'Conceptual illustration — conversational requests, retrieval, MCP tools, and project-management operations. The factual system architecture remains documented below.',
+					'Conceptual illustration — Microsoft Teams conversations, agent orchestration, enterprise knowledge retrieval, MCP project operations, and Azure DevOps integration. The factual architecture diagram below remains the technical source.',
 			},
 			overview:
 				'I built an AI project-management assistant that connected Microsoft Teams conversations with project knowledge and Azure DevOps actions. The team used it internally to organize work while we prepared the underlying infrastructure for possible distribution as a reusable offering; it was not a commercial marketplace launch.',
@@ -4070,8 +4071,9 @@ export const projectsData = [
 		category: 'Computer Vision / Engineering Education',
 		summary:
 			'Collaborative public course covering image processing, industrial imaging systems, machine learning, and practical machine-vision labs.',
-		img: machineVisionCourseMorphology,
-		imageAlt: 'Authentic machine-vision course lab image showing a morphology exercise on industrial objects.',
+		img: machineVisionCourseEditorialCover,
+		imageAlt:
+			'Conceptual editorial illustration for the Industrial Machine Vision Course showing industrial camera systems, optical principles, field-of-view diagrams, image-processing exercises, and practical inspection education; not a photograph of the actual course or classroom.',
 		relatedProjectIds: [10, 3, 13],
 		ProjectHeader: {
 			title: 'Industrial Machine Vision — Course & Practical Labs',
@@ -4139,6 +4141,12 @@ export const projectsData = [
 			SocialSharingHeading: 'Share This',
 		},
 		caseStudy: {
+			editorialCover: {
+				img: machineVisionCourseEditorialCover,
+				alt: 'Conceptual editorial illustration for the Industrial Machine Vision Course showing industrial camera systems, optical principles, field-of-view diagrams, image-processing exercises, and practical inspection education; not a photograph of the actual course or classroom.',
+				caption:
+					'Conceptual editorial artwork — industrial cameras, optics, field of view, image processing, and inspection education. The authentic course labs and diagrams remain available in the gallery below.',
+			},
 			showCapabilityMatrix: false,
 			headerFacts: ['Role', 'Status'],
 			overview:
