@@ -20,7 +20,7 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - About: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/about/](https://davidnavarrosaiz.github.io/davidnavarro.github.io/about/)
 - Senior AI Engineer CV: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer.pdf](https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer.pdf)
 - Senior AI Engineer — Evaluation & Research CV: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer_Evaluation_Research.pdf](https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer_Evaluation_Research.pdf)
-- LinkedIn: [https://www.linkedin.com/in/davidnavarrosaiz/](https://www.linkedin.com/in/davidnavarrosaiz/)
+- LinkedIn: [https://www.linkedin.com/in/david-navarro-19b91b198/](https://www.linkedin.com/in/david-navarro-19b91b198/)
 - GitHub: [https://github.com/DavidNavarroSaiz](https://github.com/DavidNavarroSaiz)
 
 ## Experience history

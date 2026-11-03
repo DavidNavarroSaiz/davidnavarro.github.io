@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { CANONICAL_LINKEDIN_URL } from '../data/profileLinks.cjs';
 
 const siteUrl = 'https://davidnavarrosaiz.github.io/davidnavarro.github.io';
 
@@ -25,7 +26,7 @@ function StructuredProfileData() {
 				'Computer vision',
 			],
 			sameAs: [
-				'https://www.linkedin.com/in/davidnavarrosaiz/',
+				CANONICAL_LINKEDIN_URL,
 				'https://github.com/DavidNavarroSaiz',
 			],
 		},
