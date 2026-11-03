@@ -19,6 +19,7 @@ function UmamiAnalytics() {
 			data-website-id={UMAMI_CONFIG.websiteId}
 			data-domains={UMAMI_CONFIG.domain}
 			data-auto-track="true"
+			data-exclude-hash="true"
 		/>
 	);
 }

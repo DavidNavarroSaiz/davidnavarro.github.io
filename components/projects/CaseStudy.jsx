@@ -318,7 +318,7 @@ function CaseStudy({ project }) {
 	return (
 		<article className="container mx-auto pb-8 pt-24 sm:pt-28">
 			<Link
-				href="/projects"
+				href="/projects/"
 				className="inline-flex items-center gap-2 rounded text-sm font-general-semibold text-gray-300 transition-colors duration-200 hover:text-dev-blue"
 			>
 				<FiArrowLeft aria-hidden="true" className="h-4 w-4" />

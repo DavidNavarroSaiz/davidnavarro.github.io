@@ -5,6 +5,26 @@ import { projectsData } from '../../data/projectsData';
 import RelatedProjects from '../../components/projects/RelatedProjects';
 import CaseStudy, { EditorialCover } from '../../components/projects/CaseStudy';
 
+const META_DESCRIPTION_LIMIT = 160;
+
+function getProjectMetaDescription(project) {
+	const source =
+		project.summary ||
+		project.caseStudy?.overview ||
+		project.ProjectInfo?.ObjectivesDetails ||
+		'';
+	const description = source.replace(/\s+/g, ' ').trim();
+
+	if (description.length <= META_DESCRIPTION_LIMIT) return description;
+
+	const shortened = description
+		.slice(0, META_DESCRIPTION_LIMIT - 1)
+		.replace(/\s+\S*$/, '')
+		.trim();
+
+	return `${shortened}…`;
+}
+
 // Projects with `caseStudy` data use the case study template; the rest keep
 // the legacy layout below.
 function ProjectSingle(props) {
@@ -13,7 +33,7 @@ function ProjectSingle(props) {
 			<>
 				<PagesMetaHead
 					title={props.project.title}
-					description={props.project.caseStudy.overview}
+					description={getProjectMetaDescription(props.project)}
 				/>
 				<CaseStudy project={props.project} />
 				<div className="container mx-auto">
@@ -28,7 +48,10 @@ function ProjectSingle(props) {
 
 	return (
 		<div className="container mx-auto">
-			<PagesMetaHead title={props.project.title} />
+			<PagesMetaHead
+				title={props.project.title}
+				description={getProjectMetaDescription(props.project)}
+			/>
 
 			{/* Header */}
 			<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 sm:p-8 mb-8">

@@ -710,7 +710,7 @@
         "relatedProjects": [
           {
             "id": 3,
-            "title": "COVID-Rx Diagnosis System",
+            "title": "COVID-Rx Chest X-ray Classification Prototype",
             "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/3/"
           }
         ]
@@ -913,7 +913,7 @@
     },
     {
       "id": 3,
-      "title": "COVID-Rx Diagnosis System",
+      "title": "COVID-Rx Chest X-ray Classification Prototype",
       "slug": "covid-rx-diagnosis",
       "url": "https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/3/",
       "category": "Computer Vision",

@@ -70,7 +70,7 @@ const ProjectSingle = ({
 
 				<h2 className="mt-3 font-general-semibold text-lg leading-snug tracking-[-0.01em] text-white transition-colors duration-200 group-hover:text-dev-blue sm:text-xl">
 					<Link
-						href={`/projects/${id}`}
+						href={`/projects/${id}/`}
 						className="after:absolute after:inset-0 after:z-10 after:content-[''] focus-visible:outline-none"
 					>
 						{title}
