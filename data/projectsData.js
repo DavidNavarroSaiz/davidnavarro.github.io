@@ -410,31 +410,31 @@ export const projectsData = [
 	},
 	{
 		id: 3,
-		title: 'COVID-Rx Diagnosis System',
+		title: 'COVID-Rx Chest X-ray Classification Prototype',
 		url: 'covid-rx-diagnosis',
 		category: 'Computer Vision',
 		summary:
 			'Chest X-ray classification research across ten CNN architectures, with heatmaps that show where the models attend.',
 		img: covidRxEditorialCover,
 		ProjectHeader: {
-			title: 'COVID-Rx Diagnosis System',
+			title: 'COVID-Rx Chest X-ray Classification Prototype',
 			publishDate: 'Dec 2020',
 			tags: 'Computer Vision / Healthcare',
 		},
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'COVID-Rx Diagnosis System',
+				title: 'COVID-Rx Chest X-ray Classification Prototype',
 				img: cov3_960,
 			},
 			{
 				id: uuidv4(),
-				title: 'COVID-Rx Diagnosis System',
+				title: 'COVID-Rx Chest X-ray Classification Prototype',
 				img: cov4_960,
 			},
 			{
 				id: uuidv4(),
-				title: 'COVID-Rx Diagnosis System',
+				title: 'COVID-Rx Chest X-ray Classification Prototype',
 				img: cov1_960,
 			},
 		],

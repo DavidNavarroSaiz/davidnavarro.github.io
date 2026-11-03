@@ -17,7 +17,9 @@ function PagesMetaHead({ title, keywords, description }) {
 		basePath && rawPath.startsWith(basePath)
 			? rawPath.slice(basePath.length) || '/'
 			: rawPath;
-	const canonical = `${SITE_URL}${path}`;
+	const normalizedPath =
+		path === '/' ? '/' : `/${path.replace(/^\/+|\/+$/g, '')}/`;
+	const canonical = `${SITE_URL}${normalizedPath}`;
 	return (
 		<Head>
 			<meta

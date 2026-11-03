@@ -20,7 +20,7 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
 - About: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/about/](https://davidnavarrosaiz.github.io/davidnavarro.github.io/about/)
 - Senior AI Engineer CV: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer.pdf](https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer.pdf)
 - Senior AI Engineer — Evaluation & Research CV: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer_Evaluation_Research.pdf](https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer_Evaluation_Research.pdf)
-- LinkedIn: [https://www.linkedin.com/in/davidnavarrosaiz/](https://www.linkedin.com/in/davidnavarrosaiz/)
+- LinkedIn: [https://www.linkedin.com/in/david-navarro-19b91b198/](https://www.linkedin.com/in/david-navarro-19b91b198/)
 - GitHub: [https://github.com/DavidNavarroSaiz](https://github.com/DavidNavarroSaiz)
 
 ## Experience history
@@ -294,7 +294,7 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
   - Comparison: 10 CNN architectures — Reported experiment scope across model families.
   - Reported result: 96% accuracy — Historical project result; this is an experiment metric, not clinical validation.
 - Related public projects:
-  - Project 3 — COVID-Rx Diagnosis System: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/3/](https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/3/)
+  - Project 3 — COVID-Rx Chest X-ray Classification Prototype: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/3/](https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/3/)
 - Overlap note: Concurrent research project during the Intecol SAS tenure.
 
 ## Projects
@@ -356,7 +356,7 @@ Senior AI Engineer specializing in production AI agents, LLM evaluation, AI plat
   - Implemented FastAPI backend with Streamlit frontend for seamless user experience, enabling HR managers to input job descriptions and receive intelligent candidate recommendations with filtering capabilities.
   - Established CI/CD pipeline reducing deployment time by 40% and enabling faster iterations, improving system responsiveness and allowing rapid feature deployment for the candidate recommendation platform.
 
-### Project 3 — COVID-Rx Diagnosis System
+### Project 3 — COVID-Rx Chest X-ray Classification Prototype
 
 - Public URL: [https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/3/](https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/3/)
 - Category: Computer Vision

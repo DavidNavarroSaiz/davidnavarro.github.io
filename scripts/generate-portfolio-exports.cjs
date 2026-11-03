@@ -4,6 +4,7 @@ const vm = require('node:vm');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE_URL = 'https://davidnavarrosaiz.github.io/davidnavarro.github.io';
+const { CANONICAL_LINKEDIN_URL } = require('../data/profileLinks.cjs');
 const SCHEMA_VERSION = '1.0.0';
 
 function loadSourceModule(relativePath, exportNames) {
@@ -283,7 +284,7 @@ function buildPortfolioExport() {
 				},
 			],
 			publicProfiles: [
-				{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/davidnavarrosaiz/' },
+				{ label: 'LinkedIn', url: CANONICAL_LINKEDIN_URL },
 				{ label: 'GitHub', url: 'https://github.com/DavidNavarroSaiz' },
 			],
 		},

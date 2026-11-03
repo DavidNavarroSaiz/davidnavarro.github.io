@@ -147,7 +147,7 @@ function RelatedProjects({ currentProjectId, currentCategory }) {
 							transition={{ duration: 0.6, delay: index * 0.1 }}
 						>
 							<Link
-								href={`/projects/${project.id}`}
+								href={`/projects/${project.id}/`}
 								className="block group rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dev-blue focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
 								aria-label={`View related project: ${project.title}`}
 							>

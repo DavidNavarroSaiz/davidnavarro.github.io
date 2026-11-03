@@ -21,7 +21,7 @@ const educationData = [
 			'Developed AI-driven automation solutions for business processes using LangChain, improving operational efficiency.',
 	},
 	{
-		title: 'AWS Certified Machine Learning Specialty',
+		title: 'AWS Certified Machine Learning Specialty — Exam Preparation',
 		institution: 'Udemy',
 		description:
 			'Proficient in designing, implementing, and deploying scalable machine learning models on AWS infrastructure.',

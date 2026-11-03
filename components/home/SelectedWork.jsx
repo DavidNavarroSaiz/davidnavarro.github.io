@@ -20,7 +20,7 @@ function SelectedWork({ projects = [] }) {
 						</p>
 					</div>
 					<Link
-						href="/projects"
+						href="/projects/"
 						className="inline-flex shrink-0 items-center gap-2 text-sm font-general-semibold text-dev-blue transition-colors duration-200 hover:text-dev-blue-light"
 					>
 						All projects
@@ -32,7 +32,7 @@ function SelectedWork({ projects = [] }) {
 					{projects.map((project) => (
 						<Link
 							key={project.id}
-							href={`/projects/${project.id}`}
+							href={`/projects/${project.id}/`}
 							aria-label={`View project: ${project.title}`}
 							className="group grid gap-8 border-b border-white/10 py-10 md:grid-cols-12 md:items-start md:gap-8 lg:gap-12"
 						>

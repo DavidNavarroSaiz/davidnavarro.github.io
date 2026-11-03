@@ -2,13 +2,14 @@ import Link from 'next/link';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import AppFooterCopyright from './AppFooterCopyright';
 import { trackUmamiEvent } from '../../utils/analytics';
+import { CANONICAL_LINKEDIN_URL } from '../../data/profileLinks.cjs';
 
 const socialLinks = [
 	{
 		id: 1,
 		label: 'LinkedIn',
 		icon: <FiLinkedin aria-hidden="true" />,
-		url: 'https://www.linkedin.com/in/david-navarro-19b91b198/',
+		url: CANONICAL_LINKEDIN_URL,
 	},
 	{
 		id: 2,
