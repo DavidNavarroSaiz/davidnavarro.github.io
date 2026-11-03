@@ -1,0 +1,18 @@
+%% Coding-agent evaluation workflow — editable owner-review source
+flowchart LR
+    T[Task specification] --> B[Clean baseline]
+    B --> E[Agent execution]
+    E --> A[Run artifacts]
+    A --> C[Deterministic checks]
+    C --> H[Human / advisory assessment]
+    H --> R[Comparative reporting]
+
+    classDef controlled fill:#0d141e,stroke:#8b9bb0,color:#f1f5f9
+    classDef captured fill:#0d2030,stroke:#22d3ee,color:#e8eef5
+    classDef automated fill:#0b2b2b,stroke:#2dd4bf,color:#f1f5f9
+    classDef assisted fill:#231f18,stroke:#f4d38a,color:#f1f5f9
+
+    class T,B controlled
+    class A captured
+    class C automated
+    class E,H,R assisted

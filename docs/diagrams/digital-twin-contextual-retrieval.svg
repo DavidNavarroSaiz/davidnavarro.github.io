@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI Digital Twin contextual knowledge organization and retrieval</title>
+  <desc id="desc">An owner-confirmed publication-safe model showing contextual records organized with metadata and vector representations, compared through vector RAG, GraphRAG, and a combined approach before retrieved evidence reaches answer generation. Exact databases, graph construction, fusion, and runtime routing are unverified.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7FA7B4"/>
+    </marker>
+    <marker id="arrow-warm" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D67B56"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="720" fill="#11161B"/>
+  <text x="64" y="58" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="28" font-weight="600">Contextual knowledge organization and retrieval</text>
+  <text x="64" y="88" fill="#B8A58C" font-family="General Sans, Arial, sans-serif" font-size="15">Owner-confirmed retrieval activities; implementation-specific stores and graph construction remain unverified</text>
+
+  <g fill="none" stroke="#7FA7B4" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M304 260 H368"/>
+    <path d="M648 260 H730 V180 H788"/>
+    <path d="M648 260 H730 V350 H788"/>
+    <path d="M648 260 H730 V520 H788"/>
+    <path d="M548 505 H700 V180 H788"/>
+    <path d="M548 505 H700 V350 H788"/>
+    <path d="M1038 180 H1110 V350 H1190"/>
+    <path d="M1038 350 H1190"/>
+    <path d="M1038 520 H1110 V350 H1190"/>
+  </g>
+  <path d="M1330 430 V540" fill="none" stroke="#D67B56" stroke-width="2" marker-end="url(#arrow-warm)"/>
+
+  <g font-family="General Sans, Arial, sans-serif">
+    <g>
+      <rect x="64" y="170" width="240" height="180" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+      <text x="88" y="204" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">01 / CONTEXT</text>
+      <text x="88" y="248" fill="#ECE5D7" font-size="19" font-weight="600">Projects, dates,</text>
+      <text x="88" y="278" fill="#ECE5D7" font-size="19" font-weight="600">emails, meetings</text>
+      <text x="88" y="320" fill="#B8A58C" font-size="13">Owner-confirmed record types</text>
+    </g>
+    <g>
+      <rect x="368" y="170" width="280" height="180" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="392" y="204" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">02 / ORGANIZE</text>
+      <text x="392" y="248" fill="#ECE5D7" font-size="19" font-weight="600">Metadata filters</text>
+      <text x="392" y="278" fill="#ECE5D7" font-size="19" font-weight="600">+ vectors</text>
+      <text x="392" y="320" fill="#B8A58C" font-size="13">Schema and store unverified</text>
+    </g>
+    <g>
+      <rect x="368" y="420" width="180" height="170" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+      <text x="392" y="454" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">Q / INPUT</text>
+      <text x="392" y="500" fill="#ECE5D7" font-size="19" font-weight="600">Question</text>
+      <text x="392" y="530" fill="#ECE5D7" font-size="19" font-weight="600">+ context</text>
+      <text x="392" y="562" fill="#B8A58C" font-size="13">No automatic router claimed</text>
+    </g>
+    <g>
+      <rect x="788" y="105" width="250" height="150" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="812" y="139" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">03 / VECTOR</text>
+      <text x="812" y="183" fill="#ECE5D7" font-size="19" font-weight="600">Vector RAG</text>
+      <text x="812" y="217" fill="#B8A58C" font-size="13">Experimental strategy</text>
+    </g>
+    <g>
+      <rect x="788" y="275" width="250" height="150" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="812" y="309" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">04 / GRAPH</text>
+      <text x="812" y="353" fill="#ECE5D7" font-size="19" font-weight="600">GraphRAG</text>
+      <text x="812" y="387" fill="#B8A58C" font-size="13">Construction unverified</text>
+    </g>
+    <g>
+      <rect x="788" y="445" width="250" height="150" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="812" y="479" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">05 / COMBINE</text>
+      <text x="812" y="523" fill="#ECE5D7" font-size="19" font-weight="600">Graph + vector</text>
+      <text x="812" y="557" fill="#B8A58C" font-size="13">Combined strategy confirmed</text>
+    </g>
+    <g>
+      <rect x="1190" y="275" width="280" height="150" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="1214" y="309" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">06 / EVIDENCE</text>
+      <text x="1214" y="353" fill="#ECE5D7" font-size="19" font-weight="600">Retrieved context</text>
+      <text x="1214" y="387" fill="#B8A58C" font-size="13">Passed to answer generation</text>
+    </g>
+    <g>
+      <rect x="1190" y="540" width="280" height="100" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="1214" y="576" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">07 / OUTPUT</text>
+      <text x="1214" y="612" fill="#ECE5D7" font-size="19" font-weight="600">Response + evaluation</text>
+    </g>
+  </g>
+
+  <rect x="64" y="665" width="1406" height="30" rx="6" fill="#24232B" stroke="#8F8AA8" stroke-opacity="0.7"/>
+  <text x="88" y="685" fill="#D8D4E7" font-family="Consolas, monospace" font-size="11">Boundary: no private records, exact schemas, graph store, extraction rules, fusion mechanism, deployment, or benchmark results are disclosed.</text>
+</svg>

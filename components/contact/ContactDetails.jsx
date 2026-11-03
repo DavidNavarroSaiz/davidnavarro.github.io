@@ -1,20 +1,17 @@
-import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
+import { FiMapPin, FiMail } from 'react-icons/fi';
 
 const contacts = [
 	{
 		id: 1,
-		name: 'Medellin, Antioquia',
+		name: 'Medellín, Antioquia, Colombia',
 		icon: <FiMapPin />,
+		href: null,
 	},
 	{
 		id: 2,
 		name: 'dcnavarros97@gmail.com',
 		icon: <FiMail />,
-	},
-	{
-		id: 3,
-		name: '+57 3007751361',
-		icon: <FiPhone />,
+		href: 'mailto:dcnavarros97@gmail.com',
 	},
 ];
 
@@ -28,23 +25,16 @@ function ContactDetails() {
 					</h2>
 					<div className="space-y-6">
 						{contacts.map((contact) => (
-							<div className="contact-item" key={contact.id}>
+							<div className="contact-item min-w-0" key={contact.id}>
 								<div className="contact-icon-container">
 									<i className="contact-icon">
 										{contact.icon}
 									</i>
 								</div>
-								{contact.id === 2 ? (
-									<a 
-										href="mailto:dcnavarros97@gmail.com"
-										className="contact-link"
-									>
-										{contact.name}
-									</a>
-								) : contact.id === 3 ? (
-									<a 
-										href="tel:+573007751361"
-										className="contact-link"
+								{contact.href ? (
+									<a
+										href={contact.href}
+										className="contact-link min-w-0 break-all"
 									>
 										{contact.name}
 									</a>
@@ -58,7 +48,7 @@ function ContactDetails() {
 					</div>
 					
 					<div className="contact-info-box">
-						<p className="contact-info-title">💡 Quick Contact</p>
+						<p className="contact-info-title">Quick Contact</p>
 						<p className="contact-info-text">
 							Feel free to reach out for AI/ML projects, consulting, or collaboration opportunities.
 						</p>

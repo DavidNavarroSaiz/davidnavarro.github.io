@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="mkArchTitle mkArchDesc" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title id="mkArchTitle">Parallel document ingestion pipeline</title>
+  <desc id="mkArchDesc">Uploads of PDF, text, and mixed-format documents enter a FastAPI intake service, are queued in RabbitMQ, and are processed by Celery workers that parse with Marker into structured JSON, generate OpenAI embeddings, and store vectors in pgVector for downstream RAG retrieval. Dashboards report status, completion, and failures; the stack runs on Docker Compose.</desc>
+  <rect x="0" y="0" width="800" height="560" rx="12" fill="#0B111A"/>
+  <text x="40" y="48" font-size="22" font-weight="600" fill="#FFFFFF" letter-spacing="-0.5">Parallel Document Ingestion Pipeline</text>
+  <text x="40" y="72" font-size="13" fill="#8B9BB0">From uploads to pgVector: queued workers, structured parsing, observable progress</text>
+
+  <!-- Flow row -->
+  <g>
+    <rect x="40" y="110" width="140" height="110" rx="8" fill="#101826" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="60" y="140" font-size="14" font-weight="600" fill="#FFFFFF">Uploads</text>
+    <text x="60" y="164" font-size="12" fill="#8B9BB0">PDF · Text</text>
+    <text x="60" y="182" font-size="12" fill="#8B9BB0">Mixed formats</text>
+  </g>
+  <g>
+    <rect x="210" y="110" width="140" height="110" rx="8" fill="#101826" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="230" y="140" font-size="14" font-weight="600" fill="#FFFFFF">FastAPI</text>
+    <text x="230" y="160" font-size="14" font-weight="600" fill="#FFFFFF">intake</text>
+    <text x="230" y="184" font-size="12" fill="#8B9BB0">Routes jobs</text>
+    <text x="230" y="202" font-size="12" fill="#67E8F9">accepts uploads</text>
+  </g>
+  <g>
+    <rect x="380" y="110" width="140" height="110" rx="8" fill="#101826" stroke="#334155" stroke-width="1"/>
+    <text x="400" y="140" font-size="14" font-weight="600" fill="#FFFFFF">RabbitMQ</text>
+    <text x="400" y="160" font-size="14" font-weight="600" fill="#FFFFFF">queues</text>
+    <text x="400" y="184" font-size="12" fill="#8B9BB0">Task messaging</text>
+    <text x="400" y="202" font-size="12" fill="#67E8F9">queued jobs</text>
+  </g>
+
+  <!-- Workers -->
+  <g>
+    <rect x="210" y="250" width="310" height="120" rx="8" fill="#101826" stroke="#334155" stroke-width="1"/>
+    <text x="230" y="280" font-size="14" font-weight="600" fill="#FFFFFF">Celery workers</text>
+    <text x="230" y="304" font-size="12" fill="#8B9BB0">Marker parse → structured JSON</text>
+    <text x="230" y="322" font-size="12" fill="#8B9BB0">OpenAI embeddings</text>
+    <text x="230" y="346" font-size="12" fill="#67E8F9">horizontal scaling · fault-tolerant</text>
+  </g>
+
+  <!-- Storage -->
+  <g>
+    <rect x="550" y="250" width="210" height="120" rx="8" fill="#101826" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="570" y="280" font-size="14" font-weight="600" fill="#FFFFFF">pgVector</text>
+    <text x="570" y="304" font-size="12" fill="#8B9BB0">Vector storage</text>
+    <text x="570" y="322" font-size="12" fill="#8B9BB0">Serves RAG retrieval</text>
+    <text x="570" y="346" font-size="12" fill="#67E8F9">vectors</text>
+  </g>
+
+  <!-- Ops strip -->
+  <g>
+    <rect x="40" y="410" width="360" height="110" rx="8" fill="#101826" stroke="#334155" stroke-width="1"/>
+    <text x="60" y="440" font-size="14" font-weight="600" fill="#FFFFFF">Dashboards</text>
+    <text x="60" y="464" font-size="12" fill="#8B9BB0">Processing status · completion metrics</text>
+    <text x="60" y="482" font-size="12" fill="#8B9BB0">Failure visibility</text>
+  </g>
+  <g>
+    <rect x="420" y="410" width="340" height="110" rx="8" fill="#101826" stroke="#334155" stroke-width="1"/>
+    <text x="440" y="440" font-size="14" font-weight="600" fill="#FFFFFF">Docker Compose</text>
+    <text x="440" y="464" font-size="12" fill="#8B9BB0">Reproducible deployment</text>
+    <text x="440" y="482" font-size="12" fill="#8B9BB0">Isolated worker scaling</text>
+  </g>
+
+  <!-- Edges -->
+  <g stroke="#67E8F9" stroke-width="1.5" fill="none">
+    <line x1="180" y1="165" x2="206" y2="165"/>
+    <line x1="350" y1="165" x2="376" y2="165"/>
+    <path d="M 450 220 L 450 246"/>
+    <path d="M 365 310 L 365 440 L 200 440 L 200 374"/>
+    <line x1="520" y1="310" x2="546" y2="310"/>
+  </g>
+  <g fill="#67E8F9">
+    <polygon points="206,159 218,165 206,171"/>
+    <polygon points="376,159 388,165 376,171"/>
+    <polygon points="444,246 450,258 456,246"/>
+    <polygon points="546,304 558,310 546,316"/>
+  </g>
+  <text x="386" y="240" font-size="11" fill="#8B9BB0">consume</text>
+  <text x="206" y="400" font-size="11" fill="#8B9BB0">monitored in real time</text>
+</svg>

@@ -1,27 +1,28 @@
-const selectOptions = [
-	'Computer Vision',
-	'LLMs and RAG',
-	'AI Automation',
-];
+import { FiChevronDown } from 'react-icons/fi';
 
-function ProjectsFilter({ setSelectProject }) {
+function ProjectsFilter({ categories, selectProject, setSelectProject }) {
 	return (
-		<select
-			onChange={(e) => {
-				setSelectProject(e.target.value);
-			}}
-			className="filter-select"
-		>
-			<option value="All" className="text-sm sm:text-md">
-				All AI/ML Projects
-			</option>
+		<div className="relative mt-2">
+			<select
+				id="project-category"
+				name="project-category"
+				value={selectProject}
+				onChange={(event) => setSelectProject(event.target.value)}
+				className="filter-select"
+			>
+				<option value="All">All disciplines</option>
 
-			{selectOptions.map((option) => (
-				<option className="text-normal sm:text-md" key={option}>
-					{option}
-				</option>
-			))}
-		</select>
+				{categories.map((category) => (
+					<option key={category} value={category}>
+						{category}
+					</option>
+				))}
+			</select>
+			<FiChevronDown
+				className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500"
+				aria-hidden="true"
+			/>
+		</div>
 	);
 }
 

@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx}',
@@ -9,35 +7,84 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				// Light colors (for light mode - minimal usage)
-				'primary-light': '#0A0A0A',
-				'secondary-light': '#111111',
-				'ternary-light': '#1A1A1A',
+				// Copper Workshop black edition palette. Semantic names remain stable
+				// so the existing components keep their behavior.
+				'primary-light': '#0D0E0D',
+				'secondary-light': '#151614',
+				'ternary-light': '#1B1B19',
+				'primary-dark': '#0D0E0D',
+				'secondary-dark': '#151614',
+				'ternary-dark': '#1B1B19',
 
-				// Dark colors (main theme - black and blue)
-				'primary-dark': '#000000',
-				'secondary-dark': '#0A0A0A',
-				'ternary-dark': '#1A1A1A',
+				'dev-blue': '#C58B69',
+				'dev-blue-dark': '#A97946',
+				'dev-blue-light': '#DAA381',
+				'dev-cyan': '#96A18D',
+				'dev-purple': '#A97946',
+				'dev-green': '#96A18D',
+				'ink': '#0A0B0A',
 
-				// Developer blue accents
-				'dev-blue': '#00D4FF',
-				'dev-blue-dark': '#0099CC',
-				'dev-blue-light': '#33E0FF',
-				'dev-cyan': '#00FFFF',
-				'dev-purple': '#8B5CF6',
-				'dev-green': '#10B981',
-
-				// Extended v3 color
-				gray: colors.neutral,
+				gray: {
+					50: '#EFE8DC',
+					100: '#E5DED2',
+					200: '#D1C7B9',
+					300: '#BEB4A8',
+					400: '#A9A59C',
+					500: '#928C83',
+					600: '#625B54',
+					700: '#383530',
+					800: '#25211E',
+					900: '#1B1B19',
+					950: '#0D0E0D',
+				},
 			},
 			container: {
-				padding: {
-					DEFAULT: '1rem',
-					sm: '2rem',
-					lg: '5rem',
-					xl: '6rem',
-					'2xl': '8rem',
-				},
+				// One shared gutter everywhere: header, footer, and page content align.
+				padding: '1rem',
+			},
+			fontFamily: {
+				sans: [
+					'GeneralSans-Variable',
+					'ui-sans-serif',
+					'system-ui',
+					'sans-serif',
+				],
+				display: [
+					'GeneralSans-Variable',
+					'ui-sans-serif',
+					'system-ui',
+					'sans-serif',
+				],
+				mono: [
+					'ui-monospace',
+					'SFMono-Regular',
+					'Menlo',
+					'Consolas',
+					'monospace',
+				],
+				'general-regular': [
+					'GeneralSans-Regular',
+					'ui-sans-serif',
+					'system-ui',
+					'sans-serif',
+				],
+				'general-medium': [
+					'GeneralSans-Medium',
+					'ui-sans-serif',
+					'system-ui',
+					'sans-serif',
+				],
+				'general-semibold': [
+					'GeneralSans-Semibold',
+					'ui-sans-serif',
+					'system-ui',
+					'sans-serif',
+				],
+				editorial: [
+					'Newsreader',
+					'Georgia',
+					'serif',
+				],
 			},
 		},
 	},

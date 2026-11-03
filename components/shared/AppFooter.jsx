@@ -1,47 +1,78 @@
-import {
-	FiGithub,
-	FiLinkedin,
-} from 'react-icons/fi';
+import Link from 'next/link';
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import AppFooterCopyright from './AppFooterCopyright';
+import { trackUmamiEvent } from '../../utils/analytics';
 
 const socialLinks = [
 	{
 		id: 1,
-		icon: <FiLinkedin />,
+		label: 'LinkedIn',
+		icon: <FiLinkedin aria-hidden="true" />,
 		url: 'https://www.linkedin.com/in/david-navarro-19b91b198/',
 	},
 	{
 		id: 2,
-		icon: <FiGithub />,
+		label: 'GitHub',
+		icon: <FiGithub aria-hidden="true" />,
 		url: 'https://github.com/DavidNavarroSaiz',
 	},
 ];
 
 function AppFooter() {
 	return (
-		<div className="container mx-auto">
-			<div className="pt-20 sm:pt-30 pb-8 mt-20 border-t-2 border-gray-700">
-				{/* Footer social links */}
-				<div className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28">
-					<ul className="flex gap-6 sm:gap-8">
-						{socialLinks.map((link) => (
-							<a
-								href={link.url}
-								target="__blank"
-								key={link.id}
-								className="text-gray-300 hover:text-dev-blue cursor-pointer rounded-xl bg-gray-900 border border-gray-700 hover:border-dev-blue/50 hover:bg-gray-800 shadow-lg hover:shadow-xl p-4 duration-300 transition-all group"
-							>
-								<i className="text-xl sm:text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-300">
-									{link.icon}
-								</i>
-							</a>
-						))}
-					</ul>
+		<footer className="mt-24 border-t border-white/10 bg-ink/60">
+			<div className="container mx-auto py-10 sm:py-12">
+				<div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
+					{/* Brand */}
+					<div className="max-w-sm">
+						<Link
+							href="/"
+							aria-label="David Navarro, home"
+							className="footer-wordmark"
+						>
+							David Navarro
+						</Link>
+						<p className="footer-role">
+							Senior AI Engineer · Production AI Agents · LLMOps · ML Platforms
+						</p>
+					</div>
+
+					{/* Social links */}
+					<div>
+						<p className="footer-label">Connect</p>
+						<ul className="mt-3 flex flex-wrap items-center gap-2">
+							{socialLinks.map((link) => (
+								<li key={link.id}>
+									<a
+										href={link.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										onClick={() =>
+										trackUmamiEvent(
+											link.label === 'LinkedIn'
+												? 'linkedin_outbound'
+												: 'github_outbound',
+											{
+												destination: link.label.toLowerCase(),
+											},
+										)
+									}
+										className="footer-social-link"
+									>
+										<span aria-hidden="true">{link.icon}</span>
+										<span>{link.label}</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
 				</div>
 
-				<AppFooterCopyright />
+				<div className="mt-10 border-t border-white/10 pt-6">
+					<AppFooterCopyright />
+				</div>
 			</div>
-		</div>
+		</footer>
 	);
 }
 

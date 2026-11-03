@@ -21,6 +21,8 @@ export const sendEmail = async (formData) => {
     const templateParams = {
       name: formData.name,
       email: formData.email,
+      from_name: formData.name,
+      from_email: formData.email,
       subject: formData.subject,
       message: formData.message,
       time: new Date().toLocaleString(),
@@ -56,6 +58,8 @@ export const sendHireMeEmail = async (formData) => {
     const templateParams = {
       name: formData.name,
       email: formData.email,
+      from_name: formData.name,
+      from_email: formData.email,
       subject: formData.subject,
       message: formData.message,
       time: new Date().toLocaleString(),

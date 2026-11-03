@@ -1,204 +1,230 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { FiX, FiMenu } from 'react-icons/fi';
+import { useRouter } from 'next/router';
+import { FiMenu, FiX } from 'react-icons/fi';
 import HireMeModal from '../HireMeModal';
 import logo from '../../public/images/DN-Logo.svg';
 
+const NAV_LINKS = [
+	{ href: '/projects', label: 'Projects' },
+	{ href: '/experience', label: 'Experience' },
+	{ href: '/about', label: 'About Me' },
+	{ href: '/contact', label: 'Contact' },
+];
+
 function AppHeader() {
+	const router = useRouter();
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
+	const menuButtonRef = useRef(null);
 
-	function toggleMenu() {
-		if (!showMenu) {
-			setShowMenu(true);
-		} else {
-			setShowMenu(false);
-		}
-	}
+	const isActive = (href) =>
+		href === '/projects'
+			? router.pathname.startsWith('/projects')
+			: router.pathname === href;
 
-	function showHireMeModal() {
-		if (!showModal) {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.add('overflow-y-hidden');
-			setShowModal(true);
-		} else {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.remove('overflow-y-hidden');
-			setShowModal(false);
-		}
-	}
-
-	// Close mobile menu on scroll or window resize
+	// Keep the page behind the modal from scrolling.
 	useEffect(() => {
-		const handleScroll = () => {
-			if (showMenu) {
-				setShowMenu(false);
-			}
+		document.documentElement.classList.toggle('overflow-y-hidden', showModal);
+		return () => {
+			document.documentElement.classList.remove('overflow-y-hidden');
 		};
+	}, [showModal]);
 
+	// Navigating always dismisses transient header UI.
+	useEffect(() => {
+		setShowMenu(false);
+		setShowModal(false);
+	}, [router.asPath]);
+
+	useEffect(() => {
+		if (!showMenu) return undefined;
+
+		const handleScroll = () => setShowMenu(false);
 		const handleResize = () => {
-			if (window.innerWidth >= 640) { // sm breakpoint
+			if (window.innerWidth >= 1024) setShowMenu(false);
+		};
+		const handleKeyDown = (event) => {
+			if (event.key === 'Escape') {
 				setShowMenu(false);
+				menuButtonRef.current?.focus();
 			}
 		};
 
-		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleScroll, { passive: true });
 		window.addEventListener('resize', handleResize);
+		document.addEventListener('keydown', handleKeyDown);
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 			window.removeEventListener('resize', handleResize);
+			document.removeEventListener('keydown', handleKeyDown);
 		};
 	}, [showMenu]);
 
+	function toggleMenu() {
+		setShowMenu((isOpen) => !isOpen);
+	}
+
+	function closeMenu() {
+		setShowMenu(false);
+		menuButtonRef.current?.focus();
+	}
+
+	function showHireMeModal() {
+		setShowModal((isOpen) => !isOpen);
+	}
+
 	return (
 		<>
-			{/* Mobile menu overlay */}
 			{showMenu && (
-				<div 
-					className="fixed inset-0 bg-black/50 z-40 sm:hidden"
-					onClick={() => setShowMenu(false)}
+				<div
+					className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
+					onClick={closeMenu}
+					aria-hidden="true"
 				/>
 			)}
-			<motion.nav
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
+
+			<nav
 				id="nav"
-				className="sticky top-0 z-50 bg-[#0B0B0C] border-b border-gray-700/30 backdrop-blur-sm"
+				aria-label="Primary"
+				className="sticky-nav"
 			>
-			<div className="sm:container sm:mx-auto">
-			{/* Header */}
-			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl flex justify-between items-center py-3 px-2 sm:px-4 w-full">
-				{/* Logo section */}
-				<div className="flex-shrink-0">
-					<Link href="/">
-						<div className="cursor-pointer flex items-center space-x-1 sm:space-x-2">
-							<div className="flex-shrink-0">
-								<Image 
+				<div className="container mx-auto">
+					<div className="z-10 flex w-full items-center justify-between py-3">
+						{/* Brand */}
+						<div className="min-w-0">
+							<Link
+								href="/"
+								aria-label="David Navarro, home"
+								className="flex min-w-0 items-center gap-2.5"
+							>
+								<Image
 									src={logo}
-									alt="David Navarro Logo" 
+									alt=""
 									width={56}
 									height={56}
-									className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 object-contain"
+									priority
+									className="h-8 w-8 shrink-0 object-contain lg:h-10 lg:w-10"
 								/>
-							</div>
-							<div className="flex flex-col justify-center min-w-0">
-								<div className="header-logo-new">
-									<span className="header-logo-cyan">DAVID NAVARRO</span>
-								</div>
-								<div className="header-subtitle hidden sm:block">
-									Machine Learning Engineer | Computer Vision | AI & Automation Specialist
-								</div>
-								<div className="header-subtitle-mobile block sm:hidden">
-									ML Engineer | Computer Vision | AI Specialist
-								</div>
-							</div>
+								<span className="flex min-w-0 flex-col justify-center">
+									<span className="header-logo-new">
+										<span className="header-logo-cyan">DAVID NAVARRO</span>
+									</span>
+									<span
+										className="header-subtitle hidden xl:block"
+										aria-hidden="true"
+									>
+										SENIOR AI ENGINEER | PRODUCTION AI AGENTS | LLMOPS | ML PLATFORMS
+									</span>
+									<span
+										className="header-subtitle truncate xl:hidden"
+										aria-hidden="true"
+									>
+										SENIOR AI ENGINEER
+									</span>
+								</span>
+							</Link>
 						</div>
-					</Link>
-				</div>
 
-				{/* Small screen hamburger menu */}
-				<div className="sm:hidden">
-					<button
-						onClick={toggleMenu}
-						type="button"
-						className="focus:outline-none p-2 rounded-lg hover:bg-gray-800/50 transition-colors duration-300"
-						aria-label="Hamburger Menu"
-					>
-						{showMenu ? (
-							<FiX className="h-6 w-6 text-white" />
-						) : (
-							<FiMenu className="h-6 w-6 text-white" />
-						)}
-					</button>
-				</div>
-
-				{/* Desktop navigation - All in one line */}
-				<div className="hidden sm:flex items-center space-x-2 lg:space-x-3">
-					<div className="header-link-desktop">
-						<Link href="/projects">Projects</Link>
-					</div>
-					<div className="header-link-desktop">
-						<Link href="/experience">Experience</Link>
-					</div>
-					<div className="header-link-desktop">
-						<Link href="/about">About Me</Link>
-					</div>
-					<div className="header-link-desktop">
-						<Link href="/contact">Contact</Link>
-					</div>
-					<button
-						onClick={showHireMeModal}
-						className="hire-me-button"
-						aria-label="Hire Me Button"
-					>
-						Hire Me
-					</button>
-				</div>
-
-				{/* Header links small screen */}
-				<motion.div
-					initial={{ opacity: 0, y: -20 }}
-					animate={{ 
-						opacity: showMenu ? 1 : 0, 
-						y: showMenu ? 0 : -20 
-					}}
-					transition={{ duration: 0.3, ease: "easeOut" }}
-					className={
-						showMenu
-							? 'block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none bg-[#0B0B0C] border-t border-gray-700/30 absolute top-full left-0 right-0 z-50'
-							: 'hidden'
-					}
-				>
-					<div className="header-link">
-						<Link href="/projects" aria-label="Projects" onClick={() => setShowMenu(false)}>
-							Projects
-						</Link>
-					</div>
-					<div className="header-link border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
-						<Link href="/experience" aria-label="Experience" onClick={() => setShowMenu(false)}>
-							Experience
-						</Link>
-					</div>
-					<div className="header-link border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
-						<Link href="/about" aria-label="About Me" onClick={() => setShowMenu(false)}>
-							About Me
-						</Link>
-					</div>
-					<div className="header-link border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-gray-700">
-						<Link href="/contact" aria-label="Contact" onClick={() => setShowMenu(false)}>
-							Contact
-						</Link>
-					</div>
-					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+						{/* Mobile menu toggle */}
 						<button
-							onClick={() => {
-								showHireMeModal();
-								setShowMenu(false);
-							}}
-							className="hire-me-button-mobile"
-							aria-label="Hire Me Button"
+							ref={menuButtonRef}
+							type="button"
+							onClick={toggleMenu}
+							aria-label={showMenu ? 'Close menu' : 'Open menu'}
+							aria-expanded={showMenu}
+							aria-controls="mobile-navigation"
+							className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 text-gray-200 transition-colors duration-200 hover:border-white/20 hover:text-white lg:hidden"
 						>
-							Hire Me
+							{showMenu ? (
+								<FiX className="h-5 w-5" aria-hidden="true" />
+							) : (
+								<FiMenu className="h-5 w-5" aria-hidden="true" />
+							)}
 						</button>
-					</div>
-				</motion.div>
 
-			</div>
-			<div>
-				{showModal && (
-					<HireMeModal
-						onClose={showHireMeModal}
-						onRequest={showHireMeModal}
-					/>
+						{/* Desktop navigation */}
+						<div className="hidden items-center gap-1 lg:flex">
+							<ul className="flex items-center gap-1">
+								{NAV_LINKS.map((link) => {
+									const active = isActive(link.href);
+									return (
+										<li key={link.href}>
+											<Link
+												href={link.href}
+												aria-current={active ? 'page' : undefined}
+												className={`header-link-desktop${active ? ' active' : ''}`}
+											>
+												{link.label}
+											</Link>
+										</li>
+									);
+								})}
+							</ul>
+							<span
+								className="mx-2 h-5 w-px bg-white/10"
+								aria-hidden="true"
+							/>
+							<button
+								type="button"
+								onClick={showHireMeModal}
+								className="hire-me-button"
+								aria-haspopup="dialog"
+							>
+								Hire Me
+							</button>
+						</div>
+					</div>
+				</div>
+
+				{/* Mobile navigation */}
+				{showMenu && (
+					<div
+						id="mobile-navigation"
+						className="mobile-menu absolute inset-x-0 top-full z-50 border-t border-white/10 bg-ink/95 shadow-2xl shadow-black/30 backdrop-blur-xl lg:hidden"
+					>
+						<div className="container mx-auto py-2">
+							<ul>
+								{NAV_LINKS.map((link) => {
+									const active = isActive(link.href);
+									return (
+										<li key={link.href}>
+											<Link
+												href={link.href}
+												onClick={() => setShowMenu(false)}
+												aria-current={active ? 'page' : undefined}
+												className={`header-link border-b border-white/5 py-3.5 ${active ? 'active' : ''}`}
+											>
+												{link.label}
+											</Link>
+										</li>
+									);
+								})}
+							</ul>
+							<button
+								type="button"
+								onClick={() => {
+									setShowMenu(false);
+									showHireMeModal();
+								}}
+								className="hire-me-button-mobile"
+								aria-haspopup="dialog"
+							>
+								Hire Me
+							</button>
+						</div>
+					</div>
 				)}
-			</div>
-			</div>
-		</motion.nav>
+			</nav>
+
+			{showModal && (
+				<HireMeModal
+					onClose={showHireMeModal}
+					onRequest={showHireMeModal}
+				/>
+			)}
 		</>
 	);
 }

@@ -1,181 +1,163 @@
+const skillGroups = [
+	{
+		name: 'Programming languages and frameworks',
+		techs: [
+			'Python',
+			'C++',
+			'JavaScript',
+			'TypeScript',
+			'C#',
+			'SQL',
+			'HTML',
+			'FastAPI',
+			'Flask',
+			'React',
+			'Django',
+			'.NET',
+			'Streamlit',
+			'Celery',
+			'SQLAlchemy',
+		],
+	},
+	{
+		name: 'AI/ML and LLM tooling',
+		techs: [
+			'PyTorch',
+			'TensorFlow',
+			'Keras',
+			'scikit-learn',
+			'LangChain',
+			'LangSmith',
+			'LangGraph',
+			'LlamaIndex',
+			'AutoGen',
+			'Pydantic AI',
+			'HuggingFace',
+			'BERT',
+			'GPT',
+			'ResNet',
+			'Faiss',
+			'Generative AI',
+			'RAG',
+			'LLMOps',
+		],
+	},
+	{
+		name: 'Data and storage',
+		techs: [
+			'Pandas',
+			'NumPy',
+			'Seaborn',
+			'Power BI',
+			'PyMongo',
+			'PyMuPDF',
+			'PostgreSQL',
+			'MongoDB',
+			'MySQL',
+			'MS SQL',
+			'Neo4j',
+			'Redis',
+			'SQLite',
+			'Milvus',
+			'Chroma',
+			'Vector Databases',
+			'PGVector',
+		],
+	},
+	{
+		name: 'Cloud and infrastructure',
+		techs: [
+			'Microsoft Azure',
+			'AWS',
+			'Docker',
+			'Azure SQL',
+			'Azure Blob Storage',
+			'Bicep',
+		],
+	},
+	{
+		name: 'DevOps and MLOps',
+		techs: [
+			'Git',
+			'GitHub',
+			'CI/CD',
+			'DVC',
+			'MLflow',
+			'CVAT',
+			'Make.com',
+			'Zapier',
+			'n8n',
+		],
+	},
+	{
+		name: 'Computer vision and applied ML',
+		techs: [
+			'OpenCV',
+			'Face Detection',
+			'Gaze Estimation',
+			'Video Classification',
+			'Speech Recognition',
+			'Speaker Diarization',
+			'Multi-modal Detection',
+			'HPO',
+			'Conversational Agents',
+		],
+	},
+];
+
 function AboutSkills() {
 	return (
-		<div className="py-20">
-			<div className="text-center mb-12">
-				<h2 className="font-general-semibold text-3xl sm:text-4xl text-white mb-4">
-					Technical Skills
-				</h2>
-				<p className="font-general-regular text-lg text-gray-300">
-					My expertise spans across multiple domains in AI, ML, and software engineering
-				</p>
+		<div className="py-20 sm:py-24">
+			<p className="font-mono text-xs uppercase leading-relaxed tracking-[0.14em] text-dev-blue/90">
+				Expertise
+			</p>
+			<h2 className="mt-3 font-general-semibold text-3xl tracking-[-0.02em] text-white sm:text-4xl">
+				Technical skills
+			</h2>
+			<p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg">
+				Working tools and platforms across software engineering,
+				machine learning, and production AI systems.
+			</p>
+
+			<div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
+				{skillGroups.map((group) => (
+					<section
+						key={group.name}
+						aria-label={group.name}
+						className="rounded-lg border border-white/10 bg-gray-900/50 p-6"
+					>
+						<h3 className="font-general-semibold text-lg text-white">
+							{group.name}
+						</h3>
+						<ul className="mt-4 flex flex-wrap gap-2">
+							{group.techs.map((tech) => (
+								<li
+									key={tech}
+									className="rounded border border-white/10 bg-white/[0.03] px-2.5 py-1 text-sm text-gray-300"
+								>
+									{tech}
+								</li>
+							))}
+						</ul>
+					</section>
+				))}
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				{/* Programming Languages & Frameworks */}
-				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
-					<div className="flex items-center mb-4">
-						<span className="text-2xl mr-3">💻</span>
-						<h3 className="font-general-semibold text-lg text-white">
-							Programming Languages & Frameworks
-						</h3>
-					</div>
-					<div className="flex flex-wrap gap-4">
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">Python</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">C++</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">JavaScript</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">TypeScript</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">C#</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">SQL</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">HTML</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">FastAPI</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">Flask</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">React</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">Django</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">.NET</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">Streamlit</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">Celery</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-blue-500 hover:scale-105 transition-transform duration-200">SQLAlchemy</span>
-					</div>
-				</div>
-
-				{/* AI/ML & LLM Tools */}
-				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
-					<div className="flex items-center mb-4">
-						<span className="text-2xl mr-3">🤖</span>
-						<h3 className="font-general-semibold text-lg text-white">
-							AI/ML & LLM Tools
-						</h3>
-					</div>
-					<div className="flex flex-wrap gap-4">
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">PyTorch</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">TensorFlow</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">Keras</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">scikit-learn</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">LangChain</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">LangSmith</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">LangGraph</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">LlamaIndex</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">AutoGen</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">Pydantic AI</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">HuggingFace</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">BERT</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">GPT</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">ResNet</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">Faiss</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">Generative AI</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">RAG</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-purple-500 hover:scale-105 transition-transform duration-200">LLMOps</span>
-					</div>
-				</div>
-
-				{/* Data & Analytics */}
-				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
-					<div className="flex items-center mb-4">
-						<span className="text-2xl mr-3">📊</span>
-						<h3 className="font-general-semibold text-lg text-white">
-							Data & Analytics
-						</h3>
-					</div>
-					<div className="flex flex-wrap gap-4">
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">Pandas</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">NumPy</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">Seaborn</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">Power BI</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">PyMongo</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">PyMuPDF</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">PostgreSQL</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">MongoDB</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">MySQL</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">MS SQL</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">Neo4j</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">Redis</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">SQLite</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">Milvus</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">Chroma</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">Vector Databases</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-green-500 hover:scale-105 transition-transform duration-200">PGVector</span>
-					</div>
-				</div>
-
-				{/* Cloud & Infrastructure */}
-				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
-					<div className="flex items-center mb-4">
-						<span className="text-2xl mr-3">☁️</span>
-						<h3 className="font-general-semibold text-lg text-white">
-							Cloud & Infrastructure
-						</h3>
-					</div>
-					<div className="flex flex-wrap gap-4">
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-cyan-500 hover:scale-105 transition-transform duration-200">Microsoft Azure</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-cyan-500 hover:scale-105 transition-transform duration-200">AWS</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-cyan-500 hover:scale-105 transition-transform duration-200">Docker</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-cyan-500 hover:scale-105 transition-transform duration-200">Azure SQL</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-cyan-500 hover:scale-105 transition-transform duration-200">Azure Blob Storage</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-cyan-500 hover:scale-105 transition-transform duration-200">Biceps</span>
-					</div>
-				</div>
-
-				{/* DevOps & MLOps */}
-				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
-					<div className="flex items-center mb-4">
-						<span className="text-2xl mr-3">⚙️</span>
-						<h3 className="font-general-semibold text-lg text-white">
-							DevOps & MLOps
-						</h3>
-					</div>
-					<div className="flex flex-wrap gap-4">
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">Git</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">GitHub</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">CI/CD</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">DVC</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">MLflow</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">CVAT</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">Make.com</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">Zapier</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-orange-500 hover:scale-105 transition-transform duration-200">n8n</span>
-					</div>
-				</div>
-
-				{/* Computer Vision & Proctoring */}
-				<div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-dev-blue/30">
-					<div className="flex items-center mb-4">
-						<span className="text-2xl mr-3">👁️</span>
-						<h3 className="font-general-semibold text-lg text-white">
-							Computer Vision & Proctoring
-						</h3>
-					</div>
-					<div className="flex flex-wrap gap-4">
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">OpenCV</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">Face Detection</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">Gaze Estimation</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">Video Classification</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">Speech Recognition</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">Speaker Diarization</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">Multi-modal Detection</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">HPO</span>
-						<span className="px-3 py-1 rounded-full text-sm font-medium text-white bg-pink-500 hover:scale-105 transition-transform duration-200">Conversational Agents</span>
-					</div>
-				</div>
-			</div>
-
-			<div className="mt-8">
-				<div className="bg-gray-900 border border-gray-700 rounded-xl p-4 shadow-lg">
-					<div className="flex items-center justify-center gap-6">
-						<div className="flex items-center gap-2">
-							<span className="text-lg">🌍</span>
-							<span className="font-general-medium text-sm text-gray-300">Languages:</span>
-						</div>
-						<div className="flex items-center gap-4">
-							<div className="flex items-center gap-2">
-								<span className="text-lg">🇺🇸</span>
-								<span className="text-sm font-medium text-white">English (Fluent)</span>
-							</div>
-							<div className="flex items-center gap-2">
-								<span className="text-lg">🇨🇴</span>
-								<span className="text-sm font-medium text-white">Spanish (Native)</span>
-							</div>
-						</div>
-					</div>
+			<div className="mt-8 rounded-lg border border-white/10 bg-gray-900/50 p-6">
+				<div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+					<span className="font-mono text-[11px] uppercase tracking-[0.14em] text-gray-400">
+						Languages
+					</span>
+					<ul className="flex flex-wrap gap-x-6 gap-y-2">
+						<li className="text-sm text-white">
+							English{' '}
+							<span className="text-gray-400">(Fluent)</span>
+						</li>
+						<li className="text-sm text-white">
+							Spanish{' '}
+							<span className="text-gray-400">(Native)</span>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

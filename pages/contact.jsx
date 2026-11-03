@@ -5,7 +5,7 @@ import ContactForm from '../components/contact/ContactForm';
 import PagesMetaHead from '../components/PagesMetaHead';
 import NeuralNetwork from '../components/shared/NeuralNetwork';
 
-function contact() {
+function Contact() {
 	// Force scroll to top on page load
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -16,7 +16,7 @@ function contact() {
 			<PagesMetaHead title="Contact - David Navarro" />
 
 			{/* Neural network background */}
-			<NeuralNetwork intensity="high" />
+			<NeuralNetwork intensity="low" />
 
 			<motion.div
 				initial={{ opacity: 0 }}
@@ -28,6 +28,7 @@ function contact() {
 				}}
 				className="container mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-5 relative z-10"
 			>
+				<h1 className="sr-only">Contact</h1>
 				<ContactForm />
 
 				<ContactDetails />
@@ -36,4 +37,4 @@ function contact() {
 	);
 }
 
-export default contact;
+export default Contact;

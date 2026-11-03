@@ -1,16 +1,17 @@
 import { v4 as uuidv4 } from 'uuid';
+import { experienceYears } from './experienceData';
 
 export const aboutMeData = [
 	{
 		id: uuidv4(),
-		bio: 'Machine Learning Engineer with 6+ years of experience designing, deploying, and productionizing ML systems, backed by strong software engineering skills. Skilled in end-to-end system design, data ingestion and retrieval pipelines, offline/online evaluation, deployment, observability, LLMOps, CI/CD, and multi-agent orchestration across education, healthcare, CRM/marketing, industrial automation, and B2B SaaS.',
+		bio: `I am a Senior AI Engineer with ${experienceYears}+ years of experience designing, deploying, and productionizing ML and LLM systems. I take ownership across the full path: data and retrieval, model and agent behavior, evaluation, infrastructure, observability, and the last mile into dependable operation.`,
 	},
 	{
 		id: uuidv4(),
-		bio: 'Recent projects include building a PM Agent for Azure DevOps that answers status queries, suggests next actions, executes updates, and preserves traceability using LangChain, AutoGen, FastAPI, Azure OpenAI, PGVector, and ADO APIs, improving task throughput and user satisfaction while reducing context switching.',
+		bio: 'My recent work includes stateful AI agents, retrieval platforms, evaluation systems, and cloud integrations. I care about the boundary between interpretation and action: what the system knows, what it is allowed to do, how the result is verified, and how a team can debug it later.',
 	},
 	{
 		id: uuidv4(),
-		bio: 'Developed a production RAG platform for chatbots and automations using LangChain, PGVector, and FastAPI with an evaluation harness and CI/CD, cutting release cycles by ~40% and accelerating feature rollout.',
+		bio: 'I work best with people who stay close to the problem. I bring technical curiosity, practical collaboration, and a preference for explicit trade-offs—whether the system is an industrial inspection line, a retrieval service, or an agent that changes business state.',
 	},
 ];

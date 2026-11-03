@@ -1,0 +1,21 @@
+%% Enterprise AI Workspace — publication-safe logical architecture
+%% Relationships show engineering responsibility boundaries, not a complete network topology.
+flowchart LR
+    U[Users / authenticated access] --> ALB[Application Load Balancer]
+    ALB --> ECS[ECS / Fargate application]
+    ECS --> W[LibreChat-based workspace]
+    W --> A[Configured agents and integrations]
+    A --> C[Controlled capabilities]
+    W --> R[RDS PostgreSQL + pgvector]
+    W --> S[Amazon S3 integration]
+    A --> H[HMAC authorization boundary]
+
+    classDef access fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
+    classDef app fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
+    classDef persistence fill:#263A39,stroke:#7FA7B4,color:#ECE5D7
+    classDef control fill:#2B211D,stroke:#D67B56,color:#ECE5D7
+
+    class U,ALB access
+    class ECS,W,A app
+    class R,S persistence
+    class C,H control

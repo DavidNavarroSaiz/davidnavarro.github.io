@@ -1,0 +1,11 @@
+# David Navarro
+
+> Senior AI Engineer. This is an optional discovery index for AI agents and other automated clients; it is not an API or indexing guarantee.
+
+- Full Markdown profile: https://davidnavarrosaiz.github.io/davidnavarro.github.io/portfolio.md
+- Structured JSON export: https://davidnavarrosaiz.github.io/davidnavarro.github.io/portfolio.json
+- Projects: https://davidnavarrosaiz.github.io/davidnavarro.github.io/projects/
+- Experience: https://davidnavarrosaiz.github.io/davidnavarro.github.io/experience/
+- About: https://davidnavarrosaiz.github.io/davidnavarro.github.io/about/
+- Senior AI Engineer CV: https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer.pdf
+- Senior AI Engineer — Evaluation & Research CV: https://davidnavarrosaiz.github.io/davidnavarro.github.io/files/CV_DavidNavarro_Senior_AI_Engineer_Evaluation_Research.pdf

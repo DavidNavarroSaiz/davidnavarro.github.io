@@ -1,92 +1,53 @@
-import { motion } from 'framer-motion';
 import { achievementsData } from '../../data/achievementsData';
 
 function AboutAchievements() {
-
-	const getCategoryColor = (category) => {
-		switch (category.toLowerCase()) {
-			case 'speaking': return 'from-blue-500/20 to-cyan-500/20 border-blue-500/30';
-			case 'research': return 'from-purple-500/20 to-pink-500/20 border-purple-500/30';
-			case 'development': return 'from-green-500/20 to-emerald-500/20 border-green-500/30';
-			case 'education': return 'from-orange-500/20 to-yellow-500/20 border-orange-500/30';
-			case 'personal project': return 'from-indigo-500/20 to-blue-500/20 border-indigo-500/30';
-			default: return 'from-gray-500/20 to-gray-600/20 border-gray-500/30';
-		}
-	};
-
 	return (
-		<div className="py-16">
-			{/* Header Section */}
-			<motion.div 
-				initial={{ opacity: 0, y: 20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.6 }}
-				className="text-center mb-12"
-			>
-				<h2 className="text-4xl font-bold text-white mb-4">
-					Key Achievements
-				</h2>
-				<p className="text-gray-300 text-lg max-w-3xl mx-auto">
-					Notable contributions and accomplishments across research, development, and education
-				</p>
-			</motion.div>
+		<div className="py-20 sm:py-24">
+			<p className="font-mono text-xs uppercase leading-relaxed tracking-[0.14em] text-dev-blue/90">
+				Recognition
+			</p>
+			<h2 className="mt-3 font-general-semibold text-3xl tracking-[-0.02em] text-white sm:text-4xl">
+				Key achievements
+			</h2>
+			<p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg">
+				Contributions across research, development, and education.
+			</p>
 
-			{/* Achievements Grid */}
-			<motion.div
-				initial={{ opacity: 0, y: 20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.6, delay: 0.2 }}
-				className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-			>
-				{achievementsData.map((achievement, index) => (
-					<motion.div
+			<ul className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+				{achievementsData.map((achievement) => (
+					<li
 						key={achievement.id}
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: index * 0.1 }}
-						whileHover={{ y: -5, scale: 1.02 }}
-						className={`bg-gradient-to-br ${getCategoryColor(achievement.category)} backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:shadow-lg`}
+						className="flex flex-col rounded-lg border border-white/10 bg-gray-900/50 p-6 transition-colors duration-200 hover:border-dev-blue/40"
 					>
-						{/* Header */}
-						<div className="mb-4">
-							<div className="flex items-center justify-between mb-2">
-								<span className="text-xs font-medium text-gray-400 uppercase tracking-wide">
-									{achievement.category}
-								</span>
-								<span className="text-xs text-gray-500">{achievement.year}</span>
-							</div>
-							<h3 className="text-lg font-semibold text-white mb-2">
-								{achievement.title}
-							</h3>
-							<p className="text-gray-300 text-sm leading-relaxed">
-								{achievement.description}
-							</p>
-						</div>
-
-						{/* Technologies */}
-						<div className="mb-4">
-							<div className="flex flex-wrap gap-2">
-								{achievement.technologies.map((tech, techIndex) => (
-									<span
-										key={techIndex}
-										className="px-2 py-1 bg-gray-700/40 text-gray-300 text-xs rounded-md border border-gray-600/30"
-									>
-										{tech}
-									</span>
-								))}
-							</div>
-						</div>
-
-						{/* Impact */}
-						<div className="pt-4 border-t border-gray-600/30">
-							<div className="text-xs text-gray-400 mb-1">Impact</div>
-							<div className="text-sm text-gray-200 font-medium">
-								{achievement.impact}
-							</div>
-						</div>
-					</motion.div>
+						<p className="font-mono text-[11px] uppercase tracking-[0.14em] text-gray-400">
+							{achievement.category} · {achievement.year}
+						</p>
+						<h3 className="mt-3 font-general-semibold text-lg leading-snug text-white">
+							{achievement.title}
+						</h3>
+						<p className="mt-2 text-sm leading-relaxed text-gray-300">
+							{achievement.description}
+						</p>
+						<ul
+							aria-label="Technologies"
+							className="mt-4 flex flex-wrap gap-1.5"
+						>
+							{achievement.technologies.map((tech) => (
+								<li
+									key={tech}
+									className="rounded border border-white/10 bg-white/[0.03] px-2 py-1 text-[11px] leading-none text-gray-400"
+								>
+									{tech}
+								</li>
+							))}
+						</ul>
+						<p className="mt-4 border-t border-white/10 pt-4 text-sm text-gray-200">
+							<span className="text-gray-500">Impact: </span>
+							{achievement.impact}
+						</p>
+					</li>
 				))}
-			</motion.div>
+			</ul>
 		</div>
 	);
 }

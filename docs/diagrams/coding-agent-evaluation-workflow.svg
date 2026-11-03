@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 390" role="img" aria-labelledby="title desc">
+  <title id="title">Coding-agent evaluation workflow</title>
+  <desc id="desc">A seven-stage workflow from task specification through clean baseline, agent execution, run artifacts, deterministic checks, human or advisory assessment, and comparative reporting.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7FA7B4"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="390" fill="#11161B"/>
+  <text x="64" y="54" fill="#ECE5D7" font-family="General Sans, Arial, sans-serif" font-size="25" font-weight="600">Coding-agent evaluation workflow</text>
+  <text x="64" y="84" fill="#B8A58C" font-family="General Sans, Arial, sans-serif" font-size="15">Controlled inputs, captured evidence, repeatable checks, and contextual review</text>
+
+  <g fill="none" stroke="#7FA7B4" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M244 190 H274"/>
+    <path d="M454 190 H484"/>
+    <path d="M664 190 H694"/>
+    <path d="M874 190 H904"/>
+    <path d="M1084 190 H1114"/>
+    <path d="M1294 190 H1324"/>
+  </g>
+
+  <g font-family="General Sans, Arial, sans-serif">
+    <g>
+      <rect x="64" y="132" width="180" height="116" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+      <text x="84" y="163" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">01 / CONTROLLED</text>
+      <text x="84" y="198" fill="#ECE5D7" font-size="17" font-weight="600">Task</text>
+      <text x="84" y="220" fill="#ECE5D7" font-size="17" font-weight="600">specification</text>
+    </g>
+    <g>
+      <rect x="274" y="132" width="180" height="116" rx="8" fill="#272A2A" stroke="#B8A58C"/>
+      <text x="294" y="163" fill="#B8A58C" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">02 / CONTROLLED</text>
+      <text x="294" y="198" fill="#ECE5D7" font-size="17" font-weight="600">Clean</text>
+      <text x="294" y="220" fill="#ECE5D7" font-size="17" font-weight="600">baseline</text>
+    </g>
+    <g>
+      <rect x="484" y="132" width="180" height="116" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="504" y="163" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">03 / ASSISTED</text>
+      <text x="504" y="198" fill="#ECE5D7" font-size="17" font-weight="600">Agent</text>
+      <text x="504" y="220" fill="#ECE5D7" font-size="17" font-weight="600">execution</text>
+    </g>
+    <g>
+      <rect x="694" y="132" width="180" height="116" rx="8" fill="#182A31" stroke="#7FA7B4"/>
+      <text x="714" y="163" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">04 / CAPTURED</text>
+      <text x="714" y="198" fill="#ECE5D7" font-size="17" font-weight="600">Run</text>
+      <text x="714" y="220" fill="#ECE5D7" font-size="17" font-weight="600">artifacts</text>
+    </g>
+    <g>
+      <rect x="904" y="132" width="180" height="116" rx="8" fill="#263A39" stroke="#7FA7B4"/>
+      <text x="924" y="163" fill="#7FA7B4" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">05 / AUTOMATED</text>
+      <text x="924" y="198" fill="#ECE5D7" font-size="17" font-weight="600">Deterministic</text>
+      <text x="924" y="220" fill="#ECE5D7" font-size="17" font-weight="600">checks</text>
+    </g>
+    <g>
+      <rect x="1114" y="132" width="180" height="116" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="1134" y="163" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">06 / ASSISTED</text>
+      <text x="1134" y="198" fill="#ECE5D7" font-size="17" font-weight="600">Human /</text>
+      <text x="1134" y="220" fill="#ECE5D7" font-size="17" font-weight="600">advisory review</text>
+    </g>
+    <g>
+      <rect x="1324" y="132" width="180" height="116" rx="8" fill="#2B211D" stroke="#D67B56"/>
+      <text x="1344" y="163" fill="#D67B56" font-family="Consolas, monospace" font-size="11" letter-spacing="1.4">07 / ASSISTED</text>
+      <text x="1344" y="198" fill="#ECE5D7" font-size="17" font-weight="600">Comparative</text>
+      <text x="1344" y="220" fill="#ECE5D7" font-size="17" font-weight="600">reporting</text>
+    </g>
+  </g>
+
+  <g font-family="Consolas, monospace" font-size="11">
+    <circle cx="64" cy="320" r="5" fill="#B8A58C"/><text x="78" y="324" fill="#B8A58C">controlled input</text>
+    <circle cx="270" cy="320" r="5" fill="#7FA7B4"/><text x="284" y="324" fill="#B8A58C">captured evidence</text>
+    <circle cx="506" cy="320" r="5" fill="#7FA7B4"/><text x="520" y="324" fill="#B8A58C">automated checks</text>
+    <circle cx="720" cy="320" r="5" fill="#D67B56"/><text x="734" y="324" fill="#B8A58C">manual / assisted review</text>
+  </g>
+</svg>

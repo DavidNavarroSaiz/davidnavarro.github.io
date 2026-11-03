@@ -1,9 +1,10 @@
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { useCallback, useState, useEffect } from 'react';
 
 const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
   const [isClient, setIsClient] = useState(false);
   const [nodes, setNodes] = useState([]);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     setIsClient(true);
@@ -31,7 +32,7 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
   const connectionCount = getConnectionCount();
 
   // Generate completely random positions for nodes
-  const generateNodes = () => {
+  const generateNodes = useCallback(() => {
     const nodes = [];
     
     for (let i = 0; i < nodeCount; i++) {
@@ -59,13 +60,13 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
       });
     }
     return nodes;
-  };
+  }, [nodeCount]);
 
   useEffect(() => {
     if (isClient) {
       setNodes(generateNodes());
     }
-  }, [isClient, nodeCount]);
+  }, [isClient, generateNodes]);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -77,23 +78,32 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
           style={{
             left: `${node.x}%`,
             top: `${node.y}%`,
+            opacity: shouldReduceMotion ? 0.45 : undefined,
           }}
-          animate={{
-            scale: [0.5, 1.2, 0.5],
-            opacity: [0.3, 1, 0.3],
-          }}
-          transition={{
-            duration: 1.5 + (node.id * 0.3) % 1.5, // Stable duration based on node id
-            delay: node.delay,
-            repeat: Infinity,
-            repeatDelay: 0.5 + (node.id * 0.7) % 2, // Stable repeat delay based on node id
-            ease: "easeInOut",
-          }}
+          animate={
+            shouldReduceMotion
+              ? false
+              : {
+                  scale: [0.5, 1.2, 0.5],
+                  opacity: [0.3, 1, 0.3],
+                }
+          }
+          transition={
+            shouldReduceMotion
+              ? undefined
+              : {
+                  duration: 1.5 + (node.id * 0.3) % 1.5, // Stable duration based on node id
+                  delay: node.delay,
+                  repeat: Infinity,
+                  repeatDelay: 0.5 + (node.id * 0.7) % 2, // Stable repeat delay based on node id
+                  ease: "easeInOut",
+                }
+          }
         />
       ))}
 
       {/* Neural connections */}
-      {isClient && nodes.length > 0 && (
+      {!shouldReduceMotion && isClient && nodes.length > 0 && (
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           {Array.from({ length: connectionCount }, (_, i) => {
             // Create more interesting connections using seeded random
@@ -119,7 +129,7 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
               <motion.path
                 key={i}
                 d={`M${startNode.x},${startNode.y} Q${(startNode.x + endNode.x) / 2},${(startNode.y + endNode.y) / 2 - 10} ${endNode.x},${endNode.y}`}
-                stroke="rgba(0, 212, 255, 0.3)"
+                stroke="rgba(197, 139, 105, 0.18)"
                 strokeWidth="0.2"
                 fill="none"
                 strokeDasharray={startNode.isDashed ? startNode.dashPattern : "none"}
@@ -142,7 +152,7 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
       )}
 
       {/* Data flow particles */}
-      {isClient && Array.from({ length: 3 }, (_, i) => {
+      {!shouldReduceMotion && isClient && Array.from({ length: 3 }, (_, i) => {
         const seededRandom = (seed) => {
           const x = Math.sin(seed) * 10000;
           return x - Math.floor(x);
@@ -179,7 +189,7 @@ const NeuralNetwork = ({ variant = "default", intensity = "medium" }) => {
       })}
 
       {/* Floating code snippets */}
-      {isClient && Array.from({ length: 4 }, (_, i) => {
+      {!shouldReduceMotion && isClient && Array.from({ length: 4 }, (_, i) => {
         const seededRandom = (seed) => {
           const x = Math.sin(seed) * 10000;
           return x - Math.floor(x);

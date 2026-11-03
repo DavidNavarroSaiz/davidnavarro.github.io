@@ -1,0 +1,19 @@
+%% Agent evaluation and experimentation framework — publication-safe editable source
+%% Evaluation engines are separate from optional Opik observability.
+flowchart LR
+    D[Dataset preparation] --> A[Agent adapter]
+    A --> E[Evidence capture]
+    E --> M[Configurable metric evaluation]
+    M --> X[Experiment analysis]
+    E -. optional traces .-> O[Opik observability]
+    X -. run inspection .-> O
+
+    classDef input fill:#272A2A,stroke:#B8A58C,color:#ECE5D7
+    classDef process fill:#182A31,stroke:#7FA7B4,color:#ECE5D7
+    classDef evaluate fill:#2B211D,stroke:#D67B56,color:#ECE5D7
+    classDef observe fill:#263A39,stroke:#7FA7B4,color:#ECE5D7
+
+    class D input
+    class A,E,X process
+    class M evaluate
+    class O observe

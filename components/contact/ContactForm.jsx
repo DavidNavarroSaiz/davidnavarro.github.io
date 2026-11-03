@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
 import { sendEmail } from '../../utils/emailService';
+import { trackUmamiEvent } from '../../utils/analytics';
 
 function ContactForm() {
 	const [formData, setFormData] = useState({
@@ -30,6 +31,7 @@ function ContactForm() {
 			const result = await sendEmail(formData);
 
 			if (result.success) {
+				trackUmamiEvent('contact_submit_success');
 				setSubmitStatus('success');
 				setFormData({
 					name: '',
@@ -57,13 +59,19 @@ function ContactForm() {
 					</p>
 
 					{submitStatus === 'success' && (
-						<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
-							Thank you for your message! I'll get back to you soon.
+						<div
+							role="status"
+							className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded"
+						>
+							Thank you for your message! I&apos;ll get back to you soon.
 						</div>
 					)}
 
 					{submitStatus === 'error' && (
-						<div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+						<div
+							role="alert"
+							className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded"
+						>
 							Sorry, there was an error sending your message. Please try again.
 						</div>
 					)}
@@ -124,14 +132,13 @@ function ContactForm() {
 					</div>
 
 					<div className="mt-8">
-						<span className="form-button-primary">
-							<Button
-								title={isSubmitting ? "Sending..." : "Send Message"}
-								type="submit"
-								aria-label="Send Message"
-								disabled={isSubmitting}
-							/>
-						</span>
+						<Button
+							title={isSubmitting ? 'Sending...' : 'Send Message'}
+							type="submit"
+							className="form-button-primary"
+							aria-label="Send Message"
+							disabled={isSubmitting}
+						/>
 					</div>
 				</form>
 			</div>

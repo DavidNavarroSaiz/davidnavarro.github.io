@@ -1,7 +1,9 @@
 import '../styles/globals.css';
-import { AnimatePresence } from 'framer-motion';
+import '../styles/components.css';
+import { AnimatePresence, MotionConfig } from 'framer-motion';
 import Head from 'next/head';
 import DefaultLayout from '../components/layout/DefaultLayout';
+import UmamiAnalytics from '../components/analytics/UmamiAnalytics';
 import UseScrollToTop from '../hooks/useScrollToTop';
 import PageTransition from '../components/shared/PageTransition';
 
@@ -9,36 +11,21 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				{/* Preload critical images with proper as attribute */}
-				<link
-					rel="preload"
-					href="/images/profile.jpeg"
-					as="image"
-					type="image/jpeg"
-				/>
-				<link
-					rel="preload"
-					href="/images/DN-Logo.svg"
-					as="image"
-					type="image/svg+xml"
-				/>
-				{/* Preload critical fonts */}
-				<link
-					rel="preload"
-					href="/fonts/GeneralSans-Variable.woff2"
-					as="font"
-					type="font/woff2"
-					crossOrigin="anonymous"
-				/>
+				{/* Fonts and images are served from hashed Next.js static
+					assets (basePath-aware). Do not add absolute-path preloads
+					here: they 404 under the GitHub Pages subpath. */}
 			</Head>
-			<AnimatePresence>
-				<div className="bg-primary-dark dark:bg-primary-dark transition duration-300">
-					<DefaultLayout>
-						<Component {...pageProps} />
-					</DefaultLayout>
-					<UseScrollToTop />
-				</div>
-			</AnimatePresence>
+			<UmamiAnalytics />
+			<MotionConfig reducedMotion="user">
+				<AnimatePresence>
+					<div className="bg-primary-dark dark:bg-primary-dark transition duration-300">
+						<DefaultLayout>
+							<Component {...pageProps} />
+						</DefaultLayout>
+						<UseScrollToTop />
+					</div>
+				</AnimatePresence>
+			</MotionConfig>
 		</>
 	);
 }
